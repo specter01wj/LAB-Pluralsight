@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 
   <head>
+    <script data-require="angular.js@*" data-semver="1.3.0-beta.5" src="https://code.angularjs.org/1.3.0-beta.5/angular.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
 
-  <body>
-    <h1>Hello Plunker!</h1>
+  <body ng-controller="MainController">
+    <h1>{{ message }}</h1>
   </body>
 
 </html>
