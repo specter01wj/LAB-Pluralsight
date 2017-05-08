@@ -1,22 +1,22 @@
 
 var app = angular.module('myApp', []);
 
-app.controller('MainController', ['$scope', '$http', function ($scope, $http) {
+var MainController = function ($scope, $http) {
 
     /*var person = {
-      firstName: 'James',
-        lastName: 'Wang',
-        imageSrc: 'http://odetocode.com/images/scott_allen_2.jpg'
-    };
+     firstName: 'James',
+     lastName: 'Wang',
+     imageSrc: 'http://odetocode.com/images/scott_allen_2.jpg'
+     };
 
-    $scope.person = person;*/
+     $scope.person = person;*/
 
     var onUserComplete = function (response) {
-      $scope.user = response.data;
+        $scope.user = response.data;
     };
 
     var onError = function (reason) {
-      $scope.error = "Data error!Jin";
+        $scope.error = "Data error!Jin";
     };
 
     $http({
@@ -27,7 +27,9 @@ app.controller('MainController', ['$scope', '$http', function ($scope, $http) {
     $scope.message = 'Hola! James!!';
 
 
-}]);
+};
+
+app.controller('MainController', ['$scope', '$http', MainController]);
 
 
 
