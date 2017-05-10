@@ -1,7 +1,7 @@
 
 var app = angular.module("githubViewer", []);
 
-var MainController = function($scope, $http, $interval) {
+var MainController = function($scope, $http, $interval, $log, $anchorScroll, $location) {
 
     var onUserComplete = function(response) {
         $scope.user = response.data;
@@ -13,6 +13,8 @@ var MainController = function($scope, $http, $interval) {
 
     var onRepos = function (response) {
         $scope.repos = response.data;
+        $location.hash('userDetails');
+        $anchorScroll();
     };
 
     var onError = function(reason) {
@@ -26,15 +28,21 @@ var MainController = function($scope, $http, $interval) {
       }
     };
 
+    var countdownInterval = null;
     var startCountdown = function () {
-        $interval(decrementCountdown, 1000, $scope.countdown);
+        countdownInterval = $interval(decrementCountdown, 1000, $scope.countdown);
     };
 
     $scope.search = function (username) {
+        $log.info("Searching for " + username);
         $http({
             method: 'GET',
             url: 'https://api.github.com/users/' + username
         }).then(onUserComplete, onError);
+        if(countdownInterval) {
+            $interval.cancel(countdownInterval);
+            $scope.countdown = null;
+        }
     };
 
 
@@ -46,4 +54,4 @@ var MainController = function($scope, $http, $interval) {
 
 };
 
-app.controller("MainController", ["$scope", "$http", "$interval", MainController]);
+app.controller("MainController", ["$scope", "$http", "$interval", "$log", "$anchorScroll", "$location", MainController]);
