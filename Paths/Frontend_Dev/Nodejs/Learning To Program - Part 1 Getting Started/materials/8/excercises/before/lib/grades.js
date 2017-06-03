@@ -6,6 +6,24 @@ var gradeBook = {
       this._grades.push(newGrade);
    },
 
+   getLetterGrade: function(){
+		var average = this.getAverage();
+		
+		if(average >= 90) {
+			return "A";
+		}
+		else if(average >= 80) {
+			return "B";
+		}
+		else if(average >= 70) {
+			return "C";
+		}
+		else if(average >= 60) {
+			return "D";
+		}
+		return "F";   
+   },
+   
    getCountOfGrades: function(){
 		return this._grades.length;
    },
