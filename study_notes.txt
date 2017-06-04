@@ -22,5 +22,21 @@ Advanced
 (3) Rapid ES6 Training
 
 
+2. jQuery
 
+
+
+3. HTML5
+
+
+4. CSS
+
+
+5. AngularJS
+
+
+6. Node.js
+
+
+7. React
 
