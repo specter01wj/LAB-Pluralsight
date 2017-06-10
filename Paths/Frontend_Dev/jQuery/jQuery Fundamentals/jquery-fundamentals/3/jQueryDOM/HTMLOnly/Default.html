@@ -52,7 +52,7 @@
             });
 
             //Remove
-            $('div.ParentWrapper').remove();
+            //$('div.ParentWrapper').remove();
 
             //Class functions
             //$('input[type="text"]').addClass('Highlight');
@@ -115,7 +115,7 @@
             </tr>
             <tr>
                 <td>Comments</td>
-                <td><textarea rows="5" cols="60" id="CommentsTextBox">TextArea</textarea></td>
+                <td><textarea rows="5" cols="60" id="CommentsTextBox" onfocus="FocusBlur(this)" onblur="FocusBlur(this)">TextArea</textarea></td>
             </tr>           
             <tr>
                 <td>

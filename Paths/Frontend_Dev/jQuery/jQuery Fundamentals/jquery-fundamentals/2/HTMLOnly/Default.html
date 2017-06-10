@@ -15,6 +15,12 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('div[title*="Title"]').html('Updated Div Value due to Title');
+            /*var inputs = $('input[type="text"]');
+            inputs.css('background-color', 'green');*/
+            $('form :input').each(function() {
+                var elem = $(this);
+                console.log(elem.val());
+            });
         });
     </script>
 </head>
