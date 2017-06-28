@@ -2,6 +2,8 @@
 *.m4a
 target
 .idea
+build
+nbproject
 conf/*.properties
 node_modules
 nbproject
@@ -16,3 +18,4 @@ symlinks
 /Paths/Backend_Dev/Java/Java Fundamentals - The Java Language/java-fundamentals-language/2/after/HelloNetBeans/build/
 /Paths/Backend_Dev/Java/Java Fundamentals - The Java Language/java-fundamentals-language/3/before/mathorder_1/build/
 /Paths/Backend_Dev/Java/Java Fundamentals - The Java Language/java-fundamentals-language/3/before/typeconversion_1/build/
+/Paths/Backend_Dev/Java/Java Fundamentals - The Java Language/java-fundamentals-language/4/before/nestedifs_1/build/
