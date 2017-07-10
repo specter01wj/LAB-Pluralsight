@@ -5,21 +5,23 @@
 
 <body>
   <template id="header">
-    <div>Header</div>
+    <div class="div_header">Header
     <template id="body">
       <div>Body</div>
     </template>
+    </div>
   </template>
 
   <script>
-    var template = document.querySelector('#header');
-    var clone = document.importNode(template.content, true);
-    document.body.appendChild(clone);
+    var template1 = document.querySelector('#header');
+    var clone1 = document.importNode(template1.content, true);
+    document.body.appendChild(clone1);
 
     //now must clone the nested body separately
-    template = document.querySelector('#body');
-    clone = document.importNode(template.content, true);
-    document.body.appendChild(clone);
+    template2 = document.querySelector('#body');
+    clone2 = document.importNode(template2.content, true);
+    document.getElementsByClassName('div_header')[0].appendChild(clone2);
+    //document.body.appendChild(clone2);
   </script>
 </body>
 
