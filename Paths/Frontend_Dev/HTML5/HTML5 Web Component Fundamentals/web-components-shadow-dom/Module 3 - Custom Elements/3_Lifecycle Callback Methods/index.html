@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+  <script>
+    var HelloProto = Object.create(HTMLElement.prototype);
+
+    HelloProto.punctuation = '!';
+
+    HelloProto.message = function() {
+      return '<h1>Hello World' + this.punctuation + '</h1>';
+    }
+
+    HelloProto.createdCallback = function() {
+      this.innerHTML = this.message();
+    }
+
+    HelloProto.attachedCallback = function() {
+      console.log('Attached!');
+    };
+
+    HelloProto.detachedCallback = function() {
+      console.log('Detached!');
+    };
+
+    HelloProto.attributeChangedCallback = function(attrName, oldval, newVal) {
+      if (attrName === 'punctuation') {
+        this.punctuation = newVal;
+        this.innerHTML = this.message();
+      }
+
+      console.log('The attribute "' + attrName + '" has changed to ' + newVal);
+    };
+
+    var Hello = document.registerElement('hello-world', {
+      prototype: HelloProto
+    });
+
+     //1 Attach
+    document.body.appendChild(new Hello());
+    var hello = document.querySelector('hello-world');
+
+     //2 Change Attribute
+    hello.setAttribute('punctuation', '?');
+
+     //3 Remove
+     //x.remove();
+  </script>
+</body>
+
+</html>
