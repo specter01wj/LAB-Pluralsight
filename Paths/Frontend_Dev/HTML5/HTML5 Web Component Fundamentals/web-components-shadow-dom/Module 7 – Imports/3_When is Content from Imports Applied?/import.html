@@ -1,0 +1,38 @@
+
+<!-- Example 3 -->
+<link rel="stylesheet" href="redbodytext.css">
+
+<!-- Example 5 -->
+<script src="sayhi.js"></script>
+
+<!-- Example 1 -->
+<div>
+  Here's some markup directly in the import. Note that it's inert.
+</div>
+
+<style>
+  /* Example 2 */
+  /* Note that this style applies immediately because it's outside the template tag */
+  h1 {
+    color: green;
+  }
+</style>
+
+<script>
+  //Example 4 This fires immediately on load because it's outside a template tag
+  console.log('Script from import has run');
+</script>
+
+<template>
+  <script>
+    //Example 6 note that this doesn't fire until the template is cloned.
+    alert('Script in template. I won\'t fire until you clone me');
+  </script>
+
+  <style>
+    /* Example 7 */
+    h1 {
+      font-size: x-small;
+    }
+  </style>
+</template>

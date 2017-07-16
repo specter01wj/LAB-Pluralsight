@@ -1,0 +1,36 @@
+<link rel="import" href="jquery.html">
+
+<template>
+  <style>
+    p {
+      color: orange;
+    }
+  </style>
+
+  <p>
+    Web Component A
+  </p>
+</template>
+
+<script>
+  //wrapped in IIFE to keep out of the global scope
+  //Note: If you don't use an IIFE, then you'll need to use 
+  //more descriptive vars for the proto and importDoc to avoid
+  //colliding with other components.
+  (function() {
+      var Proto = Object.create(HTMLElement.prototype);
+      var importDoc = document.currentScript.ownerDocument; //store ref to this doc
+
+      Proto.createdCallback = function() {
+        //this.innerHTML = "Hi"; //simple alternative option
+        var template = importDoc.querySelector('template');
+        var templateClone = document.importNode(template.content, true);
+        var root = this.createShadowRoot();
+        root.appendChild(templateClone);
+      };
+
+      document.registerElement('web-component-a', {
+        prototype: Proto
+      });
+    })();
+</script>
