@@ -29,6 +29,6 @@ var eventsApp = angular.module('eventsApp', ['ngResource', 'ngRoute'])
             })
         $routeProvider.otherwise({redirectTo: '/events'});
 
-        $locationProvider.html5Mode(true);
+        $locationProvider.html5Mode(true); 
 
     });
