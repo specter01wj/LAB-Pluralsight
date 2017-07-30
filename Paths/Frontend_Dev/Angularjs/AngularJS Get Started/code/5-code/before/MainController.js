@@ -12,6 +12,7 @@
         };
 
         var countdownInterval = null;
+        
         var startCountdown = function(){
             countdownInterval = $interval(decrementCountdown, 1000, $scope.countdown);
         };
