@@ -5,6 +5,7 @@ var RefTest = React.createClass({
         return <input type="text" ref="inp"
                  onChange={this.handleChange} />;
     },
+    
     componentDidMount: function () {
         this.refs.inp.getDOMNode().value = "set by ref";
     }
