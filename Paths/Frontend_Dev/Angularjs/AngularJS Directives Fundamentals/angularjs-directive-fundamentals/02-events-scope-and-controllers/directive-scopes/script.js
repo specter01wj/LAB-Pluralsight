@@ -36,6 +36,7 @@ angular.module('app').directive('userInfoCard', function() {
   return {
     templateUrl: "userInfoCard.html",
     restrict: "E",
+    //scope: true,
     scope: {
       user: '='
     },
@@ -43,6 +44,7 @@ angular.module('app').directive('userInfoCard', function() {
       $scope.knightMe = function(user) {
         user.rank = "knight";
       }
+      console.log($scope);
     }
   }
 });

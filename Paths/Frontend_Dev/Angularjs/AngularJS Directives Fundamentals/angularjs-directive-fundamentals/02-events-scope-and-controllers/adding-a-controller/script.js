@@ -16,6 +16,10 @@ angular.module('app').controller('mainCtrl', function($scope) {
       'Chewbacca'
     ]
   }
+
+  /*$scope.knightMe = function(user) {
+    user.rank = "knight";
+  }*/
   
   
 });
