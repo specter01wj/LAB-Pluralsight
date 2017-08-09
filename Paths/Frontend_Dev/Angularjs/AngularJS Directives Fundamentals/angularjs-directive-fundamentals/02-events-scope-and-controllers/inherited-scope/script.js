@@ -19,14 +19,14 @@ angular.module('app').controller('mainCtrl', function($scope) {
   $scope.user2 = {
     name: 'Han Solo',
     address: {
-      street: 'PO Box 123',
+      street: 'PO Box 555',
       city: 'Mos Eisley',
       planet: 'Tattoine'
     },
     friends: [
-      'Han',
-      'Leia',
-      'Chewbacca'
+      'James',
+      'Tod',
+      'Mike'
     ]
   }
   
