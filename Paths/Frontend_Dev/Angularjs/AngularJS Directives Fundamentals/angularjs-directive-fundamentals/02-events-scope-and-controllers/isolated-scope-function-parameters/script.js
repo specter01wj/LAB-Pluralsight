@@ -75,7 +75,8 @@ angular.module('app').directive('removeFriend', function() {
         $scope.removing = false;
       }
       $scope.confirmRemove = function() {
-        $scope.notifyParent();
+        //$scope.notifyParent();
+        $scope.notifyParent({friend: 'Han', parm2: 'val2'});
       }
       
     }

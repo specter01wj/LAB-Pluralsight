@@ -38,15 +38,18 @@ angular.module('app').directive('userInfoCard', function() {
     restrict: "E",
     scope: {
       user: '=',
-      initialCollapsed: '@collapsed'
+      collapsed: '@'
+      //initialCollapsed: '@collapsed'
     },
     controller: function($scope) {
-      $scope.collapsed = ($scope.initialCollapsed === 'true');
+      $scope.collapsedState = ($scope.collapsed === 'true');
+      //$scope.collapsed = ($scope.initialCollapsed === 'true');
       $scope.knightMe = function(user) {
         user.rank = "knight";
       }
       $scope.collapse = function() {
-        $scope.collapsed = !$scope.collapsed;
+        //$scope.collapsed = !$scope.collapsed;
+        $scope.collapsedState = !$scope.collapsedState;
       }
     }
   }
