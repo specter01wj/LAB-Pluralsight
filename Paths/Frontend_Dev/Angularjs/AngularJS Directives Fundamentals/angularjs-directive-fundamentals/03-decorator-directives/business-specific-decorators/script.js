@@ -15,6 +15,11 @@ angular.module('app').directive('userTile', function() {
     scope: {
       user: '='
     },
+    /*controller: function($scope) {
+      $scope.select = function() {
+        $scope.user.selected = !$scope.user.selected;
+      }
+    },*/
     templateUrl: 'userTile.html'
   }
 });

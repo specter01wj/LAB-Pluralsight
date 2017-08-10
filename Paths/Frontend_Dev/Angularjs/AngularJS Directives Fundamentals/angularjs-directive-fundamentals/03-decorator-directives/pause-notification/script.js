@@ -15,10 +15,14 @@ angular.module('app').controller('mainCtrl', function($scope) {
 angular.module('app').directive('eventPause', function($parse) {
   return {
     restrict: 'A',
+    /*scope: {
+      eventPause: '&'
+    },*/
     link: function(scope, el, attrs) {
       var fn = $parse(attrs['eventPause']);
       el.on('pause', function(event) {
         scope.$apply(function() {
+          //scope.eventPause();
           fn(scope, {evt: event})
         })
       })
