@@ -9,7 +9,7 @@ angular.module('app').controller('mainCtrl', function($scope) {
 angular.module('app').directive('fontScale', function() {
   return {
     link: function(scope, el, attrs) {
-      scope.$watch(attrs['fontScale'], function(newVal) {
+      scope.$watch(attrs['fontScale'], function(newVal, oldVal) {
         el.css('font-size', newVal + '%');
       })
     }

@@ -42,6 +42,7 @@ angular.module('app').directive('stateDisplay', function() {
       var classes = parms.slice(1);
       
       scope.$watch(linkVar, function(newVal) {
+        //el.css('background-color', parms[newVal + 1]);
         el.removeClass(classes.join(' '));
         el.addClass(classes[newVal]);
       });
