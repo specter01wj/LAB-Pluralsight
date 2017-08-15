@@ -10,7 +10,7 @@ angular.module('app').directive('myLazyRender', function() {
   return {
     restrict: 'A',
     transclude: 'element',
-    priority: 900,
+    priority: 1200,
     link: function(scope, el, attr, ctrl, transclude) {
       var hasBeenShown = false;
       var unwatchFn = scope.$watch(attr.myLazyRender, function(value) {

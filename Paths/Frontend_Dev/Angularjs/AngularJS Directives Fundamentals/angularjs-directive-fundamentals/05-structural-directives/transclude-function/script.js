@@ -9,6 +9,8 @@ angular.module('app').controller('mainCtrl', function($scope) {
 angular.module('app').directive('myTransclude', function() {
   return {
     restrict: 'A',
+    /*transclude: true,
+    template: '<div ng-transclude />'*/
     transclude: 'element',
     link: function(scope, el, attr, ctrl, transclude) {
       transclude(scope, function(clone) {
