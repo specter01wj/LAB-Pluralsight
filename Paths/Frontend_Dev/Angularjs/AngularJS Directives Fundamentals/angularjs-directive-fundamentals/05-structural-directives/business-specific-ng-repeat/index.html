@@ -13,7 +13,8 @@
   <body ng-controller="mainCtrl" class="container">
     <h1 class="well">Bounty Hunters</h1>
     <div user-list="hunter in bountyHunters">
-      <span>Age: {{hunter.age}}</span>
+      <span>Age: {{hunter.age}}</span><br />
+      <span>Name: {{hunter.name}}</span>
     </div>
     <hr>
     <button class="btn btn-primary" ng-click="add()">Add</button>

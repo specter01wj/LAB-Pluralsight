@@ -16,7 +16,7 @@ angular.module('app').controller('mainCtrl', function($scope) {
   }]
   
   $scope.add = function() {
-    $scope.bountyHunters.push({name: '4LOM'});
+    $scope.bountyHunters.push({name: '4LOM', age: 112});
   }
   $scope.remove = function() {
     $scope.bountyHunters.length--;
@@ -48,6 +48,8 @@ angular.module('app').directive('userList', function($compile) {
           transclude(childScope, function(clone) {
             var template = $compile('<div class="panel panel-primary" ><div class="panel-heading">{{' + itemString + '.name}}</div><div class="panel-body" /></div>');
             var wrapper = template(childScope);
+            //var wrapper = angular.element('<div class="well" />');
+            //wrapper.append(clone);
             wrapper.find(".panel-body").append(clone);
             
             el.before(wrapper);
