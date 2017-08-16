@@ -1,0 +1,16 @@
+﻿body 
+{
+    background-color:#cccc99;
+    font-family: Arial, Sans-Serif;
+}
+
+.ui-progressbar
+{
+    height:15px;
+    width: 350px;
+}
+
+.ui-progressbar-value
+{
+    background-image: url('rainbarb.gif');
+}
