@@ -84,11 +84,20 @@ $(function () {
 
     $("#search").autocomplete({
         source: classes
-        //source: "autocompletejson.ashx",
+        //source: "autocompletejson.ashx"
         //minLength: 2,
         //delay: 1500
     });
 
+    $("#buttons").children()
+                 .button({ icons: { primary: "ui-icon-search", secondary: "ui-icon-wrench"} })
+                 .click(function (e) {
+                    e.stopPropagation();
+                     alert($(this)[0].textContent);
+                 });
+
+    $("#radios").buttonset();
+    $("#checks").buttonset();
 
 
 
