@@ -93,12 +93,24 @@ $(function () {
                  .button({ icons: { primary: "ui-icon-search", secondary: "ui-icon-wrench"} })
                  .click(function (e) {
                     e.stopPropagation();
-                     alert($(this)[0].textContent);
+                    e.preventDefault();
+                    alert($(this)[0].textContent);
                  });
 
     $("#radios").buttonset();
     $("#checks").buttonset();
 
+    $("#dateselection").datepicker({
+        showAnim: "bounce",
+        numberOfMonths: 2,
+        showWeek: true,
+        changeMonth: true,
+        changeYear: true,
+        showButtonPanel: true,
+        minDate: new Date(2008, 1 - 1, 1),
+        maxDate: new Date(2012, 12 - 1, 31)
+    });
 
+    $("#dateselection").datepicker("setDate", new Date(2011, 6 - 1, 11));
 
 });
