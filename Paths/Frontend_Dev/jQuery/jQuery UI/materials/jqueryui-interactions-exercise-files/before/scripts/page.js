@@ -9,11 +9,11 @@ $( document ).ready(function() {
 
     $("#d1").draggable({
     	//axis: 'y',
-    	stack: '.ui-draggable',
+    	//stack: '.ui-draggable',
     	//grid: [30,100],
     	snap: '#d2, #d3',
     	//containment: '#draggables'
-        //revert: "invalid"
+        revert: "invalid"
     });
 
     $("#d2").draggable({
@@ -30,6 +30,29 @@ $( document ).ready(function() {
 
     $("#d1, #d2, #d3").draggable(
         "option", "stack", ".ui-draggable");
+
+
+
+    $("#trash").droppable({
+        activeClass: "opaque",
+        //accept: "#d3",
+        drop: function (event, ui) {
+            ui.draggable.fadeOut(1500,function () {
+                ui.draggable.remove();
+            });
+        }
+    });
+
+
+    $("#sortable").sortable({ 
+    	axis: "y", 
+    	placeholder: "placeholder" 
+    });
+
+    $("#d3").resizable({ 
+    	aspectRatio: true, 
+    	//alsoResize: "#d2" 
+    });
 
 
 });
