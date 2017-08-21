@@ -61,8 +61,6 @@ angular.module('app').directive('userInfoCard', function() {
   }
 });
 
-
-
 angular.module('app').directive('removeFriend', function() {
   return {
     restrict: 'E',
