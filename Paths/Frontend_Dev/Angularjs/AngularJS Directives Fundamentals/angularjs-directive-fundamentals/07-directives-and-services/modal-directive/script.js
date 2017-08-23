@@ -1,8 +1,8 @@
 // Code goes here 
 
-angular.module('app', []);
+var my_app = angular.module('app', []);
  
-angular.module('app').controller('mainCtrl', function($scope) {
+my_app.controller('mainCtrl', function($scope) {
   $scope.openModal = function() {
     $scope.modalOpen = true;
   }
@@ -23,7 +23,7 @@ angular.module('app').controller('modalCtrl', function($scope) {
   }
 })
 
-angular.module('app').directive('modal', function($document) {
+my_app.directive('modal', function($document) {
   return {
     scope: {
       modalOpen: '=open',
