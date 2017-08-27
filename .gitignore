@@ -6,6 +6,7 @@ build
 nbproject
 conf/*.properties
 node_modules
+bower_components
 nbproject
 npm-debug.log
 .DS_Store
