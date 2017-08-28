@@ -1,0 +1,55 @@
+<html ng-app="app">
+<body>
+	<h1>Step 3 - Nested Scope with Controller As</h1>
+	<div ng-controller="Shell as vm">
+		<label>[shell scope] vm.title:</label> 
+		<input ng-model="vm.title"/>
+		<div ng-controller="Customer as vm">
+			<label>[customer scope] title:</label> 
+			<input ng-model="vm.title"/>
+			<ul>
+				<li>cust.title: {{vm.title}}</li>
+				<li>$parent.vm.title: 
+					{{$parent.vm.title}}</li>
+			</ul>
+		</div>	
+	</div>	
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+	<script>
+	
+	(function(){
+		angular
+			.module('app', [])
+			.controller('Shell', Shell)
+			.controller('Customer', Customer);
+
+		function Shell() {
+			var vm = this;
+			vm.title = 'shell title';
+
+			/*
+			 * don't forget to inject $scope to use this $watch
+		        $scope.$watch(function () {
+		            return vm.title; 
+	    	    }, function (newVal, oldVal) {
+	        	    console.log(newVal + '---' + oldVal);
+	        	});
+			*/
+
+		}
+
+		function Customer() {
+			var vm = this;
+			vm.name = 'customer name';
+		}
+	})();
+	</script>
+
+
+
+
+
+
+</body>
+</html>

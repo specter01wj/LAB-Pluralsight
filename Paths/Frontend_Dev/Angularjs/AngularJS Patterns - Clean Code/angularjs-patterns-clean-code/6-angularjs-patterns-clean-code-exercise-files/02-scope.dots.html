@@ -1,0 +1,43 @@
+<html ng-app="app">
+<body>
+	<h1>Step 2 - Nested Scopes with dots</h1>
+	<div ng-controller="Shell">
+		<label>[shell scope] vm.title:</label> 
+		<input ng-model="vm.title"/>
+		<div ng-controller="Customer">
+			<label>[customer scope] title:</label> 
+			<input ng-model="vm.title"/>
+			<ul>
+				<li>vm.title: {{vm.title}}</li>
+				<li>$parent.vm.title: 
+					{{$parent.vm.title}}</li>
+			</ul>
+		</div>	
+	</div>	
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+	<script>
+	
+	(function(){
+		angular
+			.module('app', [])
+			.controller('Shell', Shell)
+			.controller('Customer', Customer);
+
+		Shell.$inject = ['$scope'];
+		function Shell($scope) {
+			$scope.vm = {
+				title: 'shell title'
+			};
+		}
+
+		Customer.$inject = ['$scope'];
+		function Customer($scope) {
+			$scope.vm = {
+				name: 'customer name'
+			};
+		}
+	})();
+	</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html ng-app="app">
+<body>
+	<h1>Step 1 - Nested Scopes 123</h1>
+	<div ng-controller="Shell">
+		<label>[shell scope] title:</label> 
+		<input ng-model="title"/>
+		<div ng-controller="Customer">
+			<label>[customer scope] title:</label> 
+			<input ng-model="title"/>
+			<ul>
+				<li>title: {{title}}</li>
+				<li>$parent.title: {{$parent.title}}</li>
+			</ul>
+		</div>	
+	</div>	
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+	<script>
+
+	(function(){
+		angular
+			.module('app', [])
+			.controller('Shell', Shell)
+			.controller('Customer', Customer);
+
+		Shell.$inject = ['$scope'];
+		function Shell($scope) {
+			$scope.title = 'shell title';
+		}
+
+		Customer.$inject = ['$scope'];
+		function Customer($scope) {
+			$scope.name = 'customer name';
+		}
+	})();
+	</script>
+</body>
+</html>
