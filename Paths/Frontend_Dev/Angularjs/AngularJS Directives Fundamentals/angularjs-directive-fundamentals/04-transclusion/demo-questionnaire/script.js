@@ -15,4 +15,4 @@ angular.module('app').directive('myQuestion', function() {
       questionText: '@q'
     }
   }
-})
+});
