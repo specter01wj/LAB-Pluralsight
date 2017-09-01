@@ -21,16 +21,16 @@ function salesKPI (d) {
 }
 
 //create our SVG
-var svg = d3.select("body").append("svg").attr({ width:w, height: h});
+var svg = d3.select("#scatplot3").append("svg").attr({ width:w, height: h});
 
 //add min/max to array
-Array.max = function( array ){
+/*Array.max = function( array ){
   return Math.max.apply( Math, array );
 };
     
 Array.min = function( array ){
   return Math.min.apply( Math, array );
-};
+};*/
 
 //function for showing labels
 function showMinMax(ds, col, val, type){
@@ -39,12 +39,10 @@ function showMinMax(ds, col, val, type){
  
   if (type=='minmax' && (val == max || val == min)) {
     return val;
-  } else
-   
-  if (type=='all') {
+  } else if (type=='all') {
     return val;
-  } 
- 
+  }
+   
 }
 //add dots
 var dots = svg.selectAll("circle")

@@ -21,7 +21,7 @@ var lineFun = d3.svg.line()
   .interpolate("linear");
 
 //create our SVG
-var svg = d3.select("body").append("svg").attr({ width:w, height: h});
+var svg = d3.select("#line2").append("svg").attr({ width:w, height: h});
 
 //build the viz
 var viz = svg.append("path")
@@ -53,7 +53,13 @@ var labels = svg.selectAll("text")
                         return "bold"; }
                       else {
                         return "normal"; }
-                   }
+                   },
+     "font-style": function(d,i){
+        if (i===0 ||  i==(monthlySales.length-1)) {
+          return "italic"; }
+        else {
+          return "normal"; }
+     }
   });
 
 

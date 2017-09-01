@@ -19,7 +19,7 @@ var lineFun = d3.svg.line()
   .y(function (d) { return d.sales; })
   .interpolate("linear");
 
-var svg = d3.select("body").append("svg").attr({ width:w, height: h});
+var svg = d3.select("#line1").append("svg").attr({ width:w, height: h});
 
 var viz = svg.append("path")
   .attr({

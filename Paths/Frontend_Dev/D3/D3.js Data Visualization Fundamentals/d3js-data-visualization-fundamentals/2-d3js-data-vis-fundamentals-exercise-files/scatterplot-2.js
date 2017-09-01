@@ -16,12 +16,12 @@ monthlySales = [
 
 //KPI color
 function salesKPI (d) {
-  if (d>=250) { return "#33CC66"; } else
-  if (d<250) { return "#666666"; }
+  if (d>=250) { return "#DD0EF9"; } else
+  if (d<250) { return "#0E1B90"; }
 }
 
 //create our SVG
-var svg = d3.select("body").append("svg").attr({ width:w, height: h});
+var svg = d3.select("#scatplot2").append("svg").attr({ width:w, height: h});
 
 
 //add dots

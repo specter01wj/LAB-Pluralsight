@@ -3,7 +3,7 @@ var h = 120;
 var padding = 2;
 var dataset = [ 5, 10, 13, 19, 21, 25,
                 11, 25, 22, 18, 7];
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#bar2").append("svg")
           .attr("width", w)
           .attr("height", h);
 
@@ -35,5 +35,5 @@ svg.selectAll("text")
     y: function(d) { return h - (d*4)+14; },
     "font-family": "sans-serif",
     "font-size": 12,
-    "fill": "#ffffff"
+    "fill": "#0EF9A3"
   });

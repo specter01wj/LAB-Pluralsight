@@ -16,7 +16,7 @@ monthlySales = [
 
 
 //create our SVG
-var svg = d3.select("body").append("svg").attr({ width:w, height: h});
+var svg = d3.select("#scatplot1").append("svg").attr({ width:w, height: h});
 
 
 //add dots
