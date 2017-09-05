@@ -144,7 +144,7 @@
 
             var viz = svg.selectAll(".path-"+ds.category) 
                     .transition() //add the transition and you're done!
-                    .duration(500) //set the duration for more control
+                    .duration(1500) //set the duration for more control
                     .ease("linear") //choose the type of animation linear, elastic, bounce, circle
                     .attr({
                         d: lineFun(ds.monthlySales)                        
