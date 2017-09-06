@@ -92,7 +92,7 @@
             //tooltip
             var tooltip = d3.select("body").append("div")   
                         .attr("class", "tooltip")               
-                        .style("opacity", 0);
+                        .style("opacity", 0.3);
 
 
 
@@ -146,14 +146,14 @@
                             .attr({
                                 cx: function(d) {return xScale(getDate(d.month)); },
                                 cy: function (d) {return yScale(d.sales); },
-                                r:  4,
-                                "fill": "#666666",                                
+                                r:  6,
+                                "fill": "#2FD319",                                
                                 class: "circle-"+ds.category
                             }) 
                             .on("mouseover", function(d) {      
                                 tooltip.transition()        
                                     .duration(500)      
-                                    .style("opacity", .9);      
+                                    .style("opacity", .6);      
                                 tooltip.html("<strong>Sales $" + d.sales + "K</strong>")  
                                     .style("left", (d3.event.pageX) + "px")     
                                     .style("top", (d3.event.pageY - 28) + "px");    
