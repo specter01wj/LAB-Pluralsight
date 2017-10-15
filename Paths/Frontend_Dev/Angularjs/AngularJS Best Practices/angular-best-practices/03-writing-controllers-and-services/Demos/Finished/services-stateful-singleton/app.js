@@ -2,6 +2,7 @@ var app = angular.module('app', []);
 
 app.value('schedule', {
   classes: [],
+
   addClass: function(newClass) {
     for(var i=0; i < this.classes.length; i++) {
       if(this.classes[i] === newClass) {
@@ -10,6 +11,7 @@ app.value('schedule', {
     }
     this.classes.push(newClass);
   },
+  
   dropClass: function(classToDrop) {
     for(var i=0; i < this.classes.length; i++) {
       if(this.classes[i] === classToDrop) {
