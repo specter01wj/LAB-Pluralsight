@@ -13,7 +13,6 @@ app.controller('scInstructorsCtrl', function($scope, scFollowedInstructors) {
 });
 
 
-
 app.directive('scInstructors', function() {
   return {
     restrict: 'E',
@@ -40,7 +39,7 @@ app.directive('scFollowInstructor', function(/*scFollowedInstructors*/) {
     require: '^scInstructors',
     link: function(scope, element, attrs, ctrl) {
       scope.followInstructor = function() {
-        ctrl.followInstructor(scope.instructor);
+        ctrl.followInstructor(scope.instructorToFollow);
         element.css('display', 'none');
       }
     }

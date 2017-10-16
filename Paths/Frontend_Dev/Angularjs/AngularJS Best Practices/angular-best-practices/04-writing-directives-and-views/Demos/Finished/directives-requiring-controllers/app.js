@@ -12,7 +12,6 @@ app.controller('scInstructorsCtrl', function($scope, scFollowedInstructors) {
 });
 
 
-
 app.directive('scInstructors', function() {
   return {
     restrict: 'E',
