@@ -7,8 +7,8 @@ app.directive('scSchedule', function() {
     template: '<div class="well sidebar-nav">' +
         '<h3>Your Schedule</h3>' +
         '<div class="row" ng-repeat="class in classList">' +
-        '<div class="col-md-6">{{class.name}}</div>' +
-        '<div class="col-md-6"><a href="#" ng-click="viewClassDetails(class)">Details</a></div>' +
+        '<div class="col-xs-2">{{class.name}}</div>' +
+        '<div class="col-xs-10"><a href="#" ng-click="viewClassDetails(class)">Details</a></div>' +
         '</div>' +
         '</div>',
     controller: function($scope) {
