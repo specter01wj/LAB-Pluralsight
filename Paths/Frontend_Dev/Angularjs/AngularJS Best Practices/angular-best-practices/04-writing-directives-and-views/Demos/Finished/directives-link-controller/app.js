@@ -1,11 +1,11 @@
 var app = angular.module('app', []);
 
-app.controller('scScheduleCtrl', function($scope) {
+/*app.controller('scScheduleCtrl', function($scope) {
   $scope.viewClassDetails = function(classToView) {
     // do something
     console.log('viewing details for ' + classToView.name);
   }
-})
+})*/
 
 app.directive('scSchedule', function() {
   return {
@@ -14,17 +14,17 @@ app.directive('scSchedule', function() {
     template: '<div class="well sidebar-nav">' +
         '<h3>Your Schedule</h3>' +
         '<div class="row" ng-repeat="class in classList">' +
-        '<div class="col-md-6">{{class.name}}</div>' +
-        '<div class="col-md-6"><a href="#" ng-click="viewClassDetails(class)">Details</a></div>' +
+        '<div class="col-xs-2">{{class.name}}</div>' +
+        '<div class="col-xs-10"><a href="#" ng-click="viewClassDetails(class)">Details</a></div>' +
         '</div>' +
         '</div>',
-//    link: function(scope) {
-//      scope.viewClassDetails = function(classToView) {
-//        do something
-//        console.log('viewing details for ' + classToView.name);
-//      }
-//    }
-    controller: 'scScheduleCtrl'
+     link: function(scope) {
+       scope.viewClassDetails = function(classToView) {
+         //do something
+         console.log('viewing details for ' + classToView.name);
+       }
+     }
+    //controller: 'scScheduleCtrl'
   }
 });
 
