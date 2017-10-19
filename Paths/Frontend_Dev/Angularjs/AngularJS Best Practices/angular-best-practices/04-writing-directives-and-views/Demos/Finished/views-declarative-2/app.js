@@ -2,7 +2,6 @@ var app = angular.module('app', []);
 
 app.value('scFollowedInstructors', []);
 
-
 app.controller('scInstructorsCtrl', function($scope, scFollowedInstructors) {
   $scope.scFollowedInstructors = scFollowedInstructors;
 });
