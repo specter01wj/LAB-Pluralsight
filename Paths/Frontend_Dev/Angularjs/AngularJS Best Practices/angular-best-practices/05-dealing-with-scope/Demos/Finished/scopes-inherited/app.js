@@ -1,6 +1,5 @@
 var app = angular.module('app', []);
 
-
 app.directive('scInstructorCount', function() {
   return {
     restrict: 'A',
@@ -23,8 +22,6 @@ app.directive('scShared', function() {
     }
   }
 })
-
-
 
 angular.module('app').controller('scheduleCtrl',function($scope) {
 
