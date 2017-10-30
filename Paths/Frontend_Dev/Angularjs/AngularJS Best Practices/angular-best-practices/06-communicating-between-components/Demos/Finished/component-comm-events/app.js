@@ -17,6 +17,7 @@ app.controller('scScheduleCtrl', function($scope, schedule) {
   $scope.$on('course:registered', function(event, course) {
     schedule.push({id: course.id, name: course.name, credits: course.credits});
   })
+  
 });
 
 app.controller('scRegistrationCtrl',function($scope, toastr) {
