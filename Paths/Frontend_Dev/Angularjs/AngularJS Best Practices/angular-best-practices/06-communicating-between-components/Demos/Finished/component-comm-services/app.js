@@ -18,7 +18,6 @@ app.factory('registration', function(schedule) {
   }
 })
 
-
 app.controller('scCatalogCtrl', function($scope, catalog, registration, notifier) {
   $scope.catalog = catalog;
 
