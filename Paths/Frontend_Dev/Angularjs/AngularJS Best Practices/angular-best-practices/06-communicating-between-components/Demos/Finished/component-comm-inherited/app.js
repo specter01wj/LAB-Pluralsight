@@ -1,6 +1,7 @@
 var app = angular.module('app', []);
 
 app.controller('scCatalogCtrl', function($scope, catalog) {
+  
   $scope.registerCourse = function(course) {
     $scope.schedule.push({id: course.id, name: course.name, credits: course.credits});
     course.registered = true;
