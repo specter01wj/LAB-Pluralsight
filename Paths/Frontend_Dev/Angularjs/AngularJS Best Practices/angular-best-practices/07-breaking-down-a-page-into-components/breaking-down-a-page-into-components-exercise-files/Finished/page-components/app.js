@@ -75,7 +75,6 @@ app.directive('followedInstructors', function() {
 });
 
 app.controller('scRegistrationCtrl',function($scope, toastr, catalog) {
-
   $scope.catalog = catalog;
 });
 app.directive('registration', function() {
