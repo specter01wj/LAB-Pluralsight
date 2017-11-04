@@ -58,4 +58,4 @@ app.factory('notifier', function(toastr) {
       console.log(msg);
     }
   }
-})
+});
