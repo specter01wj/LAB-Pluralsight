@@ -16,7 +16,7 @@ app.factory('followedInstructors', function($http, $q) {
     },
     save: function(list) {
       $http.post('data/userData/followedInstructors', list, {
-
+        //header: {"Content-Type": 'application/x-wwww-form-urlencoded'}
       });
     }
   }
