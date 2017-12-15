@@ -14,10 +14,10 @@
 </body>
   <script>
 
-var w = 300;
-var h = 450;
+var w = 200;
+var h = 350;
 var padding = 2;
-var dataset = [ 5, 10, 15, 20, 25];
+var dataset = [ 5, 10, 15, 20, 25, 5, 15, 25];
 var svg = d3.select("#bar1").append("svg")
           .attr("width", w)
           .attr("height", h);
@@ -27,10 +27,16 @@ svg.selectAll("rect")
   .enter()
   .append("rect")
   .style('fill', 'purple')
-  .attr("x", function(d, i) {return i * (w / dataset.length);})
-  .attr("y", function(d) {return h - (d*4);})
+  .attr("x", function(d, i) {
+    return i * (w / dataset.length);
+  })
+  .attr("y", function(d) {
+    return h - (d*4);
+  })
   .attr("width", w / dataset.length - padding)
-  .attr("height", function(d) {return d*4;});
+  .attr("height", function(d) {
+    return d*4;
+  });
 </script>
 
 </html>
