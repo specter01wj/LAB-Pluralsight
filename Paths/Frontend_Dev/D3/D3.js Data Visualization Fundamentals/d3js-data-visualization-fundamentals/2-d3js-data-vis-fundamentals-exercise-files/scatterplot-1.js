@@ -30,3 +30,5 @@ var dots = svg.selectAll("circle")
     r:  5,
     "fill": "#666666"
   });
+
+  

@@ -2,7 +2,7 @@
 var w = 300;
 
 var h = 100;
-var padding = 2;
+var padding = 10;
 var dataset = [5, 10, 14, 20, 25];
 var svg = d3.select("#bar1").append("svg")
           .attr("width", w)
