@@ -130,14 +130,14 @@
 
             var svg = d3.select("body").select("#svg-"+ds.category);
             
-            var yAxis = svg.selectAll("g.y-axis").call(yAxisGen)                        
+            var yAxis = svg.selectAll("g.y-axis").call(yAxisGen);                        
                         
-            var xAxis = svg.selectAll("g.x-axis").call(xAxisGen)                        
+            var xAxis = svg.selectAll("g.x-axis").call(xAxisGen);                        
 
             var viz = svg.selectAll(".path-"+ds.category)
-                    .attr({
-                        d: lineFun(ds.monthlySales)                        
-                    });
+                            .attr({
+                                d: lineFun(ds.monthlySales)                        
+                            });
 
             
         }
@@ -150,7 +150,7 @@
         
         
         //get data and draw things  
-        d3.json("https://api.github.com/repos/bsullins/d3js-resources/contents/monthlySalesbyCategoryMultiple.json", function(error, data) {
+        d3.json("https://api.github.com/repos/specter01wj/LAB-Pluralsight/contents/Paths/Frontend_Dev/D3/D3.js%20Data%20Visualization%20Fundamentals/d3js-data-visualization-fundamentals/3-d3js-data-vis-fundamentals-exercise-files/MonthlySalesbyCategoryMultiple.json", function(error, data) {
            
            if(error) {
                console.log(error);
@@ -176,24 +176,24 @@
             d3.select("select")
                 .on("change", function(d,i){
 
-                //get selected option
-                var sel = d3.select('#date-option').node().value;
+                    //get selected option
+                    var sel = d3.select('#date-option').node().value;
 
-                // console.log(ds.monthlySales.length-sel);
-                // console.log(sel);
+                    // console.log(ds.monthlySales.length-sel);
+                    // console.log(sel);
 
-                var decodedData = JSON.parse(window.atob(data.content));
+                    var decodedData = JSON.parse(window.atob(data.content));
 
-                 decodedData.contents.forEach(function(ds){
+                    decodedData.contents.forEach(function(ds){
 
-                    ds.monthlySales.splice(0,ds.monthlySales.length-sel);
+                        ds.monthlySales.splice(0,ds.monthlySales.length-sel);
 
-                    // console.log(ds.monthlySales.length);
-                    
-                    updateLine(ds);
-                   
-                    
-                });
+                        // console.log(ds.monthlySales.length);
+                        
+                        updateLine(ds);
+                       
+                        
+                    });
 
             })
 
