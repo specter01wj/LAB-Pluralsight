@@ -48,9 +48,9 @@
                      return projection([d.lon, d.lat])[1];
                    })
                    .attr("r", function(d) {
-                    return Math.sqrt(parseInt(d.sales)* 0.00005);
+                    return Math.sqrt(parseInt(d.sales)* 0.000175);
                    })
-                   .style("fill", "red");
+                   .style("fill", "#C0C617");
                 
               });
 
