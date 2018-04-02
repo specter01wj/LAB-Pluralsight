@@ -3,6 +3,8 @@
 <head>
     <title>Welcome to Joe's Coffee Store!</title>
     <link rel="stylesheet" href="Styles/Layout.css" type="text/css" />
+    <script src="http://maps.google.se/maps/api/js?sensor=false"></script>
+    <script src="scripts/geopositioning.js"></script>
 </head>
 <body>
 
@@ -44,6 +46,10 @@
         <div id="driving-directions"></div>
 
     </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", createDrivingDirectionsMap, false);
+    </script>
 
 </body>
 </html>
