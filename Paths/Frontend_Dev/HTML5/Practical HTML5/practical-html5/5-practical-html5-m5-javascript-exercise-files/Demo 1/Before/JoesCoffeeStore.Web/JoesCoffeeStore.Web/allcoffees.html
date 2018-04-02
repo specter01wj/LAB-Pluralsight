@@ -3,6 +3,7 @@
 <head>
     <title>Welcome to Joe's Coffee Store!</title>
     <link rel="stylesheet" href="Styles/Layout.css" type="text/css" />
+    <script src="scripts/dragAndDrop.js"></script>
 </head>
 <body>
     <header>
@@ -87,5 +88,9 @@
         <header class="blockheader"><span>Shopping cart</span></header>
         <ul></ul>
     </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", addDnDHandlers, false);
+    </script>
 </body>
 </html>
