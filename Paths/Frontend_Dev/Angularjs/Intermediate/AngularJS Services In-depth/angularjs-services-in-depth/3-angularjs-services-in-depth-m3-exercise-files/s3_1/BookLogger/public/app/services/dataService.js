@@ -46,7 +46,7 @@
                     deferred.reject('Error!');
                 }
 
-            }, 1000);
+            }, 500);
 
             return deferred.promise;
 
@@ -54,7 +54,7 @@
 
         function getAllReaders() {
 
-            return [
+            var readersArray = [
                 {
                     reader_id: 1,
                     name: 'Marie',
@@ -74,6 +74,22 @@
                     totalMinutesRead: 600
                 }
             ];
+
+            var deferred = $q.defer();
+
+            $timeout(function() {
+
+                var success = true;
+                if(success) {
+                    deferred.notify('gathering data...');
+                    deferred.resolve(readersArray);
+                } else {
+                    deferred.reject('Error!');
+                }
+
+            }, 1500);
+
+            return deferred.promise;
         }
     }
 
