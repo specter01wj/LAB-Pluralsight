@@ -28,9 +28,10 @@
 
     }]);
 
-    app.config(['booksProvider', '$routeProvider', function (booksProvider, $routeProvider) {
+    app.config(['booksProvider', '$routeProvider', '$logProvider', function (booksProvider, $routeProvider, $logProvider) {
 
         booksProvider.setIncludeVersionInTitle(true);
+        $logProvider.debugEnabled(true);
 
         $routeProvider
             .when('/', {
