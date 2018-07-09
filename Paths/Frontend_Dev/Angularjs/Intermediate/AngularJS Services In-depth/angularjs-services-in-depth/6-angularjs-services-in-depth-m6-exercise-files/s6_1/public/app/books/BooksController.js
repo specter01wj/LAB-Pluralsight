@@ -48,6 +48,8 @@
 
         function getReadersSuccess(readers) {
             vm.allReaders = readers;
+            //$log.log('All readers received!');
+            $log.awesome('WTF?');
         }
 
         function getAllReadersComplete() {
