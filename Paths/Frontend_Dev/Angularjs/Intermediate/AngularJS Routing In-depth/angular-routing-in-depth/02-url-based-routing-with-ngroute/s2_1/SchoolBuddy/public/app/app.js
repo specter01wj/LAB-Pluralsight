@@ -1,8 +1,8 @@
 (function() {
 
-    var app = angular.module('app', []);
+    var app = angular.module('app', ['ngRoute']);
 
-    app.config(['$logProvider', function ($logProvider) {
+    app.config(['$logProvider', '$routeProvider', function ($logProvider, $routeProvider) {
 
         $logProvider.debugEnabled(true);
 
