@@ -6,6 +6,13 @@
 
         $logProvider.debugEnabled(true);
 
+        $routeProvider
+        	.when('/', {
+        		controller: 'HomeController',
+        		controllerAs: 'home',
+        		templateUrl: '/app/templates/home.html'
+        	})
+
     }]);
 
 }());
