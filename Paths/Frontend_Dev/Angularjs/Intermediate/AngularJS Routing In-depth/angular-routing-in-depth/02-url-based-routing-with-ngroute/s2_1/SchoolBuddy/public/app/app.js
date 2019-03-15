@@ -20,7 +20,14 @@
             .when('/classrooms', {
                 controller: 'AllClassroomsController',
                 controllerAs: 'classrooms',
-                templateUrl: '/app/templates/allClassrooms.html'
+                templateUrl: '/app/templates/allClassrooms.html',
+                //redirectTo: '/schools'
+                redirectTo: function(params, currPath, currSearch) {
+                	console.log(params);
+                	console.log(currPath);
+                	console.log(currSearch);
+                	return '/';
+                }
             })
             .when('/activities', {
                 controller: 'AllActivitiesController',
