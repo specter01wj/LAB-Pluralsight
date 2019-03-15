@@ -12,6 +12,26 @@
         		controllerAs: 'home',
         		templateUrl: '/app/templates/home.html'
         	})
+        	.when('/schools', {
+                controller: 'AllSchoolsController',
+                controllerAs: 'schools',
+                templateUrl: '/app/templates/allSchools.html'
+            })
+            .when('/classrooms', {
+                controller: 'AllClassroomsController',
+                controllerAs: 'classrooms',
+                templateUrl: '/app/templates/allClassrooms.html'
+            })
+            .when('/activities', {
+                controller: 'AllActivitiesController',
+                controllerAs: 'activities',
+                templateUrl: '/app/templates/allActivities.html',
+                resolve: {
+                    activities: function (dataService) {
+                        return dataService.getAllActivities();
+                    }
+                }
+            })
 
     }]);
 
