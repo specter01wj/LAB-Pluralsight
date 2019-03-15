@@ -15,8 +15,8 @@
         	.when('/schools', {
                 controller: 'AllSchoolsController',
                 controllerAs: 'schools',
-                templateUrl: '/app/templates/allSchools.html',
-                caseInsensitiveMatch: true
+                templateUrl: '/app/templates/allSchools.html'
+                //caseInsensitiveMatch: true
             })
             //.when('/classrooms/:id', {
             .when('/classrooms', {
