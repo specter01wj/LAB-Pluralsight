@@ -36,6 +36,7 @@
                 controllerAs: 'activities',
                 templateUrl: '/app/templates/allActivities.html'
             })
+            .otherwise('/');
 
     }]);
 
