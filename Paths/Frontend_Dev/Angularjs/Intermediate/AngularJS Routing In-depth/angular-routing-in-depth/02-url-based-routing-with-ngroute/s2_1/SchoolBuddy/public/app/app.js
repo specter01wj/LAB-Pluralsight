@@ -36,6 +36,11 @@
                 	return '/';
                 }*/
             })
+            .when('/classrooms/:id', {
+                templateUrl: '/app/templates/classroom.html',
+                controller: 'ClassroomController',
+                controllerAs: 'classroom'
+            })
             .when('/activities', {
                 controller: 'AllActivitiesController',
                 controllerAs: 'activities',
