@@ -9,6 +9,10 @@
 
         vm.message = 'Welcome to School Buddy!';
 
+        vm.refresh = function() {
+            $route.reload();
+        };
+
         dataService.getAllSchools()
             .then(function(schools) {
                 vm.allSchools = schools;
