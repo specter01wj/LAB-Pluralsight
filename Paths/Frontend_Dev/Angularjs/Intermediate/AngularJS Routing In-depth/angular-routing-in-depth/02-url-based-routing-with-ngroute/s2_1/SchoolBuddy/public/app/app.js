@@ -2,9 +2,16 @@
 
     var app = angular.module('app', ['ngRoute']);
 
-    app.config(['$logProvider', '$routeProvider', function ($logProvider, $routeProvider) {
+    app.config(['$logProvider', '$routeProvider', '$locationProvider', function ($logProvider, $routeProvider, $locationProvider) {
 
         $logProvider.debugEnabled(true);
+
+        //$locationProvider.hashPrefix('!');
+        /*$locationProvider.html5Mode({
+            enabled: true,
+            requireBase: true,
+            rewriteLinks: true
+        });*/
 
         $routeProvider
         	.when('/', {
@@ -49,7 +56,12 @@
             .when('/activities', {
                 controller: 'AllActivitiesController',
                 controllerAs: 'activities',
-                templateUrl: '/app/templates/allActivities.html'
+                templateUrl: '/app/templates/allActivities.html',
+                resolve: {
+                    activities: function (dataService) {
+                        return dataService.getAllActivities();
+                    }
+                }
             })
             .otherwise('/');
 
