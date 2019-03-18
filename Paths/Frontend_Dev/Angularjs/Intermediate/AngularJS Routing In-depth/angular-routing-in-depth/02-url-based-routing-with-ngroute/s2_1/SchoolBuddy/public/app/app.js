@@ -22,12 +22,12 @@
             .when('/classrooms', {
                 controller: 'AllClassroomsController',
                 controllerAs: 'classrooms',
-                templateUrl: '/app/templates/allClassrooms.html',
-                resolve: {
+                templateUrl: '/app/templates/allClassrooms.html'
+                /*resolve: {
                     promise: function () {
                         throw 'error transition to classrooms';
                     }
-                }
+                }*/
                 //redirectTo: '/schools'
                 /*redirectTo: function(params, currPath, currSearch) {
                 	console.log(params);
