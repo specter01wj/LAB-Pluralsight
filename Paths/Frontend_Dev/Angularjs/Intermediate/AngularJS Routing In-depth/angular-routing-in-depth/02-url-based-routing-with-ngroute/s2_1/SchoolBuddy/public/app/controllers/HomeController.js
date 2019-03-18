@@ -10,6 +10,8 @@
         vm.message = 'Welcome to School Buddy!';
 
         vm.refresh = function() {
+            $log.debug($route.current);
+            $log.debug($route.routes);
             $route.reload();
         };
 
