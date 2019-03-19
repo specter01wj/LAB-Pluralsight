@@ -1,8 +1,8 @@
 (function() {
 
-    var app = angular.module('app', []);
+    var app = angular.module('app', ['ui.router']);
 
-    app.config(['$logProvider', function ($logProvider) {
+    app.config(['$logProvider', '$stateProvider', function ($logProvider, $stateProvider) {
 
         $logProvider.debugEnabled(true);
 
