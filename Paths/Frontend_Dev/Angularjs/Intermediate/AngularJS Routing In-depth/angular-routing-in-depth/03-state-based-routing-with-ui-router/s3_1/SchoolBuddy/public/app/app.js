@@ -6,6 +6,12 @@
 
         $logProvider.debugEnabled(true);
 
+        $stateProvider
+        	.state('home', {
+        		url: '/',
+        		template: '<h1>A template!</h1>'
+        	})
+
     }]);
 
 }());
