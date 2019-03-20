@@ -23,7 +23,12 @@
                 url: '/classrooms',
                 controller: 'AllClassroomsController',
                 controllerAs: 'classrooms',
-                templateUrl: '/app/templates/allClassrooms.html'
+                templateUrl: '/app/templates/allClassrooms.html',
+                resolve: {
+                	promise: function() {
+                		throw 'error activate classrooms!';
+                	}
+                }
             })
             .state('activities', {
                 url: '/activities',
