@@ -1,9 +1,9 @@
 (function () {
 
     angular.module('app')
-        .controller('HomeController', ['dataService', 'notifier', HomeController]);
+        .controller('HomeController', ['dataService', 'notifier', '$state', HomeController]);
 
-    function HomeController(dataService, notifier) {
+    function HomeController(dataService, notifier, $state) {
 
         var vm = this;
 
