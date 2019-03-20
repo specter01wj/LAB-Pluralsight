@@ -9,6 +9,11 @@
 
         vm.message = 'Welcome to School Buddy!';
 
+        vm.refresh = function() {
+            //$log.debug($state.current);
+            $state.reload();
+        };
+
         dataService.getAllSchools()
             .then(function(schools) {
                 vm.allSchools = schools;
