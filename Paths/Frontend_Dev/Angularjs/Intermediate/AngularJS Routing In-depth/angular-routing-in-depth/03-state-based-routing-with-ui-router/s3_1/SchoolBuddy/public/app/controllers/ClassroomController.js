@@ -1,9 +1,9 @@
 (function () {
 
     angular.module('app')
-        .controller('ClassroomController', [ClassroomController]);
+        .controller('ClassroomController', ['dataService', 'notifier', '$stateParams', ClassroomController]);
 
-    function ClassroomController() {
+    function ClassroomController(dataService, notifier, $stateParams) {
 
         var vm = this;
 
