@@ -30,6 +30,12 @@
                 	}
                 }*/
             })
+            .state('classroom_summary', {
+                url: '/classrooms/:id',
+                templateUrl: '/app/templates/classroom.html',
+                controller: 'ClassroomController',
+                controllerAs: 'classroom'
+            })
             .state('activities', {
                 url: '/activities',
                 controller: 'AllActivitiesController',
