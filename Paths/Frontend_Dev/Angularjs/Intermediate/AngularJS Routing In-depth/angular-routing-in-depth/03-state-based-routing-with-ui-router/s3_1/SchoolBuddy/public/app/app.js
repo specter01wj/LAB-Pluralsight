@@ -36,6 +36,12 @@
                 controller: 'ClassroomController',
                 controllerAs: 'classroom'
             })
+            .state('classroom_detail', {
+                url: '/classrooms/{id:[0-9]}/detail/{month}',
+                templateUrl: '/app/templates/classroomDetail.html',
+                controller: 'ClassroomController',
+                controllerAs: 'classroom'
+            })
             .state('activities', {
                 url: '/activities',
                 controller: 'AllActivitiesController',
