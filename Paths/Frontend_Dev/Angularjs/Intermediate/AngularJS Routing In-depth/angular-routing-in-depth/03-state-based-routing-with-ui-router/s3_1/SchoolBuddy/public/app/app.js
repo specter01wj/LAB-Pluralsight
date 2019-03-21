@@ -56,6 +56,13 @@
                     activities: function (dataService) {
                         return dataService.getAllActivities();
                     }
+                },
+                data: {
+                    name: 'My Activity',
+                    desc: 'Fun!'
+                },
+                james: {
+                    myJames: 'James Wang'
                 }
             })
 
