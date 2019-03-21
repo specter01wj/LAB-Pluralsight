@@ -51,7 +51,12 @@
                 url: '/activities',
                 controller: 'AllActivitiesController',
                 controllerAs: 'activities',
-                templateUrl: '/app/templates/allActivities.html'
+                templateUrl: '/app/templates/allActivities.html',
+                resolve: {
+                    activities: function (dataService) {
+                        return dataService.getAllActivities();
+                    }
+                }
             })
 
     }]);
