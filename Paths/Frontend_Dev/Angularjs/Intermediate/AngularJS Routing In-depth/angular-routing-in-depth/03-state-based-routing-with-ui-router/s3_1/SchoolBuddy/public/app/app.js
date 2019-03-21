@@ -6,6 +6,8 @@
 
         $logProvider.debugEnabled(true);
 
+        $urlRouterProvider.otherwise("/");
+
         $stateProvider
         	.state('home', {
         		url: '/',
@@ -40,7 +42,10 @@
                 url: '/classrooms/{id:[0-9]}/detail/{month}',
                 templateUrl: '/app/templates/classroomDetail.html',
                 controller: 'ClassroomController',
-                controllerAs: 'classroom'
+                controllerAs: 'classroom',
+                params: {
+                    classroomMessage: { value: 'IronMan!!!' }
+                }
             })
             .state('activities', {
                 url: '/activities',
