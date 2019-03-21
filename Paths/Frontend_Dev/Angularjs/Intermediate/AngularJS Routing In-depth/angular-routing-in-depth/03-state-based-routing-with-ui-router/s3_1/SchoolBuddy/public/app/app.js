@@ -25,7 +25,13 @@
                 url: '/classrooms',
                 controller: 'AllClassroomsController',
                 controllerAs: 'classrooms',
-                templateUrl: '/app/templates/allClassrooms.html'
+                templateUrl: '/app/templates/allClassrooms.html',
+                onEnter: function ($log) {
+                    $log.debug('Entering the classrooms state.');
+                },
+                onExit: function ($log) {
+                    $log.debug('Exiting the classrooms state.');
+                }
                 /*resolve: {
                 	promise: function() {
                 		throw 'error activate classrooms!';
