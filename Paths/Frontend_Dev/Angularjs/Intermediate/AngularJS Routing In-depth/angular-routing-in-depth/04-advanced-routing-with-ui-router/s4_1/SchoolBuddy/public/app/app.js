@@ -51,6 +51,13 @@
                     myFoo: 'bar'
                 }
             })
+            .state('classroom_parent', {
+                abstract: true,
+                url: '/classrooms/:id',
+                templateUrl: '/app/templates/classroom_parent.html',
+                controller: 'ClassroomController',
+                controllerAs: 'classroom'
+            })
             .state('classroom_summary', {
                 url: '/classrooms/:id',
                 templateUrl: '/app/templates/classroom.html',
