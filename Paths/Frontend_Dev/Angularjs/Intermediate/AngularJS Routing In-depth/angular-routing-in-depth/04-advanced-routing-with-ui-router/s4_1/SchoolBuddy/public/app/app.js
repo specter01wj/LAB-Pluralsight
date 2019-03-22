@@ -59,6 +59,11 @@
                 controllerAs: 'classroom',
                 params: {
                     classroomMessage: { value: 'James Wang!' }
+                },
+                resolve: {
+                    classroom: function ($stateParams, dataService) {
+                        return dataService.getClassroom($stateParams.id);
+                    }
                 }
             })
             .state('classroom_parent.classroom_summary', {
