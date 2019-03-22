@@ -68,7 +68,9 @@
             })
             .state('classroom_parent.classroom_summary', {
                 url: '/summary',
-                templateUrl: '/app/templates/classroom.html'
+                templateUrl: '/app/templates/classroom.html',
+                controller: 'ClassroomSummaryController',
+                controllerAs: 'classroomSummary'
             })
             .state('classroom_parent.classroom_detail', {
                 url: '/detail/{month}',
