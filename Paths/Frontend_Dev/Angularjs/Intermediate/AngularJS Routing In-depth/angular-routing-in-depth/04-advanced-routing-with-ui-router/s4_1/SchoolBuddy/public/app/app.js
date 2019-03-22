@@ -67,11 +67,11 @@
                 }
             })
             .state('classroom_summary', {
-                url: '/classrooms/:id',
+                url: '/summary',
                 templateUrl: '/app/templates/classroom.html'
             })
             .state('classroom_detail', {
-                url: '/classrooms/{id:[0-9]}/detail/{month}',
+                url: '/detail/{month}',
                 templateUrl: '/app/templates/classroomDetail.html'
             });
 
