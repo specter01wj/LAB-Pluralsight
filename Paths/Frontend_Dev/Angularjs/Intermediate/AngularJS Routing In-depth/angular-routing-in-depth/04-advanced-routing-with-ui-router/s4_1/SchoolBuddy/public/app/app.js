@@ -88,7 +88,7 @@
                 url: '/detail/{month}',
                 //templateUrl: '/app/templates/classroomDetail.html'
                 views: {
-                    'classInfo': {
+                    'classDetail': {
                         templateUrl: '/app/templates/classroomDetail.html'
                     }
                 }
