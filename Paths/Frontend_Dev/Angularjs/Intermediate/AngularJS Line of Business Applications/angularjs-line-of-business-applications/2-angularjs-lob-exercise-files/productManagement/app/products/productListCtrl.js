@@ -9,8 +9,8 @@
                     ProductListCtrl);
 
     function ProductListCtrl() {
-        var vm = this;
-        vm.products = [
+        var vim = this;
+        vim.products = [
             {" productId": 1,
                 "productName": "Leaf Rake",
                 "productCode": "GDN-0011",
@@ -35,10 +35,10 @@
                 "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
             }];
 
-        vm.showImage = false;
+        vim.showImage = false;
 
-        vm.toggleImage = function() {
-            vm.showImage = !vm.showImage;
+        vim.toggleImage = function() {
+            vim.showImage = !vim.showImage;
         }
     }
 }());
