@@ -6,8 +6,7 @@
     angular
         .module("productManagement")
         .controller("ProductListCtrl",
-                    ["productResource",
-                        ProductListCtrl]);
+                    ["productResource", ProductListCtrl]);
 
     function ProductListCtrl(productResource) {
         var vm = this;
