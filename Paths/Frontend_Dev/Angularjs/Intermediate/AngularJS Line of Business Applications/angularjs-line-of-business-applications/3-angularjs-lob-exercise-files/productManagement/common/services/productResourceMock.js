@@ -118,7 +118,8 @@
         $httpBackend.whenGET(/app/).passThrough();
 
 
-
         
+
+
     })
 }());
