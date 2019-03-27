@@ -20,12 +20,14 @@
             .state("productList", {
                 url: "/products",
                 templateUrl: "app/products/productListView.html",
-                controller: "ProductListCtrl as vm"
+                controller: "ProductListCtrl",
+                controllerAs: 'vm'
             })
             .state("productEdit", {
                 url: "/products/edit/:productId",
                 templateUrl: "app/products/productEditView.html",
-                controller: "ProductEditCtrl as vm"
+                controller: "ProductEditCtrl",
+                controllerAs: 'vm'
             })
 
     }
