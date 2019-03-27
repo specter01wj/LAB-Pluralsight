@@ -8,6 +8,7 @@
 
     coreRoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 
+
     function coreRoutesConfig($stateProvider, $urlRouterProvider){
         $urlRouterProvider.otherwise("/");
 
