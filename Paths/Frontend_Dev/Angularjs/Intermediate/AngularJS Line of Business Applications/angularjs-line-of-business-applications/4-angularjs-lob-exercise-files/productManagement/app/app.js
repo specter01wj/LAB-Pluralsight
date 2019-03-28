@@ -4,7 +4,7 @@
 (function () {
     "use strict";
     var app = angular.module("productManagement", 
-                ["common.services", "ui.router", "productResourceMock"]).config(coreRoutesConfig);;
+                ["common.services", "ui.router", "productResourceMock"]).config(coreRoutesConfig);
 
     coreRoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
     
