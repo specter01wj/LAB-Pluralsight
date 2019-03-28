@@ -8,9 +8,9 @@
         .module("productManagement")
         .controller("ProductDetailCtrl", ProductDetailCtrl);
 
-    ProductDetailCtrl.$inject = ['product'];
+    ProductDetailCtrl.$inject = ['product', 'productResource'];
 
-    function ProductDetailCtrl(product) {
+    function ProductDetailCtrl(product, productResource) {
         var vm = this;
 
         vm.product = product;
