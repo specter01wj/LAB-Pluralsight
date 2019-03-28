@@ -20,6 +20,7 @@
         if (vm.product.tags) {
             vm.product.tagList = vm.product.tags.toString();
         }
+
         
     }
 }());
