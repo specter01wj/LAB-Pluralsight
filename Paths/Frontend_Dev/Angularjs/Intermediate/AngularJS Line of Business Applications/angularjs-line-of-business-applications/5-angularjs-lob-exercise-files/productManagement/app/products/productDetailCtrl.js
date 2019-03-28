@@ -6,9 +6,9 @@
 
     angular
         .module("productManagement")
-        .controller("ProductDetailCtrl",
-                    ["product",
-                     ProductDetailCtrl]);
+        .controller("ProductDetailCtrl", ProductDetailCtrl);
+
+    ProductDetailCtrl.$inject = ['product'];
 
     function ProductDetailCtrl(product) {
         var vm = this;
