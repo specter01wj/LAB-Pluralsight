@@ -21,6 +21,7 @@
             vm.product.tagList = vm.product.tags.toString();
         }
 
+
         
     }
 }());
