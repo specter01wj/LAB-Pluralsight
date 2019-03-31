@@ -46,7 +46,8 @@
                 vm.product.tags = vm.product.tags ? vm.product.tags.concat(array) : array;
                 vm.newTags = "";
             } else{
-                alert("Please enter one or more tags separated by commas");
+                //alert("Please enter one or more tags separated by commas");
+                toastr.error('Please enter one or more tags separated by commas', 'Error!!!');
             }
         }
 
