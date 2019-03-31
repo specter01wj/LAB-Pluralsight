@@ -6,10 +6,7 @@
 
     angular
         .module("productManagement")
-        .controller("ProductEditCtrl",
-        ["product",
-            "$state",
-            ProductEditCtrl]);
+        .controller("ProductEditCtrl", ["product", "$state", ProductEditCtrl]);
 
 
     function ProductEditCtrl(product, $state) {
