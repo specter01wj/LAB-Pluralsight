@@ -35,6 +35,7 @@
                 }
             );
         }
+        
 
         vm.cancel = function () {
             $state.go('productList');
