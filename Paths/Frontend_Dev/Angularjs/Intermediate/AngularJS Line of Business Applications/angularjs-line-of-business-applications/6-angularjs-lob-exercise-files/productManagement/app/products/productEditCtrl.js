@@ -31,6 +31,7 @@
         vm.submit = function () {
             vm.product.$save(function (data) {
                     toastr.success("Save Successful");
+                    $state.go('productList');
                 }
             );
         }
