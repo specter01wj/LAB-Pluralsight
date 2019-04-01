@@ -58,9 +58,11 @@
             if (isValid) {
                 vm.product.$save(function (data) {
                     toastr.success("Save Successful");
+                    $state.go('productList');
                 })
             } else {
-                alert("Please correct the validation errors first.");
+                //alert("Please correct the validation errors first.");
+                toastr.error("Please correct the validation errors first.","Error!!!");
             }
         };
 
