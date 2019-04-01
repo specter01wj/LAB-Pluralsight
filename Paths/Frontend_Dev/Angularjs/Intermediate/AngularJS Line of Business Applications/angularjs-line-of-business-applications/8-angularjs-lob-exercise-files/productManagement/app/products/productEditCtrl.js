@@ -18,6 +18,7 @@
 
         vm.product = product;
         vm.priceOption="percent";
+        vm.calculatePrice = calculatePrice;
 
         vm.marginPercent = function(){
             return productService.calculateMarginPercent(vm.product.price,
@@ -25,7 +26,7 @@
         };
 
         /* Calculate the price based on a markup */
-        vm.calculatePrice = function () {
+        function calculatePrice() {
             var price = 0;
 
             if (vm.priceOption == 'amount') {
