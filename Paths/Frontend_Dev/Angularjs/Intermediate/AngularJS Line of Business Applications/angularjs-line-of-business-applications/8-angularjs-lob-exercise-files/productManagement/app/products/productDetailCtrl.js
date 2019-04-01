@@ -6,10 +6,9 @@
 
     angular
         .module("productManagement")
-        .controller("ProductDetailCtrl",
-                    ["product",
-                     "productService",
-                     ProductDetailCtrl]);
+        .controller("ProductDetailCtrl", ProductDetailCtrl);
+
+    ProductDetailCtrl.$inject = ["product", "productService"];
 
     function ProductDetailCtrl(product, productService) {
         var vm = this;
@@ -26,4 +25,5 @@
             vm.product.tagList = vm.product.tags.toString();
         }
     }
+    
 }());
