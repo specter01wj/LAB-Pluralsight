@@ -19,7 +19,12 @@
                        ng-maxlength="12"/>
             </div>
             <span class="help-block has-error">
-                <span ng-show="productForm.inputProductName.$error.required">
+                <span ng-messages="productForm.pn.$error">
+                  <span ng-message="required">Required</span>
+                  <span ng-message="minlength">Product name must be at least 4 characters in length.</span>
+                  <span ng-message="maxlength">Product name cannot exceed 12 characters in length.</span>
+                </span>
+                <!-- <span ng-show="productForm.inputProductName.$error.required">
                     Product name is required.
                 </span>
                 <span ng-show="productForm.inputProductName.$error.minlength">
@@ -27,7 +32,7 @@
                 </span>
                 <span ng-show="productForm.inputProductName.$error.maxlength">
                     Product name cannot exceed 12 characters in length.
-                </span>
+                </span> -->
             </span>
         </div>
         <div class="form-group"
