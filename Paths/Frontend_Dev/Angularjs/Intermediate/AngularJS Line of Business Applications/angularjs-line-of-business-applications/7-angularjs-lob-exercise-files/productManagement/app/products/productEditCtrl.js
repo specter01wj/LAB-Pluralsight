@@ -37,7 +37,8 @@
                     toastr.success("Save Successful");
                 })
             } else {
-                alert("Please correct the validation errors first.");
+                //alert("Please correct the validation errors first.");
+                toastr.error("Please correct the validation errors first.","Error!!!");
             }
         };
 
