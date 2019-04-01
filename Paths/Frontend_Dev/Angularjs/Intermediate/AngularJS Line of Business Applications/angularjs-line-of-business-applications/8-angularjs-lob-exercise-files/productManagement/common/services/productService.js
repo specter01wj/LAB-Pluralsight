@@ -20,6 +20,7 @@
             margin = Math.round(margin);
             return margin;
         }
+
         function calculateMarginAmount(price, cost) {
             var margin = 0;
             if (price && cost) {
@@ -27,6 +28,7 @@
             }
             return margin;
         }
+
         function calculatePriceFromPercent(cost, percent) {
             var price = cost;
             if (cost && percent) {
@@ -35,6 +37,7 @@
             }
             return price;
         }
+
         function calculatePriceFromAmount(cost, amount) {
             var price = cost;
             if (cost && amount) {
@@ -44,12 +47,14 @@
             return price;
         }
 
-        return {
+        var service = {
             calculateMarginPercent: calculateMarginPercent,
             calculateMarginAmount: calculateMarginAmount,
             calculatePriceFromMarkupPercent: calculatePriceFromPercent,
             calculatePriceFromMarkupAmount: calculatePriceFromAmount
-        }
+        };
+
+        return service;
 
     }
 
