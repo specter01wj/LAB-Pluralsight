@@ -6,10 +6,12 @@
 
     angular
         .module("common.services")
-        .factory("productService",
-                 productService);
+        .factory("productService", productService);
+
+    productService.$inject = [];
 
     function productService(){
+
         function calculateMarginPercent(price, cost) {
             var margin = 0;
             if (price && cost) {
