@@ -98,9 +98,6 @@
                                             alert(response.statusText);
                                         }
                                     }).$promise;
-
-
-
                             }
                         }
                     })
