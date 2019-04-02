@@ -22,13 +22,12 @@
                 productService.calculateMarginAmount(products[i].price,
                                                         products[i].cost);
         }
-        
 
         var orderedProductsAmount = $filter("orderBy")(products, "marginAmount");
         var filteredProductsAmount = $filter("limitTo")(orderedProductsAmount, 5);
 
         var chartDataAmount = [];
-
+        
         for (var i = 0; i < filteredProductsAmount.length; i++) {
             chartDataAmount.push({
                 x: filteredProductsAmount[i].productName,
