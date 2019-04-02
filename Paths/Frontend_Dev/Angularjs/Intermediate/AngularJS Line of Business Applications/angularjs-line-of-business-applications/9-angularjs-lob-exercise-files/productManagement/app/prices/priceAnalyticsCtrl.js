@@ -14,6 +14,7 @@
         $scope.title="Price Analytics";
 
 
+
         
 
         // Computed property
