@@ -13,6 +13,7 @@
     function PriceAnalyticsCtrl($scope,$filter, products, productService){
         $scope.title="Price Analytics";
 
+
         
 
         // Computed property
