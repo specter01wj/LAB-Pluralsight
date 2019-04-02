@@ -6,12 +6,9 @@
 
     angular
         .module("productManagement")
-        .controller("PriceAnalyticsCtrl",
-                    ["$scope",
-                     "$filter",
-                     "products",
-                     "productService",
-                     PriceAnalyticsCtrl]);
+        .controller("PriceAnalyticsCtrl", PriceAnalyticsCtrl);
+
+    PriceAnalyticsCtrl.$inject = ["$scope", "$filter", "products", "productService"];
 
     function PriceAnalyticsCtrl($scope,$filter, products, productService){
         $scope.title="Price Analytics";
