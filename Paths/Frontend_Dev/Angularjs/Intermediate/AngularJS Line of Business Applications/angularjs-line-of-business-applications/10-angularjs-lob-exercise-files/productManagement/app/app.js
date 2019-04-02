@@ -22,10 +22,6 @@
                         alert(exception.message);
                     };
                 }]);
-
-
-
-        
     });
 
     app.config(["$stateProvider",
