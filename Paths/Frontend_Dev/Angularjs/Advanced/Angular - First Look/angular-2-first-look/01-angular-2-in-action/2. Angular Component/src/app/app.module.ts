@@ -7,4 +7,5 @@ import { StoryComponent } from './story.component';
   declarations: [StoryComponent],
   bootstrap: [StoryComponent]
 })
+
 export class AppModule {}
