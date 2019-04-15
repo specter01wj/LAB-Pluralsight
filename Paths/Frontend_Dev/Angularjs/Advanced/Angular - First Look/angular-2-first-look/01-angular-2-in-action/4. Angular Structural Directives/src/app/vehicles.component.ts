@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'my-vehicles',
   templateUrl: './vehicles.component.html'
 })
+
 export class VehiclesComponent {
   vehicles = [
     { id: 1, name: 'X-Wing Fighter' },
