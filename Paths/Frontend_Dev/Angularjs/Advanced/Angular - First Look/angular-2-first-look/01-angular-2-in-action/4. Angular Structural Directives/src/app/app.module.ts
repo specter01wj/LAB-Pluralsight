@@ -7,4 +7,5 @@ import { VehiclesComponent } from './vehicles.component';
   declarations: [VehiclesComponent],
   bootstrap: [VehiclesComponent]
 })
+
 export class AppModule {}
