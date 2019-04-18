@@ -8,4 +8,5 @@ import { VehiclesComponent } from './vehicles.component';
   bootstrap: [VehiclesComponent]
 })
 
+
 export class AppModule {}
