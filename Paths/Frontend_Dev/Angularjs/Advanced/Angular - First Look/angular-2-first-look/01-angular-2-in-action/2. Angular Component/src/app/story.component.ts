@@ -13,3 +13,4 @@ export class StoryComponent {
   story = { id: 100, name: 'The Force Awakens' };
   color = 'blue';
 }
+
