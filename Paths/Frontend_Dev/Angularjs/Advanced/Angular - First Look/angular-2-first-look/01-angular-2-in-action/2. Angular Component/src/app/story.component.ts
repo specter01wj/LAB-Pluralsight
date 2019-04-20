@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
     <div [style.color]="color">{{story.name}}</div>
   `
 })
+
 export class StoryComponent {
   story = { id: 100, name: 'The Force Awakens' };
   color = 'blue';
