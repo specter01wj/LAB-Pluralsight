@@ -7,6 +7,7 @@
     var vm = this;
     vm.story = { id: 100, name: 'The Force Awakens' };
   }
+  
 })();
 
 
