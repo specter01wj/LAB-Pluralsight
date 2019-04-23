@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'Angular Two-Way Binding';
+
   story = {
     name: 'The Empire Strikes Back'
   };
+  
 }
