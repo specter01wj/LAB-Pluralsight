@@ -12,4 +12,7 @@ export class AppComponent {
     name: 'The Empire Strikes Back'
   };
   
+  changeName() {
+    this.story.name = "James Wang";
+  }
 }
