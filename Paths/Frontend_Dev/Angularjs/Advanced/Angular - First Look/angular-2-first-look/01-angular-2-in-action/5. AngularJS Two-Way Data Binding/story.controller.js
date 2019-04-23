@@ -5,10 +5,13 @@
 
   function StoryController() {
     var vm = this;
+
     vm.title = 'Angular 1 Two-Way Binding';
+
     vm.story = {
       name: 'The Empire Strikes Back'
     };
+    
   }
 })();
 
