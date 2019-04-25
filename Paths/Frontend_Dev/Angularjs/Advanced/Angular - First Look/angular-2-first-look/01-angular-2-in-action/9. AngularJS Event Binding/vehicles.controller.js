@@ -7,7 +7,7 @@
     var vm = this;
 
     vm.title = 'Angular 1 Binding Events';
-    vm.imagePath = 'angular.png';
+    vm.imagePath = 'optimum.jpeg';
     vm.messages = [];
 
     vm.vehicles = [
@@ -23,7 +23,7 @@
         console.log(data);
       }
     }
-    
+
   }
 })();
 
