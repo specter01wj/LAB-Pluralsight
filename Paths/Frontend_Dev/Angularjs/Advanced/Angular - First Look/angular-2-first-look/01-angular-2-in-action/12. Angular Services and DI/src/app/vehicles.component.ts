@@ -5,6 +5,7 @@ import { VehicleService } from './vehicle.service';
   selector: 'my-vehicles',
   templateUrl: './vehicles.component.html'
 })
+
 export class VehiclesComponent {
   vehicles = this.vehicleService.getVehicles();
 
