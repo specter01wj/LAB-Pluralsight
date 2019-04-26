@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'my-character',
   templateUrl: './character.component.html'
 })
+
 export class CharacterComponent {
   name = 'Han Solo';
 }
