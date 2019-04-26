@@ -10,4 +10,5 @@ import { CharacterComponent } from './character.component';
 })
 
 
+
 export class AppModule {}
