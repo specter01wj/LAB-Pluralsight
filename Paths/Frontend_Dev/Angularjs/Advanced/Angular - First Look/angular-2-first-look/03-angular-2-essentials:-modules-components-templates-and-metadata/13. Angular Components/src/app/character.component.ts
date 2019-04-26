@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './character.component.html'
 })
 
+
 export class CharacterComponent {
   name = 'Han Solo';
 }
