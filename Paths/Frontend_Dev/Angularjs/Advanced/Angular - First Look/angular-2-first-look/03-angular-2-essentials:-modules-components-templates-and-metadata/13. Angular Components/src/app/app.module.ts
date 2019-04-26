@@ -9,10 +9,4 @@ import { CharacterComponent } from './character.component';
   bootstrap: [CharacterComponent]
 })
 
-
-
-
-
-
-
 export class AppModule {}
