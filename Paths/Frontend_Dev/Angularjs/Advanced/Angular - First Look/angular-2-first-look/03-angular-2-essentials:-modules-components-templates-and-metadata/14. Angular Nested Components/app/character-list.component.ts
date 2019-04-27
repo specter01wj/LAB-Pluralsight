@@ -6,6 +6,7 @@ import { Character } from './character';
   selector: 'my-character-list',
    templateUrl: './character-list.component.html'
 })
+
 export class CharacterListComponent {
   characters = [
     new Character(1, 'Han Solo'),

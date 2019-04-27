@@ -14,4 +14,5 @@ import { CharacterListComponent } from './character-list.component';
   ],
   bootstrap: [CharacterListComponent],
 })
+
 export class AppModule { }
