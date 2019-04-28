@@ -23,6 +23,7 @@ import { Component } from '@angular/core';
   </div>
   `
 })
+
 export class AppComponent {
   buttonText = 'Switch to Solution';
   showSolution = false;
