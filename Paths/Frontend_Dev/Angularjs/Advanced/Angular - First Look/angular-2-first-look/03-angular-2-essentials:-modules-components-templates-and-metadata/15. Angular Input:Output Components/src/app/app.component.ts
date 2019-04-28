@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
   </div>
   `
 })
+
 export class AppComponent {
   changed(changedCharacter: any) {
     if (changedCharacter) {

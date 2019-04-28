@@ -7,6 +7,7 @@ import { Character, CharacterService } from './character.service';
   styleUrls: ['./characters.component.css'],
   providers: [CharacterService]
 })
+
 export class CharactersComponent implements OnInit {
   @Output() changed = new EventEmitter<Character>();
   @Input() storyId: number;
