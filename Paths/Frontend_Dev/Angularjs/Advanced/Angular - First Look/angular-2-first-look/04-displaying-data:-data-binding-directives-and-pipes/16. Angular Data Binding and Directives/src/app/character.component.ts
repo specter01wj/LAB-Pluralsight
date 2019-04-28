@@ -31,6 +31,7 @@ export class CharacterComponent {
     new Vehicle(2, 'Imperial Star Destroyer'),
     new Vehicle(3, 'Escape Pod')
   ];
+
   
 
   constructor() {
