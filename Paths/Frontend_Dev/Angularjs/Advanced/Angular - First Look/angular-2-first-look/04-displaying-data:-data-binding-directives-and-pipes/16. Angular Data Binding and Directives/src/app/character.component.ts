@@ -25,12 +25,13 @@ export class CharacterComponent {
   color = '';
   isSelected = false;
   selectLabel = 'Select a Character';
-  
+
   vehicles = [
     new Vehicle(1, 'Slave 1'),
     new Vehicle(2, 'Imperial Star Destroyer'),
     new Vehicle(3, 'Escape Pod')
   ];
+  
 
   constructor() {
     this.character = new Character(
