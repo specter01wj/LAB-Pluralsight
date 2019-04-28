@@ -11,4 +11,5 @@ import { CharacterSolvedComponent } from './solution/character-solved.component'
   declarations: [AppComponent, CharacterComponent, CharacterSolvedComponent],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {}
