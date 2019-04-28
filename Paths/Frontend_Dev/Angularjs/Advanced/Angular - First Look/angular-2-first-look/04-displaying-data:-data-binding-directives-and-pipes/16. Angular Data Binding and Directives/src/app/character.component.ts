@@ -32,9 +32,6 @@ export class CharacterComponent {
     new Vehicle(3, 'Escape Pod')
   ];
 
-
-  
-
   constructor() {
     this.character = new Character(
       100,
