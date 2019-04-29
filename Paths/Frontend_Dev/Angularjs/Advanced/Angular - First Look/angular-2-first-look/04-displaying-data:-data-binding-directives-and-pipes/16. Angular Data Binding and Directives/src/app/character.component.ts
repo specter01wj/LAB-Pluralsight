@@ -38,7 +38,7 @@ export class CharacterComponent {
       100,
       'Boba Fett',
       'dark',
-      'assets/man.png',
+      'assets/optimum.jpeg',
       'http://angular.io'
     );
     this.vehicle = new Vehicle(
