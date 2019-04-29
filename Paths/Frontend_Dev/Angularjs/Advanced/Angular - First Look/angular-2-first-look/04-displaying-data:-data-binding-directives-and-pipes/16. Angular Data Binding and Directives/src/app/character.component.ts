@@ -24,7 +24,7 @@ export class CharacterComponent {
   character: Character;
   vehicle: Vehicle;
   color = '';
-  isSelected = false;
+  isSelected = true;
   selectLabel = 'Select a Character';
 
   vehicles = [
