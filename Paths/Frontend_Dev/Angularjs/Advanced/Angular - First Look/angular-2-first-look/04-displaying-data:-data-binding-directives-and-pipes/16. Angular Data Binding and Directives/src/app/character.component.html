@@ -23,7 +23,8 @@
 
     <div>
       <button class="dashboard-button mdl-button mdl-js-button mdl-button--raised msl-js-ripple-effect mdl-button"
-        [attr.aria-label]='selectLabel'>
+        [attr.aria-label]='selectLabel'
+        (click)='select(character.name)'>
         Select
       </button>
     </div>
