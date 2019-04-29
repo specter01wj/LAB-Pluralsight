@@ -15,9 +15,17 @@
 
       <div class="row">
         <a href="{{character.link}}" target="_blank">
-          <img src="{{character.imageUrl}}" style="width:50px">
+          <!-- <img src="{{character.imageUrl}}" style="width:50px"> -->
+          <img [src]="character.imageUrl" style="width:50px"> 
         </a>
       </div>
+    </div>
+
+    <div>
+      <button class="dashboard-button mdl-button mdl-js-button mdl-button--raised msl-js-ripple-effect mdl-button"
+        [attr.aria-label]='selectLabel'>
+        Select
+      </button>
     </div>
 
   </div>
