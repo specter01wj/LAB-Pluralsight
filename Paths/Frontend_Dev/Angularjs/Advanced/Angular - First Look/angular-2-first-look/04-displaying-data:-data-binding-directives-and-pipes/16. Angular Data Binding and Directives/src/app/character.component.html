@@ -13,10 +13,13 @@
         <input type="text" id="nametext" class="mdl-textfield__input">
       </div>
 
-      <div class="row">
+      <div class="row" [style.background]="color" 
+        (mouseenter)="color = '#EE0'"
+        (mouseleave)="color = '#000'">
         <a href="{{character.link}}" target="_blank">
           <!-- <img src="{{character.imageUrl}}" style="width:50px"> -->
-          <img [src]="character.imageUrl" style="width:50px"> 
+          <img 
+            [src]="character.imageUrl" style="width:50px"> 
         </a>
       </div>
     </div>

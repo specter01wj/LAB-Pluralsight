@@ -23,8 +23,8 @@ class Vehicle {
 export class CharacterComponent {
   character: Character;
   vehicle: Vehicle;
-  color = '';
-  isSelected = true;
+  color = '#FFF';
+  isSelected = false;
   selectLabel = 'Select a Character';
 
   vehicles = [
