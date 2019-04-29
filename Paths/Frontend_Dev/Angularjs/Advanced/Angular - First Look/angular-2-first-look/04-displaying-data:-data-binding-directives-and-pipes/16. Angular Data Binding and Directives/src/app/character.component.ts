@@ -22,6 +22,7 @@ class Vehicle {
 
 export class CharacterComponent {
   character: Character;
+  vehicle: Vehicle;
   color = '';
   isSelected = false;
   selectLabel = 'Select a Character';
@@ -39,6 +40,9 @@ export class CharacterComponent {
       'dark',
       'assets/man.png',
       'http://angular.io'
+    );
+    this.vehicle = new Vehicle(
+      10011, 'BMW'
     );
   }
 
