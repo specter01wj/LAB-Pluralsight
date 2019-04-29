@@ -12,10 +12,4 @@ import { CharacterSolvedComponent } from './solution/character-solved.component'
   bootstrap: [AppComponent]
 })
 
-
-
-
-
-
-
 export class AppModule {}
