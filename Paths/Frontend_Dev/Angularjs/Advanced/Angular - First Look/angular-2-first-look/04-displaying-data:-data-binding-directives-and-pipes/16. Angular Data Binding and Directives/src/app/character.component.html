@@ -15,6 +15,13 @@
           (input)="character.name=$event.target.value">
       </div>
 
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <label class="mdl-textfield__label" for="nametext">Color</label>
+        <input type="text" id="nametext" class="mdl-textfield__input"
+          [value]="character.name"
+          (input)="character.name=$event.target.value">
+      </div>
+
       <div class="row" [style.background]="color" 
         (mouseenter)="color = '#EE0'"
         (mouseleave)="color = '#000'">
