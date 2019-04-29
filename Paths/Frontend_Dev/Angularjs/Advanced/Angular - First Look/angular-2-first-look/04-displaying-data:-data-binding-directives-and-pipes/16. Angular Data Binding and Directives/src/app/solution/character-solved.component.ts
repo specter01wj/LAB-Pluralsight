@@ -19,6 +19,7 @@ class Vehicle {
   templateUrl: './character-solved.component.html',
   styleUrls: ['./character-solved.component.css']
 })
+
 export class CharacterSolvedComponent {
   character: Character;
   color = '';
