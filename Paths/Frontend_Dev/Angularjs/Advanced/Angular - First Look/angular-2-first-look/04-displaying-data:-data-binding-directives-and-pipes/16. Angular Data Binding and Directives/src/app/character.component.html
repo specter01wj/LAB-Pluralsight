@@ -18,8 +18,7 @@
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <label class="mdl-textfield__label" for="nametext">Color</label>
         <input type="text" id="nametext" class="mdl-textfield__input"
-          [value]="character.name"
-          (input)="character.name=$event.target.value">
+          [(ngModel)]="color">
       </div>
 
       <div class="row" [style.background]="color" 
