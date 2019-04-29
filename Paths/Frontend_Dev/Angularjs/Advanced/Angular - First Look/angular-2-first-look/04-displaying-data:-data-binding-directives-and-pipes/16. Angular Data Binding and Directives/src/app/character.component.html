@@ -43,6 +43,9 @@
 
     <div class="row" *ngIf="isSelected">
       James Wang! You have {{character.name}} to Vehicle.
+      <ul>
+        <li *ngFor="let vehicle of vehicles">{{vehicle.name}}</li>
+      </ul>
     </div>
 
   </div>
