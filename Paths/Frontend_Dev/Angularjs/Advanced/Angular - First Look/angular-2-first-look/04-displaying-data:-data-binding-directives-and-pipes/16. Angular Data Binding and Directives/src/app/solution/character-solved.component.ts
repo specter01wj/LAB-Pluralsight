@@ -36,7 +36,7 @@ export class CharacterSolvedComponent {
       100,
       'Boba Fett',
       'dark',
-      'assets/man.png',
+      'assets/soundwave.png',
       'http://angular.io'
     );
   }
