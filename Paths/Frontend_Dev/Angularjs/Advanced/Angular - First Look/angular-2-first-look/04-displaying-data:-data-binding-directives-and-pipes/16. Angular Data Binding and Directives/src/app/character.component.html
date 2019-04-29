@@ -6,7 +6,8 @@
 
     <pre>{{character | json}}</pre>
 
-    <div class="row" [class.selected]='isSelected'>
+    <!-- <div class="row" [class.selected]='isSelected'> -->
+    <div class="row" [ngClass]='{selected: isSelected}'> 
 
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <label class="mdl-textfield__label" for="nametext">Name</label>
