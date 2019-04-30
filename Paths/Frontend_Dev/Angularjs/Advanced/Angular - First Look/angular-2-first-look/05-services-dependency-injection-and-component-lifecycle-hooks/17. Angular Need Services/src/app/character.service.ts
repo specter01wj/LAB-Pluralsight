@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Character } from './character';
 
 @Injectable()
-export class CharacterServce {
+export class CharacterService {
 
 	getCharacters() {
 		return [
