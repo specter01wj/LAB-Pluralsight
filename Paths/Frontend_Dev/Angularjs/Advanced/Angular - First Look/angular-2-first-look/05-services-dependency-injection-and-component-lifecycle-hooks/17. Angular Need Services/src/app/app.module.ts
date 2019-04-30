@@ -10,4 +10,5 @@ import { CharacterComponent } from './character.component';
   declarations: [AppComponent, CharacterComponent, CharacterListComponent],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {}
