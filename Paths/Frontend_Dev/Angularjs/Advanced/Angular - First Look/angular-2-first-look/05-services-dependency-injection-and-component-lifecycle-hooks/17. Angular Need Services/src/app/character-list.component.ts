@@ -6,6 +6,7 @@ import { Character } from './character';
   templateUrl: './character-list.component.html',
   styles: ['li {cursor: pointer;}']
 })
+
 export class CharacterListComponent {
   characters = [
     new Character(1, 'Han Solo', 'light'),
