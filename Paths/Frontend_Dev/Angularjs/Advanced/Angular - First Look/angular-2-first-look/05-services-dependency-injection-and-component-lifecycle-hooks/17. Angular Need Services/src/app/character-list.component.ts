@@ -3,9 +3,11 @@ import { Character } from './character';
 import { CharacterService } from './character.service';
 
 @Component({
+  moduleId: module.id,
   selector: 'my-character-list',
   templateUrl: './character-list.component.html',
-  styles: ['li {cursor: pointer;}']
+  styles: ['li {cursor: pointer;}'],
+  providers: [CharacterService]
 })
 
 export class CharacterListComponent {
