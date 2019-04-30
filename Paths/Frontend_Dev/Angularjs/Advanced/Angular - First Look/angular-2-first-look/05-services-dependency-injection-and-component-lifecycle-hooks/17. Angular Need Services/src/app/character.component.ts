@@ -5,6 +5,7 @@ import { Character } from './character';
   selector: 'my-character',
   templateUrl: './character.component.html'
 })
+
 export class CharacterComponent {
   @Input() character: Character;
 }
