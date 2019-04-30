@@ -3,11 +3,10 @@ import { Character } from './character';
 import { CharacterService } from './character.service';
 
 @Component({
-  moduleId: module.id,
   selector: 'my-character-list',
   templateUrl: './character-list.component.html',
-  styles: ['li {cursor: pointer;}'],
-  providers: [CharacterService]
+  styles: ['li {cursor: pointer;}']
+  // providers: [CharacterService]
 })
 
 export class CharacterListComponent {
@@ -22,7 +21,7 @@ export class CharacterListComponent {
   selectedCharacter: Character;
 
   constructor(private characterService: CharacterService) {
-    this .characters = this.characterService.getCharacters();
+    this.characters = this.characterService.getCharacters();
   }
 
   select(character: Character) {

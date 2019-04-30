@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { CharacterComponent } from './character.component';
 import { CharacterListComponent } from './character-list.component';
 
+import { CharacterService } from './character.service';
+
 @NgModule({
   imports: [BrowserModule, FormsModule],
   declarations: [
@@ -14,5 +16,6 @@ import { CharacterListComponent } from './character-list.component';
     CharacterListComponent
   ],
   bootstrap: [AppComponent],
+  providers: [CharacterService]
 })
 export class AppModule { }
