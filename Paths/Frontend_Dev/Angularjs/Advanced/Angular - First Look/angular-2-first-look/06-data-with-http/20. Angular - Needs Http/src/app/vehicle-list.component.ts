@@ -14,7 +14,9 @@ export class VehicleListComponent {
   constructor(private vehicleService: VehicleService) {}
 
   getVehicles() {
-    this.vehicles = this.vehicleService.getVehicles();
+    // this.vehicles = this.vehicleService.getVehicles();
+    this.vehicleService.getVehicles()
+      .subscribe(vehicles => this.vehicles = vehicles);
   }
 
   ngOnInit() {
