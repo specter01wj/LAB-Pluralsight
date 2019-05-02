@@ -1,5 +1,5 @@
 <ul>
-  <li *ngFor="let vehicle of vehicles" (click)="select(vehicle)">
+  <li *ngFor="let vehicle of vehicles | async" (click)="select(vehicle)">
     {{ vehicle.name }}
   </li>
 </ul>

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Vehicle, VehicleService } from './vehicle.service';
 
+import { Observable } from 'rxjs/Observable';
+
 @Component({
   selector: 'my-vehicle-list',
   templateUrl: './vehicle-list.component.html',
@@ -10,7 +12,7 @@ import { Vehicle, VehicleService } from './vehicle.service';
 export class VehicleListComponent {
   errorMessage: string;
   selectedVehicle: Vehicle;
-  vehicles: Vehicle[];
+  vehicles: Observable <Vehicle[]>;
 
   constructor(private vehicleService: VehicleService) {}
 
