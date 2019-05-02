@@ -15,12 +15,13 @@ export class VehicleListComponent {
   constructor(private vehicleService: VehicleService) {}
 
   getVehicles() {
-    this.vehicleService
+    /*this.vehicleService
       .getVehicles()
       .subscribe(
         vehicles => (this.vehicles = vehicles),
         error => (this.errorMessage = <any>error)
-      );
+      );*/
+      this.vehicles = this.vehicleService.getVehicles();
   }
 
   ngOnInit() {
