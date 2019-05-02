@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { CharacterListComponent } from './characters/character-list.component';
 import { CharacterComponent } from './characters/character.component';
+
 import { PageNotFoundComponent } from './page-not-found.component';
+
 import { VehicleListComponent } from './vehicles/vehicle-list.component';
 import { VehicleComponent } from './vehicles/vehicle.component';
 
@@ -19,6 +22,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule {}
 
 export const routableComponents = [
