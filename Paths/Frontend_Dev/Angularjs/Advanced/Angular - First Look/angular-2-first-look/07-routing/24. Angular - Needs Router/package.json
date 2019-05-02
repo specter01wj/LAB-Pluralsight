@@ -1,5 +1,5 @@
 {
-  "name": "gqaiakwo.github",
+  "name": "qgniyrmy.github",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
@@ -17,7 +17,6 @@
     "@types/jasminewd2": "2.0.3",
     "@angular/animations": "6.0.7",
     "@angular/platform-browser": "6.0.7",
-    "angular-in-memory-web-api": "0.6.0",
     "@angular/platform-browser-dynamic": "6.0.7"
   },
   "scripts": {
