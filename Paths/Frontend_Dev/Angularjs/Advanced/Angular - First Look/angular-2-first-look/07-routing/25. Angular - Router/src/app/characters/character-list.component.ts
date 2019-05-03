@@ -17,6 +17,7 @@ import { Character, CharacterService } from './character.service';
     `
   ]
 })
+
 export class CharacterListComponent implements OnInit {
   characters: Observable<Character[]>;
 
