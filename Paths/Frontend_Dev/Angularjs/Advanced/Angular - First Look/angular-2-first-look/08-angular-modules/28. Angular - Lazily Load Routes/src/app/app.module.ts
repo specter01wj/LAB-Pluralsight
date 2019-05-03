@@ -18,4 +18,5 @@ import { CharactersModule } from './characters/characters.module';
   declarations: [AppComponent, routableComponents],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {}
