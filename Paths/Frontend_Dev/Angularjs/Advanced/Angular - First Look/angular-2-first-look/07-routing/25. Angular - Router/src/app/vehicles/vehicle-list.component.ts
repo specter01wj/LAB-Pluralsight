@@ -16,6 +16,7 @@ import { Vehicle, VehicleService } from './vehicle.service';
     `
   ]
 })
+
 export class VehicleListComponent implements OnInit {
   vehicles: Vehicle[];
 
