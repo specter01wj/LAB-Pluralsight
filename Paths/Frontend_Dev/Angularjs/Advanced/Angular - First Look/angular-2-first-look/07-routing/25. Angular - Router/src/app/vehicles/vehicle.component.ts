@@ -7,6 +7,7 @@ import { Vehicle, VehicleService } from './vehicle.service';
   selector: 'story-vehicle',
   templateUrl: './vehicle.component.html'
 })
+
 export class VehicleComponent implements OnInit {
   @Input() vehicle: Vehicle;
 
