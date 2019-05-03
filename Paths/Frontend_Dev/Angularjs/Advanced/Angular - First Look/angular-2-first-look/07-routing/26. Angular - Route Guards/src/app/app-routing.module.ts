@@ -24,7 +24,7 @@ const routes: Routes = [
       { path: ':id', component: CharacterComponent }
     ]
   },
-  { path: 'vehicles', component: VehicleListComponent },
+  { path: 'vehicles', component: VehicleListComponent, canActivate: [CanActivateAuthGuard] },
   { path: 'vehicles/:id', component: VehicleComponent },
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent }
 ];
