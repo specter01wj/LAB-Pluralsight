@@ -20,6 +20,4 @@ import { ConvertToSpacesPipe } from './shared/convert-to-spaces.pipe';
   bootstrap: [AppComponent]
 })
 
-
-
 export class AppModule { }
