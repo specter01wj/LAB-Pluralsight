@@ -19,4 +19,5 @@ import { ConvertToSpacesPipe } from './shared/convert-to-spaces.pipe';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
