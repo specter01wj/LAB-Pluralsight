@@ -6,6 +6,7 @@ import { IProduct } from './product';
 export class ProductService {
 
     getProducts(): IProduct[] {
+        
         return [
             {
                 "productId": 2,
