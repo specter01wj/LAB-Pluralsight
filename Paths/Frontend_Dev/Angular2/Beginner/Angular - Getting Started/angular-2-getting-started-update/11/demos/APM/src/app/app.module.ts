@@ -35,4 +35,5 @@ import { WelcomeComponent } from './home/welcome.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
