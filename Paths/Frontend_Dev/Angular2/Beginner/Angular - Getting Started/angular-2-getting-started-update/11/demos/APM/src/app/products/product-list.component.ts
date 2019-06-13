@@ -35,6 +35,7 @@ export class ProductListComponent implements OnInit {
         this.pageTitle = 'Product List: ' + message;
     }
 
+
     
 
     performFilter(filterBy: string): IProduct[] {
