@@ -38,4 +38,5 @@ import { ProductGuardService } from './products/product-guard.service';
   providers: [ProductGuardService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
