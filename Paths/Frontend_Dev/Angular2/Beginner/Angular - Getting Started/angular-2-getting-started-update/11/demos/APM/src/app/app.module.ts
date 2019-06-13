@@ -20,6 +20,7 @@ import { WelcomeComponent } from './home/welcome.component';
     ProductDetailComponent,
     WelcomeComponent
   ],
+  
   imports: [
     BrowserModule,
     FormsModule,
