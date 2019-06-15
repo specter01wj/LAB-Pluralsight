@@ -24,4 +24,5 @@ import { ProductModule } from './products/product.module';
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
