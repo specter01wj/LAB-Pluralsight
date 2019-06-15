@@ -16,6 +16,7 @@ export class StarComponent implements OnChanges {
         this.starWidth = this.rating * 86 / 5;
 
 
+
         
     }
 
