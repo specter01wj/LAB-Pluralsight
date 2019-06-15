@@ -27,4 +27,5 @@ import { SharedModule } from './../shared/shared.module';
     ProductGuardService
   ]
 })
+
 export class ProductModule { }
