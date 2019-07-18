@@ -15,10 +15,14 @@
       }
     </style>
   </head>
-  <body></body>
+  <body>
+    
+    <div id="mySVG"></div>
+
+  </body>
   <script>
     const svg = d3
-      .select('body')
+      .select('#mySVG')
       .append('svg')
       .attr('width', 500)
       .attr('height', 300);
