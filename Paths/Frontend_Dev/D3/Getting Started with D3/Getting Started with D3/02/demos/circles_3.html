@@ -15,6 +15,9 @@
             var currentX = 455;
             var currentY = 455;
 
+            var currentRecX = 455;
+            var currentRecY = 475;
+
             var svg = d3.select("body")
                 .append("svg")
                 .attr("transform", "scale(8)")
@@ -23,6 +26,11 @@
             drawCircle(8);
             drawCircle(1);
             drawCircle(2);
+
+            drawRectangle(2);
+            drawRectangle(8);
+            drawRectangle(1);
+            drawRectangle(2);
 
             function drawCircle(radius) {
 
@@ -39,9 +47,26 @@
                     .attr("y", currentY)
                     .attr("font-size", "3pt");
 
-
-
                 currentX += 25;
+            }
+
+            function drawRectangle(radius) {
+
+                svg.append("rect")
+                    .attr("fill", "red")
+                    .attr("width", 5)
+                    .attr("height", radius)
+                    .attr("x", currentRecX)
+                    .attr("y", currentRecY);
+
+                svg.append("text")
+                    .attr("fill", "black")
+                    .text(radius)
+                    .attr("x", currentRecX)
+                    .attr("y", currentRecY)
+                    .attr("font-size", "3pt");
+
+                currentRecX += 25;
             }
         </script>
         
