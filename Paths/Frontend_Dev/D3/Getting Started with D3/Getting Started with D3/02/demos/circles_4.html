@@ -1,0 +1,100 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+    <style>
+        svg {
+            width: 1000px;
+            height: 1000px;
+        }
+    </style>
+</head>
+    <body>
+
+        <script type='text/javascript'>
+            // 0, 2, 8, 1, 2
+            var currentX = 455;
+            var currentY = 455;
+
+            var currentRecX = 455;
+            var currentRecY = 475;
+
+            var currentProX = 455;
+            var currentProY = 495;
+
+            var svg = d3.select("body")
+                .append("svg")
+                .attr("transform", "scale(8)")
+
+            drawCircle(2);
+            drawCircle(8);
+            drawCircle(1);
+            drawCircle(2);
+
+            drawRectangle(2);
+            drawRectangle(8);
+            drawRectangle(1);
+            drawRectangle(2);
+
+            drawProportionalCircle(2);
+            drawProportionalCircle(8);
+            drawProportionalCircle(1);
+            drawProportionalCircle(2);
+
+            function drawCircle(radius) {
+
+                svg.append("circle")
+                    .attr("fill", "red")
+                    .attr("r", radius)
+                    .attr("cx", currentX)
+                    .attr("cy", currentY);
+
+                svg.append("text")
+                    .attr("fill", "black")
+                    .text(radius)
+                    .attr("x", currentX)
+                    .attr("y", currentY)
+                    .attr("font-size", "3pt");
+
+                currentX += 25;
+            }
+
+            function drawProportionalCircle(radius) {
+
+                svg.append("circle")
+                    .attr("fill", "red")
+                    .attr("r", Math.sqrt(radius))
+                    .attr("cx", currentProX)
+                    .attr("cy", currentProY);
+
+                svg.append("text")
+                    .attr("fill", "black")
+                    .text(radius)
+                    .attr("x", currentProX)
+                    .attr("y", currentProY)
+                    .attr("font-size", "3pt");
+
+                currentProX += 25;
+            }
+
+            function drawRectangle(radius) {
+
+                svg.append("rect")
+                    .attr("fill", "red")
+                    .attr("width", 5)
+                    .attr("height", radius)
+                    .attr("x", currentRecX)
+                    .attr("y", currentRecY);
+
+                svg.append("text")
+                    .attr("fill", "black")
+                    .text(radius)
+                    .attr("x", currentRecX)
+                    .attr("y", currentRecY)
+                    .attr("font-size", "3pt");
+
+                currentRecX += 25;
+            }
+        </script>
+        
+    </body>
+</html>
