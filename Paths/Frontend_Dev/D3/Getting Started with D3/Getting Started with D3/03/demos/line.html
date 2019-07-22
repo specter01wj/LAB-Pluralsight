@@ -46,8 +46,7 @@
 
         var line = d3.line()
             .x(d => x(d.date))
-            .y(d => y(d.value))
-            ;
+            .y(d => y(d.value));
 
         var parseTime = d3.timeParse("%m/%d/%Y");
 
