@@ -68,12 +68,12 @@
             .data([data])
             .attr("fill", "none")
             .attr("stroke", "red")
-            .attr("d", line)
+            .attr("d", line);
 
         var xAxisGroup = dataGroup
             .append("g")
             .attr("class", "xAxisGroup")
-            .attr("transform", "translate(0," + height + ")")
+            .attr("transform", "translate(0," + height + ")");
 
         var xAxis = d3.axisBottom(x)
             .tickFormat(d3.timeFormat("%Y-%m-%d"));
