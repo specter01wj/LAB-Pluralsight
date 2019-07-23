@@ -62,8 +62,6 @@
                 .append("g")
                 .attr("transform", "translate(" + margin + ", " + margin + ")");
 
-
-
             var parseTime = d3.timeParse("%m/%d/%Y");
 
             data.forEach(function (d) {
@@ -80,14 +78,12 @@
 
             var x = d3.scaleTime()
                 .domain(d3.extent(data, function (d) { return d.date; }))
-                .range([0, width])
-                ;
+                .range([0, width]);
 
             var y = d3.scalePow()
                 .domain(d3.extent(data, function (d) { return d.value1 }))
                 .range([height, 0])
-                .exponent(exponent)
-                ;
+                .exponent(exponent);
 
             var propertyNames = [];
 
@@ -117,7 +113,7 @@
 
             var yAxisGroup = dataGroup
                 .append("g")
-                .attr("class", "yAxisGroup")
+                .attr("class", "yAxisGroup");
 
             var yAxis = d3.axisLeft(y)
                 .tickFormat(d => y.tickFormat(62, d3.format(",d"))(d)
@@ -128,14 +124,13 @@
             function plotVariable(propertyName, color) {
                 var line1 = d3.line()
                     .x(d => x(d.date))
-                    .y(d => y(d[propertyName]))
-                    ;
+                    .y(d => y(d[propertyName]));
 
                 dataGroup.append("path")
                     .data([data])
                     .attr("fill", "none")
                     .attr("stroke", color)
-                    .attr("d", line1)
+                    .attr("d", line1);
             }
         }
     </script>
