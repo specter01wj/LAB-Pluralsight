@@ -24,6 +24,7 @@ export class CharacterListComponent {
 
 
 
+
   
   selectedCharacter: Character;
 
