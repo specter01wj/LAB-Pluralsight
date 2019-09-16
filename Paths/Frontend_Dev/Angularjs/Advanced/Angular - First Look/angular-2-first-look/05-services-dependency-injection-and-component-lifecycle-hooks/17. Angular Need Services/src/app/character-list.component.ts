@@ -28,6 +28,7 @@ export class CharacterListComponent {
 
 
 
+
   
 
   constructor(private characterService: CharacterService) {
