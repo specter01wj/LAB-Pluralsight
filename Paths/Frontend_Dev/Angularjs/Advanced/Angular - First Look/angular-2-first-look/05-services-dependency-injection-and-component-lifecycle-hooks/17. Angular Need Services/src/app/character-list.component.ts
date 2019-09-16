@@ -20,6 +20,7 @@ export class CharacterListComponent {
   messages: string[] = [];
   selectedCharacter: Character;
 
+
   
 
   constructor(private characterService: CharacterService) {
