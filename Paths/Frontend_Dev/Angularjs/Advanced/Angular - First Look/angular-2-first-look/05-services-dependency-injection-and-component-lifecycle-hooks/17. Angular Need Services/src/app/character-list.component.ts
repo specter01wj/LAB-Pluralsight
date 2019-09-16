@@ -21,6 +21,7 @@ export class CharacterListComponent {
   selectedCharacter: Character;
 
 
+
   
 
   constructor(private characterService: CharacterService) {
