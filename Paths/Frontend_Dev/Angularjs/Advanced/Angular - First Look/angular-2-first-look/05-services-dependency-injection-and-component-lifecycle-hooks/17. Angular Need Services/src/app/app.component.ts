@@ -5,4 +5,5 @@ import { CharacterListComponent } from './character-list.component';
   selector: 'my-app',
   template: '<my-character-list></my-character-list>'
 })
+
 export class AppComponent {}
