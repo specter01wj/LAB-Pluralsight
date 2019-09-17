@@ -6,4 +6,5 @@ import { CharacterListComponent } from './character-list.component';
   template: '<my-character-list></my-character-list>'
 })
 
+
 export class AppComponent {}
