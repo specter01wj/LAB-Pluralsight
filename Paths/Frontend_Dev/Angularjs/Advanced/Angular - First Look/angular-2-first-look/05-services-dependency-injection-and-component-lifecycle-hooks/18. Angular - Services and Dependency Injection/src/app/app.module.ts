@@ -12,4 +12,5 @@ import { CharacterService } from './character.service';
   providers: [CharacterService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {}
