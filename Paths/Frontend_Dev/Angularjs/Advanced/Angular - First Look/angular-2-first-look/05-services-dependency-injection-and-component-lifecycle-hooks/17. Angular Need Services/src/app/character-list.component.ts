@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { Character } from './character';
 import { CharacterService } from './character.service';
 
