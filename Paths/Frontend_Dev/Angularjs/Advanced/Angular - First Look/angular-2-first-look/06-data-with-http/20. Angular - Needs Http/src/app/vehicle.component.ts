@@ -5,6 +5,7 @@ import { Vehicle } from './vehicle.service';
   selector: 'my-vehicle',
   templateUrl: './vehicle.component.html'
 })
+
 export class VehicleComponent {
   @Input() vehicle: Vehicle;
 }
