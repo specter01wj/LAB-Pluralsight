@@ -8,6 +8,7 @@ import { Vehicle, VehicleService } from './vehicle.service';
 })
 
 
+
 export class VehicleListComponent {
   errorMessage: string;
   selectedVehicle: Vehicle;
