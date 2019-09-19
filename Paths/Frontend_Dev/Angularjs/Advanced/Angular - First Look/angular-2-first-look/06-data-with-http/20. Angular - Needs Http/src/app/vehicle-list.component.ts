@@ -6,6 +6,7 @@ import { Vehicle, VehicleService } from './vehicle.service';
   templateUrl: './vehicle-list.component.html',
   styles: ['li {cursor: pointer;} .error {color:red;}']
 })
+
 export class VehicleListComponent {
   errorMessage: string;
   selectedVehicle: Vehicle;
