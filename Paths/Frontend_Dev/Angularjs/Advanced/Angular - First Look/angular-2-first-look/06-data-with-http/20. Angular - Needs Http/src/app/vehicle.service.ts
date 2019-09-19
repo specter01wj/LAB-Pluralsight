@@ -18,21 +18,21 @@ export class VehicleService {
 
 	}
 
-  	getVehicles() {
-  		return this.http.get('api/vehicles.json')
-  			.map((response: Response) => <Vehicle[]>response.json().data)
-  			.catch(this.handleError);
-    /*return [
-      new Vehicle(1, 'X-Wing Fighter'),
-      new Vehicle(2, 'B-Wing Fighter'),
-      new Vehicle(3, 'Y-Wing Fighter')
-    ];*/
-  	}
+	getVehicles() {
+		return this.http.get('api/vehicles.json')
+			.map((response: Response) => <Vehicle[]>response.json().data)
+			.catch(this.handleError);
+  /*return [
+    new Vehicle(1, 'X-Wing Fighter'),
+    new Vehicle(2, 'B-Wing Fighter'),
+    new Vehicle(3, 'Y-Wing Fighter')
+  ];*/
+	}
 
-  	private handleError(error: Response) {
-  		let msg = `Status code ${error.status} on url ${error.url}`;
-  		console.error(msg);
-  		// return Observable.throw(msg);
-      return throwError(msg);
-  	}
+	private handleError(error: Response) {
+		let msg = `Status code ${error.status} on url ${error.url}`;
+		console.error(msg);
+		// return Observable.throw(msg);
+    return throwError(msg);
+	}
 }
