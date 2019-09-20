@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
-import '../../node_modules/rxjs/add/operator/map';
-import '../../node_modules/rxjs/add/operator/catch';
-import '../../node_modules/rxjs/add/observable/throw';
+// import '../../node_modules/rxjs/add/operator/map';
+// import '../../node_modules/rxjs/add/operator/catch';
+// import '../../node_modules/rxjs/add/observable/throw';
 import { Observable } from 'rxjs/Observable';
 import { throwError } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
