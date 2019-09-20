@@ -12,7 +12,7 @@ export class VehicleService {
   constructor(private http: HttpClient) {}
 
   getVehicles(value?: string) {
-    return this.http.get('assets/vehicles.json').pipe();
+    return this.http.get('assets/vehicles.json').pipe(
     map((data: any) => {
       let vehicles = <Vehicle[]>data.data;
       if (!value) {
@@ -23,7 +23,7 @@ export class VehicleService {
       );
     }),
       tap(data => console.log(data)),
-      catchError(this.handleError);
+      catchError(this.handleError));
   }
 
   private handleError(res: HttpErrorResponse) {
