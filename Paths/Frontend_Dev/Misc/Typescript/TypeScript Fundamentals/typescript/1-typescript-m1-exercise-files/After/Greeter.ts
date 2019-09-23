@@ -8,15 +8,5 @@ class Greeter {
 	greet() {
 		return "Hello, " + this.greeting;
 	}
-
-
-
-
-
-
-
-
-
-
 	
 }   
