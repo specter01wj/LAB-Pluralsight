@@ -25,10 +25,7 @@ class Calculator {
                 this.output.innerHTML = this.subtract(parseInt(this.x.value), parseInt(this.y.value)).toString()
             });
     }
-
-
     
-
     add(x: number, y : number) {
         return x + y;
     }
