@@ -12,6 +12,7 @@ module Shapes {
         constructor(public x: number, public y: number) { }
 
 
+
         
 
         // Instance member
