@@ -14,4 +14,3 @@ var demo_02_01;
     }
     addNumbers(num1, num2, 7);
 })(demo_02_01 || (demo_02_01 = {}));
-//# sourceMappingURL=02-01-grammar.js.map
