@@ -10,6 +10,7 @@ module Shapes {
     export class Point implements IPoint {
         // Constructor
         constructor(public x: number, public y: number) { }
+
         
 
         // Instance member
