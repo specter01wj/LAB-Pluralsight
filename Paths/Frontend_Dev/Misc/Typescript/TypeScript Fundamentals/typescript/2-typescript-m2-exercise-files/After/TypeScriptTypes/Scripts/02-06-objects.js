@@ -48,4 +48,3 @@ var demo_02_06;
     var sq2 = squareIt({ h: 10, w: 40 });
     console.log('rectangle h of 10 and width of 40 = ' + sq2);
 })(demo_02_06 || (demo_02_06 = {}));
-//# sourceMappingURL=02-06-objects.js.map
