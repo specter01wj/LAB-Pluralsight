@@ -57,3 +57,6 @@ namespace demo_02_06 {
     console.log('rectangle h of 10 and width of 40 = ' + sq2);
 
 }
+
+
+
