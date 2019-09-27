@@ -86,6 +86,7 @@ namespace demo_02_08 {
     // Demo D
     // Returning an interface from a function
     interface SessionEval {
+        ratings: number[];
         addRating: (rating: number) => void;
         calcRating: () => number;
     }
@@ -105,6 +106,7 @@ namespace demo_02_08 {
         };
 
         return {
+            ratings: ratings,
             addRating: addRating,
             calcRating: calcRating
         }

@@ -59,6 +59,7 @@ var demo_02_08;
             return sum / ratings.length;
         };
         return {
+            ratings: ratings,
             addRating: addRating,
             calcRating: calcRating
         };
@@ -70,4 +71,3 @@ var demo_02_08;
     s.addRating(5);
     console.log(s.calcRating());
 })(demo_02_08 || (demo_02_08 = {}));
-//# sourceMappingURL=02-08-interfaces.js.map
