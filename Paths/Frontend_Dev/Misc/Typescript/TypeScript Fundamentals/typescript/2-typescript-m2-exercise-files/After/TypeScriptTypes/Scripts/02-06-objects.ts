@@ -17,20 +17,6 @@ namespace demo_02_06 {
             return this.h * this.w;
         }
     };
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     console.log('rectangle area = ' + rectangle.calcArea());
 
     // Functions
