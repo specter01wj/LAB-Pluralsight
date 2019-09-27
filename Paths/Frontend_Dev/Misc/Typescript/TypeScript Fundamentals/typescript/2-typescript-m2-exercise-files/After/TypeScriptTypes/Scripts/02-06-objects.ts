@@ -27,6 +27,7 @@ namespace demo_02_06 {
 
 
 
+
     
     console.log('rectangle area = ' + rectangle.calcArea());
 
