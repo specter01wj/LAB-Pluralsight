@@ -41,3 +41,7 @@ namespace demo_02_07 {
     var val3: number = squareIt(rectB);
     console.log('rectangle h of 7 and width of 12 = ' + val3);
 }
+
+
+
+

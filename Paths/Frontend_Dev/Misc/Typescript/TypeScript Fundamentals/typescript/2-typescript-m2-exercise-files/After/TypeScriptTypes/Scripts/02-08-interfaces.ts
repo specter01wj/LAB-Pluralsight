@@ -117,3 +117,8 @@ namespace demo_02_08 {
     s.addRating(5);
     console.log(s.calcRating());
 }
+
+
+
+
+
