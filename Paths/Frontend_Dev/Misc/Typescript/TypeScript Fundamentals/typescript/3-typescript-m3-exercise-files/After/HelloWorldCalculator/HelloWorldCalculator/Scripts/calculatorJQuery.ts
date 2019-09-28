@@ -16,6 +16,7 @@ class CalculatorJQuery {
         this.wireEvents();
     }
 
+
     
 
     private wireEvents() {
