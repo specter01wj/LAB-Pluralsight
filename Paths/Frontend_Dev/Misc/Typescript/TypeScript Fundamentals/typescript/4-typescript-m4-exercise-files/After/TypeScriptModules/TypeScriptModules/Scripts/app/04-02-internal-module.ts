@@ -13,6 +13,7 @@ namespace Shapes {
             public height: number,
             public width: number) {
         }
+        
         getArea() { return this.height * this.width; }
 
     }
