@@ -86,7 +86,7 @@ window.onload = function () {
                          'Long Bed', true);
     truck.addAccessories(new Accessory(1234, 'Sunroof'), new Accessory(4321, 'Towing package'));
     truck.engine.start((status: boolean, engineType: string) => {
-        alert(engineType + ' was started');
+        alert(engineType + ' was started, ' + 'with status: ' + status);
     });
 };
 

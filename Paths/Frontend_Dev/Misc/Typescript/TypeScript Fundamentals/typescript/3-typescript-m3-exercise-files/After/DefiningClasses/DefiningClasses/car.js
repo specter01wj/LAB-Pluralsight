@@ -1,11 +1,11 @@
-var Engine = (function () {
+var Engine = /** @class */ (function () {
     function Engine(horsePower, engineType) {
         this.horsePower = horsePower;
         this.engineType = engineType;
     }
     return Engine;
-})();
-var Car = (function () {
+}());
+var Car = /** @class */ (function () {
     function Car(engine) {
         this.engine = engine;
     }
@@ -25,11 +25,10 @@ var Car = (function () {
         alert('Car engine started ' + this._engine.engineType);
     };
     return Car;
-})();
+}());
 window.onload = function () {
     var engine = new Engine(300, 'V8');
     var car = new Car(engine);
     alert(car.engine.engineType);
     car.start();
 };
-//# sourceMappingURL=car.js.map
