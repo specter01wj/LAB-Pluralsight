@@ -15,6 +15,7 @@ class CalculatorJQuery {
         this.output = $('#' + outputId);
         this.wireEvents();
     }
+    
 
     private wireEvents() {
         $('#Add').click(event => {
