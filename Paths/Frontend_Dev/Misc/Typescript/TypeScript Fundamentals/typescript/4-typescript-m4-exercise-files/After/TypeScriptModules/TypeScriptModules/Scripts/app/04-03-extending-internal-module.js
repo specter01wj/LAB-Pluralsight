@@ -75,7 +75,7 @@ var App;
 var Tools = App.Tools;
 //Wrapper will pull variables below out of the global scope
 (function () {
-    var log = new Tools.Utils.Logger(App.Tools.Utils.LoggerMode.Alert);
+    var log = new Tools.Utils.Logger(App.Tools.Utils.LoggerMode.Console);
     var p = new Tools.Shapes.Point(3, 4);
     var dist = p.getDist();
     log.write("distance = " + dist);
