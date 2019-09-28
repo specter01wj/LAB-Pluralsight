@@ -26,6 +26,7 @@ class Car {
 window.onload = function () {
     var engine = new Engine(300, 'V8');
     var car = new Car(engine);
+    
     alert(car.engine.engineType);
     car.start();
 };
