@@ -12,4 +12,3 @@ var demo_02_03;
     };
     person.substring(1, 4);
 })(demo_02_03 || (demo_02_03 = {}));
-//# sourceMappingURL=02-03-dynamic-types.js.map
