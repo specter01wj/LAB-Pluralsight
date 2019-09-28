@@ -14,4 +14,3 @@ var demo_02_04;
     console.log(guy.fullName);
     var a = ko.observableArray([]);
 })(demo_02_04 || (demo_02_04 = {}));
-//# sourceMappingURL=02-04-ambient-declarations.js.map

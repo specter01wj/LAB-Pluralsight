@@ -11,4 +11,5 @@ class Point implements IPoint {
 
 var p: IPoint = new Point(3, 4);
 var dist = p.getDist();
+
 toastr.info("distance = " + dist);
