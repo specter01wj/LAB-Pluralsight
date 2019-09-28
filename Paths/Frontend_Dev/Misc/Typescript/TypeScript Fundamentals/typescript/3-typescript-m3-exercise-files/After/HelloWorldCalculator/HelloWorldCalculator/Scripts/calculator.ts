@@ -13,6 +13,7 @@ class Calculator {
         this.output = <HTMLSpanElement>document.getElementById(outputId);
         this.wireEvents();
     }
+
     
 
     wireEvents() {
