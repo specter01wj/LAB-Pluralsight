@@ -15,7 +15,8 @@ namespace Shapes {
         }
 
         getArea() { 
-            return this.height * this.width; }
+            return this.height * this.width; 
+        }
 
     }
 
