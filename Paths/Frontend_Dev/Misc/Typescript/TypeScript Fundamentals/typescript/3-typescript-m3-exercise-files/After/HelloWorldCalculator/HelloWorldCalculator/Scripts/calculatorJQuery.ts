@@ -16,9 +16,6 @@ class CalculatorJQuery {
         this.wireEvents();
     }
 
-
-    
-
     private wireEvents() {
         $('#Add').click(event => {
                 this.output.html(this.add(parseInt(this.x.val()), parseInt(this.y.val())).toString());
