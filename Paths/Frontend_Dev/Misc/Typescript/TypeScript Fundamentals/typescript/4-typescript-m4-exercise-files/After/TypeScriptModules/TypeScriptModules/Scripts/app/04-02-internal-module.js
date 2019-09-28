@@ -1,14 +1,14 @@
 /// <reference path="../typings/toastr.d.ts" />
 var Shapes;
 (function (Shapes) {
-    var Rectangle = (function () {
+    var Rectangle = /** @class */ (function () {
         function Rectangle(height, width) {
             this.height = height;
             this.width = width;
         }
         Rectangle.prototype.getArea = function () { return this.height * this.width; };
         return Rectangle;
-    })();
+    }());
     Shapes.Rectangle = Rectangle;
 })(Shapes || (Shapes = {}));
 var MyProgram;
@@ -20,4 +20,3 @@ var MyProgram;
     }
     run();
 })(MyProgram || (MyProgram = {}));
-//# sourceMappingURL=04-02-internal-module.js.map
