@@ -11,7 +11,7 @@ var App;
                 Alert: 2,
                 Toastr: 3
             };
-            var Logger = (function () {
+            var Logger = /** @class */ (function () {
                 function Logger(mode) {
                     if (mode === void 0) { mode = Utils.LoggerMode.Console; }
                     this.mode = mode;
@@ -32,36 +32,34 @@ var App;
                 };
                 ;
                 return Logger;
-            })();
+            }());
             Utils.Logger = Logger;
         })(Utils = Tools.Utils || (Tools.Utils = {}));
     })(Tools = App.Tools || (App.Tools = {}));
 })(App || (App = {}));
-var App;
 (function (App) {
     var Tools;
     (function (Tools) {
         var Shapes;
         (function (Shapes) {
-            var Point = (function () {
+            var Point = /** @class */ (function () {
                 function Point(x, y) {
                     this.x = x;
                     this.y = y;
                 }
                 Point.prototype.getDist = function () { return Math.sqrt(this.x * this.x + this.y * this.y); };
                 return Point;
-            })();
+            }());
             Shapes.Point = Point;
         })(Shapes = Tools.Shapes || (Tools.Shapes = {}));
     })(Tools = App.Tools || (App.Tools = {}));
 })(App || (App = {}));
-var App;
 (function (App) {
     var Tools;
     (function (Tools) {
         var Shapes;
         (function (Shapes) {
-            var Rectangle = (function () {
+            var Rectangle = /** @class */ (function () {
                 function Rectangle(height, width) {
                     this.height = height;
                     this.width = width;
@@ -69,7 +67,7 @@ var App;
                 Rectangle.prototype.getPerimeter = function () { return this.height * 2 + this.width * 2; };
                 Rectangle.prototype.getArea = function () { return this.height * this.width; };
                 return Rectangle;
-            })();
+            }());
             Shapes.Rectangle = Rectangle;
         })(Shapes = Tools.Shapes || (Tools.Shapes = {}));
     })(Tools = App.Tools || (App.Tools = {}));
@@ -77,7 +75,7 @@ var App;
 var Tools = App.Tools;
 //Wrapper will pull variables below out of the global scope
 (function () {
-    var log = new Tools.Utils.Logger(App.Tools.Utils.LoggerMode.Toastr);
+    var log = new Tools.Utils.Logger(App.Tools.Utils.LoggerMode.Alert);
     var p = new Tools.Shapes.Point(3, 4);
     var dist = p.getDist();
     log.write("distance = " + dist);
@@ -85,4 +83,3 @@ var Tools = App.Tools;
     var perimeter = rect.getPerimeter();
     log.write("perimeter = " + perimeter);
 })();
-//# sourceMappingURL=04-03-extending-internal-module.js.map
