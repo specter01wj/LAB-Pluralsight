@@ -14,8 +14,6 @@ class Calculator {
         this.wireEvents();
     }
 
-    
-
     wireEvents() {
         document.getElementById('Add').addEventListener('click',
             event => {
