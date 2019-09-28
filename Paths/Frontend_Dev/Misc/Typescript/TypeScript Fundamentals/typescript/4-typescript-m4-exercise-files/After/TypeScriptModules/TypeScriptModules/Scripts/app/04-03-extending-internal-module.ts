@@ -70,7 +70,7 @@ import Tools = App.Tools;
 //Wrapper will pull variables below out of the global scope
 ((): void => {
 
-    var log = new Tools.Utils.Logger(App.Tools.Utils.LoggerMode.Console);
+    var log = new Tools.Utils.Logger(App.Tools.Utils.LoggerMode.Toastr);
 
     var p: IPoint = new Tools.Shapes.Point(3, 4);
     var dist = p.getDist();
