@@ -12,4 +12,3 @@ require(["bootstrapper"], function (boot) {
     //bootstrapper.run();
     boot.run();
 });
-//# sourceMappingURL=main.js.map
