@@ -30,7 +30,7 @@ import Utils = App.Utils;
 //Wrapper will pull variables below out of the global scope
 ((): void => {
 
-    var log : Utils.ILogger = new Utils.Logger(App.LoggerMode.Console);
+    var log : Utils.ILogger = new Utils.Logger(App.LoggerMode.Alert);
 
     var p: AppShapes.IPoint = new AppShapes.Point(3, 4);
     var dist = p.getDist();
