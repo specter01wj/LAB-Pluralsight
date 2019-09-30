@@ -8,7 +8,7 @@ var App;
     };
     var Utils;
     (function (Utils) {
-        var Logger = (function () {
+        var Logger = /** @class */ (function () {
             function Logger(mode) {
                 if (mode === void 0) { mode = App.LoggerMode.Console; }
                 this.mode = mode;
@@ -29,8 +29,7 @@ var App;
             };
             ;
             return Logger;
-        })();
+        }());
         Utils.Logger = Logger;
     })(Utils = App.Utils || (App.Utils = {}));
 })(App || (App = {}));
-//# sourceMappingURL=04-04-utils.js.map
