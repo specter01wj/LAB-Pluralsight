@@ -1,7 +1,7 @@
 /// <reference path="../typings/toastr.d.ts" />
 /// <reference path="04-05-dataservice.ts" />
 var dataservice = new DataService();
-var Alerter = (function () {
+var Alerter = /** @class */ (function () {
     function Alerter() {
         this.name = 'John';
     }
@@ -11,5 +11,4 @@ var Alerter = (function () {
     };
     ;
     return Alerter;
-})();
-//# sourceMappingURL=04-05-alerter.js.map
+}());
