@@ -11,6 +11,7 @@ const num = 7;
 
 
 
+
 export class AppComponent {
   title = 'my-app7';
 }
