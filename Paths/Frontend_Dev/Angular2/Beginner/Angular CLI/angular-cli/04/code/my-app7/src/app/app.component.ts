@@ -8,6 +8,7 @@ const num = 7;
   styleUrls: ['./app.component.less']
 })
 
+
 export class AppComponent {
   title = 'my-app7';
 }
