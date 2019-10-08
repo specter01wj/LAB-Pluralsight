@@ -1,5 +1,5 @@
 TN:
-SF:/Users/papa/_play/angular-routing/src/polyfills.ts
+SF:/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Beginner/Angular CLI/angular-cli/08/mysol_1/angular-routing/src/polyfills.ts
 FNF:0
 FNH:0
 LF:0
@@ -8,7 +8,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/papa/_play/angular-routing/src/test.ts
+SF:/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Beginner/Angular CLI/angular-cli/08/mysol_1/angular-routing/src/test.ts
 FNF:0
 FNH:0
 DA:6,1
@@ -20,7 +20,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/papa/_play/angular-routing/src/app/app.component.ts
+SF:/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Beginner/Angular CLI/angular-cli/08/mysol_1/angular-routing/src/app/app.component.ts
 FN:1,(anonymous_0)
 FN:8,(anonymous_1)
 FN:9,AppComponent
@@ -66,7 +66,7 @@ BRF:22
 BRH:10
 end_of_record
 TN:
-SF:/Users/papa/_play/angular-routing/src/app/admin/admin-routing.module.ts
+SF:/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Beginner/Angular CLI/angular-cli/08/mysol_1/angular-routing/src/app/admin/admin-routing.module.ts
 FN:1,(anonymous_0)
 FN:22,(anonymous_1)
 FN:23,AdminRoutingModule
@@ -112,7 +112,7 @@ BRF:22
 BRH:10
 end_of_record
 TN:
-SF:/Users/papa/_play/angular-routing/src/app/admin/admin.component.ts
+SF:/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Beginner/Angular CLI/angular-cli/08/mysol_1/angular-routing/src/app/admin/admin.component.ts
 FN:1,(anonymous_0)
 FN:7,(anonymous_1)
 FN:11,(anonymous_2)
@@ -171,7 +171,7 @@ BRF:29
 BRH:16
 end_of_record
 TN:
-SF:/Users/papa/_play/angular-routing/src/app/admin/admin.module.ts
+SF:/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Beginner/Angular CLI/angular-cli/08/mysol_1/angular-routing/src/app/admin/admin.module.ts
 FN:1,(anonymous_0)
 FN:13,(anonymous_1)
 FN:14,AdminModule
@@ -216,7 +216,7 @@ BRF:22
 BRH:10
 end_of_record
 TN:
-SF:/Users/papa/_play/angular-routing/src/app/admin/email-blast/email-blast.component.ts
+SF:/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Beginner/Angular CLI/angular-cli/08/mysol_1/angular-routing/src/app/admin/email-blast/email-blast.component.ts
 FN:1,(anonymous_0)
 FN:7,(anonymous_1)
 FN:11,(anonymous_2)
@@ -275,7 +275,7 @@ BRF:29
 BRH:16
 end_of_record
 TN:
-SF:/Users/papa/_play/angular-routing/src/app/admin/users/users.component.ts
+SF:/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Beginner/Angular CLI/angular-cli/08/mysol_1/angular-routing/src/app/admin/users/users.component.ts
 FN:1,(anonymous_0)
 FN:7,(anonymous_1)
 FN:10,(anonymous_2)
@@ -470,7 +470,7 @@ BRF:93
 BRH:42
 end_of_record
 TN:
-SF:/Users/papa/_play/angular-routing/src/app/customer/customer.component.ts
+SF:/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Beginner/Angular CLI/angular-cli/08/mysol_1/angular-routing/src/app/customer/customer.component.ts
 FN:1,(anonymous_0)
 FN:7,(anonymous_1)
 FN:11,(anonymous_2)
@@ -529,7 +529,7 @@ BRF:29
 BRH:16
 end_of_record
 TN:
-SF:/Users/papa/_play/angular-routing/src/app/customer-list/customer-list-datasource.ts
+SF:/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Beginner/Angular CLI/angular-cli/08/mysol_1/angular-routing/src/app/customer-list/customer-list-datasource.ts
 FN:1,(anonymous_0)
 FN:3,(anonymous_1)
 FN:4,(anonymous_2)
@@ -628,7 +628,7 @@ BRF:24
 BRH:8
 end_of_record
 TN:
-SF:/Users/papa/_play/angular-routing/src/app/customer-list/customer-list.component.ts
+SF:/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Beginner/Angular CLI/angular-cli/08/mysol_1/angular-routing/src/app/customer-list/customer-list.component.ts
 FN:1,(anonymous_0)
 FN:7,(anonymous_1)
 FN:13,(anonymous_2)
@@ -691,7 +691,7 @@ BRF:29
 BRH:21
 end_of_record
 TN:
-SF:/Users/papa/_play/angular-routing/src/app/dashboard/dashboard.component.ts
+SF:/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Beginner/Angular CLI/angular-cli/08/mysol_1/angular-routing/src/app/dashboard/dashboard.component.ts
 FN:1,(anonymous_0)
 FN:7,(anonymous_1)
 FN:13,(anonymous_2)
@@ -757,7 +757,7 @@ BRF:31
 BRH:17
 end_of_record
 TN:
-SF:/Users/papa/_play/angular-routing/src/app/nav/nav.component.ts
+SF:/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Beginner/Angular CLI/angular-cli/08/mysol_1/angular-routing/src/app/nav/nav.component.ts
 FN:1,(anonymous_0)
 FN:7,(anonymous_1)
 FN:13,(anonymous_2)
