@@ -7,6 +7,7 @@ import { LoggerService } from 'my-lib';
   styleUrls: ['./app.component.css']
 })
 
+
 export class AppComponent {
   title = 'angular-routing';
 
