@@ -2,10 +2,10 @@ package com.spm.ch5.CalcEngine;
 
 public class MathEquation {
 	
-	private double leftVal;
-    private double rightVal;
-    private char opCode;
-    private double result;
+	public double leftVal;
+	public double rightVal;
+	public char opCode;
+	public double result;
     
     public void execute() {
 	    	switch(opCode) {
