@@ -17,6 +17,7 @@ public class MathEquation {
 
     public void execute() {
     	
+    	
         switch(opCode) {
             case 'a':
                 result = leftVal + rightVal;
