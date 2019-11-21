@@ -25,6 +25,7 @@ public class MathEquation {
     	
     	
     	
+    	
         switch(opCode) {
             case 'a':
                 result = leftVal + rightVal;
