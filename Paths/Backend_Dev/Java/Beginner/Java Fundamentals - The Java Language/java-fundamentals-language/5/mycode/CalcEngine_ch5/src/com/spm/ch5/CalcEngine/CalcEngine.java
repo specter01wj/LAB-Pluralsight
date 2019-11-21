@@ -19,5 +19,14 @@ public class CalcEngine {
             System.out.println(theResult);
         }
 	}
+	
+	public static MathEquation create(double leftVal, double rightVal, char opCode) {
+        MathEquation equation = new MathEquation();
+        equation.setLeftVal(leftVal);
+        equation.setRightVal(rightVal);
+        equation.setOpCode(opCode);
+
+        return equation;
+    }
 
 }
