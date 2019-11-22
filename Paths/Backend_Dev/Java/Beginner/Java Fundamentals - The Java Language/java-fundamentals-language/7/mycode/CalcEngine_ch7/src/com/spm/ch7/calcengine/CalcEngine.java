@@ -6,6 +6,9 @@ public class CalcEngine {
 		// TODO Auto-generated method stub
 		double leftDouble = 9.0d;
         double rightDouble = 4.0d;
+        
+        int leftInt = 9;
+        int rightInt = 4;
 		
 		MathEquation[] equations = new MathEquation[4];
         equations[0] = new MathEquation(100.0d, 50.0d, 'd');
@@ -26,6 +29,10 @@ public class CalcEngine {
         MathEquation equationOverload = new MathEquation('d');
         
         equationOverload.execute(leftDouble, rightDouble);
+        System.out.print("result=");
+        System.out.println(equationOverload.getResult());
+        
+        equationOverload.execute(leftInt, rightInt);
         System.out.print("result=");
         System.out.println(equationOverload.getResult());
 	}
