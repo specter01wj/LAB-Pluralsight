@@ -6,6 +6,8 @@ public class MathEquation {
     private char opCode = 'a';
     private double result;
     
+    public MathEquation() {}
+    
     public MathEquation(char opCode) {
     		this.opCode = opCode;
     }
