@@ -28,7 +28,6 @@ public class MathEquation {
     public double getResult() { return result;}
 
     public void execute() {
-    	
         switch(opCode) {
             case 'a':
                 result = leftVal + rightVal;
@@ -47,6 +46,12 @@ public class MathEquation {
                 result = 0.0d;
                 break;
         }
+    }
+    
+    public void execute(double leftVal, double rightVal) {
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
 
+        execute();
     }
 }
