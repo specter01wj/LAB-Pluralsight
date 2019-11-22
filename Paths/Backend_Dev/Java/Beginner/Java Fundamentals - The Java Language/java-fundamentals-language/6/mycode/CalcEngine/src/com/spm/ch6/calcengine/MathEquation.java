@@ -5,6 +5,10 @@ public class MathEquation {
     private double rightVal;
     private char opCode = 'a';
     private double result;
+    
+    public MathEquation(char opCode) {
+    		this.opCode = opCode;
+    }
 
     public double getLeftVal() {return leftVal;}
     public void setLeftVal(double leftVal) {this.leftVal = leftVal;}
