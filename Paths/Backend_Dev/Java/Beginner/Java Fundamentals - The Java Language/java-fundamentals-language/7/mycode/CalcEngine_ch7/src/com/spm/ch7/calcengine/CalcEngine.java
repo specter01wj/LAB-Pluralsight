@@ -4,6 +4,9 @@ public class CalcEngine {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		double leftDouble = 9.0d;
+        double rightDouble = 4.0d;
+		
 		MathEquation[] equations = new MathEquation[4];
         equations[0] = new MathEquation(100.0d, 50.0d, 'd');
         equations[1] = new MathEquation(25.0d, 92.0d, 'a');
@@ -15,6 +18,16 @@ public class CalcEngine {
             System.out.print("result = ");
             System.out.println(equation.getResult());
         }
+        
+        System.out.println();
+        System.out.println("Using Overloads");
+        System.out.println();
+        
+        MathEquation equationOverload = new MathEquation('d');
+        
+        equationOverload.execute(leftDouble, rightDouble);
+        System.out.print("result=");
+        System.out.println(equationOverload.getResult());
 	}
 
 }
