@@ -9,6 +9,12 @@ public class MathEquation {
     public MathEquation(char opCode) {
     		this.opCode = opCode;
     }
+    
+    public MathEquation(char opCode, double leftVal, double rightVal) {
+        this(opCode);
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+    }
 
     public double getLeftVal() {return leftVal;}
     public void setLeftVal(double leftVal) {this.leftVal = leftVal;}
