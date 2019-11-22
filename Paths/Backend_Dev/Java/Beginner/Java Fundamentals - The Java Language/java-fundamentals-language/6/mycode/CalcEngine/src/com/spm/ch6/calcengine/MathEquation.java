@@ -12,7 +12,7 @@ public class MathEquation {
     		this.opCode = opCode;
     }
     
-    public MathEquation(char opCode, double leftVal, double rightVal) {
+    public MathEquation(double leftVal, double rightVal, char opCode) {
         this(opCode);
         this.leftVal = leftVal;
         this.rightVal = rightVal;
