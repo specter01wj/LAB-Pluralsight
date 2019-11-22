@@ -35,6 +35,10 @@ public class CalcEngine {
         equationOverload.execute(leftInt, rightInt);
         System.out.print("result=");
         System.out.println(equationOverload.getResult());
+        
+        equationOverload.execute((double)leftInt, rightInt);
+        System.out.print("result=");
+        System.out.println(equationOverload.getResult());
 	}
 
 }
