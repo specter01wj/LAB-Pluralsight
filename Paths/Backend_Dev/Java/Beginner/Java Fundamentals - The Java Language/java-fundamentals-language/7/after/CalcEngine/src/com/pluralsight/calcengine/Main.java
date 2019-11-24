@@ -14,7 +14,7 @@ public class Main {
             System.out.print("result = ");
             System.out.println(equation.getResult());
         }
-        
+
         System.out.println();
         System.out.println("Using Overloads");
         System.out.println();
@@ -23,6 +23,7 @@ public class Main {
         double rightDouble = 4.0d;
         int leftInt = 9;
         int rightInt = 4;
+        
 
         MathEquation equationOverload = new MathEquation('d');
 
