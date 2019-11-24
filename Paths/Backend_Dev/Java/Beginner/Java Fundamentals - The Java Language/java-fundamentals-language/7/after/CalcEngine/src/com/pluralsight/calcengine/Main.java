@@ -23,6 +23,7 @@ public class Main {
         double rightDouble = 4.0d;
         int leftInt = 9;
         int rightInt = 4;
+
         
 
         MathEquation equationOverload = new MathEquation('d');
