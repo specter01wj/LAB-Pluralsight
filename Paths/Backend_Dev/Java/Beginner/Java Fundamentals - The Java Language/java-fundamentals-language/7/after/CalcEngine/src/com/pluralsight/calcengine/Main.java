@@ -24,8 +24,6 @@ public class Main {
         int leftInt = 9;
         int rightInt = 4;
 
-        
-
         MathEquation equationOverload = new MathEquation('d');
 
         equationOverload.execute(leftDouble, rightDouble);
