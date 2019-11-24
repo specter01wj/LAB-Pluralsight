@@ -14,6 +14,7 @@ public class Main {
             System.out.print("result = ");
             System.out.println(equation.getResult());
         }
+
         
 
         System.out.println();
