@@ -10,6 +10,8 @@ This module takes the installed tools to bootstrap an empty Java EE application 
 * In the `pom.xml` change the versions of Java, Java EE and the Maven plugins with properties:
 * ``` <properties> <version.java>1.8</version.java> <version.javaee>7.0</version.javaee> <!-- Plugins --> <version.compiler.plugin>3.8.0</version.compiler.plugin> <version.dependency.plugin>3.1.1</version.dependency.plugin> <version.war.plugin>3.2.2</version.war.plugin> </properties> ```
 
+export PATH=/Users/james.wang/Programs/apache-maven-3.6.3/bin:$PATH
+mvn -DarchetypeGroupId=org.codehaus.mojo.archetypes -DarchetypeArtifactId=webapp-javaee7 -DarchetypeVersion=1.1 -DgroupId=com.pluralsight.java-ee-getting-started -DartifactId=bookstore-back -Dversion=1.0 -Darchetype.interactive=false --batch-mode -Dpackage=com.pluralsight.bookstore archetype:generate
 
 ## Structure 
 
