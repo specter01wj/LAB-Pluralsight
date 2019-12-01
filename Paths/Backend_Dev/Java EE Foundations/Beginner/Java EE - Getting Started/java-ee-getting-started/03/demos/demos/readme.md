@@ -12,3 +12,7 @@ This module evaluates several tools (editor, building tool, application server, 
 * Go to the admin console http://localhost:9990/console
 * Create a user with $WILDFLY_HOME/bin/add-user.sh
 * If you use Intellij IDEA check how to integrate Arquillian at https://www.jetbrains.com/help/idea/arquillian.html
+
+export PATH=/Users/james.wang/Programs/apache-maven-3.6.3/bin:$PATH
+
+export PATH=/Users/james.wang/Programs/wildfly-18.0.1.Final/bin:$PATH
