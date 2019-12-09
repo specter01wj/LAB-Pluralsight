@@ -4,4 +4,9 @@ create persistence-unit
 under persistence-unit, create Entity: Book
 
 
+## Demo 
+
+* In the `com.pluralsight.bookstore.model` package create a `Book` entity with an id (the primary key), a title, a description, a unitCost, an isbn, a publicationDate, nbOfPages, imageURL and a language.
+* In the `com.pluralsight.bookstore.model` package create a `Language` enumeration.
+* In the `src/main/resources/META-INF` directory create a `persistence.xml` file for the `bookStorePU` persistence unit.
 

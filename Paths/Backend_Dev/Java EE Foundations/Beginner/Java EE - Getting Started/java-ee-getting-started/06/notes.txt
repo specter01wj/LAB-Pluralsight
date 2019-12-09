@@ -1,0 +1,19 @@
+
+create package: repository
+under repository, create class: BookRepository
+
+
+## Demo 
+
+* In the new `com.pluralsight.bookstore.repository` package 
+reate a `BookRepository` transactional repository 
+with methods `create(Book book)`, `find(Long id)`, `delete(Long id)`, 
+`findAll()` and `countAll()`.
+
+* The `findAll()` method should have a query that selects 
+all the book ordered by title `em.createQuery("SELECT b FROM Book b ORDER 
+BY b.title DESC", Book.class)`
+
+* The `countAll()` method counts all the books from the database 
+with the query `em.createQuery("SELECT COUNT(b) FROM Book b", Long.class)`
+
