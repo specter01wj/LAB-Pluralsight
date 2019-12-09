@@ -24,7 +24,6 @@ public class BookRepository {
     // ======================================
 
     @PersistenceContext(unitName = "bookStorePU")
-    
     private EntityManager em;
 
     // ======================================
