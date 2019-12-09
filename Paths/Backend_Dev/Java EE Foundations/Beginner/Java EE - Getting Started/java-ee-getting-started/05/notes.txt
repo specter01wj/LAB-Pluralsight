@@ -1,7 +1,7 @@
 
 create persistence-unit
 
-
+under persistence-unit, create Entity: Book
 
 
 
