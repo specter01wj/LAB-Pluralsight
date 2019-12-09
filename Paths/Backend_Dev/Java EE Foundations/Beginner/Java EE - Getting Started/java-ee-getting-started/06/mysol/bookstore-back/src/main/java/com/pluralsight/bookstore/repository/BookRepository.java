@@ -45,7 +45,6 @@ public class BookRepository {
     }
 
     @Transactional(REQUIRED)
-    
     public Book create(Book book) {
         em.persist(book);
         return book;
