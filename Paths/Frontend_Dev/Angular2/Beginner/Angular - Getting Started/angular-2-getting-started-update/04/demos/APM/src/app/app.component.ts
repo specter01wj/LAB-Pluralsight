@@ -17,6 +17,7 @@ export class AppComponent {
 
 
 
+
 	
 	pageTitle: string = "James Wang Product Management!!!";
 	myNum: number = 23;
