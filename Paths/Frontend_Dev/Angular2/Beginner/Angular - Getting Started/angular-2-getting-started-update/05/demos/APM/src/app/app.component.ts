@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
         <pm-products></pm-products>
     </div>
     `*/
-  templateUrl: './app.component.html'
+	templateUrl: './app.component.html'
 })
 
 export class AppComponent {
