@@ -5,15 +5,15 @@ import { AppComponent } from './app.component';
 import { ProductListComponent } from './products/product-list.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ProductListComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		ProductListComponent
+	],
+	imports: [
+		BrowserModule
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 
 export class AppModule { }
