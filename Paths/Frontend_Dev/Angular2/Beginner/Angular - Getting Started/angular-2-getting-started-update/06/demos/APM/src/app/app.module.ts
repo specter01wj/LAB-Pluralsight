@@ -11,8 +11,8 @@ import { ProductListComponent } from './products/product-list.component';
       ProductListComponent
   ],
   imports: [
-    BrowserModule,
-    FormsModule
+      BrowserModule,
+      FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
