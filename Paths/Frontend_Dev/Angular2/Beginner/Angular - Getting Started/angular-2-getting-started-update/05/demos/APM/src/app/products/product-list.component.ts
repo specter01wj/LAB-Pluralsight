@@ -9,6 +9,7 @@ export class ProductListComponent {
     pageTitle: string = 'My Product List';
 
 
+
     
     products: any[] =  [
         {
