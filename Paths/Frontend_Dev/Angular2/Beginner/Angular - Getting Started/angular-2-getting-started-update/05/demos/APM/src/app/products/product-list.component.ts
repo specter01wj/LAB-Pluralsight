@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class ProductListComponent {
     pageTitle: string = 'My Product List';
 
+
     
     products: any[] =  [
         {
