@@ -14,6 +14,7 @@ export class ProductListComponent implements OnInit {
     showImage: boolean = false;
 
     _listFilter: string;
+    
     get listFilter(): string {
         return this._listFilter;
     }
@@ -23,7 +24,7 @@ export class ProductListComponent implements OnInit {
     }
 
     filteredProducts: IProduct[];
-    
+
     products: IProduct[] = [
         {
             "productId": 2,
