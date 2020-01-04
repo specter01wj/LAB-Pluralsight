@@ -18,7 +18,7 @@ export class ProductListComponent implements OnInit {
     get listFilter(): string {
         return this._listFilter;
     }
-    
+
     set listFilter(value: string) {
         this._listFilter = value;
         this.filteredProducts = this.listFilter ? this.performFilter(this.listFilter) : this.products;
@@ -51,6 +51,7 @@ export class ProductListComponent implements OnInit {
 
     constructor() {
         this.filteredProducts = this.products;
+        
         this.listFilter = 'cart';
     }
 
