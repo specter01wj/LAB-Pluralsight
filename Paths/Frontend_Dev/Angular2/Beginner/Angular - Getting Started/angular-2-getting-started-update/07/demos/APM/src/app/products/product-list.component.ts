@@ -53,6 +53,7 @@ export class ProductListComponent implements OnInit {
         this.filteredProducts = this.products;
 
 
+
         
         this.listFilter = 'cart';
     }
