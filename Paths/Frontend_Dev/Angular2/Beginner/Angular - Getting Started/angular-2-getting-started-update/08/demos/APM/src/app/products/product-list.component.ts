@@ -23,7 +23,7 @@ export class ProductListComponent implements OnInit {
     }
 
     filteredProducts: IProduct[];
-    
+
     products: IProduct[] = [
         {
             "productId": 2,
@@ -69,4 +69,5 @@ export class ProductListComponent implements OnInit {
     ngOnInit(): void {
         console.log('In OnInit');
     }
+    
 }
