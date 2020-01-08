@@ -30,6 +30,7 @@
                         <th>Available</th>
                         <th>Price</th>
                         <th>5 Star Rating</th>
+                        <th>Detail</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,6 +51,7 @@
                                 (ratingClicked)='onRatingClicked($event)'>
 							</pm-star>
                         </td>
+                        <td><a [routerLink]="['/products/:id']">Detail</a></td>
                     </tr>
                 </tbody>
             </table>
