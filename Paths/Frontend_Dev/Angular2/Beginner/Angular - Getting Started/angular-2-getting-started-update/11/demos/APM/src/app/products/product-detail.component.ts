@@ -18,13 +18,13 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
 
   	constructor(private route: ActivatedRoute) { }
 
-  ngOnInit() {
-  	this.sub = this.route.params.subscribe(params => {
-       this.productId = params['id']; // (+) converts string 'id' to a number
+	ngOnInit() {
+	  	this.sub = this.route.params.subscribe(params => {
+	       this.productId = params['id']; // (+) converts string 'id' to a number
 
-       // In a real app: dispatch action to load the details here.
-    });
-  }
+	       // In a real app: dispatch action to load the details here.
+	    });
+	}
 
   ngOnDestroy() {
     this.sub.unsubscribe();
