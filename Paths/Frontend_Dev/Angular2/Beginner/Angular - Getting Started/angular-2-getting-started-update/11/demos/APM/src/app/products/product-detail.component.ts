@@ -10,9 +10,9 @@ import { IProduct } from './product';
 })
 
 export class ProductDetailComponent implements OnInit, OnDestroy {
-	productId: number;
 	private sub: any;
 	
+	productId: number;
     pageTitle: string = 'Product Detail';
     product: IProduct;
 
