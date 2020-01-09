@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { IProduct } from './product';
+import { ProductService } from './product.service';
 
 @Component({
 	selector: 'app-product-detail',
@@ -14,15 +15,21 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
 
 	productId: number;
     pageTitle: string = 'Product Detail';
+    errorMessage: string;
     product: IProduct;
 
-  	constructor(private route: ActivatedRoute) { }
+  	constructor(private route: ActivatedRoute, 
+  				private _productService: ProductService) { }
 
 	ngOnInit() {
 	  	this.sub = this.route.params.subscribe(params => {
-	       this.productId = params['id']; // (+) converts string 'id' to a number
+	        this.productId = params['id'];
 
-	       // In a real app: dispatch action to load the details here.
+        	this._productService.getProducts()
+                .subscribe(products => {
+                    console.log(products);
+                },
+                    error => this.errorMessage = <any>error);
 	    });
 	}
 
