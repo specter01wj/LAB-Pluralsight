@@ -12,6 +12,7 @@ import { IProduct } from './product';
 export class ProductDetailComponent implements OnInit, OnDestroy {
 	productId: number;
 	private sub: any;
+	
     pageTitle: string = 'Product Detail';
     product: IProduct;
 
@@ -19,7 +20,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
   	this.sub = this.route.params.subscribe(params => {
-       this.productId = params['productId']; // (+) converts string 'id' to a number
+       this.productId = params['id']; // (+) converts string 'id' to a number
 
        // In a real app: dispatch action to load the details here.
     });
