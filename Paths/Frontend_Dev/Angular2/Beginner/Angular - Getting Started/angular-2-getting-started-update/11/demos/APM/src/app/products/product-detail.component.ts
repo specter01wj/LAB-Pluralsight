@@ -41,7 +41,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
                     	}
                     }
                 },
-                    error => this.errorMessage = <any>error);
+                error => this.errorMessage = <any>error);
 	    });
 	}
 
