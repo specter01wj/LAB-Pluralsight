@@ -11,6 +11,7 @@ import { EventsAppComponent } from './events-app.component';
     BrowserModule
   ],
   providers: [],
+
   
   bootstrap: [EventsAppComponent]
 })
