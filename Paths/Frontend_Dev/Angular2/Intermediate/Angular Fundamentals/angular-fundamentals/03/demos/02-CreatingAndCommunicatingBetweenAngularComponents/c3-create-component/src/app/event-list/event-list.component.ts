@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventListComponent implements OnInit {
 
-  constructor() { }
+	constructor() { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
 	event1 = {
 	    id: 1,
@@ -24,6 +24,10 @@ export class EventListComponent implements OnInit {
 	      city: 'London',
 	      country: 'England'
 	    }
+	}
+
+	handleEventClicked(data) {
+		console.log('Received: ' +  data);
 	}
 
 }
