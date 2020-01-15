@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./event-thumbnail.component.less']
 })
 export class EventThumbnailComponent implements OnInit {
-
+	@Input() event:any
+	
   constructor() { }
 
   ngOnInit() {
