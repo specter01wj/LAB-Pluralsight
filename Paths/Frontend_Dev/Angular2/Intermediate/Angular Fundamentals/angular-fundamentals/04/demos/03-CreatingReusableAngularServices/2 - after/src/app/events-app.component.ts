@@ -7,6 +7,7 @@ import { Component } from '@angular/core'
     <events-list></events-list>
   `
 })
+
 export class EventsAppComponent {
   title = 'app';
 }
