@@ -20,6 +20,7 @@ export class EventThumbnailComponent implements OnInit {
 		this.eventClick.emit(this.event.name);
 
 
+
 		
 	}
 
