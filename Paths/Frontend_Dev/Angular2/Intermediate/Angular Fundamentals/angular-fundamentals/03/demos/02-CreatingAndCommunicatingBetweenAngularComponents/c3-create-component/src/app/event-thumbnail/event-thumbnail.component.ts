@@ -19,6 +19,7 @@ export class EventThumbnailComponent implements OnInit {
 		console.log('clicked!');
 		this.eventClick.emit(this.event.name);
 
+
 		
 	}
 
