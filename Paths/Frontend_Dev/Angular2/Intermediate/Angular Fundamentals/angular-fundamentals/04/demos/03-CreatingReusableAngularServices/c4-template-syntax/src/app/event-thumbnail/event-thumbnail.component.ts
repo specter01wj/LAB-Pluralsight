@@ -15,14 +15,21 @@ export class EventThumbnailComponent implements OnInit {
   }
 
   getStartTimeStyle():any {
-    if (this.event && this.event.time === '8:00 am')
-      return {color: '#003300', 'font-weight': 'bold'}
-    return {}
+    if (this.event && this.event.time === '8:00 am') {
+      return {color: '#003300', 'font-weight': 'bold'};
+    }
+    return {};
   }
 
-  getStartTimeClass() {
+  /*getStartTimeClass() {
   	const isEarlyStart = this.event && this.event.time === '8:00 am';
-  	return {green: isEarlyStart, bold: isEarlyStart}
+  	return {green: isEarlyStart, bold: !isEarlyStart}
+  }*/
+
+  getStartTimeClass() {
+  	if(this.event && this.event.time === '8:00 am') {
+  		return 'green bold';
+  	}
   }
 
 }
