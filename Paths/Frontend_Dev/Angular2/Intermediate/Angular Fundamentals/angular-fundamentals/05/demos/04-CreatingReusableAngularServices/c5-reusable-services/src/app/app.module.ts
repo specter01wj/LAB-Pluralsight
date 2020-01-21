@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { EventsListComponent } from './events-list/events-list.component';
+import { EventThumbnailComponent } from './event-thumbnail/event-thumbnail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    EventsListComponent
+    EventsListComponent,
+    EventThumbnailComponent
   ],
   imports: [
     BrowserModule,
