@@ -3,9 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { UserRoutingModule } from './user-routing.module';
 
+import { ProfileComponent } from './profile.component'
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  	ProfileComponent
+  ],
   imports: [
     CommonModule,
     UserRoutingModule

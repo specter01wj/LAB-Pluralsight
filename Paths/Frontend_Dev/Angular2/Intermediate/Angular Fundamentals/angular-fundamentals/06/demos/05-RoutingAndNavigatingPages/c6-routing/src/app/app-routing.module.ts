@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, ActivatedRouteSnapshot } from '@angular/router';
 
 import { EventsListComponent } from './events/events-list/events-list.component';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
@@ -10,10 +10,12 @@ import { EventsListResolverService } from './events/service/events-list-resolver
 
 const routes: Routes = [
 
-	{ path: 'events/new', component: CreateEventComponent, canDeactivate: ['canDeactivateCreateEvent'] },
-	{ path: 'events', component: EventsListComponent, resolve: {events:EventsListResolverService} },
+	{ path: 'events/new', component: CreateEventComponent, 
+			canDeactivate: ['canDeactivateCreateEvent'] },
+	{ path: 'events', component: EventsListComponent, 
+			resolve: {events:EventsListResolverService} },
 	{ path: 'events/:id', component: EventDetailsComponent,
-	    canActivate: [EventRouteActivator] },
+	    	canActivate: [EventRouteActivator] },
 	{ path: '404', component: E404Component },
 	{ path: '', redirectTo: '/events', pathMatch: 'full'},
 	{ path: 'user', loadChildren: './user/user.module#UserModule'}
