@@ -1,1 +1,0 @@
-http://localhost:8080/ivws/api/v1/userResource/pointInTime/date?iv_time_period=11112019&iv_time_level=WEEK&iv_facility_ids=37183,37193
