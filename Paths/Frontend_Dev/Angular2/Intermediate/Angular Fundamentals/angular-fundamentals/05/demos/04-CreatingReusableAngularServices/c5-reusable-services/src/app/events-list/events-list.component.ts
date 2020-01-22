@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { EventService } from '../service/event.service';
 import { ToastrService } from '../service/toastr.service';
 
-declare let toastr;
+// declare let toastr;
 
 @Component({
   selector: 'app-events-list',
