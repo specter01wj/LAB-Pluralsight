@@ -11,7 +11,7 @@ import { ToastrService } from '../service/toastr.service';
   styleUrls: ['./events-list.component.less']
 })
 export class EventsListComponent implements OnInit {
-  events:any[]
+  events:any[];
 
   constructor(private eventService: EventService, private toastr: ToastrService) {
     
