@@ -18,6 +18,7 @@ export class EventsListComponent implements OnInit {
   			  private route:ActivatedRoute) { }
 
   ngOnInit() {
+    this.events = this.route.snapshot.data['events'];
   }
 
   handleThumbnailClick(eventName) {
