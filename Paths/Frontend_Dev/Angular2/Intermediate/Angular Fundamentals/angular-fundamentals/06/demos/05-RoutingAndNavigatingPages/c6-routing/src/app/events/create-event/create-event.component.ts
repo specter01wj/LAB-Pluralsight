@@ -16,7 +16,6 @@ export class CreateEventComponent implements OnInit {
 
   ngOnInit() {
   }
-
   
   cancel() {
     this.router.navigate(['/events']);
