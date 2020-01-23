@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { ProfileComponent } from './user/profile.component';
+// import { ProfileComponent } from './user/profile.component';
 
 import { ToastrService } from './service/toastr.service';
 
@@ -29,7 +29,7 @@ import { E404Component } from './errors/e404.component';
   declarations: [
     AppComponent,
     NavBarComponent,
-    ProfileComponent,
+    // ProfileComponent,
     EventsListComponent,
     EventThumbnailComponent,
     EventDetailsComponent,
