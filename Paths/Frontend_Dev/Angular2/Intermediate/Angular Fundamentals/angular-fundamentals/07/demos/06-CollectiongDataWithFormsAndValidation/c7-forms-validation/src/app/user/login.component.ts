@@ -9,9 +9,9 @@ import { AuthService } from './auth.service';
   styleUrls: ['./login.component.less']
 })
 export class LoginComponent implements OnInit {
-  username
-  password
-  mouseoverLogin
+  username: String;
+  password: Number;
+  mouseoverLogin: Boolean;
 
 
   constructor(private authService:AuthService, private router:Router) { }

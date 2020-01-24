@@ -1,0 +1,980 @@
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@angular/core/package.json:
+   23    "_shasum": "35566f5b19480369229477e7e0e0fde740bd5204",
+   24    "_spec": "@angular/core@~8.2.8",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing",
+   26    "author": {
+   27      "name": "angular"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@angular/forms/package.json:
+   23    "_shasum": "7d357c346a3884881beb044c50ec4a09d3d7ee8e",
+   24    "_spec": "@angular/forms@~8.2.8",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing",
+   26    "author": {
+   27      "name": "angular"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@angular/language-service/package.json:
+   23    "_shasum": "e18b27a6841577ce489ad31540150da5a444ca37",
+   24    "_spec": "@angular/language-service@~8.2.8",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing",
+   26    "author": {
+   27      "name": "angular"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@angular/platform-browser-dynamic/package.json:
+   23    "_shasum": "4439a79fe10ec45170e6940a28835e9ff0918950",
+   24    "_spec": "@angular/platform-browser-dynamic@~8.2.8",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing",
+   26    "author": {
+   27      "name": "angular"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@angular/platform-browser/package.json:
+   23    "_shasum": "31f082e8ba977f9b89964d721c38cbc32ce0e433",
+   24    "_spec": "@angular/platform-browser@~8.2.8",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing",
+   26    "author": {
+   27      "name": "angular"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@angular/router/package.json:
+   23    "_shasum": "5f9f9707710983c2143aead79dcd2da520ae3eb8",
+   24    "_spec": "@angular/router@~8.2.8",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing",
+   26    "author": {
+   27      "name": "angular"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/code-frame/package.json:
+   25    "_shasum": "33e25903d7481181534e12ec0a25f16b6fcf419e",
+   26    "_spec": "@babel/code-frame@^7.5.5",
+   27:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/core",
+   28    "author": {
+   29      "name": "Sebastian McKenzie",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/core/node_modules/json5/package.json:
+   22    "_shasum": "81b6cb04e9ba496f1c7005d07b4368a2638f90b6",
+   23    "_spec": "json5@^2.1.0",
+   24:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/core",
+   25    "author": {
+   26      "name": "Aseem Kishore",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/core/node_modules/semver/package.json:
+   22    "_shasum": "a954f931aeba508d307bbf069eff0c01c96116f7",
+   23    "_spec": "semver@^5.4.1",
+   24:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/core",
+   25    "bin": {
+   26      "semver": "./bin/semver"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/core/node_modules/source-map/package.json:
+   22    "_shasum": "8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc",
+   23    "_spec": "source-map@^0.5.0",
+   24:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/core",
+   25    "author": {
+   26      "name": "Nick Fitzgerald",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/core/package.json:
+   26    "_shasum": "ae1323cd035b5160293307f50647e83f8ba62f7e",
+   27    "_spec": "@babel/core@7.7.5",
+   28:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@angular-devkit/build-angular",
+   29    "author": {
+   30      "name": "Sebastian McKenzie",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/generator/node_modules/source-map/package.json:
+   22    "_shasum": "8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc",
+   23    "_spec": "source-map@^0.5.0",
+   24:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/generator",
+   25    "author": {
+   26      "name": "Nick Fitzgerald",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/generator/package.json:
+   25    "_shasum": "0e22c005b0a94c1c74eafe19ef78ce53a4d45c03",
+   26    "_spec": "@babel/generator@^7.7.4",
+   27:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/core",
+   28    "author": {
+   29      "name": "Sebastian McKenzie",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/helper-annotate-as-pure/package.json:
+   25    "_shasum": "60bc0bc657f63a0924ff9a4b4a0b24a13cf4deee",
+   26    "_spec": "@babel/helper-annotate-as-pure@^7.8.3",
+   27:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/helper-remap-async-to-generator",
+   28    "bundleDependencies": false,
+   29    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/helper-builder-binary-assignment-operator-visitor/package.json:
+   23    "_shasum": "c84097a427a061ac56a1c30ebf54b7b22d241503",
+   24    "_spec": "@babel/helper-builder-binary-assignment-operator-visitor@^7.8.3",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/plugin-transform-exponentiation-operator",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/helper-call-delegate/package.json:
+   23    "_shasum": "de82619898aa605d409c42be6ffb8d7204579692",
+   24    "_spec": "@babel/helper-call-delegate@^7.8.3",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/plugin-transform-parameters",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/helper-create-regexp-features-plugin/package.json:
+   26    "_shasum": "c774268c95ec07ee92476a3862b75cc2839beb79",
+   27    "_spec": "@babel/helper-create-regexp-features-plugin@^7.8.3",
+   28:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/plugin-proposal-unicode-property-regex",
+   29    "author": {
+   30      "name": "The Babel Team",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/helper-define-map/package.json:
+   23    "_shasum": "a0655cad5451c3760b726eba875f1cd8faa02c15",
+   24    "_spec": "@babel/helper-define-map@^7.8.3",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/plugin-transform-classes",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/helper-explode-assignable-expression/package.json:
+   23    "_shasum": "a728dc5b4e89e30fc2dfc7d04fa28a930653f982",
+   24    "_spec": "@babel/helper-explode-assignable-expression@^7.8.3",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/helper-builder-binary-assignment-operator-visitor",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/helper-function-name/package.json:
+   27    "_shasum": "eeeb665a01b1f11068e9fb86ad56a1cb1a824cca",
+   28    "_spec": "@babel/helper-function-name@^7.8.3",
+   29:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/traverse",
+   30    "bundleDependencies": false,
+   31    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/helper-get-function-arity/package.json:
+   24    "_shasum": "b894b947bd004381ce63ea1db9f08547e920abd5",
+   25    "_spec": "@babel/helper-get-function-arity@^7.8.3",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/helper-function-name",
+   27    "bundleDependencies": false,
+   28    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/helper-hoist-variables/package.json:
+   24    "_shasum": "1dbe9b6b55d78c9b4183fc8cdc6e30ceb83b7134",
+   25    "_spec": "@babel/helper-hoist-variables@^7.8.3",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/plugin-transform-modules-systemjs",
+   27    "bundleDependencies": false,
+   28    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/helper-member-expression-to-functions/package.json:
+   23    "_shasum": "659b710498ea6c1d9907e0c73f206eee7dadc24c",
+   24    "_spec": "@babel/helper-member-expression-to-functions@^7.8.3",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/helper-replace-supers",
+   26    "author": {
+   27      "name": "Justin Ridgewell",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/helper-module-imports/package.json:
+   25    "_shasum": "7fe39589b39c016331b6b8c3f441e8f0b1419498",
+   26    "_spec": "@babel/helper-module-imports@^7.7.4",
+   27:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   28    "author": {
+   29      "name": "Logan Smyth",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/helper-module-transforms/package.json:
+   26    "_shasum": "d305e35d02bee720fbc2c3c3623aa0c316c01590",
+   27    "_spec": "@babel/helper-module-transforms@^7.8.3",
+   28:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/plugin-transform-modules-amd",
+   29    "author": {
+   30      "name": "Logan Smyth",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/helper-optimise-call-expression/package.json:
+   24    "_shasum": "7ed071813d09c75298ef4f208956006b6111ecb9",
+   25    "_spec": "@babel/helper-optimise-call-expression@^7.8.3",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/plugin-transform-classes",
+   27    "bundleDependencies": false,
+   28    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/helper-plugin-utils/package.json:
+   64    "_shasum": "9ea293be19babc0f52ff8ca88b34c3611b208670",
+   65    "_spec": "@babel/helper-plugin-utils@^7.0.0",
+   66:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   67    "author": {
+   68      "name": "Logan Smyth",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/helper-regex/package.json:
+   24    "_shasum": "139772607d51b93f23effe72105b319d2a4c6965",
+   25    "_spec": "@babel/helper-regex@^7.8.3",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/helper-create-regexp-features-plugin",
+   27    "bundleDependencies": false,
+   28    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/helper-remap-async-to-generator/package.json:
+   24    "_shasum": "273c600d8b9bf5006142c1e35887d555c12edd86",
+   25    "_spec": "@babel/helper-remap-async-to-generator@^7.8.3",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/plugin-proposal-async-generator-functions",
+   27    "bundleDependencies": false,
+   28    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/helper-replace-supers/package.json:
+   24    "_shasum": "91192d25f6abbcd41da8a989d4492574fb1530bc",
+   25    "_spec": "@babel/helper-replace-supers@^7.8.3",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/plugin-transform-classes",
+   27    "bundleDependencies": false,
+   28    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/helper-simple-access/package.json:
+   24    "_shasum": "7f8109928b4dab4654076986af575231deb639ae",
+   25    "_spec": "@babel/helper-simple-access@^7.8.3",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/helper-module-transforms",
+   27    "author": {
+   28      "name": "Logan Smyth",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/helper-split-export-declaration/package.json:
+   25    "_shasum": "31a9f30070f91368a7182cf05f831781065fc7a9",
+   26    "_spec": "@babel/helper-split-export-declaration@^7.8.3",
+   27:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/traverse",
+   28    "bundleDependencies": false,
+   29    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/helper-wrap-function/package.json:
+   23    "_shasum": "9dbdb2bb55ef14aaa01fe8c99b629bd5352d8610",
+   24    "_spec": "@babel/helper-wrap-function@^7.8.3",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/helper-remap-async-to-generator",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/helpers/package.json:
+   23    "_shasum": "382fbb0382ce7c4ce905945ab9641d688336ce85",
+   24    "_spec": "@babel/helpers@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/core",
+   26    "author": {
+   27      "name": "Sebastian McKenzie",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/highlight/package.json:
+   23    "_shasum": "28f173d04223eaaa59bc1d439a3836e6d1265797",
+   24    "_spec": "@babel/highlight@^7.8.3",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/code-frame",
+   26    "author": {
+   27      "name": "suchipi",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/parser/package.json:
+   27    "_shasum": "790874091d2001c9be6ec426c2eed47bc7679081",
+   28    "_spec": "@babel/parser@^7.7.5",
+   29:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/core",
+   30    "author": {
+   31      "name": "Sebastian McKenzie",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-proposal-async-generator-functions/package.json:
+   23    "_shasum": "bad329c670b382589721b27540c7d288601c6e6f",
+   24    "_spec": "@babel/plugin-proposal-async-generator-functions@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-proposal-dynamic-import/package.json:
+   23    "_shasum": "38c4fe555744826e97e2ae930b0fb4cc07e66054",
+   24    "_spec": "@babel/plugin-proposal-dynamic-import@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-proposal-json-strings/package.json:
+   23    "_shasum": "da5216b238a98b58a1e05d6852104b10f9a70d6b",
+   24    "_spec": "@babel/plugin-proposal-json-strings@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-proposal-object-rest-spread/package.json:
+   23    "_shasum": "eb5ae366118ddca67bed583b53d7554cad9951bb",
+   24    "_spec": "@babel/plugin-proposal-object-rest-spread@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-proposal-optional-catch-binding/package.json:
+   23    "_shasum": "9dee96ab1650eed88646ae9734ca167ac4a9c5c9",
+   24    "_spec": "@babel/plugin-proposal-optional-catch-binding@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-proposal-unicode-property-regex/package.json:
+   23    "_shasum": "b646c3adea5f98800c9ab45105ac34d06cd4a47f",
+   24    "_spec": "@babel/plugin-proposal-unicode-property-regex@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bugs": {
+   27      "url": "https://github.com/babel/babel/issues"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-syntax-async-generators/package.json:
+   24    "_shasum": "a983fb1aeb2ec3f6ed042a210f640e90e786fe0d",
+   25    "_spec": "@babel/plugin-syntax-async-generators@^7.7.4",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   27    "bundleDependencies": false,
+   28    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-syntax-dynamic-import/package.json:
+   24    "_shasum": "62bf98b2da3cd21d626154fc96ee5b3cb68eacb3",
+   25    "_spec": "@babel/plugin-syntax-dynamic-import@^7.7.4",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   27    "bundleDependencies": false,
+   28    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-syntax-json-strings/package.json:
+   24    "_shasum": "01ca21b668cd8218c9e640cb6dd88c5412b2c96a",
+   25    "_spec": "@babel/plugin-syntax-json-strings@^7.7.4",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   27    "bundleDependencies": false,
+   28    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-syntax-object-rest-spread/package.json:
+   24    "_shasum": "60e225edcbd98a640332a2e72dd3e66f1af55871",
+   25    "_spec": "@babel/plugin-syntax-object-rest-spread@^7.7.4",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   27    "bundleDependencies": false,
+   28    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-syntax-optional-catch-binding/package.json:
+   24    "_shasum": "6111a265bcfb020eb9efd0fdfd7d26402b9ed6c1",
+   25    "_spec": "@babel/plugin-syntax-optional-catch-binding@^7.7.4",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   27    "bundleDependencies": false,
+   28    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-syntax-top-level-await/package.json:
+   23    "_shasum": "3acdece695e6b13aaf57fc291d1a800950c71391",
+   24    "_spec": "@babel/plugin-syntax-top-level-await@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-arrow-functions/package.json:
+   23    "_shasum": "82776c2ed0cd9e1a49956daeb896024c9473b8b6",
+   24    "_spec": "@babel/plugin-transform-arrow-functions@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-async-to-generator/package.json:
+   23    "_shasum": "4308fad0d9409d71eafb9b1a6ee35f9d64b64086",
+   24    "_spec": "@babel/plugin-transform-async-to-generator@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-block-scoped-functions/package.json:
+   23    "_shasum": "437eec5b799b5852072084b3ae5ef66e8349e8a3",
+   24    "_spec": "@babel/plugin-transform-block-scoped-functions@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-block-scoping/package.json:
+   23    "_shasum": "97d35dab66857a437c166358b91d09050c868f3a",
+   24    "_spec": "@babel/plugin-transform-block-scoping@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-classes/package.json:
+   23    "_shasum": "46fd7a9d2bb9ea89ce88720477979fe0d71b21b8",
+   24    "_spec": "@babel/plugin-transform-classes@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-computed-properties/package.json:
+   23    "_shasum": "96d0d28b7f7ce4eb5b120bb2e0e943343c86f81b",
+   24    "_spec": "@babel/plugin-transform-computed-properties@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-destructuring/package.json:
+   23    "_shasum": "20ddfbd9e4676906b1056ee60af88590cc7aaa0b",
+   24    "_spec": "@babel/plugin-transform-destructuring@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-dotall-regex/package.json:
+   23    "_shasum": "c3c6ec5ee6125c6993c5cbca20dc8621a9ea7a6e",
+   24    "_spec": "@babel/plugin-transform-dotall-regex@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bugs": {
+   27      "url": "https://github.com/babel/babel/issues"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-duplicate-keys/package.json:
+   23    "_shasum": "8d12df309aa537f272899c565ea1768e286e21f1",
+   24    "_spec": "@babel/plugin-transform-duplicate-keys@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-exponentiation-operator/package.json:
+   23    "_shasum": "581a6d7f56970e06bf51560cd64f5e947b70d7b7",
+   24    "_spec": "@babel/plugin-transform-exponentiation-operator@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-for-of/package.json:
+   23    "_shasum": "15f17bce2fc95c7d59a24b299e83e81cedc22e18",
+   24    "_spec": "@babel/plugin-transform-for-of@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-function-name/package.json:
+   23    "_shasum": "279373cb27322aaad67c2683e776dfc47196ed8b",
+   24    "_spec": "@babel/plugin-transform-function-name@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-literals/package.json:
+   23    "_shasum": "aef239823d91994ec7b68e55193525d76dbd5dc1",
+   24    "_spec": "@babel/plugin-transform-literals@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-member-expression-literals/package.json:
+   23    "_shasum": "963fed4b620ac7cbf6029c755424029fa3a40410",
+   24    "_spec": "@babel/plugin-transform-member-expression-literals@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-modules-amd/package.json:
+   23    "_shasum": "65606d44616b50225e76f5578f33c568a0b876a5",
+   24    "_spec": "@babel/plugin-transform-modules-amd@^7.7.5",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-modules-commonjs/package.json:
+   23    "_shasum": "df251706ec331bd058a34bdd72613915f82928a5",
+   24    "_spec": "@babel/plugin-transform-modules-commonjs@^7.7.5",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-modules-systemjs/package.json:
+   23    "_shasum": "d8bbf222c1dbe3661f440f2f00c16e9bb7d0d420",
+   24    "_spec": "@babel/plugin-transform-modules-systemjs@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-modules-umd/package.json:
+   23    "_shasum": "592d578ce06c52f5b98b02f913d653ffe972661a",
+   24    "_spec": "@babel/plugin-transform-modules-umd@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-named-capturing-groups-regex/package.json:
+   23    "_shasum": "a2a72bffa202ac0e2d0506afd0939c5ecbc48c6c",
+   24    "_spec": "@babel/plugin-transform-named-capturing-groups-regex@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bugs": {
+   27      "url": "https://github.com/babel/babel/issues"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-new-target/package.json:
+   23    "_shasum": "60cc2ae66d85c95ab540eb34babb6434d4c70c43",
+   24    "_spec": "@babel/plugin-transform-new-target@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-object-super/package.json:
+   23    "_shasum": "ebb6a1e7a86ffa96858bd6ac0102d65944261725",
+   24    "_spec": "@babel/plugin-transform-object-super@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-parameters/package.json:
+   23    "_shasum": "7890576a13b17325d8b7d44cb37f21dc3bbdda59",
+   24    "_spec": "@babel/plugin-transform-parameters@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-property-literals/package.json:
+   23    "_shasum": "33194300d8539c1ed28c62ad5087ba3807b98263",
+   24    "_spec": "@babel/plugin-transform-property-literals@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-regenerator/package.json:
+   23    "_shasum": "b31031e8059c07495bf23614c97f3d9698bc6ec8",
+   24    "_spec": "@babel/plugin-transform-regenerator@^7.7.5",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "author": {
+   27      "name": "Ben Newman",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-reserved-words/package.json:
+   23    "_shasum": "9a0635ac4e665d29b162837dd3cc50745dfdf1f5",
+   24    "_spec": "@babel/plugin-transform-reserved-words@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-shorthand-properties/package.json:
+   23    "_shasum": "28545216e023a832d4d3a1185ed492bcfeac08c8",
+   24    "_spec": "@babel/plugin-transform-shorthand-properties@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-spread/package.json:
+   23    "_shasum": "9c8ffe8170fdfb88b114ecb920b82fb6e95fe5e8",
+   24    "_spec": "@babel/plugin-transform-spread@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-sticky-regex/package.json:
+   23    "_shasum": "be7a1290f81dae767475452199e1f76d6175b100",
+   24    "_spec": "@babel/plugin-transform-sticky-regex@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-template-literals/package.json:
+   23    "_shasum": "7bfa4732b455ea6a43130adc0ba767ec0e402a80",
+   24    "_spec": "@babel/plugin-transform-template-literals@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-typeof-symbol/package.json:
+   23    "_shasum": "5cffb216fb25c8c64ba6bf5f76ce49d3ab079f4d",
+   24    "_spec": "@babel/plugin-transform-typeof-symbol@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/plugin-transform-unicode-regex/package.json:
+   23    "_shasum": "0cef36e3ba73e5c57273effb182f46b91a1ecaad",
+   24    "_spec": "@babel/plugin-transform-unicode-regex@^7.7.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   26    "bundleDependencies": false,
+   27    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/preset-env/node_modules/semver/package.json:
+   22    "_shasum": "a954f931aeba508d307bbf069eff0c01c96116f7",
+   23    "_spec": "semver@^5.5.0",
+   24:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/preset-env",
+   25    "bin": {
+   26      "semver": "./bin/semver"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/preset-env/package.json:
+   23    "_shasum": "39ac600427bbb94eec6b27953f1dfa1d64d457b2",
+   24    "_spec": "@babel/preset-env@7.7.6",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@angular-devkit/build-angular",
+   26    "author": {
+   27      "name": "Henry Zhu",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/template/package.json:
+   31    "_shasum": "e02ad04fe262a657809327f578056ca15fd4d1b8",
+   32    "_spec": "@babel/template@^7.7.4",
+   33:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/core",
+   34    "author": {
+   35      "name": "Sebastian McKenzie",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/traverse/package.json:
+   31    "_shasum": "a826215b011c9b4f73f3a893afbc05151358bf9a",
+   32    "_spec": "@babel/traverse@^7.7.4",
+   33:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/core",
+   34    "author": {
+   35      "name": "Sebastian McKenzie",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@babel/types/package.json:
+   46    "_shasum": "5a383dffa5416db1b73dedffd311ffd0788fb31c",
+   47    "_spec": "@babel/types@^7.7.4",
+   48:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@babel/core",
+   49    "author": {
+   50      "name": "Sebastian McKenzie",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@istanbuljs/schema/package.json:
+   23    "_shasum": "26520bf09abe4a5644cd5414e37125a8954241dd",
+   24    "_spec": "@istanbuljs/schema@^0.1.2",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/istanbul-lib-instrument",
+   26    "author": {
+   27      "name": "Corey Farrell"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@ngtools/webpack/package.json:
+   23    "_shasum": "2961d48d1860e93c7afcb6ec91040a753f6463a8",
+   24    "_spec": "@ngtools/webpack@8.3.23",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@angular-devkit/build-angular",
+   26    "author": {
+   27      "name": "Angular Authors"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@schematics/angular/package.json:
+   23    "_shasum": "8f46c4673eca3fadc46b2d43c4367e5542be624e",
+   24    "_spec": "@schematics/angular@8.3.23",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@angular/cli",
+   26    "author": {
+   27      "name": "Angular Authors"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@schematics/update/package.json:
+   23    "_shasum": "214df8f0f6cdd5e1ad7b535ba9b0f46a5f24a113",
+   24    "_spec": "@schematics/update@0.803.23",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@angular/cli",
+   26    "author": {
+   27      "name": "Angular Authors"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@types/events/package.json:
+   23    "_shasum": "2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7",
+   24    "_spec": "@types/events@*",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@types/glob",
+   26    "bugs": {
+   27      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@types/glob/package.json:
+   23    "_shasum": "aa59a1c6e3fbc421e07ccd31a944c30eba521575",
+   24    "_spec": "@types/glob@^7.1.1",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/del",
+   26    "bugs": {
+   27      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@types/jasmine/package.json:
+   24    "_shasum": "7c84074f5d7f84da9a14f816ccfb9aeb4da13f27",
+   25    "_spec": "@types/jasmine@~3.3.8",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing",
+   27    "bugs": {
+   28      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@types/jasminewd2/package.json:
+   23    "_shasum": "67afe5098d5ef2386073a7b7384b69a840dfe93b",
+   24    "_spec": "@types/jasminewd2@~2.0.3",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing",
+   26    "bugs": {
+   27      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@types/minimatch/package.json:
+   23    "_shasum": "3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d",
+   24    "_spec": "@types/minimatch@*",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@types/glob",
+   26    "bugs": {
+   27      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@types/node/package.json:
+   25    "_shasum": "162b864bc70be077e6db212b322754917929e976",
+   26    "_spec": "@types/node@~8.9.4",
+   27:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing",
+   28    "bugs": {
+   29      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@types/q/package.json:
+   23    "_shasum": "bd284e57c84f1325da702babfc82a5328190c0c5",
+   24    "_spec": "@types/q@^0.0.32",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/protractor",
+   26    "author": {
+   27      "name": "Barrie Nemetchek",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@types/selenium-webdriver/package.json:
+   24    "_shasum": "50a4755f8e33edacd9c406729e9b930d2451902a",
+   25    "_spec": "@types/selenium-webdriver@^3.0.0",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/protractor",
+   27    "bugs": {
+   28      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@types/source-list-map/package.json:
+   23    "_shasum": "0078836063ffaf17412349bba364087e0ac02ec9",
+   24    "_spec": "@types/source-list-map@*",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@types/webpack-sources",
+   26    "bugs": {
+   27      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@types/webpack-sources/node_modules/source-map/package.json:
+   22    "_shasum": "74722af32e9614e9c287a8d0bbde48b5e2f1a263",
+   23    "_spec": "source-map@^0.6.1",
+   24:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@types/webpack-sources",
+   25    "author": {
+   26      "name": "Nick Fitzgerald",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@types/webpack-sources/package.json:
+   23    "_shasum": "3d21dfc2ec0ad0c77758e79362426a9ba7d7cbcb",
+   24    "_spec": "@types/webpack-sources@^0.1.5",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/license-webpack-plugin",
+   26    "bugs": {
+   27      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@webassemblyjs/ast/package.json:
+   31    "_shasum": "51b1c5fe6576a34953bf4b253df9f0d490d9e359",
+   32    "_spec": "@webassemblyjs/ast@1.8.5",
+   33:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/webpack",
+   34    "author": {
+   35      "name": "Sven Sauleau"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@webassemblyjs/floating-point-hex-parser/package.json:
+   23    "_shasum": "1ba926a2923613edce496fd5b02e8ce8a5f49721",
+   24    "_spec": "@webassemblyjs/floating-point-hex-parser@1.8.5",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@webassemblyjs/wast-parser",
+   26    "author": {
+   27      "name": "Mauro Bringolf"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@webassemblyjs/helper-api-error/package.json:
+   24    "_shasum": "c49dad22f645227c5edb610bdb9697f1aab721f7",
+   25    "_spec": "@webassemblyjs/helper-api-error@1.8.5",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@webassemblyjs/wast-parser",
+   27    "author": {
+   28      "name": "Sven Sauleau"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@webassemblyjs/helper-buffer/package.json:
+   25    "_shasum": "fea93e429863dd5e4338555f42292385a653f204",
+   26    "_spec": "@webassemblyjs/helper-buffer@1.8.5",
+   27:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@webassemblyjs/wasm-edit",
+   28    "author": {
+   29      "name": "Sven Sauleau"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@webassemblyjs/helper-code-frame/package.json:
+   23    "_shasum": "9a740ff48e3faa3022b1dff54423df9aa293c25e",
+   24    "_spec": "@webassemblyjs/helper-code-frame@1.8.5",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@webassemblyjs/wast-parser",
+   26    "author": {
+   27      "name": "Sven Sauleau"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@webassemblyjs/helper-fsm/package.json:
+   23    "_shasum": "ba0b7d3b3f7e4733da6059c9332275d860702452",
+   24    "_spec": "@webassemblyjs/helper-fsm@1.8.5",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@webassemblyjs/wast-parser",
+   26    "author": {
+   27      "name": "Mauro Bringolf"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@webassemblyjs/helper-module-context/package.json:
+   24    "_shasum": "def4b9927b0101dc8cbbd8d1edb5b7b9c82eb245",
+   25    "_spec": "@webassemblyjs/helper-module-context@1.8.5",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/webpack",
+   27    "author": {
+   28      "name": "Sven Sauleau"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@webassemblyjs/helper-wasm-bytecode/package.json:
+   27    "_shasum": "537a750eddf5c1e932f3744206551c91c1b93e61",
+   28    "_spec": "@webassemblyjs/helper-wasm-bytecode@1.8.5",
+   29:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@webassemblyjs/ast",
+   30    "author": {
+   31      "name": "Sven Sauleau"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@webassemblyjs/helper-wasm-section/package.json:
+   23    "_shasum": "74ca6a6bcbe19e50a3b6b462847e69503e6bfcbf",
+   24    "_spec": "@webassemblyjs/helper-wasm-section@1.8.5",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@webassemblyjs/wasm-edit",
+   26    "author": {
+   27      "name": "Sven Sauleau"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@webassemblyjs/ieee754/package.json:
+   24    "_shasum": "712329dbef240f36bf57bd2f7b8fb9bf4154421e",
+   25    "_spec": "@webassemblyjs/ieee754@1.8.5",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@webassemblyjs/wasm-gen",
+   27    "bundleDependencies": false,
+   28    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@webassemblyjs/leb128/package.json:
+   24    "_shasum": "044edeb34ea679f3e04cd4fd9824d5e35767ae10",
+   25    "_spec": "@webassemblyjs/leb128@1.8.5",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@webassemblyjs/wasm-gen",
+   27    "bundleDependencies": false,
+   28    "dependencies": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@webassemblyjs/utf8/package.json:
+   24    "_shasum": "a8bf3b5d8ffe986c7c1e373ccbdc2a0915f0cedc",
+   25    "_spec": "@webassemblyjs/utf8@1.8.5",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@webassemblyjs/wasm-gen",
+   27    "author": {
+   28      "name": "Sven Sauleau"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@webassemblyjs/wasm-edit/package.json:
+   23    "_shasum": "962da12aa5acc1c131c81c4232991c82ce56e01a",
+   24    "_spec": "@webassemblyjs/wasm-edit@1.8.5",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/webpack",
+   26    "author": {
+   27      "name": "Sven Sauleau"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@webassemblyjs/wasm-gen/package.json:
+   25    "_shasum": "54840766c2c1002eb64ed1abe720aded714f98bc",
+   26    "_spec": "@webassemblyjs/wasm-gen@1.8.5",
+   27:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@webassemblyjs/wasm-edit",
+   28    "author": {
+   29      "name": "Sven Sauleau"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@webassemblyjs/wasm-opt/package.json:
+   23    "_shasum": "b24d9f6ba50394af1349f510afa8ffcb8a63d264",
+   24    "_spec": "@webassemblyjs/wasm-opt@1.8.5",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@webassemblyjs/wasm-edit",
+   26    "author": {
+   27      "name": "Sven Sauleau"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@webassemblyjs/wasm-parser/package.json:
+   25    "_shasum": "21576f0ec88b91427357b8536383668ef7c66b8d",
+   26    "_spec": "@webassemblyjs/wasm-parser@1.8.5",
+   27:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/webpack",
+   28    "author": {
+   29      "name": "Sven Sauleau"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@webassemblyjs/wast-parser/package.json:
+   24    "_shasum": "e10eecd542d0e7bd394f6827c49f3df6d4eefb8c",
+   25    "_spec": "@webassemblyjs/wast-parser@1.8.5",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@webassemblyjs/ast",
+   27    "author": {
+   28      "name": "Sven Sauleau"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@webassemblyjs/wast-printer/package.json:
+   24    "_shasum": "114bbc481fd10ca0e23b3560fa812748b0bae5bc",
+   25    "_spec": "@webassemblyjs/wast-printer@1.8.5",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@webassemblyjs/helper-code-frame",
+   27    "author": {
+   28      "name": "Sven Sauleau"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@xtuc/ieee754/package.json:
+   23    "_shasum": "eef014a3145ae477a1cbc00cd1e552336dceb790",
+   24    "_spec": "@xtuc/ieee754@^1.2.0",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@webassemblyjs/ieee754",
+   26    "author": {
+   27      "name": "Feross Aboukhadijeh",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@xtuc/long/package.json:
+   25    "_shasum": "d291c6a4e97989b5c61d9acf396ae4fe133a718d",
+   26    "_spec": "@xtuc/long@4.2.2",
+   27:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@webassemblyjs/wast-parser",
+   28    "author": {
+   29      "name": "Daniel Wirtz",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/@yarnpkg/lockfile/package.json:
+   24    "_shasum": "e77a97fbd345b76d83245edcd17d393b1b41fb31",
+   25    "_spec": "@yarnpkg/lockfile@1.1.0",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@angular/cli",
+   27    "bundleDependencies": false,
+   28    "deprecated": false,
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/accepts/package.json:
+   25    "_shasum": "531bc726517a3b2b41f850021c6cc15eaab507cd",
+   26    "_spec": "accepts@~1.3.5",
+   27:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/compression",
+   28    "bugs": {
+   29      "url": "https://github.com/jshttp/accepts/issues"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/acorn/package.json:
+   22    "_shasum": "b659d2ffbafa24baf5db1cdbb2c94a983ecd2784",
+   23    "_spec": "acorn@^6.2.1",
+   24:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/webpack",
+   25    "bin": {
+   26      "acorn": "./bin/acorn"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/adm-zip/package.json:
+   22    "_shasum": "597e2f8cc3672151e1307d3e95cddbc75672314a",
+   23    "_spec": "adm-zip@^0.4.9",
+   24:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/protractor/node_modules/webdriver-manager",
+   25    "author": {
+   26      "name": "Nasca Iacob",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/after/package.json:
+   22    "_shasum": "fedb394f9f0e02aa9768e702bda23b505fae7e1f",
+   23    "_spec": "after@0.8.2",
+   24:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/engine.io-parser",
+   25    "author": {
+   26      "name": "Raynos",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/agent-base/package.json:
+   23    "_shasum": "8165f01c436009bccad0b1d122f05ed770efc6ee",
+   24    "_spec": "agent-base@4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/http-proxy-agent",
+   26    "author": {
+   27      "name": "Nathan Rajlich",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/agentkeepalive/package.json:
+   22    "_shasum": "a113924dd3fa24a0bc3b78108c450c2abee00f67",
+   23    "_spec": "agentkeepalive@^3.4.1",
+   24:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/make-fetch-happen",
+   25    "author": {
+   26      "name": "fengmk2",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/ajv-errors/package.json:
+   22    "_shasum": "f35986aceb91afadec4102fbd85014950cefa64d",
+   23    "_spec": "ajv-errors@^1.0.0",
+   24:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/schema-utils",
+   25    "author": "",
+   26    "bugs": {
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/ajv-keywords/package.json:
+   27    "_shasum": "ef916e271c64ac12171fd8384eaae6b2345854da",
+   28    "_spec": "ajv-keywords@^3.1.0",
+   29:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/schema-utils",
+   30    "author": {
+   31      "name": "Evgeny Poberezkin"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/ajv/package.json:
+   30    "_shasum": "d3cea04d6b017b2894ad69040fec8b623eb4bd52",
+   31    "_spec": "ajv@6.10.2",
+   32:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/@angular-devkit/build-angular",
+   33    "author": {
+   34      "name": "Evgeny Poberezkin"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/amdefine/package.json:
+   23    "_shasum": "4a5282ac164729e93619bcfd3ad151f817ce91f5",
+   24    "_spec": "amdefine@>=0.0.4",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/stylus/node_modules/source-map",
+   26    "author": {
+   27      "name": "James Burke",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/ansi-colors/package.json:
+   22    "_shasum": "e3a3da4bfbae6c86a9c285625de124a234026fbf",
+   23    "_spec": "ansi-colors@^3.0.0",
+   24:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/webpack-log",
+   25    "author": {
+   26      "name": "Brian Woodward",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/ansi-escapes/package.json:
+   22    "_shasum": "a4ce2b33d6b214b7950d8595c212f12ac9cc569d",
+   23    "_spec": "ansi-escapes@^4.2.1",
+   24:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/inquirer",
+   25    "author": {
+   26      "name": "Sindre Sorhus",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/ansi-html/package.json:
+   22    "_shasum": "813584021962a9e9e6fd039f940d12f56ca7859e",
+   23    "_spec": "ansi-html@0.0.7",
+   24:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/webpack-dev-server",
+   25    "author": {
+   26      "name": "Tjatse"
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/ansi-regex/package.json:
+   23    "_shasum": "c3b33ab5ee360d86e0e628f0468ae7ef27d654df",
+   24    "_spec": "ansi-regex@^2.0.0",
+   25:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/strip-ansi",
+   26    "author": {
+   27      "name": "Sindre Sorhus",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/ansi-styles/package.json:
+   22    "_shasum": "41fbb20243e50b12be0f04b8dedbf07520ce841d",
+   23    "_spec": "ansi-styles@^3.2.1",
+   24:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/chalk",
+   25    "author": {
+   26      "name": "Sindre Sorhus",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/anymatch/package.json:
+   22    "_shasum": "c55ecf02185e2469259399310c173ce31233b142",
+   23    "_spec": "anymatch@~3.1.1",
+   24:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/chokidar",
+   25    "author": {
+   26      "name": "Elan Shanker",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/app-root-path/package.json:
+   22    "_shasum": "d0df4a682ee408273583d43f6f79e9892624bc9a",
+   23    "_spec": "app-root-path@^2.2.1",
+   24:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/codelyzer",
+   25    "author": {
+   26      "name": "Chris Morrell",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/append-transform/package.json:
+   22    "_shasum": "046a52ae582a228bd72f58acfbe2967c678759ab",
+   23    "_spec": "append-transform@^1.0.0",
+   24:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/istanbul-lib-hook",
+   25    "author": {
+   26      "name": "James Talmage",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/aproba/package.json:
+   24    "_shasum": "6802e6264efd18c790a1b0d517f0f2627bf2c94a",
+   25    "_spec": "aproba@^1.1.1",
+   26:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/move-concurrently",
+   27    "author": {
+   28      "name": "Rebecca Turner",
+
+/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/07/demos/06-CollectiongDataWithFormsAndValidation/c7-forms-validation/node_modules/argparse/package.json:
+   22    "_shasum": "bcd6791ea5ae09725e17e5ad988134cd40b3d911",
+   23    "_spec": "argparse@^1.0.7",
+   24:   "_where": "/Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Fundamentals/angular-fundamentals/06/demos/05-RoutingAndNavigatingPages/c6-routing/node_modules/js-yaml",
+   25    "bugs": {
+   26      "url": "https://github.com/nodeca/argparse/issues"
+
