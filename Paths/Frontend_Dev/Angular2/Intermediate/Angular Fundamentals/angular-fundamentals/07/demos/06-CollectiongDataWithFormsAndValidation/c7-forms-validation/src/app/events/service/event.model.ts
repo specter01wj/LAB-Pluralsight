@@ -2,7 +2,7 @@ export interface IEvent {
   id: number;
   name: string;
   date: Date;
-  time: string
+  time: string;
   price: number
   imageUrl: string
   location?: {
