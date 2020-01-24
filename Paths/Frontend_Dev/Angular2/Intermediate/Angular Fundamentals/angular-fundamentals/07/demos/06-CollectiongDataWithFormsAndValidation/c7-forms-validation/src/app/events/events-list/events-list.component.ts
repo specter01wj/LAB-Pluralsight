@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { EventService } from '../service/event.service';
 import { ToastrService } from '../../service/toastr.service';
 
+import { IEvent } from '../service/event.model';
 
 @Component({
   selector: 'app-events-list',
@@ -11,7 +12,7 @@ import { ToastrService } from '../../service/toastr.service';
   styleUrls: ['./events-list.component.less']
 })
 export class EventsListComponent implements OnInit {
-	events:any;
+	events:IEvent[];
 
   constructor(private eventService: EventService, 
   			  private toastr: ToastrService, 
