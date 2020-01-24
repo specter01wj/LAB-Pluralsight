@@ -19,7 +19,7 @@ export interface ISession {
   name: string;
   presenter: string;
   duration: number;
-  level: string
+  level: string;
   abstract: string
   voters: string[]
 }
