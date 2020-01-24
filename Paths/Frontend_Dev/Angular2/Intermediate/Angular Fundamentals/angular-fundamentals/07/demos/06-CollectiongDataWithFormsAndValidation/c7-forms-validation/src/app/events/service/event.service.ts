@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { IEvent } from './event.model';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +24,7 @@ export class EventService {
 
 }
 
-const EVENTS = 
+const EVENTS: IEvent[] = 
 [
     {
       id: 1,
