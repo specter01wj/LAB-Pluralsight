@@ -8,6 +8,8 @@ import { E404Component } from './errors/e404.component';
 import { EventRouteActivator } from './events/event-details/event-route-activator.service';
 import { EventsListResolverService } from './events/service/events-list-resolver.service';
 
+// import { UserModule } from './user/user.module';
+
 const routes: Routes = [
 
 	{ path: 'events/new', component: CreateEventComponent, 
@@ -18,7 +20,9 @@ const routes: Routes = [
 	    	canActivate: [EventRouteActivator] },
 	{ path: '404', component: E404Component },
 	{ path: '', redirectTo: '/events', pathMatch: 'full'},
-	{ path: 'user', loadChildren: './user/user.module#UserModule'}
+	// { path: 'user', loadChildren: './user/user.module#UserModule'}
+	{ path: 'user', loadChildren: () => import('./user/user.module').then(mod => mod.UserModule)}
+	// { path: 'user', loadChildren: () => UserModule}
 
 ];
 
