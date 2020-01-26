@@ -15,6 +15,7 @@ export class ProfileComponent implements OnInit {
 
   onCancel(): void {
     this._router.navigate(['/events']);
+    
   }
 
 }
