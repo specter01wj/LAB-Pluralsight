@@ -16,6 +16,7 @@ export class AuthService {
 
   isAuthenticated() {
     return !!this.currentUser;
+
     
   }
 
