@@ -25,6 +25,8 @@ import {
 // import { CreateEventComponent } from './events/create-event/create-event.component';
 import { E404Component } from './errors/e404.component';
 
+import { AuthService } from './user/auth.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +47,7 @@ import { E404Component } from './errors/e404.component';
     ToastrService, 
     EventRouteActivator,
     EventsListResolverService,
+    AuthService,
     { 
       provide: 'canDeactivateCreateEvent', 
       useValue: checkDirtyState 
