@@ -11,7 +11,6 @@ import { EventsListResolverService } from './events/service/events-list-resolver
 // import { UserModule } from './user/user.module';
 
 const routes: Routes = [
-
 	{ path: 'events/new', component: CreateEventComponent, 
 			canDeactivate: ['canDeactivateCreateEvent'] },
 	{ path: 'events', component: EventsListComponent, 
