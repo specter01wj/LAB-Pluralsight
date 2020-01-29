@@ -13,7 +13,6 @@ export class LoginComponent implements OnInit {
   password: Number;
   mouseoverLogin: Boolean;
 
-
   constructor(private authService:AuthService, 
               private router:Router) { }
 
