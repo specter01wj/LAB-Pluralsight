@@ -9,6 +9,10 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
 
+  profileForm:FormGroup;
+  private firstName:FormControl;
+  private lastName:FormControl;
+
   constructor(private _router: Router) { }
 
   ngOnInit() {
