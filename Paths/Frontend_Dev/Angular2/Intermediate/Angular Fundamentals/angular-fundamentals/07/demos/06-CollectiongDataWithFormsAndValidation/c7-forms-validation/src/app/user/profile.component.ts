@@ -16,7 +16,10 @@ export class ProfileComponent implements OnInit {
   		[Validators.required, Validators.pattern('[a-zA-Z].*')]
   	);
     
-    this.lastName = new FormControl(this.authService.currentUser.lastName, Validators.required);
+    this.lastName = new FormControl(
+    	this.authService.currentUser.lastName, 
+    	Validators.required
+    );
 
     this.profileForm = new FormGroup({
       firstName: this.firstName,
