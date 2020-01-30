@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 
+import { AuthService } from './auth.service';
+
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
