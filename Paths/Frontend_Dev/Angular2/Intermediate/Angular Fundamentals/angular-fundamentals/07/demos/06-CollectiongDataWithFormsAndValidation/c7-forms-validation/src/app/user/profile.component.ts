@@ -50,7 +50,7 @@ export class ProfileComponent implements OnInit {
   }
   
   validateLastName() {
-    return this.lastName.valid || this.lastName.untouched
+    return this.lastName.valid || this.lastName.untouched;
   }
 
 }
