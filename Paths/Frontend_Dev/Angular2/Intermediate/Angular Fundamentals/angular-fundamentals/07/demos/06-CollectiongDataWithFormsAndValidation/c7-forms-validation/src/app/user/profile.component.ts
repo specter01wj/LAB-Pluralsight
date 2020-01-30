@@ -46,7 +46,7 @@ export class ProfileComponent implements OnInit {
   }
 
   validateFirstName() {
-    return this.firstName.valid || this.firstName.untouched
+    return this.firstName.valid || this.firstName.untouched;
   }
   
   validateLastName() {
