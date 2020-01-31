@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ISession, restrictedWords } from '../service/index';
+
 @Component({
   selector: 'app-create-session',
   templateUrl: './create-session.component.html',
