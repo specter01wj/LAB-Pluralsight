@@ -17,6 +17,7 @@ import {
   EventService,
   EventDetailsComponent,
   CreateEventComponent,
+  CreateSessionComponent,
   EventRouteActivator,
   EventsListResolverService
 } from './events/index';
@@ -28,7 +29,6 @@ import {
 import { E404Component } from './errors/e404.component';
 
 import { AuthService } from './user/auth.service';
-import { CreateSessionComponent } from './events/create-session/create-session.component';
 
 @NgModule({
   declarations: [
@@ -39,8 +39,7 @@ import { CreateSessionComponent } from './events/create-session/create-session.c
     EventThumbnailComponent,
     EventDetailsComponent,
     CreateEventComponent,
-    E404Component,
-    CreateSessionComponent
+    E404Component
   ],
   imports: [
     BrowserModule,
