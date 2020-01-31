@@ -39,6 +39,7 @@ import { AuthService } from './user/auth.service';
     EventThumbnailComponent,
     EventDetailsComponent,
     CreateEventComponent,
+    CreateSessionComponent,
     E404Component
   ],
   imports: [
