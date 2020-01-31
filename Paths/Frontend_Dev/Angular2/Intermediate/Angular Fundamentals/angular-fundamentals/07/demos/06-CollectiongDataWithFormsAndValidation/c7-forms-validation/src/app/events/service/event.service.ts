@@ -23,9 +23,9 @@ export class EventService {
   }
 
   saveEvent(event) {
-    event.id = 999
-    event.session = []
-    EVENTS.push(event)
+    event.id = 999;
+    event.session = [];
+    EVENTS.push(event);
   }
 
 }
