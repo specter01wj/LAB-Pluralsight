@@ -16,6 +16,8 @@ export class CreateSessionComponent implements OnInit {
   level: FormControl;
   abstract: FormControl;
 
+  isDirty:boolean = true;
+
   constructor() { }
 
   ngOnInit() {
@@ -44,8 +46,9 @@ export class CreateSessionComponent implements OnInit {
       presenter: formValues.presenter,
       abstract: formValues.abstract,
       voters: []
-    }
-    console.log(session)
+    };
+    console.log(session);
+    this.isDirty = false;
   }
 
 }

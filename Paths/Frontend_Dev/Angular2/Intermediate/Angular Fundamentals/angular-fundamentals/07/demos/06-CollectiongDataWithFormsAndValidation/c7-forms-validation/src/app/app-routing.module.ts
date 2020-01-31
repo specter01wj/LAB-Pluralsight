@@ -14,7 +14,8 @@ import { EventsListResolverService } from './events/service/events-list-resolver
 const routes: Routes = [
 	{ path: 'events/new', component: CreateEventComponent, 
 			canDeactivate: ['canDeactivateCreateEvent'] },
-	{ path: 'events/create-session', component: CreateSessionComponent}, 
+	{ path: 'events/create-session', component: CreateSessionComponent,
+			canDeactivate: ['canDeactivateCreateEvent']}, 
 	{ path: 'events', component: EventsListComponent, 
 			resolve: {events:EventsListResolverService} },
 	{ path: 'events/:id', component: EventDetailsComponent,
