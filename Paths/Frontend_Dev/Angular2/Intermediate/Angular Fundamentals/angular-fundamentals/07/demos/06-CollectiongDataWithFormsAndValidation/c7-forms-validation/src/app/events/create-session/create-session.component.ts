@@ -9,12 +9,12 @@ import { ISession, restrictedWords } from '../service/index';
   styleUrls: ['./create-session.component.less']
 })
 export class CreateSessionComponent implements OnInit {
-  newSessionForm: FormGroup
-  name: FormControl
-  presenter: FormControl
-  duration: FormControl
-  level: FormControl
-  abstract: FormControl
+  newSessionForm: FormGroup;
+  name: FormControl;
+  presenter: FormControl;
+  duration: FormControl;
+  level: FormControl;
+  abstract: FormControl;
 
   constructor() { }
 
