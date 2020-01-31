@@ -28,6 +28,7 @@ import {
 import { E404Component } from './errors/e404.component';
 
 import { AuthService } from './user/auth.service';
+import { CreateSessionComponent } from './events/create-session/create-session.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AuthService } from './user/auth.service';
     EventThumbnailComponent,
     EventDetailsComponent,
     CreateEventComponent,
-    E404Component
+    E404Component,
+    CreateSessionComponent
   ],
   imports: [
     BrowserModule,
