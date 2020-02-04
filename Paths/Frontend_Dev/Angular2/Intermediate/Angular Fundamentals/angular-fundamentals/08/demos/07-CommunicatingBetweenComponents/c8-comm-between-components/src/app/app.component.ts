@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'c7-forms-validation';
+  title = 'c8-comm-between-components';
 }
