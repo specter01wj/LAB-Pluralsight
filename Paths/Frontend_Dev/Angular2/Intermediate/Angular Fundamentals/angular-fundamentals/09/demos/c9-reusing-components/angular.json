@@ -22,15 +22,24 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "lazyModules": [
+                "src/app/user/user.module"
+            ],
             "aot": false,
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
+              "node_modules/toastr/build/toastr.min.css",
+              "node_modules/ngf-bootstrap/dist/bootstrap.min.css",
               "src/styles.less"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/toastr/build/toastr.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
