@@ -41,9 +41,9 @@ import { AuthService } from './user/auth.service';
     EventThumbnailComponent,
     EventDetailsComponent,
     CreateEventComponent,
-    // CreateSessionComponent,
-    E404Component
-    // SessionListComponent
+    CreateSessionComponent,
+    E404Component,
+    SessionListComponent
   ],
   imports: [
     BrowserModule,
