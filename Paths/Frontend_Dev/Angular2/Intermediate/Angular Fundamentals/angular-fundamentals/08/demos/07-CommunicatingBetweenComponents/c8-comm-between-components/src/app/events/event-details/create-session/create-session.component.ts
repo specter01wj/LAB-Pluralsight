@@ -47,11 +47,11 @@ export class CreateSessionComponent implements OnInit {
       abstract: formValues.abstract,
       voters: []
     }
-    this.saveNewSession.emit(session)
+    this.saveNewSession.emit(session);
   }
 
   cancel() {
-    this.cancelAddSession.emit()
+    this.cancelAddSession.emit();
   }
 
 }
