@@ -37,4 +37,21 @@ export class CreateSessionComponent implements OnInit {
     })
   }
 
+  saveSession(formValues) {
+    let session:ISession = {
+      id: undefined,
+      name: formValues.name,
+      duration: +formValues.duration,
+      level: formValues.level,
+      presenter: formValues.presenter,
+      abstract: formValues.abstract,
+      voters: []
+    }
+    this.saveNewSession.emit(session)
+  }
+
+  cancel() {
+    this.cancelAddSession.emit()
+  }
+
 }
