@@ -31,6 +31,7 @@ import { E404Component } from './errors/e404.component';
 
 import { AuthService } from './user/auth.service';
 import { CollapsibleWellComponent } from './common/collapsible-well.component';
+import { DurationPipe } from './events/service/duration.pipe';
 // import { SessionListComponent } from './events/event-details/session-list/session-list.component';
 
 @NgModule({
@@ -45,7 +46,8 @@ import { CollapsibleWellComponent } from './common/collapsible-well.component';
     CreateSessionComponent,
     E404Component,
     SessionListComponent,
-    CollapsibleWellComponent
+    CollapsibleWellComponent,
+    DurationPipe
   ],
   imports: [
     BrowserModule,
