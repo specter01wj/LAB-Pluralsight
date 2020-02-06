@@ -15,4 +15,8 @@ export class CollapsibleWellComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggleContent() {
+    this.visible = !this.visible;
+  }
+
 }
