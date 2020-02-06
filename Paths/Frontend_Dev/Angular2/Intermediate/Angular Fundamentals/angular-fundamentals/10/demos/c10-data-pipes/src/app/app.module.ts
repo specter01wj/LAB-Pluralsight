@@ -20,7 +20,8 @@ import {
   CreateSessionComponent,
   SessionListComponent,
   EventRouteActivator,
-  EventsListResolverService
+  EventsListResolverService,
+  DurationPipe
 } from './events/index';
 
 // import { EventsListComponent } from './events/events-list/events-list.component';
@@ -31,7 +32,6 @@ import { E404Component } from './errors/e404.component';
 
 import { AuthService } from './user/auth.service';
 import { CollapsibleWellComponent } from './common/collapsible-well.component';
-import { DurationPipe } from './events/service/duration.pipe';
 // import { SessionListComponent } from './events/event-details/session-list/session-list.component';
 
 @NgModule({
