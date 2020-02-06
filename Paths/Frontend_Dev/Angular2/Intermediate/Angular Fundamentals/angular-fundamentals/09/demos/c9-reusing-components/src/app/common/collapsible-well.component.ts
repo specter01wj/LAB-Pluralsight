@@ -6,6 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./collapsible-well.component.less']
 })
 export class CollapsibleWellComponent implements OnInit {
+	@Input() title: string;
 
   constructor() { }
 
