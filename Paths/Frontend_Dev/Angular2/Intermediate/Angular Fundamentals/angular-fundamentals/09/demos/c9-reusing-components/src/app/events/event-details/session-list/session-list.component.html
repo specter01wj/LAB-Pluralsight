@@ -8,7 +8,7 @@
         <p>{{session.abstract}}</p>
     </div> -->
 
-    <collapsible-well [title]="session.name">
+    <app-collapsible-well [title]="session.name">
       <div well-title>
         {{session.name}}
         <i *ngIf="session.voters.length > 3" class="glyphicon glyphicon-fire" style="color:red"></i>
@@ -20,7 +20,7 @@
         
         <p>{{session.abstract}}</p>
       </div>
-    </collapsible-well>
-    
+    </app-collapsible-well>
+
   </div>
 </div>
