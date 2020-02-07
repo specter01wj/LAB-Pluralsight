@@ -10,6 +10,7 @@ export class SessionListComponent implements OnInit {
 	@Input() sessions:ISession[];
 
 
+
 	
 
 
