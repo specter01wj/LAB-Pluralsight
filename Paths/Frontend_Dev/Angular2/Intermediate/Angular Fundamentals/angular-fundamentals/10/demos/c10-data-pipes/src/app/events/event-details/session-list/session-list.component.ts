@@ -8,6 +8,7 @@ import { ISession } from '../../service/index';
 })
 export class SessionListComponent implements OnInit {
 	@Input() sessions:ISession[];
+	
 
 
   constructor() { }
