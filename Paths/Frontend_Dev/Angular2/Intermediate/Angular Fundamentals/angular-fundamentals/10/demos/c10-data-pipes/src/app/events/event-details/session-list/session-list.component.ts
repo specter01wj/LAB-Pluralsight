@@ -36,6 +36,7 @@ export class SessionListComponent implements OnInit {
 
 }
 
+
 function sortByNameAsc(s1: ISession, s2: ISession) {
   if(s1.name > s2.name) {
   	return 1;
