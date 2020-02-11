@@ -39,7 +39,8 @@ export class ProfileComponent implements OnInit {
   saveProfile(formValues) {
     if (this.profileForm.valid) {
       this.authService.updateCurrentUser(formValues.firstName, formValues.lastName);
-      this._router.navigate(['events']);
+      // this._router.navigate(['events']);
+      this.toastr.success('Profile Saved');
     }
   }
 
