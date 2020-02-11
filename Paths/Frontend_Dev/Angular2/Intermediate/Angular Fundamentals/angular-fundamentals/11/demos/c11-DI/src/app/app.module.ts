@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 // import { ProfileComponent } from './user/profile.component';
 
-import { ToastrService } from './service/toastr.service';
+import { TOASTR_TOKEN, ToastrService } from './service/toastr.service';
 
 import {
   EventsListComponent,
@@ -34,6 +34,8 @@ import { AuthService } from './user/auth.service';
 import { CollapsibleWellComponent } from './common/collapsible-well.component';
 // import { SessionListComponent } from './events/event-details/session-list/session-list.component';
 
+let toastr:ToastrService = window['toastr'];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +59,8 @@ import { CollapsibleWellComponent } from './common/collapsible-well.component';
   ],
   providers: [
   	EventService, 
-    ToastrService, 
+    // ToastrService, 
+    { provide: TOASTR_TOKEN, useValue: toastr },
     EventRouteActivator,
     EventsListResolverService,
     AuthService,
