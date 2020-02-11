@@ -15,7 +15,7 @@ export class EventsListComponent implements OnInit {
 	events:IEvent[];
 
   constructor(private eventService: EventService, 
-  			  private toastr: ToastrService, 
+  			  // private toastr: ToastrService, 
   			  private route:ActivatedRoute) { }
 
   ngOnInit() {
@@ -25,7 +25,7 @@ export class EventsListComponent implements OnInit {
   }
 
   handleThumbnailClick(eventName) {
-    this.toastr.success(eventName);
+    // this.toastr.success(eventName);
   }
 
 }
