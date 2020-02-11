@@ -16,7 +16,8 @@ export class ProfileComponent implements OnInit {
   private firstName:FormControl;
   private lastName:FormControl;
 
-  constructor(private _router: Router, private authService:AuthService) { }
+  constructor(private _router: Router, private authService:AuthService,
+              @Inject(TOASTR_TOKEN) private toastr: ToastrService) { }
 
   ngOnInit() {
   	this.firstName = new FormControl(
