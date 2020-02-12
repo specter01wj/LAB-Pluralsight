@@ -10,6 +10,8 @@ import { ISession, EventService } from '../events/index';
   styleUrls: ['./nav-bar.component.less']
 })
 export class NavBarComponent implements OnInit {
+  searchTerm: string = "";
+  foundSessions: ISession[];
 
   constructor(public auth: AuthService) { }
 
