@@ -44,6 +44,7 @@ export class ProfileComponent implements OnInit {
 
 
 
+
       
       this._router.navigate(['events']);
     }
