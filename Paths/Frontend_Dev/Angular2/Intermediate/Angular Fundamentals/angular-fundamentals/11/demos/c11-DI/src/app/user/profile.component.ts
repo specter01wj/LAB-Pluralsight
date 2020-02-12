@@ -42,6 +42,7 @@ export class ProfileComponent implements OnInit {
       this.toastr.success('Profile Saved');
 
 
+
       
       this._router.navigate(['events']);
     }
