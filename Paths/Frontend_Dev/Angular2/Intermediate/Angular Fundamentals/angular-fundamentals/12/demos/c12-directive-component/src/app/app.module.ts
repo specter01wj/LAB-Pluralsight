@@ -9,7 +9,8 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 // import { ProfileComponent } from './user/profile.component';
 
-import { TOASTR_TOKEN, ToastrService } from './service/toastr.service';
+// import { TOASTR_TOKEN, ToastrService } from './service/toastr.service';
+import { JQ_TOKEN, TOASTR_TOKEN, ToastrService} from './service/index';
 
 import {
   EventsListComponent,
