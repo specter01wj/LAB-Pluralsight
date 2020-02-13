@@ -35,6 +35,7 @@ import { CollapsibleWellComponent } from './common/collapsible-well.component';
 // import { SessionListComponent } from './events/event-details/session-list/session-list.component';
 
 let toastr:ToastrService = window['toastr'];
+let jQuery = window['$'];
 
 @NgModule({
   declarations: [
