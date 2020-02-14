@@ -11,7 +11,7 @@ export class SimpleModalComponent implements OnInit {
   @Input() title: string;
   @Input() elementId: string;
   @Input() closeOnBodyClick: string;
-  @ViewChild('modalcontainer') containerEl: ElementRef;
+  // @ViewChild('modalcontainer') containerEl: ElementRef;
 
 
   constructor(@Inject(JQ_TOKEN) private $: any) { }
@@ -22,7 +22,7 @@ export class SimpleModalComponent implements OnInit {
   closeModal() {
     if(this.closeOnBodyClick.toLocaleLowerCase() === "true") {
       console.log(this.$);
-      this.$(this.containerEl.nativeElement).modal('hide');
+      // this.$(this.containerEl.nativeElement).modal('hide');
     }
   }
 
