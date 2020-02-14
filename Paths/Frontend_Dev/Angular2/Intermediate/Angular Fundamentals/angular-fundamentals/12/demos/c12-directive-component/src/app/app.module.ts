@@ -10,7 +10,12 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 // import { ProfileComponent } from './user/profile.component';
 
 // import { TOASTR_TOKEN, ToastrService } from './service/toastr.service';
-import { JQ_TOKEN, TOASTR_TOKEN, ToastrService, CollapsibleWellComponent, SimpleModalComponent} from './service/index';
+import { JQ_TOKEN, 
+         TOASTR_TOKEN, 
+         ToastrService, 
+         CollapsibleWellComponent, 
+         SimpleModalComponent,
+         ModalTriggerDirective } from './service/index';
 
 import {
   EventsListComponent,
@@ -32,7 +37,7 @@ import {
 import { E404Component } from './errors/e404.component';
 
 import { AuthService } from './user/auth.service';
-import { ModalTriggerDirective } from './service/modal-trigger.directive';
+// import { ModalTriggerDirective } from './service/modal-trigger.directive';
 // import { SimpleModalComponent } from './service/simple-modal.component';
 
 // import { CollapsibleWellComponent } from './common/collapsible-well.component';
