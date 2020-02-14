@@ -32,6 +32,7 @@ import {
 import { E404Component } from './errors/e404.component';
 
 import { AuthService } from './user/auth.service';
+
 // import { CollapsibleWellComponent } from './common/collapsible-well.component';
 // import { SessionListComponent } from './events/event-details/session-list/session-list.component';
 
