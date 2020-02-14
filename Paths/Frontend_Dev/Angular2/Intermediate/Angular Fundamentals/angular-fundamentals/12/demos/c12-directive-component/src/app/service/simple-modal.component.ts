@@ -8,10 +8,22 @@ import { JQ_TOKEN } from "./jQuery.service";
   styleUrls: ['./simple-modal.component.less']
 })
 export class SimpleModalComponent implements OnInit {
+  @Input() title: string;
+  @Input() elementId: string;
+  @Input() closeOnBodyClick: string;
+  @ViewChild('modalcontainer') containerEl: ElementRef;
 
-  constructor() { }
+
+  constructor(@Inject(JQ_TOKEN) private $: any) { }
 
   ngOnInit() {
+  }
+
+  closeModal() {
+    if(this.closeOnBodyClick.toLocaleLowerCase() === "true") {
+      console.log(this.$);
+      this.$(this.containerEl.nativeElement).modal('hide');
+    }
   }
 
 }
