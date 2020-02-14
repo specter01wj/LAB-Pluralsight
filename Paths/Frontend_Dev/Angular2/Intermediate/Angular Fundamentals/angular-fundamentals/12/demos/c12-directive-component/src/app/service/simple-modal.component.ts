@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, Inject } from '@angular/core';
+
+import { JQ_TOKEN } from "./jQuery.service";
 
 @Component({
   selector: 'app-simple-modal',
