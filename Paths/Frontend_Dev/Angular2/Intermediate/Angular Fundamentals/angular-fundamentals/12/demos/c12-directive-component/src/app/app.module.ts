@@ -66,6 +66,7 @@ let jQuery = window['$'];
   	EventService, 
     // ToastrService, 
     { provide: TOASTR_TOKEN, useValue: toastr },
+    { provide: JQ_TOKEN, useValue: jQuery },
     EventRouteActivator,
     EventsListResolverService,
     AuthService,
