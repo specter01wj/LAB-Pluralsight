@@ -32,6 +32,7 @@ import {
 import { E404Component } from './errors/e404.component';
 
 import { AuthService } from './user/auth.service';
+import { SimpleModalComponent } from './servie/simple-modal.component';
 
 // import { CollapsibleWellComponent } from './common/collapsible-well.component';
 // import { SessionListComponent } from './events/event-details/session-list/session-list.component';
@@ -52,7 +53,8 @@ let jQuery = window['$'];
     E404Component,
     SessionListComponent,
     CollapsibleWellComponent,
-    DurationPipe
+    DurationPipe,
+    SimpleModalComponent
   ],
   imports: [
     BrowserModule,
