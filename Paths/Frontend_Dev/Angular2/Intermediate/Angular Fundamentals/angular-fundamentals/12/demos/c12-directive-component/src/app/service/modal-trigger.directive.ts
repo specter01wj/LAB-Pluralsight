@@ -1,10 +1,13 @@
-import { Directive } from '@angular/core';
+import { Directive, OnInit, Inject, ElementRef, Input } from '@angular/core';
+import { JQ_TOKEN } from "./index";
 
 @Directive({
   selector: '[appModalTrigger]'
 })
-export class ModalTriggerDirective {
+export class ModalTriggerDirective implements OnInit {
+  private el: HTMLElement;
+  @Input('appModalTrigger') modalId: string;
 
-  constructor() { }
+  constructor(ref: ElementRef, @Inject(JQ_TOKEN) private $ : any) { }
 
 }
