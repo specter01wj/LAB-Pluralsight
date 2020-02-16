@@ -12,6 +12,7 @@ export class ModalTriggerDirective implements OnInit {
     this.el = ref.nativeElement;
 
 
+
     
   } 
   
