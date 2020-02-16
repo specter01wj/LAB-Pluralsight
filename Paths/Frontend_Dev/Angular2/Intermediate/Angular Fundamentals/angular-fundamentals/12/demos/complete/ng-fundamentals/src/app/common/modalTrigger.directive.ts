@@ -10,12 +10,6 @@ export class ModalTriggerDirective implements OnInit {
 
   constructor(ref: ElementRef, @Inject(JQ_TOKEN) private $ : any) {
     this.el = ref.nativeElement;
-
-
-
-
-
-    
   } 
   
   ngOnInit() {
