@@ -181,8 +181,18 @@
 				};
 				showCategories(123, 'search', 'advertising');
 
+				var showCategories2 = function(productId, ...categories) {
+					console.log(categories);
+				};
+				showCategories2(123, 'search', 'advertising');
 
+				var showCategories3 = function(productId, ...categories) {
+					console.log(categories);
+				};
+				showCategories3(123);
 
+				var showCategories4 = function(productId, ...categories) {};
+				console.log(showCategories4.length);
 
 
 
