@@ -121,7 +121,11 @@
 				invoice4.process4().bind(newInvoice)();
 				invoice4.process4().call(newInvoice);
 
-
+				/*var getPrice4 = () 
+					=> 5.99;
+				console.log(typeof getPrice4);*/
+				var getPrice4 = () => 5.99;
+				console.log(getPrice4.hasOwnProperty("prototype"));
 
 
 
