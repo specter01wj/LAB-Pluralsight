@@ -16,8 +16,29 @@
 
 				// let, const and Block Scoping
 				'use strict';
+				let productId = 12;
 				console.log(productId);
-				var productId = 12;
+				// var productId = 12;
+				// let productId = 12;
+
+				let productId2 = 22;
+				{
+					let productId2 = 20;
+				}
+				console.log(productId2);
+
+				function updateProductId() {
+					productId3 = 32;
+				}
+				let productId3 = null;
+				updateProductId();
+				console.log(productId3);
+
+
+
+
+
+
 
 
 
