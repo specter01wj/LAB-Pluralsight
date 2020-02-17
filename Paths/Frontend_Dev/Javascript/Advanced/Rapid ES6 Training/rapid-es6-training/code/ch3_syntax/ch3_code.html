@@ -175,6 +175,11 @@
 				console.log(getTotal7());
 
 
+				// Rest and Spread
+				var showCategories = function(productId, ...categories) {
+					console.log(categories instanceof Array);
+				};
+				showCategories(123, 'search', 'advertising');
 
 
 
