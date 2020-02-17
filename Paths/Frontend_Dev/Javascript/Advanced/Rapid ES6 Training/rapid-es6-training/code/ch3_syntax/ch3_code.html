@@ -194,9 +194,33 @@
 				var showCategories4 = function(productId, ...categories) {};
 				console.log(showCategories4.length);
 
+				var showCategories5 = function(productId, ...categories) {
+					console.log(arguments.length);
+				};
+				showCategories5(123, 'search', 'advertising');
 
+				var showCategories6 = new Function("...categories", "return categories;");
+				console.log(showCategories6("search", "advertising"));
 
+				var prices = [12, 20, 18];
+				var maxPrice = Math.max(...prices);
+				console.log(maxPrice);
 
+				var prices2 = [12, 20, 18];
+				var newPriceArray = [...prices2];
+				console.log(newPriceArray);
+
+				var newPriceArray2 = Array(...[,,]);
+				console.log(newPriceArray2);
+
+				var newPriceArray3 = [...[,,]];
+				console.log(newPriceArray3);
+
+				var maxCode = Math.max(..."43210");
+				console.log(maxCode);
+
+				var codeArray = ["A", ..."BCD", "E"];
+				console.log(codeArray);
 
 
 
