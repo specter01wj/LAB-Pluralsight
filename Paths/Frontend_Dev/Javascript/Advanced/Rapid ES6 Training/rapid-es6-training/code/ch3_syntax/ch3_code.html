@@ -223,6 +223,22 @@
 				console.log(codeArray);
 
 
+				//Object Literal Extensions
+				var price = 5.99, quantity = 30;
+				var productView = {
+					price,
+					quantity
+				};
+				console.log(productView);
+
+				var productView2 = {
+					price,
+					quantity,
+					calculateValue() {
+						return this.price * this.quantity
+					}
+				};
+				console.log(productView2.calculateValue());
 
 
 
