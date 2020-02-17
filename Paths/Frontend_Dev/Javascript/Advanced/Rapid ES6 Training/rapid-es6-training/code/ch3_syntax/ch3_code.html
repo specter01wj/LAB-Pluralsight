@@ -85,10 +85,15 @@
 					console.log(this);
 				});
 
+				document.addEventListener('click', () => console.log(this));
 
-
-
-
+				var invoice = {
+					number: 123,
+					process: function() {
+						console.log(this);
+					}
+				}
+				invoice.process();
 
 
 
