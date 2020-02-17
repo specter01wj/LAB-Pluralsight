@@ -109,6 +109,17 @@
 				}
 				invoice3.process3()();
 
+				var invoice4 = {
+					number: 666,
+					process4: function() {
+						return () => console.log(this.number);
+					}
+				};
+				var newInvoice = {
+					number: 654
+				};
+				invoice4.process4().bind(newInvoice)();
+
 
 
 
