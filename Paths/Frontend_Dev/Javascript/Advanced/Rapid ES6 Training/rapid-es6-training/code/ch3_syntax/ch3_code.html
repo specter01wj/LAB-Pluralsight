@@ -95,6 +95,20 @@
 				}
 				invoice.process();
 
+				var invoice2 = {
+					number: 444,
+					process2: () => console.log(this)
+				}
+				invoice2.process2();
+
+				var invoice3 = {
+					number: 555,
+					process3: function() {
+						return () => console.log(this.number);
+					}
+				}
+				invoice3.process3()();
+
 
 
 
