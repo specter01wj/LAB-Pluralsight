@@ -5,7 +5,7 @@ import { projectId, projectName } from './module1.js';
 console.log('Hello World!  From a module.');
 
 
-projectId = 99;
+// projectId = 99;
 console.log(projectId);
 
 
