@@ -16,13 +16,20 @@ console.log(project.projectId);*/
 
 
 
-import { project, showProject } from './module2.js';
+/*import { project, showProject } from './module2.js';
 
 project.projectId = 8000;
 showProject();
 
-console.log(project.projectId);
+console.log(project.projectId);*/
 
+
+
+import { showProject, updateFunction } from './module2.js';
+
+showProject();
+updateFunction();
+showProject();
 
 
 
