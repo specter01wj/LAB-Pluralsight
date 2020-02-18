@@ -8,9 +8,18 @@ console.log(projectId);*/
 
 
 
-import { project } from './module2.js';
+/*import { project } from './module2.js';
 
 project.projectId = 8000;
+
+console.log(project.projectId);*/
+
+
+
+import { project, showProject } from './module2.js';
+
+project.projectId = 8000;
+showProject();
 
 console.log(project.projectId);
 
