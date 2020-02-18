@@ -45,17 +45,59 @@
 				let [low6, average6, [aLow6, aHigh6]] = salary6;
 				console.log(aLow6);
 
+
 				let salary7 = ['32000', '50000'];
 				let low7, average7, high7;
 				[low7, average7, high7 = '88000'] = salary7;
 				console.log(high7);
 
-				
+
+				function reviewSalary([low8, average8], high8 = '88000') {
+					console.log(average8);
+				}
+				reviewSalary(['32000', '50000']);
 
 
+				let salary9 = {
+					low9: '32000',
+					average9: '55000',
+					high9: '75000'
+				};
+				let {low9, average9, high9} = salary9;
+				console.log(high9);
 
 
+				let salary10 = {
+					low10: '32000',
+					average10: '55000',
+					high10: '75000'
+				};
+				let {low10: newLow10, average10: newAverage10, high10: newHigh10} = salary10;
+				console.log(newHigh10);
 
+
+				/*let salary11 = {
+					low11: '32000',
+					average11: '55000',
+					high11: '75000'
+				};
+				let newLow11, newAverage11, newHigh11;
+				{low11: newLow11, average11: newAverage11, high11: newHigh11} = salary11;
+				console.log(newHigh11);*/
+
+
+				let salary12 = {
+					low12: '32000',
+					average12: '55000',
+					high12: '75000'
+				};
+				let newLow12, newAverage12, newHigh12;
+				({low12: newLow12, average12: newAverage12, high12: newHigh12} = salary12);
+				console.log(newHigh12);
+
+
+				let [maxCode, minCode] = 'AZ';
+				console.log(`min: ${minCode} max: ${maxCode}`);
 
 
 
