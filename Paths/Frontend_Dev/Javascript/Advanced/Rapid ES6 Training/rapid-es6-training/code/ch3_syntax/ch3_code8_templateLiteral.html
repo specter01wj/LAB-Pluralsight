@@ -19,14 +19,18 @@
 
 				console.log(`Invoice Number: ${invoiceNum}`);
 
+
 				console.log(`Invoice Number: \${invoiceNum}`);
+
 
 				let message = `A
 				B
 				C`;
 				console.log(message);
 
+
 				console.log(`Invoice Number: ${"INV-" + invoiceNum}`);
+
 
 				function showMessage(message) {
 					let invoiceNum2 = '99';
@@ -35,10 +39,20 @@
 				let invoiceNum2 = '1666';
 				showMessage(`Invoice Number: ${invoiceNum2}`);
 
+
 				function processInvoice(segments) {
 					console.log(segments);
 				}
 				processInvoice `template`;
+
+
+				function processInvoice2(segments, ...values) {
+					console.log(segments);
+					console.log(values);
+				}
+				let invoiceNum3 = '1360';
+				let amount = '2000';
+				processInvoice2 `Invoice: ${invoiceNum3} for ${amount}`;
 
 
 
