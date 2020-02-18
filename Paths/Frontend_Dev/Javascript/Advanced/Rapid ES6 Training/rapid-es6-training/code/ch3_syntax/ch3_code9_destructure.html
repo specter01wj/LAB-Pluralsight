@@ -20,9 +20,38 @@
 				let [low, average, high] = salary;
 				console.log(average);
 
+
 				let salary2 = ['32000', '50000'];
 				let [low2, average2, high2] = salary2;
 				console.log(high2);
+
+
+				let salary3 = ['32000', '50000', '75000'];
+				let [low3, , high3] = salary3;
+				console.log(high3);
+
+
+				let salary4 = ['32000', '50000', '75000'];
+				let [low4, ...remaining] = salary4;
+				console.log(remaining);
+
+
+				let salary5 = ['32000', '50000'];
+				let [low5, average5, high5 = '88000'] = salary5;
+				console.log(high5);
+				
+
+				let salary6 = ['32000', '50000', ['88000', '99000']];
+				let [low6, average6, [aLow6, aHigh6]] = salary6;
+				console.log(aLow6);
+
+				let salary7 = ['32000', '50000'];
+				let low7, average7, high7;
+				[low7, average7, high7 = '88000'] = salary7;
+				console.log(high7);
+
+				
+
 
 
 
