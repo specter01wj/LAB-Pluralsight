@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+	<script>
+			
+			(function(){
+
+				// For of Loop
+				var categories = ['hardware', 'software', 'vaporware'];
+				for(var item of categories) {
+					console.log(item);
+				}
+				for(var item in categories) {
+					console.log(item);
+				}
+
+				var categories = [,,];
+				for(var item of categories) {
+					console.log(item);
+				}
+
+				var codes = "ABCDE", count = 0;
+				for(var code of codes) {
+					count++;
+				}
+				console.log(count);
+
+
+
+
+				var nums = "For of Loop";
+
+				var elem = document.getElementById('t1');
+				elem.innerHTML = ('<h2>Topic: ' + nums + '</h2>');
+			})();
+
+		</script>
+</html>
