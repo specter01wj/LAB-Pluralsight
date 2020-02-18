@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+	<head>
+		
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+	<script>
+			
+			(function(){
+
+				// Arrow Function
+				var getPrice = () => 5.99;
+				// console.log(typeof getPrice);
+				console.log(getPrice());
+
+				var getPrice2 = (count) => {
+					let multi = 4.8;
+					return count * multi;
+				}
+				console.log(getPrice2(2));
+
+				var getPrice3 = (count, tax) => {
+					return count * 4 * (1 + tax);
+				}
+				console.log(getPrice3(2, .07));
+
+				document.addEventListener('click', function() {
+					console.log(this);
+				});
+
+				document.addEventListener('click', () => console.log(this));
+
+				var invoice = {
+					number: 123,
+					process: function() {
+						console.log(this);
+					}
+				}
+				invoice.process();
+
+				var invoice2 = {
+					number: 444,
+					process2: () => console.log(this)
+				}
+				invoice2.process2();
+
+				var invoice3 = {
+					number: 555,
+					process3: function() {
+						return () => console.log(this.number);
+					}
+				}
+				invoice3.process3()();
+
+				var invoice4 = {
+					number: 666,
+					process4: function() {
+						return () => console.log(this.number);
+					}
+				};
+				var newInvoice = {
+					number: 654
+				};
+				invoice4.process4().bind(newInvoice)();
+				invoice4.process4().call(newInvoice);
+
+				/*var getPrice4 = () 
+					=> 5.99;
+				console.log(typeof getPrice4);*/
+				var getPrice4 = () => 5.99;
+				console.log(getPrice4.hasOwnProperty("prototype"));
+
+
+
+				var nums = "Arrow Function";
+
+				var elem = document.getElementById('t1');
+				elem.innerHTML = ('<h2>Topic: ' + nums + '</h2>');
+			})();
+
+		</script>
+</html>

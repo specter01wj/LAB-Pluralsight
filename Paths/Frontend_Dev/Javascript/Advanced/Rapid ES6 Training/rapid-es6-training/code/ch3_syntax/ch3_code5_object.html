@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+	<head>
+		
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+	<script>
+			
+			(function(){
+
+				// Object Literal Extensions
+				var price = 5.99, quantity = 30;
+
+				var productView = {
+					price,
+					quantity
+				};
+				console.log(productView);
+
+				var productView2 = {
+					price,
+					quantity,
+					calculateValue() {
+						return this.price * this.quantity
+					}
+				};
+				console.log(productView2.calculateValue());
+
+				var productView3 = {
+					price: 9.99,
+					quantity: 300,
+					calculateValue() {
+						return this.price * this.quantity
+					}
+				};
+				console.log(productView3.calculateValue());
+
+				var productView4 = {
+					price,
+					quantity,
+					"calculate value"() {
+						return this.price * this.quantity
+					}
+				};
+				console.log(productView4["calculate value"]());
+
+				var field = "dynamicField", price2 = 8;
+
+				var productView5 = {
+					[field]: price
+				};
+				console.log(productView5);
+
+				var productView6 = {
+					[field + "-001"]: price
+				};
+				console.log(productView6);
+
+
+				var method = "doIt";
+				var productView7 = {
+					[method + "-001"]() {
+						console.log("in a method");
+					}
+				};
+				productView7['doIt-001']();
+
+				var ident = "productId";
+				var productView8 = {
+					get [ident]() {return true;},
+					set [ident](value) {}
+				};
+				console.log(productView8.productId);
+
+
+
+
+				var nums = "Object Literal Extensions";
+
+				var elem = document.getElementById('t1');
+				elem.innerHTML = ('<h2>Topic: ' + nums + '</h2>');
+			})();
+
+		</script>
+</html>

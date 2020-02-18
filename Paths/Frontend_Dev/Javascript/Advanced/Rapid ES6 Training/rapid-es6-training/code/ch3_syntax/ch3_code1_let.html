@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+	<head>
+		
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+	<script>
+			
+			(function(){
+
+				// let, const and Block Scoping
+				'use strict';
+				let productId = 12;
+				console.log(productId);
+				// var productId = 12;
+				// let productId = 12;
+
+				let productId2 = 22;
+				{
+					let productId2 = 20;
+				}
+				console.log(productId2);
+
+				function updateProductId() {
+					productId3 = 32;
+				}
+				let productId3 = null;
+				updateProductId();
+				console.log(productId3);
+
+				let productId4 = 42;
+				for(let productId4 = 0; productId4 < 10; productId4++) {
+
+				}
+				console.log(productId4);
+
+				let updateFunctions = [];
+				for(var i = 0; i < 2; i++) {
+					updateFunctions.push(function() {
+						return i;
+					});
+				}
+				console.log(updateFunctions[0]());
+				let updateFunctions2 = [];
+				for(let i = 0; i < 2; i++) {
+					updateFunctions2.push(function() {
+						return i;
+					});
+				}
+				console.log(updateFunctions2[0]());
+
+				const MARKUP_PCT = 100;
+				// MARKUP_PCT  = 10;
+				console.log(MARKUP_PCT);
+
+				const MARKUP_PCT2 = 200;
+				if(MARKUP_PCT2 > 10) {
+					const MARKUP_PCT2 = 220;
+				}
+				console.log(MARKUP_PCT2);
+
+
+
+				var nums = "let, const and Block Scoping";
+
+				var elem = document.getElementById('t1');
+				elem.innerHTML = ('<h2>Topic: ' + nums + '</h2>');
+			})();
+
+		</script>
+</html>

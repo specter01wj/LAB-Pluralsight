@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+	<head>
+		
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+	<script>
+			
+			(function(){
+
+				// Rest and Spread
+				var showCategories = function(productId, ...categories) {
+					console.log(categories instanceof Array);
+				};
+				showCategories(123, 'search', 'advertising');
+
+				var showCategories2 = function(productId, ...categories) {
+					console.log(categories);
+				};
+				showCategories2(123, 'search', 'advertising');
+
+				var showCategories3 = function(productId, ...categories) {
+					console.log(categories);
+				};
+				showCategories3(123);
+
+				var showCategories4 = function(productId, ...categories) {};
+				console.log(showCategories4.length);
+
+				var showCategories5 = function(productId, ...categories) {
+					console.log(arguments.length);
+				};
+				showCategories5(123, 'search', 'advertising');
+
+				var showCategories6 = new Function("...categories", "return categories;");
+				console.log(showCategories6("search", "advertising"));
+
+				var prices = [12, 20, 18];
+				var maxPrice = Math.max(...prices);
+				console.log(maxPrice);
+
+				var prices2 = [12, 20, 18];
+				var newPriceArray = [...prices2];
+				console.log(newPriceArray);
+
+				var newPriceArray2 = Array(...[,,]);
+				console.log(newPriceArray2);
+
+				var newPriceArray3 = [...[,,]];
+				console.log(newPriceArray3);
+
+				var maxCode = Math.max(..."43210");
+				console.log(maxCode);
+
+				var codeArray = ["A", ..."BCD", "E"];
+				console.log(codeArray);
+
+
+
+
+				var nums = "Rest and Spread";
+
+				var elem = document.getElementById('t1');
+				elem.innerHTML = ('<h2>Topic: ' + nums + '</h2>');
+			})();
+
+		</script>
+</html>
