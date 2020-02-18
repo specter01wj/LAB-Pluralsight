@@ -36,8 +36,47 @@
 				}
 
 
+				let [high5, low5, ] = [500, 200];
+				console.log(`high: ${high5} low: ${low5}`);
 
 				
+				for(let [a, b] of [[5, 10]]) {
+					console.log(`${a} ${b}`);
+				}
+
+
+				let count = 0;
+				for(let [a, b] of [[5, 10]]) {
+					console.log(`${a} ${b}`);
+					count++;
+				}
+				console.log(count);
+
+
+				try {
+					throw [123, 'message'];
+				}
+				catch([invoiceNum, errorMessage]) {
+					console.log(`${invoiceNum} ${errorMessage}`);
+				}
+
+
+				function getResult() {
+					let high, low;
+					return {high, low} = {high: 500, low: 200};
+				}
+				console.log(getResult());
+
+
+				let nums6 = {
+					high6: 1000,
+					low6: 20,
+					average6: 400
+				};
+				let high6, low6, average6;
+				({high6, low6} = {average6} = nums6);
+				console.log(`${high6} ${low6} ${average6}`);
+
 
 
 
