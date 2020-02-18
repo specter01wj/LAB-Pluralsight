@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+	<script>
+			
+			(function(){
+				'use strict';
+				// Destructuring
+				
+				let salary = ['32000', '50000', '75000'];
+				let [low, average, high] = salary;
+				console.log(average);
+
+				let salary2 = ['32000', '50000'];
+				let [low2, average2, high2] = salary2;
+				console.log(high2);
+
+
+
+
+
+
+
+
+				var nums = "Destructuring";
+
+				var elem = document.getElementById('t1');
+				elem.innerHTML = ('<h2>Topic: ' + nums + '</h2>');
+			})();
+
+		</script>
+</html>
