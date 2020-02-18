@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+		
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+	<script>
+			
+			(function(){
+				'use strict';
+				// Template Literals
+				let invoiceNum = '1350';
+
+				console.log(`Invoice Number: ${invoiceNum}`);
+
+				console.log(`Invoice Number: \${invoiceNum}`);
+
+				let message = `A
+				B
+				C`;
+				console.log(message);
+
+				console.log(`Invoice Number: ${"INV-" + invoiceNum}`);
+
+				function showMessage(message) {
+					let invoiceNum2 = '99';
+					console.log(message);
+				}
+				let invoiceNum2 = '1666';
+				showMessage(`Invoice Number: ${invoiceNum2}`);
+
+				function processInvoice(segments) {
+					console.log(segments);
+				}
+				processInvoice `template`;
+
+
+
+
+
+
+
+
+				var nums = "Template Literals";
+
+				var elem = document.getElementById('t1');
+				elem.innerHTML = ('<h2>Topic: ' + nums + '</h2>');
+			})();
+
+		</script>
+</html>
