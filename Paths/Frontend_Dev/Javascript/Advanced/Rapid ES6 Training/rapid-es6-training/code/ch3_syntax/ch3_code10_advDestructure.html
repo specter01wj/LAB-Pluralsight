@@ -16,7 +16,25 @@
 				'use strict';
 				// Advanced Destructuring
 				
+				let [high, low] = [,];
+				console.log(`high: ${high} low: ${low}`);
+
+
+				/*let [high2, low2] = undefined;
+				console.log(`high: ${high2} low: ${low2}`);*/
+
+
+				/*let [high3, low3] = null;
+				console.log(`high: ${high3} low: ${low3}`);*/
 				
+
+				try {
+					let [high4, low4] = undefined;
+				}
+				catch(e) {
+					console.log(e.name);
+				}
+
 
 
 				
