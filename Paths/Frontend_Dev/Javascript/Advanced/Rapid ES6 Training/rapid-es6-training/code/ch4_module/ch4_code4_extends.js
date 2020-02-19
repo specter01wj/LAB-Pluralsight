@@ -28,7 +28,7 @@ let p = new SoftwareProject('Maza');*/
 
 
 
-class Project {
+/*class Project {
 	constructor() {
 		console.log('constructing Project');
 	}
@@ -41,7 +41,7 @@ class SoftwareProject extends Project {
 	}
 }
 
-let p = new SoftwareProject();
+let p = new SoftwareProject();*/
 
 
 
@@ -62,7 +62,20 @@ let p = new SoftwareProject();*/
 
 
 
+class Project {
+	// constructor() {
+	// 	console.log('constructing Project');
+	// }
+}
 
+class SoftwareProject extends Project {
+	constructor() {
+		// super();
+		console.log('constructing SoftwareProject');
+	}
+}
+
+let p = new SoftwareProject();
 
 
 
