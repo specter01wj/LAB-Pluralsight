@@ -45,6 +45,23 @@ let p = new SoftwareProject();
 
 
 
+/*class Project {
+	constructor() {
+		console.log('constructing Project');
+	}
+}
+
+class SoftwareProject extends Project {
+	constructor() {
+		// super();
+		console.log('constructing SoftwareProject');
+	}
+}
+
+let p = new SoftwareProject();*/
+
+
+
 
 
 
