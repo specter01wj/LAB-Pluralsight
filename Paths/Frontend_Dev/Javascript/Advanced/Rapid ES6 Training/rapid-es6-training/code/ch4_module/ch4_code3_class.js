@@ -54,18 +54,22 @@ let task = new Task();*/
 
 
 
-let task = new Task();
+/*let task = new Task();
 class Task {
+	constructor() {
+		console.log('constructing Task');
+	};
+}*/
+
+
+
+let newClass = class Task {
 	constructor() {
 		console.log('constructing Task');
 	};
 }
 
-
-
-
-
-
+new newClass();
 
 
 
