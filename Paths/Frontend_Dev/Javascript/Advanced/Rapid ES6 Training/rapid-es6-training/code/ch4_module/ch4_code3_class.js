@@ -73,19 +73,33 @@ new newClass();*/
 
 
 
-let Task = function() {
+/*let Task = function() {
 	console.log('constructing Task');
 };
 let task = {};
-Task.call(task);
+Task.call(task);*/
 
 
 
+/*class Task {
+	constructor() {
+		console.log('constructing Task');
+	}
+};
+let task = {};
+Task.call(task);*/
 
 
 
+/*function Project() {};
+
+console.log(window.Project === Project);*/
 
 
+
+class Task {};
+
+console.log(window.Task === Task);
 
 
 
