@@ -63,13 +63,29 @@ class Task {
 
 
 
-let newClass = class Task {
+/*let newClass = class Task {
 	constructor() {
 		console.log('constructing Task');
 	};
 }
 
-new newClass();
+new newClass();*/
+
+
+
+let Task = function() {
+	console.log('constructing Task');
+};
+let task = {};
+Task.call(task);
+
+
+
+
+
+
+
+
 
 
 
