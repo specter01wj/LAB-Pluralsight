@@ -62,7 +62,7 @@ let p = new SoftwareProject();*/
 
 
 
-class Project {
+/*class Project {
 	// constructor() {
 	// 	console.log('constructing Project');
 	// }
@@ -75,14 +75,39 @@ class SoftwareProject extends Project {
 	}
 }
 
+let p = new SoftwareProject();*/
+
+
+
+/*class Project {
+	getTaskCount() {
+		return 50;
+	}
+}
+
+class SoftwareProject extends Project {
+	
+}
+
 let p = new SoftwareProject();
+console.log(p.getTaskCount());*/
 
 
 
+class Project {
+	getTaskCount() {
+		return 50;
+	}
+}
 
+class SoftwareProject extends Project {
+	getTaskCount() {
+		return 66;
+	}
+}
 
-
-
+let p = new SoftwareProject();
+console.log(p.getTaskCount());
 
 
 
