@@ -1,6 +1,6 @@
 'use strict';
 
-class Task {
+/*class Task {
 
 }
 
@@ -13,11 +13,17 @@ console.log(typeof task);
 
 
 
-console.log(task instanceof Task);
+console.log(task instanceof Task);*/
 
 
 
-
+class Task {
+	showId() {
+		console.log('99');
+	}
+}
+let task = new Task();
+task.showId();
 
 
 
