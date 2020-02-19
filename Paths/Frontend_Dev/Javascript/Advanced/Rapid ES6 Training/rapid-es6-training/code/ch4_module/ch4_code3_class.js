@@ -29,7 +29,7 @@ console.log(task.showId ===  Task.prototype.showId);*/
 
 
 
-class Task {
+/*class Task {
 	constructor() {
 		console.log('constructing Task');
 	};
@@ -37,7 +37,7 @@ class Task {
 		console.log('99');
 	};
 }
-let task = new Task();
+let task = new Task();*/
 
 
 
@@ -54,6 +54,12 @@ let task = new Task();*/
 
 
 
+let task = new Task();
+class Task {
+	constructor() {
+		console.log('constructing Task');
+	};
+}
 
 
 
