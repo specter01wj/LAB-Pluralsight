@@ -111,7 +111,7 @@ console.log(p.getTaskCount());*/
 
 
 
-class Project {
+/*class Project {
 	getTaskCount() {
 		return 50;
 	}
@@ -124,7 +124,24 @@ class SoftwareProject extends Project {
 }
 
 let p = new SoftwareProject();
-console.log(p.getTaskCount());
+console.log(p.getTaskCount());*/
+
+
+
+let project = {
+	getTaskCount() {
+		return 50;
+	}
+}
+
+let softwareProject = {
+	getTaskCount() {
+		return super.getTaskCount() + 7;
+	}
+}
+
+Object.setPrototypeOf(softwareProject, project);
+console.log(softwareProject.getTaskCount());
 
 
 
