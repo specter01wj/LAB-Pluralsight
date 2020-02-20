@@ -35,10 +35,13 @@ console.log(sum);
 
 
 
-
-
-
-
+let values4 = [8, 12, 16];
+values4[Symbol.toPrimitive] = function(hint) {
+	console.log(hint);
+	return 42;
+}
+let sum2 = values4 + 100;
+console.log(sum2);
 
 
 
