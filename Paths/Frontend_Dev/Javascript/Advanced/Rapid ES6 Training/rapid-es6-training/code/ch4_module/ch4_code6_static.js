@@ -21,10 +21,19 @@ console.log(p.getDefaultId());*/
 
 
 
-class Project {
+/*class Project {
 	static let id = 0;
 }
 
+console.log(Project.id);*/
+
+
+
+class Project {
+
+}
+
+Project.id = 99;
 console.log(Project.id);
 
 
