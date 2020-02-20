@@ -23,6 +23,18 @@ console.log([].concat(values));
 
 
 
+let values2 = [8, 12, 16];
+values2[Symbol.isConcatSpreadable] = false;
+console.log([].concat(values2));
+
+
+
+let values3 = [8, 12, 16];
+let sum = values3 + 100;
+console.log(sum);
+
+
+
 
 
 
