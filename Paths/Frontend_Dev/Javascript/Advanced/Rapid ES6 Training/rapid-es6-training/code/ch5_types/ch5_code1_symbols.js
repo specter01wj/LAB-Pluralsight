@@ -62,6 +62,14 @@ console.log(Object.getOwnPropertyNames(article2));
 
 
 
+let article3 = {
+	title: 'Whiteface Mt3',
+	[Symbol.for('article10')]: 'My Article3'
+};
+console.log(Object.getOwnPropertySymbols(article3));
+
+
+
 
 
 
