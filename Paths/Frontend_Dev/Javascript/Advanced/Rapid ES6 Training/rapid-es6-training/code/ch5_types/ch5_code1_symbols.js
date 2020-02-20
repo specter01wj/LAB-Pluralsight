@@ -21,6 +21,18 @@ console.log(s.toString());
 
 
 
+let s1 = Symbol('event');
+let s2 = Symbol('event');
+console.log(s1 === s2);
+
+
+
+let s3 = Symbol.for('event');
+let s4 = Symbol.for('event');
+console.log(s3 === s4);
+
+
+
 
 
 
