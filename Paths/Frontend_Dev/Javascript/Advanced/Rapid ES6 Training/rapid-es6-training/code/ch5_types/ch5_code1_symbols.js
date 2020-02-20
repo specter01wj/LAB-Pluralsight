@@ -45,6 +45,21 @@ console.log(description);
 
 
 
+let article = {
+	title: 'Whiteface Mt',
+	[Symbol.for('article')]: 'My Article'
+};
+let value = article[Symbol.for('article')];
+console.log(value);
+
+
+
+
+
+
+
+
+
 
 
 
