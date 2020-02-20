@@ -1,34 +1,30 @@
-// import { projectId, projectName } from './module1.js';
-// import { projectId as id, projectName } from './module1.js';
-// import someValue from './module1.js';
-// import { default as myProjectName } from './module1.js';
-// import someValue from './module1.js';
-import * as values from './module1.js';
 
 'use strict';
 
-console.log('Hello World!  From a module.');
+let eventSymbol = Symbol('resize event');
+console.log(typeof eventSymbol);
 
 
-// projectId = 99;
-// console.log(projectId);
+
+let eventSymbol2 = Symbol('resize event');
+console.log(eventSymbol2.toString());
 
 
-// console.log(`${projectName} has id: ${projectId}`);
+
+const CAL_E_SYMBOL = Symbol('calculate event');
+console.log(CAL_E_SYMBOL.toString());
 
 
-// console.log(`${projectName} has id: ${id}`);
+
+let s = Symbol.for('event');
+console.log(s.toString());
 
 
-// console.log(someValue);
 
 
-// console.log(myProjectName);
-
-// console.log(someValue);
 
 
-console.log(values);
+
 
 
 
