@@ -33,6 +33,15 @@ console.log(s3 === s4);
 
 
 
+let s5 = Symbol.for('event1');
+let s6 = Symbol.for('event2');
+console.log(s5 === s6);
+
+
+
+let s7 = Symbol.for('event7');
+let description = Symbol.keyFor(s7);
+console.log(description);
 
 
 
