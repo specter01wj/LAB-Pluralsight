@@ -47,9 +47,9 @@ console.log(description);
 
 let article = {
 	title: 'Whiteface Mt',
-	[Symbol.for('article')]: 'My Article'
+	[Symbol.for('article8')]: 'My Article'
 };
-let value = article[Symbol.for('article')];
+let value = article[Symbol.for('article8')];
 console.log(value);
 
 
