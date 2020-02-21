@@ -93,6 +93,22 @@ console.log(amount3 === total3);
 
 
 
+let amount4 = 0, total4 = -0;
+console.log(Object.is(amount4, total4));
+
+
+
+let article = {
+	title: 'White Mt',
+	[Symbol.for('article')]: 'My Article'
+};
+
+console.log(Object.getOwnPropertySymbols(article));
+
+
+
+
+
 
 
 
