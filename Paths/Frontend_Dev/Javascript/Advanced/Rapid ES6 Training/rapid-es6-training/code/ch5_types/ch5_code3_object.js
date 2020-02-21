@@ -36,12 +36,55 @@ let b3 = {
 	b_3: 2
 };
 let target2 = {};
-Object.assign(target2, a2, b2);
+Object.assign(target2, a3, b3);
 console.log(target2);
 
 
 
+let a4 = {
+	a_4: 1
+};
 
+let b4 = {
+	a_4: 5,
+	b_4: 2
+};
+Object.defineProperty(b4, 'c4', {
+	value: 10,
+	enumerable: false
+});
+let target3 = {};
+Object.assign(target3, a4, b4);
+console.log(target3);
+
+
+
+let a5 = {
+	a_5: 1
+};
+
+let b5 = {
+	a_5: 5,
+	b_5: 2
+};
+
+let c5 = {
+	c_5: 20
+};
+Object.setPrototypeOf(b5, c5);
+let target4 = {};
+Object.assign(target4, a5, b5);
+console.log(target4);
+
+
+
+let amount = NaN;
+console.log(amount === amount);
+
+
+
+let amount2 = NaN;
+console.log(Object.is(amount, amount));
 
 
 
