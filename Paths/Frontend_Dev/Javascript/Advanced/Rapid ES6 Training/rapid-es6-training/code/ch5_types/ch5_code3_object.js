@@ -88,7 +88,8 @@ console.log(Object.is(amount, amount));
 
 
 
-
+let amount3 = 0, total3 = -0;
+console.log(amount3 === total3);
 
 
 
