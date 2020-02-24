@@ -36,11 +36,6 @@ let a1 = Math.pow(2, 53) - 1;
 console.log(Number.isSafeInteger(a1));
 console.log(a1);
 a1 = Math.pow(2, 53);
-
-
-
-
-
 console.log(Number.isSafeInteger(a1));
 
 
