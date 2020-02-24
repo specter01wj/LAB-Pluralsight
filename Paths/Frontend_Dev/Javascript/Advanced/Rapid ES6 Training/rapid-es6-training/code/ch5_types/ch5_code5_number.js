@@ -22,13 +22,26 @@ let str3 = 408.2;
 console.log(Number.isInteger(str3));
 
 
+console.log('----------------');
+
+console.log(Number.isInteger(NaN));
+console.log(Number.isInteger(Infinity));
+console.log(Number.isInteger(undefined));
+console.log(Number.isInteger(3));
 
 
+console.log('----------------');
+
+let a1 = Math.pow(2, 53) - 1;
+console.log(Number.isSafeInteger(a1));
+console.log(a1);
+a1 = Math.pow(2, 53);
+console.log(Number.isSafeInteger(a1));
 
 
-
-
-
+console.log(Number.EPSILON);
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(Number.MIN_SAFE_INTEGER);
 
 
 
