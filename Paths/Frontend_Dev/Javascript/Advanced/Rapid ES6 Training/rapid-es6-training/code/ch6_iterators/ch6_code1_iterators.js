@@ -1,72 +1,38 @@
 
 'use strict';
 
-let eventSymbol = Symbol('resize event');
-console.log(typeof eventSymbol);
+let ids1 = [9000, 9001, 9002];
+console.log(typeof ids1[Symbol.iterator]);
 
 
 
-let eventSymbol2 = Symbol('resize event');
-console.log(eventSymbol2.toString());
+let ids2 = [9000, 9001, 9002];
+let it2 = ids2[Symbol.iterator]();
+console.log(it2.next());
 
 
 
-const CAL_E_SYMBOL = Symbol('calculate event');
-console.log(CAL_E_SYMBOL.toString());
+let ids3 = [9000, 9001, 9002];
+let iter3 = ids3[Symbol.iterator]();
+iter3.next();
+iter3.next();
+console.log(iter3.next());
 
 
 
-let s = Symbol.for('event');
-console.log(s.toString());
+let ids4 = [9000, 9001, 9002];
+let iter4 = ids4[Symbol.iterator]();
+iter4.next();
+iter4.next();
+iter4.next();
+console.log(iter4.next());
 
 
 
-let s1 = Symbol('event');
-let s2 = Symbol('event');
-console.log(s1 === s2);
 
 
 
-let s3 = Symbol.for('event');
-let s4 = Symbol.for('event');
-console.log(s3 === s4);
 
-
-
-let s5 = Symbol.for('event1');
-let s6 = Symbol.for('event2');
-console.log(s5 === s6);
-
-
-
-let s7 = Symbol.for('event7');
-let description = Symbol.keyFor(s7);
-console.log(description);
-
-
-
-let article = {
-	title: 'Whiteface Mt',
-	[Symbol.for('article8')]: 'My Article'
-};
-let value = article[Symbol.for('article8')];
-console.log(value);
-
-
-
-let article2 = {
-	title: 'Whiteface Mt2',
-	[Symbol.for('article9')]: 'My Article2'
-};
-console.log(Object.getOwnPropertyNames(article2));
-
-
-
-let article3 = {
-	title: 'Whiteface Mt3',
-	[Symbol.for('article10')]: 'My Article3'
-};
-console.log(Object.getOwnPropertySymbols(article3));
 
 
 
