@@ -46,7 +46,7 @@ console.log(output);
 
 let wave = "\u{1f30a}";
 console.log(wave.repeat(10));
-let wave2 = "\u{1f40a}";
+let wave2 = "\u{1f33c}";
 console.log(wave2.repeat(20));
 
 
