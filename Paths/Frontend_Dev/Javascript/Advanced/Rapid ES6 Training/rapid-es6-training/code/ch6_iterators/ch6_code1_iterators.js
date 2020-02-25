@@ -89,7 +89,11 @@ for(let v2 of idMaker3) {
 
 
 
-
+let ids5 = [9000, 9001, 9002];
+function process(id1, id2, id3) {
+	console.log(id3);
+}
+process(...ids5);
 
 
 
