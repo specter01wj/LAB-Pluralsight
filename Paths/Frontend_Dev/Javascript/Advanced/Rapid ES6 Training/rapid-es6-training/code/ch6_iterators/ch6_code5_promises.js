@@ -30,7 +30,7 @@ function doAsync2() {
 
 
 
-function doAsync3() {
+/*function doAsync3() {
 
 }
 
@@ -39,6 +39,19 @@ doAsync3().then(function() {
 },
 function() {
 	console.log('Rejected!');
+});*/
+
+
+
+function doAsync4() {
+
+}
+
+doAsync4().then(function(value) {
+	console.log('Fullfilled!' + value);
+},
+function() {
+	console.log('Rejected!' + reason);
 });
 
 
