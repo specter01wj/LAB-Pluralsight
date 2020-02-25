@@ -56,15 +56,25 @@ function(reason) {
 
 
 
-function doAsync5() {
+/*function doAsync5() {
 
 }
 
-doAsync4().then(function(value) {
+doAsync5().then(function(value) {
 	console.log('Fullfilled!' + value);
 	return 'For Sure';
 }).then(function(value) {
 	console.log('Rejected!' + value);
+});*/
+
+
+
+function doAsync6() {
+
+}
+
+doAsync6().catch(function(reason) {
+	console.log('Error: ' + reason);
 });
 
 
