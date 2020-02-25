@@ -40,7 +40,7 @@ console.log(it4.next(200));
 
 function *process5() {
 	let newArray = [yield, yield, yield];
-	console.log(newArray[2]);
+	console.log(newArray[1]);
 }
 let it5 = process5();
 it5.next();
@@ -48,7 +48,7 @@ it5.next(2);
 it5.next(4);
 it5.next(42);
 
-
+console.log("------------");
 
 /*function *process6() {
 	let value = 4 * yield 42;
