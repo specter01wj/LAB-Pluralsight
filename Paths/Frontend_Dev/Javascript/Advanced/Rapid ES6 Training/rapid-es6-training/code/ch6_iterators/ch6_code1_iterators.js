@@ -48,6 +48,26 @@ console.log(it3.next().value);
 
 
 
+let idMaker2 = {
+	[Symbol.iterator]() {
+		let nextId = 8000;
+		return {
+			next() {
+				return {
+					value: nextId++,
+					done: false
+				};
+			}
+		};
+	}
+};
+for(let v1 of idMaker2) {
+	if(v1 > 8005) break;
+	console.log(v1);
+}
+
+
+
 
 
 
