@@ -68,6 +68,27 @@ for(let v1 of idMaker2) {
 
 
 
+let idMaker3 = {
+	[Symbol.iterator]() {
+		let nextId = 8000;
+		return {
+			next() {
+				let value = nextId > 8002 ? undefined : nextId++;
+				let done = !value;
+				return {
+					value,
+					done
+				};
+			}
+		};
+	}
+};
+for(let v2 of idMaker3) {
+	console.log(v2);
+}
+
+
+
 
 
 
