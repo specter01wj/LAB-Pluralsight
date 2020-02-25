@@ -44,6 +44,17 @@ console.log(it4.next().value);
 
 
 
+function *process5() {
+	let nextId = 7000;
+	while(true) {
+		yield(nextId++);
+	}
+}
+
+for(let id1 of process5()) {
+	if(id1 > 7002) break;
+	console.log(id1);
+}
 
 
 
