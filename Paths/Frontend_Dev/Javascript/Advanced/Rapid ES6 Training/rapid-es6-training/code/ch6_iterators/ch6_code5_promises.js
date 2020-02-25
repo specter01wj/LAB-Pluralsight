@@ -43,15 +43,28 @@ function() {
 
 
 
-function doAsync4() {
+/*function doAsync4() {
 
 }
 
 doAsync4().then(function(value) {
 	console.log('Fullfilled!' + value);
 },
-function() {
+function(reason) {
 	console.log('Rejected!' + reason);
+});*/
+
+
+
+function doAsync5() {
+
+}
+
+doAsync4().then(function(value) {
+	console.log('Fullfilled!' + value);
+	return 'For Sure';
+}).then(function(value) {
+	console.log('Rejected!' + value);
 });
 
 
