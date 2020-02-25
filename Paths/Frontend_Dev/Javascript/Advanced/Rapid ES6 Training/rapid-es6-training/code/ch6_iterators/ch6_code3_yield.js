@@ -38,6 +38,29 @@ console.log(it4.next(200));
 
 
 
+function *process5() {
+	let newArray = [yield, yield, yield];
+	console.log(newArray[2]);
+}
+let it5 = process5();
+it5.next();
+it5.next(2);
+it5.next(4);
+it5.next(42);
+
+
+
+/*function *process6() {
+	let value = 4 * yield 42;
+	console.log(value);
+}
+let it6 = process6();
+it6.next();
+it6.next(10);*/
+
+
+
+
 
 
 
