@@ -29,7 +29,22 @@ console.log(iter4.next());
 
 
 
-
+let idMaker1 = {
+	[Symbol.iterator]() {
+		let nextId = 8000;
+		return {
+			next() {
+				return {
+					value: nextId++,
+					done: false
+				};
+			}
+		};
+	}
+};
+let it3 = idMaker1[Symbol.iterator]();
+console.log(it3.next().value);
+console.log(it3.next().value);
 
 
 
