@@ -60,6 +60,27 @@ it6.next(10);*/
 
 
 
+function *process7() {
+	let value = 4 * (yield 42);
+	console.log(value);
+}
+let it7 = process7();
+it7.next();
+it7.next(10);
+
+
+
+function *process8() {
+	yield 42;
+	yield [1,2,3];
+}
+let it8 = process8();
+console.log(it8.next().value);
+console.log(it8.next().value);
+console.log(it8.next().value);
+
+
+
 
 
 
