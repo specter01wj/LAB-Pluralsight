@@ -32,6 +32,18 @@ console.log(it3.next());
 
 
 
+function *process4() {
+	let nextId = 7000;
+	while(true) {
+		yield(nextId++);
+	}
+}
+let it4 = process4();
+it4.next();
+console.log(it4.next().value);
+
+
+
 
 
 
