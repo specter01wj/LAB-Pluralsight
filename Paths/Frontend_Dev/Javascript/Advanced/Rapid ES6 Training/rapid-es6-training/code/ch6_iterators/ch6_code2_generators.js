@@ -21,6 +21,17 @@ console.log(it2.next());
 
 
 
+function *process3() {
+	yield 8000;
+	yield 8001;
+}
+let it3 = process3();
+it3.next();
+it3.next();
+console.log(it3.next());
+
+
+
 
 
 
