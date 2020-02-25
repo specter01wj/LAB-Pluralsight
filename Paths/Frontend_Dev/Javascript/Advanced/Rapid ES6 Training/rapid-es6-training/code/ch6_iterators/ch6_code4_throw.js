@@ -19,6 +19,18 @@ console.log(it1.next());
 
 
 
+function *process2() {
+	yield 9000;
+	yield 9001;
+	yield 9002;
+}
+let it2 = process2();
+console.log(it2.next().value);
+console.log(it2.throw('foo'));
+console.log(it2.next());
+
+
+
 
 
 
