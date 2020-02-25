@@ -81,6 +81,19 @@ console.log(it8.next().value);
 
 
 
+function *process9() {
+	yield 42;
+	yield* [1,2,3];
+}
+let it9 = process9();
+console.log(it9.next().value);
+console.log(it9.next().value);
+console.log(it9.next().value);
+console.log(it9.next().value);
+console.log(it9.next().value);
+
+
+
 
 
 
