@@ -33,6 +33,27 @@ console.log(salaries5);*/
 
 
 
+let salaries6 = [600, 700, 800];
+salaries6.fill(900);
+console.log(salaries6);
+
+
+
+let salaries7 = [600, 700, 800];
+salaries7.fill(900, 1);
+console.log(salaries7);
+
+
+
+let salaries8 = [600, 700, 800];
+salaries8.fill(900, 1, 2);
+console.log(salaries8);
+
+
+
+let salaries9 = [600, 700, 800];
+salaries9.fill(900, -1);
+console.log(salaries9);
 
 
 
