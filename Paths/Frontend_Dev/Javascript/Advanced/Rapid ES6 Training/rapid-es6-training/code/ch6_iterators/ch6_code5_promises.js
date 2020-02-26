@@ -20,7 +20,7 @@ function doAsync2() {
 	let p = new Promise(function(resolve, reject) {
 		console.log('in promise code');
 		setTimeout(function() {
-			console.log('resolving...');
+			console.log('rejecting...');
 			reject();
 		}, 2000);
 	});
