@@ -44,9 +44,23 @@ doAsync3().then(function(value) {
 
 
 
+let p1 = new Promise(...);
+let p2 = new Promise(...);
+
+Promise.all([p1, p2]).then(
+	function(value) { console.log('OK: ' + value); }, 
+	function(reason) { console.log('Nope: ' + reason); }
+);
 
 
 
+let p3 = new Promise(...);
+let p4 = new Promise(...);
+
+Promise.all([p1, p2]).then(
+	function(value) { console.log('OK: ' + value); }, 
+	function(reason) { console.log('Nope: ' + reason); }
+);
 
 
 
