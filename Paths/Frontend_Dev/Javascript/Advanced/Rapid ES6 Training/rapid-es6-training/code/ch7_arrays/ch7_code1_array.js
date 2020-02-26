@@ -31,7 +31,7 @@ let salaries5 = Array.from(amounts3, v => {
 }, { adjustment: 50 });
 console.log(salaries5);*/
 
-
+console.log("------------");
 
 let salaries6 = [600, 700, 800];
 salaries6.fill(900);
@@ -55,9 +55,35 @@ let salaries9 = [600, 700, 800];
 salaries9.fill(900, -1);
 console.log(salaries9);
 
+console.log("------------");
+
+let salaries10 = [600, 700, 900, 800];
+let result1 = salaries10.find(value => {
+	return value >= 750;
+});
+console.log(result1);
 
 
 
+let salaries11 = [600, 700, 800];
+let result2 = salaries11.find(value => {
+	return value >= 650;
+});
+console.log(result2);
+
+
+
+let salaries12 = [600, 700, 800];
+let result3 = salaries12.findIndex(function(value, index, array) {
+	return value == this;
+}, 700);
+console.log(result3);
+
+
+
+let salaries13 = [600, 700, 800];
+salaries13.copyWithin(2, 0);
+console.log(salaries13);
 
 
 
