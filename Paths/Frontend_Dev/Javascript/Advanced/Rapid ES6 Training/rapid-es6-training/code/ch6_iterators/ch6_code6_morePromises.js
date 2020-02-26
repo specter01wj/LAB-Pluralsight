@@ -74,14 +74,33 @@ Promise.all([p5, p6]).then(
 
 
 
-let p7 = new Promise(...);
+/*let p7 = new Promise(...);
 let p8 = new Promise(...);
 
 Promise.race([p7, p8]).then(
 	function(value) { console.log('OK: ' + value); }, 
 	function(reason) { console.log('Nope: ' + reason); }
-);
+);*/
 
+
+
+/*let p9 = new Promise(...);
+let p10 = new Promise(...);
+
+Promise.race([p9, p10]).then(
+	function(value) { console.log('OK: ' + value); }, 
+	function(reason) { console.log('Nope: ' + reason); }
+);*/
+
+
+
+/*let p11 = new Promise(...);
+let p12 = new Promise(...);
+
+Promise.race([p11, p12]).then(
+	function(value) { console.log('OK: ' + value); }, 
+	function(reason) { console.log('Nope: ' + reason); }
+);*/
 
 
 
