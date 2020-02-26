@@ -32,6 +32,18 @@ doAsync2().then(function(value) {
 
 
 
+function doAsync3() {
+	return Promise.reject('Some Error');
+}
+
+doAsync3().then(function(value) {
+	console.log('OK: ' + value);
+}, function(reason) {
+	console.log('Nope: ' + reason);
+});
+
+
+
 
 
 
