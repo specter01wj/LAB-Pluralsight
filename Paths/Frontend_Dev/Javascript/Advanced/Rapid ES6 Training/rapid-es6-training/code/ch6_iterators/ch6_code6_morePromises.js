@@ -44,20 +44,40 @@ doAsync3().then(function(value) {
 
 
 
-let p1 = new Promise(...);
+/*let p1 = new Promise(...);
 let p2 = new Promise(...);
 
 Promise.all([p1, p2]).then(
 	function(value) { console.log('OK: ' + value); }, 
 	function(reason) { console.log('Nope: ' + reason); }
-);
+);*/
 
 
 
-let p3 = new Promise(...);
+/*let p3 = new Promise(...);
 let p4 = new Promise(...);
 
-Promise.all([p1, p2]).then(
+Promise.all([p3, p4]).then(
+	function(value) { console.log('OK: ' + value); }, 
+	function(reason) { console.log('Nope: ' + reason); }
+);*/
+
+
+
+/*let p5 = new Promise(...);
+let p6 = new Promise(...);
+
+Promise.all([p5, p6]).then(
+	function(value) { console.log('OK: ' + value); }, 
+	function(reason) { console.log('Nope: ' + reason); }
+);*/
+
+
+
+let p7 = new Promise(...);
+let p8 = new Promise(...);
+
+Promise.race([p7, p8]).then(
 	function(value) { console.log('OK: ' + value); }, 
 	function(reason) { console.log('Nope: ' + reason); }
 );
