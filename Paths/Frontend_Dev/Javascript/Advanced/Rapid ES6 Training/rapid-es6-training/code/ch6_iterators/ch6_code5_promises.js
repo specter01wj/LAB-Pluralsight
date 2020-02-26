@@ -12,7 +12,7 @@ function doAsync1() {
 	});
 	return p;
 }
-// let promise1 = doAsync1();
+let promise1 = doAsync1();
 
 
 
@@ -26,7 +26,7 @@ function doAsync2() {
 	});
 	return p;
 }
-// let promise2 = doAsync2();
+let promise2 = doAsync2();
 
 
 
@@ -69,13 +69,13 @@ doAsync5().then(function(value) {
 
 
 
-function doAsync6() {
+/*function doAsync6() {
 
 }
 
 doAsync6().catch(function(reason) {
 	console.log('Error: ' + reason);
-});
+});*/
 
 
 
