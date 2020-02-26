@@ -80,6 +80,8 @@ let result3 = salaries12.findIndex(function(value, index, array) {
 console.log(result3);
 
 
+console.log("------------");
+
 
 let salaries13 = [600, 700, 800];
 salaries13.copyWithin(2, 0);
@@ -87,9 +89,32 @@ console.log(salaries13);
 
 
 
+let ids1 = [1, 2, 3, 4, 5];
+ids1.copyWithin(0, 1);
+console.log(ids1);
 
 
 
+let ids2 = [1, 2, 3, 4, 5];
+ids2.copyWithin(3, 0, 2);
+console.log(ids2);
+
+
+console.log("------------");
+
+
+let ids3 = ['A', 'B', 'C'];
+console.log(...ids3.entries());
+
+
+
+let ids4 = ['A', 'B', 'C'];
+console.log(...ids4.keys());
+
+
+
+let ids5 = ['A', 'B', 'C'];
+console.log(...ids5.values());
 
 
 
