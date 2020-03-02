@@ -27,10 +27,31 @@ console.log(newPerks1.size);
 
 
 
+console.log(perks2.has('Tank'));
+console.log(perks2.has('Airpod'));
 
 
 
+console.log(...perks2.keys());
+console.log(...perks2.values());
+console.log(...perks2.entries());
 
 
+
+let perks3 = new Set([
+	{id: 800},
+	{id: 800}
+]);
+console.log(perks3);
+console.log(perks3.size);
+
+
+
+let perks4 = new Set([
+	200,
+	'200'
+]);
+console.log(perks4);
+console.log(perks4.size);
 
 
