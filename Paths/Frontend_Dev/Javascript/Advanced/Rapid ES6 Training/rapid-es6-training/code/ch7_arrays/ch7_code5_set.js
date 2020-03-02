@@ -78,3 +78,6 @@ console.log(perks6.has(p1));
 
 p1 = null;
 console.log(perks6.has(p1));
+
+
+
