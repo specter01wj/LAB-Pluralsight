@@ -55,6 +55,8 @@ console.log(list1[0][1]);
 console.log(list2[0][1]);
 
 
+// WeakMap
+
 
 let employee5 = {name: 'Kate'};
 let employee6 = {name: 'Zion'};

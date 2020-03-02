@@ -55,3 +55,26 @@ console.log(perks4);
 console.log(perks4.size);
 
 
+// WeakSet
+
+
+/*let perks5 = new WeakSet([1, 2, 3]);
+console.log(perks5);
+console.log(perks5.size);*/
+
+
+
+let p1 = { name: 'Car' };
+let p2 = { name: 'Jet' };
+let perks6 = new WeakSet([p1, p2]);
+console.log(perks6);
+console.log(perks6.size);
+
+
+
+console.log(perks6.has(p1));
+
+
+
+p1 = null;
+console.log(perks6.has(p1));
