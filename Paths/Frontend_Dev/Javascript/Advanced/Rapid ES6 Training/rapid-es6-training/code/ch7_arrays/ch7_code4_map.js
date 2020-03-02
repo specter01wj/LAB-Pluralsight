@@ -21,6 +21,7 @@ employees.delete(employee2);
 console.log(employees.size);
 
 
+
 employees.clear();
 console.log(employees.size);
 
@@ -62,6 +63,7 @@ let employees_3 = new WeakMap([
 	[employee6, '789']
 ]);
 employee5 = null;
+console.log(employees_3);
 console.log(employees_3.size);
 
 
