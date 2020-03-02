@@ -42,7 +42,27 @@ console.log(employees_2.has(employee4));
 
 
 
+let list1 = [...employees_2.values()];
+console.log(employees_2.values());
+console.log(list1);
 
+
+
+let list2 = [...employees_2.entries()];
+console.log(list2);
+console.log(list1[0][1]);
+console.log(list2[0][1]);
+
+
+
+let employee5 = {name: 'Kate'};
+let employee6 = {name: 'Zion'};
+let employees_3 = new WeakMap([
+	[employee5, 'GHI'],
+	[employee6, '789']
+]);
+employee5 = null;
+console.log(employees_3.size);
 
 
 
