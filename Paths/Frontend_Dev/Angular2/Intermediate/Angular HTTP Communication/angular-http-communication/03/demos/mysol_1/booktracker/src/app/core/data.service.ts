@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
 
 import { allBooks, allReaders } from 'app/data';
 import { Reader } from "app/models/reader";
 import { Book } from "app/models/book";
+import { oldBook } from "app/models/oldBook";
 import { BookTrackerError } from 'app/models/bookTrackerError';
 
 @Injectable()
@@ -30,6 +32,7 @@ export class DataService {
 
   getAllBooks(): Observable<Book[]> {
     // return allBooks;
+    console.log("getAllBooks Loaded!");
     console.log("getAllBooks Loaded!");
     return this.http.get<Book[]>(this.url_books);
   }
