@@ -9,7 +9,7 @@ import { BookTrackerError } from 'app/models/bookTrackerError';
 
 @Injectable()
 export class DataService {
-  private url_books = '/api/books32';
+  private url_books = 'assets/server/data/books.json';
 
   constructor(private http: HttpClient) { }
 
