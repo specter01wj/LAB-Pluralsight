@@ -30,7 +30,7 @@ export class DataService {
 
   getAllBooks(): Observable<Book[]> {
     // return allBooks;
-    console.log("getAllBooks Loaded!")
+    console.log("getAllBooks Loaded!");
     return this.http.get<Book[]>(this.url_books);
   }
 
