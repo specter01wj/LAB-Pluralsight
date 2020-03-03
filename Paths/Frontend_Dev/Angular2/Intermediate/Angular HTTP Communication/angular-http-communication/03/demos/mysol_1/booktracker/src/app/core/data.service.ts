@@ -57,5 +57,17 @@ export class DataService {
         }),
         tap(classicBook => console.log(classicBook))
       );*/
-  }  
+  }
+
+  addBook(newBook: Book): Observable<Book> {
+    return this.http.post<Book>('api/books', newBook, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    });
+  }
+
+  
+
+
 }
