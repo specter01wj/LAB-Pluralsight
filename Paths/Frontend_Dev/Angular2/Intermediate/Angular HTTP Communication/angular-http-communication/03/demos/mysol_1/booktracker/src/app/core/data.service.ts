@@ -6,7 +6,7 @@ import { map, tap } from 'rxjs/operators';
 import { allBooks, allReaders } from 'app/data';
 import { Reader } from "app/models/reader";
 import { Book } from "app/models/book";
-import { oldBook } from "app/models/oldBook";
+import { OldBook } from "app/models/oldBook";
 import { BookTrackerError } from 'app/models/bookTrackerError';
 
 @Injectable()
@@ -46,5 +46,16 @@ export class DataService {
     return this.http.get<Book[]>(this.url_books, {
       headers: getHeaders
     });
+  }  
+
+  getOldBookById(id: number): Observable<Book[]> {
+    return this.http.get<Book[]>(this.url_books)
+      .pipe(
+        map(b => <OldBook[]>{
+          bookTitle: b.title,
+          year: b.publicationYear
+        }),
+        tap(classicBook => console.log(classicBook))
+      );
   }  
 }

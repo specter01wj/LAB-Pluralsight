@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { Book } from 'app/models/book';
+import { OldBook } from 'app/models/oldBook';
 import { DataService } from 'app/core/data.service';
 
 import { filter } from 'rxjs/operators';
@@ -30,6 +31,15 @@ export class EditBookComponent implements OnInit {
         },
         (err: any) => console.log(err),
         () => console.log('Edit completed.')
+      );
+
+    this.dataService.getOldBookById(bookID)
+      .subscribe(
+        (data: OldBook[]) => {
+          console.log(`Old book title: ${data.bookTitle}`);
+        },
+        (err: any) => console.log(err),
+        () => console.log('Edit Load Old Books completed.')
       );
   }
 
