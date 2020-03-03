@@ -49,13 +49,13 @@ export class DataService {
   }  
 
   getOldBookById(id: number): Observable<Book[]> {
-    return this.http.get<Book[]>(this.url_books)
-      .pipe(
+    return this.http.get<Book[]>(this.url_books);
+      /*.pipe(
         map(b => <OldBook[]>{
           bookTitle: b.title,
           year: b.publicationYear
         }),
         tap(classicBook => console.log(classicBook))
-      );
+      );*/
   }  
 }

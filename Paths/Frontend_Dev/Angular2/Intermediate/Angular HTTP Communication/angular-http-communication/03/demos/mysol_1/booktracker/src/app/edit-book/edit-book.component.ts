@@ -35,8 +35,13 @@ export class EditBookComponent implements OnInit {
 
     this.dataService.getOldBookById(bookID)
       .subscribe(
-        (data: OldBook[]) => {
+        /*(data: OldBook[]) => {
           console.log(`Old book title: ${data.bookTitle}`);
+        },*/(data: Book[]) => {
+          let thisBook = data.find( item => {
+            return item.bookID === bookID;
+          });
+          console.log(`Old book title: ${thisBook.title}`);
         },
         (err: any) => console.log(err),
         () => console.log('Edit Load Old Books completed.')
