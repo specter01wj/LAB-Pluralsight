@@ -67,6 +67,14 @@ export class DataService {
     });
   }
 
+  updateBook(updatedBook: Book): Observable<void> {
+    return this.http.post<void>(`api/books/${updatedBook.bookID}`, updatedBook, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    });
+  }
+
   
 
 
