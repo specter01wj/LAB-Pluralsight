@@ -451,6 +451,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var DataService = /** @class */ (function () {
     function DataService(http) {
         this.http = http;
+        this.url_books = '/api/books32';
         this.mostPopularBook = app_data__WEBPACK_IMPORTED_MODULE_2__["allBooks"][0];
     }
     DataService.prototype.setMostPopularBook = function (popularBook) {
@@ -463,7 +464,9 @@ var DataService = /** @class */ (function () {
         return app_data__WEBPACK_IMPORTED_MODULE_2__["allReaders"].find(function (reader) { return reader.readerID === id; });
     };
     DataService.prototype.getAllBooks = function () {
-        return app_data__WEBPACK_IMPORTED_MODULE_2__["allBooks"];
+        // return allBooks;
+        console.log("getAllBooks Loaded!");
+        return this.http.get(this.url_books);
     };
     DataService.prototype.getBookById = function (id) {
         return app_data__WEBPACK_IMPORTED_MODULE_2__["allBooks"].find(function (book) { return book.bookID === id; });
@@ -578,7 +581,12 @@ var DashboardComponent = /** @class */ (function () {
         this.title = title;
     }
     DashboardComponent.prototype.ngOnInit = function () {
-        this.allBooks = this.dataService.getAllBooks();
+        var _this = this;
+        // this.allBooks = this.dataService.getAllBooks();
+        this.dataService.getAllBooks()
+            .subscribe(function (data) {
+            _this.allBooks = data;
+        }, function (err) { return console.log(err); }, function () { return console.log('Completed!'); });
         this.allReaders = this.dataService.getAllReaders();
         this.mostPopularBook = this.dataService.mostPopularBook;
         this.title.setTitle("Book Tracker");
@@ -889,7 +897,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Source\booktracker\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular HTTP Communication/angular-http-communication/03/demos/mysol_1/booktracker/src/main.ts */"./src/main.ts");
 
 
 /***/ })

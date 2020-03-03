@@ -9,6 +9,7 @@ import { BookTrackerError } from 'app/models/bookTrackerError';
 
 @Injectable()
 export class DataService {
+  private url_books = '/api/books32';
 
   constructor(private http: HttpClient) { }
 
@@ -29,7 +30,7 @@ export class DataService {
   getAllBooks(): Observable<Book[]> {
     // return allBooks;
     console.log("getAllBooks Loaded!")
-    return this.http.get<Book[]>('/api/books');
+    return this.http.get<Book[]>(this.url_books);
   }
 
   getBookById(id: number): Book {
