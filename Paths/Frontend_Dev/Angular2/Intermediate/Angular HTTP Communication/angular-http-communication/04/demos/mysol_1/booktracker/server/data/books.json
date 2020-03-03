@@ -7,7 +7,7 @@
     },
     {
         "bookID": 2,
-        "title": "Winnie-the-Pooh",
+        "title": "Winnie-the-Pooh WJ",
         "author": "A. A. Milne",
         "publicationYear": "1926"
     },
@@ -30,9 +30,20 @@
         "publicationYear": "1941"
     },
     {
-        "bookID": 6,
-        "title": "Alice's Adventures in Wonderland",
-        "author": "Lewis Carroll",
-        "publicationYear": "1865"
+        "bookID": 7,
+        "title": "DSP",
+        "author": "james",
+        "publicationYear": "2020"
+    },
+    {
+        "bookID": 8,
+        "title": "DSP",
+        "author": "james",
+        "publicationYear": "2020"
+    },
+    {
+        "bookID": 9,
+        "title": "DSP",
+        "publicationYear": "2020"
     }
 ]
