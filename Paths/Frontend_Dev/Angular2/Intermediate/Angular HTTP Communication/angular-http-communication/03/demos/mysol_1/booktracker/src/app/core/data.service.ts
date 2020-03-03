@@ -75,6 +75,10 @@ export class DataService {
     });
   }
 
+  deleteBook(bookID: number): Observable<void> {
+    return this.http.delete<void>(`api/books/${bookID}`);
+  }
+
   
 
 
