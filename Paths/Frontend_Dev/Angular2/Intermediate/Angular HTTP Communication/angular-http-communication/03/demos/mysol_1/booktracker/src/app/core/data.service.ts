@@ -28,6 +28,7 @@ export class DataService {
 
   getAllBooks(): Observable<Book[]> {
     // return allBooks;
+    console.log("getAllBooks Loaded!")
     return this.http.get<Book[]>('/api/books');
   }
 
