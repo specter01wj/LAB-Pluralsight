@@ -30,8 +30,13 @@ export class DataService {
     return this.http.get<Reader[]>(this.url_allReaders);
   }
 
-  getReaderById(id: number): Reader {
+  /*getReaderById(id: number): Reader {
     return allReaders.find(reader => reader.readerID === id);
+  }*/
+
+  getReaderById(id: number): Observable<Reader> {
+    let url_allReaderById = `/api/readers/${id}`;
+    return this.http.get<Reader>(url_allReaderById);
   }
 
   getAllBooks(): Observable<Book[]> {

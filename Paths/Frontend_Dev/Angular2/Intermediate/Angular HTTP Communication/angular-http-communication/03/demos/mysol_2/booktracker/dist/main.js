@@ -470,8 +470,12 @@ var DataService = /** @class */ (function () {
     DataService.prototype.getAllReaders = function () {
         return this.http.get(this.url_allReaders);
     };
+    /*getReaderById(id: number): Reader {
+      return allReaders.find(reader => reader.readerID === id);
+    }*/
     DataService.prototype.getReaderById = function (id) {
-        return app_data__WEBPACK_IMPORTED_MODULE_3__["allReaders"].find(function (reader) { return reader.readerID === id; });
+        var url_allReaderById = "/api/readers/" + id;
+        return this.http.get(url_allReaderById);
     };
     DataService.prototype.getAllBooks = function () {
         console.log('Getting all books from the server.');
@@ -801,8 +805,11 @@ var EditReaderComponent = /** @class */ (function () {
         this.badgeService = badgeService;
     }
     EditReaderComponent.prototype.ngOnInit = function () {
+        var _this = this;
         var readerID = parseInt(this.route.snapshot.params['id']);
-        this.selectedReader = this.dataService.getReaderById(readerID);
+        // this.selectedReader = this.dataService.getReaderById(readerID);
+        this.dataService.getReaderById(readerID)
+            .subscribe(function (data) { return _this.selectedReader = data; }, function (err) { return console.log(err); });
         this.currentBadge = this.badgeService.getReaderBadge(this.selectedReader.totalMinutesRead);
     };
     EditReaderComponent.prototype.saveChanges = function () {
