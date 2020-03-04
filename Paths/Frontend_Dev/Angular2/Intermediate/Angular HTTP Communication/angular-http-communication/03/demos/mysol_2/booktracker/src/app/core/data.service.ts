@@ -48,6 +48,11 @@ export class DataService {
     return this.http.put<void>(url_ReaderById, updateReader);
   }
 
+  deleteReader(readerID: number): Observable<void> {
+    let url_delReaderById = `/api/readers/${readerID}`;
+    return this.http.delete<void>(url_delReaderById);
+  }
+
   getAllBooks(): Observable<Book[]> {
     console.log('Getting all books from the server.');
     return this.http.get<Book[]>('/api/books');
