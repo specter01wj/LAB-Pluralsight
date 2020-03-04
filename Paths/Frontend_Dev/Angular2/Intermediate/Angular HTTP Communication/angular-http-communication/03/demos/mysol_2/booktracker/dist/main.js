@@ -485,6 +485,10 @@ var DataService = /** @class */ (function () {
     DataService.prototype.addReader = function (newReader) {
         return this.http.post(this.url_allReaders, newReader);
     };
+    DataService.prototype.updateReader = function (updateReader) {
+        var url_ReaderById = "/api/readers/" + updateReader.readerID;
+        return this.http.put(url_ReaderById, updateReader);
+    };
     DataService.prototype.getAllBooks = function () {
         console.log('Getting all books from the server.');
         return this.http.get('/api/books');
@@ -821,7 +825,10 @@ var EditReaderComponent = /** @class */ (function () {
         this.currentBadge = this.badgeService.getReaderBadge(this.selectedReader.totalMinutesRead);
     };
     EditReaderComponent.prototype.saveChanges = function () {
-        console.warn('Save reader not yet implemented.');
+        var _this = this;
+        // console.warn('Save reader not yet implemented.');
+        this.dataService.updateReader(this.selectedReader)
+            .subscribe(function (data) { return console.log(_this.selectedReader.name + " updated successfully."); }, function (err) { return console.log(err); });
     };
     EditReaderComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({

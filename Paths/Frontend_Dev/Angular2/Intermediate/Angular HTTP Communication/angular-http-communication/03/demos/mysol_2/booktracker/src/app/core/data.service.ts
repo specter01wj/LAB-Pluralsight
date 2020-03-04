@@ -43,6 +43,11 @@ export class DataService {
     return this.http.post<Reader>(this.url_allReaders, newReader);
   }
 
+  updateReader(updateReader: Reader): Observable<void> {
+    let url_ReaderById = `/api/readers/${updateReader.readerID}`;
+    return this.http.put<void>(url_ReaderById, updateReader);
+  }
+
   getAllBooks(): Observable<Book[]> {
     console.log('Getting all books from the server.');
     return this.http.get<Book[]>('/api/books');
