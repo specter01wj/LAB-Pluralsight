@@ -39,6 +39,10 @@ export class DataService {
     return this.http.get<Reader>(url_allReaderById);
   }
 
+  addReader(newReader: Reader): Observable<Reader> {
+    return this.http.post<Reader>(this.url_allReaders, newReader);
+  }
+
   getAllBooks(): Observable<Book[]> {
     console.log('Getting all books from the server.');
     return this.http.get<Book[]>('/api/books');

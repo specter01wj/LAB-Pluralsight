@@ -106,6 +106,7 @@ module.exports = "<div class=\"col-lg-5\">\r\n  <div class=\"well bs-component\"
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddReaderComponent", function() { return AddReaderComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var app_core_data_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/core/data.service */ "./src/app/core/data.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -116,15 +117,19 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var AddReaderComponent = /** @class */ (function () {
-    function AddReaderComponent() {
+    function AddReaderComponent(dataService) {
+        this.dataService = dataService;
     }
     AddReaderComponent.prototype.ngOnInit = function () { };
     AddReaderComponent.prototype.saveReader = function (formValues) {
         var newReader = formValues;
         newReader.readerID = 0;
         console.log(newReader);
-        console.warn('Save new reader not yet implemented.');
+        // console.warn('Save new reader not yet implemented.');
+        this.dataService.addReader(newReader)
+            .subscribe(function (data) { return console.log(data); }, function (err) { return console.log(err); });
     };
     AddReaderComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -132,7 +137,7 @@ var AddReaderComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./add-reader.component.html */ "./src/app/add-reader/add-reader.component.html"),
             styles: []
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [app_core_data_service__WEBPACK_IMPORTED_MODULE_1__["DataService"]])
     ], AddReaderComponent);
     return AddReaderComponent;
 }());
@@ -476,6 +481,9 @@ var DataService = /** @class */ (function () {
     DataService.prototype.getReaderById = function (id) {
         var url_allReaderById = "/api/readers/" + id;
         return this.http.get(url_allReaderById);
+    };
+    DataService.prototype.addReader = function (newReader) {
+        return this.http.post(this.url_allReaders, newReader);
     };
     DataService.prototype.getAllBooks = function () {
         console.log('Getting all books from the server.');
