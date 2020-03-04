@@ -472,7 +472,8 @@ var DataService = /** @class */ (function () {
     };
     DataService.prototype.getAllBooks = function () {
         console.log('Getting all books from the server.');
-        return this.http.get('/api/books');
+        // return this.http.get<Book[]>('/api/books');
+        return this.http.get('/api/errors/500');
     };
     DataService.prototype.getBookById = function (id) {
         return this.http.get("/api/books/" + id, {
