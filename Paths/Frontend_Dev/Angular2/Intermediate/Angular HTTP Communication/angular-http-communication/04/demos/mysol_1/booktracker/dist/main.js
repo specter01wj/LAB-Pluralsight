@@ -477,10 +477,9 @@ var DataService = /** @class */ (function () {
     DataService.prototype.getAllBooks = function () {
         var _this = this;
         console.log('Getting all books from the server.');
-        // return this.http.get<Book[]>('/api/books');
-        return this.http.get('/api/errors/500')
+        return this.http.get('/api/books')
+            // return this.http.get<Book[]>('/api/errors/500')
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(function (err) { return _this.handleHttpError(err); }));
-        ;
     };
     DataService.prototype.handleHttpError = function (error) {
         var dataError = new app_models_bookTrackerError__WEBPACK_IMPORTED_MODULE_5__["BookTrackerError"]();
