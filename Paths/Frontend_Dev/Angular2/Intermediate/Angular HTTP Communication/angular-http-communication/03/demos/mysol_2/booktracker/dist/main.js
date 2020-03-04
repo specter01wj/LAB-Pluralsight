@@ -822,7 +822,7 @@ var EditReaderComponent = /** @class */ (function () {
         // this.selectedReader = this.dataService.getReaderById(readerID);
         this.dataService.getReaderById(readerID)
             .subscribe(function (data) { return _this.selectedReader = data; }, function (err) { return console.log(err); });
-        this.currentBadge = this.badgeService.getReaderBadge(this.selectedReader.totalMinutesRead);
+        // this.currentBadge = this.badgeService.getReaderBadge(this.selectedReader.totalMinutesRead);
     };
     EditReaderComponent.prototype.saveChanges = function () {
         var _this = this;

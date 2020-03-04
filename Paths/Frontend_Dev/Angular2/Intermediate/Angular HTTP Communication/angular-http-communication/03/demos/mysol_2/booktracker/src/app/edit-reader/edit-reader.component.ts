@@ -28,7 +28,7 @@ export class EditReaderComponent implements OnInit {
         (data: Reader) => this.selectedReader = data,
         (err: any) => console.log(err)
       );
-    this.currentBadge = this.badgeService.getReaderBadge(this.selectedReader.totalMinutesRead);
+    // this.currentBadge = this.badgeService.getReaderBadge(this.selectedReader.totalMinutesRead);
   }
 
   saveChanges(): void {
