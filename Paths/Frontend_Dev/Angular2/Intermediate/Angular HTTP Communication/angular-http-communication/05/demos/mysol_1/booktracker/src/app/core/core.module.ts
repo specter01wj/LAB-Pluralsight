@@ -9,8 +9,6 @@ import { throwIfAlreadyLoaded } from "app/core/module-import-guard";
 import { BookTrackerErrorHandlerService } from './book-tracker-error-handler.service';
 
 import { AddHeaderInterceptor } from './add-header.interceptor';
-
-
 import { LogResponseInterceptor } from './log-response.interceptor';
 
 @NgModule({
