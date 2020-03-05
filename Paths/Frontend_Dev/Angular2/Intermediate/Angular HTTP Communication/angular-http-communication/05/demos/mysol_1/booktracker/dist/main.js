@@ -1013,7 +1013,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Source\booktracker\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular HTTP Communication/angular-http-communication/05/demos/mysol_1/booktracker/src/main.ts */"./src/main.ts");
 
 
 /***/ })
