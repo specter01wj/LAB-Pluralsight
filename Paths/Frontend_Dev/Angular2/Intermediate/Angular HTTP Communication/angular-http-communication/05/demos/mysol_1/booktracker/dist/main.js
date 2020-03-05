@@ -473,6 +473,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_core_module_import_guard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/core/module-import-guard */ "./src/app/core/module-import-guard.ts");
 /* harmony import */ var _book_tracker_error_handler_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./book-tracker-error-handler.service */ "./src/app/core/book-tracker-error-handler.service.ts");
 /* harmony import */ var _add_header_interceptor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./add-header.interceptor */ "./src/app/core/add-header.interceptor.ts");
+/* harmony import */ var _log_response_interceptor__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./log-response.interceptor */ "./src/app/core/log-response.interceptor.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -485,6 +486,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+
 
 
 
@@ -507,7 +509,8 @@ var CoreModule = /** @class */ (function () {
                 _logger_service__WEBPACK_IMPORTED_MODULE_3__["LoggerService"],
                 _data_service__WEBPACK_IMPORTED_MODULE_4__["DataService"],
                 { provide: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ErrorHandler"], useClass: _book_tracker_error_handler_service__WEBPACK_IMPORTED_MODULE_6__["BookTrackerErrorHandlerService"] },
-                { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HTTP_INTERCEPTORS"], useClass: _add_header_interceptor__WEBPACK_IMPORTED_MODULE_7__["AddHeaderInterceptor"], multi: true }
+                { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HTTP_INTERCEPTORS"], useClass: _add_header_interceptor__WEBPACK_IMPORTED_MODULE_7__["AddHeaderInterceptor"], multi: true },
+                { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HTTP_INTERCEPTORS"], useClass: _log_response_interceptor__WEBPACK_IMPORTED_MODULE_8__["LogResponseInterceptor"], multi: true }
             ]
         }),
         __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"])()), __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["SkipSelf"])()),
@@ -617,6 +620,50 @@ var DataService = /** @class */ (function () {
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
     ], DataService);
     return DataService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/log-response.interceptor.ts":
+/*!**************************************************!*\
+  !*** ./src/app/core/log-response.interceptor.ts ***!
+  \**************************************************/
+/*! exports provided: LogResponseInterceptor */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LogResponseInterceptor", function() { return LogResponseInterceptor; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var LogResponseInterceptor = /** @class */ (function () {
+    function LogResponseInterceptor() {
+    }
+    LogResponseInterceptor.prototype.intercept = function (req, next) {
+        console.log("LogResponseInterceptor - " + req.url);
+        return next.handle(req)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (event) {
+            if (event.type === _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpEventType"].Response) {
+                console.log(event.body);
+            }
+        }));
+    };
+    LogResponseInterceptor = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])()
+    ], LogResponseInterceptor);
+    return LogResponseInterceptor;
 }());
 
 
