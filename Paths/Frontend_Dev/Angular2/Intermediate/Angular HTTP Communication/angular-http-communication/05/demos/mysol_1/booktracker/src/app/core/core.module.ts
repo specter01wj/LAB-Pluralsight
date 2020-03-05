@@ -18,7 +18,8 @@ import { AddHeaderInterceptor } from './add-header.interceptor';
   providers: [
     LoggerService, 
     DataService, 
-    { provide: ErrorHandler, useClass: BookTrackerErrorHandlerService }
+    { provide: ErrorHandler, useClass: BookTrackerErrorHandlerService },
+    { provide: HTTP_INTERCEPTORS, useClass: AddHeaderInterceptor, multi: true }
   ]
 })
 export class CoreModule {
