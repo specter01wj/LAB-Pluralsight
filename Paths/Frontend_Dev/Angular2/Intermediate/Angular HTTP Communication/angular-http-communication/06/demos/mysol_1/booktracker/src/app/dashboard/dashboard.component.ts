@@ -35,6 +35,8 @@ export class DashboardComponent implements OnInit {
     }    
 
     this.allReaders = this.dataService.getAllReaders();
+
+
     
     this.mostPopularBook = this.dataService.mostPopularBook;
 
