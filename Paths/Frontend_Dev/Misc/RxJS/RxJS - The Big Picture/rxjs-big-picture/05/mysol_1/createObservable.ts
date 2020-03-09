@@ -1,15 +1,22 @@
-import { Observable, from, fromEvent } from 'rxjs';
+import { Observable } from 'rxjs';
 
-let num$ = from([-2, -1, 0, 1, 2]);
+let customObservable = Observable.create(subscriber => {
 
-let observer = {
-	next: value => console.log(value),
-	error: err => console.log(`ERROR: ${err}`),
-	complete: () => console.log('All done.')
-};
+	if(newValue) {
+		subscriber.next(newValue);
+	}
 
-num$.subscribe(observer);
+	if(newError) {
+		subscriber.next(newValue);
+	}
 
+	if(done) {
+		subscriber.next(newValue);
+	}
+
+
+
+});
 
 
 
