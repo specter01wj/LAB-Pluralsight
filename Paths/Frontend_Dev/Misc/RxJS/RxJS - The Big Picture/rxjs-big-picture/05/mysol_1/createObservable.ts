@@ -7,15 +7,13 @@ let customObservable = Observable.create(subscriber => {
 	}
 
 	if(newError) {
-		subscriber.next(newValue);
+		subscriber.error(newError);
 	}
 
 	if(done) {
-		subscriber.next(newValue);
+		subscriber.complete();
 	}
-
-
-
+	
 });
 
 
