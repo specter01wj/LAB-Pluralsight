@@ -1,14 +1,27 @@
-var x = 2, fns = [];
+import { Observable, from } from 'rxjs';
 
-(function(){
-	var x = 5;
+let bookArray = [
+	{ "bookID": 1, "title": "Goodnight Moon" },
+	{ "bookID": 2, "title": "Winnie-the-Pooh" },
+	{ "bookID": 3, "title": "Where the Wild Things Are" },
+];
 
-	for (var i=0; i<x; i++) {
-		// ..
-	}
-})();
+let booksObservable$ = from(bookArray);
 
-console.log(
-	(x * 2) === fns[x*2]()
+let allBooks = [];
+
+booksObservable$.subscribe(
+	(data) => allBooks = data,
+    (err) => console.log(err),
+    () => console.log('All done getting books.')
 );
-// true
+
+
+
+
+
+
+
+
+
+
