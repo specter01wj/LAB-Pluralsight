@@ -8,7 +8,7 @@ let observer = {
 	complete: () => console.log('All done.')
 };
 
-
+num$.subscribe(observer);
 
 
 
