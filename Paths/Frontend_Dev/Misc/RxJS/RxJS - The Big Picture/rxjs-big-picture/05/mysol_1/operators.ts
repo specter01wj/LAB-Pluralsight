@@ -9,3 +9,9 @@ let observer = {
     complete: () => console.log('All done.')
 };
 
+num$.pipe(
+	filter(num => num > 0),
+	map(positiveNum => positiveNum * 3)
+)
+.subscribe(observer);
+
