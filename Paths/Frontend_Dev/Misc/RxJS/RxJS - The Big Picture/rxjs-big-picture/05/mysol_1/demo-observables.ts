@@ -1,6 +1,6 @@
 import { Observable, from } from 'rxjs';
 
-let nums = [-2, -1, 0, 1, 2];
+let nums = [2, 4, 6, 8, 10];
 
 let numsObservable$ = from(nums);
 
