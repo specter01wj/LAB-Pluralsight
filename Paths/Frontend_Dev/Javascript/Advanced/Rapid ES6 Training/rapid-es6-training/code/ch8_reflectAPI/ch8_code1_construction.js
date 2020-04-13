@@ -38,6 +38,19 @@ let r3 = Reflect.construct(Restaurant_3, ["James", "Baltimore"], restaurantMaker
 
 
 
+class Restaurant_4 {
+	constructor() {
+		console.log(`new target: ${new.target}`);
+	}
+}
+function restaurantMaker_1() {
+	console.log('in restaurantMaker');
+}
+
+let r3 = Reflect.construct(Restaurant_3, ["James", "Baltimore"], restaurantMaker_1);
+
+
+
 
 
 
