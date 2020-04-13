@@ -38,7 +38,7 @@ let r3 = Reflect.construct(Restaurant_3, ["James", "Baltimore"], restaurantMaker
 
 
 
-class Restaurant_4 {
+/*class Restaurant_4 {
 	constructor() {
 		this.id = 33;
 	}
@@ -47,7 +47,7 @@ class Restaurant_4 {
 	}
 }
 
-Reflect.apply(Restaurant_4.prototype.show, {id: 99});
+Reflect.apply(Restaurant_4.prototype.show, {id: 99});*/
 
 
 
