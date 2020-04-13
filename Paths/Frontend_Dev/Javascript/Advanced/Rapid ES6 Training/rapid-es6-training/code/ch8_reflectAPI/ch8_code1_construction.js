@@ -55,8 +55,8 @@ class Restaurant_5 {
 	constructor() {
 		this.id = 33;
 	}
-	show() {
-		console.log(this.id);
+	show(prefix) {
+		console.log(prefix + this.id);
 	}
 }
 
