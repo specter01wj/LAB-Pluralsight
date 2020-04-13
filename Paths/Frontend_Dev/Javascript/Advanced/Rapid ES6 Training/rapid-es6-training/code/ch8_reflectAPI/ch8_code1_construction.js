@@ -60,7 +60,7 @@ class Restaurant_5 {
 	}
 }
 
-Reflect.apply(Restaurant_5.prototype.show, {id: 99}, ['REST']);
+Reflect.apply(Restaurant_5.prototype.show, {id: 22}, ['REST']);
 
 
 
