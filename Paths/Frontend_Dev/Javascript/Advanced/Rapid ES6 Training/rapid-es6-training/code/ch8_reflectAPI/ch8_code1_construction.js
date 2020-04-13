@@ -47,7 +47,7 @@ class Restaurant_4 {
 	}
 }
 
-let r3 = Reflect.construct(Restaurant_3, ["James", "Baltimore"], restaurantMaker_1);
+Reflect.apply(Restaurant_4.prototype.show, {id: 99});
 
 
 
