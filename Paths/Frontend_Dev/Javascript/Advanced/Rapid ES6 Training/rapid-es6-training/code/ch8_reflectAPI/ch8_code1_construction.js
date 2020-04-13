@@ -51,6 +51,19 @@ Reflect.apply(Restaurant_4.prototype.show, {id: 99});*/
 
 
 
+class Restaurant_5 {
+	constructor() {
+		this.id = 33;
+	}
+	show() {
+		console.log(this.id);
+	}
+}
+
+Reflect.apply(Restaurant_4.prototype.show, {id: 99});*/
+
+
+
 
 
 
