@@ -42,6 +42,9 @@ class Restaurant_4 {
 	constructor() {
 		this.id = 33;
 	}
+	show() {
+		console.log(this.id);
+	}
 }
 function restaurantMaker_1() {
 	console.log('in restaurantMaker');
