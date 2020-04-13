@@ -34,7 +34,7 @@ function restaurantMaker_1() {
 	console.log('in restaurantMaker');
 }
 
-let r2 = Reflect.construct(Restaurant_3, ["Jim", "New York"], restaurantMaker_1);
+let r3 = Reflect.construct(Restaurant_3, ["James", "Baltimore"], restaurantMaker_1);
 
 
 
