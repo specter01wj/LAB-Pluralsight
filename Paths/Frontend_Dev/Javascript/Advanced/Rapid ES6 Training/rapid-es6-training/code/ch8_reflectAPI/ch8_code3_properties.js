@@ -2,33 +2,20 @@
 'use strict';
 
 
-class Location_1 {
+class Restaurant_1 {
 	constructor() {
-		console.log('constructing Location');
+		this.id = 8000;
 	}
 }
 
-class Restaurant_1 extends Location {
+let r1 = new Restaurant_1();
 
-}
-
-console.log(Reflect.getPrototypeOf(Restaurant_1));
+console.log(Reflect.get(r1, 'id'));
 
 
 
-class Restaurant_2 {
 
-}
 
-let setup = {
-	getId() {
-		return 88;
-	}
-}
-
-let r1 = new Restaurant_2();
-Reflect.setPrototypeOf(r1, setup);
-console.log(r1.getId());
 
 
 
