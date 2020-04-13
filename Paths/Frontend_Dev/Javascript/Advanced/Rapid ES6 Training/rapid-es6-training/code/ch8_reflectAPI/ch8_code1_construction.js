@@ -40,7 +40,7 @@ let r3 = Reflect.construct(Restaurant_3, ["James", "Baltimore"], restaurantMaker
 
 class Restaurant_4 {
 	constructor() {
-		console.log(`new target: ${new.target}`);
+		this.id = 33;
 	}
 }
 function restaurantMaker_1() {
