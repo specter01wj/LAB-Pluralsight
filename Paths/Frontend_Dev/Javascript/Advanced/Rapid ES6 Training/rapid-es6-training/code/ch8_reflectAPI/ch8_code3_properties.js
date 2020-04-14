@@ -75,6 +75,23 @@ console.log(Reflect.has(r5, 'city'));
 
 
 
+class Location_6 {
+	constructor() {
+		this.city = 'DC';
+	}
+}
+class Restaurant_6 extends Location_6 {
+	constructor() {
+		super();
+		this.id = 8000;
+	}
+}
+
+let r6 = new Restaurant_6();
+console.log(Reflect.ownKeys(r6));
+
+
+
 
 
 
