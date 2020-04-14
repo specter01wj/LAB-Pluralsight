@@ -21,6 +21,16 @@ console.log(rest2.location);
 
 
 
+let rest3 = {
+	id: 4000
+};
+
+console.log(Reflect.isExtensible(rest3));
+Reflect.preventExtensions(rest3);
+console.log(Reflect.isExtensible(rest3));
+
+
+
 
 
 
