@@ -57,6 +57,23 @@ console.log(r4._id);
 console.log(alt4._id);
 
 
+class Location_5 {
+	constructor() {
+		this.city = 'Shanghai';
+	}
+}
+class Restaurant_5 extends Location_5 {
+	constructor() {
+		super();
+		this.id = 9000;
+	}
+}
+
+let r5 = new Restaurant_5();
+console.log(Reflect.has(r5, 'id'));
+console.log(Reflect.has(r5, 'city'));
+
+
 
 
 
