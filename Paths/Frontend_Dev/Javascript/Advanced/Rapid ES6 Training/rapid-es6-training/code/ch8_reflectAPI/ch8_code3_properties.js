@@ -108,7 +108,13 @@ console.log(r7['id']);
 
 
 
+let rest8 = {
+	id: 3333
+};
 
+console.log(rest8.id);
+Reflect.deleteProperty(rest8, 'id');
+console.log(rest8.id);
 
 
 
