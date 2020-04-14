@@ -92,9 +92,19 @@ console.log(Reflect.ownKeys(r6));
 
 
 
+class Restaurant_7 {
 
+}
 
+let r7 = new Restaurant_7();
 
+Reflect.defineProperty(r7, 'id', {
+	value: 2000,
+	configurable: true,
+	enumerable: true
+});
+
+console.log(r7['id']);
 
 
 
