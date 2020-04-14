@@ -33,14 +33,28 @@ class Restaurant_3 {
 	constructor() {
 		this.id = 9000;
 	}
-	get id() {
-		return this._id;
-	}
 }
 
 let r3 = new Restaurant_3();
-Reflect.set(r3, 'id', 88);
+Reflect.set(r3, 'id', 99);
 console.log(r3.id);
+
+
+
+class Restaurant_4 {
+	constructor() {
+		this._id = 9000;
+	}
+	set id(value) {
+		this._id = value;
+	}
+}
+
+let r4 = new Restaurant_4();
+let alt4 = { id: 77 };
+Reflect.set(r4, '_id', 66, alt4);
+console.log(r4._id);
+console.log(alt4._id);
 
 
 
