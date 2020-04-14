@@ -29,6 +29,21 @@ console.log(Reflect.get(r2, 'id', {_id: 88}));
 
 
 
+class Restaurant_3 {
+	constructor() {
+		this.id = 9000;
+	}
+	get id() {
+		return this._id;
+	}
+}
+
+let r3 = new Restaurant_3();
+Reflect.set(r3, 'id', 88);
+console.log(r3.id);
+
+
+
 
 
 
