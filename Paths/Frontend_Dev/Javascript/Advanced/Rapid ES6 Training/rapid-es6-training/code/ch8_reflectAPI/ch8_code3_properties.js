@@ -7,6 +7,7 @@ class Restaurant_1 {
 		this.id = 8000;
 
 
+
 		
 	}
 }
