@@ -118,6 +118,15 @@ console.log(rest8.id);
 
 
 
+let rest9 = {
+	id: 4444
+};
+
+let d9 = Reflect.getOwnPropertyDescriptor(rest9, 'id');
+console.log(d9);
+
+
+
 
 
 
