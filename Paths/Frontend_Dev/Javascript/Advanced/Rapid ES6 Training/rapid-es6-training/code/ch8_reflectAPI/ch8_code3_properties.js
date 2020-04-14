@@ -5,22 +5,6 @@
 class Restaurant_1 {
 	constructor() {
 		this.id = 8000;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
 	}
 }
 
