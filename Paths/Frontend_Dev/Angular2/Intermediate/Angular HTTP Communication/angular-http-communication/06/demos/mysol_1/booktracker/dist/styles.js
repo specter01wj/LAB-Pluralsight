@@ -596,8 +596,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Source\booktracker\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
-module.exports = __webpack_require__(/*! C:\Source\booktracker\src\styles.css */"./src/styles.css");
+__webpack_require__(/*! /Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular HTTP Communication/angular-http-communication/06/demos/mysol_1/booktracker/node_modules/bootstrap/dist/css/bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+module.exports = __webpack_require__(/*! /Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular HTTP Communication/angular-http-communication/06/demos/mysol_1/booktracker/src/styles.css */"./src/styles.css");
 
 
 /***/ })
