@@ -6,16 +6,15 @@ var t = {
 	tableId: 99
 }
 
-var p1 = new Proxy({}, {
+let { proxy, revoke } = Proxy.revocable(t, {
 	get: function(target, prop, receiver) {
-		return 'Property ' + prop + ' doesn\'t exist...';
+		return Reflect.get(target, prop, receiver) + 100;
 	}
 });
 
-Object.setPrototypeOf(t, p1);
-
-console.log(t.tableId);
-console.log(t.size);
+console.log(proxy.tableId);
+revoke();
+console.log(proxy.tableId);
 
 
 
