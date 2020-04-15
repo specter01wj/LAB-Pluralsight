@@ -38,7 +38,7 @@ describe('DataService Tests', () => {
       });
 
     let booksRequest: TestRequest = httpTestingController.expectOne('/api/books');
-    expect(booksRequest.request.method).toEqual('GET');
+    expect(booksRequest.request.method).toEqual('POST');
 
     booksRequest.flush(testBooks);
   });
