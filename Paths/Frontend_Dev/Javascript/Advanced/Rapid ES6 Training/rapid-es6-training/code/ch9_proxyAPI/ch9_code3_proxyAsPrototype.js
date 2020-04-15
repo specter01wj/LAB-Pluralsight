@@ -2,17 +2,20 @@
 'use strict';
 
 
-function getId() {
-	return 55;
+var t = {
+	tableId: 99;
 }
 
-var p1 = new Proxy(getId, {
-	apply: function(target, thisArg, argumentsList) {
-		return Reflect.apply(target, thisArg, argumentsList);
+var p1 = new Proxy({}, {
+	get: function(target, prop, receiver) {
+		return 'Property ' + prop + ' doesn\'t exist...';
 	}
 });
 
-console.log(p1());
+Object.setPrototypeOf(t, p1);
+
+console.log(t.tableId);
+console.log(t.size);
 
 
 
