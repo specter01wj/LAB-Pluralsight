@@ -1,1 +1,1 @@
-alert('Hello James Wang!');
+console.log('Hello James Wang!');
