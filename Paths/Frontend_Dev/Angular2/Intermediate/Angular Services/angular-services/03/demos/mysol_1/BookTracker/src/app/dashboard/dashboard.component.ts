@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { LoggerService } from 'app/services/logger.service';
+import { DataService } from 'app/services/data.service';
 
 import { Book } from "app/models/book";
 import { Reader } from "app/models/reader";
