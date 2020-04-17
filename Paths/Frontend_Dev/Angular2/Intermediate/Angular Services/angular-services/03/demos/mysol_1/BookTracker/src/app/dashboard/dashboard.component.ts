@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
   mostPopularBook: Book;
 
   constructor(private loggerService: LoggerService) { 
-    this.loggerService.log('Creating the dashboard.');
+    // this.loggerService.log('Creating the dashboard.');
   }
 
   ngOnInit() {
