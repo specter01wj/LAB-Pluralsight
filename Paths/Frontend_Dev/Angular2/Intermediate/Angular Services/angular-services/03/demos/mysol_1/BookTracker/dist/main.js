@@ -437,7 +437,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var app_services_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/services/data.service */ "./src/app/services/data.service.ts");
 /* harmony import */ var app_services_logger_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/services/logger.service */ "./src/app/services/logger.service.ts");
-/* harmony import */ var app_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/data */ "./src/app/data.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -451,7 +450,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var EditBookComponent = /** @class */ (function () {
     function EditBookComponent(route, dataService, loggerService) {
         this.route = route;
@@ -460,10 +458,13 @@ var EditBookComponent = /** @class */ (function () {
     }
     EditBookComponent.prototype.ngOnInit = function () {
         var bookID = parseInt(this.route.snapshot.params['id']);
-        this.selectedBook = app_data__WEBPACK_IMPORTED_MODULE_4__["allBooks"].find(function (book) { return book.bookID === bookID; });
+        // this.selectedBook = allBooks.find(book => book.bookID === bookID);
+        this.selectedBook = this.dataService.getBookById(bookID);
     };
     EditBookComponent.prototype.setMostPopular = function () {
-        console.warn('Setting most popular book not yet implemented.');
+        // console.warn('Setting most popular book not yet implemented.');
+        this.dataService.setMostPopularBook(this.selectedBook);
+        this.loggerService.log("New most popular book: " + this.selectedBook.title);
     };
     EditBookComponent.prototype.saveChanges = function () {
         console.warn('Save changes to book not yet implemented.');
