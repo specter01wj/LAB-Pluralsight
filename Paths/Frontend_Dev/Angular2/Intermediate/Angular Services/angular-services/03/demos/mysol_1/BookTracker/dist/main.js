@@ -360,7 +360,8 @@ var DashboardComponent = /** @class */ (function () {
         this.allBooks = this.dataService.getAllBooks();
         this.allReaders = this.dataService.getAllReaders();
         // this.mostPopularBook = this.dataService.mostPopularBook;
-        this.mostPopularBook = this.allBooks[0];
+        // this.mostPopularBook = this.allBooks[0];
+        this.mostPopularBook = this.dataService.mostPopularBook;
     };
     DashboardComponent.prototype.deleteBook = function (bookID) {
         console.warn("Delete book not yet implemented (bookID: " + bookID + ").");
