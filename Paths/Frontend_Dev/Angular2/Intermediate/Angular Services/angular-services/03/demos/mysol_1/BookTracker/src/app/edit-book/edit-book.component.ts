@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+import { DataService } from 'app/services/data.service';
+import { LoggerService } from 'app/services/logger.service';
+
 import { Book } from 'app/models/book';
 import { allBooks } from 'app/data';
 
@@ -13,7 +16,9 @@ export class EditBookComponent implements OnInit {
 
   selectedBook: Book;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,
+    private dataService: DataService,
+    private loggerService: LoggerService) { }
 
   ngOnInit() {
     let bookID: number = parseInt(this.route.snapshot.params['id']);
