@@ -20,7 +20,8 @@ export class EditReaderComponent implements OnInit {
 
   ngOnInit() {
     let readerID: number = parseInt(this.route.snapshot.params['id']);
-    this.selectedReader = allReaders.find(reader => reader.readerID === readerID);
+    // this.selectedReader = allReaders.find(reader => reader.readerID === readerID);
+    this.selectedReader = this.dataService.getReaderById(readerID);
   }
 
   saveChanges() {
