@@ -13,5 +13,8 @@ export class DataService {
 
 	mostPopularBook: Book = allBooks[0];
 
-  constructor() { }
+  constructor(private loggerService: LoggerService) { }
+
+  
+  
 }
