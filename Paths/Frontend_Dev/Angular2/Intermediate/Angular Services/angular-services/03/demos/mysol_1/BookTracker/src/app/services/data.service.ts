@@ -11,5 +11,7 @@ import { Book } from 'app/models/book';
 })
 export class DataService {
 
+	mostPopularBook: Book = allBooks[0];
+
   constructor() { }
 }
