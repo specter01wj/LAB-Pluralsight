@@ -509,7 +509,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditReaderComponent", function() { return EditReaderComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var app_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/data */ "./src/app/data.ts");
+/* harmony import */ var app_services_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/services/data.service */ "./src/app/services/data.service.ts");
+/* harmony import */ var app_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/data */ "./src/app/data.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -522,13 +523,15 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var EditReaderComponent = /** @class */ (function () {
-    function EditReaderComponent(route) {
+    function EditReaderComponent(route, dataService) {
         this.route = route;
+        this.dataService = dataService;
     }
     EditReaderComponent.prototype.ngOnInit = function () {
         var readerID = parseInt(this.route.snapshot.params['id']);
-        this.selectedReader = app_data__WEBPACK_IMPORTED_MODULE_2__["allReaders"].find(function (reader) { return reader.readerID === readerID; });
+        this.selectedReader = app_data__WEBPACK_IMPORTED_MODULE_3__["allReaders"].find(function (reader) { return reader.readerID === readerID; });
     };
     EditReaderComponent.prototype.saveChanges = function () {
         console.warn('Save reader not yet implemented.');
@@ -539,7 +542,8 @@ var EditReaderComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./edit-reader.component.html */ "./src/app/edit-reader/edit-reader.component.html"),
             styles: []
         }),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
+            app_services_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"]])
     ], EditReaderComponent);
     return EditReaderComponent;
 }());
