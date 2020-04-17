@@ -10,6 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { EditBookComponent } from './edit-book/edit-book.component';
 import { EditReaderComponent } from './edit-reader/edit-reader.component';
 import { LoggerService } from './services/logger.service';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [
