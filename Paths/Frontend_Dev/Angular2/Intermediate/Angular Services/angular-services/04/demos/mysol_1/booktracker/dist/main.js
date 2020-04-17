@@ -449,17 +449,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var EditBookComponent = /** @class */ (function () {
-    function EditBookComponent(route, dataSerivce, loggerService) {
+    function EditBookComponent(route, dataService, loggerService) {
         this.route = route;
-        this.dataSerivce = dataSerivce;
+        this.dataService = dataService;
         this.loggerService = loggerService;
     }
     EditBookComponent.prototype.ngOnInit = function () {
         var bookID = parseInt(this.route.snapshot.params['id']);
-        this.selectedBook = this.dataSerivce.getBookById(bookID);
+        this.selectedBook = this.dataService.getBookById(bookID);
     };
     EditBookComponent.prototype.setMostPopular = function () {
-        this.dataSerivce.setMostPopularBook(this.selectedBook);
+        this.dataService.setMostPopularBook(this.selectedBook);
         this.loggerService.log("New most popular book: " + this.selectedBook.title);
     };
     EditBookComponent.prototype.saveChanges = function () {
@@ -571,6 +571,9 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+/*@Injectable({
+  providedIn: 'root'
+})*/
 var DataService = /** @class */ (function () {
     function DataService(loggerService) {
         this.loggerService = loggerService;
@@ -592,9 +595,7 @@ var DataService = /** @class */ (function () {
         this.mostPopularBook = popularBook;
     };
     DataService = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
-            providedIn: 'root'
-        }),
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
         __metadata("design:paramtypes", [_logger_service__WEBPACK_IMPORTED_MODULE_1__["LoggerService"]])
     ], DataService);
     return DataService;
@@ -697,7 +698,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Source\booktracker\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/james.wang/MySpace/mylabs/LAB-Pluralsight/Paths/Frontend_Dev/Angular2/Intermediate/Angular Services/angular-services/04/demos/mysol_1/booktracker/src/main.ts */"./src/main.ts");
 
 
 /***/ })
