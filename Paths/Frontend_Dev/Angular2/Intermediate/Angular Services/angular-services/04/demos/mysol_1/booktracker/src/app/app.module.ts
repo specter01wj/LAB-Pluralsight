@@ -28,7 +28,7 @@ import { DataService } from './services/data.service';
   ],
   providers: [
     { provide: LoggerService, useClass: LoggerService },
-    { provide: DataService, useClass: DataService }
+    DataService
   ],
   bootstrap: [AppComponent]
 })
