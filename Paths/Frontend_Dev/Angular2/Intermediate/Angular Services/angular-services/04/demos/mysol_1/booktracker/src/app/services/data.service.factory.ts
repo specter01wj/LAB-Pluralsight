@@ -1,36 +1,12 @@
-import { Injectable } from '@angular/core';
 import { LoggerService } from './logger.service';
-import { Reader } from 'app/models/reader';
-import { allReaders, allBooks } from 'app/data';
-import { Book } from 'app/models/book';
+import { DataService } from './data.service';
 
-/*@Injectable({
-  providedIn: 'root'
-})*/
-@Injectable()
-export class DataService {
+export function dataServiceFactory(logger: LoggerService) {
 
-  mostPopularBook: Book = allBooks[0];
+  let dataService: DataService = new DataService(logger);
 
-  constructor(private loggerService: LoggerService) { }
+  logger.log('Creating a new data service with a factory function.');
 
-  getAllReaders(): Reader[] {
-    return allReaders;
-  }
+  return dataService;
 
-  getReaderById(id: number): Reader {
-    return allReaders.find(reader => reader.readerID === id);
-  }
-
-  getAllBooks(): Book[] {
-    return allBooks;
-  }
-
-  getBookById(id: number): Book {
-    return allBooks.find(book => book.bookID === id);
-  }  
-
-  setMostPopularBook(popularBook: Book): void {
-    this.mostPopularBook = popularBook;
-  }
 }
