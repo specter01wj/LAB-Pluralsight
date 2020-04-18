@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
+import { LoggerService } from './logger.service';
+
+/*@Injectable({
   providedIn: 'root'
-})
-export class PlainLoggerService {
+})*/
+@Injectable()
+export class PlainLoggerService implements LoggerService {
 
   constructor() { }
 }
