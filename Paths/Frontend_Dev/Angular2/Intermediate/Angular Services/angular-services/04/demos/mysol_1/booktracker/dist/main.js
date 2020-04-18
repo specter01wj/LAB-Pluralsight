@@ -271,12 +271,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _edit_reader_edit_reader_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./edit-reader/edit-reader.component */ "./src/app/edit-reader/edit-reader.component.ts");
 /* harmony import */ var _services_logger_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./services/logger.service */ "./src/app/services/logger.service.ts");
 /* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./services/data.service */ "./src/app/services/data.service.ts");
+/* harmony import */ var _services_data_service_factory__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./services/data.service.factory */ "./src/app/services/data.service.factory.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -318,7 +320,8 @@ var AppModule = /** @class */ (function () {
                     }
                 },
                 // { provide: LoggerService, useClass: PlainLoggerService },
-                _services_data_service__WEBPACK_IMPORTED_MODULE_11__["DataService"]
+                // DataService
+                { provide: _services_data_service__WEBPACK_IMPORTED_MODULE_11__["DataService"], useFactory: _services_data_service_factory__WEBPACK_IMPORTED_MODULE_12__["dataServiceFactory"], deps: [_services_logger_service__WEBPACK_IMPORTED_MODULE_10__["LoggerService"]] }
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
@@ -559,6 +562,27 @@ var EditReaderComponent = /** @class */ (function () {
     return EditReaderComponent;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/services/data.service.factory.ts":
+/*!**************************************************!*\
+  !*** ./src/app/services/data.service.factory.ts ***!
+  \**************************************************/
+/*! exports provided: dataServiceFactory */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dataServiceFactory", function() { return dataServiceFactory; });
+/* harmony import */ var _data_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data.service */ "./src/app/services/data.service.ts");
+
+function dataServiceFactory(logger) {
+    var dataService = new _data_service__WEBPACK_IMPORTED_MODULE_0__["DataService"](logger);
+    logger.log('Creating a new data service with a factory function.');
+    return dataService;
+}
 
 
 /***/ }),

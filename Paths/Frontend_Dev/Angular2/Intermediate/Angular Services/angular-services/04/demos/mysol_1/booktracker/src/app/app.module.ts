@@ -12,6 +12,7 @@ import { EditReaderComponent } from './edit-reader/edit-reader.component';
 import { LoggerService } from './services/logger.service';
 import { DataService } from './services/data.service';
 import { PlainLoggerService } from './services/plain-logger.service';
+import { dataServiceFactory } from './services/data.service.factory';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { PlainLoggerService } from './services/plain-logger.service';
       }
     },
     // { provide: LoggerService, useClass: PlainLoggerService },
-    DataService
+    // DataService
+    { provide: DataService, useFactory: dataServiceFactory, deps: [LoggerService] }
   ],
   bootstrap: [AppComponent]
 })
