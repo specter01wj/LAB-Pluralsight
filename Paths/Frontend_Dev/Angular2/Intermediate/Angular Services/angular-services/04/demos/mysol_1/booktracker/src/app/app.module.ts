@@ -26,7 +26,10 @@ import { DataService } from './services/data.service';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: LoggerService, useClass: LoggerService },
+    { provide: DataService, useClass: DataService }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
