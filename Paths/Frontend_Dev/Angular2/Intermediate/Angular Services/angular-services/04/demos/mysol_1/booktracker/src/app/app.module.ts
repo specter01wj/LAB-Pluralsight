@@ -11,6 +11,7 @@ import { EditBookComponent } from './edit-book/edit-book.component';
 import { EditReaderComponent } from './edit-reader/edit-reader.component';
 import { LoggerService } from './services/logger.service';
 import { DataService } from './services/data.service';
+import { PlainLoggerService } from './services/plain-logger.service';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { DataService } from './services/data.service';
     FormsModule
   ],
   providers: [
+    // { provide: LoggerService, useClass: LoggerService },
     { provide: LoggerService, useClass: LoggerService },
     DataService
   ],

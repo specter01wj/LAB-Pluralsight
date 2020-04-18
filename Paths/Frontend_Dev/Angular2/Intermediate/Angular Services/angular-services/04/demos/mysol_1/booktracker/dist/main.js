@@ -308,8 +308,9 @@ var AppModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"]
             ],
             providers: [
+                // { provide: LoggerService, useClass: LoggerService },
                 { provide: _services_logger_service__WEBPACK_IMPORTED_MODULE_10__["LoggerService"], useClass: _services_logger_service__WEBPACK_IMPORTED_MODULE_10__["LoggerService"] },
-                { provide: _services_data_service__WEBPACK_IMPORTED_MODULE_11__["DataService"], useClass: _services_data_service__WEBPACK_IMPORTED_MODULE_11__["DataService"] }
+                _services_data_service__WEBPACK_IMPORTED_MODULE_11__["DataService"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
