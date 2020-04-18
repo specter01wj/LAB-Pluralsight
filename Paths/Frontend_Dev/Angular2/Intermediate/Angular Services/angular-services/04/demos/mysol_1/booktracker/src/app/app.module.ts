@@ -29,8 +29,14 @@ import { PlainLoggerService } from './services/plain-logger.service';
   ],
   providers: [
     // { provide: LoggerService, useClass: LoggerService },
-    PlainLoggerService,
-    { provide: LoggerService, useExisting: PlainLoggerService },
+    /*PlainLoggerService,
+    { provide: LoggerService, useExisting: PlainLoggerService },*/
+    {
+      provide: LoggerService, useValue: {
+        log: (message) => console.log(`MESSAGE: ${message}`),
+        error: (message) => console.error(`PROBLEM: ${message}`)
+      }
+    },
     // { provide: LoggerService, useClass: PlainLoggerService },
     DataService
   ],
