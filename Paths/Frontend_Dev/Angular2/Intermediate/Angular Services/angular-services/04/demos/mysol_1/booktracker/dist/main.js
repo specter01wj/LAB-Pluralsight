@@ -364,6 +364,7 @@ var DashboardComponent = /** @class */ (function () {
     function DashboardComponent(loggerService, dataService) {
         this.loggerService = loggerService;
         this.dataService = dataService;
+        this.loggerService.log('Creating the dashboard!');
     }
     DashboardComponent.prototype.ngOnInit = function () {
         this.allBooks = this.dataService.getAllBooks();
