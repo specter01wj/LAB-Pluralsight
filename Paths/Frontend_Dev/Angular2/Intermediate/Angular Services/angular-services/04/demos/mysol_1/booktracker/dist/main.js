@@ -311,6 +311,7 @@ var AppModule = /** @class */ (function () {
             ],
             providers: [
                 // { provide: LoggerService, useClass: LoggerService },
+                _services_plain_logger_service__WEBPACK_IMPORTED_MODULE_12__["PlainLoggerService"],
                 { provide: _services_logger_service__WEBPACK_IMPORTED_MODULE_10__["LoggerService"], useClass: _services_plain_logger_service__WEBPACK_IMPORTED_MODULE_12__["PlainLoggerService"] },
                 _services_data_service__WEBPACK_IMPORTED_MODULE_11__["DataService"]
             ],
