@@ -271,12 +271,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _edit_reader_edit_reader_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./edit-reader/edit-reader.component */ "./src/app/edit-reader/edit-reader.component.ts");
 /* harmony import */ var _services_logger_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./services/logger.service */ "./src/app/services/logger.service.ts");
 /* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./services/data.service */ "./src/app/services/data.service.ts");
+/* harmony import */ var _services_plain_logger_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./services/plain-logger.service */ "./src/app/services/plain-logger.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -309,7 +311,7 @@ var AppModule = /** @class */ (function () {
             ],
             providers: [
                 // { provide: LoggerService, useClass: LoggerService },
-                { provide: _services_logger_service__WEBPACK_IMPORTED_MODULE_10__["LoggerService"], useClass: _services_logger_service__WEBPACK_IMPORTED_MODULE_10__["LoggerService"] },
+                { provide: _services_logger_service__WEBPACK_IMPORTED_MODULE_10__["LoggerService"], useClass: _services_plain_logger_service__WEBPACK_IMPORTED_MODULE_12__["PlainLoggerService"] },
                 _services_data_service__WEBPACK_IMPORTED_MODULE_11__["DataService"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
@@ -647,6 +649,50 @@ var LoggerService = /** @class */ (function () {
         })
     ], LoggerService);
     return LoggerService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/plain-logger.service.ts":
+/*!**************************************************!*\
+  !*** ./src/app/services/plain-logger.service.ts ***!
+  \**************************************************/
+/*! exports provided: PlainLoggerService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PlainLoggerService", function() { return PlainLoggerService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+/*@Injectable({
+  providedIn: 'root'
+})*/
+var PlainLoggerService = /** @class */ (function () {
+    function PlainLoggerService() {
+    }
+    PlainLoggerService.prototype.log = function (message) {
+        console.log(message);
+    };
+    PlainLoggerService.prototype.error = function (message) {
+        console.error(message);
+    };
+    PlainLoggerService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [])
+    ], PlainLoggerService);
+    return PlainLoggerService;
 }());
 
 

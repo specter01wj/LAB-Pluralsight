@@ -29,7 +29,7 @@ import { PlainLoggerService } from './services/plain-logger.service';
   ],
   providers: [
     // { provide: LoggerService, useClass: LoggerService },
-    { provide: LoggerService, useClass: LoggerService },
+    { provide: LoggerService, useClass: PlainLoggerService },
     DataService
   ],
   bootstrap: [AppComponent]
