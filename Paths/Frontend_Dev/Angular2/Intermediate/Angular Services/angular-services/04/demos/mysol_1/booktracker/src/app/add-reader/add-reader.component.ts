@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Reader } from "app/models/reader";
+import { BadgeService } from 'app/services/badge.service';
 
 @Component({
   selector: 'app-add-reader',
@@ -9,7 +10,7 @@ import { Reader } from "app/models/reader";
 })
 export class AddReaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private badgeService: BadgeService) { }
 
   ngOnInit() { }
 
