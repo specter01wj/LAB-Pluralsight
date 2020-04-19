@@ -9,10 +9,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EditBookComponent } from './edit-book/edit-book.component';
 import { EditReaderComponent } from './edit-reader/edit-reader.component';
-import { LoggerService } from './services/logger.service';
-import { DataService } from './services/data.service';
-import { PlainLoggerService } from './services/plain-logger.service';
-import { dataServiceFactory } from './services/data.service.factory';
+
+import { CoreModule } from './core/core.module';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +25,8 @@ import { dataServiceFactory } from './services/data.service.factory';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    CoreModule
   ],
   providers: [
     // { provide: LoggerService, useClass: LoggerService },
@@ -41,8 +41,8 @@ import { dataServiceFactory } from './services/data.service.factory';
     // { provide: LoggerService, useClass: PlainLoggerService },
     // DataService
     // { provide: DataService, useFactory: dataServiceFactory, deps: [LoggerService] }
-    LoggerService,
-    DataService
+    /*LoggerService,
+    DataService*/
   ],
   bootstrap: [AppComponent]
 })
