@@ -16,6 +16,7 @@ import { BadgeService } from 'app/services/badge.service';
 export class EditBookComponent implements OnInit {
 
   selectedBook: Book;
+  currentBadge: string;
 
   constructor(private route: ActivatedRoute,
               private dataService: DataService,
