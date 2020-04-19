@@ -19,7 +19,8 @@ export class EditBookComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private dataService: DataService,
-              private loggerService: LoggerService) { }
+              private loggerService: LoggerService,
+              private badgeService: BadgeService) { }
 
   ngOnInit() {
     let bookID: number = parseInt(this.route.snapshot.params['id']);
