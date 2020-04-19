@@ -4,11 +4,13 @@ import { ActivatedRoute } from '@angular/router';
 import { Book } from 'app/models/book';
 import { DataService } from 'app/services/data.service';
 import { LoggerService } from 'app/services/logger.service';
+import { LoggerService } from 'app/services/logger.service';
 
 @Component({
   selector: 'app-edit-book',
   templateUrl: './edit-book.component.html',
-  styles: []
+  styles: [],
+  providers:
   // providers: [DataService]
 })
 export class EditBookComponent implements OnInit {
