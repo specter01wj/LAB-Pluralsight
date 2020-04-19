@@ -489,7 +489,8 @@ var EditBookComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-edit-book',
             template: __webpack_require__(/*! ./edit-book.component.html */ "./src/app/edit-book/edit-book.component.html"),
-            styles: []
+            styles: [],
+            providers: [app_services_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"]]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
             app_services_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"],
