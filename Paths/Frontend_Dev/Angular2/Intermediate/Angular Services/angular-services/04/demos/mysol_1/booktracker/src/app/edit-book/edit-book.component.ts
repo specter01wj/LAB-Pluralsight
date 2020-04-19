@@ -10,7 +10,7 @@ import { BadgeService } from 'app/services/badge.service';
   selector: 'app-edit-book',
   templateUrl: './edit-book.component.html',
   styles: [],
-  providers:
+  providers: [BadgeService]
   // providers: [DataService]
 })
 export class EditBookComponent implements OnInit {
