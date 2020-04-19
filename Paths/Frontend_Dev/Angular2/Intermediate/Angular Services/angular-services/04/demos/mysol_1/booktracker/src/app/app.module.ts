@@ -32,15 +32,17 @@ import { dataServiceFactory } from './services/data.service.factory';
     // { provide: LoggerService, useClass: LoggerService },
     /*PlainLoggerService,
     { provide: LoggerService, useExisting: PlainLoggerService },*/
-    {
+    /*{
       provide: LoggerService, useValue: {
         log: (message) => console.log(`MESSAGE: ${message}`),
         error: (message) => console.error(`PROBLEM: ${message}`)
       }
-    },
+    },*/
     // { provide: LoggerService, useClass: PlainLoggerService },
     // DataService
-    { provide: DataService, useFactory: dataServiceFactory, deps: [LoggerService] }
+    // { provide: DataService, useFactory: dataServiceFactory, deps: [LoggerService] }
+    LoggerService,
+    DataService
   ],
   bootstrap: [AppComponent]
 })
