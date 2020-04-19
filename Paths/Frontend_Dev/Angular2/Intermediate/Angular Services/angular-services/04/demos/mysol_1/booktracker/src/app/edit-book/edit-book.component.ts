@@ -31,6 +31,7 @@ export class EditBookComponent implements OnInit {
   setMostPopular(): void {
     this.dataService.setMostPopularBook(this.selectedBook);
     this.loggerService.log(`New most popular book: ${this.selectedBook.title}`);
+    this.currentBadge = this.badgeService.getReaderBadge(this.selectedBook.totalMinutesRead);
   }
 
   saveChanges(): void {
