@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Book } from 'app/models/book';
 import { DataService } from 'app/services/data.service';
 import { LoggerService } from 'app/services/logger.service';
-import { LoggerService } from 'app/services/logger.service';
+import { BadgeService } from 'app/services/badge.service';
 
 @Component({
   selector: 'app-edit-book',
