@@ -581,7 +581,12 @@ var DashboardComponent = /** @class */ (function () {
         function (err) { return console.log(err.friendlyMessage); }, function () { return _this.loggerService.log('All done getting readres!'); });
         this.mostPopularBook = this.dataService.mostPopularBook;
         this.dataService.getAuthorRecommendation(1)
-            .then(function (author) { return _this.loggerService.log(author); }, function (err) { return _this.loggerService.error("The promise was rejected: " + err); });
+            .then(function (author) {
+            _this.loggerService.log(author);
+            throw new Error('Problem in the success handler!');
+        }, function (err) { return _this.loggerService.error("The promise was rejected: " + err); })
+            .catch(function (error) { return _this.loggerService.error(error.message); });
+        ;
         this.loggerService.log('Done with dashboard initialization');
     };
     DashboardComponent.prototype.deleteBook = function (bookID) {
