@@ -421,6 +421,18 @@ var DataService = /** @class */ (function () {
         this.http = http;
         this.mostPopularBook = app_data__WEBPACK_IMPORTED_MODULE_5__["allBooks"][0];
     }
+    DataService.prototype.getAuthorRecommendation = function (readerID) {
+        return new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                if (readerID > 0) {
+                    resolve('Dr. Seuss');
+                }
+                else {
+                    reject('Invalid reader ID');
+                }
+            }, 2000);
+        });
+    };
     /*getAllReaders(): Reader[] {
       return allReaders;
     }*/
