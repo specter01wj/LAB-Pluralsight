@@ -54,8 +54,14 @@ export class DashboardComponent implements OnInit {
   }
 
   private async getAuthorRecommendationAsync(readerID: number): Promise<void> {
-    let author: string = await this.dataService.getAuthorRecommendation(readerID);
-    this.loggerService.log(author);
+    try {
+      let author: string = await this.dataService.getAuthorRecommendation(readerID);
+      this.loggerService.log(author);
+    }
+    catch(error) {
+      this.loggerService.error(error);
+    }
+    
   }
 
   deleteBook(bookID: number): void {

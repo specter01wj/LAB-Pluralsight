@@ -631,14 +631,21 @@ var DashboardComponent = /** @class */ (function () {
     };
     DashboardComponent.prototype.getAuthorRecommendationAsync = function (readerID) {
         return __awaiter(this, void 0, void 0, function () {
-            var author;
+            var author, error_1;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.dataService.getAuthorRecommendation(readerID)];
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.dataService.getAuthorRecommendation(readerID)];
                     case 1:
                         author = _a.sent();
                         this.loggerService.log(author);
-                        return [2 /*return*/];
+                        return [3 /*break*/, 3];
+                    case 2:
+                        error_1 = _a.sent();
+                        this.loggerService.error(error_1);
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
                 }
             });
         });
