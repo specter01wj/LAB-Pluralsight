@@ -16,8 +16,11 @@ export class DataService {
   constructor(private loggerService: LoggerService,
     private http: HttpClient) { }
 
-  getAllReaders(): Reader[] {
+  /*getAllReaders(): Reader[] {
     return allReaders;
+  }*/
+  getAllReaders(): Observable<Reader[]> {
+    return this.http.get<Reader[]>('/api/readers');
   }
 
   getReaderById(id: number): Reader {

@@ -415,8 +415,11 @@ var DataService = /** @class */ (function () {
         this.http = http;
         this.mostPopularBook = app_data__WEBPACK_IMPORTED_MODULE_3__["allBooks"][0];
     }
+    /*getAllReaders(): Reader[] {
+      return allReaders;
+    }*/
     DataService.prototype.getAllReaders = function () {
-        return app_data__WEBPACK_IMPORTED_MODULE_3__["allReaders"];
+        return this.http.get('/api/readers');
     };
     DataService.prototype.getReaderById = function (id) {
         return app_data__WEBPACK_IMPORTED_MODULE_3__["allReaders"].find(function (reader) { return reader.readerID === id; });
