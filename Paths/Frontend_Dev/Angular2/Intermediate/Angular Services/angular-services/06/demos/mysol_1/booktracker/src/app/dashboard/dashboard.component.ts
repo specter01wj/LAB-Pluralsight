@@ -39,7 +39,7 @@ export class DashboardComponent implements OnInit {
     this.getAuthorRecommendationAsync(1)
       .catch(err => this.loggerService.error(err));
 
-    this.title.setTitle(`Book Tracker ${VERSION.full}`);
+    this.title.setTitle(`JW's Book Tracker ${VERSION.full}`);
 
     this.loggerService.log('Done with dashboard initialization');
   }

@@ -613,7 +613,7 @@ var DashboardComponent = /** @class */ (function () {
         this.mostPopularBook = this.dataService.mostPopularBook;
         this.getAuthorRecommendationAsync(1)
             .catch(function (err) { return _this.loggerService.error(err); });
-        this.title.setTitle("Book Tracker " + _angular_core__WEBPACK_IMPORTED_MODULE_0__["VERSION"].full);
+        this.title.setTitle("JW's Book Tracker " + _angular_core__WEBPACK_IMPORTED_MODULE_0__["VERSION"].full);
         this.loggerService.log('Done with dashboard initialization');
     };
     DashboardComponent.prototype.getAuthorRecommendationAsync = function (readerID) {
