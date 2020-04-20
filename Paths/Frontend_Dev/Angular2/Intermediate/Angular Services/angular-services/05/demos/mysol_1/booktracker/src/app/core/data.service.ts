@@ -22,8 +22,8 @@ export class DataService {
     return allReaders;
   }*/
   getAllReaders(): Observable<Reader[] | BookTrackerError> {
-    // return this.http.get<Reader[]>('/api/readers');
-    return this.http.get<Reader[]>('/api/errors/500')
+    return this.http.get<Reader[]>('/api/readers')
+    // return this.http.get<Reader[]>('/api/errors/500')
       .pipe(
         catchError(this.handleError)
       );
