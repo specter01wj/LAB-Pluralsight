@@ -549,8 +549,9 @@ var DashboardComponent = /** @class */ (function () {
         this.allBooks = this.dataService.getAllBooks();
         // this.allReaders = this.dataService.getAllReaders()
         this.dataService.getAllReaders()
-            .subscribe(function (data) { return _this.allReaders = data; });
+            .subscribe(function (data) { return _this.allReaders = data; }, function (err) { return console.log(err); }, function () { return _this.loggerService.log('All done getting readres!'); });
         this.mostPopularBook = this.dataService.mostPopularBook;
+        this.loggerService.log('Done with dashboard initialization');
     };
     DashboardComponent.prototype.deleteBook = function (bookID) {
         console.warn("Delete book not yet implemented (bookID: " + bookID + ").");

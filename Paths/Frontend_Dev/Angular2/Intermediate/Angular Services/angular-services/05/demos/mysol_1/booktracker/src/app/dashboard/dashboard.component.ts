@@ -29,8 +29,12 @@ export class DashboardComponent implements OnInit {
     this.dataService.getAllReaders()
       .subscribe(
         (data: Reader[]) => this.allReaders = data,
+        (err) => console.log(err),
+        () => this.loggerService.log('All done getting readres!')
       );
     this.mostPopularBook = this.dataService.mostPopularBook;
+
+    this.loggerService.log('Done with dashboard initialization');
   }
 
   deleteBook(bookID: number): void {
