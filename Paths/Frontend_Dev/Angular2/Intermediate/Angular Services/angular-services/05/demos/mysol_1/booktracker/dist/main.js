@@ -393,8 +393,9 @@ var CoreModule = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DataService", function() { return DataService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _logger_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./logger.service */ "./src/app/core/logger.service.ts");
-/* harmony import */ var app_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/data */ "./src/app/data.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _logger_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./logger.service */ "./src/app/core/logger.service.ts");
+/* harmony import */ var app_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/data */ "./src/app/data.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -407,29 +408,32 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var DataService = /** @class */ (function () {
-    function DataService(loggerService) {
+    function DataService(loggerService, http) {
         this.loggerService = loggerService;
-        this.mostPopularBook = app_data__WEBPACK_IMPORTED_MODULE_2__["allBooks"][0];
+        this.http = http;
+        this.mostPopularBook = app_data__WEBPACK_IMPORTED_MODULE_3__["allBooks"][0];
     }
     DataService.prototype.getAllReaders = function () {
-        return app_data__WEBPACK_IMPORTED_MODULE_2__["allReaders"];
+        return app_data__WEBPACK_IMPORTED_MODULE_3__["allReaders"];
     };
     DataService.prototype.getReaderById = function (id) {
-        return app_data__WEBPACK_IMPORTED_MODULE_2__["allReaders"].find(function (reader) { return reader.readerID === id; });
+        return app_data__WEBPACK_IMPORTED_MODULE_3__["allReaders"].find(function (reader) { return reader.readerID === id; });
     };
     DataService.prototype.getAllBooks = function () {
-        return app_data__WEBPACK_IMPORTED_MODULE_2__["allBooks"];
+        return app_data__WEBPACK_IMPORTED_MODULE_3__["allBooks"];
     };
     DataService.prototype.getBookById = function (id) {
-        return app_data__WEBPACK_IMPORTED_MODULE_2__["allBooks"].find(function (book) { return book.bookID === id; });
+        return app_data__WEBPACK_IMPORTED_MODULE_3__["allBooks"].find(function (book) { return book.bookID === id; });
     };
     DataService.prototype.setMostPopularBook = function (popularBook) {
         this.mostPopularBook = popularBook;
     };
     DataService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
-        __metadata("design:paramtypes", [_logger_service__WEBPACK_IMPORTED_MODULE_1__["LoggerService"]])
+        __metadata("design:paramtypes", [_logger_service__WEBPACK_IMPORTED_MODULE_2__["LoggerService"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
     ], DataService);
     return DataService;
 }());
