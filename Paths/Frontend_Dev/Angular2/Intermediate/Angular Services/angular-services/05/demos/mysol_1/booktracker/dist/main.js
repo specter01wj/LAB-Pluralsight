@@ -427,10 +427,7 @@ var DataService = /** @class */ (function () {
     DataService.prototype.getAllReaders = function () {
         // return this.http.get<Reader[]>('/api/readers');
         return this.http.get('/api/errors/500')
-            .pipe;
-        {
-            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError);
-        }
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
     };
     DataService.prototype.handleError = function (error) {
         var dataError = new app_models_bookTrackerError__WEBPACK_IMPORTED_MODULE_6__["BookTrackerError"]();
