@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Observable } from 'rxjs';
+
 import { Book } from "app/models/book";
 import { Reader } from "app/models/reader";
 import { LoggerService } from 'app/core/logger.service';
@@ -23,7 +25,11 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.allBooks = this.dataService.getAllBooks();
-    this.allReaders = this.dataService.getAllReaders();
+    // this.allReaders = this.dataService.getAllReaders()
+    this.dataService.getAllReaders()
+      .subscribe(
+        (data: Reader[]) => this.allReaders = data,
+      );
     this.mostPopularBook = this.dataService.mostPopularBook;
   }
 

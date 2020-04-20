@@ -545,8 +545,11 @@ var DashboardComponent = /** @class */ (function () {
         this.loggerService.log('Creating the dashboard!');
     }
     DashboardComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.allBooks = this.dataService.getAllBooks();
-        this.allReaders = this.dataService.getAllReaders();
+        // this.allReaders = this.dataService.getAllReaders()
+        this.dataService.getAllReaders()
+            .subscribe(function (data) { return _this.allReaders = data; });
         this.mostPopularBook = this.dataService.mostPopularBook;
     };
     DashboardComponent.prototype.deleteBook = function (bookID) {
