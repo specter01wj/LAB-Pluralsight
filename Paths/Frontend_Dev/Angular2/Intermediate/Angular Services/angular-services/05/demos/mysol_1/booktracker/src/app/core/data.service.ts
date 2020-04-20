@@ -2,11 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 import { LoggerService } from './logger.service';
 import { Reader } from 'app/models/reader';
 import { allReaders, allBooks } from 'app/data';
 import { Book } from 'app/models/book';
+import { BookTrackerError } from 'app/models/bookTrackerError';
 
 @Injectable()
 export class DataService {
