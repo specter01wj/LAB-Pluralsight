@@ -419,7 +419,8 @@ var DataService = /** @class */ (function () {
       return allReaders;
     }*/
     DataService.prototype.getAllReaders = function () {
-        return this.http.get('/api/readers');
+        // return this.http.get<Reader[]>('/api/readers');
+        return this.http.get('/api/errors/500');
     };
     DataService.prototype.getReaderById = function (id) {
         return app_data__WEBPACK_IMPORTED_MODULE_3__["allReaders"].find(function (reader) { return reader.readerID === id; });

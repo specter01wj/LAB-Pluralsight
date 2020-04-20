@@ -20,7 +20,8 @@ export class DataService {
     return allReaders;
   }*/
   getAllReaders(): Observable<Reader[]> {
-    return this.http.get<Reader[]>('/api/readers');
+    // return this.http.get<Reader[]>('/api/readers');
+    return this.http.get<Reader[]>('/api/errors/500');
   }
 
   getReaderById(id: number): Reader {
