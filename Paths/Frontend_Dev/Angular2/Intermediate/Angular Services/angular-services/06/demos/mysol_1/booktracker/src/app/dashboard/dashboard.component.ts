@@ -21,7 +21,8 @@ export class DashboardComponent implements OnInit {
   mostPopularBook: Book;
 
   constructor(private loggerService: LoggerService,
-              private dataService: DataService) { 
+              private dataService: DataService,
+              private title: Title) { 
     this.loggerService.log('Creating the dashboard!');
   }
 
@@ -37,6 +38,8 @@ export class DashboardComponent implements OnInit {
 
     this.getAuthorRecommendationAsync(1)
       .catch(err => this.loggerService.error(err));
+
+    this.title.setTitle(`Book Tracker ${VERSION.full}`);
 
     this.loggerService.log('Done with dashboard initialization');
   }
