@@ -662,6 +662,7 @@ var DashboardComponent = /** @class */ (function () {
             .catch(function (err) { return _this.loggerService.error(err); });
         this.title.setTitle("JW's Book Tracker " + _angular_core__WEBPACK_IMPORTED_MODULE_0__["VERSION"].full);
         this.loggerService.log('Done with dashboard initialization');
+        throw new Error('Ugly technical error!');
     };
     DashboardComponent.prototype.getAuthorRecommendationAsync = function (readerID) {
         return __awaiter(this, void 0, void 0, function () {
