@@ -48,7 +48,8 @@ export class DashboardComponent implements OnInit {
         (error: Error) => this.loggerService.error(error.message)
       );*/
 
-    this.getAuthorRecommendationAsync(1);
+    this.getAuthorRecommendationAsync(-1);
+      // .catch(err => this.loggerService.error(err));
 
     this.loggerService.log('Done with dashboard initialization');
   }
