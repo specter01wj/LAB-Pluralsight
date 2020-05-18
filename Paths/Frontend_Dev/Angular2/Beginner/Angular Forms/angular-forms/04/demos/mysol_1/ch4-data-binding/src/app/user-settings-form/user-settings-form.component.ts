@@ -12,11 +12,6 @@ export class UserSettingsFormComponent implements OnInit {
     name: 'Milton',
     emailOffers: true,
     interfaceStyle: 'dark',
-
-
-
-
-    
     subscriptionType: 'Annual',
     notes: 'here are some notes...'
   };
