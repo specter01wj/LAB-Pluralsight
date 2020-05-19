@@ -1,4 +1,4 @@
-export interface UserSetting {
+export interface UserSettings {
 	name: string,
   emailOffers: boolean,
   interfaceStyle: string,
