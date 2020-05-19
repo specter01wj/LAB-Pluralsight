@@ -17,10 +17,14 @@ export class UserSettingsFormComponent implements OnInit {
   };
 
   userSettings : UserSettings = { ...this.originalUserSettings };
+  // userSettings : UserSettings = this.originalUserSettings;
 
-  constructor() { }
+  constructor() { 
+  	console.log("2");
+  }
 
   ngOnInit(): void {
+  	console.log("1");
   }
 
 }
