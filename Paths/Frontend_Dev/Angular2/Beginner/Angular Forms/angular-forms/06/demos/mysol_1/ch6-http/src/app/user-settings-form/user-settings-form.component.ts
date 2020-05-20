@@ -30,4 +30,29 @@ export class UserSettingsFormComponent implements OnInit {
   	this.subscriptionTypes = this.dataService.getSubscriptionTypes();
   }
 
+  onBlur(field : NgModel) {
+    console.log('in onBlur: ', field.valid);
+  }
+
+  onHttpError(errorResponse: any) {
+    console.log('error: ', errorResponse);
+    this.postError = true;
+    this.postErrorMessage = errorResponse.error.errorMessage;
+  }
+
+  onSubmit(form: NgForm) {
+    console.log('in onSubmit: ', form.valid);
+
+    if (form.valid) {
+      this.dataService.postUserSettingsForm(this.userSettings).subscribe(
+        result => console.log('success: ', result),
+        error => this.onHttpError(error)
+      );
+    }
+    else {
+      this.postError = true;
+      this.postErrorMessage = "Please fix the above errors"
+    }
+  }
+
 }
