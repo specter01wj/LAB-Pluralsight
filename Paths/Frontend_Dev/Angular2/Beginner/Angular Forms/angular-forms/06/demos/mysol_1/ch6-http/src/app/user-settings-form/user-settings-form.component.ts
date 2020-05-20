@@ -48,8 +48,7 @@ export class UserSettingsFormComponent implements OnInit {
         result => console.log('success: ', result),
         error => this.onHttpError(error)
       );
-    }
-    else {
+    } else {
       this.postError = true;
       this.postErrorMessage = "Please fix the above errors"
     }
