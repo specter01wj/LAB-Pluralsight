@@ -37,7 +37,7 @@ export class UserSettingsFormComponent implements OnInit {
   onHttpError(errorResponse: any) {
     console.log('error: ', errorResponse);
     this.postError = true;
-    this.postErrorMessage = errorResponse.error.errorMessage;
+    this.postErrorMessage = errorResponse.message;
   }
 
   onSubmit(form: NgForm) {
