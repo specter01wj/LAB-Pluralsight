@@ -8,8 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
-import { TimepickerModule } from 'ngx-bootstrap/timepicker';
-import { RatingModule } from 'ngx-bootstrap/rating';
+// import { TimepickerModule } from 'ngx-bootstrap/timepicker';
+// import { RatingModule } from 'ngx-bootstrap/rating';
 
 import { AppComponent } from './app.component';
 import { UserSettingsFormComponent } from './user-settings-form/user-settings-form.component';
@@ -26,8 +26,8 @@ import { UserSettingsFormComponent } from './user-settings-form/user-settings-fo
     AppRoutingModule,
     ButtonsModule.forRoot(),
     BsDatepickerModule.forRoot(),
-    TimepickerModule.forRoot(),
-    RatingModule.forRoot()
+    // TimepickerModule.forRoot(),
+    // RatingModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
