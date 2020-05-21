@@ -14,6 +14,11 @@
         Enter a name
       </div>
     </div>
+    <button type="button" class="btn btn-primary" name="singleModel"
+      [(ngModel)]="singleModel" btnCheckbox
+      btnCheckboxTrue="ON" btnCheckboxFalse="OFF">
+	  	Single Toggle {{singleModel}}
+		</button>
 
     <div class="form-group">
       <label for="startDate">Start Date</label>

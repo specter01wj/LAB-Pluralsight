@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+
+
 import { AppComponent } from './app.component';
 import { UserSettingsFormComponent } from './user-settings-form/user-settings-form.component';
 
@@ -17,7 +20,8 @@ import { UserSettingsFormComponent } from './user-settings-form/user-settings-fo
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ButtonsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

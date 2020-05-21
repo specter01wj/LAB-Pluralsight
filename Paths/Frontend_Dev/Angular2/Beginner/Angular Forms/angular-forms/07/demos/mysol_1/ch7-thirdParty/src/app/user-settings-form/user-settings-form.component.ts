@@ -19,6 +19,7 @@ export class UserSettingsFormComponent implements OnInit {
     notes: null
   };
 
+  singleModel = "ON";
   startDate: Date;
   startTime: Date;
   userRating = 0;
