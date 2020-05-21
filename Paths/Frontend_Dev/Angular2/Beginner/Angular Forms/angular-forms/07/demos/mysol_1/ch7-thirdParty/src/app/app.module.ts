@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
-
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 import { AppComponent } from './app.component';
 import { UserSettingsFormComponent } from './user-settings-form/user-settings-form.component';
@@ -21,7 +21,8 @@ import { UserSettingsFormComponent } from './user-settings-form/user-settings-fo
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    ButtonsModule
+    ButtonsModule.forRoot(),
+    BsDatepickerModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,7 +3,7 @@ import { NgForm, NgModel } from '@angular/forms';
 import { Observable } from 'rxjs';
 
 import { UserSettings } from '../services/user-settings';
-import { DataService } from '../service/data.service';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-user-settings-form',
