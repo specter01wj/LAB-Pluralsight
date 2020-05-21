@@ -21,6 +21,7 @@ export class UserSettingsFormComponent implements OnInit {
 
   singleModel = "ON";
   startDate: Date;
+  startDateRange: Date;
   startTime: Date;
   userRating = 0;
   maxRating = 10;
@@ -35,6 +36,7 @@ export class UserSettingsFormComponent implements OnInit {
   	this.subscriptionTypes = this.dataService.getSubscriptionTypes();
 
     this.startDate = new Date();
+    this.startDateRange = new Date();
     this.startTime = new Date();
   }
 
