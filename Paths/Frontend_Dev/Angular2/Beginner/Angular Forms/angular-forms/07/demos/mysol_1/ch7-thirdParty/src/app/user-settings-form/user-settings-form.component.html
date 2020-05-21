@@ -26,16 +26,17 @@
           placeholder="Start Date"
           class="form-control"
           [(ngModel)]="startDate" name="startDate" id="startDate"
-          bsDaterangepicker>
+          bsDatepicker>
     </div>
+    Start Date: {{startDate}}
 
-    <div class="form-group">
+<!--     <div class="form-group">
       <label for="startTime">Start Time</label>
       <timepicker [(ngModel)]="startTime" name="startTime" id="startTime">
       </timepicker>
     </div>
 
-<!--     <div class="form-group">
+    <div class="form-group">
       User Rating
       <rating [(ngModel)]="userRating" [max]="maxRating" [readonly]="isReadonly"
         name="userRating" id="userRating"
