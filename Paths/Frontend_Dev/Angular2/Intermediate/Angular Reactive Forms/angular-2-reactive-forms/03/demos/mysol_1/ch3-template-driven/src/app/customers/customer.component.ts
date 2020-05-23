@@ -18,8 +18,6 @@ export class CustomerComponent implements OnInit {
 
   save(customerForm: NgForm) {
     console.log(customerForm.form);
-
-    
     console.log('Saved: ' + JSON.stringify(customerForm.value));
   }
 
