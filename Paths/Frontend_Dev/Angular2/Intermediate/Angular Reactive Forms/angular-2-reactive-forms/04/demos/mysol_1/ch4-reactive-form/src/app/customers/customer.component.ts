@@ -23,6 +23,15 @@ export class CustomerComponent implements OnInit {
     });
   }
 
+  setTestData(): void {
+    this.customerForm.setValue({
+      firstName: 'Tim',
+      lastName: 'Wilson',
+      email: 'tw21@gmail.com',
+      sendCatalog: true
+    });
+  }
+
   populateTestData(): void {
     this.customerForm.patchValue({
       firstName: 'Jack',
