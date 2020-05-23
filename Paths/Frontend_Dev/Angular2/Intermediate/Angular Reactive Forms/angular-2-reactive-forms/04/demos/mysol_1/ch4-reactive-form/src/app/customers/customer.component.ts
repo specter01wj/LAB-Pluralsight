@@ -18,7 +18,8 @@ export class CustomerComponent implements OnInit {
   	// this.customerForm = new FormGroup({
     this.customerForm = this.fb.group({
       firstName: '',
-      lastName: '',
+      // lastName: '',
+      lastName: [{value: 'n/a', disabled: true}],
       email: '',
       sendCatalog: true
     });
