@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators, AbstractControl, ValidatorFn } from '@angular/forms';
+
+import { debounceTime } from 'rxjs/operators';
+
+import { Customer } from '../services/customer';
 
 @Component({
   selector: 'app-customer',
