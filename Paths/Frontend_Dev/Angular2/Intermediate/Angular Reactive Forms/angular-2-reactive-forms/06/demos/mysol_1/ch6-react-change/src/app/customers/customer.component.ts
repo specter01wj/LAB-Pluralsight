@@ -4,6 +4,7 @@ import { FormGroup, FormBuilder, Validators, AbstractControl, ValidatorFn } from
 import { debounceTime } from 'rxjs/operators';
 
 import { Customer } from '../services/customer';
+import { CustomerValidators } from './customer.validators';
 
 @Component({
   selector: 'app-customer',
