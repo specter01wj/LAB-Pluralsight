@@ -34,6 +34,7 @@ export class CustomerComponent implements OnInit {
       phone: '',
       notification: 'email',
 
+
       
       rating: [null, CustomerValidators.ratingRange(1, 5)],
       sendCatalog: true
