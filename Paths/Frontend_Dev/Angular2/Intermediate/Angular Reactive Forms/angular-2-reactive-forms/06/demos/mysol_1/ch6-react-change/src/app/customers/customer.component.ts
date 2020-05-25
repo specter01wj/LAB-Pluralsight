@@ -35,6 +35,7 @@ export class CustomerComponent implements OnInit {
       notification: 'email',
 
 
+
       
       rating: [null, CustomerValidators.ratingRange(1, 5)],
       sendCatalog: true
