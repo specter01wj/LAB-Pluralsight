@@ -232,10 +232,10 @@
 
             <div class="form-group row mb-2">
               <label class="col-md-2 col-form-label"
-                     for="cityId">City, State, Zip Code</label>
+                     attr.for="{{'cityId' + i}}">City, State, Zip Code</label>
               <div class="col-md-3">
                 <input class="form-control"
-                       id="cityId"
+                       id="{{ 'cityId' + i }}"
                        type="text"
                        placeholder="City"
                        formControlName="city">
