@@ -39,6 +39,7 @@ export class CustomerComponent implements OnInit {
 
 
 
+
       
       rating: [null, CustomerValidators.ratingRange(1, 5)],
       sendCatalog: true
