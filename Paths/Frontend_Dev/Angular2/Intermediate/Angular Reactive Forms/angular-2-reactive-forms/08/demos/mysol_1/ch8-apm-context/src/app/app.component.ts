@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'ch8-apm-context';
+  pageTitle = 'CH8 Acme Product Management';
 }
