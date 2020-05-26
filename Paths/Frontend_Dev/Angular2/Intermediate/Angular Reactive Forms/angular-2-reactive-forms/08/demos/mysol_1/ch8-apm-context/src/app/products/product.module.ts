@@ -21,10 +21,10 @@ import { ProductListComponent } from './product-list/product-list.component';
   ],
   imports: [
     CommonModule,
-    ProductsRoutingModule,
     SharedModule,
     ReactiveFormsModule,
-    InMemoryWebApiModule.forRoot(ProductData)
+    InMemoryWebApiModule.forRoot(ProductData),
+    ProductsRoutingModule
   ]
 })
 export class ProductModule { }
