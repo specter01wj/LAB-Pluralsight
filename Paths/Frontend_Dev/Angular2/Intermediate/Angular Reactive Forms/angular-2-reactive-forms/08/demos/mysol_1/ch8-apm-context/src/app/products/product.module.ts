@@ -5,7 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { ProductData } from './product-data';
+import { ProductData } from '../services/product-data';
 
 import { ProductsRoutingModule } from './products-routing.module';
 
