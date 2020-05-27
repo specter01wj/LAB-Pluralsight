@@ -12,12 +12,13 @@ import { ProductsRoutingModule } from './products-routing.module';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ProductComponent } from './product.component';
 
 @NgModule({
   declarations: [
   	ProductDetailComponent, 
   	ProductEditComponent, 
-  	ProductListComponent
+  	ProductListComponent, ProductComponent
   ],
   imports: [
     CommonModule,
