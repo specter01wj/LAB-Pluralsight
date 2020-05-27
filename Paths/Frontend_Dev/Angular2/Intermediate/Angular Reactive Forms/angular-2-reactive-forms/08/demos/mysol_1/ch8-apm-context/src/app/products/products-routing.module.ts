@@ -14,12 +14,6 @@ const routes: Routes = [
     component: ProductComponent,
     children: [
       { path: '', component: ProductListComponent },
-
-
-
-
-
-      
       { path: ':id', component: ProductDetailComponent },
       { path: ':id/edit', 
       	canDeactivate: [ProductEditGuard],
