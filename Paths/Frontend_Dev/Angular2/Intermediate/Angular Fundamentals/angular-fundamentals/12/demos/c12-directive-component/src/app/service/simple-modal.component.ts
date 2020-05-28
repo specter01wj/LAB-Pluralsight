@@ -11,7 +11,7 @@ export class SimpleModalComponent implements OnInit {
   @Input() title: string;
   @Input() elementId: string;
   @Input() closeOnBodyClick: string;
-  @ViewChild('modalcontainer') containerEl: ElementRef;
+  @ViewChild('modalcontainer', {static: true}) containerEl: ElementRef;
 
 
   constructor(@Inject(JQ_TOKEN) private $: any) { }
