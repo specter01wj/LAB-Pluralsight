@@ -27,7 +27,8 @@ import {
   SessionListComponent,
   EventRouteActivator,
   EventsListResolverService,
-  DurationPipe
+  DurationPipe,
+  UpvoteComponent
 } from './events/index';
 
 // import { EventsListComponent } from './events/events-list/events-list.component';
@@ -37,6 +38,7 @@ import {
 import { E404Component } from './errors/e404.component';
 
 import { AuthService } from './user/auth.service';
+// import { UpvoteComponent } from './events/event-details/upvote/upvote.component';
 // import { ModalTriggerDirective } from './service/modal-trigger.directive';
 // import { SimpleModalComponent } from './service/simple-modal.component';
 
@@ -61,7 +63,8 @@ let jQuery = window['$'];
     CollapsibleWellComponent,
     DurationPipe,
     SimpleModalComponent,
-    ModalTriggerDirective
+    ModalTriggerDirective,
+    UpvoteComponent
   ],
   imports: [
     BrowserModule,
