@@ -21,6 +21,7 @@ import {
   EventsListComponent,
   EventThumbnailComponent,
   EventService,
+  VoterService,
   EventDetailsComponent,
   CreateEventComponent,
   CreateSessionComponent,
@@ -74,6 +75,7 @@ let jQuery = window['$'];
   ],
   providers: [
   	EventService, 
+    VoterService,
     // ToastrService, 
     { provide: TOASTR_TOKEN, useValue: toastr },
     { provide: JQ_TOKEN, useValue: jQuery },
