@@ -39,6 +39,7 @@ import {
 import { E404Component } from './errors/e404.component';
 
 import { AuthService } from './user/auth.service';
+import { LocationValidatorDirective } from './service/location-validator.directive';
 // import { UpvoteComponent } from './events/event-details/upvote/upvote.component';
 // import { ModalTriggerDirective } from './service/modal-trigger.directive';
 // import { SimpleModalComponent } from './service/simple-modal.component';
@@ -65,7 +66,8 @@ let jQuery = window['$'];
     DurationPipe,
     SimpleModalComponent,
     ModalTriggerDirective,
-    UpvoteComponent
+    UpvoteComponent,
+    LocationValidatorDirective
   ],
   imports: [
     BrowserModule,
