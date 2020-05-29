@@ -39,7 +39,7 @@ export class SessionListComponent implements OnInit {
   }
 
   userHasVoted(session: ISession) {
-    return this.voterService.userHasVoted(session, this.auth.currentUser.userName)
+    return this.voterService.userHasVoted(session, this.auth.currentUser.userName);
   }
 
   filterSessions(filter) {
