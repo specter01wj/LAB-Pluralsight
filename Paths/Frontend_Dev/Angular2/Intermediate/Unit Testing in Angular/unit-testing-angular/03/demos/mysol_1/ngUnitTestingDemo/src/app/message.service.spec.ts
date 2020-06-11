@@ -10,5 +10,10 @@ describe('MessageService', () => {
 	it('should have no messages to start', () => {
 		expect(service.messages.length).toBe(0);
 	});
+
+	it('should add a messages when add is called', () => {
+		service.add('message1');
+		expect(service.messages.length).toBe(1);
+	});
 })
 
