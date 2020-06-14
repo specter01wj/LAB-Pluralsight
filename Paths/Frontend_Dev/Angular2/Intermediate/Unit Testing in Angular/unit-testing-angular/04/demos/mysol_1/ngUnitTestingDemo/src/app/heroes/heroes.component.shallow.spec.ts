@@ -5,6 +5,7 @@ import { HeroService } from '../hero.service';
 
 describe('HeroesComponent (shallow tests)', () => {
   let fixture: ComponentFixture<HeroesComponent>;
+  let mockHeroService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -14,6 +15,8 @@ describe('HeroesComponent (shallow tests)', () => {
       ],
       schemas: [NO_ERRORS_SCHEMA]
     });
+
+    mockHeroService = jasmine.createSpyObj(['getHeroes', 'addHero', 'deleteHero']);
 
     fixture = TestBed.createComponent(HeroesComponent);
   });
