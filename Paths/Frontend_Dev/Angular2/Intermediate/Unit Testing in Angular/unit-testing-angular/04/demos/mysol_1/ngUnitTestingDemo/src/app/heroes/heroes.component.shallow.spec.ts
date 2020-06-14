@@ -52,7 +52,7 @@ describe('HeroesComponent (shallow tests)', () => {
     mockHeroService.getHeroes.and.returnValue(of(HEROES));
     fixture.detectChanges();
 
-    expect(fixture.debugElement).toBe(3);
+    expect(fixture.debugElement.queryAll(By.css('li')).length).toBe(3);
   });
 
 })
