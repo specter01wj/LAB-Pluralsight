@@ -23,6 +23,7 @@ describe('HeroesComponent (shallow tests)', () => {
     HEROES = [
       {id:1, name: 'SpiderDude', strength: 8},
       {id:2, name: 'Wonderful Woman', strength: 24},
+      
       {id:3, name: 'SuperDude', strength: 55}
     ];
 
