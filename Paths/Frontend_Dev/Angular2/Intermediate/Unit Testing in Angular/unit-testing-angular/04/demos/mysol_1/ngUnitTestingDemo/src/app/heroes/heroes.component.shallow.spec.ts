@@ -1,4 +1,3 @@
-import { HeroesComponent } from "./heroes.component";
 import { of } from "rxjs";
 import { TestBed, ComponentFixture } from "@angular/core/testing";
 import { HeroComponent } from "./hero.component";
