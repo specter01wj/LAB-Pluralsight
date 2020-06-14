@@ -28,7 +28,7 @@ describe('HeroComponent (shallow tests)', () => {
 		let deA = fixture.debugElement.query(By.css('a'));
 		expect(deA.nativeElement.textContent).toContain('SuperDude');
 
-		// expect(fixture.nativeElement.querySelector('a').textContent).toContain('SuperDude');
+		expect(fixture.nativeElement.querySelector('a').textContent).toContain('SuperDude');
 	});
 
 });
