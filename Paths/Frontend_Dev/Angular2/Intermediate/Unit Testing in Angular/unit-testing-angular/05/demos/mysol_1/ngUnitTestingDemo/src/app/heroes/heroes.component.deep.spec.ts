@@ -34,13 +34,16 @@ describe('HeroesComponent (deep tests)', () => {
     });
 
     fixture = TestBed.createComponent(HeroesComponent);
+    
+  });
+
+  it('should render each hero as a HeroComponent', () => {
     mockHeroService.getHeroes.and.returnValue(of(HEROES));
 
     fixture.detectChanges();
-  });
 
-  it('should be true', () => {
-    expect(true).toBe(true);
+    const heroComponentDEs = fixture.debugElement.queryAll(By.directive(HeroComponent));
+    expect(heroComponentDEs.length).toEqual(3);
   });
 
 })
