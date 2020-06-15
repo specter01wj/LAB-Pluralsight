@@ -29,7 +29,7 @@ describe('HeroService', () => {
       service.getHero(4).subscribe(() => {
         console.log('fullfilled');
       });
-      service.getHero(3).subscribe();
+      // service.getHero(3).subscribe();
 
       const req = httpTestingController.expectOne('api/heroes/4');
 
