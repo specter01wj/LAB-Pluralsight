@@ -44,6 +44,10 @@ describe('HeroesComponent (deep tests)', () => {
 
     const heroComponentDEs = fixture.debugElement.queryAll(By.directive(HeroComponent));
     expect(heroComponentDEs.length).toEqual(3);
+    // expect(heroComponentDEs[0].componentInstance.hero.name).toEqual('SpiderDude');
+    for(let i = 0; i < heroComponentDEs.length; i++) {
+      expect(heroComponentDEs[i].componentInstance.hero).toEqual(HEROES[i]);
+    }
   });
 
 })
