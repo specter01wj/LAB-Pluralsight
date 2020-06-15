@@ -30,9 +30,13 @@ describe('HeroesComponent (deep tests)', () => {
       providers: [
         { provide: HeroService, useValue: mockHeroService }
       ],
+      schemas: [NO_ERRORS_SCHEMA]
     });
 
     fixture = TestBed.createComponent(HeroesComponent);
+    mockHeroService.getHeroes.and.returnValue(of(HEROES));
+
+    fixture.detectChanges();
   });
 
   it('should be true', () => {
