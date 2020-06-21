@@ -26,22 +26,6 @@ import { MessageModule } from './messages/message.module';
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', component: PageNotFoundComponent }
     ], { useHash: true }),
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     ProductModule,
     UserModule,
     MessageModule
