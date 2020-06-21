@@ -27,6 +27,7 @@ import { MessageModule } from './messages/message.module';
       { path: '**', component: PageNotFoundComponent }
     ], { useHash: true }),
 
+
     
     ProductModule,
     UserModule,
