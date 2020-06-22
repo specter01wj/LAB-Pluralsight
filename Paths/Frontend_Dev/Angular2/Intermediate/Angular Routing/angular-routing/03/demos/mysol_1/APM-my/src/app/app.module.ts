@@ -20,25 +20,6 @@ import { MessageModule } from './messages/message.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
     InMemoryWebApiModule.forRoot(ProductData, { delay: 1000 }),
     RouterModule.forRoot([
       { path: 'welcome', component: WelcomeComponent },
