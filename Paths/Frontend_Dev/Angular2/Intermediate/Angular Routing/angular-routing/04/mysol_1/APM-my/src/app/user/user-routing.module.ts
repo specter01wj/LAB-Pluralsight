@@ -24,6 +24,7 @@ const routes: Routes = [
     SharedModule
   ],
   declarations: [
-  ]
+  ],
+  exports: [RouterModule]
 })
 export class UserRoutingModule { }
