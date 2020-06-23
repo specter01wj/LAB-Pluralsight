@@ -23,6 +23,7 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [
-  ]
+  ],
+  exports: [RouterModule]
 })
 export class ProductRoutingModule { }
