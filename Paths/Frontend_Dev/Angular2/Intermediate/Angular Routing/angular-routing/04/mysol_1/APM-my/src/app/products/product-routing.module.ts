@@ -23,9 +23,6 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [
-    ProductListComponent,
-    ProductDetailComponent,
-    ProductEditComponent
   ]
 })
 export class ProductRoutingModule { }
