@@ -1,6 +1,6 @@
 const AWS = require('aws-sdk');
 
-AWS.config.update({region: 'us-east-1'});
+AWS.config.update({region: 'us-east-2'});
 
 const dynamodb = new AWS.DynamoDB();
 
@@ -13,7 +13,7 @@ const item = {
       S: process.argv[2]
     }
   },
-  TableName: 'aws-developer'
+  TableName: 'JinWang_first_table'
 };
 
 dynamodb.putItem(item, (err, res) => {
