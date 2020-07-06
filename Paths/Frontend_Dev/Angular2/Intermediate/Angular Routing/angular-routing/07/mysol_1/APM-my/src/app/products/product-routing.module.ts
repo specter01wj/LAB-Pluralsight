@@ -12,7 +12,14 @@ import { ProductResolverService } from './product-resolver.service';
 const routes: Routes = [
 	{ path: 'products', component: ProductListComponent },
   { path: 'products/:id', component: ProductDetailComponent, resolve: { resolvedData: ProductResolverService } },
-  { path: 'products/:id/edit', component: ProductEditComponent, resolve: { resolvedData: ProductResolverService } }
+  { path: 'products/:id/edit', component: ProductEditComponent, 
+    resolve: { resolvedData: ProductResolverService },
+    children: [
+    { path: '', redirectTo: 'info', pathMatch: 'full' },
+    { path: 'info', component: ProductEditInfoComponent },
+    { path: 'tags', component: ProductEditTagsComponent },
+    ]
+  }
 ];
 
 @NgModule({
