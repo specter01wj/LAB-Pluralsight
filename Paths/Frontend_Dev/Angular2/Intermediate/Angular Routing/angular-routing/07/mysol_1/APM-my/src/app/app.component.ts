@@ -18,6 +18,7 @@ export class AppComponent {
   get userName(): string {
     if (this.authService.currentUser) {
       return this.authService.currentUser.userName;
+
       
     }
     return '';
