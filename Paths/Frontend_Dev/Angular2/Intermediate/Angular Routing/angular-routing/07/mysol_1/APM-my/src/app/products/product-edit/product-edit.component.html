@@ -5,7 +5,7 @@
 
   <div class="card-body"
        *ngIf="product">
-    <form novalidate
+    <!-- <form novalidate
           #productForm="ngForm">
 
       <div class="form-group row">
@@ -93,7 +93,13 @@
           </button>
         </div>
       </div>
-    </form>
+    </form> -->
+
+    <div class="wizard">
+      <a>Basic Information</a>
+      <a>Search Tags</a>
+    </div>
+    <router-outlet></router-outlet>
   </div>
 </div>
 
