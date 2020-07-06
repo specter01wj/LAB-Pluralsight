@@ -31,6 +31,8 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [
+    ProductEditInfoComponent,
+    ProductEditTagsComponent
   ],
   exports: [RouterModule]
 })
