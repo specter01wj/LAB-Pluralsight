@@ -3,7 +3,9 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="SecuringAngularApps.API" expanded="True" selected="True" />
+          <Node name="SecuringAngularApps.API" expanded="True">
+            <Node name="SecuringAngularApps.API" expanded="True" selected="True" />
+          </Node>
         </State>
       </Pad>
     </Pads>
