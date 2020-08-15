@@ -1,0 +1,46 @@
+<script type="application/ld+json">
+	{
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Apple Pie",
+        "image": [
+        "http://pieshoptesting.com/images/products/applepie.jpg"
+        ],
+        "description": "Our famous apple pie",
+        "sku": "0123456",
+        "mpn": "925872",
+        "brand": {
+        "@type": "Brand",
+        "name": "Bethany's Pie Shop"
+        },
+        "review": {
+        "@type": "Review",
+        "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4",
+        "bestRating": "5"
+        },
+        "author": {
+           "@type": "Person",
+           "name": "Neil Morrissey"
+        }
+        },
+        "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.4",
+        "reviewCount": "89"
+        },
+        "offers": {
+        "@type": "Offer",
+        "url": "http://pieshoptesting.com/appliepie.html",
+        "priceCurrency": "USD",
+        "price": "14.95",
+        "priceValidUntil": "2020-12-31",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+           "@type": "Organization",
+           "name": "Bethany's Pie Shop"
+        }
+        }
+        }
+</script>
