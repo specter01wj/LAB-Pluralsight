@@ -42,6 +42,30 @@
       flex: 2;
     }
 
+    .desktop, .print {
+      display: none;
+    }
+
+    @media print {
+      .mobile, .desktop {
+        display: none;
+      }
+
+      .print {
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      .mobile {
+        display: none;
+      }
+
+      .desktop {
+        display: block;
+      }
+    }
+
   </style>
 </head>
 <body>
