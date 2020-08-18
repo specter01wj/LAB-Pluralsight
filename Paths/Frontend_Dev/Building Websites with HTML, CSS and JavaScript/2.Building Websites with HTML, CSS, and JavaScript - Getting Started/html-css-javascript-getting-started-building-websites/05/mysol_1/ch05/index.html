@@ -28,15 +28,36 @@
       float: left;
     }
 
+    .columns-2 {
+      border: solid 1px #39f;
+      display: flex;
+    }
+
+    .columns-2 > div {
+      border: solid 1px #ccc;
+      flex: 1;
+    }
+
+    .columns-2 > div:nth-of-type(2) {
+      flex: 2;
+    }
+
   </style>
 </head>
 <body>
 
   <div class="box-model">Hello</div>
 
-  <div class="columns">
+  <!-- <div class="columns">
     <div>Column 1</div>
     <div>Column 2</div>
+  </div> -->
+
+
+  <div class="columns-2">
+    <div>Column 3</div>
+    <div>Column 4</div>
+    <div>Column 5</div>
   </div>
 
 
