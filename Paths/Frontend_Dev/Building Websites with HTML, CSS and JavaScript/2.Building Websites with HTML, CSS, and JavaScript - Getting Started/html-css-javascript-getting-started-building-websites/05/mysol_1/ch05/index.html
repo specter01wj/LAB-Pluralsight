@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="site.css" type="text/css" />
   <style type="text/css">
     
-    /*div {
+    div.box-model {
       display: block;
       background-color: #ccc;
       margin: 25px;
@@ -15,18 +15,24 @@
       padding: 25px;
       width: 100px;
       height: 100px;
-    }*/
+    }
 
-    .colums {
+    .columns {
       width: 100%;
       border: solid 1px #ccc;
+    }
+
+    .columns > div {
+      width: 49%;
+      border: solid 1px #ddd;
+      float: left;
     }
 
   </style>
 </head>
 <body>
 
-  <div>Hello</div>
+  <div class="box-model">Hello</div>
 
   <div class="columns">
     <div>Column 1</div>
