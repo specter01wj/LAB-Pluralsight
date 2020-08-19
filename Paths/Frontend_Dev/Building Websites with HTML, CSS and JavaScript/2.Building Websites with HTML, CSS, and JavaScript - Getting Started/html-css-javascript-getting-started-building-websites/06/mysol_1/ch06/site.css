@@ -69,7 +69,9 @@ article {
   width: 75%;
 }
 
-
+.columns {
+  display: flex;
+}
 
 /*Media Query*/
 
@@ -83,6 +85,9 @@ article {
     margin-left: 2%;
   }
 
+  .columns-desktop {
+    display: flex;
+  }
 
 }
 
