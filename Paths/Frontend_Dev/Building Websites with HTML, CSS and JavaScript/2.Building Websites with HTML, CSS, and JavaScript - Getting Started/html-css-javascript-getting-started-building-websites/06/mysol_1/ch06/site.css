@@ -27,9 +27,16 @@ header {
   padding: 10px;
 }
 
+nav a:visited,
+nav a:link {
+  color: #fff;
+  text-decoration: none;
+}
 
-
-
+nav > ul {
+  display: inline;
+  padding: 0;
+}
 
 div.heading {
   color: #39f;
