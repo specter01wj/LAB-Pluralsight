@@ -92,9 +92,19 @@ article {
 }
 
 
+/* Pie */
 
+.pie {
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  border: solid 1px #ccc;
+}
 
-
+.pie img {
+  width: 100%;
+}
 
 
 
