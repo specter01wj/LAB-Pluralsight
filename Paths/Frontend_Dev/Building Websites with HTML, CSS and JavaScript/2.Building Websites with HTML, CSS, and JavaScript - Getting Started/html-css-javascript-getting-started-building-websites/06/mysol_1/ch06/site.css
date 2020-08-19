@@ -44,7 +44,13 @@ nav > ul > li {
   margin: 0 5px 0 5px;
 }
 
-
+main {
+  display: block;
+  background-image: url("images/background.png");
+  padding-top: 3em;
+  padding-bottom: 3em;
+  min-height: 85%;
+}
 
 
 
