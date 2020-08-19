@@ -13,6 +13,22 @@ body {
   background-color: #999;
 }
 
+p {
+  margin: 0.5em 0 0.5em 0;
+}
+
+header {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #a493c0;
+  padding: 10px;
+}
+
+
+
 
 
 div.heading {
