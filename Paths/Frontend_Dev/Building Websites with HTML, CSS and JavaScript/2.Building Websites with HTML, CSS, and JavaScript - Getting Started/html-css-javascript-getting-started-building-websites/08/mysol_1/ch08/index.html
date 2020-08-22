@@ -63,6 +63,8 @@
     </ul>
   </section>
 
+  <button id="click-me">Click Me!</button>
+
   <footer>
     <nav>
       <ul>
@@ -78,6 +80,11 @@
 
     window.addEventListener('DOMContentLoaded', function(e) {
       console.log('Page is loaded!');
+    });
+
+    let btn = document.querySelector('#click-me');
+    btn.addEventListener('click', function(e) {
+      console.log('Button is clicked!');
     });
 
     let links = document.querySelectorAll(".tag");
