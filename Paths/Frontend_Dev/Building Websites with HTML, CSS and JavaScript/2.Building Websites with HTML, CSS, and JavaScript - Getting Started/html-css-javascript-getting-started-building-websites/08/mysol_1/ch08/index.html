@@ -74,21 +74,16 @@
   </footer>
 
   <script type="text/javascript">
-    document.querySelector("a[href='https://twitter.com/craigshoemaker']");
+    // document.querySelector("a[href='https://twitter.com/craigshoemaker']");
+
+    let links = document.querySelector(".tag");
+    links.forEach(function(link) {
+      link.setAttribute('target', '_blank');
+    });
 
 
 
 
-
-
-
-
-
-
-
-
-
-    
   </script>
 
 </body>
