@@ -87,6 +87,13 @@
       console.log('Button is clicked!');
     });
 
+    window.addEventListener('orientationchange', function(e) {
+      let screen = window.screen;
+      let angle = screen.orientation.angle;
+      let type = screen.orientation.type;
+      console.log(`angle: ${angle}, type: ${type}`);
+    });
+
     let links = document.querySelectorAll(".tag");
     links.forEach(function(link) {
       link.setAttribute('target', '_blank');
