@@ -76,6 +76,10 @@
   <script type="text/javascript">
     // document.querySelector("a[href='https://twitter.com/craigshoemaker']");
 
+    window.addEventListener('DOMContentLoaded', function(e) {
+      console.log('Page is loaded!');
+    });
+
     let links = document.querySelectorAll(".tag");
     links.forEach(function(link) {
       link.setAttribute('target', '_blank');
