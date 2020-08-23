@@ -68,6 +68,12 @@
           const button = e.currentTarget;
           const container = button.parentNode;
 
+          const order = {
+            id: (id = button.getAttribute("data-order")),
+            title: container.querySelector(".title").innerText,
+            price: container.querySelector(".price").innerText,
+            desc: container.querySelector(".desc").innerText
+          };
         });
       });
 
