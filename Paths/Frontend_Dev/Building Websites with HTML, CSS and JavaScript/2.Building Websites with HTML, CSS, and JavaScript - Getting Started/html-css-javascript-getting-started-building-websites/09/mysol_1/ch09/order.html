@@ -188,8 +188,26 @@
     <script type="text/javascript">
       window.addEventListener("DOMContentLoaded", function(e) {
 
+        const order = localStorage.getItem("order");
+        const pieOrder = JSON.parse(order);
 
+        if (order) {
+          const pie = document.querySelector(".pie");
+          const title = pie.querySelector(".title");
+          const price = pie.querySelector(".price");
+          const desc = pie.querySelector(".desc");
+          const orderInput = document.querySelector("#pie-order");
 
+          title.innerText = pieOrder.title;
+          price.innerText = pieOrder.price;
+          desc.innerText = pieOrder.desc;
+
+          orderInput.value = order;
+
+          const img = pie.querySelector("img");
+          img.setAttribute("src", `images/${pieOrder.id}.png`);
+          img.setAttribute("alt", pieOrder.title);
+        }
 
         
       });
