@@ -196,12 +196,12 @@
           const title = pie.querySelector(".title");
           const price = pie.querySelector(".price");
           const desc = pie.querySelector(".desc");
-          const orderInput = document.querySelector("#pie-order");
 
           title.innerText = pieOrder.title;
           price.innerText = pieOrder.price;
           desc.innerText = pieOrder.desc;
 
+          const orderInput = document.querySelector("#pie-order");
           orderInput.value = order;
 
           const img = pie.querySelector("img");
@@ -209,7 +209,7 @@
           img.setAttribute("alt", pieOrder.title);
         }
 
-        
+
       });
       
     </script>
