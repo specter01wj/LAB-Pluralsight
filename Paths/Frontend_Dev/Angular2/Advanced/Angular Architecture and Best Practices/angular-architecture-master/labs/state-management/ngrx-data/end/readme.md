@@ -1,1 +1,0 @@
-## See Angular-Architecture/state-management/ngrx-data for the solution code
