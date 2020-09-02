@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{91C03E41-9DE4-4952-936C-DB9D26155111}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SecuringAngularApps.API/Controllers/AccountController.cs">
+    <Files>
+      <File FileName="SecuringAngularApps.API/Controllers/AccountController.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SecuringAngularApps.API" expanded="True">
+            <Node name="SecuringAngularApps.API" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="AccountController.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="SecuringAngularApps.STS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.SecuringAngularApps.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

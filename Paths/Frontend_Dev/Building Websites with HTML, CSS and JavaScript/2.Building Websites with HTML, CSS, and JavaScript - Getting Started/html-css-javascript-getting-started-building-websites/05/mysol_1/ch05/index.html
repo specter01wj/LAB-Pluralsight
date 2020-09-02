@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="site.css" type="text/css" />
+  <style type="text/css">
+    
+    div.box-model {
+      display: block;
+      background-color: #ccc;
+      margin: 25px;
+      border: solid 1px #777;
+      padding: 25px;
+      width: 100px;
+      height: 100px;
+    }
+
+    .columns {
+      width: 100%;
+      border: solid 1px #ccc;
+    }
+
+    .columns > div {
+      width: 49%;
+      border: solid 1px #ddd;
+      float: left;
+    }
+
+    .columns-2 {
+      border: solid 1px #39f;
+      display: flex;
+    }
+
+    .columns-2 > div {
+      border: solid 1px #ccc;
+      flex: 1;
+    }
+
+    .columns-2 > div:nth-of-type(2) {
+      flex: 2;
+    }
+
+    .desktop, .print {
+      display: none;
+    }
+
+    @media print {
+      .mobile, .desktop {
+        display: none;
+      }
+
+      .print {
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      .mobile {
+        display: none;
+      }
+
+      .desktop {
+        display: block;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="box-model">Hello</div>
+
+  <!-- <div class="columns">
+    <div>Column 1</div>
+    <div>Column 2</div>
+  </div> -->
+
+
+  <div class="columns-2">
+    <div>Column 3</div>
+    <div>Column 4</div>
+    <div>Column 5</div>
+  </div>
+
+  <dir class="desktop">Desktop</dir>
+  <dir class="mobile">Mobile</dir>
+  <dir class="print">Print</dir>
+
+
+</body>
+</html>

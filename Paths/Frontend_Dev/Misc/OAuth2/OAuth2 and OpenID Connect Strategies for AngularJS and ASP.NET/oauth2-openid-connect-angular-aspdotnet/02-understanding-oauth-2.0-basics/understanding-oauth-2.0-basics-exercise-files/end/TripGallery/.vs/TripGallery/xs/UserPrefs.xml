@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{AD6E3942-4BF6-4B12-9BCC-9F5ACAE5DCD6}|">
+  <MonoDevelop.Ide.ItemProperties.Client.TripGallery.MVCClient PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TripGallery" expanded="True" selected="True">
+            <Node name="Client" expanded="True">
+              <Node name="TripGallery.MVCClient" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
