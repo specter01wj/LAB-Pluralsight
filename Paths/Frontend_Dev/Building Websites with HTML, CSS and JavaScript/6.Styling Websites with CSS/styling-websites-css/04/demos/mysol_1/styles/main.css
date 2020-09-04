@@ -98,11 +98,24 @@
      color: #fff;
      width: 450px;
      text-align: center;
+     border: 10px solid #a693c2;
+     outline: 2px solid red;
+     padding: 5px 20px;
+     margin-bottom: 20px;
 }
 
 .promotion img {
      width: 100%;
 }
 
+
+.promotion-purple {
+     background-color: #a693c2;
+     border-color: #23cea6;
+}
+
+footer {
+     margin: 60px;
+}
 
 
