@@ -27,6 +27,7 @@ import { AccountMenuComponent } from "./components/account-menu";
     NavBarComponent,
 
 
+
     
     CoursesComponent,
     RegisterComponent,
