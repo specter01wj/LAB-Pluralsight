@@ -25,24 +25,6 @@ import { AccountMenuComponent } from "./components/account-menu";
   declarations: [
     AppComponent,
     NavBarComponent,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     CoursesComponent,
     RegisterComponent,
     SignInComponent,
