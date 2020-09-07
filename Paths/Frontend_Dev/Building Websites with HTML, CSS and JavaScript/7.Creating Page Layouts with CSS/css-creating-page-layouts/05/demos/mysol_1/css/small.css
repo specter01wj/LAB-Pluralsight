@@ -34,6 +34,13 @@ header {
     background-color: #9b87b8;
 }
 
+header img {
+    float: left; 
+    height: 85px;
+    padding-right: 10px; 
+    
+}
+
 
 footer {
     background-color: #9b87b8;
