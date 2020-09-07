@@ -76,7 +76,12 @@ main img {
 	height: auto;
 }
 
-
+main h1 {
+    color: #9b87b8;
+    font-style: italic;
+    margin: .5rem 0 .1rem 0;
+    font-size: 2rem;
+}
 
 
 
