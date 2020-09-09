@@ -78,12 +78,20 @@ main img {
 }
 
 
-main h1 {
+main h1, main h3 {
     color: #9b87b8;
     font-style: italic;
     margin: .5rem 0 .1rem 0;
-    font-size: 2rem;
+    
 }
+main h1{font-size: 2rem;}
+main h3{font-size: 1.2rem;}
+
+main p {
+    font-size: 1.2rem;
+    margin: 0 0 .3rem 0;
+}
+
 
 .labeled {position: relative;}
 .labeled h6, .labeled p {
