@@ -6,7 +6,8 @@
     
 /* GRID */
     .medium-6 {
-        width: 50%;
+        /*width: 50%;*/
+        flex-basis: 50%;
     
     }
 

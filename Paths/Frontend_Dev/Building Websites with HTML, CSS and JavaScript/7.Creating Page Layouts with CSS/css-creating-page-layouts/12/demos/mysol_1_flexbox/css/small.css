@@ -12,7 +12,9 @@ body {
 
 /* GRID */
 .row {
-    clear: both;
+    /*clear: both;*/
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .column {
@@ -21,8 +23,8 @@ body {
     margin: 0 0 .75rem 0;
 }
 .small-12 {
-    width: 100%;
-    
+    /*width: 100%;*/
+    flex-basis: 100%;
 }
 
 .limited {
