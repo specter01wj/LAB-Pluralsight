@@ -338,7 +338,7 @@ body {
 
 /* header rules */
 header {
-  background-color: #9b87b8; }
+  background-color: #822331; }
 
 header img {
   float: left;
@@ -369,7 +369,7 @@ button#hamburgerBtn {
   padding: 0 30px 0 2vw; }
 
 nav {
-  background-color: #23cfa7; }
+  background-color: #cf7b19; }
 
 nav ul {
   margin: 0;
@@ -402,7 +402,7 @@ main img {
   height: auto; }
 
 main h1, main h3 {
-  color: #9b87b8;
+  color: #822331;
   font-style: italic;
   margin: .5rem 0 .1rem 0; }
 main h1 {
@@ -434,7 +434,7 @@ main p {
   color: #b00; }
 
 footer {
-  background-color: #9b87b8;
+  background-color: #822331;
   font-size: 1.2rem; }
 
 footer h2 {
@@ -486,5 +486,3 @@ footer h2 {
   nav a {
     padding: .7rem 1rem; } }
 /* end of media query */
-
-/*# sourceMappingURL=styles.css.map */
