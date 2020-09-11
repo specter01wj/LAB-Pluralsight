@@ -54,8 +54,8 @@ footer li {padding-bottom: .3rem;}
 
 
 /*----- Clearfix: Force an Element not to collapse -----*/
-.clearfix:after {
+/*.clearfix:after {
   content: "";
   display: table;
   clear: both;
-}
+}*/
