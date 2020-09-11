@@ -6,8 +6,14 @@ p {text-align: center;}
 
 /* 12 COLUMN GRID SYSTEM */
 .row {
-    
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .column {border: dashed red 1px;}
 
+
+@for $i from 1 through 12 {
+    $w:($i / 12) * 100%;
+    .small-#{$i} {flex-basis: $w;}	
+} 
