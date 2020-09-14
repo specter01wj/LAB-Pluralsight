@@ -111,3 +111,32 @@
      background-color: #a693c2;
      border-color: #23cea6;
  }
+
+ #sidebar-heading {
+     font-size: 24px;
+ }
+
+#leftmenu > ul > li > ul > li > a {
+     color: red;
+}
+
+#leftmenu a {
+     color: #199175;
+}
+
+#leftmenu a:hover {
+     color: #116552;
+}
+
+tr:nth-of-type(odd) {
+     background-color: #b4ddd3;
+}
+
+tr:nth-of-type(even) {
+     background-color: #e0d7ef;
+}
+
+
+
+
+
