@@ -3,5 +3,8 @@ body {
     /*grid-template-columns: 1fr 1fr 1fr;*/
     /*grid-template-columns: repeat(12, 1fr);*/
     /*grid-template-columns: repeat(6, 1fr 2fr);*/
-    grid-template-columns: repeat(auto-fill, 10em);
+    /*grid-template-columns: repeat(auto-fill, 10em);*/
+    /*grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));*/
+    /*grid-template: 12em 8em 3em / repeat(4, 1fr);*/
+    grid-template: repeat(2, 10em 1fr) / repeat(12, 1fr);
 }
