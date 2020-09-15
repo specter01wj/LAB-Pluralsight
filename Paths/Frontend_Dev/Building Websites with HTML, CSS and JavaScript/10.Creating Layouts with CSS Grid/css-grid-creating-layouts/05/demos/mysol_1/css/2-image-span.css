@@ -4,5 +4,5 @@ body {
 }
 
 img {
-    grid-column-end: span 2;
+    /*grid-column-end: span 2;*/
 }
