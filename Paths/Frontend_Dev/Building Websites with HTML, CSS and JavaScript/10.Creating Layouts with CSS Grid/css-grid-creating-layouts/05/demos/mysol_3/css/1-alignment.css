@@ -11,7 +11,7 @@ body {
 }
 
 #special-one {
-	justify-self: end;
+	justify-self: start;
 	align-self: end;
 }
 
