@@ -41,7 +41,10 @@
            <form action="contact.html" method="POST" enctype="application/x-www-form-urlencoded">
                 <fieldset>
                     <legend>Contact Information</legend>
-                    Your name: <input type="text" name="customerName"><br/>
+                    <!-- Your name: <input type="text" name="customerName"><br/> -->
+                    <label for="nameField">Your name: </label>
+                    <input id="nameField" type="text" name="customerName"><br />
+                    
                     Your email: <input type="email" name="customerEmail"><br/>
                     Your phone: <input type="tel" name="customerPhone">
                     <input type="radio" name="phoneType" value="cell">Cell
