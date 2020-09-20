@@ -127,7 +127,12 @@ textarea {
     border-radius:7px;
 }
 
-
+input:valid{
+    border-color:green;
+}
+input:invalid{
+    border-color:red;
+}
 
 
 
