@@ -138,7 +138,10 @@ input:focus:invalid {
     border-color:black;
 }
 
-
+input:required,
+textarea:required{
+    border-style:dashed;
+}
 
 
 
