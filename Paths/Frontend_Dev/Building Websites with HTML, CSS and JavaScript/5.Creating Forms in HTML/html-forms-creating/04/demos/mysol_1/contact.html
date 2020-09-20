@@ -44,12 +44,14 @@
                     <!-- Your name: <input type="text" name="customerName"><br/> -->
                     <label for="nameField">Your name: </label>
                     <input id="nameField" type="text" name="customerName"><br />
-                    
+
                     Your email: <input type="email" name="customerEmail"><br/>
                     Your phone: <input type="tel" name="customerPhone">
-                    <input type="radio" name="phoneType" value="cell">Cell
-                    <input type="radio" name="phoneType" value="work">Work
-                    <input type="radio" name="phoneType" value="home">Home
+                    <div style="display: inline-block;">
+                        <label><input type="radio" name="phoneType" value="cell">Cell</label>
+                        <label><input type="radio" name="phoneType" value="work">Work</label>
+                        <label><input type="radio" name="phoneType" value="home">Home</label>
+                    </div>
                     <br />
 
                     Ok to contact me: 
