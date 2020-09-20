@@ -117,7 +117,9 @@ fieldset>legend{
     color:#a593c2;
 }
 
-
+p>label {
+    display:block;
+}
 
 
 
