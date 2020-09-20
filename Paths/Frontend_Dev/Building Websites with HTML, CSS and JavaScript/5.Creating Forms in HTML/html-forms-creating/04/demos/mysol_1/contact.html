@@ -39,13 +39,15 @@
         <main id="main">
            <h1>Contact Us</h1>
            <form action="contact.html" method="POST" enctype="application/x-www-form-urlencoded">
-                Your name: <input type="text" name="customerName"><br/>
-                Your email: <input type="email" name="customerEmail"><br/>
-                Your phone: <input type="tel" name="customerPhone">
-                <input type="radio" name="phoneType" value="cell">Cell
-                <input type="radio" name="phoneType" value="work">Work
-                <input type="radio" name="phoneType" value="home">Home
-                <br />
+                <fieldset>
+                    Your name: <input type="text" name="customerName"><br/>
+                    Your email: <input type="email" name="customerEmail"><br/>
+                    Your phone: <input type="tel" name="customerPhone">
+                    <input type="radio" name="phoneType" value="cell">Cell
+                    <input type="radio" name="phoneType" value="work">Work
+                    <input type="radio" name="phoneType" value="home">Home
+                    <br />
+                </fieldset>
 
                 Ok to contact me: 
                 <input type="checkbox" name="okToContact" value="phone"> by phone
