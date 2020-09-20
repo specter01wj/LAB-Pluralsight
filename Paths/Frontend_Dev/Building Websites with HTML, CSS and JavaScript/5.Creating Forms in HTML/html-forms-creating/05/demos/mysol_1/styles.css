@@ -134,7 +134,9 @@ input:invalid{
     border-color:red;
 }
 
-
+input:focus:invalid {
+    border-color:black;
+}
 
 
 
