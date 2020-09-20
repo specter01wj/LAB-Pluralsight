@@ -113,7 +113,9 @@ fieldset{
     border-style:solid;
 }
 
-
+fieldset>legend{
+    color:#a593c2;
+}
 
 
 
