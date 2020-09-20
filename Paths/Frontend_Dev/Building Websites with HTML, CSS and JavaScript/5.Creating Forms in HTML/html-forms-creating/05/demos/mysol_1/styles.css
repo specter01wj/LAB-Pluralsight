@@ -117,11 +117,15 @@ fieldset>legend{
     color:#a593c2;
 }
 
-p>label {
+p > label {
     display:block;
 }
 
-
+input[type="email"], 
+input[type="tel"], 
+textarea {
+    border-radius:7px;
+}
 
 
 
