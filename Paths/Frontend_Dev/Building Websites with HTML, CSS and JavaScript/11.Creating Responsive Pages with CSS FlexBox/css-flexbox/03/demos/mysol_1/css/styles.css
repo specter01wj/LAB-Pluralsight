@@ -43,8 +43,10 @@ nav>ul>li a {
 /*Side Menu*/
 
 .mainContent ul{
-    padding-inline-start: 2px;
-    margin-right: 1.5rem;
+    /*padding-inline-start: 2px;
+    margin-right: 1.5rem;*/
+    padding-inline-start: 0;
+    margin-right: 0;
 }
 
 .mainContent ul>a>li{
