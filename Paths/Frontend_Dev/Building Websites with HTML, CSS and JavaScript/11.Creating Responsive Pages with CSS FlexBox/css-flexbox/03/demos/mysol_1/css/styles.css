@@ -113,7 +113,11 @@ footer > p, footer > address {
     margin: 5px 10px;
 }
 
-
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
 
 
 
