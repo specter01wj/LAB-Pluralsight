@@ -133,6 +133,22 @@ footer > p, footer > address {
     align-items: center;
 }
 
+.pieGallery{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.pieCard{
+    display: flex;
+    flex-flow: column wrap;
+    margin: .4rem;
+    padding: .5rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+}
 
 .leftmenu{
     display: flex;
