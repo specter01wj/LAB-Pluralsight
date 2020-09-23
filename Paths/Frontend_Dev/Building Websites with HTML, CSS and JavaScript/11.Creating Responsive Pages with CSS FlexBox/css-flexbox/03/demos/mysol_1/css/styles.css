@@ -150,6 +150,17 @@ footer > p, footer > address {
     box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
 }
 
+.pieCard h5, .pieCard p{
+    margin: .2rem 0;
+}
+
+.cardRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .leftmenu{
     display: flex;
     flex-direction: column;
