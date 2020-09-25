@@ -77,6 +77,9 @@ nav>ul>li a {
     .leftmenu{
         order: 1;
     }
+    .main, .pieGallery {
+        flex-basis: 90%;
+    }
 }
 
 /*Main Content*/
@@ -85,7 +88,7 @@ nav>ul>li a {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /*flex-wrap: wrap;*/
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -99,7 +102,8 @@ nav>ul>li a {
 .main{
     display: flex;
     flex-direction: column;
-    width: 60%;
+    /*width: 60%;*/
+    flex-basis: 60%;
 }
 
 .pieRow{
@@ -128,7 +132,8 @@ nav>ul>li a {
 .pieGallery{
     display: flex;
     flex-direction: row;
-    width: 60%;
+    /*width: 60%;*/
+    flex-basis: 60%;
     flex-wrap: wrap;
     align-content: flex-start;
 }
