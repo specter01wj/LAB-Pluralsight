@@ -78,7 +78,7 @@ nav>ul>li a {
         order: 1;
     }
     .main, .pieGallery {
-        flex-basis: 90%;
+        flex-basis: 90% !important;
     }
 }
 
@@ -127,6 +127,10 @@ nav>ul>li a {
     flex-shrink: 3: 
 }
 
+#promos {
+    align-self: center;
+}
+
 
 
 .pieGallery{
@@ -152,6 +156,11 @@ nav>ul>li a {
 .pieCard h5, .pieCard p{
     margin: .2rem 0;
 }
+
+.pieCard > img {
+    align-self: center;
+}
+
 
 .cardRow{
     display: flex;
