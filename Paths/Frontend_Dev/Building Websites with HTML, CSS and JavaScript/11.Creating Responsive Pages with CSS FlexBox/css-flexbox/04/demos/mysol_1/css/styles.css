@@ -163,7 +163,9 @@ footer > p, footer > address{
     order: 15;
 }
 
-
+.pieRow h5, .pieRow p {
+    margin: 0;
+}
 
 
 
