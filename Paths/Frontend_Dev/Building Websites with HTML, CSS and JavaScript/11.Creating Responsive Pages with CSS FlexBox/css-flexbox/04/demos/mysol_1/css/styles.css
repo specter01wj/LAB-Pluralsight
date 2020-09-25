@@ -72,6 +72,13 @@ nav>ul>li a {
     align-items: center;
 }
 
+
+@media screen and (max-width: 600px) {
+    .leftmenu{
+        order: 1;
+    }
+}
+
 /*Main Content*/
 
 .mainContent{
