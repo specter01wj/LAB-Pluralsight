@@ -104,10 +104,17 @@ nav>ul>li a {
 .pieRow{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     margin-bottom: 10px;
     flex-wrap: wrap;
     align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+}
+
+.pieRow > div {
+    flex-grow: 2;
+    padding-left: .5rem;
 }
 
 .pieGallery{
@@ -125,6 +132,8 @@ nav>ul>li a {
     padding: .5rem;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+    padding: .4rem;
+    flex-grow: 2;
 }
 
 .pieCard h5, .pieCard p{
