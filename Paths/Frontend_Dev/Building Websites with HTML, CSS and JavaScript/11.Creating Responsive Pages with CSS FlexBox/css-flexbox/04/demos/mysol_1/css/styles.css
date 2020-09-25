@@ -132,6 +132,10 @@ nav>ul>li a {
     background-color: #fff;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+    border-radius: 20px;
+}
+#promos > h3 {
+    margin: 5px 0;
 }
 
 
