@@ -25,10 +25,12 @@ nav>ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
 }
 
 nav>ul>li {
-    float: left;
+    /*float: left;*/
 }
 
 nav>ul>li a {
