@@ -21,6 +21,11 @@ nav {
     margin: 0 auto 20px;
 }
 
+.pieCard > img {
+    widows: 40%;
+    height: auto;
+}
+
 nav>ul {
     list-style-type: none;
     margin: 0;
