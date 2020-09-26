@@ -1,0 +1,379 @@
+<!-- BUTTON DEMO -------------------------------------------------------------------------------------------->
+
+<!-- Before -->
+<button class="" type="button">React</button>
+<a class="">Vue</a>
+<div class="">Angular</div>
+
+<!-- After -->
+<button class="btn btn-warning active  btn-sm" type="button">React</button>
+<a class="btn btn-outline-info btn-block">Vue</a>
+<div class="btn btn-danger disabled btn-lg">Angular</div>
+
+
+
+
+<!-- BUTTON GROUP DEMO -------------------------------------------------------------------------------------->
+
+<!-- Before -->
+<div class="">
+  <button type="button" class="btn btn-info">React</button>
+  <button type="button" class="btn btn-info">Vue</button>
+  <button type="button" class="btn btn-info">Typescript</button>
+</div>
+
+<!-- After -->
+<div class="btn-group btn-group-sm">
+  <button type="button" class="btn btn-info">React</button>
+  <button type="button" class="btn btn-info">Vue</button>
+  <button type="button" class="btn btn-info">Typescript</button>
+</div>
+
+
+
+
+<!-- BADGE DEMO --------------------------------------------------------------------------------------------->
+
+<!-- Before -->
+<p>Announcements <span class="">3</span></p>
+
+<!-- After v4, v5-->
+<p>Announcements <span class="badge badge-pill badge-info">3</span></p>
+<p>Announcements <span class="badge rounded-pill bg-info">3</span></p>
+
+
+
+
+<!-- LIST GROUP DEMO ---------------------------------------------------------------------------------------->
+
+<!-- Before -->
+<div class="">
+  <a href="#" class="">Smores</a>
+  <a href="#" class="">Ice cream</a>
+  <a href="#" class="">Bundt Cake</a>
+  <a href="#" class="">Air Heads</a>
+</div>
+
+<!-- After -->
+<div class="list-group">
+  <a href="#" class="active list-group-item list-group-item-action">Smores</a>
+  <a href="#" class="list-group-item-warning list-group-item list-group-item-action">Ice cream</a>
+  <a href="#" class="disabled list-group-item list-group-item-action">Bundt Cake</a>
+  <a href="#" class="list-group-item list-group-item-action">Air Heads</a>
+</div>
+
+
+
+
+<!-- FORMS DEMO --------------------------------------------------------------------------------------------->
+
+<!-- Before -->
+<form>
+  <fieldset>
+    <div class="mb-3">
+      <label class="">Input Text</label>
+      <input class="" type="email">
+      <div class="">Input details</div>
+    </div>
+    <div class="mb-3">
+      <select class="">
+        <option selected>Select</option>
+        <option>Option 1</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <div class="">
+        <input class="" type="checkbox">
+        <label class="">
+          Checkbox 1
+        </label>
+      </div>
+      <div class="">
+        <input class="" type="checkbox">
+        <label class="">
+          Checkbox 2
+        </label>
+      </div>
+    </div>
+    <div class="mb-3">
+      <div class="">
+        <span class="">Input Group</span>
+        <input class="" type="text">
+      </div>
+    </div>
+    <div class="mb-3">
+      <div class="">
+        <input class="" type="file">
+        <label class="">
+          <span class="">Upload a File</span>
+          <span class="">Pretend Button</span>
+        </label>
+      </div>
+    </div>
+    <div class="mb-3">
+      <input type="range" class="">
+    </div>
+    <div class="mb-3">        
+        <input class="" type="color">
+      </div>
+  </fieldset>
+</form>
+
+<!-- After -->
+<form>
+  <fieldset disabled>
+    <div class="mb-3">
+      <label class="form-label">Input Text</label>
+      <input class="form-control-plaintext" placeholder="enter something" type="email">
+      <div class="form-text">Input details</div>
+    </div>
+    <div class="mb-3">
+      <select class="form-select">
+        <option selected>Select</option>
+        <option>Option 1</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <div class="form-check form-switch form-check-inline">
+        <input class="form-check-input" type="radio">
+        <label class="form-check-label">
+          Checkbox 1
+        </label>
+      </div>
+      <div class="form-check form-switch form-check-inline">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          Checkbox 2
+        </label>
+      </div>
+    </div>
+    <div class="mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Input Group</span>
+        <input class="form-control" type="text">
+      </div>
+    </div>
+    <div class="mb-3">
+      <div class="form-file">
+        <input class="form-file-input" type="file">
+        <label class="form-file-label">
+          <span class="form-file-text">Upload a File</span>
+          <span class="form-file-button">Pretend Button</span>
+        </label>
+      </div>
+    </div>
+    <div class="mb-3">
+      <input class="form-range" type="range">
+    </div>
+    <div class="mb-3">        
+        <input class="form-control form-control-color" type="color">
+      </div>
+  </fieldset>
+</form>
+
+
+
+
+<!-- ALERT DEMO --------------------------------------------------------------------------------------------->
+
+<!-- Before -->
+<div class=""> 
+  <h4 class="">Attention!</h4>
+  There will be a site outage soon.<a href="" class="">Get Details</a>
+</div>
+
+<!-- After -->
+<div class="alert alert-danger"> 
+  <h4 class="alert-heading">Attention!</h4>
+  There will be a site outage soon.<a href="" class="alert-link">Get Details</a>
+</div>
+
+
+
+
+<!-- JUMBOTRON DEMO ----------------------------------------------------------------------------------------->
+
+<!-- Before v4 -->
+<div class="">
+  <h1 class="display-4">Limited Quantity Sale</h1>
+  <p class="lead">Up to 50% Off After Promo Code</p>
+</div>
+
+<!-- Before v5 -->
+<div class="">
+  <div class="container">
+    <h1 class="display-4">Limited Quantity Sale</h1>
+    <p class="lead">Up to 50% Off After Promo Code</p>
+  </div>
+</div>
+
+<!-- After v4-->
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Limited Quantity Sale</h1>
+    <p class="lead">Up to 50% Off After Promo Code</p>
+  </div>
+</div>
+
+<!-- After v5-->
+<div class="bg-light p-5 rounded">
+  <div class="container">
+    <h1 class="display-4">Bootstrap Components: Playbook</h1>
+    <p class="lead">Learning Bootstrap one component at a time.<span class="badge ">asdf</span></p>
+  </div>
+</div>
+
+
+
+
+<!-- NAV DEMO ----------------------------------------------------------------------------------------------->
+
+<!-- Before -->
+<div class="">  
+    <a class="" href="#">Home</a>
+    <a class="" href="#">Docs</a>
+    <a class="" href="#">Support</a>
+    <a class="" href="#">Blog</a>
+</div>  
+
+<!-- After -->
+<div class="nav nav-fill nav-tabs">  
+    <a class="active nav-link" href="#">Home</a>
+    <a class="nav-link" href="#">Docs</a>
+    <a class="disabled nav-link" href="#">Support</a>
+    <a class="nav-link" href="#">Blog</a>
+</div>  
+
+
+
+<!-- NAVBAR DEMO -------------------------------------------------------------------------------------------->
+
+<!-- Before -->
+<nav class="">
+  <div class="container"> 
+    <a class="" href="#">
+      <img src="https://www.pluralsight.com/content/dam/pluralsight/newsroom/brand-assets/logos/PS_logo_F-01.png" height="60">
+    </a>
+    <div class="nav mr-auto">
+        <a class="nav-link active"href="#">Home</a>
+        <a class="nav-link" href="#">Courses</a>
+        <a class="nav-link disabled" href="#">About</a>
+      </div>
+    <form>
+        <div class="input-group">
+          <input type="text" class="form-control">
+          <button class="btn" type="button">Search</button>
+        </div>
+      </form>
+  </div>
+</nav>
+
+<!-- After -->
+<nav class="navbar navbar-light bg-light navbar-expand-lg">
+  <div class="container-fluid"> 
+    <a class="navbar-brand" href="#">
+      <img src="https://www.pluralsight.com/content/dam/pluralsight/newsroom/brand-assets/logos/PS_logo_F-01.png" height="60">
+    </a>
+    <button class="navbar-toggler" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <div class="navbar-nav mr-auto">
+        <a class="nav-link active"href="#">Home</a>
+        <a class="nav-link" href="#">Courses</a>
+        <a class="nav-link disabled" href="#">About</a>
+      </div>
+      <form>
+        <div class="input-group">
+          <input type="text" class="form-control">
+          <button class="btn" type="button">Search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- BREADCRUMB DEMO ---------------------------------------------------------------------------------------->
+
+<!-- Before -->
+  <ul class="">
+    <li class=""><a href="#">Home</a></li>
+    <li class=""><a href="#">Gaming</a></li>
+    <li class="">Xbox</li>
+  </ul>
+
+<!-- After -->
+  <ul class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Gaming</a></li>
+    <li class="active breadcrumb-item">Xbox</li>
+  </ul>
+
+
+
+<!-- PAGINATION DEMO ---------------------------------------------------------------------------------------->
+<!-- Before -->
+  <ul class="">
+    <li class=""><a class="" href="#">Previous</a></li>
+    <li class=""><a class="" href="#">1</a></li>
+    <li class=""><a class="" href="#">2</a></li>
+    <li class=""><a class="" href="#">3</a></li>
+    <li class=""><a class="" href="#">Next</a></li>
+  </ul>
+
+<!-- After -->
+  <ul class="pagination pagination-lg">
+    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+
+
+
+
+<!-- PROGRESS DEMO ------------------------------------------------------------------------------------------>
+<!-- Before -->
+<div class="">
+  <div class=""></div>   
+</div>
+
+<!-- After -->
+<div class="progress">
+  <div class="progress-bar w-25 bg-danger progress-bar-striped progress-bar-animated"></div>    
+</div>
+
+
+
+
+<!-- CARD DEMO ---------------------------------------------------------------------------------------------->
+
+<!-- Before -->
+<div class="">
+  <!-- <img class="" src="https://www.pluralsight.com/teach/author-tools/globomantics/images/Bitmap.png"> -->
+  <div class="">Header</div>
+  <div class="">
+    <h5 class="">Title</h5>
+    <h6 class="">Subtitle</h6>
+    <p class="">Lots of text</p>
+    <a class="" href="">link 1</a>
+    <a class="" href="">link 2</a>
+  </div>
+  <div class="">Footer</div>
+</div>
+
+<!-- After -->
+<div class="card">
+  <img class="card-img-top" src="https://www.pluralsight.com/teach/author-tools/globomantics/images/Bitmap.png">
+  <div class="card-body">
+    <h5 class="card-title">Title</h5>
+    <h6 class="card-subtitle">Subtitle</h6>
+    <p class="card-text">Lots of text</p>
+    <a class="card-link" href="">link 1</a>
+    <a class="card-link" href="">link 2</a>
+  </div>
+  <div class="card-footer">Footer</div>
+</div>
