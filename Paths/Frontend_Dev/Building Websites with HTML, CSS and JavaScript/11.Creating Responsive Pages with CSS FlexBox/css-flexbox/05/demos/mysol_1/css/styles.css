@@ -16,7 +16,8 @@ body {
 
 nav {
     height: 60px;
-    width: 1000px;
+    /*width: 1000px;*/
+    width: 80%;
     margin: 0 auto 20px;
 }
 
@@ -27,6 +28,10 @@ nav>ul {
     overflow: hidden;
     display: flex;
     justify-content: flex-end;
+}
+
+nav > ul > li:nth-child(1) {
+    flex-grow: 2;
 }
 
 nav>ul>li {
