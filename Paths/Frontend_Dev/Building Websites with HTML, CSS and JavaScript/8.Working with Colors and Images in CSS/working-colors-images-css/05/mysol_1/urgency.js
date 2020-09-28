@@ -27,5 +27,5 @@ function colorUrgencies(){
 }
 
 document.addEventListener("DOMContentLoaded", function(event) { 
-  //colorUrgencies();
+  colorUrgencies();
 });
