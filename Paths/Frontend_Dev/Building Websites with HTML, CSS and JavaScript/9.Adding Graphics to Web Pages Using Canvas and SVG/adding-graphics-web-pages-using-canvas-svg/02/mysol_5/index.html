@@ -41,12 +41,12 @@
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="400">
         <rect x="0" y="0" width="400" height="400" fill="transparent" stroke="black"/>
         <circle id="crust-outer" cx="200" cy="200" r="150"
-            fill="transparent"/>
+            fill="transparent" class="animated"/>
         <circle id="crust-inner" cx="200" cy="200" r="110"
-            fill="transparent"/>
+            fill="transparent" class="animated"/>
         <circle id="filling" cx="200" cy="200" r="140"
-            fill="transparent"/>
-        <g id="meringue" style="display:none;">
+            fill="transparent" class="animated"/>
+        <g id="meringue" style="display:none;" class="animated">
             <circle cx="200" cy="200" r="130"
                 fill="white" stroke="#b3702d"/>
             <path d="M 200 200 q 65 -65 0 -130" stroke="#b3702d" fill="transparent"/>
@@ -85,7 +85,7 @@
         </fieldset>
 
         <button id="animate">Explode!</button>
-        
+
     </div>
     <script>
         const crustElements = document.querySelectorAll('[name=crust]');
