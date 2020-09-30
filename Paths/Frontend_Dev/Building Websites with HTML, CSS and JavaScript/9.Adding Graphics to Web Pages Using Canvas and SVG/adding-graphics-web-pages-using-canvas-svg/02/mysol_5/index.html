@@ -142,6 +142,26 @@
                 }
             }
         });
+
+        const animateButton = document.getElementById('animate')
+        let isExploded = false;
+        animateButton.addEventListener('click', () => {
+            if (isExploded) {
+                animateButton.innerHTML = 'Explode!';
+                outerCrust.style.transform = 'translate(0, 0) scale(1)';
+                innerCrust.style.transform = 'translate(0, 0) scale(1)';
+                filling.style.transform = 'translate(0, 0) scale(1)';
+                meringue.style.transform = 'translate(0, 0) scale(1)';
+            } else {
+                animateButton.innerHTML = 'Reassemble';
+                outerCrust.style.transform = 'translate(-20px, 20px) scale(0.6)';
+                innerCrust.style.transform = 'translate(-20px, 20px) scale(0.6)';
+                filling.style.transform = 'translate(180px, 20px) scale(0.6)';
+                meringue.style.transform = 'translate(80px, 180px) scale(0.6)';
+            }
+            isExploded = !isExploded;
+        });
+        
     </script>
 </body>
 </html>
