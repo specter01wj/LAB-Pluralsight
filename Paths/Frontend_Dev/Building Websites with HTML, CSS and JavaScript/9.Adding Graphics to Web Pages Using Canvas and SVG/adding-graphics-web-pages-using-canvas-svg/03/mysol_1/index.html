@@ -51,28 +51,7 @@
             });
 
             render(options);
-
-            if (e.target.name === 'crust') {
-                let colors = [];
-                switch (e.target.value) {
-                case 'none':
-                    colors = ['transparent', 'transparent'];
-                    break;
-                case 'pastry':
-                    colors = ['#DECCB8', '#F2DFC9'];
-                    break;
-                case 'graham':
-                    colors = ['#BA870D', '#DEA010'];
-                    break;
-                case 'chocolate':
-                    colors = ['#2E1802', '#422303'];
-                    break;
-                default:
-                    return;
-                }
-                innerCrust.setAttribute('fill', colors[0]);
-                outerCrust.setAttribute('fill', colors[1]);
-            }
+            
         });
 
         function render(options) {
