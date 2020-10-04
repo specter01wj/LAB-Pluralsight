@@ -75,6 +75,23 @@
             }
         });
 
+        function render(options) {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            ctx.clearReact(0, 0, canvas.width, canvas.height);
+
+            let outerCrustColor = '';
+            let innerCrustColor = '';
+
+            switch(options.crust) {
+                case 'pastry':
+                    outerCrustColor = '#DECCB8';
+                    innerCrustColor = '#F2DFC9';
+                    break;
+            }
+        }
+
+
     </script>
 </body>
 </html>
