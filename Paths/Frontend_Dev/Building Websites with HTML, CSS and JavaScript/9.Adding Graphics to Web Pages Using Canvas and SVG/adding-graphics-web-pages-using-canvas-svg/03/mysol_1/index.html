@@ -51,13 +51,13 @@
             });
 
             render(options);
-            
+
         });
 
         function render(options) {
             const canvas = document.getElementById('canvas');
             const ctx = canvas.getContext('2d');
-            ctx.clearReact(0, 0, canvas.width, canvas.height);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             let outerCrustColor = '';
             let innerCrustColor = '';
@@ -75,6 +75,17 @@
                     outerCrustColor = '#2E1802';
                     innerCrustColor = '#422303';
                     break;
+            }
+
+            if(outerCrustColor && innerCrustColor) {
+                ctx.fillStyle = outerCrustColor;
+                ctx.beginPath();
+                ctx.ellipse(200, 200, 150, 150, 0, 0, 2 * Math.PI);
+                ctx.fill();
+                ctx.fillStyle = innerCrustColor;
+                ctx.beginPath();
+                ctx.ellipse(200, 200, 110, 110, 0, 0, 2 * Math.PI);
+                ctx.fill();
             }
         }
 
