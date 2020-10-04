@@ -40,8 +40,18 @@
         </fieldset>
     </div>
     <script>
-        
+
         document.getElementById('options').addEventListener('change', (e) => {
+            const options = {};
+
+            document.querySelectorAll('[name=crust]').forEach(elem => {
+                if(elem.checked) {
+                    options.crust = elem.value;
+                }
+            });
+
+            render(options);
+
             if (e.target.name === 'crust') {
                 let colors = [];
                 switch (e.target.value) {
