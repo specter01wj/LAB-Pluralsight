@@ -112,12 +112,22 @@
 
             switch(options.topping) {
                 case 'meringue':
-                    ctx.fillStyle = '#fffff';
+                    ctx.fillStyle = '#ffffff';
                     ctx.strokeStyle = '#B3702D';
                     ctx.beginPath();
                     ctx.ellipse(200, 200, 130, 130, 0, 0, 2 * Math.PI);
                     ctx.fill();
                     ctx.stroke();
+                    for(let i = 0; i < 6; i++) {
+                        ctx.save();
+                        ctx.translate(200, 200);
+                        ctx.rotate(i / 6 * 2 * Math.PI);
+                        ctx.beginPath();
+                        ctx.moveTo(0, 0);
+                        ctx.quadraticCurveTo(65, -65, 0, -130);
+                        ctx.stroke();
+                        ctx.restore();
+                    }
                     break;
             }
 
