@@ -13,15 +13,7 @@
     </style>
 </head>
 <body>
-    <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
-        <rect x="0" y="0" width="400" height="400" fill="transparent" stroke="black"/>
-        <circle id="crust-outer" cx="200" cy="200" r="150"
-            fill="transparent"/>
-        <circle id="crust-inner" cx="200" cy="200" r="110"
-            fill="transparent"/>
-        <circle id="filling" cx="200" cy="200" r="140"
-            fill="transparent"/>
-    </svg>
+    <canvas id="canvas" height="400" width="400"></canvas>
     <div id="options">
         <fieldset>
             <legend>Please choose a crust</legend>
@@ -39,51 +31,71 @@
         </fieldset>
     </div>
     <script>
-        const crustElements = document.querySelectorAll('[name=crust]');
-        const outerCrust = document.getElementById('crust-outer');
-        const innerCrust = document.getElementById('crust-inner');
-        const filling = document.getElementById('filling');
         document.getElementById('options').addEventListener('change', (e) => {
-            switch (e.target.name) {
-            case 'crust':
-                let colors = [];
-                switch (e.target.value) {
-                case 'none':
-                    colors = ['transparent', 'transparent'];
-                    break;
-                case 'pastry':
-                    colors = ['#DECCB8', '#F2DFC9'];
-                    break;
-                case 'graham':
-                    colors = ['#BA870D', '#DEA010'];
-                    break;
-                case 'chocolate':
-                    colors = ['#2E1802', '#422303'];
-                    break;
-                default:
-                    return;
+            const options = {};
+
+            document.querySelectorAll('[name=crust]').forEach(elem => {
+                if(elem.checked) {
+                    options.crust = elem.value;
                 }
-                innerCrust.setAttribute('fill', colors[0]);
-                outerCrust.setAttribute('fill', colors[1]);
-                break;
-            case 'filling':
-                switch (e.target.value) {
-                case 'none':
-                    filling.setAttribute('fill', 'transparent');
-                    break;
-                case 'keylime':
-                    filling.setAttribute('fill', '#DFF5A2');
-                    break;
-                case 'pumpkin':
-                    filling.setAttribute('fill', '#BD7502');
-                    break;
-                case 'lemon':
-                    filling.setAttribute('fill', '#FFF4BD');
-                    break;
-                }
-            }
+            });
+
+            render(options);
 
         });
+
+        function render(options) {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            let outerCrustColor = '';
+            let innerCrustColor = '';
+
+            switch(options.crust) {
+                case 'pastry':
+                    outerCrustColor = '#DECCB8';
+                    innerCrustColor = '#F2DFC9';
+                    break;
+                case 'graham':
+                    outerCrustColor = '#BA870D';
+                    innerCrustColor = '#DEA010';
+                    break;
+                case 'chocolate':
+                    outerCrustColor = '#2E1802';
+                    innerCrustColor = '#422303';
+                    break;
+            }
+
+            if(outerCrustColor && innerCrustColor) {
+                ctx.fillStyle = outerCrustColor;
+                ctx.beginPath();
+                ctx.ellipse(200, 200, 150, 150, 0, 0, 2 * Math.PI);
+                ctx.fill();
+                ctx.fillStyle = innerCrustColor;
+                ctx.beginPath();
+                ctx.ellipse(200, 200, 110, 110, 0, 0, 2 * Math.PI);
+                ctx.fill();
+            }
+
+            switch(options.filling) {
+                case 'keylime':
+                    ctx.fillStyle = '#DFF5A2';
+                    break;
+                case 'pumpkin':
+                    ctx.fillStyle = '#BD7502';
+                    break;
+                case 'lemon':
+                    ctx.fillStyle = '#FFF48D';
+                    break;
+                default:
+                    ctx.fillStyle = 'transparent';
+            }
+            ctx.beginPath();
+            ctx.ellipse(200, 200, 140, 140, 0, 0, 2 * Math.PI);
+            ctx.fill();
+
+        }
 
     </script>
 </body>
