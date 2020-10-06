@@ -39,6 +39,11 @@
                     options.crust = elem.value;
                 }
             });
+            document.querySelectorAll('[name=filling]').forEach(elem => {
+                if(elem.checked) {
+                    options.filling = elem.value;
+                }
+            });
 
             render(options);
 
