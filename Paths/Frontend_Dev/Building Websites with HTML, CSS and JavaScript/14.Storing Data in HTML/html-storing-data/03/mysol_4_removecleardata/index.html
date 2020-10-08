@@ -78,13 +78,28 @@
                 loopThroughLocalStorage();
             }
 
-            function removeSessionStorage() {}
+            function removeSessionStorage() {
+                sessionStorage.removeItem("mySessionData");
+
+                getSessionStorage();
+                loopThroughSessionStorage();
+            }
             //#endregion
 
             //#region //------------------------------------------- Clear Storage
-            function clearLocalStorage() {}
+            function clearLocalStorage() {
+                localStorage.clear();
 
-            function clearSessionStorage() {}
+                getLocalStorage();
+                loopThroughLocalStorage();
+            }
+
+            function clearSessionStorage() {
+                sessionStorage.clear();
+
+                getSessionStorage();
+                loopThroughSessionStorage();
+            }
             //#endregion
         </script>
     </head>
