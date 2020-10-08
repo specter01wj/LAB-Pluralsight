@@ -131,6 +131,12 @@
                     break;
             }
 
+            const text = "Bethany's Custom Pie Maker";
+            ctx.font = '25px sans-serif';
+            const dims = ctx.measureText(text);
+            ctx.fillStyle = '#A593C2';
+            ctx.fillText(text, 200 - dims.width / 2, 30); 
+
         }
 
     </script>
