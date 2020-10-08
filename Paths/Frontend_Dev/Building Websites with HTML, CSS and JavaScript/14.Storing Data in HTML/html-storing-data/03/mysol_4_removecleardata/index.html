@@ -71,7 +71,12 @@
             //#endregion
 
             //#region //------------------------------------------- Remove Storage
-            function removeLocalStorage() {}
+            function removeLocalStorage() {
+                localStorage.removeItem("myLocalData");
+
+                getLocalStorage();
+                loopThroughLocalStorage();
+            }
 
             function removeSessionStorage() {}
             //#endregion
