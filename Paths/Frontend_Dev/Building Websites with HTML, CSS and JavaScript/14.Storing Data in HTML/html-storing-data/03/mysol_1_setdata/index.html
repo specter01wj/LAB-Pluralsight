@@ -11,7 +11,9 @@
         <script type="text/javascript">
             //#region //------------------------------------------- Set Storage
             function setLocalStorage() {
-
+                let data_local = document.getElementById('localData').value;
+                localStorage.setItem('myLocalData', data_local);
+                document.getElementById("localData").value = "";
             }
 
             function setSessionStorage() {
