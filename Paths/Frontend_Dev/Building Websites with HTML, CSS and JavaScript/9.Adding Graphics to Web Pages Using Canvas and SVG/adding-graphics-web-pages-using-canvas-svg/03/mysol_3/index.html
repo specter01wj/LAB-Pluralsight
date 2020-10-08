@@ -149,6 +149,19 @@
                     fillStyle: '#A593C2'
                 }
             ];
+            let totalWidth = 0;
+            spans.forEach(span => {
+                ctx.font = span.font;
+                span.dims = ctx.measureText(span.text);
+                totalWidth += span.dims.width;
+            });
+            let currentX = 200 - totalWidth / 2;
+            spans.forEach(span => {
+                ctx.fillStyle = span.fillStyle;
+                ctx.font = span.font;
+                ctx.fillText(span.text, currentX, 30);
+                currentX += span.dims.width;
+            });
 
         }
 
