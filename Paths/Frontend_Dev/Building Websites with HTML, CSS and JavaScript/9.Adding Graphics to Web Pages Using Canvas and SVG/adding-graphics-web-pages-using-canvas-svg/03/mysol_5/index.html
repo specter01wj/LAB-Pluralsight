@@ -36,7 +36,10 @@
                 ctx.beginPath();
                 ctx.moveTo(prevX, prevY);
                 ctx.lineTo(x, y);
+                ctx.stroke();
             }
+            prevX = x;
+            prevY = y;
         });
 
     </script>
