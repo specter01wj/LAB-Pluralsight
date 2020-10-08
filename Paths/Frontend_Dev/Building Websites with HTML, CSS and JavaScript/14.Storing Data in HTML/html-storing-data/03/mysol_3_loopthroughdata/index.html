@@ -49,7 +49,15 @@
             //#endregion
 
             //#region //------------------------------------------- Loop Through All Storage
-            function loopThroughLocalStorage() {}
+            function loopThroughLocalStorage() {
+                let dataHtml = "";
+
+                for (var i = 0; i < localStorage.length; i++) {
+                    dataHtml += "<p>" + localStorage.getItem(localStorage.key(i)) + "</p>";
+                }
+
+                document.getElementById("localStorageAllData").innerHTML = dataHtml;
+            }
 
             function loopThroughSessionStorage() {}
             //#endregion
