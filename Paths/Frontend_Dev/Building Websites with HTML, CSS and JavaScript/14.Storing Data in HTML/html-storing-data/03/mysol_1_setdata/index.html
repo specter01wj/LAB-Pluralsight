@@ -17,7 +17,9 @@
             }
 
             function setSessionStorage() {
-                
+                let data_session = document.getElementById('sessionData').value;
+                sessionStorage.setItem('mySessionData', data_session);
+                document.getElementById("sessionData").value = "";
             }
             //#endregion
         </script>
