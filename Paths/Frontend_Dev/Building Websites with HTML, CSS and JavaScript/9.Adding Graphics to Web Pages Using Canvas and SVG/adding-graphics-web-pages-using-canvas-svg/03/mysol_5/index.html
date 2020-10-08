@@ -26,7 +26,7 @@
         canvas.addEventListener('mouseup', () => {
             isDrawing = false;
         });
-        canvas.addEventListener('mouseover', ({x, y}) => {
+        canvas.addEventListener('mousemove', ({x, y}) => {
             if(!isDrawing) {
                 prevX = null;
                 prevY = null;
