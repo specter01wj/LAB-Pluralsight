@@ -27,13 +27,20 @@
                     ]
                 };
 
-                console.log(simpleJson); 
+                console.log(simpleJson);
+                localStorage.setItem("fruitsAndVeggies", JSON.stringify(simpleJson));
             }
              //#endregion
 
             //#region //------------------------------------------- Get JSON Data
             function getJsonLocalStorage() {
+                let fromStorage = localStorage.getItem("fruitsAndVeggies");
+                let backToJson = JSON.parse(fromStorage);
                 
+                console.log(fromStorage);
+                console.log(backToJson); 
+
+                document.getElementById("localStorageValue").textContent = backToJson.fruits[4].name + ": " + backToJson.fruits[4].color;
             }
             //#endregion
         </script>
