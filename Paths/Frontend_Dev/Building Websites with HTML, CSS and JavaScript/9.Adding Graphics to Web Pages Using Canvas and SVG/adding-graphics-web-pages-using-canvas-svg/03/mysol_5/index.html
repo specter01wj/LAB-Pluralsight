@@ -26,6 +26,18 @@
         canvas.addEventListener('mouseup', () => {
             isDrawing = false;
         });
+        canvas.addEventListener('mouseover', ({x, y}) => {
+            if(!isDrawing) {
+                prevX = null;
+                prevY = null;
+                return;
+            }
+            if(prevX && prevY) {
+                ctx.beginPath();
+                ctx.moveTo(prevX, prevY);
+                ctx.lineTo(x, y);
+            }
+        });
 
     </script>
 </body>
