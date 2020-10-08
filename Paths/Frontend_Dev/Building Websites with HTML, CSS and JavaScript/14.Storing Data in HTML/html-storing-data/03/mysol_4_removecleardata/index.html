@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Storing Data in HTML - Loop Through Data</title>
+        <title>Storing Data in HTML - Remove Data</title>
         <link href="../Content/Bootstrap.css" rel="stylesheet" />
         <link href="../Content/StoringData.css" rel="stylesheet" />
         <script type="text/javascript">
@@ -15,7 +15,7 @@
 
                 document.getElementById("localData").value = ""; //-- clear out the field so we can enter a new value
 
-                //-- Adding some more data.
+                //-- Adding some more data. Books!
                 let addData = ["Binary New World", "Infinite Loop", "The Hex Files", "Jane Error", "Catch 10110", "Lord of the Files"];
 
                 for (let i = 0; i < addData.length; i++) {
@@ -29,7 +29,7 @@
 
                 document.getElementById("sessionData").value = ""; //-- clear out the field so we can enter a new value
 
-                //-- Adding some more data.
+                //-- Adding some more data. Pizza, Yum!
                 let addData = ["Pepperoni", "Cheese", "Sausage", "Supreme", "Ham and pineapple", "Vegetable"];
 
                 for (let i = 0; i < addData.length; i++) {
@@ -69,6 +69,18 @@
                 document.getElementById("sessionStorageAllData").innerHTML = dataHtml;
             }
             //#endregion
+
+            //#region //------------------------------------------- Remove Storage
+            function removeLocalStorage() {}
+
+            function removeSessionStorage() {}
+            //#endregion
+
+            //#region //------------------------------------------- Clear Storage
+            function clearLocalStorage() {}
+
+            function clearSessionStorage() {}
+            //#endregion
         </script>
     </head>
     <body>
@@ -87,6 +99,8 @@
                     <div class="col-6">
                         <button class="btn getButton" onclick="getLocalStorage()">Get Local Data</button>
                         <button class="btn loopButton" onclick="loopThroughLocalStorage()">Get All Local Data</button>
+                        <button class="btn removeButton" onclick="removeLocalStorage()">Remove Local Data</button>
+                        <button class="btn clearButton" onclick="clearLocalStorage()">Clear All Local Data</button>
                     </div>
                     <div class="col pl-5">
                         <div class="getText mb-3" id="localStorageValue"></div>
@@ -108,6 +122,8 @@
                     <div class="col-6">
                         <button class="btn getButton" onclick="getSessionStorage()">Get Session Data</button>
                         <button class="btn loopButton" onclick="loopThroughSessionStorage()">Get All Session Data</button>
+                        <button class="btn removeButton" onclick="removeSessionStorage()">Remove Session Data</button>
+                        <button class="btn clearButton" onclick="clearSessionStorage()">Clear All Session Data</button>
                     </div>
                     <div class="col pl-5">
                         <div class="getText mb-3" id="sessionStorageValue"></div>
