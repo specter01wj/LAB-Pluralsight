@@ -10,53 +10,10 @@
             display: inline-block;
             vertical-align: top;
         }
-        #meringue path {
-            transform-origin: 200px 200px;
-        }
-        #meringue path:nth-of-type(1) {
-            transform: rotate(0deg);
-        }
-        #meringue path:nth-of-type(2) {
-            transform: rotate(60deg);
-        }
-        #meringue path:nth-of-type(3) {
-            transform: rotate(120deg);
-        }
-        #meringue path:nth-of-type(4) {
-            transform: rotate(180deg);
-        }
-        #meringue path:nth-of-type(5) {
-            transform: rotate(240deg);
-        }
-        #meringue path:nth-of-type(6) {
-            transform: rotate(300deg);
-        }
     </style>
 </head>
 <body>
-    <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
-        <rect x="0" y="0" width="400" height="400" fill="transparent" stroke="black"/>
-        <circle id="crust-outer" cx="200" cy="200" r="150"
-            fill="transparent"/>
-        <circle id="crust-inner" cx="200" cy="200" r="110"
-            fill="transparent"/>
-        <circle id="filling" cx="200" cy="200" r="140"
-            fill="transparent"/>
-        <g id="meringue" style="display:none;">
-            <circle cx="200" cy="200" r="130"
-                fill="white" stroke="#b3702d"/>
-            <path d="M 200 200 q 65 -65 0 -130" stroke="#b3702d" fill="transparent"/>
-            <path d="M 200 200 q 65 -65 0 -130" stroke="#b3702d" fill="transparent"/>
-            <path d="M 200 200 q 65 -65 0 -130" stroke="#b3702d" fill="transparent"/>
-            <path d="M 200 200 q 65 -65 0 -130" stroke="#b3702d" fill="transparent"/>
-            <path d="M 200 200 q 65 -65 0 -130" stroke="#b3702d" fill="transparent"/>
-            <path d="M 200 200 q 65 -65 0 -130" stroke="#b3702d" fill="transparent"/>
-        </g>
-        <text x="200" y="30" text-anchor="middle" font-family="sans-serif" fill="#a593c2" font-size="25">
-            <tspan fill="#4dcfa8" font-weight="bold">Bethany's</tspan>
-            Custom Pie Maker
-        </text>
-    </svg>
+    <canvas id="canvas" height="400" width="400"></canvas>
     <div id="options">
         <fieldset>
             <legend>Please choose a crust</legend>
@@ -79,60 +36,135 @@
         </fieldset>
     </div>
     <script>
-        const crustElements = document.querySelectorAll('[name=crust]');
-        const outerCrust = document.getElementById('crust-outer');
-        const innerCrust = document.getElementById('crust-inner');
-        const filling = document.getElementById('filling');
-        const meringue = document.getElementById('meringue');
         document.getElementById('options').addEventListener('change', (e) => {
-            switch (e.target.name) {
-            case 'crust':
-                let colors = [];
-                switch (e.target.value) {
-                case 'none':
-                    colors = ['transparent', 'transparent'];
-                    break;
+            const options = {};
+
+            document.querySelectorAll('[name=crust]').forEach(elem => {
+                if(elem.checked) {
+                    options.crust = elem.value;
+                }
+            });
+            document.querySelectorAll('[name=filling]').forEach(elem => {
+                if(elem.checked) {
+                    options.filling = elem.value;
+                }
+            });
+            document.querySelectorAll('[name=topping]').forEach(elem => {
+                if(elem.checked) {
+                    options.topping = elem.value;
+                }
+            });
+
+            render(options);
+
+        });
+
+        function render(options) {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            let outerCrustColor = '';
+            let innerCrustColor = '';
+
+            switch(options.crust) {
                 case 'pastry':
-                    colors = ['#DECCB8', '#F2DFC9'];
+                    outerCrustColor = '#DECCB8';
+                    innerCrustColor = '#F2DFC9';
                     break;
                 case 'graham':
-                    colors = ['#BA870D', '#DEA010'];
+                    outerCrustColor = '#BA870D';
+                    innerCrustColor = '#DEA010';
                     break;
                 case 'chocolate':
-                    colors = ['#2E1802', '#422303'];
+                    outerCrustColor = '#2E1802';
+                    innerCrustColor = '#422303';
                     break;
-                default:
-                    return;
-                }
-                innerCrust.setAttribute('fill', colors[0]);
-                outerCrust.setAttribute('fill', colors[1]);
-                break;
-            case 'filling':
-                switch (e.target.value) {
-                case 'none':
-                    filling.setAttribute('fill', 'transparent');
-                    break;
+            }
+
+            if(outerCrustColor && innerCrustColor) {
+                ctx.fillStyle = outerCrustColor;
+                ctx.beginPath();
+                ctx.ellipse(200, 200, 150, 150, 0, 0, 2 * Math.PI);
+                ctx.fill();
+                ctx.fillStyle = innerCrustColor;
+                ctx.beginPath();
+                ctx.ellipse(200, 200, 110, 110, 0, 0, 2 * Math.PI);
+                ctx.fill();
+            }
+
+            switch(options.filling) {
                 case 'keylime':
-                    filling.setAttribute('fill', '#DFF5A2');
+                    ctx.fillStyle = '#DFF5A2';
                     break;
                 case 'pumpkin':
-                    filling.setAttribute('fill', '#BD7502');
+                    ctx.fillStyle = '#BD7502';
                     break;
                 case 'lemon':
-                    filling.setAttribute('fill', '#FFF4BD');
+                    ctx.fillStyle = '#FFF48D';
                     break;
-                }
-            case 'topping':
-                switch (e.target.value) {
-                case 'none':
-                    meringue.style.display = 'none';
-                    break;
-                case 'meringue':
-                    meringue.style.display = '';
-                    break;
-                }
+                default:
+                    ctx.fillStyle = 'transparent';
             }
-        });
+            ctx.beginPath();
+            ctx.ellipse(200, 200, 140, 140, 0, 0, 2 * Math.PI);
+            ctx.fill();
+
+            switch(options.topping) {
+                case 'meringue':
+                    ctx.fillStyle = '#ffffff';
+                    ctx.strokeStyle = '#B3702D';
+                    ctx.beginPath();
+                    ctx.ellipse(200, 200, 130, 130, 0, 0, 2 * Math.PI);
+                    ctx.fill();
+                    ctx.stroke();
+                    for(let i = 0; i < 6; i++) {
+                        ctx.save();
+                        ctx.translate(200, 200);
+                        ctx.rotate(i / 6 * 2 * Math.PI);
+                        ctx.beginPath();
+                        ctx.moveTo(0, 0);
+                        ctx.quadraticCurveTo(65, -65, 0, -130);
+                        ctx.stroke();
+                        ctx.restore();
+                    }
+                    break;
+            }
+
+            /*const text = "Bethany's Custom Pie Maker";
+            ctx.font = '25px sans-serif';
+            const dims = ctx.measureText(text);
+            ctx.fillStyle = '#A593C2';
+            ctx.fillText(text, 200 - dims.width / 2, 30); */
+
+            const spans = [
+                {
+                    font: 'bold 25px sans-serif',
+                    text: "Bethany's",
+                    fillStyle: '#4DCFA8'
+                },
+                {
+                    font: '25px sans-serif',
+                    text: " Custom Pie Maker",
+                    fillStyle: '#A593C2'
+                }
+            ];
+            let totalWidth = 0;
+            spans.forEach(span => {
+                ctx.font = span.font;
+                span.dims = ctx.measureText(span.text);
+                totalWidth += span.dims.width;
+            });
+            let currentX = 200 - totalWidth / 2;
+            spans.forEach(span => {
+                ctx.fillStyle = span.fillStyle;
+                ctx.font = span.font;
+                ctx.fillText(span.text, currentX, 30);
+                currentX += span.dims.width;
+            });
+
+        }
+
     </script>
 </body>
 </html>
