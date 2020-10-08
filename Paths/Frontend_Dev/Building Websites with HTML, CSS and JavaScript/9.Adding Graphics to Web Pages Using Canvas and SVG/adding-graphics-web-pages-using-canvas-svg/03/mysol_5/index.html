@@ -17,6 +17,16 @@
         ctx.rect(0, 0, 600, 600);
         ctx.stroke();
 
+        let prevX, prevY;
+        let isDrawing = false;
+
+        canvas.addEventListener('mousedown', () => {
+            isDrawing = true;
+        });
+        canvas.addEventListener('mouseup', () => {
+            isDrawing = false;
+        });
+
     </script>
 </body>
 </html>
