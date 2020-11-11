@@ -16,3 +16,8 @@ function displayCategories() {
 }
 
 
+$('#pieCategories').on('show.bs.dropdown', function() {
+	console.log('dropdown works!');
+});
+
+
