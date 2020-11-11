@@ -11,3 +11,8 @@ $(document).ready(function() {
 });
 
 
+function displayCategories() {
+	$('#pieCategories').dropdown('toggle');
+}
+
+
