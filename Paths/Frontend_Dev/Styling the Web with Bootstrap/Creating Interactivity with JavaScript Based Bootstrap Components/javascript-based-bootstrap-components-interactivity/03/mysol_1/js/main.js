@@ -6,6 +6,8 @@ $(document).ready(function(){
         "flip": false
     });
 
+    $('[data-toggle="tooltip"]').tooltip();
+
 });
 
 // Dropdown methods
