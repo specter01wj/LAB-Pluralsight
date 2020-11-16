@@ -1,3 +1,6 @@
+let tooltipButton = document.getElementById('tooltipButton');
+let popButton = document.getElementById('popButton');
+
 $(document).ready(function(){
 
     // Dropdown options
