@@ -24,6 +24,10 @@ $(document).ready(function(){
     	html: true
     });
 
+    $('.toast').toast({
+    	
+    });
+
 });
 
 // Dropdown methods
