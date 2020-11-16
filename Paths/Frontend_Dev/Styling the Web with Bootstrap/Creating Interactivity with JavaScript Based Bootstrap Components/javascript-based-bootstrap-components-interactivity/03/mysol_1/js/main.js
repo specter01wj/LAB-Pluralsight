@@ -21,6 +21,7 @@ $(document).ready(function(){
 
 
 
+
     	
     	trigger: 'hover',
     	offset: 100
