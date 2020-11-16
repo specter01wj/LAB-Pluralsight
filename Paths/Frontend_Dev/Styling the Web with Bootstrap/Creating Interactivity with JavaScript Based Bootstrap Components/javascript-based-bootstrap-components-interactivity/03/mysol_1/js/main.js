@@ -14,6 +14,7 @@ $(document).ready(function(){
     	title: 'Click to learn more',
 
 
+
     	
     	trigger: 'hover',
     	offset: 100
