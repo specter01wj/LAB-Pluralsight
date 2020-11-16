@@ -17,7 +17,8 @@ $(document).ready(function(){
     });
 
     $('[data-toggle="popover"]').popover({
-
+    	trigger: 'click',
+    	html: true
     });
 
 });
