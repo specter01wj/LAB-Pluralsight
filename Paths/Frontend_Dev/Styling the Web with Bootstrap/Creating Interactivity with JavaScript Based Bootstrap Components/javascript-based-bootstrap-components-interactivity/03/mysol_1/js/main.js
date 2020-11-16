@@ -24,7 +24,10 @@ $(document).ready(function(){
     	html: true
     });
 
-    $('.toast').toast('show');
+    $('.toast').toast({
+    	delay: 2000,
+      // autohide: false
+    });
 
 });
 
@@ -56,6 +59,16 @@ $('[data-toggle="tooltip"]').on('show.bs.tooltip', function () {
 $('[data-toggle="tooltip"]').on('hide.bs.tooltip', function () {
     tooltipButton.innerHTML = "Show Tooltips";
 })
+
+let saleMessage = setInterval(myCountDown, 3000);
+
+function myCountDown(){
+    $('.toast').toast('show');
+    clearInterval(saleMessage);
+}
+
+
+
 
 
 
