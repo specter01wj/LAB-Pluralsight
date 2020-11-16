@@ -6,7 +6,15 @@ $(document).ready(function(){
         "flip": false
     });
 
-    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="tooltip"]').tooltip({
+    	delay: { show: 1000, hide: 1000 },
+    	html: true,
+    	placement: 'bottom',
+    	animation: false,
+    	title: 'Click to learn more',
+    	trigger: 'hover',
+    	offset: 100
+    });
 
 });
 
