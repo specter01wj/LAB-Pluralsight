@@ -13,6 +13,7 @@ $(document).ready(function(){
     	animation: false,
     	title: 'Click to learn more',
 
+
     	
     	trigger: 'hover',
     	offset: 100
