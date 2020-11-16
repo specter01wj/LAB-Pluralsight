@@ -13,6 +13,14 @@ body{
 .main{
     background-color: white;
     box-shadow: 0 0 4px rgba(0, 0, 50, .3);
+    position: relative;
+}
+
+
+.toast {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .banner{

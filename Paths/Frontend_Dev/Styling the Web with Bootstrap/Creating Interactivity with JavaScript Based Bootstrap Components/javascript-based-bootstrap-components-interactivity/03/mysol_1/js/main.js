@@ -24,9 +24,7 @@ $(document).ready(function(){
     	html: true
     });
 
-    $('.toast').toast({
-    	
-    });
+    $('.toast').toast('show');
 
 });
 
