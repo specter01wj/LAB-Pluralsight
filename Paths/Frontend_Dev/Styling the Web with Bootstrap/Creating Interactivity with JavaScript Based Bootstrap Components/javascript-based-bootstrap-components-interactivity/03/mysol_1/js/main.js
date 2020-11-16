@@ -39,10 +39,18 @@ function viewPopOvers() {
 }
 
 
+function showTooltips(){
+    $('[data-toggle="tooltip"]').tooltip('toggle');
+}
 
 
+$('[data-toggle="tooltip"]').on('show.bs.tooltip', function () {
+    tooltipButton.innerHTML = "Hide Tooltips";
+})
 
-
+$('[data-toggle="tooltip"]').on('hide.bs.tooltip', function () {
+    tooltipButton.innerHTML = "Show Tooltips";
+})
 
 
 
