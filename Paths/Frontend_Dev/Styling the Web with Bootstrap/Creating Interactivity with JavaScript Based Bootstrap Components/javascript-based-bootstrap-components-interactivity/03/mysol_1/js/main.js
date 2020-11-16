@@ -32,3 +32,18 @@ function displayCategories(){
 $('#pieCatergories').on('show.bs.dropdown', function () {
     // alert('This')
 })
+
+
+function viewPopOvers() {
+	$('#pop1').popover('toggle');
+}
+
+
+
+
+
+
+
+
+
+
