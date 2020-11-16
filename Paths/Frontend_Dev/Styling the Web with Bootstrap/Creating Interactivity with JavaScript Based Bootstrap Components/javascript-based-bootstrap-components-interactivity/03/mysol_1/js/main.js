@@ -16,6 +16,10 @@ $(document).ready(function(){
     	offset: 100
     });
 
+    $('[data-toggle="popover"]').popover({
+
+    });
+
 });
 
 // Dropdown methods
