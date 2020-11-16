@@ -12,6 +12,7 @@ $(document).ready(function(){
     	placement: 'bottom',
     	animation: false,
     	title: 'Click to learn more',
+    	
     	trigger: 'hover',
     	offset: 100
     });
