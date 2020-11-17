@@ -34,6 +34,7 @@ $(document).ready(function(){
 // Dropdown methods
 function displayCategories(){
     $('#pieCatergories').dropdown('toggle');
+    
 }
 
 // Dropdown events
@@ -68,7 +69,9 @@ function myCountDown(){
 }
 
 
-
+$('.toast').on('hide.bs.toast', function () {
+    console.log('Toast was hidden')
+})
 
 
 
