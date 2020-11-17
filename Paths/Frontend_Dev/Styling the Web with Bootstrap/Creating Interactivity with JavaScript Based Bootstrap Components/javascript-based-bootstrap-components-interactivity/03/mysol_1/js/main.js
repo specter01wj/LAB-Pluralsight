@@ -36,6 +36,7 @@ function displayCategories(){
     $('#pieCatergories').dropdown('toggle');
 
 
+
     
 }
 
