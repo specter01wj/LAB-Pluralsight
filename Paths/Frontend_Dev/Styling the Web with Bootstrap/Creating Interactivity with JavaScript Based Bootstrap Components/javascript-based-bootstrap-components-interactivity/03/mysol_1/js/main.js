@@ -34,6 +34,7 @@ $(document).ready(function(){
 // Dropdown methods
 function displayCategories(){
     $('#pieCatergories').dropdown('toggle');
+
     
 }
 
