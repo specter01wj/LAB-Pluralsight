@@ -79,6 +79,7 @@
       } catch (error) {
         // Always include at least a 'message' and 'name' properties
         throw {
+          
           "message": "In the attemptDivision() method the following error occurred: " + error.message,
           "name": "CustomError"
         };
