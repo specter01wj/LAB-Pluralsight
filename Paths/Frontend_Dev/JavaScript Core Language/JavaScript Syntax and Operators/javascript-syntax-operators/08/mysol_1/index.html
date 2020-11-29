@@ -80,6 +80,7 @@
       console.log(product.grossProfit.call(product));
       // Call using reference to 'prod2' properties
       console.log(product.grossProfit.call(prod2));
+      console.log(product.grossProfit.call({"standardCost": 200, "listPrice": 350}));
       console.log("");
       console.log(product.grossProfit.apply(product));
       console.log(product.grossProfit.apply(prod2));
