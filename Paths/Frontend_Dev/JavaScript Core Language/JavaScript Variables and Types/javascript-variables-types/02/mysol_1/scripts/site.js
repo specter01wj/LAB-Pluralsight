@@ -39,6 +39,7 @@ function initializeLoans() {
 
 
 
+
     
     la1.Factors = [false, true, true, false];
     la1.LoanPurpose = "I want to build a new house with the loan";
