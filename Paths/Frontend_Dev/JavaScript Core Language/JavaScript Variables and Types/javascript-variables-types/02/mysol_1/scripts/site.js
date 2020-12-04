@@ -357,15 +357,22 @@ function generateRickProfile(la) {
         riskProfile = "high";
     }
 
+
+    var applicationCode = String.raw `\t${createApplicationId()}`;
+
     // var summaryText = "Dear " + la.ApplicantName + ", " + reviewText + " Your risk profile is " + riskProfile;
     /*var summaryText = String.raw `Dear ${la.ApplicantName},
+        your application for ${"$" + la.LoanAmount}, ${reviewText}.
+        Your risk profile is ${riskProfile}
+        Your unique application code is \t${createApplicationId()}`;*/
+    /*var summaryText = highlighText `Dear ${la.ApplicantName},
         your application for ${"$" + la.LoanAmount}, ${reviewText}.
         Your risk profile is ${riskProfile}
         Your unique application code is \t${createApplicationId()}`;*/
     var summaryText = highlighText `Dear ${la.ApplicantName},
         your application for ${"$" + la.LoanAmount}, ${reviewText}.
         Your risk profile is ${riskProfile}
-        Your unique application code is \t${createApplicationId()}`;
+        Your unique application code is ${applicationCode}`;
 
     return summaryText;
 }
