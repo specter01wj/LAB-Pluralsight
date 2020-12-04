@@ -373,11 +373,11 @@ function generateRickProfile(la) {
 
 function highlighText(strings, ...values) {
     let str = '';
-    for(var i = 0; i < strings.length; i++) {
+    for(var i = 0; i < strings.raw.length; i++) {
         if(i > 0) {
             str += `<b>${values[i-1]}</b>`;
         }
-        str += strings[i];
+        str += strings.raw[i];
     }
     return str;
 }
