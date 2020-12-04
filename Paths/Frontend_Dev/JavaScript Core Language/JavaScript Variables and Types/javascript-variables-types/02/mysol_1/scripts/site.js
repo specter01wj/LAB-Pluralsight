@@ -369,9 +369,9 @@ function generateRickProfile(la) {
         your application for ${"$" + la.LoanAmount}, ${reviewText}.
         Your risk profile is ${riskProfile}
         Your unique application code is \t${createApplicationId()}`;*/
-    var summaryText = highlighText `Dear ${la.ApplicantName},
-        your application for ${"$" + la.LoanAmount}, ${reviewText}.
-        Your risk profile is ${riskProfile}
+    var summaryText = highlighText `Dear ${la.ApplicantName}, <br>
+        your application for ${"$" + la.LoanAmount}, ${reviewText}. <br>
+        Your risk profile is ${riskProfile} <br>
         Your unique application code is ${applicationCode}`;
 
     return summaryText;
