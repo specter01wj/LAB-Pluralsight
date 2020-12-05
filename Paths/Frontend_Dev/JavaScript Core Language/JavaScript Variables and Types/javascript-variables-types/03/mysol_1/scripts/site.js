@@ -280,7 +280,8 @@ function generateRickProfile(la) {
 
 
     let dr = nameAndTitle.startsWith('dr');
-    let dr = nameAndTitle.startsWith('dr');
+    let phd = nameAndTitle.startsWith('phd');
+    let phd2 = nameAndTitle.startsWith('ph.d');
 
 
     if (indexOfMD > -1 || indexOfMD2 > -1 || indexOfMD3 > -1 
