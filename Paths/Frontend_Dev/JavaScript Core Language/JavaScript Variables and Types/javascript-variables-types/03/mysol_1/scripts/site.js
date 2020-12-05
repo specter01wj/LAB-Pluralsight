@@ -354,8 +354,12 @@ function generateRickProfile(la) {
         risk = risk + 2;
     }
 
-    if (indexOfHoliday > -1 || indexOfHoliday2 > -1 
+    /*if (indexOfHoliday > -1 || indexOfHoliday2 > -1 
         || indexOfHoliday3 > -1 || indexOfHoliday4 > -1) {
+        //the loan will be used for a holiday
+        risk = risk + 3;
+    }*/
+    if (holiday || vacation) {
         //the loan will be used for a holiday
         risk = risk + 3;
     }
