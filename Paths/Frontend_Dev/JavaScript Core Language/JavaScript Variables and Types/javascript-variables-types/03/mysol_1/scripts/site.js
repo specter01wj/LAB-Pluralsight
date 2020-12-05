@@ -190,6 +190,7 @@ function getLoanApplicationDataFromInputs() {
     
     la.Factors[0] = isEmployed;
     la.Factors[1] = hasKids;
+
     
     la.Factors[2] = hasLoans;
     la.Factors[3] = hasCreditcards;    
