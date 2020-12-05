@@ -326,7 +326,8 @@ function generateRickProfile(la) {
         risk = risk + 1;
     }
 
-    var purpose = la.LoanPurpose;
+    // var purpose = la.LoanPurpose;
+    var purpose = la.LoanPurpose.trim().toLowerCase();
 
     var indexOfHouse = purpose.search("House");
     var indexOfHouse2 = purpose.search("house");
@@ -337,7 +338,18 @@ function generateRickProfile(la) {
     var indexOfBusiness = purpose.search("Business");
     var indexOfBusiness2 = purpose.search("business");
 
-    if (indexOfHouse > -1 || indexOfHouse2 > -1) {
+
+    let house = purpose.includes('house');
+    let holiday = purpose.includes('holiday');
+    let vacation = purpose.includes('vacation');
+    let business = purpose.includes('business');
+
+
+    /*if (indexOfHouse > -1 || indexOfHouse2 > -1) {
+        //the loan will be used for a house or building project
+        risk = risk + 2;
+    }*/
+    if (house) {
         //the loan will be used for a house or building project
         risk = risk + 2;
     }
