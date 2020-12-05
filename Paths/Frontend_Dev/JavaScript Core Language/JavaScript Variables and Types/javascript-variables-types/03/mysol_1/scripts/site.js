@@ -329,14 +329,14 @@ function generateRickProfile(la) {
     // var purpose = la.LoanPurpose;
     var purpose = la.LoanPurpose.trim().toLowerCase();
 
-    var indexOfHouse = purpose.search("House");
+    /*var indexOfHouse = purpose.search("House");
     var indexOfHouse2 = purpose.search("house");
     var indexOfHoliday = purpose.search("Holiday");
     var indexOfHoliday2 = purpose.search("holiday");
     var indexOfHoliday3 = purpose.search("vacation");
     var indexOfHoliday4 = purpose.search("Vacation");
     var indexOfBusiness = purpose.search("Business");
-    var indexOfBusiness2 = purpose.search("business");
+    var indexOfBusiness2 = purpose.search("business");*/
 
 
     let house = purpose.includes('house');
