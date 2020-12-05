@@ -364,7 +364,11 @@ function generateRickProfile(la) {
         risk = risk + 3;
     }
 
-    if (indexOfBusiness > -1 || indexOfBusiness2 > -1) {
+    /*if (indexOfBusiness > -1 || indexOfBusiness2 > -1) {
+        //the loan will be used for a business
+        risk = risk + 1;
+    }*/
+    if (business) {
         //the loan will be used for a business
         risk = risk + 1;
     }
