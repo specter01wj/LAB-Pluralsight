@@ -196,7 +196,7 @@ function getLoanApplicationDataFromInputs() {
     /*if (month != "" && day != "" && year != "") {
         la.ApplicantDateOfBirth = new Date(year, month, day);
     }*/
-    if (month != "" && day != "" && year != "") {
+    if (Number.isInteger(month) && Number.isInteger(day) && Number.isInteger(year) ) {
         la.ApplicantDateOfBirth = new Date(year, month, day);
     }
 
