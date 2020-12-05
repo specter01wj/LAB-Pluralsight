@@ -285,6 +285,7 @@ function generateRickProfile(la) {
     let dr = nameAndTitle.startsWith('dr');
     let phd = nameAndTitle.startsWith('phd');
 
+
     
     let phd2 = nameAndTitle.startsWith('ph.d');
 
