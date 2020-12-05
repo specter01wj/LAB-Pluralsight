@@ -269,14 +269,19 @@ function generateRickProfile(la) {
     // var nameAndTitle = la.ApplicantName;
     var nameAndTitle = la.ApplicantName.trim().toLowerCase();
 
-    var indexOfMD = nameAndTitle.search("MD");
+    /*var indexOfMD = nameAndTitle.search("MD");
     var indexOfMD2 = nameAndTitle.search("M.D");
     var indexOfMD3 = nameAndTitle.search("M.D.");
     var indexOfPhD = nameAndTitle.search("PhD");
     var indexOfPhD2 = nameAndTitle.search("Ph.D");
     var indexOfPhD3 = nameAndTitle.search("PHD");
     var indexOfDr = nameAndTitle.search("Dr.");
-    var indexOfDr2 = nameAndTitle.search("DR.");
+    var indexOfDr2 = nameAndTitle.search("DR.");*/
+
+
+    let dr = nameAndTitle.startsWith('dr');
+    let dr = nameAndTitle.startsWith('dr');
+
 
     if (indexOfMD > -1 || indexOfMD2 > -1 || indexOfMD3 > -1 
         || indexOfPhD > -1 || indexOfPhD2 > -1 
