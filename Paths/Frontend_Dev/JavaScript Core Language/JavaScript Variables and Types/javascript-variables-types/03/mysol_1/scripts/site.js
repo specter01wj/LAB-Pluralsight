@@ -266,7 +266,8 @@ function validateApplication() {
 function generateRickProfile(la) {
     var risk = 3;
 
-    var nameAndTitle = la.ApplicantName;
+    // var nameAndTitle = la.ApplicantName;
+    var nameAndTitle = la.ApplicantName.trim().toLowerCase();
 
     var indexOfMD = nameAndTitle.search("MD");
     var indexOfMD2 = nameAndTitle.search("M.D");
