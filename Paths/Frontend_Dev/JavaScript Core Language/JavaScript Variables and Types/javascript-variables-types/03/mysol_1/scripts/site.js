@@ -283,10 +283,18 @@ function generateRickProfile(la) {
     let phd = nameAndTitle.startsWith('phd');
     let phd2 = nameAndTitle.startsWith('ph.d');
 
+    let md = nameAndTitle.endsWith('md');
+    let md2 = nameAndTitle.endsWith('m.d');
+    let md3 = nameAndTitle.endsWith('m.d.');
 
-    if (indexOfMD > -1 || indexOfMD2 > -1 || indexOfMD3 > -1 
+
+    /*if (indexOfMD > -1 || indexOfMD2 > -1 || indexOfMD3 > -1 
         || indexOfPhD > -1 || indexOfPhD2 > -1 
         || indexOfPhD3 > -1 || indexOfDr > -1 || indexOfDr2 > -1) {
+
+        risk = risk - 1;
+    }*/
+    if (dr || phd || phd2 || md || md2 || md3 ) {
 
         risk = risk - 1;
     }
