@@ -2,6 +2,8 @@
 let ctx = document.getElementById('monthlySales').getContext('2d');
 let pieCtx = document.getElementById('deptSales').getContext('2d');
 
+let yearlyLabel = document.getElementById('yearlyTotal');
+
 let monthlySales = Array.of(12,9,3);
 let monthlyLabels = Array.of('Oct','Nov','Dec');
 
@@ -19,6 +21,9 @@ function addYearlyTotal2(a,b,c){
 let yearlyTotal2 = addYearlyTotal2(...monthlySales);
 console.log(yearlyTotal2);
 
+monthlySales.forEach(addYearlyTotal);
+
+yearlyLabel.innerHTML = "$" + yearlyTotal;
 
 var monthlySalesChart = new Chart(ctx, {
     type: 'bar',
