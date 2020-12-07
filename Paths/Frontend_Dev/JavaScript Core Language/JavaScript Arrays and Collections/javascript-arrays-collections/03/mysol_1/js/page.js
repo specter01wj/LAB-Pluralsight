@@ -5,12 +5,17 @@ let pieCtx = document.getElementById('deptSales').getContext('2d');
 let yearlyLabel = document.getElementById('yearlyTotal');
 
 let newAmount = document.getElementById('itemAmount');
+
 let newMonth = document.getElementById('monthId');
 
 
 
 // Monthly Totals
 let yearlyTotal = 0;
+
+
+const monthlySales = new Set();
+const monthlyLabels = new Set();
 
 // Code goes here
 
