@@ -16,6 +16,7 @@ let newAmount = document.getElementById('itemAmount');
 
 
 
+
 let newMonth = document.getElementById('monthId');
 
 
