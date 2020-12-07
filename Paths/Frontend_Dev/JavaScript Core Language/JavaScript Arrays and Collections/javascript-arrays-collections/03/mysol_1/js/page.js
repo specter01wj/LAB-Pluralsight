@@ -4,13 +4,18 @@ let pieCtx = document.getElementById('deptSales').getContext('2d');
 
 let yearlyLabel = document.getElementById('yearlyTotal');
 
+let newAmount = document.getElementById('itemAmount');
+let newMonth = document.getElementById('monthId');
+
+
+
 // Monthly Totals
 let yearlyTotal = 0;
 
 // Code goes here
 
 // Bar chart
-var monthlySalesChart = new Chart(ctx, {
+/*var monthlySalesChart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: monthlyLabels,
@@ -34,10 +39,10 @@ var monthlySalesChart = new Chart(ctx, {
             }]
         }
     }
-});
+});*/
 
 // Pie Chart
-var deptSalesChart = new Chart(pieCtx, {
+/*var deptSalesChart = new Chart(pieCtx, {
     type: 'pie',
     data: {
         labels: deptLabels,
@@ -55,4 +60,5 @@ var deptSalesChart = new Chart(pieCtx, {
     options: {
         
     }
-})
+});*/
+
