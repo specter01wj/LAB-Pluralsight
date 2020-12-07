@@ -5,23 +5,6 @@ let pieCtx = document.getElementById('deptSales').getContext('2d');
 let yearlyLabel = document.getElementById('yearlyTotal');
 
 let newAmount = document.getElementById('itemAmount');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let newMonth = document.getElementById('monthId');
 
 
