@@ -16,6 +16,15 @@ let yearlyTotal = 0;
 const monthlySales = new Set();
 const monthlyLabels = new Set();
 
+
+
+function addSale(){
+    monthlySales.add(parseInt(newAmount.value));
+    monthlyLabels.add(newMonth.value);
+    console.log(monthlySales.size);
+}
+
+
 // Code goes here
 
 // Bar chart
