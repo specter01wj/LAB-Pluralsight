@@ -37,6 +37,7 @@ function addSale(){
 
 
 
+
     
     console.log(monthlySales.size);
 }
