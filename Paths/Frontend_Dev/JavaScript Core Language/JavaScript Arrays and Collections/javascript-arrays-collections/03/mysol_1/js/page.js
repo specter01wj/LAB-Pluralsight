@@ -21,9 +21,16 @@ const monthlyLabels = new Set();
 function addSale(){
     monthlySales.add(parseInt(newAmount.value));
     monthlyLabels.add(newMonth.value);
+    
     console.log(monthlySales.size);
 }
 
+
+function deletVal(){
+    monthlySales.forEach((value1, value2, monthlySales) =>{
+        alert(value1)
+    })
+}
 
 // Code goes here
 
