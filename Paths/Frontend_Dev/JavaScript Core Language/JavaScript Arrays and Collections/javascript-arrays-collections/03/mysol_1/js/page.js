@@ -22,6 +22,11 @@ function addSale(){
     monthlySales.add(parseInt(newAmount.value));
     monthlyLabels.add(newMonth.value);
     console.log(monthlySales.size);
+
+
+
+    monthlySalesChart.data.labels = Array.from(monthlyLabels);
+
 }
 
 
@@ -46,7 +51,8 @@ function addTotal(){
 var monthlySalesChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: monthlyLabels,
+        // labels: monthlyLabels,
+        labels: [],
         datasets: [{
             label: '# of Sales',
             data: monthlySales,
