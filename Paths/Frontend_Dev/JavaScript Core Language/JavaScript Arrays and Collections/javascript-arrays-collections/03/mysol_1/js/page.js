@@ -25,6 +25,10 @@ function addSale(){
 
 
     yearlyTotal = 0;
+    monthlySalesChart.data.datasets.forEach((dataset) => {
+        dataset.data = [];
+    });
+    
     for(let amount of monthlySales) {
         yearlyTotal = amount + yearlyTotal;
         yearlyLabel.innerHTML = yearlyTotal;
@@ -33,7 +37,7 @@ function addSale(){
             dataset.data.push(amount);
         })
     }
-    
+
 
     monthlySalesChart.data.labels = Array.from(monthlyLabels);
     monthlySalesChart.update();
