@@ -48,6 +48,16 @@ function addSale(){
     monthlySalesChart.data.labels = Array.from(monthlyLabels);
     monthlySalesChart.update();
 
+    if (hikingRadio.checked) {
+        categories.add(hiking);
+    } else if (runningRadio.checked) {
+        categories.add(running);
+    } else if (huntingRadio){
+        categories.add(hunting);
+    } else{
+        // Do something
+    }
+    
 }
 
 
