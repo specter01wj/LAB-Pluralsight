@@ -57,7 +57,7 @@ function addSale(){
     } else{
         // Do something
     }
-    
+    console.log(categories);
 }
 
 
