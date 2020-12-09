@@ -7,6 +7,9 @@ let yearlyLabel = document.getElementById('yearlyTotal');
 let newAmount = document.getElementById('itemAmount');
 let newMonth = document.getElementById('monthId');
 
+let hikingRadio = document.getElementById('hiking');
+let runningRadio = document.getElementById('running');
+let huntingRadio = document.getElementById('hunting');
 
 
 // Monthly Totals
@@ -16,6 +19,7 @@ let yearlyTotal = 0;
 const monthlySales = new Set();
 const monthlyLabels = new Set();
 
+const categories = new WeakSet();
 
 
 function addSale(){
@@ -28,7 +32,7 @@ function addSale(){
     monthlySalesChart.data.datasets.forEach((dataset) => {
         dataset.data = [];
     });
-    
+
     for(let amount of monthlySales) {
         yearlyTotal = amount + yearlyTotal;
         yearlyLabel.innerHTML = yearlyTotal;
