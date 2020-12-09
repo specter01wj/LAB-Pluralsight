@@ -23,6 +23,7 @@ function addSale(){
     monthlyLabels.add(newMonth.value);
 
 
+
     
     console.log(monthlySales.size);
 }
