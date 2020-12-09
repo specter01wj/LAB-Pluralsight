@@ -43,7 +43,7 @@ function addTotal(){
 // Code goes here
 
 // Bar chart
-/*var monthlySalesChart = new Chart(ctx, {
+var monthlySalesChart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: monthlyLabels,
@@ -67,7 +67,7 @@ function addTotal(){
             }]
         }
     }
-});*/
+});
 
 // Pie Chart
 /*var deptSalesChart = new Chart(pieCtx, {
