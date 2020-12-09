@@ -24,8 +24,19 @@ function addSale(){
     console.log(monthlySales.size);
 
 
+    yearlyTotal = 0;
+    for(let amount of monthlySales) {
+        yearlyTotal = amount + yearlyTotal;
+        yearlyLabel.innerHTML = yearlyTotal;
+
+        monthlySalesChart.data.datasets.forEach((dataset) => {
+            dataset.data.push(amount);
+        })
+    }
+    
 
     monthlySalesChart.data.labels = Array.from(monthlyLabels);
+    monthlySalesChart.update();
 
 }
 
@@ -38,11 +49,15 @@ function deletVal(){
 
 
 function addTotal(){
-    yearlyTotal = 0;
+    /*yearlyTotal = 0;
     for(let amount of monthlySales) {
         yearlyTotal = amount + yearlyTotal;
         yearlyLabel.innerHTML = yearlyTotal;
-    }
+
+        monthlySalesChart.data.datasets.forEach((dataset) => {
+            dataset.data.push(amount);
+        })
+    }*/
 }
 
 // Code goes here
@@ -55,7 +70,8 @@ var monthlySalesChart = new Chart(ctx, {
         labels: [],
         datasets: [{
             label: '# of Sales',
-            data: monthlySales,
+            // data: monthlySales,
+            data: [],
             backgroundColor: [
                 'rgba(238, 184, 104, 1)',
                 'rgba(75, 166, 223, 1)',
