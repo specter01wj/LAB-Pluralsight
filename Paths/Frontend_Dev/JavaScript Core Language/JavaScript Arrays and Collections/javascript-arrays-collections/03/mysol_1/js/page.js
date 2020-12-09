@@ -27,14 +27,16 @@ function addSale(){
 
 function deletVal(){
     monthlySales.forEach((value1, value2, monthlySales) =>{
-        alert(value1)
+        console.log(value1);
     })
 }
 
 
 function addTotal(){
+    yearlyTotal = 0;
     for(let amount of monthlySales) {
-        console.log(amount);
+        yearlyTotal = amount + yearlyTotal;
+        yearlyLabel.innerHTML = yearlyTotal;
     }
 }
 
