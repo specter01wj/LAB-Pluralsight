@@ -21,6 +21,7 @@ const monthlyLabels = new Set();
 function addSale(){
     monthlySales.add(parseInt(newAmount.value));
     monthlyLabels.add(newMonth.value);
+    
     console.log(monthlySales.size);
 }
 
