@@ -20,7 +20,9 @@ const monthlySales = new Set();
 const monthlyLabels = new Set();
 
 const categories = new WeakSet();
-
+let hiking = {category: "Hiking"};
+let running = {category: "Running"};
+let hunting = {category: "Hunting"};
 
 function addSale(){
     monthlySales.add(parseInt(newAmount.value));
