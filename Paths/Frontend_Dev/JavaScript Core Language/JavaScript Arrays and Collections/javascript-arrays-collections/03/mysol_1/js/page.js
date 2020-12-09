@@ -31,6 +31,13 @@ function deletVal(){
     })
 }
 
+
+function addTotal(){
+    for(let amount of monthlySales) {
+        console.log(amount);
+    }
+}
+
 // Code goes here
 
 // Bar chart
