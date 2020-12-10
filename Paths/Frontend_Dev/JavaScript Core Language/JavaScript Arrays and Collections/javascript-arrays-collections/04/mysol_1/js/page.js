@@ -11,6 +11,9 @@ let huntingRadio = document.getElementById('hunting');
 // Monthly Totals
 var yearlyTotal = 0;
 
+
+const monthlySales = new Map();
+
 // Add Sales
 function addSale(){
 	
