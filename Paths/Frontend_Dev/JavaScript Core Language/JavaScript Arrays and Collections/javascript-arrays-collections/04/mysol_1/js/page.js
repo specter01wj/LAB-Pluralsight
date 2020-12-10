@@ -21,6 +21,10 @@ function addSale(){
 	// console.log(monthlySales);
 	monthlySalesChart.data.labels = Array.from(monthlySales.keys());
 
+	yearlyTotal = 0;
+	monthlySalesChart.data.datasets.forEach((dataset) => {
+	    dataset.data = [];
+	});
 
 	/*monthlySales.forEach(function(sale){
 		console.log(sale);
