@@ -18,8 +18,10 @@ const monthlySales = new Map();
 function addSale(){
 	// monthlySales.set('newSale', newAmount.value);
 	monthlySales.set(newMonth.value, newAmount.value);
-	console.log(monthlySales);
-	
+	// console.log(monthlySales);
+	monthlySalesChart.data.labels = Array.from(monthlySales.keys());
+
+	monthlySalesChart.update();
 }
 
 function findSale(){
