@@ -16,7 +16,8 @@ const monthlySales = new Map();
 
 // Add Sales
 function addSale(){
-	monthlySales.set('newSale', newAmount.value);
+	// monthlySales.set('newSale', newAmount.value);
+	monthlySales.set(newMonth.value, newAmount.value);
 	console.log(monthlySales);
 	
 }
@@ -24,6 +25,12 @@ function addSale(){
 function findSale(){
 	console.log(monthlySales.get('newSale'));
 
+}
+
+
+function fillValue(){
+	monthlySales.delete('newSale');
+	console.log(monthlySales);
 }
 
 // Bar chart
