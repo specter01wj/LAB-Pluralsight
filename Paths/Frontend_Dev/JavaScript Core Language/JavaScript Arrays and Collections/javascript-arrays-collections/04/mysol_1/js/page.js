@@ -17,9 +17,23 @@ const monthlySales = new Map();
 // Add Sales
 function addSale(){
 	// monthlySales.set('newSale', newAmount.value);
-	monthlySales.set(newMonth.value, newAmount.value);
+	monthlySales.set(newMonth.value, parseInt(newAmount.value));
 	// console.log(monthlySales);
 	monthlySalesChart.data.labels = Array.from(monthlySales.keys());
+
+
+	/*monthlySales.forEach(function(sale){
+		console.log(sale);
+	});*/
+
+	for (let amount of monthlySales.values()){
+		yearlyTotal = amount + yearlyTotal;
+		yearlyLabel.innerHTML = yearlyTotal;
+
+		monthlySalesChart.data.datasets.forEach((dataset) => {
+	        dataset.data.push(amount);
+	    });
+	}
 
 	monthlySalesChart.update();
 }
