@@ -14,6 +14,19 @@ var yearlyTotal = 0;
 
 const monthlySales = new Map();
 
+
+{
+	let salesA = {
+		a:[1,2]
+	}
+
+	var map = new WeakMap();
+	map.set(salesA, 'Hiking');
+ 
+	console.log('First ' + salesA)
+}
+// console.log('Second ' + salesA);
+
 // Add Sales
 function addSale(){
 	// monthlySales.set('newSale', newAmount.value);
