@@ -8,6 +8,10 @@ let huntingRadio = document.getElementById('hunting');
 
 // Code goes here
 
+let testBuffer = new ArrayBuffer(16);
+
+
+
 // Add Sales
 function addSale(){
 	
