@@ -56,6 +56,7 @@ readline.on('line', async line => {
               if (positions.length > 0) {
                 const position = positions.shift();
 
+
                 
                 const result = position(...args);
                 return { value: result, done: false };
