@@ -26,6 +26,8 @@ let view3 = new DataView(testBuffer);
 view3.setInt8(2, 43);
 console.log(view3);
 
+let num = view3.getInt8(2);
+console.log(num);
 
 // Add Sales
 function addSale(){
