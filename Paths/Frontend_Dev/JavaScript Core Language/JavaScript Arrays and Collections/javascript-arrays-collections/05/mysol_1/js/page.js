@@ -29,6 +29,15 @@ console.log(view3);
 let num = view3.getInt8(2);
 console.log(num);
 
+
+let view4 = new DataView(testBuffer);
+
+let num2 = view4.getInt8(2);
+console.log(num2);
+
+
+
+
 // Add Sales
 function addSale(){
 	
