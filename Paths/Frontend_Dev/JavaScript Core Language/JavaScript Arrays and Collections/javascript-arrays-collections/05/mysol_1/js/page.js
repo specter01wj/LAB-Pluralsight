@@ -10,10 +10,21 @@ let huntingRadio = document.getElementById('hunting');
 
 let testBuffer = new ArrayBuffer(16);
 
-if(testBuffer.byteLength === 16) {
+/*if(testBuffer.byteLength === 16) {
 	console.log('Yes, 16!');
-}
+}*/
 
+let view1 = new Int8Array(testBuffer);
+view1[0] = 32;
+console.log(view1);
+
+let view2 = new Int16Array(testBuffer);
+view2[0] = 32;
+console.log(view2);
+
+let view3 = new DataView(testBuffer);
+view3.setInt8(2, 43);
+console.log(view3);
 
 
 // Add Sales
