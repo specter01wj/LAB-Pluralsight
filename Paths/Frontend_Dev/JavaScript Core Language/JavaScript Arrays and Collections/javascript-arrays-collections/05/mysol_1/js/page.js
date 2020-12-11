@@ -6,6 +6,7 @@ var newMonth = document.getElementById('monthId');
 
 
 
+
 let hikingRadio = document.getElementById('hiking');
 let runningRadio = document.getElementById('running');
 let huntingRadio = document.getElementById('hunting');
