@@ -10,6 +10,10 @@ let huntingRadio = document.getElementById('hunting');
 
 let testBuffer = new ArrayBuffer(16);
 
+if(testBuffer.byteLength === 16) {
+	console.log('Yes, 16!');
+}
+
 
 
 // Add Sales
