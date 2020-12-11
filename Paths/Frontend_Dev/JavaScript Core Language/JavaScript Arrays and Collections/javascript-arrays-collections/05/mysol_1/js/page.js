@@ -2,17 +2,6 @@
 var yearlyLabel = document.getElementById('yearlyTotal');
 var newAmount = document.getElementById('itemAmount');
 var newMonth = document.getElementById('monthId');
-
-
-
-
-
-
-
-
-
-
-
 let hikingRadio = document.getElementById('hiking');
 let runningRadio = document.getElementById('running');
 let huntingRadio = document.getElementById('hunting');
