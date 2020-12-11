@@ -36,7 +36,13 @@ let num2 = view4.getInt8(2);
 console.log(num2);
 
 
+let view5 = new DataView(testBuffer, 7, 3);
+view5.setInt8(0, 54);
+view5.setInt8(1, 23);
+view5.setInt8(2, 32);
 
+let numAlert = view5.getInt8(0);
+console.log(numAlert)
 
 // Add Sales
 function addSale(){
