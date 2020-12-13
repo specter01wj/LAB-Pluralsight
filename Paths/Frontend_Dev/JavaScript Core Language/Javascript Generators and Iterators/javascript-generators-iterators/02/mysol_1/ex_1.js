@@ -31,9 +31,12 @@ while(!res.done) {
 }
 
 
+const it2 = myIterator(0, 10);
 
-
-
+for(let val, result; (result = it2.next()) && !result.done; ) {
+  val = result.value;
+  console.log(val);
+}
 
 
 
