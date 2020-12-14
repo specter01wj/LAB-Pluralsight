@@ -66,7 +66,28 @@ readline.on('line', async line => {
 						};
 					},
 					actions: [askForServingSize, displayCalories],
+				};
+
+				function askForServingSize(food) {
+					readline.question('How many servings do you eat?',
+						servingSize => {
+							actionIt.next(servingSize, food);
+						}
+					)
 				}
+
+				function displayCalories(servingSize, food) {
+	        const calories = food.calories;
+	        console.log(
+	          `${
+	            food.name
+	          } with a serving size of ${servingSize} has ${Number.parseFloat(
+	            calories * parseInt(servingSize, 10),
+	          ).toFixed()} calories.`,
+	        );
+	        actionIt.next();
+	        readline.prompt();
+	      }
 
 				readline.question('What would you like to log today?', async(item) => {
 					
