@@ -9,6 +9,35 @@ const readline = require('readline').createInterface({
 readline.prompt();
 readline.on('line', line => {
 	switch(line.trim()) {
+		case 'list vegan foods':
+			{
+				axios.get('http://localhost:3001/food').then(({ data }) => {
+					let idx = 0;
+					const veganIterable = {
+						[Symbol.iterator]() {
+							return {
+								[Symbol.iterator]() {
+									return this;
+								},
+								next() {
+									const current = data[idx];
+									idx++;
+									if(current) {
+										return { value: current, done: false };
+									} else {
+										return { value: current, done: true };
+									}
+								},
+							};
+						},
+					};
+					for(let val of veganIterable) {
+						console.log(val.name);
+					}
+					readline.prompt();
+				});
+			}
+			break;
 		case 'log':
 			{
 				readline.question('What would you like to log today?', async(item) => {
