@@ -46,6 +46,7 @@ readline.on('line', async line => {
 			{
 				const { data } = await axios.get('http://localhost:3001/food');
 				const it = data[Symbol.iterator]();
+				let actionIt;
 
 				const actionIterator = {
 					[Symbol.iterator]() {
@@ -96,6 +97,8 @@ readline.on('line', async line => {
 						const food = position.value.name;
 						if(food === item) {
 							console.log(`${item} has ${position.value.calories} calories`);
+							actionIt = actionIterator[Symbol.value];
+							actionIt.next(position.value);
 						}
 						position = it.next();
 					}
