@@ -102,6 +102,7 @@ readline.on('line', async line => {
 	        const { data } = await axios.get(`http://localhost:3001/users/1`);
 	        const usersLog = data.log || [];
 
+
 	        
 	        const putBody = {
 	          ...data,
