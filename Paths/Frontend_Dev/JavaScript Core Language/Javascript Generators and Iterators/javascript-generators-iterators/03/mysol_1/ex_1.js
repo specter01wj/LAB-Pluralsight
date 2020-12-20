@@ -7,12 +7,14 @@
 
 function *timestampGenerator1() {
   let ts = Date.now();
+  console.log('orig ts: ', ts);
+  yield ts;
   var additionalTime = yield;
-  console.log(additionalTime);
+  console.log('additionalTime: ', additionalTime);
   if(additionalTime) {
     ts = ts + additionalTime;
   }
-  console.log(ts);
+  console.log('updated ts: ', ts);
 }
 
 // timestampGenerator();
@@ -25,8 +27,29 @@ it1.next();*/
 }*/
 
 let it2 = timestampGenerator1();
+let origTimeStamp = it2.next();
+console.log(origTimeStamp);
 it2.next();
 it2.next(1000 * 60);
+
+
+
+function *randomNum() {
+  while(true) {
+    yield Math.floor(Math.random() * 100);
+  }
+}
+
+let it3 = randomNum();
+
+function getRandomNum() {
+  return it3.next().value;
+}
+
+console.log(getRandomNum());
+
+
+
 
 
 
