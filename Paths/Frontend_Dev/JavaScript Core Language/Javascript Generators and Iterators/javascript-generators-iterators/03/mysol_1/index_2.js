@@ -14,27 +14,6 @@ readline.on('line', async line => {
         function* listVeganFoods() {
           try {
             let idx = 0;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
             const veganOnly = data.filter(food =>
               food.dietary_preferences.includes('vegan'),
             );
