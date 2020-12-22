@@ -13,6 +13,15 @@ function *gen2() {
 }
 
 
+function gen3() {
+  return ['three', 'six', 'nine']
+}
+
+function *gen4() {
+  let val = yield *gen3();
+}
+
+
 
 let it1 = gen2();
 
@@ -20,6 +29,12 @@ console.log(it1.next());
 console.log(it1.next());
 console.log(it1.next());
 console.log(it1.next());
+
+let it2 = gen4();
+
+console.log(it2.next());
+console.log(it2.next());
+console.log(it2.next());
 
 
 
