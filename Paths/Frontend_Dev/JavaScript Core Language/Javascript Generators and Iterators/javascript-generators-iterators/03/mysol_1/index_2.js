@@ -16,6 +16,7 @@ readline.on('line', async line => {
             let idx = 0;
 
 
+
             
             const veganOnly = data.filter(food =>
               food.dietary_preferences.includes('vegan'),
