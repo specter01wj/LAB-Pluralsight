@@ -15,6 +15,7 @@ let errorIt1 = errorHandling();
 console.log(errorIt1.next());
 
 
+
 errorIt1.throw('error message here! JW');
 console.log(errorIt1.next());
 
