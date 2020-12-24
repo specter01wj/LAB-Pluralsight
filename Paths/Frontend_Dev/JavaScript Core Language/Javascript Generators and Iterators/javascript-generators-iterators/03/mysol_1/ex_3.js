@@ -3,26 +3,6 @@ function *errorHandling() {
 	try {
 		yield 1;
 		yield 2;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
 		yield 3;
 	} catch(error) {
 		console.error(error);
