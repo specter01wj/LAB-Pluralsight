@@ -10,6 +10,7 @@ function *errorHandling() {
 
 
 
+
 		
 		yield 3;
 	} catch(error) {
