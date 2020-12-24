@@ -5,6 +5,7 @@ function *errorHandling() {
 		yield 2;
 
 
+
 		
 		yield 3;
 	} catch(error) {
