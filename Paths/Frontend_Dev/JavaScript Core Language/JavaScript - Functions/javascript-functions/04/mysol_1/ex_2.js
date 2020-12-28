@@ -11,9 +11,11 @@ sayHi.call(person2);
 
 
 
+let sayHi2 = function(message) {
+  console.log(message + ', ' + this.name);
+}
 
-
-
+sayHi2.call(person1, 'Hello');
 
 
 
