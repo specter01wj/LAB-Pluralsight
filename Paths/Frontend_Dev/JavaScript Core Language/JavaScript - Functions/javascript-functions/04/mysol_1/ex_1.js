@@ -17,3 +17,10 @@ greeting1.sayHi = function() {
 greeting1.sayHi();
 
 
+
+function sayHi2() {
+  console.log('Hi');
+  console.log(this);
+}
+
+let greeting2 = new sayHi2();
