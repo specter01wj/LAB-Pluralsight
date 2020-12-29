@@ -21,6 +21,7 @@ function display(char1, char2, char3, char4) {
 
 
 
+
   
 }
 
