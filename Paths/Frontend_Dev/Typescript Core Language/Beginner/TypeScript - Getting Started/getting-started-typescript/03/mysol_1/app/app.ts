@@ -6,7 +6,17 @@ function startGame() {
   playerName = null;
   logPlayer(playerName);
 
-  var messagesElement = document.getElementById('messages');
+  // var messagesElement = document.getElementById('messages');
+  var messagesElement: HTMLElement | string;
+
+  if(typeof messagesElement === 'string') {
+  	return messagesElement;
+  } else {
+  	return messagesElement;
+  }
+
+
+  messagesElement = document.getElementById('messages');
   messagesElement!.innerText = 'Welcome to MultiMath! Starting new game...';  
 }
 
