@@ -9,6 +9,7 @@ function startGame() {
   
   messagesElement!.innerText = 'Welcome to MultiMath! Starting new game...';  */
   postScore(80, playerName);
+  postScore(2222);
   postScore(-5, playerName);
 
 }
@@ -43,7 +44,8 @@ function postScore(score: number, playerName: string = 'MultiMath Player'): void
   }
 
   const scoreElement: HTMLElement | null = document.getElementById('postedScores');
-  scoreElement!.innerText = `${score} - ${playerName}`;  
+  scoreElement!.innerText = `${score} - ${playerName}`;
+  
 
   logger(`Score: ${score}`);
 }
