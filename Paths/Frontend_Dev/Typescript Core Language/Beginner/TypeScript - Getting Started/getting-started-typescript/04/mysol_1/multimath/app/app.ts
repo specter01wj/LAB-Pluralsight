@@ -56,6 +56,7 @@ function postScore(score: number, playerName: string = 'MultiMath Player'): void
 
 
 
+
   
 
   logger(`Score: ${score}`);
