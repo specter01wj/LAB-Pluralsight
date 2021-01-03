@@ -45,6 +45,7 @@ function postScore(score: number, playerName: string = 'MultiMath Player'): void
 
   const scoreElement: HTMLElement | null = document.getElementById('postedScores');
   scoreElement!.innerText = `${score} - ${playerName}`;
+
   
 
   logger(`Score: ${score}`);
