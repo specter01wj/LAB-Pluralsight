@@ -1,8 +1,8 @@
 /// <reference path="player.ts" />
 /// <reference path="result.ts" />
+/// <reference path="game.ts" />
 
-
-function startGame() {
+/*function startGame() {
   // starting a new game
 
   let playerName: string | undefined = getInputValue('playername');
@@ -14,7 +14,7 @@ function startGame() {
 
 function logPlayer(name: string = 'MultiMath Player'): void {
   console.log(`New game starting for player: ${name}`);
-}
+}*/
 
 /*function getInputValue(elementID: string): string | undefined {
 
@@ -28,7 +28,7 @@ function logPlayer(name: string = 'MultiMath Player'): void {
   }  
 }*/
 
-function postScore(score: number, playerName: string = 'MultiMath Player'): void {
+/*function postScore(score: number, playerName: string = 'MultiMath Player'): void {
 
   let logger: (value: string) => void;
 
@@ -74,10 +74,27 @@ const firstPlayer: Player = new Player();
 firstPlayer.name = "Lanier";
 console.log(firstPlayer.formatName());
 
+*/
 
 
+let newGame: Game;
 
+// add click handler to the start game button
+document.getElementById('startGame')!.addEventListener('click', () => {
+  const player: Player = new Player();
+  player.name = Utility.getInputValue('playername');
 
+  const problemCount: number = Number(Utility.getInputValue('problemCount'));
+  const factor: number = Number(Utility.getInputValue('factor'));
+
+  newGame = new Game(player, problemCount, factor);
+  newGame.displayGame();
+});
+
+// add click handler to the calculate score button
+document.getElementById('calculate')!.addEventListener('click', () => {
+  newGame.calculateScore();
+});
 
 
 
