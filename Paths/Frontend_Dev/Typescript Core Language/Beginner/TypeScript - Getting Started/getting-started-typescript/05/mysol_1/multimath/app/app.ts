@@ -57,12 +57,12 @@ let myResult: Result = {
   score: 5,
   problemCount: 15,
   factor: 27 
-}
+};
 
 let player: Person = {
   name: 'Daniel',
   formatName: () => 'Dan'
-}
+};
 
 
 
