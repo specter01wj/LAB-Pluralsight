@@ -16,7 +16,7 @@ function logPlayer(name: string = 'MultiMath Player'): void {
   console.log(`New game starting for player: ${name}`);
 }
 
-function getInputValue(elementID: string): string | undefined {
+/*function getInputValue(elementID: string): string | undefined {
 
   const inputElement: HTMLInputElement = <HTMLInputElement>document.getElementById(elementID);
 
@@ -26,7 +26,7 @@ function getInputValue(elementID: string): string | undefined {
   else {
     return inputElement.value;
   }  
-}
+}*/
 
 function postScore(score: number, playerName: string = 'MultiMath Player'): void {
 

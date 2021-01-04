@@ -1,3 +1,11 @@
+var Player = (function () {
+    function Player() {
+    }
+    Player.prototype.formatName = function () {
+        return this.name.toUpperCase();
+    };
+    return Player;
+}());
 function startGame() {
     var playerName = getInputValue('playername');
     logPlayer(playerName);
