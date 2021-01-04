@@ -1,4 +1,4 @@
-var Player = /** @class */ (function () {
+var Player = (function () {
     function Player() {
     }
     Player.prototype.formatName = function () {
@@ -6,3 +6,4 @@ var Player = /** @class */ (function () {
     };
     return Player;
 }());
+//# sourceMappingURL=player.js.map

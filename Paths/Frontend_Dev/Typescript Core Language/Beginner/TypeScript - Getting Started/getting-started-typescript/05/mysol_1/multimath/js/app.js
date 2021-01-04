@@ -1,5 +1,4 @@
 function startGame() {
-    // starting a new game
     var playerName = getInputValue('playername');
     logPlayer(playerName);
     postScore(80, playerName);
@@ -49,3 +48,4 @@ var player = {
 var firstPlayer = new Player();
 firstPlayer.name = "Lanier";
 console.log(firstPlayer.formatName());
+//# sourceMappingURL=app.js.map

@@ -1,3 +1,7 @@
+/// <reference path="player.ts" />
+/// <reference path="result.ts" />
+
+
 function startGame() {
   // starting a new game
 
