@@ -66,7 +66,9 @@ let player: Person = {
 
 
 
-
+const firstPlayer: Player = new Player();
+firstPlayer.name = "Lanier";
+console.log(firstPlayer.formatName());
 
 
 
