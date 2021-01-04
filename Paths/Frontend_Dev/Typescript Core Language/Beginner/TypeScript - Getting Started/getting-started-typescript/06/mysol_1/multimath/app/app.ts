@@ -15,6 +15,7 @@ document.getElementById('startGame')!.addEventListener('click', () => {
 
 
 
+
   
   const factor: number = Number(Utility.getInputValue('factor'));
 
