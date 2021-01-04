@@ -9,16 +9,6 @@ document.getElementById('startGame')!.addEventListener('click', () => {
   player.name = Utility.getInputValue('playername');
 
   const problemCount: number = Number(Utility.getInputValue('problemCount'));
-
-
-
-
-
-
-
-
-
-  
   const factor: number = Number(Utility.getInputValue('factor'));
 
   newGame = new Game(player, problemCount, factor);
