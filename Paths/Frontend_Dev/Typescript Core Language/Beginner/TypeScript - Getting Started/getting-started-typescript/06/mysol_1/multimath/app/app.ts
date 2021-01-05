@@ -22,6 +22,7 @@ document.getElementById('startGame')!.addEventListener('click', () => {
 
 
 
+
   
   newGame.displayGame();
 });
