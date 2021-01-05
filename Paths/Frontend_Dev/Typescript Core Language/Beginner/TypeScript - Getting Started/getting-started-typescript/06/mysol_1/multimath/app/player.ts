@@ -1,4 +1,5 @@
-/// <reference path="person.ts" />
+
+import { Person } from './person';
 
 class Player implements Person {
   name: string;
