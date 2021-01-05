@@ -13,6 +13,7 @@ document.getElementById('startGame')!.addEventListener('click', () => {
 
   newGame = new Game(player, problemCount, factor);
 
+
   
   newGame.displayGame();
 });
