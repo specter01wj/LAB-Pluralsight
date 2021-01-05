@@ -12,6 +12,7 @@ document.getElementById('startGame')!.addEventListener('click', () => {
   const factor: number = Number(Utility.getInputValue('factor'));
 
   newGame = new Game(player, problemCount, factor);
+  
   newGame.displayGame();
 });
 
