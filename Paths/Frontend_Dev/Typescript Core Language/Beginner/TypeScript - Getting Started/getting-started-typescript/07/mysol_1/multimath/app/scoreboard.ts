@@ -16,15 +16,6 @@ export class Scoreboard {
 
     for (let index = 0; index < this.results.length; index++) {
       const result: Result = this.results[index];
-
-
-
-
-
-
-
-
-      
       output += '<h4>';
       output += result.playerName + ': ' + result.score + '/' + result.problemCount + ' for factor ' + result.factor;
       output += '</h4>';
