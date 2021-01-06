@@ -18,6 +18,7 @@ export class Scoreboard {
       const result: Result = this.results[index];
 
 
+
       
       output += '<h4>';
       output += result.playerName + ': ' + result.score + '/' + result.problemCount + ' for factor ' + result.factor;
