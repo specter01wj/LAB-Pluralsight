@@ -19,6 +19,7 @@ export class Scoreboard {
 
 
 
+
       
       output += '<h4>';
       output += result.playerName + ': ' + result.score + '/' + result.problemCount + ' for factor ' + result.factor;
