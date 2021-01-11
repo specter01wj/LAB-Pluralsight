@@ -38,6 +38,14 @@ export class CheckingAccount {
         this._balance = val;
     }
 
+    deposit(amount: number) {
+        this.balance += amount;
+    }
+
+    withdrawal(amount: number) {
+        this.balance -= amount;
+    }
+
 
 }
 
