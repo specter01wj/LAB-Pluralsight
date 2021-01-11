@@ -25,7 +25,7 @@ export class CheckingAccount {
     private _balance: number = 0;
 
 
-    constructor(argument) {
+    constructor(public title: string) {
         // code...
     }
 
