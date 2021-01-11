@@ -1,4 +1,4 @@
-﻿export class CheckingAccount {
+﻿/*export class CheckingAccount {
     private _balance = 0; // field
 
     constructor(public title: string) { }
@@ -18,4 +18,16 @@
     withdrawal(amount: number) { // function
         this.balance -= amount;  
     }
+}*/
+
+
+export class CheckingAccount {
+    
+    constructor(argument) {
+        // code...
+    }
 }
+
+
+
+
