@@ -32,20 +32,6 @@ export class CheckingAccount {
 
     get balance() {
         return this._balance;
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
     }
 
 
