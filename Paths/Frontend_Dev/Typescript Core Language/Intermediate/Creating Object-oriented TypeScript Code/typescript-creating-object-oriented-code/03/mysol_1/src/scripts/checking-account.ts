@@ -34,6 +34,10 @@ export class CheckingAccount {
         return this._balance;
     }
 
+    set balance(val: number) {
+        this._balance = val;
+    }
+
 
 }
 
