@@ -1,7 +1,7 @@
 ﻿import { BankAccount } from "./bank-account";
 import { AccountType } from "./enums";
 
-export class CheckingAccount extends BankAccount {
+/*export class CheckingAccount extends BankAccount {
     accountType = AccountType.Checking;  
 
     getAccountInfo() {
@@ -9,4 +9,14 @@ export class CheckingAccount extends BankAccount {
 
         };
     }
+}*/
+
+
+export class CheckingAccount extends BankAccount {
+	
+	constructor(argument) {
+		// code...
+	}
 }
+
+

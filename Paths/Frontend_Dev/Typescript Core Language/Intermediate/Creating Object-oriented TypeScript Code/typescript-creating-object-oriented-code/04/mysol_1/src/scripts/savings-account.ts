@@ -1,7 +1,7 @@
 import { BankAccount } from './bank-account';
 import { AccountType } from './enums';
 
-export class SavingsAccount extends BankAccount {
+/*export class SavingsAccount extends BankAccount {
     private _interestRate: number;
     accountType = AccountType.Savings;
 
@@ -29,5 +29,17 @@ export class SavingsAccount extends BankAccount {
     private addInterest() {
         this.balance = this.balance + (this.balance * (this._interestRate / 100));
     }
-} 
+} */
+
+
+export class SavingsAccount extends BankAccount {
+    private _interestRate: number;
+    accountType = AccountType.Savings;
+
+    
+    constructor(argument) {
+        // code...
+    }
+}
+
 
