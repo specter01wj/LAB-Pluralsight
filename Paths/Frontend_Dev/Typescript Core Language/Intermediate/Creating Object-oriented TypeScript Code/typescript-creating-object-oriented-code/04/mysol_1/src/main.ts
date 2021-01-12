@@ -8,6 +8,7 @@ import { AccountList } from './scripts/account-list';
 class Main {
     checkingAccount: CheckingAccount;
     savingsAccount: SavingsAccount;
+
     
     currentAccount: BankAccount;
 
