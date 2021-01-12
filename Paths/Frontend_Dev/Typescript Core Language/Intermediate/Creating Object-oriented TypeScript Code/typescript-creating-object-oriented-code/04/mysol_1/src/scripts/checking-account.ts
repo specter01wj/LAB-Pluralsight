@@ -14,8 +14,8 @@ import { AccountType } from "./enums";
 
 export class CheckingAccount extends BankAccount {
 	
-	constructor(argument) {
-		// code...
+	constructor(accountSettings: any) {
+		super(accountSettings);
 	}
 }
 
