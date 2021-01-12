@@ -44,13 +44,18 @@ export class SavingsAccount extends BankAccount {
         // Simulate interest over time
         setInterval(() => {
             this.addInterest();
-        }, 60000);
+        }, 2000);
     }
 
     getAccountInfo() {
         return {
 
         };
+    }
+
+    deposit(amount: number) {
+        let newAmount = amount + (amount * (this._interestRate / 100));
+        this.balance += newAmount;
     }
 
     private addInterest() {
