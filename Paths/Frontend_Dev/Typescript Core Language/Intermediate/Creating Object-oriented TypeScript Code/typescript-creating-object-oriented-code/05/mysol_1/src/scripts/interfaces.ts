@@ -1,4 +1,4 @@
-﻿export interface AccountInfo<TRouteNumber, TBankNumber> {
+﻿/*export interface AccountInfo<TRouteNumber, TBankNumber> {
     routingNumber: TRouteNumber;
     bankNumber: TBankNumber;
 }
@@ -16,4 +16,21 @@ export interface AccountSettings {
     accountInfo?: AccountInfo<string, number>;
 }  
 
-export interface Account extends AccountSettings, DepositWithdrawal { }
+export interface Account extends AccountSettings, DepositWithdrawal { }*/
+
+
+interface AccountInfo {
+	routingNumber: number;
+	bankNumber: number;
+}
+
+
+interface DepositWithdrawal {
+	deposit(amount: number): void;
+	withdrawal(amount: number): void;
+}
+
+
+
+
+
