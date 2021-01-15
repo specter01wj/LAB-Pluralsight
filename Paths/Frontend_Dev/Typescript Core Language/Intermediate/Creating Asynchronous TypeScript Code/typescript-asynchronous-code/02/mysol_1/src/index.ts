@@ -19,9 +19,15 @@ async function bake() {
   console.log(`${counter} - Mix ingredients`);
   showMessage(`${counter} - Mix ingredients`, title, true);
 
-  counter++;
+  setTimeout( () => {
+    counter++;
+    console.log(`${counter} - Bake at 325 degrees for 10 minutes`);
+    showMessage(`${counter} - Bake at 325 degrees for 10 minutes`, title, true);
+  }, 1500);
+  
+  /*counter++;
   console.log(`${counter} - Bake at 325 degrees for 10 minutes`);
-  showMessage(`${counter} - Bake at 325 degrees for 10 minutes`, title, true);
+  showMessage(`${counter} - Bake at 325 degrees for 10 minutes`, title, true);*/
 
   counter++;
   console.log(`${counter} - Eat cookies`);
