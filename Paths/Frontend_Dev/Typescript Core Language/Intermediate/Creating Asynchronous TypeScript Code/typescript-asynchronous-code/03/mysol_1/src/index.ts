@@ -31,7 +31,7 @@ document.querySelector('#open-modal').addEventListener('click', async () => {
 });
 
 document.querySelector('#run-timer').addEventListener('click', async () => {
-  sayHelloTimer(1000);
+  sayHelloTimer(500);
 });
 
 async function render() {
