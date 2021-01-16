@@ -12,7 +12,7 @@ export const sayHelloTimer = function(ms: number) {
       true,
     );
 
-    if (counter === 5) {
+    if (counter === 10) {
       showMessage(
         `Goodbye. We said hello every ${ms} milliseconds. (after ${counter} iterations)`,
         'Response from Timer',
