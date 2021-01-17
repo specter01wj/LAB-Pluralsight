@@ -2,6 +2,7 @@ import './design/index.scss';
 
 import { showFetching, showMessage } from './lib';
 import { replaceHeroListComponent } from './heroes.component';
+import { getDataAfterDelay } from './examples/get-ingredients';
 
 const searchEmailElement = document.getElementById(
   'search-email',
@@ -26,6 +27,11 @@ document
 function getIngredients() {
   showMessage('Ingredients for baking amazing cookies:', 'Ingredients');
 
+  getDataAfterDelay(2000, showIngredients);
+
+  function showIngredients(ingredients: string[]) {
+    ingredients.forEach(i => showMessage(`  ${i}`, 'Ingredients', true));
+  }
   // TODO: Get the ingredients and display them
 }
 
