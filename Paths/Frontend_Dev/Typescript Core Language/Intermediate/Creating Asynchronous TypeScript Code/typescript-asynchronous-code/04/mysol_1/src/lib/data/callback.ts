@@ -98,3 +98,5 @@ const getAccountRepCallback = function(
       callbackError(`Oh no! We're unable to fetch the Account Rep`);
     });
 };
+
+export { getHeroTreeCallback };
