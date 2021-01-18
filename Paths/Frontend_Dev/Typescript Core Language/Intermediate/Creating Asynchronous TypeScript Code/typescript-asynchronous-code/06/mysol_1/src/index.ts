@@ -52,7 +52,14 @@ async function renderHeroesAsync() {
   showFetching();
   showMessage();
   // TODO - getHeroesViaAsyncAwait
-  
+  try {
+    const heroes = await getHeroesViaAsyncAwait();
+    showHeroes(heroes);
+  } catch(error) {
+    handleErrors(error);
+  } finally {
+    wrapUp();
+  }
 }
 
 /**
