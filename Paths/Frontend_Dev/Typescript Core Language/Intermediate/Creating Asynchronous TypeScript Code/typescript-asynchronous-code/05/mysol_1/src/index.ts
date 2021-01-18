@@ -101,4 +101,12 @@ async function render() {
    * Always turn off the fetching indicator.
    */
   // TODO
+  getHeroTreePromise(searchEmailElement.value)
+    .then((hero: Hero) => replaceHeroListComponent(hero))
+    .catch((error: any) => {
+      console.log(error);
+      showMessage(error);
+      replaceHeroListComponent();
+    })
+    .finally(wrapUp);
 }
