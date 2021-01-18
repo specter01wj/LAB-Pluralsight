@@ -75,6 +75,10 @@ function rejectedPromise() {
   showFetching();
   showMessage();
   // TODO - rejected promise
+  getHeroesViaPromiseReject()
+    .then(showHeroes)
+    .catch(handleErrors)
+    .finally(wrapUp);
 }
 
 function rejectedPromiseShorter() {
