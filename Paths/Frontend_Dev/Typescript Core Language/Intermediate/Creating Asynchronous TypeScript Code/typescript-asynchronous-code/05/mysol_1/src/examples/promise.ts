@@ -18,7 +18,8 @@ const getHeroesDelayedAsync: () => Promise<Hero[]> = function() {
 /**
  * Return a fulfilled promise of empty array
  */
-let getHeroesEmpty: () => Promise<[]>;
+const getHeroesEmpty: () => Promise<Hero[]> = () =>
+	new Promise<Hero[]>( resolve => resolve([]) );
 
 /**
  * Get the heroes via a Promise
@@ -52,7 +53,20 @@ export let getHeroesViaNewPromise: () => Promise<Hero[]> = function() {
  * Get the heroes,
  * except this always causes a Promise reject
  */
-export let getHeroesViaPromiseReject: () => Promise<Hero[]>;
+export let getHeroesViaPromiseReject: () => Promise<Hero[]> = function() {
+	const newPromise = new Promise<Hero[]>( (resolve, reject) => {
+		return delay(2000)
+			.then( () => getHeroesEmpty())
+			.then( (heroes: Hero[]) => {
+				if (heroes && heroes.length) {
+          resolve(heroes);
+        } else {
+          reject(Error('Uh oh! Errors!'));
+        }
+			});
+	});
+	return newPromise; 
+};
 
 /**
  * Get the heroes
