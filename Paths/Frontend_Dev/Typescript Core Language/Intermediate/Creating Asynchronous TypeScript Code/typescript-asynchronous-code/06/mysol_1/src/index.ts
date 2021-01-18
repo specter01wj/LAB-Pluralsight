@@ -71,6 +71,14 @@ async function renderHeroesButThrow() {
   showFetching();
   showMessage();
   // TODO - getHeroesAndThrow
+  try {
+    const heroes = await getHeroesAndThrow();
+    showHeroes(heroes);
+  } catch (error) {
+    handleErrors(error);
+  } finally {
+    wrapUp();
+  }
 }
 
 async function render() {
