@@ -18,8 +18,10 @@ const getHeroesDelayedAsync: () => Promise<Hero[]> = function() {
 /**
  * Return a fulfilled promise of empty array
  */
+/*const getHeroesEmpty: () => Promise<Hero[]> = () =>
+	new Promise<Hero[]>( resolve => resolve([]) );*/
 const getHeroesEmpty: () => Promise<Hero[]> = () =>
-	new Promise<Hero[]>( resolve => resolve([]) );
+	Promise.resolve([]);
 
 /**
  * Get the heroes via a Promise
@@ -72,4 +74,9 @@ export let getHeroesViaPromiseReject: () => Promise<Hero[]> = function() {
  * Get the heroes
  * Except this always causes a Promise to reject, too
  */
-export let getHeroesViaPromiseRejectShorter: () => Promise<Hero[]>;
+export let getHeroesViaPromiseRejectShorter: () => Promise<Hero[]> = function() {
+	const getsHeroesOrDoesIt = () =>
+    Promise.reject('bad error occurred getting the heroes');
+
+  return delay(2000).then(() => getsHeroesOrDoesIt());
+};
