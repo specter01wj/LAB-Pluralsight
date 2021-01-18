@@ -24,8 +24,8 @@ let getHeroesEmpty: () => Promise<[]>;
  * Get the heroes via a Promise
  */
 // export let getHeroesViaPromise: () => Promise<Hero[]>;
-export let getHeroesViaPromise: () => Promise<Hero[]> = function() {
-	return delay(1000).then( () => getHeroesDelayedAsync );
+export const getHeroesViaPromise: () => Promise<Hero[]> = function() {
+	return delay(2000).then( () => getHeroesDelayedAsync() );
 };
 
 /**
