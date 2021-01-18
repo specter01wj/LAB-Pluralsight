@@ -11,7 +11,9 @@ const delay: (ms: number) => Promise<void> = (ms: number) =>
 /**
  * Return a fulfilled promise of heroes
  */
-let getHeroesDelayedAsync: () => Promise<Hero[]>;
+const getHeroesDelayedAsync: () => Promise<Hero[]> = function() {
+	return new Promise<Hero[]>(resolve => resolve(heroes));
+};
 
 /**
  * Return a fulfilled promise of empty array
