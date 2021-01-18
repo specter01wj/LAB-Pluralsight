@@ -16,6 +16,14 @@ const getHeroTreePromise = function(searchEmail: string) {
  */
 const getHeroPromise = (email: string) => {
   // TODO
+  return axios
+    .get<Hero[]>(`${apiUrl}/heroes?email=${email}`)
+    .then((response: AxiosResponse<Hero[]>) => {
+      const data = parseList<Hero>(response);
+      const hero = data[0];
+      return hero;
+    })
+    .catch((error: AxiosError) => handleAxiosErrors(error, 'Hero'));
 };
 
 /**
@@ -31,5 +39,10 @@ const getOrdersPromise = function(heroId: number) {
 const getAccountRepPromise = function(heroId: number) {
   // TODO
 };
+
+function handleAxiosErrors(error: AxiosError, model: string) {
+  console.error(`Developer Error: Async Data Error: ${error.message}`);
+  return Promise.reject(`Oh no! We're unable to fetch the ${model}`);
+}
 
 export { getHeroTreePromise };
