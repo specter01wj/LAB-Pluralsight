@@ -33,7 +33,20 @@ export const getHeroesViaPromise: () => Promise<Hero[]> = function() {
  * When invoked, it will settle
  * by either resolve or reject.
  */
-export let getHeroesViaNewPromise: () => Promise<Hero[]>;
+export let getHeroesViaNewPromise: () => Promise<Hero[]> = function() {
+	const newPromise = new Promise<Hero[]>( (resolve, reject) => {
+		return delay(2000)
+			.then( () => getHeroesDelayedAsync())
+			.then( (heroes: Hero[]) => {
+				if (heroes && heroes.length) {
+          resolve(heroes);
+        } else {
+          reject(Error('Uh oh! Errors!'));
+        }
+			});
+	});
+	return newPromise; 
+};
 
 /**
  * Get the heroes,
