@@ -55,6 +55,10 @@ function resolvedPromise() {
   showFetching();
   showMessage();
   // TODO - get heroes, with a Promise
+  getHeroesViaPromise()
+    .then(showHeroes)
+    .catch(handleErrors)
+    .finally(wrapUp);
 }
 
 function resolvedUsingPromiseConstructor() {
