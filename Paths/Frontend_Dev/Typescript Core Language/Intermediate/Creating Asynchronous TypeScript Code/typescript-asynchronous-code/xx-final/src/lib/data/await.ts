@@ -9,7 +9,6 @@ import {
 } from '../interfaces';
 
 const getHeroAsync = async function(email: string) {
-  // TODO
   try {
     const response = await axios.get(`${apiUrl}/heroes?email=${email}`);
     const data = parseList<Hero>(response);
@@ -21,7 +20,6 @@ const getHeroAsync = async function(email: string) {
 };
 
 const getOrdersAsync = async function(heroId: number) {
-  // TODO
   try {
     const response = await axios.get(`${apiUrl}/orders/${heroId}`);
     const data = parseList<Order>(response);
@@ -32,7 +30,6 @@ const getOrdersAsync = async function(heroId: number) {
 };
 
 const getAccountRepAsync = async function(heroId: number) {
-  // TODO
   try {
     const response = await axios.get(`${apiUrl}/accountreps/${heroId}`);
     const data = parseList<AccountRepresentative>(response);
@@ -43,7 +40,6 @@ const getAccountRepAsync = async function(heroId: number) {
 };
 
 const getShippingStatusAsync = async function(orderNumber: number) {
-  // TODO
   try {
     const response = await axios.get(
       `${apiUrl}/shippingstatuses/${orderNumber}`,
@@ -56,10 +52,15 @@ const getShippingStatusAsync = async function(orderNumber: number) {
 };
 
 const getHeroTreeAsync = async function(email: string) {
-  // TODO
+  /**
+   * Level 1 - Get the hero record
+   */
   const hero = await getHeroAsync(email);
   if (!hero) return;
 
+  /**
+   * Level 2 - Get the orders and account reps
+   */
   const [orders, accountRep] = await Promise.all([
     getOrdersAsync(hero.id),
     getAccountRepAsync(hero.id),
@@ -67,21 +68,41 @@ const getHeroTreeAsync = async function(email: string) {
   hero.orders = orders;
   hero.accountRep = accountRep;
 
+  /**
+   * Level 3 - Get the shipping statuses
+   * Let's create an array of async functions
+   * to get the shipping statuses for each order.
+   */
   const getAllStatusesAsync = orders.map(
     async (o: Order) => await getShippingStatusAsync(o.num),
   );
 
-  const shippingStatuses = await Promise.all(getAllStatusesAsync);
+  /**
+   * Now we choose between for await of vs Promise.all
+   */
+  if (false) {
+    /**
+     * Example of "for await of".
+     * Make one async call at a time.
+     * Find and attach the status to the order,
+     * when each async call returns.
+     */
+    for await (let ss of getAllStatusesAsync) {
+      const order = hero.orders.find((o: Order) => o.num === ss.orderNum);
+      order.shippingStatus = ss;
+    }
+  } else {
+    /**
+     * Alternate option ... use Promise.all.
+     * Make all the calls, then merge results when done.
+     */
+    const shippingStatuses = await Promise.all(getAllStatusesAsync);
 
-  for (let ss of shippingStatuses) {
-    const order = hero.orders.find((o: Order) => o.num === ss.orderNum);
-    order.shippingStatus = ss;
+    for (let ss of shippingStatuses) {
+      const order = hero.orders.find((o: Order) => o.num === ss.orderNum);
+      order.shippingStatus = ss;
+    }
   }
-  /*for await (let ss of getAllStatusesAsync) {
-    const order = hero.orders.find((o: Order) => o.num === ss.orderNum);
-    order.shippingStatus = ss;
-  }*/
-
   return hero;
 };
 
