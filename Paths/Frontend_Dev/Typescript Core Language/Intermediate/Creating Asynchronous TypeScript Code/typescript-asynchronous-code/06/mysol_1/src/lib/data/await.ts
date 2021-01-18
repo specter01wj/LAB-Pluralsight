@@ -10,10 +10,25 @@ import {
 
 const getHeroAsync = async function(email: string) {
   // TODO
+  try {
+    const response = await axios.get(`${apiUrl}/heroes?email=${email}`);
+    const data = parseList<Hero>(response);
+    const hero = data[0];
+    return hero;
+  } catch (error) {
+    handleAxiosErrors(error, 'Hero');
+  }
 };
 
 const getOrdersAsync = async function(heroId: number) {
   // TODO
+  try {
+    const response = await axios.get(`${apiUrl}/orders/${heroId}`);
+    const data = parseList<Order>(response);
+    return data;
+  } catch (error) {
+    handleAxiosErrors(error, 'Orders');
+  }
 };
 
 const getAccountRepAsync = async function(heroId: number) {
