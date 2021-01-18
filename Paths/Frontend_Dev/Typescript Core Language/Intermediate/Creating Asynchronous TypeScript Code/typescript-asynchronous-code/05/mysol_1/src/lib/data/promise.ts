@@ -31,6 +31,10 @@ const getHeroPromise = (email: string) => {
  */
 const getOrdersPromise = function(heroId: number) {
   // TODO
+  return axios
+    .get<Order[]>(`${apiUrl}/orders/${heroId}`)
+    .then((response: AxiosResponse<Order[]>) => parseList<Order>(response))
+    .catch((error: AxiosError) => handleAxiosErrors(error, 'Orders'));
 };
 
 /**
@@ -38,6 +42,13 @@ const getOrdersPromise = function(heroId: number) {
  */
 const getAccountRepPromise = function(heroId: number) {
   // TODO
+  return axios
+    .get<AccountRepresentative>(`${apiUrl}/accountreps/${heroId}`)
+    .then((response: AxiosResponse<AccountRepresentative>) => {
+      const data = parseList<AccountRepresentative>(response);
+      return data[0];
+    })
+    .catch((error: AxiosError) => handleAxiosErrors(error, 'Account Reps'));
 };
 
 function handleAxiosErrors(error: AxiosError, model: string) {
