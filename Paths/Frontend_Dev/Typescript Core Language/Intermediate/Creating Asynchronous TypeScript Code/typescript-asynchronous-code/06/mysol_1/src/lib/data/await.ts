@@ -44,6 +44,15 @@ const getAccountRepAsync = async function(heroId: number) {
 
 const getShippingStatusAsync = async function(orderNumber: number) {
   // TODO
+  try {
+    const response = await axios.get(
+      `${apiUrl}/shippingstatuses/${orderNumber}`,
+    );
+    const data = parseList<ShippingStatus>(response);
+    return data[0];
+  } catch (error) {
+    handleAxiosErrors(error, 'Shipping Status');
+  }
 };
 
 const getHeroTreeAsync = async function(email: string) {
