@@ -9,6 +9,28 @@ import { apiUrl, parseList } from './config';
  */
 const getHeroTreePromise = function(searchEmail: string) {
   // TODO
+  let hero: Hero;
+
+  return getHeroPromise(searchEmail)
+    .then((h: Hero) => {
+      hero = h;
+      return h;
+    })
+    .then((hero: Hero) =>
+      Promise.all([getOrdersPromise(hero.id), getAccountRepPromise(hero.id)]),
+    )
+    .then((result: [Order[], AccountRepresentative]) => mergeData(result));
+
+  function mergeData(result: [Order[], AccountRepresentative]): Hero {
+    const [orders, accountRep] = result;
+    if (orders) {
+      hero.orders = orders;
+    }
+    if (accountRep) {
+      hero.accountRep = accountRep;
+    }
+    return hero;
+  }
 };
 
 /**
