@@ -71,7 +71,18 @@ const getHeroTreeAsync = async function(email: string) {
     async (o: Order) => await getShippingStatusAsync(o.num),
   );
 
-  
+  /*const shippingStatuses = await Promise.all(getAllStatusesAsync);
+
+  for (let ss of shippingStatuses) {
+    const order = hero.orders.find((o: Order) => o.num === ss.orderNum);
+    order.shippingStatus = ss;
+  }*/
+  for await (let ss of getAllStatusesAsync) {
+    const order = hero.orders.find((o: Order) => o.num === ss.orderNum);
+    order.shippingStatus = ss;
+  }
+
+  return hero;
 };
 
 function handleAxiosErrors(error: AxiosError, model: string) {

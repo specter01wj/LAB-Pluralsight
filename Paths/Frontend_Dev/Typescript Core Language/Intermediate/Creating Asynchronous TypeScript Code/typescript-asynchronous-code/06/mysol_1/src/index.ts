@@ -91,4 +91,14 @@ async function render() {
    * Always turn off the fetching indicator.
    */
   // TODO
+  let hero: Hero;
+  try {
+    hero = await getHeroTreeAsync(searchEmailElement.value);
+    replaceHeroListComponent(hero);
+  } catch (error) {
+    console.log(error);
+    showMessage(error);
+  } finally {
+    wrapUp();
+  }
 }
