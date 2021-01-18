@@ -54,35 +54,48 @@ function showHeroes(heroes: Hero[]) {
 function resolvedPromise() {
   showFetching();
   showMessage();
-  // TODO - get heroes, with a Promise
+  getHeroesViaPromise()
+    .then(showHeroes)
+    .catch(handleErrors)
+    .finally(wrapUp);
 }
 
 function resolvedUsingPromiseConstructor() {
   showFetching();
   showMessage();
-  // TODO - get heroes, with new Promise
+  getHeroesViaNewPromise()
+    .then(showHeroes)
+    .catch(handleErrors)
+    .finally(wrapUp);
 }
 
 function rejectedPromise() {
   showFetching();
   showMessage();
-  // TODO - rejected promise
+  getHeroesViaPromiseReject()
+    .then(showHeroes)
+    .catch(handleErrors)
+    .finally(wrapUp);
 }
 
 function rejectedPromiseShorter() {
   showFetching();
   showMessage();
-  // TODO - rejected promise, but shorter
+  getHeroesViaPromiseRejectShorter()
+    .then(showHeroes)
+    .catch(handleErrors)
+    .finally(wrapUp);
 }
 
 async function render() {
   showMessage();
   showFetching();
-  /**
-   * Get all of the hero data.
-   * Then show the hero with the hero component.
-   * Handle any errors
-   * Always turn off the fetching indicator.
-   */
-  // TODO
+  getHeroTreePromise(searchEmailElement.value)
+    .then((hero: Hero) => replaceHeroListComponent(hero))
+    .catch((error: any) => {
+      console.log(error);
+      showMessage(error);
+      replaceHeroListComponent();
+    })
+    .finally(wrapUp);
 }
