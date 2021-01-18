@@ -33,6 +33,13 @@ const getOrdersAsync = async function(heroId: number) {
 
 const getAccountRepAsync = async function(heroId: number) {
   // TODO
+  try {
+    const response = await axios.get(`${apiUrl}/accountreps/${heroId}`);
+    const data = parseList<AccountRepresentative>(response);
+    return data[0];
+  } catch (error) {
+    handleAxiosErrors(error, 'Account Rep');
+  }
 };
 
 const getShippingStatusAsync = async function(orderNumber: number) {
