@@ -4,7 +4,10 @@ import { Hero } from '../lib';
 /**
  * Return a fulfilled promise after a given delay.
  */
-let delay: () => Promise<void>;
+// let delay: () => Promise<void>;
+let delay: (ms: number) => Promise<void> = (ms: number) => {
+	new Promise<void>(resolve => setTimeout(resolve, ms));
+};
 
 /**
  * Return a fulfilled promise of heroes
@@ -19,7 +22,10 @@ let getHeroesEmpty: () => Promise<[]>;
 /**
  * Get the heroes via a Promise
  */
-export let getHeroesViaPromise: () => Promise<Hero[]>;
+// export let getHeroesViaPromise: () => Promise<Hero[]>;
+export let getHeroesViaPromise: () => Promise<Hero[]> = function() {
+	return delay(1000).then( () => getHeroesDelayedAsync );
+};
 
 /**
  * Create and return a promise.
