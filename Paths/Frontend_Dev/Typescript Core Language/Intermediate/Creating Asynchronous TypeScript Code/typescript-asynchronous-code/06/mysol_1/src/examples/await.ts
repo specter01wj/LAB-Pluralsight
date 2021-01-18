@@ -23,6 +23,11 @@ export async function getHeroesViaAsyncAwait() {
  */
 export async function getHeroesAndThrow() {
   // TODO - get empty array heroes after a delay
+  await delay(3000);
+  if (!heroes || !heroes.length) {
+    throw Error('Uh oh! Errors!');
+  }
+  return heroes;
 }
 
 /**
