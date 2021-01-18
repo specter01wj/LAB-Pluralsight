@@ -52,6 +52,7 @@ async function renderHeroesAsync() {
   showFetching();
   showMessage();
   // TODO - getHeroesViaAsyncAwait
+  
 }
 
 /**

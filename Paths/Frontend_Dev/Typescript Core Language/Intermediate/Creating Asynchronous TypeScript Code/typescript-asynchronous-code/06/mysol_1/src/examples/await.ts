@@ -12,6 +12,8 @@ const delay = (ms: number) =>
  */
 export async function getHeroesViaAsyncAwait() {
   // TODO - get heroes after a delay
+  await delay(2000);
+  return heroes;
 }
 
 /**
