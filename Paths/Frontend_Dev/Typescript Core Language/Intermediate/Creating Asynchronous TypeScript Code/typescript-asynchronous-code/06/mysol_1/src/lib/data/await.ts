@@ -57,6 +57,21 @@ const getShippingStatusAsync = async function(orderNumber: number) {
 
 const getHeroTreeAsync = async function(email: string) {
   // TODO
+  const hero = await getHeroAsync(email);
+  if (!hero) return;
+
+  const [orders, accountRep] = await Promise.all([
+    getOrdersAsync(hero.id),
+    getAccountRepAsync(hero.id),
+  ]);
+  hero.orders = orders;
+  hero.accountRep = accountRep;
+
+  const getAllStatusesAsync = orders.map(
+    async (o: Order) => await getShippingStatusAsync(o.num),
+  );
+
+  
 };
 
 function handleAxiosErrors(error: AxiosError, model: string) {
