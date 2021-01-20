@@ -1,7 +1,17 @@
 
-let message = "Hello TpyeScript!";
-console.log(message);
+/*let message = "Hello TpyeScript!";
+console.log(message);*/
 
+import * as express from 'express';
+
+
+const port : string | number = process.env.port || 1337;
+
+const app = express();
+
+app.listen(port);
+
+console.log("Listening on port " + port);
 
 
 
