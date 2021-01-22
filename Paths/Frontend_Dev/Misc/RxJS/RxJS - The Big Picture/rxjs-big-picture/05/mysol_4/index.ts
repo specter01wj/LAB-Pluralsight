@@ -1,5 +1,5 @@
 import { Observable, from, fromEvent } from 'rxjs';
-import { pluck } from 'rxjs/operators';
+import { pluck, timeInterval } from 'rxjs/operators';
 
 
 let clicks$ = fromEvent(document, 'click');
@@ -14,7 +14,8 @@ let observer = {
 
 clicks$
 	.pipe(
-		pluck('clientX')
+		pluck('clientX'),
+		timeInterval(),
 	)
 	.subscribe(observer);
 
