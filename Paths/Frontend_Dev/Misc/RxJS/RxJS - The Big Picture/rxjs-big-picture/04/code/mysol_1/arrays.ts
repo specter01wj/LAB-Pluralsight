@@ -1,4 +1,4 @@
-import { Observable, from } from 'rxjs';
+import { Observable, from } from '/rxjs';
 
 let bookArray = [
 	{ "bookID": 1, "title": "Goodnight Moon" },
