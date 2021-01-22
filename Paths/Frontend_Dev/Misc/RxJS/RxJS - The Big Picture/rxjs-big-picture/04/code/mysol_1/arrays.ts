@@ -15,6 +15,7 @@ let element1 = document.getElementById('t1');
 booksObservable$.subscribe(
 	(data) => {
 		allBooks = data;
+
 		
 		element1.innerHTML = allBooks[0];
 	},
