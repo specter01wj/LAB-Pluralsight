@@ -8,6 +8,8 @@ var bookArray = [
 ];
 var booksObservable$ = rxjs_1.from(bookArray);
 var allBooks = [];
-booksObservable$.subscribe(function (data) { return allBooks = data; }, function (err) { return console.log(err); }, function () { return console.log('All done getting books.'); });
 var element1 = document.getElementById('t1');
-element1.innerHTML = allBooks[0];
+booksObservable$.subscribe(function (data) {
+    allBooks = data;
+    element1.innerHTML = allBooks[0];
+}, function (err) { return console.log(err); }, function () { return console.log('All done getting books.'); });
