@@ -91,9 +91,10 @@
   !*** ./index.ts ***!
   \******************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("alert('Hello RxJS!');\r\n\n\n//# sourceURL=webpack:///./index.ts?");
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\n\n\n//# sourceURL=webpack:///./index.ts?");
 
 /***/ })
 
