@@ -8,13 +8,15 @@ function subscribe(subscriber) {
 		subscriber.next(book);
 	}
 
-	if(document.title !== 'RxBookTracker') {
+	/*if(document.title !== 'RxBookTracker') {
 		subscriber.error('Incorrect page title.');
-	}
+	}*/
 
 	setTimeout(() => {
 		subscriber.complete();
 	}, 2000);
+
+	return () => console.log('Executing teardown code.');
 
 }
 
