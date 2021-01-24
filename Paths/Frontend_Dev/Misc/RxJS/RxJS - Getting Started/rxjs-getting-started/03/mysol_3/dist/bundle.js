@@ -86,6 +86,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./data.ts":
+/*!*****************!*\
+  !*** ./data.ts ***!
+  \*****************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.allReaders = [\n    { readerID: 1, name: 'Marie', weeklyReadingGoal: 400, totalMinutesRead: 5600 },\n    { readerID: 2, name: 'Daniel', weeklyReadingGoal: 210, totalMinutesRead: 3000 },\n    { readerID: 3, name: 'Lanier', weeklyReadingGoal: 140, totalMinutesRead: 600 }\n];\nexports.allBooks = [\n    { bookID: 1, title: 'Goodnight Moon', author: 'Margaret Wise Brown', publicationYear: 1953 },\n    { bookID: 2, title: 'Winnie-the-Pooh', author: 'A. A. Milne', publicationYear: 1926 },\n    { bookID: 3, title: 'Where the Wild Things Are', author: 'Maurice Sendak', publicationYear: 1963 },\n    { bookID: 4, title: 'The Hobbit', author: 'J. R. R. Tolkien', publicationYear: 1937 },\n    { bookID: 5, title: 'Curious George', author: 'H. A. Rey', publicationYear: 1941 },\n    { bookID: 6, title: 'Alice\\'s Adventures in Wonderland', author: 'Lewis Carroll', publicationYear: 1865 },\n];\n\n\n//# sourceURL=webpack:///./data.ts?");
+
+/***/ }),
+
 /***/ "./index.ts":
 /*!******************!*\
   !*** ./index.ts ***!
@@ -94,7 +106,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar rxjs_1 = __webpack_require__(/*! rxjs */ \"./node_modules/rxjs/_esm5/index.js\");\nvar observer = {\n    next: function (value) { return console.log(value); },\n    error: function (error) { return console.log(\"ERROR: \" + error); },\n    complete: function () { return console.log(\"All done!\"); }\n};\nvar button = document.getElementById('readersBtn');\nvar clicks$ = rxjs_1.fromEvent(button, 'click');\nclicks$.subscribe(observer);\n\n\n//# sourceURL=webpack:///./index.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar rxjs_1 = __webpack_require__(/*! rxjs */ \"./node_modules/rxjs/_esm5/index.js\");\nvar data_1 = __webpack_require__(/*! ./data */ \"./data.ts\");\nvar observer = {\n    next: function (value) {\n        console.log(value);\n        var readersDiv = document.getElementById('readers');\n        for (var _i = 0, allReaders_1 = data_1.allReaders; _i < allReaders_1.length; _i++) {\n            var reader = allReaders_1[_i];\n            readersDiv.innerHTML += reader.name + '<br>';\n        }\n    },\n    error: function (error) { return console.log(\"ERROR: \" + error); },\n    complete: function () { return console.log(\"All done!\"); }\n};\nvar button = document.getElementById('readersBtn');\nvar clicks$ = rxjs_1.fromEvent(button, 'click');\nclicks$.subscribe(observer);\n\n\n//# sourceURL=webpack:///./index.ts?");
 
 /***/ }),
 
