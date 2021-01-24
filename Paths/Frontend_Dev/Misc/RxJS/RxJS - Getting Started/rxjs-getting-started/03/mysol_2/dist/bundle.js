@@ -106,7 +106,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexport
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar rxjs_1 = __webpack_require__(/*! rxjs */ \"./node_modules/rxjs/_esm5/index.js\");\nvar data_1 = __webpack_require__(/*! ./data */ \"./data.ts\");\nvar source1$ = rxjs_1.of('hello', 10, true, data_1.allReaders[0].name);\n\n\n//# sourceURL=webpack:///./index.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar rxjs_1 = __webpack_require__(/*! rxjs */ \"./node_modules/rxjs/_esm5/index.js\");\nvar data_1 = __webpack_require__(/*! ./data */ \"./data.ts\");\nvar source1$ = rxjs_1.of('hello', 10, true, data_1.allReaders[0].name);\nvar observer = {\n    next: function (value) { return console.log(value.title); },\n    error: function (error) { return console.log(\"ERROR: \" + error); },\n    complete: function () { return console.log(\"All done!\"); }\n};\nsource1$.subscribe(observer);\n\n\n//# sourceURL=webpack:///./index.ts?");
 
 /***/ }),
 
