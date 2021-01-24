@@ -8,6 +8,14 @@ function subscribe(subscriber) {
 		subscriber.next(book);
 	}
 
+	if(document.title !== 'RxBookTracker') {
+		subscriber.error('Incorrect page title.');
+	}
+
+	setTimeout(() => {
+		subscriber.complete();
+	}, 2000);
+
 }
 
 
