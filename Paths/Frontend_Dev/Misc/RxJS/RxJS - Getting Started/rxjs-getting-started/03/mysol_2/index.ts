@@ -1,4 +1,4 @@
-import { Observable, of, from, fromEvent } from 'rxjs';
+import { Observable, of, from, fromEvent, concat } from 'rxjs';
 import { allBooks, allReaders } from './data';
 
 
@@ -26,7 +26,8 @@ source2$.subscribe(observer2);
 
 
 
-
+concat(source1$, source2$)
+	.subscribe(observer1);
 
 
 
