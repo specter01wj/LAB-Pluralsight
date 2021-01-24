@@ -8,12 +8,12 @@ let observer = {
 		ajax('/api/readers')
 			.subscribe(ajaxRes => {
 				console.log(ajaxRes);
+				let readers = ajaxRes.response;
+				let readersDiv = document.getElementById('readers');
+				for(let reader of readers) {
+					readersDiv.innerHTML += reader.name + '<br>';
+				}
 			});
-		
-		/*let readersDiv = document.getElementById('readers');
-		for(let reader of allReaders) {
-			readersDiv.innerHTML += reader.name + '<br>';
-		}*/
 	},
 	error: (error) => console.log(`ERROR: ${error}`),
 	complete: () => console.log(`All done!`)
