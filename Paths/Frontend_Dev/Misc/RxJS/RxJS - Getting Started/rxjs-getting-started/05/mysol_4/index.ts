@@ -6,7 +6,7 @@ import { allBooks, allReaders } from './data';
 
 
 let timesDiv = document.getElementById('times');
-let button = document.getElementById('timerButton');
+let button = document.getElementById('timerBtn');
 
 let timer$ = new Observable(subscriber => {
   let i = 0;
@@ -20,7 +20,10 @@ let timer$ = new Observable(subscriber => {
   }
 });
 
-let timerSubscription = timer$.subscribe(
+let timerSubscription = timer$.pipe(
+	take(3)
+)
+.subscribe(
 	value => timesDiv.innerHTML += `${new Date().toLocaleTimeString()} (${value}) <br>`,
 	null,
 	() => console.log('All Done!')
