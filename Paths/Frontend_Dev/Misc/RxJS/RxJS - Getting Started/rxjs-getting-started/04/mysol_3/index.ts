@@ -15,12 +15,21 @@ let timerObserver = {
 	complete: () => console.log(`All done!`)
 };
 
+let timerObserverUnsubscribe = {
+	next: (event) => timerSubscription.unsubscribe(),
+	error: (error) => console.log(`ERROR: ${error}`),
+	complete: () => console.log(`All done!`)
+};
 
 
-timer$.subscribe(timerObserver);
+
+let timerSubscription = timer$.subscribe(timerObserver);
 
 
+let clicks$ = fromEvent(button, 'click');
 
+
+clicks$.subscribe(timerObserverUnsubscribe);
 
 
 
