@@ -20,8 +20,13 @@ let timer$ = new Observable(subscriber => {
   }
 });
 
+
+let cancelTimer$ = fromEvent(button, 'click');
+
+
 let timerSubscription = timer$.pipe(
-	take(3)
+	// take(3)
+	takeUntil(cancelTimer$)
 )
 .subscribe(
 	value => timesDiv.innerHTML += `${new Date().toLocaleTimeString()} (${value}) <br>`,
