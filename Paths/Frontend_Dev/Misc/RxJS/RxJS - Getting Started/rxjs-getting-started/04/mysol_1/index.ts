@@ -3,28 +3,31 @@ import { ajax } from 'rxjs/ajax';
 import { allBooks, allReaders } from './data';
 
 
-let observer = {
-	next: (value) => {
-		ajax('/api/readers')
-			.subscribe(ajaxRes => {
-				console.log(ajaxRes);
-				let readers = ajaxRes.response;
-				let readersDiv = document.getElementById('readers');
-				for(let reader of readers) {
-					readersDiv.innerHTML += reader.name + '<br>';
-				}
-			});
-	},
+let books$ = from(allBooks);
+
+
+let booksObserver = {
+	next: (value) => console.log(`Title: ${value.title}`),
 	error: (error) => console.log(`ERROR: ${error}`),
 	complete: () => console.log(`All done!`)
 };
 
 
-let button = document.getElementById('readersBtn');
-
-let clicks$ = fromEvent(button, 'click');
 
 
-clicks$.subscribe(observer);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
