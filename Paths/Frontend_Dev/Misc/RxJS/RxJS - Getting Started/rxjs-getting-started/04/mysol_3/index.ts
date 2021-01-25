@@ -6,7 +6,8 @@ import { allBooks, allReaders } from './data';
 let timesDiv = document.getElementById('times');
 let button = document.getElementById('timerBtn');
 
-let timer$ = interval(1000);
+// let timer$ = interval(1000);
+let timer$ = new Observable(timerSubscribe);
 
 
 let timerObserver = {
@@ -21,6 +22,15 @@ let timerObserverUnsubscribe = {
 	complete: () => console.log(`All done!`)
 };
 
+
+function timerSubscribe(subscriber) {
+	let i = 10;
+
+	let intervalID = setInterval(() => {
+		subscriber.next(i++);
+	}, 1000);
+
+}
 
 
 let timerSubscription = timer$.subscribe(timerObserver);
