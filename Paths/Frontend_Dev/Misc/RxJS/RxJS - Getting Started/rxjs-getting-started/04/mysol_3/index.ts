@@ -3,6 +3,10 @@ import { ajax } from 'rxjs/ajax';
 import { allBooks, allReaders } from './data';
 
 
+let timesDiv = document.getElementById('times');
+let button = document.getElementById('timerBtn');
+
+
 let books$ = from(allBooks);
 
 
