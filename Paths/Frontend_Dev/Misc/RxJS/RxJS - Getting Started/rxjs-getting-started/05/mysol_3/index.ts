@@ -5,12 +5,14 @@ import { allBooks, allReaders } from './data';
 
 
 
-ajax('/api/books')
+// ajax('/api/books')
+ajax('/api/errors/500')
 	.pipe(
 		mergeMap(ajaxRes => ajaxRes.response),
 		filter(book => book.publicationYear < 1950),
 		tap(oldBook => console.log(`Title: ${oldBook.title}`)),
-		catchError(err => of({title: 'Corduroy', author: 'James Wang'}))
+		// catchError(err => of({title: 'Corduroy', author: 'James Wang'}))
+		catchError(err => throw `Something bad happened - ${err.message}` )
 	)
 	.subscribe(
 		finalValue => console.log(`VALUE: ${finalValue.title}`),
