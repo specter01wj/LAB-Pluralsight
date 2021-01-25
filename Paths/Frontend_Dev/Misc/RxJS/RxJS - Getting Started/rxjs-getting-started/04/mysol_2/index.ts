@@ -6,18 +6,48 @@ import { allBooks, allReaders } from './data';
 let books$ = from(allBooks);
 
 
-let booksObserver = {
-	next: (value) => console.log(`Title: ${value.title}`),
+function timeSubscribe(subscriber) {
+	const timeString = new Date().toLocaleTimeString();
+
+	if(timeString === null) {
+		subscriber.error('Incorrect timeString.');
+	}
+
+	subscriber.next(timeString);
+
+	setTimeout(() => {
+		subscriber.complete();
+	}, 2000);
+
+
+}
+
+
+let timeObserver = {
+	next: (value) => console.log(`Observer ${cnt}: ${value}`),
 	error: (error) => console.log(`ERROR: ${error}`),
 	complete: () => console.log(`All done!`)
 };
 
 
-books$.subscribe(booksObserver);
+let currentTime$ = new Observable(timeSubscribe);
+
+
+let cnt = 1;
+currentTime$.subscribe(timeObserver);
 
 
 
+setTimeout(() => {
+	cnt++;
+	currentTime$.subscribe(timeObserver);
+}, 1000);
 
+
+setTimeout(() => {
+	cnt++;
+	currentTime$.subscribe(timeObserver);
+}, 2000);
 
 
 
