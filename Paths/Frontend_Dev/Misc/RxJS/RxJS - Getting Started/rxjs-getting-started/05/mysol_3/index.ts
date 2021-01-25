@@ -12,7 +12,8 @@ ajax('/api/books')
 		tap(oldBook => console.log(`Title: ${oldBook.title}`))
 	)
 	.subscribe(
-		finalValue => console.log(finalValue)
+		finalValue => console.log(`VALUE: ${finalValue.title}`),
+		error => console.log(`ERROR: ${error}`)
 	);
 
 

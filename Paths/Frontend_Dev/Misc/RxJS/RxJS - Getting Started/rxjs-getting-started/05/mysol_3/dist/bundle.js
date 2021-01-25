@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar operators_1 = __webpack_require__(/*! rxjs/operators */ \"./node_modules/rxjs/_esm5/operators/index.js\");\nvar ajax_1 = __webpack_require__(/*! rxjs/ajax */ \"./node_modules/rxjs/_esm5/ajax/index.js\");\najax_1.ajax('/api/books')\n    .pipe(operators_1.mergeMap(function (ajaxRes) { return ajaxRes.response; }), operators_1.filter(function (book) { return book.publicationYear < 1950; }), operators_1.tap(function (oldBook) { return console.log(\"Title: \" + oldBook.title); }))\n    .subscribe(function (finalValue) { return console.log(finalValue); });\n\n\n//# sourceURL=webpack:///./index.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar operators_1 = __webpack_require__(/*! rxjs/operators */ \"./node_modules/rxjs/_esm5/operators/index.js\");\nvar ajax_1 = __webpack_require__(/*! rxjs/ajax */ \"./node_modules/rxjs/_esm5/ajax/index.js\");\najax_1.ajax('/api/books')\n    .pipe(operators_1.mergeMap(function (ajaxRes) { return ajaxRes.response; }), operators_1.filter(function (book) { return book.publicationYear < 1950; }), operators_1.tap(function (oldBook) { return console.log(\"Title: \" + oldBook.title); }))\n    .subscribe(function (finalValue) { return console.log(\"VALUE: \" + finalValue.title); }, function (error) { return console.log(\"ERROR: \" + error); });\n\n\n//# sourceURL=webpack:///./index.ts?");
 
 /***/ }),
 
