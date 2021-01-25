@@ -16,6 +16,12 @@ let timerObserver = {
 	complete: () => console.log(`All done!`)
 };
 
+let timerObserver2 = {
+	next: (value) => console.log(`${new Date().toLocaleTimeString()} (${value})`),
+	error: (error) => console.log(`ERROR: ${error}`),
+	complete: () => console.log(`All done!`)
+};
+
 let timerObserverUnsubscribe = {
 	next: (event) => timerSubscription.unsubscribe(),
 	error: (error) => console.log(`ERROR: ${error}`),
@@ -30,10 +36,19 @@ function timerSubscribe(subscriber) {
 		subscriber.next(i++);
 	}, 1000);
 
+	return () => {
+		console.log('Executing teardown code.');
+		clearInterval(intervalID);
+	}
 }
 
 
 let timerSubscription = timer$.subscribe(timerObserver);
+
+let timerConsoleSubscription = timer$.subscribe(timerObserver2);
+
+timerSubscription.add(timerConsoleSubscription);
+// timerSubscription.remove(timerConsoleSubscription);
 
 
 let clicks$ = fromEvent(button, 'click');
