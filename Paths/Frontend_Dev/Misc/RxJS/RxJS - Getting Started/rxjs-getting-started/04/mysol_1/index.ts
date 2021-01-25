@@ -13,6 +13,7 @@ let booksObserver = {
 };
 
 
+books$.subscribe(booksObserver);
 
 
 

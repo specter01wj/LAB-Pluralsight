@@ -106,7 +106,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexport
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar rxjs_1 = __webpack_require__(/*! rxjs */ \"./node_modules/rxjs/_esm5/index.js\");\nvar data_1 = __webpack_require__(/*! ./data */ \"./data.ts\");\nvar books$ = rxjs_1.from(data_1.allBooks);\nvar booksObserver = {\n    next: function (value) { return console.log(\"Title: \" + value.title); },\n    error: function (error) { return console.log(\"ERROR: \" + error); },\n    complete: function () { return console.log(\"All done!\"); }\n};\n\n\n//# sourceURL=webpack:///./index.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar rxjs_1 = __webpack_require__(/*! rxjs */ \"./node_modules/rxjs/_esm5/index.js\");\nvar data_1 = __webpack_require__(/*! ./data */ \"./data.ts\");\nvar books$ = rxjs_1.from(data_1.allBooks);\nvar booksObserver = {\n    next: function (value) { return console.log(\"Title: \" + value.title); },\n    error: function (error) { return console.log(\"ERROR: \" + error); },\n    complete: function () { return console.log(\"All done!\"); }\n};\nbooks$.subscribe(booksObserver);\n\n\n//# sourceURL=webpack:///./index.ts?");
 
 /***/ }),
 
