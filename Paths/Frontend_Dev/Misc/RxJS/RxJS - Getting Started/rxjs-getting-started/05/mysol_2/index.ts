@@ -7,7 +7,9 @@ import { allBooks, allReaders } from './data';
 
 ajax('/api/books')
 	.pipe(
-		mergeMap(ajaxRes => ajaxRes.response)
+		mergeMap(ajaxRes => ajaxRes.response),
+		filter(book => book.publicationYear < 1950),
+		tap(oldBook => console.log(`Title: ${oldBook.title}`))
 	)
 	.subscribe(
 		finalValue => console.log(finalValue)
