@@ -30,6 +30,7 @@ let timer$ = new Observable(subscriber => {
 
 
 
+
     
     clearInterval(intervalID);
   }
