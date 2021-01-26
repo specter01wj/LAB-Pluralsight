@@ -5,27 +5,39 @@ import { allBooks, allReaders } from './data';
 
 
 
-let subject$ = new Subject();
-
-
-subject$.subscribe(
-  value => console.log(`Observer 1: ${value}`),
-);
-
-subject$.subscribe(
-  value => console.log(`Observer 1: ${value}`),
+let source$ = interval(1000).pipe(
+	take(4)
 );
 
 
-subject$.next('Hello!');
 
-
-let source$ = new Observable(subscriber => {
-  subscriber.next('Greetings!');
-});
+source$.subscribe(
+  value => console.log(`Observer 1: ${value}`),
+);
 
 
 
-source$.subscribe(subject$);
+setTimeout(() => {
+	source$.subscribe(
+	  value => console.log(`Observer 2: ${value}`),
+	);
+}, 1000);
+
+
+setTimeout(() => {
+	source$.subscribe(
+	  value => console.log(`Observer 3: ${value}`),
+	);
+}, 1000);
+
+
+
+
+
+
+
+
+
+
 
 
