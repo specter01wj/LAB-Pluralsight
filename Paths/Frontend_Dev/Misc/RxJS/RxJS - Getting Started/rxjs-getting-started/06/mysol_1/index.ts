@@ -16,7 +16,9 @@ function grabAndLogClassics(year, log) {
               console.log(`Classic: ${book.title}`);
             }
           }
-        }
+        },
+        err => subscriber.error(err),
+        () => subscriber.complete()
       );
     });
   }
