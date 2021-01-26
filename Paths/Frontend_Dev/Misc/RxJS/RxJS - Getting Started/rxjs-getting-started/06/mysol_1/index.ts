@@ -26,6 +26,11 @@ function grabAndLogClassics(year, log) {
 
 
 
+function grabClassics(year) {
+  return filter(book => book.publicationYear < year);
+}
+
+
 ajax('/api/books')
   .pipe(
     mergeMap(ajaxRes => ajaxRes.response),
