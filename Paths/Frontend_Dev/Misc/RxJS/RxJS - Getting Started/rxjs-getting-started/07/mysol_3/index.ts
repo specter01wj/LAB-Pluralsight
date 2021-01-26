@@ -8,8 +8,10 @@ import { allBooks, allReaders } from './data';
 
 let source$ = interval(1000).pipe(
 	take(4),
-	multicast(new Subject()),
-	refCount()
+	// multicast(new Subject()),
+	// publish(),
+	// refCount()
+	share()
 );
 
 
@@ -35,6 +37,15 @@ setTimeout(() => {
 	  value => console.log(`Observer 3: ${value}`),
 	);
 }, 2000);
+
+
+setTimeout(() => {
+	source$.subscribe(
+	  value => console.log(`Observer 4: ${value}`),
+	  null,
+	  () => console.log('Observer 4 complete.')
+	);
+}, 5000);
 
 
 
