@@ -5,6 +5,31 @@ import { allBooks, allReaders } from './data';
 
 
 
+function grabAndLogClassics(year, log) {
+  return source$ => {
+    return new Observable(subscriber => {
+      source$.subscribe(
+        book => {
+          if(book.publicationYear < year) {
+            subscriber.next(book);
+            if(log) {
+              console.log(`Classic: ${book.title}`);
+            }
+          }
+        }
+      );
+    });
+  }
+}
+
+
+
+
+
+
+
+
+
 ajax('/api/books')
   .pipe(
     mergeMap(ajaxRes => ajaxRes.response),
