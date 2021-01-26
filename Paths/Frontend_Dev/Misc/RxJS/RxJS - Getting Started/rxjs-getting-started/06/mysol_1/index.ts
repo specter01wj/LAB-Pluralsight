@@ -36,7 +36,8 @@ ajax('/api/books')
     mergeMap(ajaxRes => ajaxRes.response),
     // filter(book => book.publicationYear < 1950),
     // tap(oldBook => console.log(`Title: ${oldBook.title}`)),
-    grabAndLogClassics(1940, false)
+    // grabAndLogClassics(1940, false)
+    grabClassics(1950)
   )
   .subscribe(
     finalValue => console.log(`VALUE: ${finalValue.title}`),
