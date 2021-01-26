@@ -5,34 +5,16 @@ import { allBooks, allReaders } from './data';
 
 
 
-let timesDiv = document.getElementById('times');
-let button = document.getElementById('timerBtn');
-
-let timer$ = new Observable(subscriber => {
-  let i = 0;
-  let intervalID = setInterval(() => {
-    subscriber.next(i++);
-  }, 1000);
-
-  return () => {
-    console.log('Executing teardown code.');
-    clearInterval(intervalID);
-  }
-});
-
-
-let cancelTimer$ = fromEvent(button, 'click');
-
-
-let timerSubscription = timer$.pipe(
-	// take(3)
-	takeUntil(cancelTimer$)
-)
-.subscribe(
-	value => timesDiv.innerHTML += `${new Date().toLocaleTimeString()} (${value}) <br>`,
-	null,
-	() => console.log('All Done!')
-);
+ajax('/api/books')
+  .pipe(
+    mergeMap(ajaxRes => ajaxRes.response),
+    filter(book => book.publicationYear < 1950),
+    tap(oldBook => console.log(`Title: ${oldBook.title}`)),
+  )
+  .subscribe(
+    finalValue => console.log(`VALUE: ${finalValue.title}`),
+    error => console.log(`ERROR: ${error}`)
+  );
 
 
 
