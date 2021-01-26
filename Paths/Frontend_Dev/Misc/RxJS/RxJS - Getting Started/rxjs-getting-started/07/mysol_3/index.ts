@@ -8,7 +8,8 @@ import { allBooks, allReaders } from './data';
 
 let source$ = interval(1000).pipe(
 	take(4),
-	multicast(new Subject())
+	multicast(new Subject()),
+	refCount()
 );
 
 
@@ -37,7 +38,7 @@ setTimeout(() => {
 
 
 
-source$.connect();
+// source$.connect();
 
 
 
