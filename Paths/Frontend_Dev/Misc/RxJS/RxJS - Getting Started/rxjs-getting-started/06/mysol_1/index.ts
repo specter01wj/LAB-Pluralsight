@@ -31,6 +31,14 @@ function grabClassics(year) {
 }
 
 
+function grabAndLogClassicsWithPipe(year, log) {
+  return source$ => source$.pipe(
+    filter(book => book.publicationYear < year),
+    tap(classicBook => log ? console.log(`Title: ${classicBook.title}`) : null)
+  );
+}
+
+
 ajax('/api/books')
   .pipe(
     mergeMap(ajaxRes => ajaxRes.response),
