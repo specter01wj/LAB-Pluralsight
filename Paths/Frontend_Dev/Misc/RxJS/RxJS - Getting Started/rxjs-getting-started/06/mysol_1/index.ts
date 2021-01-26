@@ -45,7 +45,8 @@ ajax('/api/books')
     // filter(book => book.publicationYear < 1950),
     // tap(oldBook => console.log(`Title: ${oldBook.title}`)),
     // grabAndLogClassics(1940, false)
-    grabClassics(1950)
+    // grabClassics(1950)
+    grabAndLogClassicsWithPipe(1950, true)
   )
   .subscribe(
     finalValue => console.log(`VALUE: ${finalValue.title}`),
