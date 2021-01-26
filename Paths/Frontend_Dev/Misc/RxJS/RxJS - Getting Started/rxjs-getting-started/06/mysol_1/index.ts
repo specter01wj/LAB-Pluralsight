@@ -16,26 +16,6 @@ let timer$ = new Observable(subscriber => {
 
   return () => {
     console.log('Executing teardown code.');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     clearInterval(intervalID);
   }
 });
