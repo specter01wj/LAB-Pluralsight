@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar rxjs_1 = __webpack_require__(/*! rxjs */ \"./node_modules/rxjs/_esm5/index.js\");\nvar operators_1 = __webpack_require__(/*! rxjs/operators */ \"./node_modules/rxjs/_esm5/operators/index.js\");\nconsole.log('Start script.');\nrxjs_1.from([1, 2, 3, 4], rxjs_1.queueScheduler).pipe(operators_1.tap(function (value) { return console.log(\"Value: \" + value); }), operators_1.tap(function (value) { return console.log(\"Doubled value: \" + value * 2); }))\n    .subscribe();\nconsole.log('End script.');\n\n\n//# sourceURL=webpack:///./index.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar rxjs_1 = __webpack_require__(/*! rxjs */ \"./node_modules/rxjs/_esm5/index.js\");\nvar operators_1 = __webpack_require__(/*! rxjs/operators */ \"./node_modules/rxjs/_esm5/operators/index.js\");\nconsole.log('Start script.');\nrxjs_1.from([1, 2, 3, 4], rxjs_1.queueScheduler).pipe(operators_1.tap(function (value) { return console.log(\"Value: \" + value); }), operators_1.observeOn(rxjs_1.asyncScheduler), operators_1.tap(function (value) { return console.log(\"Doubled value: \" + value * 2); }))\n    .subscribe();\nconsole.log('End script.');\n\n\n//# sourceURL=webpack:///./index.ts?");
 
 /***/ }),
 
