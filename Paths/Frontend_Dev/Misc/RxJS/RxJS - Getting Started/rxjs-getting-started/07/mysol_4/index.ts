@@ -11,7 +11,8 @@ let source$ = interval(1000).pipe(
 	take(4),
 	// multicast(new Subject()),
 	// publish(),
-	publishLast(),
+	// publishLast(),
+	publishBehavior(42),
 	refCount(),
 	// share()
 );
