@@ -24,7 +24,8 @@ describe('RxBookTracker Tests', () => {
 	it('should delay the values produced', () => {
 		scheduler.run(helpers => {
 			const source$ = helpers.cold('-a-b-c-d|');
-			const expected = '------a-b-c-d|';
+			// const expected = '------a-b-c-d|';
+			const expected = '5ms -a-b-c-d|';
 
 			helpers.expectObservable(source$.pipe(
 				delay(5)
