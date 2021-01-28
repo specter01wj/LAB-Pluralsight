@@ -33,6 +33,17 @@ describe('RxBookTracker Tests', () => {
 		});
 	});
 
+	it('takes the correct number of values', () => {
+		scheduler.run(helpers => {
+			const source$ = helpers.cold('--a--b--c--d|');
+			const expected = '--a--b--(c|)';
+
+			helpers.expectObservable(source$.pipe(
+				take(3)
+			)).toBe(expected);
+		});
+	});
+
 
 
 });
