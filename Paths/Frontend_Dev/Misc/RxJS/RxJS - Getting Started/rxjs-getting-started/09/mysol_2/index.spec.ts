@@ -37,10 +37,12 @@ describe('RxBookTracker Tests', () => {
 		scheduler.run(helpers => {
 			const source$ = helpers.cold('--a--b--c--d|');
 			const expected = '--a--b--(c|)';
+			const sub = '^-------!';
 
 			helpers.expectObservable(source$.pipe(
 				take(3)
 			)).toBe(expected);
+			helpers.expectSubscriptions(source$.subscription).toBe(sub);
 		});
 	});
 
