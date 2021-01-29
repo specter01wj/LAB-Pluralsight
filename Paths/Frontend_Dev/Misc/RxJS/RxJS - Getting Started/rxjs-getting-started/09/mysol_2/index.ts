@@ -13,6 +13,7 @@ console.log('Start script.');
 
 from([1,2,3,4], queueScheduler).pipe(
   tap(value => console.log(`Value: ${value}`)),
+
   
   observeOn(asyncScheduler),
   tap(value => console.log(`Doubled value: ${value * 2}`))
