@@ -18,6 +18,12 @@ export class AppComponent implements OnInit {
   		err => console.log(`Error occurred: ${err}`),
   		() => console.log(`Completed!`),
   	);
+
+  	of('James', 'Mike', 'Peter').subscribe(
+  		name => console.log(`Resulting item: ${name}`),
+  		err => console.log(`Error occurred: ${err}`),
+  		() => console.log(`Completed!`),
+  	);
   }
 
 
