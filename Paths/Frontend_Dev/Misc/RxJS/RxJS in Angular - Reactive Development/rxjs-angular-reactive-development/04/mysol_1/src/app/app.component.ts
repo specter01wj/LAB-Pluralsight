@@ -39,7 +39,12 @@ export class AppComponent implements OnInit {
         tap(item => console.log(`emitted item ... ${item}`)),
         map(item => item * 2),
         map(item => item - 10),
-
+        map(item => {
+          if(item === 0) {
+            throw new Error('zero detected');
+          }
+          return item;
+        })
       )
       .subscribe(
         item => console.log(`Resulting item: ${item}`),
