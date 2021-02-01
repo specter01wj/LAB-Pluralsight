@@ -33,6 +33,21 @@ export class AppComponent implements OnInit {
       take(2)
     ).subscribe(console.log);
 
+
+    from([20, 15, 10, 5])
+      .pipe(
+        tap(item => console.log(`emitted item ... ${item}`)),
+        map(item => item * 2),
+        map(item => item - 10),
+
+      )
+      .subscribe(
+        item => console.log(`Resulting item: ${item}`),
+        err => console.log(`Error occurred: ${err}`),
+        () => console.log(`Completed!`),
+      );
+
+
   }
 
 
