@@ -32,6 +32,7 @@ export class AppComponent implements OnInit {
       tap(item => console.log(item)),
 
 
+
       
       take(2)
     ).subscribe(console.log);
