@@ -28,6 +28,8 @@ export class ProductListComponent implements OnInit, OnDestroy {
       );*/
     this.products$ = this.productService.getProducts();
 
+
+
     
   }
 
