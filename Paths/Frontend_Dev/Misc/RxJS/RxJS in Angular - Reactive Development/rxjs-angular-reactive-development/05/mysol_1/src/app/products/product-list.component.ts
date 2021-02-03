@@ -27,6 +27,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
         error => this.errorMessage = error
       );*/
     this.products$ = this.productService.getProducts();
+    
   }
 
   ngOnDestroy(): void {
