@@ -1,0 +1,30 @@
+
+@import "colors.less";
+
+
+@box-shadow: { 
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5); 
+};
+
+.box-me(@border-width: 1px, @border-style: solid, @border-color: black) {
+  border: @arguments;
+}
+
+.fore-color() when (lightness(@primaryColor) < 50%) {
+  color: White;
+}
+
+.fore-color() when (lightness(@primaryColor) >= 50%) {
+  color: Black;
+}
+
+.multi(@x, @y) {
+  @return: @x * @y;
+}
+
+#ps() {
+  .font-family() {
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+  }
+}
+

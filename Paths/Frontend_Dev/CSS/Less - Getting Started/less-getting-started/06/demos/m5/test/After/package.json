@@ -1,0 +1,20 @@
+{
+  "name": "shawntwain",
+  "version": "0.0.0",
+  "description": "An example site",
+  "scripts": {
+    "less": "lessc css/site.less css/site.css",
+    "start": "lite-server"
+  },
+  "author": "Shawn Wildermuth",
+  "license": "MIT",
+  "dependencies": {
+    "font-awesome": "4.7.0",
+    "jquery": "3.3.1",
+    "mediaelement": "4.2.9"
+  },
+  "devDependencies": {
+    "lite-server": "2.4.0",
+    "less-plugin-lists": "1.1.2"
+  }
+}
