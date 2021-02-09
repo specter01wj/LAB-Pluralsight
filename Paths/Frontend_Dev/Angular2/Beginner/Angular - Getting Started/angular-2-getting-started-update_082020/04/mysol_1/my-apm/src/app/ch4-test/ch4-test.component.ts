@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ch4-test.component.less']
 })
 export class Ch4TestComponent implements OnInit {
+	pageTitle: string = "Acme Product Management";
 
   constructor() { }
 
