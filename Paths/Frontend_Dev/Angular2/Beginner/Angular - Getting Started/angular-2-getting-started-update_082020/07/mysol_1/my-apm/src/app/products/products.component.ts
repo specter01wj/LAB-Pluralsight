@@ -12,10 +12,6 @@ export class ProductsComponent implements OnInit {
   imageWidth: number = 50;
   imageMargin: number = 2;
   showImage: boolean = false;
-
-
-
-  
   listFilter: string = 'cart';
 
   toggleImage(): void {
