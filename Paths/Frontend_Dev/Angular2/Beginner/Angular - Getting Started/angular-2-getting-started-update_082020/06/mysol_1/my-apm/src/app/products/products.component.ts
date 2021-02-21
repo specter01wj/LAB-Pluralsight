@@ -9,6 +9,9 @@ import { Product } from '../interface/product';
 })
 export class ProductsComponent implements OnInit {
 	pageTitle: string = 'Product List';
+  imageWidth: number = 50;
+  imageMargin: number = 2;
+
   products: Product[] = [
     {
       "productId": 2,
