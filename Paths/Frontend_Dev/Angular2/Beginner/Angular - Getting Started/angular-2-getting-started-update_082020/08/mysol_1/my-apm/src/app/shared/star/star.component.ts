@@ -6,7 +6,7 @@ import { Component, OnInit, OnChanges, Input, EventEmitter, Output } from '@angu
   styleUrls: ['./star.component.less']
 })
 export class StarComponent implements OnInit {
-	rating: number = 4;
+	@Input() rating: number;
 	starWidth: number;
 
 
@@ -14,6 +14,10 @@ export class StarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  ngOnChanges(): void {
+    this.starWidth = this.rating * 75 / 5;
   }
 
 }
