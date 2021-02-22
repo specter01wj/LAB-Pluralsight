@@ -6,6 +6,10 @@ import { Component, OnInit, OnChanges, Input, EventEmitter, Output } from '@angu
   styleUrls: ['./star.component.less']
 })
 export class StarComponent implements OnInit {
+	rating: number = 4;
+	starWidth: number;
+
+
 
   constructor() { }
 
