@@ -6,9 +6,9 @@ import { Component, OnInit, OnChanges, Input, EventEmitter, Output } from '@angu
   styleUrls: ['./star.component.less']
 })
 export class StarComponent implements OnInit {
-	@Input() rating: number;
+	@Input('my-rating') rating: number;
 	starWidth: number;
-
+	@Output('my-ratingClicked') ratingClicked: EventEmitter<string> = new EventEmitter<string>();
 
 
   constructor() { }
@@ -18,6 +18,10 @@ export class StarComponent implements OnInit {
 
   ngOnChanges(): void {
     this.starWidth = this.rating * 75 / 5;
+  }
+
+  onClick(): void {
+  	this.ratingClicked.emit(`The rating ${this.rating} was clicked!`);
   }
 
 }
