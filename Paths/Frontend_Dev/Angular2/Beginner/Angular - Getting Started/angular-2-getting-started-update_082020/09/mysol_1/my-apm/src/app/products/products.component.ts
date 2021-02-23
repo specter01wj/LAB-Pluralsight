@@ -24,6 +24,7 @@ export class ProductsComponent implements OnInit {
 
 
 
+
     
     this.listFilter = '';
   }
