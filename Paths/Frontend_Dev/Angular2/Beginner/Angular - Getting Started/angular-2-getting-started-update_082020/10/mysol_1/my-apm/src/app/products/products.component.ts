@@ -15,6 +15,7 @@ export class ProductsComponent implements OnInit {
   imageMargin: number = 2;
 
 
+
   
   showImage: boolean = false;
   
