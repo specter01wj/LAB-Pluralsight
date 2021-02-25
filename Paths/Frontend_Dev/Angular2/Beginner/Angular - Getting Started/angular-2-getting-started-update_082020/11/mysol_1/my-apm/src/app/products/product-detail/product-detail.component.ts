@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Product } from '../../interface/product';
+
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailComponent implements OnInit {
 	pageTitle: string = 'Product Detail';
-  product: IProduct;
+  product: Product;
 
   constructor() { }
 
