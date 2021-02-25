@@ -5,7 +5,7 @@ import { ProductsComponent } from './products/products.component';
 import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 import { WelcomeComponent } from './home/welcome.component';
 
-import { ProductDetailGuard } from './products/product-detail.guard';
+import { ProductDetailGuard } from './products/product-detail/product-detail.guard';
 
 const routes: Routes = [
 		{ path: 'products', component: ProductsComponent },
