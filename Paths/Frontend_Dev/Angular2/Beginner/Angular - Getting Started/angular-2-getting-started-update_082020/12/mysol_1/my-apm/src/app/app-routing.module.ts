@@ -9,29 +9,6 @@ import { ProductDetailGuard } from './products/product-detail/product-detail.gua
 
 const routes: Routes = [
 		{ path: 'products', component: ProductsComponent },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
     { path: 'products/:id', canActivate: [ProductDetailGuard], component: ProductDetailComponent },
     { path: 'welcome', component: WelcomeComponent },
     { path: '', redirectTo: 'welcome', pathMatch: 'full' },
