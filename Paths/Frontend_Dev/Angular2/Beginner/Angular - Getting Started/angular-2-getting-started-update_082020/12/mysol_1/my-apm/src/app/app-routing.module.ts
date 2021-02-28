@@ -19,6 +19,7 @@ const routes: Routes = [
 
 
 
+
 		
     { path: 'products/:id', canActivate: [ProductDetailGuard], component: ProductDetailComponent },
     { path: 'welcome', component: WelcomeComponent },
