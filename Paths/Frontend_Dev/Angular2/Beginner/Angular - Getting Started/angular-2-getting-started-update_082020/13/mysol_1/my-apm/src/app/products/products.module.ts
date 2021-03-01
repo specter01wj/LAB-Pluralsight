@@ -7,10 +7,13 @@ import { ProductsRoutingModule } from './products-routing.module';
 import { ProductsComponent } from './products.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 
+import { ConvertToSpacesPipe } from '../service/convert-to-spaces.pipe';
+
 @NgModule({
   declarations: [
   	ProductsComponent,
-  	ProductDetailComponent
+  	ProductDetailComponent,
+  	ConvertToSpacesPipe
   ],
   imports: [
     CommonModule,

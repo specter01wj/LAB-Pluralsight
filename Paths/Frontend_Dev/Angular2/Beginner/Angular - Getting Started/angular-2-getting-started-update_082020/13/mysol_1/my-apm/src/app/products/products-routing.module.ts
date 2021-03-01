@@ -10,12 +10,12 @@ import { ProductDetailGuard } from './product-detail/product-detail.guard';
 
 const routes: Routes = [
   {
-    path: 'products',
+    path: '',
     component: ProductsComponent,
     children: [
     ]
   },
-  { path: 'products/:id', 
+  { path: '/:id', 
   	canActivate: [ProductDetailGuard], 
   	component: ProductDetailComponent },
 ];
