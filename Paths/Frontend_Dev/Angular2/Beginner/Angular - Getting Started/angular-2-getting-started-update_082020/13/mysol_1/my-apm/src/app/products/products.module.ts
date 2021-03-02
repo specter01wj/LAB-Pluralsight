@@ -15,6 +15,7 @@ import { ConvertToSpacesPipe } from '../service/convert-to-spaces.pipe';
   	ProductDetailComponent,
   	ConvertToSpacesPipe
 
+
   	
   ],
   imports: [
