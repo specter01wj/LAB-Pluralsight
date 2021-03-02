@@ -6,13 +6,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { StarComponent } from './shared/star/star.component';
 import { WelcomeComponent } from './home/welcome.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StarComponent,
     WelcomeComponent,
   ],
   imports: [
