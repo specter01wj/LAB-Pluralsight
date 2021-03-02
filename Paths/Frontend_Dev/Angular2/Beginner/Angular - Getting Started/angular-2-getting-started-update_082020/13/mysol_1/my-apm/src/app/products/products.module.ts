@@ -14,18 +14,6 @@ import { ConvertToSpacesPipe } from '../service/convert-to-spaces.pipe';
   	ProductsComponent,
   	ProductDetailComponent,
   	ConvertToSpacesPipe
-
-
-
-
-
-
-
-
-
-
-
-  	
   ],
   imports: [
     CommonModule,
