@@ -15,7 +15,7 @@ const routes: Routes = [
     children: [
     ]
   },
-  { path: '/:id', 
+  { path: ':id', 
   	canActivate: [ProductDetailGuard], 
   	component: ProductDetailComponent },
 ];

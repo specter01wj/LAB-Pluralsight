@@ -13,7 +13,7 @@ export class ProductDetailGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     
-  	let id = +route.url[1].path;
+  	let id = +route.url[0].path;
     if (isNaN(id) || id < 1) {
       alert('Invalid product Id');
       this.router.navigate(['/products']);
