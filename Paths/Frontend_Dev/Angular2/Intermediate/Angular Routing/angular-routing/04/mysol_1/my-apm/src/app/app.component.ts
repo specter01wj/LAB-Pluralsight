@@ -13,7 +13,14 @@ export class AppComponent {
   constructor(private router: Router) { }
 
 
-  
+  get isLoggedIn(): boolean {
+    return true;
+  }
+
+
+  logOut(): void {
+    this.router.navigate(['/welcome']);
+  }
 
 
 }
