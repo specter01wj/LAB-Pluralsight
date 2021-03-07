@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { AuthService } from './auth.service';
+import { AuthService } from '../../service/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -30,6 +30,10 @@ export class LoginComponent implements OnInit {
     } else {
       this.errorMessage = 'Please enter a user name and password.';
     }
+  }
+
+  onCancel(): void {
+  	this.router.navigate(['/welcome']);
   }
 
 }

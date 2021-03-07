@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { User } from '../interface/user';
-import { MessageService } from '../messages/message.service';
+import { MessageService } from './message.service';
 
 @Injectable({
   providedIn: 'root'
@@ -41,6 +41,6 @@ export class AuthService {
   logout(): void {
     this.currentUser = null;
   }
-  
+
 
 }
