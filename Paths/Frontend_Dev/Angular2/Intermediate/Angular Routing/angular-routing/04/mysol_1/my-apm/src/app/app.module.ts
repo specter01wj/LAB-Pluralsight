@@ -7,6 +7,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { PageNotFoundComponent } from './not-found/page-not-found.component';
 
 import { ProductModule } from './products/product.module';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ProductModule } from './products/product.module';
   imports: [
     BrowserModule,
     ProductModule,
+    UserModule,
     AppRoutingModule
   ],
   providers: [],
