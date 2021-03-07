@@ -8,6 +8,7 @@ import { PageNotFoundComponent } from './not-found/page-not-found.component';
 
 import { ProductModule } from './products/product.module';
 import { UserModule } from './user/user.module';
+import { MessageModule } from './messages/message.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { UserModule } from './user/user.module';
     BrowserModule,
     ProductModule,
     UserModule,
+    MessageModule,
     AppRoutingModule
   ],
   providers: [],
