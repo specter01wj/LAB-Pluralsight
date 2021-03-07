@@ -19,7 +19,8 @@ export class AppComponent {
 
 
   logOut(): void {
-    this.router.navigate(['/welcome']);
+    // this.router.navigate(['/welcome']);
+    this.router.navigateByUrl('/welcome');
   }
 
 
