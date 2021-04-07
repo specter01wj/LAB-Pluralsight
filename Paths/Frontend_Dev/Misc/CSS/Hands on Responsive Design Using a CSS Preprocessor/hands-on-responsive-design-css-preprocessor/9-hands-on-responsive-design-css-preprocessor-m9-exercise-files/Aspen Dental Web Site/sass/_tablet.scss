@@ -1,0 +1,47 @@
+@media only screen and (min-width: 45em) {
+
+/*-----HEADER -----*/
+
+	header .logo img {
+		width: auto;	
+	}
+
+
+
+/*----- SOCIAL -----*/
+	header .social {
+		position: relative;
+		float: right;
+
+	}
+	
+	
+	
+	
+/*----- MAIN -----*/
+	
+	
+/*----- SUB NAV -----*/	
+.hideSmall {display: inline;}
+	
+	
+/*----- COLUMNS -----*/
+	main {
+		.width6 {
+			float: left;
+			width: 6 / 12 * 100%;
+		}
+	} /*end main*/
+	
+	
+	
+/*----- NEWSPAPER STYLE COLUMNS -----*/
+.multicol {
+	@include columns(2, $dkgrey);
+	
+}
+	
+	
+} /* end query */
+
+

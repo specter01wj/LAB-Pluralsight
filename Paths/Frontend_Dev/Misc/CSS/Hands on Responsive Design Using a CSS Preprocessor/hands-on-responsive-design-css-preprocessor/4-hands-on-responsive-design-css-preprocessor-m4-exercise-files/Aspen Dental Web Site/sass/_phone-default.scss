@@ -1,0 +1,66 @@
+/*-----Prevents iPhone from resizing in landscape mode -----*/
+html {-webkit-text-size-adjust: none; }
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*-----BODY -----*/
+body {
+	font-size: 16px;
+	
+}
+
+/*-----HEADER -----*/
+
+
+
+
+
+
+
+
+/*----- SOCIAL -----*/
+.social {
+	float: right;
+	padding-top: .5em;
+	z-index:99;
+}	
+.social li {
+	float: right;
+	
+}
+.social li a {
+	display: block;	
+	padding-left: 10px;
+}
+
+
+/*----- NAVIGATION -----*/
+nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* ADD the background color as a variable */
+	height: 44px;
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+/*----- FOOTER -----*/
+
+
+
+/*----- OTHER -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

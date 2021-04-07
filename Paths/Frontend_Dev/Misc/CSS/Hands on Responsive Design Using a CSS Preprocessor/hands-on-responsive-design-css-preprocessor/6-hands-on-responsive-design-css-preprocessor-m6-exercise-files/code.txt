@@ -1,0 +1,39 @@
+<a href="#bridge" class="subnav-active">Brid<span class="hideSmall">ges</span></a>
+<a href="#denture" class="subnav-link"><span class="hideSmall">Partial</span> Dent<span class="hideSmall">ures</span></a>
+<a href="#replace" class="subnav-link">Repl<span class="hideSmall">acement</span></a>
+<a href="#implant" class="subnav-link">Impl<span class="hideSmall">ants</span></a>
+
+
+
+
+
+
+
+%subnav { 
+	display: block;
+	float: left;
+	width: 25%;
+	margin: 2em 0 0 0;
+	padding: .5em 1em .2em 1em;
+	color: $dkgrey;
+	border: solid 1px $orange;
+	text-decoration:none;
+	border-radius: 10px 10px 0 0;
+	transition: background ease .5s;
+}
+.subnav-link {
+	@extend %subnav;
+	background-color: $ltgrey;
+}
+.subnav-link:hover {
+	background-color: $orange;
+}
+.subnav-active {
+	@extend %subnav;
+	background-color: $blue;
+	font-weight: $heavy;
+	color: #111;
+}
+.hideSmall {
+	display:none;	
+}

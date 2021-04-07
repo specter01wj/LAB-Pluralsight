@@ -1,0 +1,16 @@
+/*-----SCSS MIXIN for MULTIPLE COLUMNS -----*/
+@mixin columns() {
+	-webkit-column-count: ; /* Chrome, Safari, Opera */
+    -moz-column-count: ; /* Firefox */
+    column-count: ;
+	
+	-webkit-column-gap: ; /* Chrome, Safari, Opera */
+    -moz-column-gap: ; /* Firefox */
+    column-gap: ;
+	
+	-webkit-column-rule: 1px outset ; /* Chrome, Safari, Opera */
+    -moz-column-rule: 1px outset ; /* Firefox */
+    column-rule: 1px outset ;
+}
+
+

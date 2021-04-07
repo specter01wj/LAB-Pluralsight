@@ -1,0 +1,38 @@
+@media only screen and (min-width: 45em) {
+
+/*-----HEADER -----*/
+
+	header .logo img {
+		width: auto;	
+	}
+
+
+
+/*----- SOCIAL -----*/
+	header .social {
+		position: relative;
+		float: right;
+
+	}
+	
+	
+	
+	
+/*----- MAIN -----*/
+	
+	
+	
+	
+	
+/*----- COLUMNS -----*/
+	main {
+		.width6 {
+			float: left;
+			width: 6 / 12 * 100%;
+		}
+	} /*end main*/
+	
+	
+} /* end query */
+
+

@@ -1,0 +1,141 @@
+/*-----Prevents iPhone from resizing in landscape mode -----*/
+html {-webkit-text-size-adjust: none; }
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*-----BODY -----*/
+body {
+	font-size: 16px;
+	font-family: $default_font_family;
+}
+
+/*-----HEADER -----*/
+header {
+	padding: 1em $gutter .5em $gutter;
+	border-bottom: solid 1px $ltgrey;
+	
+	h1, h2 {
+		display: none;
+	}
+	.logo {
+		float: left;
+	}
+	.logo img {
+		width: 200px;
+	}
+	
+} /* end of  header*/
+
+
+
+
+/*----- SOCIAL -----*/
+.social {
+	float: right;
+	padding-top: .5em;
+	z-index:99;
+}	
+.social li {
+	float: right;
+	
+}
+.social li a {
+	display: block;	
+	padding-left: 10px;
+}
+
+
+/*----- NAVIGATION -----*/
+nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: $menu-color;
+	height: 44px;
+	width: 100%;
+}
+
+
+
+/*----- MAIN -----*/
+main {
+	display: block;
+	min-height: 25em;
+	
+	h1 {
+		font-size: 3em;
+		color: $h1_color;
+		padding-top: .75em;
+		font-weight: $heavy;
+	}
+	
+	h2 {
+		font-size: 2em;
+		color: $h2_color;
+		padding-top: .5em;
+		font-weight: $heavy;
+	}
+	
+	h3 {
+		font-size: 1.5em;
+		color: $h3_color;
+		padding-top: .5em;
+		font-weight: $heavy;
+	}
+	p {
+		font-size: 1em;
+		color: $text-color;
+		padding-top: .4em;
+		font-weight: $normal;
+		line-height: 130%;
+	}
+	 strong {
+		 font-weight: $heavy;
+	 }
+	  
+	 a {
+		color: $link_color; 
+	 }
+	
+	
+	
+	
+} /*end of the main area*/
+
+
+/*----- COLUMNS -----*/
+main {
+	.row {
+		clear: both;
+	}
+	.column {
+		padding: 0 $gutter;
+	}
+} /*end main*/
+
+
+/*----- FOOTER -----*/
+
+footer {
+	clear: both;
+	font-size: .8em;
+	text-align: center;
+	padding: 2em 0 .6em 0;
+	color: $brown;
+	font-weight: $heavy;
+	a{
+	color: $brown;
+	}
+} /*end footer*/
+
+
+
+
+
+/*----- OTHER -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
