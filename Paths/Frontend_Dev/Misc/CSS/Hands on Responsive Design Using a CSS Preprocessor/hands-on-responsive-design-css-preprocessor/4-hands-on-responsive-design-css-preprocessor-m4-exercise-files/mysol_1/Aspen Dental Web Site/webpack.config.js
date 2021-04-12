@@ -1,24 +1,31 @@
-{
-  "name": "my-apm",
-  "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "build": "webpack --config webpack.config.js --mode='production'"
-  },
-  "private": true,
-  "dependencies": {
-    
-  },
-  "devDependencies": {
-    "file-loader": "^5.0.2",
-    "node-sass": "^4.13.1",
-    "sass-loader": "^8.0.2",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
-  }
-}
+const path = require('path');
+
+module.exports = {
+    entry: [
+        __dirname + '/src/js/app.js',
+        __dirname + '/sass/styles.scss'
+    ],
+    output: {
+        path: path.resolve(__dirname, 'dist'), 
+        filename: 'js/app.min.js',
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: [],
+            }, {
+                test: /\.scss$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: { outputPath: 'css/', name: '[name].min.css'}
+                    },
+                    'sass-loader'
+                ]
+            }
+        ]
+    }
+};
