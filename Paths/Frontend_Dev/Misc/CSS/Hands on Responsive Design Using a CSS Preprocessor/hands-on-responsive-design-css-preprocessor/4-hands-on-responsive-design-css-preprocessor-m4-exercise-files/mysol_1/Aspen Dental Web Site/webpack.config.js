@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     entry: [
-        __dirname + '/src/js/app.js',
+        __dirname + '/js/app.js',
         __dirname + '/sass/styles.scss'
     ],
     output: {
