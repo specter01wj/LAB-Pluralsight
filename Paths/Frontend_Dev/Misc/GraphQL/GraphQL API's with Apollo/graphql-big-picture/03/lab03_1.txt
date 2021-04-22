@@ -1,0 +1,142 @@
+
+Fields:
+
+{
+  viewer {
+    login
+    bio
+    id
+    name
+  }
+}
+
+
+Arguments:
+
+{
+  viewer {
+    login
+    bio
+    id
+    name
+    followers(last:3) {
+      nodes {
+        id
+        bio
+      }
+    }
+  }
+}
+
+
+Alias:
+
+{
+  viewer {
+    login
+    bio
+    id
+    name
+    lastFollowers: followers(last:3) {
+      nodes {
+        id
+        bio
+      }
+    }
+    firstFollowers: followers(first:3) {
+      nodes {
+        id
+        bio
+      }
+    }
+  }
+}
+
+
+Fragments:
+
+query viewerInfo {
+  viewer {
+    login
+    bio
+    id
+    name
+    lastFollowers: followers(last:3) {
+      nodes {
+        ...userInfo
+      }
+    }
+    firstFollowers: followers(first:3) {
+      nodes {
+        ...userInfo
+      }
+    }
+  }
+}
+
+
+fragment userInfo on User {
+  id
+  bio
+  bioHTML
+  avatarUrl
+}
+
+
+Variables:
+
+query viewerInfo($isOwner: Boolean!) {
+  viewer {
+    login
+    bio
+    id
+    name
+    starredRepositories(ownedByViewer: $isOwner, last: 5) {
+      nodes {
+        id
+        name
+      }
+    }
+  }
+}
+
+
+{
+  "isOwner": false
+}
+
+
+
+Mutations:
+
+mutation NewStatus($input: ChangeUserStatusInput!) {
+  changeUserStatus(input: $input) {
+    clientMutationId
+    status {
+      message
+    }
+  }
+}
+
+query viewerInfo {
+  viewer {
+    login
+    name
+    status {
+      id
+      message
+    }
+  }
+}
+
+
+{
+  "input": {
+    "clientMutationId": "011",
+    "message": "Sleeping"
+  }
+}
+
+
+
+
