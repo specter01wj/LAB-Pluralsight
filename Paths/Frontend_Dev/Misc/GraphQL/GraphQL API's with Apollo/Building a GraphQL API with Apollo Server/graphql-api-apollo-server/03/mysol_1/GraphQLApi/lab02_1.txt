@@ -1,0 +1,10 @@
+
+postman:
+
+{
+    __schema{
+        types{
+            name
+        }
+    }
+}
