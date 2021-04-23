@@ -1,0 +1,10 @@
+
+executing queries:
+
+query {
+  sessions {
+    title
+    room
+    track
+  }
+}
