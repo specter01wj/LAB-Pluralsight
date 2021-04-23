@@ -1,0 +1,18 @@
+
+filter by id:
+
+query {
+  sessionById(id: "84473") {
+    title
+    room
+    track
+    id
+    level
+    description
+  }
+  sessions {
+    title
+    room
+    track
+  }
+}
