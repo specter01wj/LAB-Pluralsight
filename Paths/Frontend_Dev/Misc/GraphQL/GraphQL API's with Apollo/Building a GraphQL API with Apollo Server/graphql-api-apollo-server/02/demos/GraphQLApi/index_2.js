@@ -21,21 +21,6 @@ type Session {
 const server = new ApolloServer({ typeDefs });
 
 const app = express();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 server.applyMiddleware({ app });
 
 app.listen({ port: 4000 }, () =>
