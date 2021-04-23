@@ -1,0 +1,18 @@
+
+filter by many column:
+
+query {
+  sessionById(id: "84473") {
+    title
+    room
+    track
+    id
+    level
+    description
+  }
+  sessions(room: "Europa", track:".NET") {
+    title
+    room
+    track
+  }
+}
