@@ -1,5 +1,5 @@
 
-filter by id:
+clean:
 
 query {
   sessionById(id: "84473") {
@@ -10,7 +10,7 @@ query {
     level
     description
   }
-  sessions {
+  sessions(room: "Europa", track:".NET") {
     title
     room
     track
