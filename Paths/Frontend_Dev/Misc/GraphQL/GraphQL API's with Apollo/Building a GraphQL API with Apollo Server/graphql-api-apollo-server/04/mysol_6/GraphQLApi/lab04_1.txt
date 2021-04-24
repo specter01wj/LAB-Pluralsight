@@ -1,7 +1,10 @@
 
-clean:
+Rest api:
 
 query {
+  speakers{
+    name
+  }
   sessionById(id: "84473") {
     title
     room
