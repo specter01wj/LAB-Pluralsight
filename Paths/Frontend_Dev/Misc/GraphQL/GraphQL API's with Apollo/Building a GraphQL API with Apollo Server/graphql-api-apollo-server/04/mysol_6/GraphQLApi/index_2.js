@@ -16,6 +16,7 @@ const dataSources = () => ({
 const server = new ApolloServer({ typeDefs, resolvers, dataSources });
 
 const app = express();
+
 server.applyMiddleware({ app });
 
 app.listen({ port: 4000 }, () =>
