@@ -21,12 +21,6 @@ const server = new ApolloServer({ typeDefs });
 
 server
   .listen({ port: process.env.PORT || 4000 })
-
-
-
-
-
-  
   .then(({ url }) => {
     console.log(`graphQL running at ${url}`);
   })
