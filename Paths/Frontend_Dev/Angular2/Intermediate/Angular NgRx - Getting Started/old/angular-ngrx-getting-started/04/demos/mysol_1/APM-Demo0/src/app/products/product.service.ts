@@ -25,6 +25,7 @@ export class ProductService {
   getProducts(): Observable<Product[]> {
     if (this.products) {
       return of(this.products);
+      
     }
     return this.http.get<Product[]>(this.productsUrl)
       .pipe(
