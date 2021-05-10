@@ -22,6 +22,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
   // Used to highlight the selected product in the list
   selectedProduct: Product | null;
   sub: Subscription;
+  storeSub: Subscription;
 
   constructor(private store: Store<any>, private productService: ProductService) { }
 
@@ -35,7 +36,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
       error: err => this.errorMessage = err
     });
 
-    this.store.select('products').subscribe(
+    this.storeSub = this.store.select('products').subscribe(
       products => {
         if(products) {
           this.displayCode = products.showProductCode;
@@ -46,6 +47,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.sub.unsubscribe();
+    this.storeSub.unsubscribe();
   }
 
   checkChanged(): void {
