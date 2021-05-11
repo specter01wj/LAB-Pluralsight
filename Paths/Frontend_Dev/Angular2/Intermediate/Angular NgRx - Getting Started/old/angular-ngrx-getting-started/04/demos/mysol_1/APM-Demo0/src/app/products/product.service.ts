@@ -21,6 +21,7 @@ export class ProductService {
   changeSelectedProduct(selectedProduct: Product | null): void {
     this.selectedProductSource.next(selectedProduct);
 
+
     
   }
 
