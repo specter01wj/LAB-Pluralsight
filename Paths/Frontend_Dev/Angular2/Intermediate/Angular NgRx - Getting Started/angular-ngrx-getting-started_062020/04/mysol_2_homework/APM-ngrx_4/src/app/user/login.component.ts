@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -12,7 +12,7 @@ import { AuthService } from './auth.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
   pageTitle = 'Log In';
 
   maskUserName: boolean;
@@ -33,6 +33,10 @@ export class LoginComponent implements OnInit {
       }
     );
 
+  }
+
+  ngOnDestroy(): void {
+    this.userSub.unsubscribe();
   }
 
   cancel(): void {
