@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 
 import { Store } from '@ngrx/store';
 
+import { Subscription } from 'rxjs';
+
 import { AuthService } from './auth.service';
 
 @Component({
@@ -15,11 +17,21 @@ export class LoginComponent implements OnInit {
 
   maskUserName: boolean;
 
+  userSub: Subscription;
+
   constructor(private store: Store<any>, 
               private authService: AuthService, 
               private router: Router) { }
 
   ngOnInit(): void {
+
+    this.userSub = this.store.select('users').subscribe(
+      users => {
+        if(users) {
+          this.maskUserName = users.showUserCode;
+        }
+      }
+    );
 
   }
 
