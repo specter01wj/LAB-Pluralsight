@@ -10,6 +10,7 @@ import { AuthService } from './auth.service';
 
 @Component({
   templateUrl: './login.component.html',
+  
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit, OnDestroy {
