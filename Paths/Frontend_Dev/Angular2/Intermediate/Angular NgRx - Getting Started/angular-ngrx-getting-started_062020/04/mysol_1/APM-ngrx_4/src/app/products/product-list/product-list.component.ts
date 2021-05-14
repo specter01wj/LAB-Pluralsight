@@ -43,6 +43,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
 
 
 
+
       
       error: err => this.errorMessage = err
     });
