@@ -29,6 +29,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.sub = this.productService.selectedProductChanges$.subscribe(
       currentProduct => this.selectedProduct = currentProduct
+
       
     );
 
