@@ -13,6 +13,7 @@ const routes: Routes = [
               loadChildren: './products/product.module#ProductModule'
 
 
+
               
           },
           { path: '', redirectTo: 'welcome', pathMatch: 'full' },
