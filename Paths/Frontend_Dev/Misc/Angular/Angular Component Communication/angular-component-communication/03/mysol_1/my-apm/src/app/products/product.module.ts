@@ -7,10 +7,11 @@ import { ProductRoutingModule } from './product-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { ProductListComponent } from './product-list.component';
 import { ProductDetailComponent } from './product-detail.component';
+import { EditComponent } from './edit.component';
 
 
 @NgModule({
-  declarations: [ProductListComponent, ProductDetailComponent],
+  declarations: [ProductListComponent, ProductDetailComponent, EditComponent],
   imports: [
     CommonModule,
     FormsModule,
