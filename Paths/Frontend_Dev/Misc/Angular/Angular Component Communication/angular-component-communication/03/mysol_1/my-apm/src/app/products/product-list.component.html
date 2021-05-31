@@ -11,8 +11,10 @@
 			    <!-- <input type='text'
                        [ngModel]='listFilter'
                        (ngModelChange)='onFilterChange($event)' /> -->
+                <!-- <input type='text'
+                       [(ngModel)]='listFilter' /> -->
                 <input type='text'
-                       [(ngModel)]='listFilter' />
+                       [ngModel]='listFilter' (ngModelChange)='onFilterChange($event)' />
             </div>
         </div>
         <div class='row' [hidden]='!listFilter'>
