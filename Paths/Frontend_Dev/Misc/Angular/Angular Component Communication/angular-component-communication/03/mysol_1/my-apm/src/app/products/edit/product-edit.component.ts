@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { NgForm } from '@angular/forms';
 
@@ -7,10 +7,10 @@ import { ProductService } from '../../service/product.service';
 
 @Component({
   selector: 'app-edit',
-  templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.less']
+  templateUrl: './product-edit.component.html',
+  styleUrls: ['./product-edit.component.less']
 })
-export class EditComponent implements OnInit {
+export class ProductEditComponent implements OnInit {
 	@ViewChild(NgForm) editForm: NgForm;
   pageTitle: string = 'Product Edit';
   errorMessage: string;
