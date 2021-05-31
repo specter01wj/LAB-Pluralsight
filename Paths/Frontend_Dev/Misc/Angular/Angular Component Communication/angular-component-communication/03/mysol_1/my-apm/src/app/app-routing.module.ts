@@ -1,6 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { AuthGuard } from './user/auth-guard.service';
+
+import { ShellComponent } from './home/shell.component';
+import { WelcomeComponent } from './home/welcome.component';
+import { PageNotFoundComponent } from './home/page-not-found.component';
+
 const routes: Routes = [
 	{
       path: '',
@@ -10,7 +16,7 @@ const routes: Routes = [
           {
               path: 'products',
               // canActivate: [AuthGuard],
-              loadChildren: './products/product.module#ProductModule'
+              loadChildren: () => import('./products/product.module').then(m => m.ProductModule)
           },
           { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       ]
