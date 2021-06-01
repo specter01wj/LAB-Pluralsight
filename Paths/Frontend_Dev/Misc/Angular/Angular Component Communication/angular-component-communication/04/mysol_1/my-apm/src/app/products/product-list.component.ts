@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 import { ProductService } from '../service/product.service';
 
@@ -17,6 +17,8 @@ export class ProductListComponent implements OnInit {
   imageWidth: number = 50;
   imageMargin: number = 2;
   errorMessage: string;
+
+  @ViewChild('filterElement') filterElementRef: ElementRef;
 
   private _listFilter: string;
   get listFilter(): string {
