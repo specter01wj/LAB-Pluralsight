@@ -19,6 +19,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   imageMargin: number = 2;
 
 
+
   
   errorMessage: string;
 
