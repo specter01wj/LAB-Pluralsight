@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ElementRef, ViewChildren, QueryList } from '@angular/core';
-
+import { NgModel } from '@angular/forms';
 import { ProductService } from '../service/product.service';
 
 import { IProduct } from '../interface/product';
@@ -12,6 +12,7 @@ import { IProduct } from '../interface/product';
 export class ProductListComponent implements OnInit, AfterViewInit {
 	pageTitle: string = 'Product List';
   // listFilter: string;
+  filterName: string;
   showImage: boolean;
 
   imageWidth: number = 50;
@@ -19,7 +20,8 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   errorMessage: string;
 
   @ViewChild('filterElement') filterElementRef: ElementRef;
-  @ViewChildren('filterElement, nameElement') inputElementRefs: QueryList<ElementRef>;
+  // @ViewChildren('filterElement, nameElement') inputElementRefs: QueryList<ElementRef>;
+  @ViewChildren(NgModel) inputElementRefs: QueryList<ElementRef>;
 
   private _listFilter: string;
   get listFilter(): string {
