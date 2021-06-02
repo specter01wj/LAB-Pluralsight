@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, ElementRef, ViewChildren, QueryList } from '@angular/core';
 
 import { ProductService } from '../service/product.service';
 
@@ -19,6 +19,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   errorMessage: string;
 
   @ViewChild('filterElement') filterElementRef: ElementRef;
+  @ViewChildren('filterElement, nameElement') inputElementRefs: QueryList<ElementRef>;
 
   private _listFilter: string;
   get listFilter(): string {
