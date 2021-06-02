@@ -20,6 +20,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
 
 
 
+
   
   errorMessage: string;
 
