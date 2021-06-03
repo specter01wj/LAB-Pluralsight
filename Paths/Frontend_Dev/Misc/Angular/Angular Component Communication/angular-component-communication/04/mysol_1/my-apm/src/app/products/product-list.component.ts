@@ -28,6 +28,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
       return this._listFilter;
 
 
+
       
   }
 
