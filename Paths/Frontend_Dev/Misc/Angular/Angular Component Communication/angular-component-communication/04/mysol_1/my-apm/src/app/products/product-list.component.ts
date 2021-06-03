@@ -11,7 +11,7 @@ import { IProduct } from '../interface/product';
 })
 export class ProductListComponent implements OnInit, AfterViewInit {
 	pageTitle: string = 'Product List';
-  // listFilter: string;
+  listFilter: string;
   filterName: string;
   showImage: boolean;
 
@@ -21,9 +21,10 @@ export class ProductListComponent implements OnInit, AfterViewInit {
 
   @ViewChild('filterElement') filterElementRef: ElementRef;
   // @ViewChildren('filterElement, nameElement') inputElementRefs: QueryList<ElementRef>;
-  @ViewChildren(NgModel) inputElementRefs: QueryList<ElementRef>;
+  // @ViewChildren(NgModel) inputElementRefs: QueryList<ElementRef>;
+  @ViewChildren(NgModel) filterInput: NgModel;
 
-  private _listFilter: string;
+  /*private _listFilter: string;
   get listFilter(): string {
       return this._listFilter;
   }
@@ -31,7 +32,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   set listFilter(value: string) {
       this._listFilter = value;
       this.performFilter(this.listFilter);
-  }
+  }*/
 
   filteredProducts: IProduct[];
   products: IProduct[];
@@ -41,7 +42,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.filterElementRef.nativeElement.focus();
-    console.log(this.inputElementRefs);
+    console.log(this.filterInput);
   }
 
   ngOnInit(): void {
