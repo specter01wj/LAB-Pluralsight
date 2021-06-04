@@ -35,12 +35,16 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   }*/
 
   filteredProducts: IProduct[];
+  
   products: IProduct[];
 
   constructor(private productService: ProductService) { 
   }
 
   ngAfterViewInit(): void {
+    this.filterInput._results[0].valueChanges.subscribe(
+      () => this.performFilter(this.listFilter)
+    );
     this.filterElementRef.nativeElement.focus();
     console.log(this.filterInput);
   }
