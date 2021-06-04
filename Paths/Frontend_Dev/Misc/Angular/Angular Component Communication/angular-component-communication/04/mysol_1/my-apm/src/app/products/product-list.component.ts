@@ -36,6 +36,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
 
   filteredProducts: IProduct[];
 
+
   
   products: IProduct[];
 
