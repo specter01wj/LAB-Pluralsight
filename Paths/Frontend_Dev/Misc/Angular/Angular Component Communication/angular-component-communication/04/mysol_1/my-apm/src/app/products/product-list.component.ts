@@ -54,27 +54,6 @@ export class ProductListComponent implements OnInit, AfterViewInit {
             this.products = products;
             this.performFilter(this.listFilter);
         },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
         (error: any) => this.errorMessage = <any>error
     );
   }
