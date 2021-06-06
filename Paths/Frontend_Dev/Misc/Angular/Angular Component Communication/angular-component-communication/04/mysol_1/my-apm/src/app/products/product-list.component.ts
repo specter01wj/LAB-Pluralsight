@@ -66,6 +66,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
 
 
 
+
             
         },
         (error: any) => this.errorMessage = <any>error
