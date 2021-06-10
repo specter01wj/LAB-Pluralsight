@@ -76,6 +76,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
 
 
 
+
     
     this.performFilter(this.listFilter);
   }
