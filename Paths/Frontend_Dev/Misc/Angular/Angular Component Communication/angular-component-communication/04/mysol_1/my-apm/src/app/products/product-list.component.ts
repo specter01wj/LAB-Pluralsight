@@ -74,6 +74,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
       } else {
           this.filteredProducts = this.products;
 
+
           
       }
   }
