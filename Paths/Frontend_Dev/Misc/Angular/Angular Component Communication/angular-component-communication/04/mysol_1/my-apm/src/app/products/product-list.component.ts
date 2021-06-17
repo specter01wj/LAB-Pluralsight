@@ -52,6 +52,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
 
 
 
+
     
     console.log(this.filterInput);
   }
