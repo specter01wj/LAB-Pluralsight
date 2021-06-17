@@ -45,6 +45,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
       () => this.performFilter(this.listFilter)
     );
     this.filterElementRef.nativeElement.focus();
+
     
     console.log(this.filterInput);
   }
