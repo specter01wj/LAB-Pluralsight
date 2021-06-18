@@ -51,28 +51,6 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
   	this.productService.getProducts().subscribe(
         (products: IProduct[]) => {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
             this.products = products;
             this.performFilter(this.listFilter);
         },
