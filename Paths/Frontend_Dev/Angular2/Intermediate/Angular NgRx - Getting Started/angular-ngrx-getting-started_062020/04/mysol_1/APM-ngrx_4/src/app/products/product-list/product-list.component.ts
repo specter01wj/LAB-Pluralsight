@@ -22,25 +22,6 @@ export class ProductListComponent implements OnInit, OnDestroy {
   // Used to highlight the selected product in the list
   selectedProduct: Product | null;
   sub: Subscription;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
   storeSub: Subscription;
 
   constructor(private store: Store<any>, private productService: ProductService) { }
