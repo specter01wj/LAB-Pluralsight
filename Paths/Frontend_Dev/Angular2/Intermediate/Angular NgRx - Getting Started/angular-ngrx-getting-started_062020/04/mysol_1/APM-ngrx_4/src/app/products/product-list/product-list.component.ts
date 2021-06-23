@@ -23,6 +23,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
   selectedProduct: Product | null;
 
 
+
   
   sub: Subscription;
   storeSub: Subscription;
