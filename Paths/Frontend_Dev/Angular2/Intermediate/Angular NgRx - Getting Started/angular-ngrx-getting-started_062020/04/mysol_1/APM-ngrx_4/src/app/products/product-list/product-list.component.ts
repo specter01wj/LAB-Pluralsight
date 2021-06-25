@@ -31,6 +31,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
       currentProduct => this.selectedProduct = currentProduct
 
 
+
       
     );
 
