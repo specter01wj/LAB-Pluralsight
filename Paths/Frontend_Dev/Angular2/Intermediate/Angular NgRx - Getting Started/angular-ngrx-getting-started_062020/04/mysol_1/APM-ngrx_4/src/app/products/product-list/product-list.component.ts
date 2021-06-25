@@ -30,6 +30,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
     this.sub = this.productService.selectedProductChanges$.subscribe(
       currentProduct => this.selectedProduct = currentProduct
 
+
       
     );
 
