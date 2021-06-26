@@ -40,28 +40,6 @@ export class ProductListComponent implements OnInit, OnDestroy {
       products => {
         if(products) {
           this.displayCode = products.showProductCode;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
         }
       }
     );
