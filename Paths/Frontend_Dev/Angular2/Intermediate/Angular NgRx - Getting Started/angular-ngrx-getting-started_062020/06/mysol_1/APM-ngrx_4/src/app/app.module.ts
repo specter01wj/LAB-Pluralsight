@@ -26,7 +26,6 @@ import { environment } from '../environments/environment';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(ProductData),
     UserModule,
-    
     AppRoutingModule,
     StoreModule.forRoot({}, {}),
     StoreDevtoolsModule.instrument({ 
