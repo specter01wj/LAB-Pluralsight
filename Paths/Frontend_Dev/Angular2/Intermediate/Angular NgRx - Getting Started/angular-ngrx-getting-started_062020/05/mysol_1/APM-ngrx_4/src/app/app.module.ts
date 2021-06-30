@@ -24,6 +24,7 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     HttpClientModule,
+
     
     HttpClientInMemoryWebApiModule.forRoot(ProductData),
     UserModule,
