@@ -9,7 +9,9 @@ import { CustomersComponent } from './customers.component';
 
 
 @NgModule({
-  declarations: [CustomersComponent],
+  declarations: [
+  	CustomersComponent,
+  ],
   imports: [
     CommonModule,
     FormsModule,
