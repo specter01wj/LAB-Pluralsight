@@ -4,6 +4,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
+
+import { CustomersModule } from './customers/customers.module';
+
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -15,6 +18,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     CommonModule,
     FormsModule,
+    CustomersModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
