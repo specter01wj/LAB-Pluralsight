@@ -1,3 +1,7 @@
 <div class="container">
-  <app-customer></app-customer>
+  <nav>
+    <a [routerLink]="['/customers']" routerLinkActive="active">Customers</a>
+  </nav>
 </div>
+
+<router-outlet></router-outlet>
