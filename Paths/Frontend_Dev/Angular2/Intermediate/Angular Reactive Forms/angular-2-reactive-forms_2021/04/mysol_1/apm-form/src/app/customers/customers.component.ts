@@ -20,6 +20,7 @@ export class CustomersComponent implements OnInit {
     console.log(customerForm.form);
 
 
+
     
     console.log('Saved: ' + JSON.stringify(customerForm.value));
   }
