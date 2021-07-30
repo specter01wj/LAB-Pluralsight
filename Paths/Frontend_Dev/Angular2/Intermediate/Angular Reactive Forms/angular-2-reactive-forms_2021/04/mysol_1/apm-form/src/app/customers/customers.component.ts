@@ -8,6 +8,7 @@ import { Customer } from '../models/customer';
   templateUrl: './customers.component.html',
   styleUrls: ['./customers.component.scss']
 
+
   
 })
 export class CustomersComponent implements OnInit {
