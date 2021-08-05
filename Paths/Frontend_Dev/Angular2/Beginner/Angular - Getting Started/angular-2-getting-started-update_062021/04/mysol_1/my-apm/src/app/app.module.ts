@@ -9,6 +9,7 @@ import { Ch4TestComponent } from './ch4-test/ch4-test.component';
   declarations: [
     AppComponent,
     Ch4TestComponent
+    
   ],
   imports: [
     BrowserModule,
