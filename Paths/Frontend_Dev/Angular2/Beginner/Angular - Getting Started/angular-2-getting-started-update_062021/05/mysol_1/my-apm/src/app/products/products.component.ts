@@ -11,6 +11,7 @@ export class ProductsComponent implements OnInit {
 	pageTitle: string = 'Product List';
 
 
+
 	
   products: Product[] = [
     {
