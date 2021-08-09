@@ -16,6 +16,7 @@ export class ProductsComponent implements OnInit {
 
 
 
+
 	
   products: Product[] = [
     {
