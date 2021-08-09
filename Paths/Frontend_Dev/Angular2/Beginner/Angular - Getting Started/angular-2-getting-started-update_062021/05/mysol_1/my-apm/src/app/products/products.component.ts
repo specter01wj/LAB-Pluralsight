@@ -9,6 +9,7 @@ import { Product } from '../model/product';
 })
 export class ProductsComponent implements OnInit {
 	pageTitle: string = 'Product List';
+	
   products: Product[] = [
     {
       "productId": 2,
@@ -31,7 +32,7 @@ export class ProductsComponent implements OnInit {
       "imageUrl": "assets/images/hammer.png"
     }
   ];
-  
+
   constructor() { }
 
   ngOnInit(): void {
