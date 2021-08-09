@@ -9,6 +9,7 @@ import { Product } from '../model/product';
 })
 export class ProductsComponent implements OnInit {
 	pageTitle: string = 'Product List';
+
 	
   products: Product[] = [
     {
