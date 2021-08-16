@@ -42,4 +42,8 @@ export class ProductsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  toggleImage(): void {
+    this.showImage = !this.showImage;
+  }
+
 }
