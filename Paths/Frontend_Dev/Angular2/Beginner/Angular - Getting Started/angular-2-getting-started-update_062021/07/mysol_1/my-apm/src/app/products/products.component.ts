@@ -22,7 +22,10 @@ export class ProductsComponent implements OnInit {
 
   set listFilter(value: string) {
     this._listFilter = value;
+    this.filteredProducts = this.performFilter(value);
   }
+
+  filteredProducts: Product[] = [];
 	
   products: Product[] = [
     {
@@ -48,6 +51,12 @@ export class ProductsComponent implements OnInit {
   ];
 
   constructor() { }
+
+  performFilter(filterBy: string): Product[] {
+    filterBy = filterBy.toLocaleLowerCase();
+    return this.products.filter((product: Product) => 
+      product.productName.toLocaleLowerCase().includes(filterBy));
+  }
 
   ngOnInit(): void {
     this.listFilter = 'cart';
