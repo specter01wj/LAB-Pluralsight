@@ -9,6 +9,7 @@ import { Product } from '../model/product';
 })
 export class ProductsComponent implements OnInit {
 	pageTitle: string = 'Product List';
+  
   imageWidth: number = 50;
   imageMargin: number = 2;
   showImage: boolean = false;
