@@ -26,6 +26,7 @@ export class ProductsComponent implements OnInit {
 
 
 
+
     
     this.filteredProducts = this.performFilter(value);
   }
