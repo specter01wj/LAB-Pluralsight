@@ -23,6 +23,7 @@ export class ProductsComponent implements OnInit {
   set listFilter(value: string) {
     this._listFilter = value;
 
+
     
     this.filteredProducts = this.performFilter(value);
   }
