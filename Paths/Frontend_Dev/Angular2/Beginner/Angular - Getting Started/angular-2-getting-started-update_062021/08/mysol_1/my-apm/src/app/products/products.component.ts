@@ -56,6 +56,7 @@ export class ProductsComponent implements OnInit {
     filterBy = filterBy.toLocaleLowerCase();
 
 
+
     
     return this.products.filter((product: Product) => 
       product.productName.toLocaleLowerCase().includes(filterBy));
