@@ -6,9 +6,9 @@ import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angu
   styleUrls: ['./star.component.scss']
 })
 export class StarComponent implements OnInit, OnChanges {
-	@Input() rating: number = 0;
+	@Input('inRate') rating: number = 0;
 	cropWidth: number = 75;
-	@Output() ratingClicked: EventEmitter<string> = new EventEmitter<string>();
+	@Output('clickRate') ratingClicked: EventEmitter<string> = new EventEmitter<string>();
 
 
   constructor() { }
