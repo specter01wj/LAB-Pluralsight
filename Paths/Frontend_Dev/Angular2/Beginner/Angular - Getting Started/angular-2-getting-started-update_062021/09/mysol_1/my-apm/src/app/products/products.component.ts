@@ -27,7 +27,7 @@ export class ProductsComponent implements OnInit {
 
   filteredProducts: Product[] = [];
 	
-  products: Product[] = [
+  /*products: Product[] = [
     {
       "productId": 2,
       "productName": "Garden Cart",
@@ -48,7 +48,7 @@ export class ProductsComponent implements OnInit {
       "starRating": 4.8,
       "imageUrl": "assets/images/hammer.png"
     }
-  ];
+  ];*/
 
   constructor() { }
 
