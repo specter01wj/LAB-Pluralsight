@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { Product } from '../model/product';
 
+import { ProductService } from '../services/product.service';
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -26,6 +28,7 @@ export class ProductsComponent implements OnInit {
   }
 
   filteredProducts: Product[] = [];
+  products: Product[] = [];
 	
   /*products: Product[] = [
     {
@@ -50,7 +53,7 @@ export class ProductsComponent implements OnInit {
     }
   ];*/
 
-  constructor() { }
+  constructor(private productService: ProductService) { }
 
   performFilter(filterBy: string): Product[] {
     filterBy = filterBy.toLocaleLowerCase();
@@ -59,7 +62,9 @@ export class ProductsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.listFilter = 'cart';
+    this.products = this.productService.getProducts();
+    // this.listFilter = 'cart';
+    this.filteredProducts = this.products;
   }
 
   toggleImage(): void {
