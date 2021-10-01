@@ -21,6 +21,7 @@ export class ProductsComponent implements OnInit {
   get listFilter(): string {
     return this._listFilter;
 
+
     
   }
 
