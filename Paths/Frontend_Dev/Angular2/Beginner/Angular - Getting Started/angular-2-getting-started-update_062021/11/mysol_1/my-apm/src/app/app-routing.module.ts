@@ -3,14 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ProductsComponent } from './products/products.component';
 import { ProductDetailComponent } from './products/product-detail/product-detail.component';
-
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
 		{ path: 'products', component: ProductsComponent },
     { path: 'products/:id', component: ProductDetailComponent },
-    { path: 'welcome', component: WelcomeComponent },
-    { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-    { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
+    { path: 'home', component: HomeComponent },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
