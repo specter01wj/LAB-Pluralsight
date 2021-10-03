@@ -54,6 +54,10 @@ export class ProductsComponent implements OnInit {
     });
   }
 
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
+  }
+
   toggleImage(): void {
     this.showImage = !this.showImage;
   }
