@@ -10,17 +10,6 @@ import { Product } from '../../model/product';
 })
 export class ProductDetailComponent implements OnInit {
 	pageTitle: string = 'Product Detail';
-
-
-
-
-
-
-
-
-
-
-	
 	product: Product | undefined;
 	
   constructor(private route: ActivatedRoute,
