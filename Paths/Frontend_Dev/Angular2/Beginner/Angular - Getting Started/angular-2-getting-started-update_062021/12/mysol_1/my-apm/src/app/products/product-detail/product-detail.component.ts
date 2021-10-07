@@ -12,6 +12,7 @@ export class ProductDetailComponent implements OnInit {
 	pageTitle: string = 'Product Detail';
 
 
+
 	
 	product: Product | undefined;
 	
