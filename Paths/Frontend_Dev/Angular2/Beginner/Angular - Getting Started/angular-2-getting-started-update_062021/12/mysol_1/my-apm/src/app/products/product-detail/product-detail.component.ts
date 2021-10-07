@@ -17,6 +17,7 @@ export class ProductDetailComponent implements OnInit {
 
 
 
+
 	
 	product: Product | undefined;
 	
