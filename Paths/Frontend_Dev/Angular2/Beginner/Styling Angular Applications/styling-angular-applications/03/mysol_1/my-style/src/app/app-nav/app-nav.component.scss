@@ -26,12 +26,22 @@ ul {
   padding: 0;
 }
 
-a {
+/* a {
   color: #fff;
   padding: 0 1em;
   text-decoration: none;
 }
 
 a:hover {
+  text-decoration: underline;
+} */
+
+::ng-deep a {
+  color: #fff;
+  padding: 0 1em;
+  text-decoration: none;
+}
+
+::ng-deep a:hover {
   text-decoration: underline;
 }
