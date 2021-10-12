@@ -1,33 +1,21 @@
-// Global
+// Root
 // _________________________________________________________________________________________
-@import 'styles/normalize';
-@import 'styles/root';
+@import 'scss/root/normalize';
+@import 'scss/root/root';
+@import 'scss/root/links';
 
 
 
-// App
+// Layout
 // _________________________________________________________________________________________
-@import 'styles/app-header';
-@import 'styles/app-footer';
+@import 'scss/layout/app-header';
+@import 'scss/layout/app-footer';
+@import 'scss/layout/layout';
 
 
 
 
-// Core
+// Typography
 // _________________________________________________________________________________________
-@import 'styles/links';
-@import 'styles/layout';
-@import 'styles/typography';
-
-
-
-
-// Components
-// _________________________________________________________________________________________
-@import 'styles/accordion';
-@import 'styles/modal';
-@import 'styles/navbar-primary';
-@import 'styles/navbar-secondary';
-@import 'styles/pills';
-@import 'styles/tabs';
-@import 'styles/tooltip';
+@import 'scss/typography/headers';
+@import 'scss/typography/paragraphs';
