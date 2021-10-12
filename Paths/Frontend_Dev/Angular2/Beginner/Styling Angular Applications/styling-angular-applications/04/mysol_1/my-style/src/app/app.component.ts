@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-style';
+
+  pills = [
+      { 
+          label: 'HTML'
+      },
+      { 
+          label: 'CSS'
+      },
+      { 
+          label: 'SASS'
+      }
+  ];
+
 }
