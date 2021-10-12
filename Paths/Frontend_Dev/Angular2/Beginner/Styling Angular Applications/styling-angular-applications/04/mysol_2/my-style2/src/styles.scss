@@ -1,4 +1,4 @@
-// Root
+/* // Root
 // _________________________________________________________________________________________
 @import 'scss/root/normalize';
 @import 'scss/root/root';
@@ -19,3 +19,6 @@
 // _________________________________________________________________________________________
 @import 'scss/typography/headers';
 @import 'scss/typography/paragraphs';
+ */
+@import 'scss/normalize';
+@import 'scss/root';
