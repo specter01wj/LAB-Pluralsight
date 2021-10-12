@@ -1,0 +1,15 @@
+<ul>
+    <li 
+        *ngFor="let item of items; let i = index">
+        <a 
+            (click)="selectItem(i)"
+            [class.active]="activeIndex === i">
+            <span>
+                {{item.title}}
+            </span>
+        </a>
+        <ng-container *ngIf="activeIndex === i">
+            <ng-template [ngTemplateOutlet]="item.template"></ng-template>
+        </ng-container>
+    </li>
+</ul>
