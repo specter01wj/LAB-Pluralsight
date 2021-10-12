@@ -14,6 +14,7 @@ export class AccordionComponent {
         this.activeIndex = this.activeIndex != index ?  index : null; 
 
 
+
         
     }
 }
