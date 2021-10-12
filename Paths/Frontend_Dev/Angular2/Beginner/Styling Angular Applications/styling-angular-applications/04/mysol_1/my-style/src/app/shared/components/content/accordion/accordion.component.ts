@@ -7,8 +7,8 @@ import { AccordionPaneComponent } from './accordion-pane/accordion-pane.componen
 })
 
 export class AccordionComponent {
-    @ContentChildren(AccordionPaneComponent) items: QueryList<AccordionPaneComponent>;
-    activeIndex: number;
+    @ContentChildren(AccordionPaneComponent) items: QueryList<AccordionPaneComponent> | undefined;
+    activeIndex: number | null | undefined;
 
     selectItem(index: number): void {
         this.activeIndex = this.activeIndex != index ?  index : null; 

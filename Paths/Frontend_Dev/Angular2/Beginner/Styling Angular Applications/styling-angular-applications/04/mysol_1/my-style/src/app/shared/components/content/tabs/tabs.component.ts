@@ -7,7 +7,7 @@ import { TabsPaneComponent } from './tabs-pane/tabs-pane.component';
 })
 
 export class TabsComponent implements AfterContentInit {
-    @ContentChildren(TabsPaneComponent) tabs: QueryList<TabsPaneComponent>;
+    @ContentChildren(TabsPaneComponent) tabs: QueryList<TabsPaneComponent> | [] | undefined;
 
     ngAfterContentInit(): void {
         const activeTabs = this.tabs.filter(tab => tab.active);

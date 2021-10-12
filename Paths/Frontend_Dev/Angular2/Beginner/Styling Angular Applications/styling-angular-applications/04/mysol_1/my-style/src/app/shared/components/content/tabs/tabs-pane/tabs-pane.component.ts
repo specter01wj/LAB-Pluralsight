@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core';
 })
 
 export class TabsPaneComponent {
-    @Input() title: string;
+    @Input() title: string | undefined;
     @Input() active = false;
 }

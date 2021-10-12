@@ -11,7 +11,7 @@ export interface Pill {
 
 export class PillsComponent {
     @Input() pills: Pill[] = [];
-    selectedPill: Pill;
+    selectedPill: Pill | undefined;
 
     togglePill(pill: Pill): void {
         this.selectedPill = pill;
