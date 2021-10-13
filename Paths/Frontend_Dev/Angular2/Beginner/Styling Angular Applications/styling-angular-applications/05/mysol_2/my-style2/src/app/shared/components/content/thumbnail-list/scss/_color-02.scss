@@ -1,0 +1,23 @@
+@import 'colors';
+
+
+
+
+.item {
+    background: $g-root__color--secondary--01a;
+    color: white;
+
+    &__thumbnail {
+        background: rgba(white, 0.3);
+    }
+
+    &__button {
+        background: rgba(white, 0.3);
+
+        &:hover {
+            background: rgba(white, 0.5);
+        }
+
+    }
+
+}
