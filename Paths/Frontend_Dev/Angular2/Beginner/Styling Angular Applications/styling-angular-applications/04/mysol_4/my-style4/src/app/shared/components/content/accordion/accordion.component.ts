@@ -13,5 +13,6 @@ export class AccordionComponent {
 
     selectItem(index: number): void {
         this.activeIndex = this.activeIndex != index ?  index : null; 
+        
     }
 }
