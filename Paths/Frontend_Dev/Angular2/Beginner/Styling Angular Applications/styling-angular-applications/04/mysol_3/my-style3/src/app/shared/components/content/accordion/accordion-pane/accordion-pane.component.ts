@@ -10,6 +10,7 @@ export class AccordionPaneComponent {
     @ViewChild(TemplateRef, { static: true }) template: TemplateRef<unknown>;
 
 
+
     
     @Input() title: string;
 }
