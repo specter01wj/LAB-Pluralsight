@@ -8,15 +8,5 @@ import { Component, Input, TemplateRef, ViewChild } from '@angular/core';
 
 export class AccordionPaneComponent {
     @ViewChild(TemplateRef, { static: true }) template: TemplateRef<unknown>;
-
-
-
-
-
-
-
-
-
-    
     @Input() title: string;
 }
