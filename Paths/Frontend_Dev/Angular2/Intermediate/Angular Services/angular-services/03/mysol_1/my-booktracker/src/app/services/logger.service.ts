@@ -11,6 +11,7 @@ export class LoggerService {
     const timeString: String = new Date().toLocaleTimeString();
 
 
+
     
     console.log(`${message} (${timeString})`);
   }
