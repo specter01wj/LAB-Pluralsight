@@ -16,7 +16,7 @@ export class DashboardComponent implements OnInit {
   allReaders: Reader[] = allReaders;
   mostPopularBook: Book = allBooks[0];
 
-  constructor(private loggerService: LoggerService) { }
+  constructor(private loggerService: LoggerService) {}
 
   ngOnInit() {
     this.loggerService.log('Create the dashboard.');

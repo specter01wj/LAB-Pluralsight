@@ -254,21 +254,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "DashboardComponent": () => (/* binding */ DashboardComponent)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 4762);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 4762);
 /* harmony import */ var _raw_loader_dashboard_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !raw-loader!./dashboard.component.html */ 9306);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 7716);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 7716);
 /* harmony import */ var app_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/data */ 8387);
+/* harmony import */ var app_services_logger_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/services/logger.service */ 1273);
+
 
 
 
 
 let DashboardComponent = class DashboardComponent {
-    constructor() {
+    constructor(loggerService) {
+        this.loggerService = loggerService;
         this.allBooks = app_data__WEBPACK_IMPORTED_MODULE_1__.allBooks;
         this.allReaders = app_data__WEBPACK_IMPORTED_MODULE_1__.allReaders;
         this.mostPopularBook = app_data__WEBPACK_IMPORTED_MODULE_1__.allBooks[0];
     }
     ngOnInit() {
+        this.loggerService.log('Create the dashboard.');
     }
     deleteBook(bookID) {
         console.warn(`Delete book not yet implemented (bookID: ${bookID}).`);
@@ -277,9 +281,11 @@ let DashboardComponent = class DashboardComponent {
         console.warn(`Delete reader not yet implemented (readerID: ${readerID}).`);
     }
 };
-DashboardComponent.ctorParameters = () => [];
-DashboardComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
-    (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.Component)({
+DashboardComponent.ctorParameters = () => [
+    { type: app_services_logger_service__WEBPACK_IMPORTED_MODULE_2__.LoggerService }
+];
+DashboardComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.Component)({
         selector: 'app-dashboard',
         template: _raw_loader_dashboard_component_html__WEBPACK_IMPORTED_MODULE_0__.default
     })
@@ -410,6 +416,42 @@ EditReaderComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
         template: _raw_loader_edit_reader_component_html__WEBPACK_IMPORTED_MODULE_0__.default
     })
 ], EditReaderComponent);
+
+
+
+/***/ }),
+
+/***/ 1273:
+/*!********************************************!*\
+  !*** ./src/app/services/logger.service.ts ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "LoggerService": () => (/* binding */ LoggerService)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ 4762);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 7716);
+
+
+let LoggerService = class LoggerService {
+    constructor() { }
+    log(message) {
+        const timeString = new Date().toLocaleTimeString();
+        console.log(`${message} (${timeString})`);
+    }
+    error(message) {
+        console.error(`ERROR: ${message}`);
+    }
+};
+LoggerService.ctorParameters = () => [];
+LoggerService = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_1__.Injectable)({
+        providedIn: 'root'
+    })
+], LoggerService);
 
 
 
