@@ -402,26 +402,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _raw_loader_edit_reader_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !raw-loader!./edit-reader.component.html */ 4644);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 7716);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 9895);
-/* harmony import */ var app_api_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/api/data */ 3000);
+/* harmony import */ var app_services_data_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/services/data.service */ 2468);
 
 
 
 
 
 let EditReaderComponent = class EditReaderComponent {
-    constructor(route) {
+    constructor(route, dataService) {
         this.route = route;
+        this.dataService = dataService;
     }
     ngOnInit() {
         let readerID = parseInt(this.route.snapshot.params['id']);
-        this.selectedReader = app_api_data__WEBPACK_IMPORTED_MODULE_1__.allReaders.find(reader => reader.readerID === readerID);
+        this.selectedReader = this.dataService.getReaderById(readerID);
     }
     saveChanges() {
         console.warn('Save reader not yet implemented.');
     }
 };
 EditReaderComponent.ctorParameters = () => [
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__.ActivatedRoute }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__.ActivatedRoute },
+    { type: app_services_data_service__WEBPACK_IMPORTED_MODULE_1__.DataService }
 ];
 EditReaderComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.Component)({
