@@ -19,6 +19,7 @@ export class DashboardComponent implements OnInit {
   constructor(private loggerService: LoggerService) { }
 
   ngOnInit() {
+    this.loggerService.log('Create the dashboard.');
   }
 
   deleteBook(bookID: number): void {
