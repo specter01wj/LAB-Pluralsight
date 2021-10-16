@@ -21,11 +21,13 @@ export class EditBookComponent implements OnInit {
 
   ngOnInit() {
     let bookID: number = parseInt(this.route.snapshot.params['id']);
-    this.selectedBook = allBooks.find(book => book.bookID === bookID);
+    this.selectedBook = this.dataService.getBookById(bookID);
   }
 
   setMostPopular(): void {
-    console.warn('Setting most popular book not yet implemented.');
+    // console.warn('Setting most popular book not yet implemented.');
+    this.dataService.setMostPopularBook(this.selectedBook);
+    this.loggerService.log(`New most popular book: ${this.selectedBook.title}`);
   }
 
   saveChanges(): void {
