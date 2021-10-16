@@ -272,7 +272,7 @@ let DashboardComponent = class DashboardComponent {
         this.mostPopularBook = app_data__WEBPACK_IMPORTED_MODULE_1__.allBooks[0];
     }
     ngOnInit() {
-        this.loggerService.log('Create the dashboard.');
+        // this.loggerService.log('Create the dashboard.');
     }
     deleteBook(bookID) {
         console.warn(`Delete book not yet implemented (bookID: ${bookID}).`);
