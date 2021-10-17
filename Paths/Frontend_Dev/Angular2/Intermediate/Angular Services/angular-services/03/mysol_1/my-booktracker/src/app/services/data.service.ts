@@ -14,12 +14,6 @@ export class DataService {
 
   setMostPopularBook(popularBook: Book): void {
     this.mostPopularBook = popularBook;
-
-
-
-
-
-    
   }
 
   getAllReaders(): Reader[] {
