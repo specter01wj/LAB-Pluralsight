@@ -7,7 +7,7 @@ import { MessageService } from './message.service';
   providedIn: 'root'
 })
 export class AuthService {
-	currentUser: User;
+	currentUser: User | undefined | null;
 
   constructor(private messageService: MessageService) { }
 

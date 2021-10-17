@@ -10,7 +10,7 @@ import { AuthService } from '../../service/auth.service';
   styleUrls: ['./login.component.less']
 })
 export class LoginComponent implements OnInit {
-	errorMessage: string;
+	errorMessage: string = '';
   pageTitle = 'Log In';
 
   constructor(private authService: AuthService,
