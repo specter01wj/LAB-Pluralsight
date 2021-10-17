@@ -10,4 +10,27 @@ import { AuthService } from './service/auth.service';
 })
 export class AppComponent {
   pageTitle = 'Acme Product Management';
+
+
+  constructor(private authService: AuthService,
+              private router: Router) { }
+
+
+  get isLoggedIn(): boolean {
+    return this.authService.isLoggedIn;
+  }
+
+  get userName(): string {
+    if (this.authService.currentUser) {
+      return this.authService.currentUser.userName;
+    }
+    return '';
+  }
+
+  logOut(): void {
+    // this.router.navigate(['/welcome']);
+    this.authService.logout();
+    this.router.navigateByUrl('/welcome');
+  }
+
 }
