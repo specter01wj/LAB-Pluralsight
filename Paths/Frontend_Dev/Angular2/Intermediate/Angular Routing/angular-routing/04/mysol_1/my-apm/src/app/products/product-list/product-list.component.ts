@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-list.component.less']
 })
 export class ProductListComponent implements OnInit {
-
+  pageTitle = 'Product List';
+  imageWidth = 50;
+  imageMargin = 2;
+  showImage = false;
+  errorMessage = '';
+  
   constructor() { }
 
   ngOnInit(): void {
