@@ -36,7 +36,7 @@ export class ProductService {
 
   createProduct(product: Product): Observable<Product> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    product.id = null;
+    product.id = NaN;
     return this.http.post<Product>(this.productsUrl, product, { headers })
       .pipe(
         tap(data => console.log('createProduct: ' + JSON.stringify(data))),
@@ -66,7 +66,7 @@ export class ProductService {
       );
   }
 
-  private handleError(err) {
+  private handleError(err: { error: { message: any; }; status: any; body: { error: any; }; }) {
     // in a real world app, we may send the server to some remote logging infrastructure
     // instead of just logging it to the console
     let errorMessage: string;
@@ -86,15 +86,15 @@ export class ProductService {
     // Return an initialized object
     return {
       id: 0,
-      productName: null,
-      productCode: null,
-      category: null,
+      productName: "",
+      productCode: "",
+      category: "",
       tags: [],
-      releaseDate: null,
-      price: null,
-      description: null,
-      starRating: null,
-      imageUrl: null
+      releaseDate: "",
+      price: NaN,
+      description: "",
+      starRating: NaN,
+      imageUrl: ""
     };
   }
 
