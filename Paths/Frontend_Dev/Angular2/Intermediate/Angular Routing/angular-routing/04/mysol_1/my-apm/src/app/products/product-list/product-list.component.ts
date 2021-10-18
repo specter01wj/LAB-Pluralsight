@@ -11,7 +11,12 @@ export class ProductListComponent implements OnInit {
   imageMargin = 2;
   showImage = false;
   errorMessage = '';
-  
+
+  _listFilter = '';
+
+  filteredProducts: Product[] = [];
+  products: Product[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
