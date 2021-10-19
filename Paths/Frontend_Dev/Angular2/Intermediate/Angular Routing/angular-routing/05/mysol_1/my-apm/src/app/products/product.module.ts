@@ -8,9 +8,13 @@ import { ProductRoutingModule } from './product-routing.module';
 import { ProductListComponent } from './product-list/product-list.component';
 
 import { SharedModule } from '../shared/shared.module';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
-  declarations: [ProductListComponent],
+  declarations: [
+    ProductListComponent, 
+    ProductDetailComponent
+  ],
   imports: [
     CommonModule,
     FormsModule,
