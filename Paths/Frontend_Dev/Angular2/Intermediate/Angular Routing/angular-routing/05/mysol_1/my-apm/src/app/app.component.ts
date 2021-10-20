@@ -31,6 +31,7 @@ export class AppComponent {
     // this.router.navigate(['/welcome']);
     this.authService.logout();
 
+
     
     this.router.navigateByUrl('/welcome');
   }
