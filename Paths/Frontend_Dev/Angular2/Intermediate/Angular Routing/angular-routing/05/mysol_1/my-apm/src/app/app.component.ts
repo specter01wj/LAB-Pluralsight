@@ -32,6 +32,7 @@ export class AppComponent {
     this.authService.logout();
 
 
+
     
     this.router.navigateByUrl('/welcome');
   }
