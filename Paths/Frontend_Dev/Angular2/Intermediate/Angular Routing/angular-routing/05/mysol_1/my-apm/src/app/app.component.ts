@@ -30,6 +30,7 @@ export class AppComponent {
   logOut(): void {
     // this.router.navigate(['/welcome']);
     this.authService.logout();
+    
     this.router.navigateByUrl('/welcome');
   }
 
