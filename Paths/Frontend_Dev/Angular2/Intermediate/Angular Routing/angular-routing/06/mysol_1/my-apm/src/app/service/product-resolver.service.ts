@@ -20,18 +20,6 @@ export class ProductResolver implements Resolve<ProductResolved> {
     if (isNaN(+(id || NaN))) {
       const message = `Product id was not a number: ${id}`;
       console.error(message);
-
-
-
-
-
-
-
-
-
-
-
-      
       return of({ product: null, error: message });
     }
 
