@@ -22,6 +22,7 @@ export class ProductResolver implements Resolve<ProductResolved> {
       const message = `Product id was not a number: ${id}`;
       console.error(message);
 
+
       
       return of({ product: null, error: message });
     }
