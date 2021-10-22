@@ -23,6 +23,7 @@ export class ProductResolver implements Resolve<ProductResolved> {
       console.error(message);
 
 
+
       
       return of({ product: null, error: message });
     }
