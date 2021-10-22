@@ -35,6 +35,7 @@ export class ProductResolver implements Resolve<ProductResolved> {
 
 
 
+
       
       return of({ product: null, error: message });
     }
