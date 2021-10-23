@@ -22,7 +22,8 @@ const routes: Routes = [
   },
   {
     path: 'products/:id/edit',
-    component: ProductEditComponent
+    component: ProductEditComponent,
+    resolve: { resolvedData: ProductResolver }
   }
 ];
 
