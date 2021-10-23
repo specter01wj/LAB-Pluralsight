@@ -30,6 +30,7 @@ export class ProductResolver implements Resolve<ProductResolved> {
         catchError(error => {
           const message = `Retrieval error: ${error}`;
           console.error(message);
+
           
           return of({ product: null, error: message });
         })
