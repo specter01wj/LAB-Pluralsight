@@ -24,6 +24,7 @@ export class ProductDetailComponent implements OnInit {
     this.errorMessage = resolvedData.error;
 
 
+
     
     this.onProductRetrieved(resolvedData.product);
   }
