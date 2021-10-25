@@ -23,6 +23,7 @@ export class ProductDetailComponent implements OnInit {
       this.route.snapshot.data['resolvedData'];
     this.errorMessage = resolvedData.error;
 
+
     
     this.onProductRetrieved(resolvedData.product);
   }
