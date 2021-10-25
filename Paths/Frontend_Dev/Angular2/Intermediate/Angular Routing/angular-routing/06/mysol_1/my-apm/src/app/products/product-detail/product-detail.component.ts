@@ -33,6 +33,7 @@ export class ProductDetailComponent implements OnInit {
 
 
 
+
     
     this.onProductRetrieved(resolvedData.product);
   }
