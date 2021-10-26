@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 import { allBooks, allReaders } from 'app/data';
 import { Reader } from "app/models/reader";
