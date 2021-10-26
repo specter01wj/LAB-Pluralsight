@@ -12,7 +12,7 @@ import { BookTrackerError } from 'app/models/bookTrackerError';
 })
 export class DataService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   mostPopularBook: Book = allBooks[0];
 
