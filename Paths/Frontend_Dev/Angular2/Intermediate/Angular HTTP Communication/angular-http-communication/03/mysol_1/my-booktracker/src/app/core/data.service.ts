@@ -30,6 +30,7 @@ export class DataService {
 
   getAllBooks(): Book[] {
     return allBooks;
+    
   }
 
   getBookById(id: number): Book {
