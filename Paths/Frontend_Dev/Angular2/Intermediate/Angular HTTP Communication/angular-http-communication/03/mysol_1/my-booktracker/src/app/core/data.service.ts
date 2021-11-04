@@ -34,5 +34,6 @@ export class DataService {
 
   getBookById(id: number): Book {
     return allBooks.find(book => book.bookID === id);
+    
   }  
 }
