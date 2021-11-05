@@ -22,6 +22,8 @@ export class DataService {
 
   getAllReaders(): Reader[] {
     return allReaders;
+
+
     
   }
 
