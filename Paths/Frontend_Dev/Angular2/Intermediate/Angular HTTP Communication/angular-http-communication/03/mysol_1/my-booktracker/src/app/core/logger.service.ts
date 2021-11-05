@@ -11,25 +11,5 @@ export class LoggerService {
 
   error(message: string): void {
     console.error(`ERROR: ${message}`);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
   }
 }
