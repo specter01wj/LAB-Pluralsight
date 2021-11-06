@@ -1,7 +1,8 @@
 function startGame() {
   // starting a new game
   var messagesElement = document.getElementById('messages');
-  messagesElement!.innerText = 'Welcome to MultiMath! Starting new game...';  
+  let playername = <HTMLInputElement>document.getElementById('playername');
+  messagesElement!.innerText = `Welcome to MultiMath! ${playername.value} Starting new game...`;  
 }
 
 document.getElementById('startGame')!.addEventListener('click', startGame);
