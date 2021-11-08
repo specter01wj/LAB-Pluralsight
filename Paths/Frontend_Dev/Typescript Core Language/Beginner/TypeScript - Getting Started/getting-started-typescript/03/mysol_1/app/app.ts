@@ -18,6 +18,7 @@ function startGame() {
 
 
 
+
   
   messagesElement!.innerText = 'Welcome to MultiMath! Starting new game...';  
 }
