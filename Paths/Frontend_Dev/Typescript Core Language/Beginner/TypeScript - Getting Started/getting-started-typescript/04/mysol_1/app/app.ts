@@ -12,4 +12,20 @@ function startGame() {
 function logPlayer(name: string): void {
   console.log(`New game starting for player: ${name}`);
 }
+
+
+function getInputValue(elementID: string): string | undefined {
+
+  const inputElement: HTMLInputElement = <HTMLInputElement>document.getElementById(elementID);
+
+  if (inputElement.value === '') {
+    return undefined;
+  }
+  else {
+    return inputElement.value;
+  }  
+}
+
+
+
 document.getElementById('startGame')!.addEventListener('click', startGame);
