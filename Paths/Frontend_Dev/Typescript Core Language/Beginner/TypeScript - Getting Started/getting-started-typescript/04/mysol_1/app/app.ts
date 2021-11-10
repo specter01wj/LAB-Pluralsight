@@ -5,6 +5,7 @@ function startGame() {
 
 
 
+
   
   logPlayer(playerName);
   
