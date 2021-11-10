@@ -3,6 +3,7 @@ function startGame() {
 
   let playerName: string = 'Audrey';
 
+
   
   logPlayer(playerName);
   
