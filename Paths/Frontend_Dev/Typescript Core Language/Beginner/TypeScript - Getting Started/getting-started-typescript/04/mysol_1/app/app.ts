@@ -2,6 +2,7 @@ function startGame() {
   // starting a new game
 
   let playerName: string = 'Audrey';
+
   
   logPlayer(playerName);
   
