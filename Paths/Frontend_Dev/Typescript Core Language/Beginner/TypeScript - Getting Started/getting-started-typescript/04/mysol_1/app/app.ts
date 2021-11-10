@@ -8,6 +8,7 @@ function startGame() {
 
 
 
+
   
   logPlayer(playerName);
   
