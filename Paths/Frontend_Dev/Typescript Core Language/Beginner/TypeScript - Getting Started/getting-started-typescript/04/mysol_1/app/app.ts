@@ -1,7 +1,8 @@
 function startGame() {
   // starting a new game
 
-  let playerName: string = 'Audrey';
+  // let playerName: string = 'Audrey';
+  let playerName: string | undefined = getInputValue('playerName');
   logPlayer(playerName);
   
   // let messagesElement = document.getElementById('messages');
@@ -11,7 +12,7 @@ function startGame() {
   postScore(-5, playerName);  
 }
 
-function logPlayer(name: string): void {
+function logPlayer(name: string = 'MultiMath Player'): void {
   console.log(`New game starting for player: ${name}`);
 }
 
@@ -49,3 +50,19 @@ function postScore(score: number, playerName: string = 'MultiMath Player'): void
 
 
 document.getElementById('startGame')!.addEventListener('click', startGame);
+
+
+
+const logMessage = (message: string) => console.log(message);
+
+function logError(err: string): void {
+  console.error(err);
+}
+
+
+
+
+
+
+
+
