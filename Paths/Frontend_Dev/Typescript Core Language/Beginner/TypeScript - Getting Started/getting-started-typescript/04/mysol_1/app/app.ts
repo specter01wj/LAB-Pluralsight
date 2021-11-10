@@ -2,14 +2,14 @@ function startGame() {
   // starting a new game
 
   // let playerName: string = 'Audrey';
-  let playerName: string | undefined = getInputValue('playerName');
+  let playerName: string | undefined = getInputValue('playername');
   logPlayer(playerName);
   
   // let messagesElement = document.getElementById('messages');
   
   // messagesElement!.innerText = 'Welcome to MultiMath! Starting new game...';
   postScore(80, playerName);
-  postScore(-5, playerName);  
+  // postScore(-5, playerName);  
 }
 
 function logPlayer(name: string = 'MultiMath Player'): void {
