@@ -5,6 +5,7 @@ function startGame() {
   logPlayer(playerName);
   
   postScore(80, playerName);
+
   
   postScore(-5, playerName);
 }
