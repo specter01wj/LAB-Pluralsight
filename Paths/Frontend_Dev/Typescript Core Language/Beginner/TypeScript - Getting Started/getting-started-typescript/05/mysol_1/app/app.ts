@@ -8,6 +8,7 @@ function startGame() {
 
 
 
+
   
   postScore(-5, playerName);
 }
