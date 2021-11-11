@@ -7,6 +7,7 @@ function startGame() {
   postScore(80, playerName);
 
 
+
   
   postScore(-5, playerName);
 }
