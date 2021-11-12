@@ -50,7 +50,7 @@ function logError(err: string): void {
 }
 
 
-let myResult: Result = {
+/*let myResult: Result = {
   playerName: 'James',
   score: 5,
   problemCount: 5,
@@ -60,10 +60,12 @@ let myResult: Result = {
 let player: Person = {
   name: 'Mike',
   formatName: () => 'Dan', 
-}
+}*/
 
 
-
+const firstPlayer: Player = new Player();
+firstPlayer.name = 'Jin';
+console.log(firstPlayer.formatName());
 
 
 
