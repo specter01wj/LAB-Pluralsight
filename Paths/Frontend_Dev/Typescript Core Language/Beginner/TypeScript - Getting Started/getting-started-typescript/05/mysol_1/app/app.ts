@@ -51,6 +51,7 @@ const logMessage = (message: string) => console.log(message);
 function logError(err: string): void {
   console.error(err);
 
+
   
 }
 
