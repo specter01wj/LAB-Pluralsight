@@ -69,6 +69,7 @@ let player: Person = {
 const firstPlayer: Player = new Player();
 firstPlayer.name = 'Jin';
 
+
 console.log(firstPlayer.formatName());
 
 
