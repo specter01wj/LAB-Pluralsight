@@ -72,6 +72,7 @@ firstPlayer.name = 'Jin';
 
 
 
+
 console.log(firstPlayer.formatName());
 
 
