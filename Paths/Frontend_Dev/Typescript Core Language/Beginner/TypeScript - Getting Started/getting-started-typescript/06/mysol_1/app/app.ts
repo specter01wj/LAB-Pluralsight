@@ -8,6 +8,7 @@ document.getElementById('startGame')!.addEventListener('click', () => {
   const player: Player = new Player();
 
 
+
   
   player.name = Utility.getInputValue('playername');
 
