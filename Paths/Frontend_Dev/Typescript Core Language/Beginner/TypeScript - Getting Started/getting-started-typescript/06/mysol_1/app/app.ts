@@ -26,6 +26,7 @@ document.getElementById('startGame')!.addEventListener('click', () => {
 
 
 
+
   
   player.name = Utility.getInputValue('playername');
 
