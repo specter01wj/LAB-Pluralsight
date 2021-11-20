@@ -16,6 +16,7 @@ export class Scoreboard {
 
 
 
+
     
     console.log(`${allCapsName}: ${newResult.score}`);
   }
