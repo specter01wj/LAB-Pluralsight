@@ -10,6 +10,7 @@ export class Scoreboard {
     let allCapsName: string = _.upperCase(newResult.playerName);
     console.log(`${allCapsName}: ${newResult.score}`);
 
+
     
   }
 
