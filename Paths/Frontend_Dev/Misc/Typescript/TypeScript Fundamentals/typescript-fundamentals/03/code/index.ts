@@ -16,6 +16,9 @@ petCount.push(5);
 
 console.log(firstName, age, hasPurchased, productNames, petCount);
 
+
+
+
 let productType = 'sports'; // homeGoods, grocery ("magic string")
 if (productType === 'sports') {
   console.log('Found sports product type.');
