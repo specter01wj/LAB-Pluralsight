@@ -25,6 +25,14 @@ function runTheLearningSamples() {
     return sum;
   }
 
+  const addNumbersExpression = function (x: number, y: number): number {
+    const sum: number = x + y;
+    return sum;
+  };
+
+  console.log(`${prefix} function expression`);
+  console.log(addNumbersExpression(7, 11));
+
 }
 
 
