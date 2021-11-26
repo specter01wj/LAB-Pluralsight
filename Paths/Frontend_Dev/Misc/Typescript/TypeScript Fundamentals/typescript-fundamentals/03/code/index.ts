@@ -26,7 +26,7 @@ if (productType === 'sports') {
 
 // Using Enums
 enum ProductType {
-  Sports,
+  Sports = 66,
   HomeGoods,
   Groceries,
 }

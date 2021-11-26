@@ -16,9 +16,9 @@ if (productType === 'sports') {
 // Using Enums
 var ProductType;
 (function (ProductType) {
-    ProductType[ProductType["Sports"] = 0] = "Sports";
-    ProductType[ProductType["HomeGoods"] = 1] = "HomeGoods";
-    ProductType[ProductType["Groceries"] = 2] = "Groceries";
+    ProductType[ProductType["Sports"] = 66] = "Sports";
+    ProductType[ProductType["HomeGoods"] = 67] = "HomeGoods";
+    ProductType[ProductType["Groceries"] = 68] = "Groceries";
 })(ProductType || (ProductType = {}));
 var pt = ProductType.Sports;
 if (pt === ProductType.Sports) {
