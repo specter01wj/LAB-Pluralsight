@@ -17,6 +17,9 @@ function runTheLearningSamples() {
 
   displayProductInfo(10, 'Pizza');
 
+  console.log(`${prefix} function declaration`);
+  console.log(addNumbersDeclaration(7, 11));
+
   function addNumbersDeclaration(x: number, y: number) {
     const sum: number = x + y;
     return sum;
