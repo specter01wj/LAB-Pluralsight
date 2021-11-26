@@ -52,6 +52,13 @@ function runTheLearningSamples() {
     },
   ];
 
+  function getProductNames(): string[] {
+    return sampleProducts.map((p) => p.name);
+  }
+
+  console.log(`${prefix} return array`);
+  console.log(getProductNames());
+
 }
 
 
