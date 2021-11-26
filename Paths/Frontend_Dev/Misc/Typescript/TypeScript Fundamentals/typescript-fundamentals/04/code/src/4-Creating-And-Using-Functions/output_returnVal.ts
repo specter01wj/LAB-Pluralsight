@@ -33,6 +33,25 @@ function runTheLearningSamples() {
   console.log(`${prefix} function expression`);
   console.log(addNumbersExpression(7, 11));
 
+
+  const sampleProducts = [
+    {
+      id: 10,
+      name: 'Pizza slice',
+      icon: 'fas fa-pizza-slice',
+    },
+    {
+      id: 20,
+      name: 'Ice cream',
+      icon: 'fas fa-ice-cream',
+    },
+    {
+      id: 30,
+      name: 'Cheese',
+      icon: 'fas fa-cheese',
+    },
+  ];
+
 }
 
 
