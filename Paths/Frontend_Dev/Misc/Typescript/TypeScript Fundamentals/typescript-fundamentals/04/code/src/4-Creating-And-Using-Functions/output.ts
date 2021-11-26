@@ -1,4 +1,4 @@
-import { productsURL } from '../../lib';
+import { productsURL } from '../lib';
 
 const prefix = '🐉 ';
 
