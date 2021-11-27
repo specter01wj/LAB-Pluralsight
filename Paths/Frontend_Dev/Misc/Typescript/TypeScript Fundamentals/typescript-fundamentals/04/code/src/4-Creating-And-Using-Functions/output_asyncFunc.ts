@@ -42,6 +42,7 @@ function layoutProducts(products: ProductType[]) {
   return productsHtml;
 }
 
+
 runTheLearningSamples();
 
 function runTheLearningSamples() {
@@ -118,19 +119,17 @@ function runTheLearningSamples() {
   displayProducts(sampleProducts);
 
 
+
+}
+
+
+
 // Async Function
 async function getProducts(): Promise<ProductType[]> {
   const response: Response = await fetch(productsURL);
   const products: ProductType[] = await response.json();
   return products;
 }
-
-
-}
-
-
-
-
 
 
 
