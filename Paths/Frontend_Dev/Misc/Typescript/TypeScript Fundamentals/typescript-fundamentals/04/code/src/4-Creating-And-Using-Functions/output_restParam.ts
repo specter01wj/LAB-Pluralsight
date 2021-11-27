@@ -160,7 +160,7 @@ function runTheLearningSamples() {
   console.log(pineapple, mango);
 
 
-
+  // Rest parameters
 
 
 
