@@ -12,6 +12,30 @@ export default async function updateOutput(id: string) {
 
 }
 
+function layoutProducts(products: ProductType[]) {
+  const items = products.map(({ id, name, icon }) => {
+    const productHtml = `
+    <span class="card-id">#${id}</span>
+      <i class="card-icon ${icon} fa-lg"></i>
+    <span class="card-name">${name}</span>
+    `;
+    const cardHtml = `
+    <li>
+        <div class="card">
+            <div class="card-content">
+                <div class="content">
+                ${productHtml}
+                </div>
+            </div>
+        </div>
+    </li>
+    `;
+    return cardHtml;
+  });
+  let productsHtml = `<ul>${items.join('')}</ul>`;
+  return productsHtml;
+}
+
 runTheLearningSamples();
 
 function runTheLearningSamples() {
@@ -88,9 +112,11 @@ function runTheLearningSamples() {
   displayProducts(sampleProducts);
 
 
-
-async function getProducts() {
-  const response = await fetch(productsURL);
+// Async Function
+async function getProducts(): Promise<ProductType[]> {
+  const response: Response = await fetch(productsURL);
+  const products: ProductType[] = await response.json();
+  return products;
 }
 
 
