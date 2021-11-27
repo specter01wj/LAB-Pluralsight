@@ -1,6 +1,11 @@
 
 const prefix = '🐉 ';
 
+type ProductType = {
+  id: number;
+  name: string;
+  icon?: string;
+};
 
 export default async function updateOutput(id: string) {
 
@@ -58,6 +63,14 @@ function runTheLearningSamples() {
 
   console.log(`${prefix} return array`);
   console.log(getProductNames());
+
+
+  function getProductById(id: number): ProductType | undefined {
+    return sampleProducts.find((p) => (id = p.id));
+  }
+
+  console.log(`${prefix} return ProductType`);
+  console.table(getProductById(10));
 
 }
 
