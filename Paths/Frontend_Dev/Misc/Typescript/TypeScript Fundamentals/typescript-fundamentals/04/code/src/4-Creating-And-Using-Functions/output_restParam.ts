@@ -161,7 +161,14 @@ function runTheLearningSamples() {
 
 
   // Rest parameters
-
+  function buildAddress(
+    street: string,
+    city: string,
+    ...restOfAddress: string[]
+  ) {
+    const address = `${street}, ${city} ${restOfAddress.join(' ')}`;
+    return address;
+  }
 
 
 
