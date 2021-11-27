@@ -120,6 +120,25 @@ function runTheLearningSamples() {
 
 
   // Arrow functions
+
+
+
+  // Optional parameters
+
+  function createProduct(name: string, icon?: string): ProductType {
+    const id = getRandomInt(1000);
+    return {
+      id,
+      name,
+      icon,
+    };
+  }
+
+  const getRandomInt = (max: number = 1000) => Math.floor(Math.random() * max);
+  let pineapple = createProduct('pineapple', 'pine-apple.jpg');
+  let mango = createProduct('mango');
+  console.log(pineapple, mango);
+
   
 
 }
