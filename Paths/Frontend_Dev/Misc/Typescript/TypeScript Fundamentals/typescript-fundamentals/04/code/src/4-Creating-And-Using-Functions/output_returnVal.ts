@@ -38,7 +38,7 @@ function runTheLearningSamples() {
   console.log(`${prefix} function expression`);
   console.log(addNumbersExpression(7, 11));
 
-
+  // Return Scalar
   const sampleProducts = [
     {
       id: 10,
@@ -64,13 +64,29 @@ function runTheLearningSamples() {
   console.log(`${prefix} return array`);
   console.log(getProductNames());
 
-
+  // Return Types
   function getProductById(id: number): ProductType | undefined {
     return sampleProducts.find((p) => (id = p.id));
   }
 
   console.log(`${prefix} return ProductType`);
   console.table(getProductById(10));
+
+
+  // Return void
+  function displayProducts(products: ProductType[]): void {
+    const productNames = products.map((p) => {
+      const name = p.name.toLowerCase();
+      return name;
+    });
+    const msg = `Sample products include: ${productNames.join(', ')}`;
+    console.log(`${prefix} return void`);
+    console.log(msg);
+  }
+
+  displayProducts(sampleProducts);
+
+
 
 }
 
