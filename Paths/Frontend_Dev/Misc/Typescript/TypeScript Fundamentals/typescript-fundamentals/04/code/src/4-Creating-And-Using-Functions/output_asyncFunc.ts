@@ -1,3 +1,4 @@
+import { productsURL } from '../lib';
 
 const prefix = '🐉 ';
 
@@ -86,6 +87,11 @@ function runTheLearningSamples() {
 
   displayProducts(sampleProducts);
 
+
+
+async function getProducts() {
+  const response = await fetch(productsURL);
+}
 
 
 }
