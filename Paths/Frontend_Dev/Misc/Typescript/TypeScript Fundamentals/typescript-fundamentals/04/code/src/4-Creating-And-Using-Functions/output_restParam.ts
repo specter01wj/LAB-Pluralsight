@@ -170,7 +170,16 @@ function runTheLearningSamples() {
     return address;
   }
 
+  const someAddress = buildAddress(
+    '1 lois lane',
+    'smallville',
+    'apt 101', // rest
+    'area 51', // rest
+    'mystery country', // rest
+  );
 
+  console.log(`${prefix} Rest parameters`);
+  console.log(someAddress);
 
 
 
