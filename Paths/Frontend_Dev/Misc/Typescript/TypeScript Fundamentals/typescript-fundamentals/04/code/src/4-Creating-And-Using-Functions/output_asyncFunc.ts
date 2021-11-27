@@ -9,7 +9,13 @@ type ProductType = {
 };
 
 export default async function updateOutput(id: string) {
+  const products = await getProducts();
+  const output = document.querySelector(`#${id}`);
+  const html = layoutProducts(products);
 
+  if (output && html) {
+    output.innerHTML = html;
+  }
 }
 
 function layoutProducts(products: ProductType[]) {
