@@ -128,7 +128,45 @@ async function runTheLearningSamples() {
   await getData();
 
 
+  // generic interface
+  interface Model<T> {
+    items: T[] | undefined;
+    getItems: () => Promise<T[]>;
+    getItemById: (id: number) => T | undefined;
+  }
 
+  class FoodModel implements Model<FoodProduct> {
+    public items: FoodProduct[] | undefined;
+
+    async getItems(): Promise<FoodProduct[]> {
+      this.items = await getList<FoodProduct>(productsURL);
+      return this.items;
+    }
+
+    getItemById(id: number): FoodProduct | undefined {
+      return this.items ? this.items.find((item) => (id = item.id)) : undefined;
+    }
+  }
+
+  const foodModel: FoodModel = new FoodModel();
+  await foodModel.getItems();
+  console.log(`${prefix} Generic Interface`);
+  console.table(foodModel.items);
+
+
+  // generic classes
+  const genericFoodModel = new GenericModel<FoodProduct>(productsURL);
+  const genericCustomerModel = new GenericModel<Customer>(customersURL);
+  await genericFoodModel.getItems();
+  await genericCustomerModel.getItems();
+  console.log(`${prefix} Generic Class`);
+  console.table(genericFoodModel.items);
+  console.table(genericCustomerModel.items);
+
+
+
+  // generic constraints
+  
 
   
 }
