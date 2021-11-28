@@ -166,7 +166,17 @@ async function runTheLearningSamples() {
 
 
   // generic constraints
-  
+
+  // Built-in Constraints
+  // ReadOnly<T> constraint
+  const model: FoodModel = new FoodModel();
+  await model.getItems();
+  const foodItem: FoodProduct | undefined = model.getItemById(10);
+  // const foodItem: Readonly<FoodProduct | undefined> = model.getItemById(10);
+  if (foodItem) {
+    foodItem.name = 'some name';
+    foodItem.icon = 'some icon';
+  }
 
   
 }
