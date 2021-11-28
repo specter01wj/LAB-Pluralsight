@@ -110,8 +110,22 @@ async function runTheLearningSamples() {
   console.log(n, s, b);
 
 
+  // generics on functions
+  interface Customer {
+    id: number;
+    name: string;
+  }
 
+  async function getData() {
+    console.log(`${prefix} Generic Functions`);
 
+    const products = await getList<FoodProduct>(productsURL);
+    console.table(products);
+
+    const customers = await getList<Customer>(customersURL);
+    console.table(customers);
+  }
+  await getData();
 
 
 
