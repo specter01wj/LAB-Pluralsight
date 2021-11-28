@@ -78,7 +78,7 @@ async function getList<T>(url: string): Promise<T[]> {
 runTheLearningSamples();
 
 async function runTheLearningSamples() {
-  
+  // Reusable code with generics
   function whatIsIt_number(arg: number): number {
     return arg;
   }
@@ -87,10 +87,34 @@ async function runTheLearningSamples() {
   console.log(whatIsIt_number(11));
 
 
+  function whatIsIt_string(arg: string): string {
+    return arg;
+  }
+  console.log(whatIsIt_string('john'));
+
+
+  function whatIsIt_any(arg: any): any {
+    return arg;
+  }
+  console.log(whatIsIt_any(11));
+  console.log(whatIsIt_any('john'));
+
+
+  function whatIsIt_typed<Type>(arg: Type): Type {
+    return arg;
+  }
+
+  let n: number = whatIsIt_typed<number>(11);
+  let s: string = whatIsIt_typed<string>('john');
+  let b: boolean = whatIsIt_typed<boolean>(true);
+  console.log(n, s, b);
 
 
 
-  
+
+
+
+
 
   
 }
