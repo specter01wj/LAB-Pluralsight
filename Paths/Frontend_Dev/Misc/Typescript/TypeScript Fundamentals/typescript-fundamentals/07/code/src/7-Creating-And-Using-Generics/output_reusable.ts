@@ -178,6 +178,11 @@ async function runTheLearningSamples() {
     // foodItem.icon = 'some icon';
   }
 
+  // Partial<T> constraint
+  const pear = { name: 'pear' };
+  // const pearFood: FoodProduct = pear;
+  const pearFood: Partial<FoodProduct> = pear;
+
   
 }
 
