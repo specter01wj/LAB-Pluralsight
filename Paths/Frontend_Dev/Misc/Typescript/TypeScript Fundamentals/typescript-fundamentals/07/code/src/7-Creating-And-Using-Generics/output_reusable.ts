@@ -150,6 +150,7 @@ async function runTheLearningSamples() {
 
   const foodModel: FoodModel = new FoodModel();
   await foodModel.getItems();
+
   
   console.log(`${prefix} Generic Interface`);
   console.table(foodModel.items);
