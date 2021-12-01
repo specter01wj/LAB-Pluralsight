@@ -158,6 +158,7 @@ async function runTheLearningSamples() {
 
 
 
+
   
   console.log(`${prefix} Generic Interface`);
   console.table(foodModel.items);
