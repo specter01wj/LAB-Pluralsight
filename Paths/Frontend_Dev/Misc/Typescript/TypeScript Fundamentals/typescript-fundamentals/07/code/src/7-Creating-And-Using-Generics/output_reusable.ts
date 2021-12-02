@@ -160,6 +160,7 @@ async function runTheLearningSamples() {
   await genericFoodModel.getItems();
   await genericCustomerModel.getItems();
 
+
   
   console.log(`${prefix} Generic Class`);
   console.table(genericFoodModel.items);
