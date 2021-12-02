@@ -159,6 +159,7 @@ async function runTheLearningSamples() {
   const genericCustomerModel = new GenericModel<Customer>(customersURL);
   await genericFoodModel.getItems();
   await genericCustomerModel.getItems();
+  
   console.log(`${prefix} Generic Class`);
   console.table(genericFoodModel.items);
   console.table(genericCustomerModel.items);
