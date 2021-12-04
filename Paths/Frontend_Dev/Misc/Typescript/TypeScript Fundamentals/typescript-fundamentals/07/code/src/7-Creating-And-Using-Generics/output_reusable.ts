@@ -32,9 +32,6 @@ export default async function updateOutput(id: string = 'output') {
 
   if (output && html) {
     output.innerHTML = html;
-
-
-    
   }
 }
 
