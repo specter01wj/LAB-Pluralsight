@@ -62,6 +62,7 @@ function layoutProducts(products: FoodProduct[]): string {
 async function getProducts(): Promise<FoodProduct[]> {
   const response: Response = await fetch(productsURL);
 
+
   
   const products: FoodProduct[] = await response.json();
   return products;
