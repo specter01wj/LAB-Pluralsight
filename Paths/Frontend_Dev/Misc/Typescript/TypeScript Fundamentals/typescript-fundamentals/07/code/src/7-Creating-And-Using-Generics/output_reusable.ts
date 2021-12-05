@@ -79,6 +79,7 @@ async function getProducts(): Promise<FoodProduct[]> {
 
 
 
+
   
   const products: FoodProduct[] = await response.json();
   return products;
