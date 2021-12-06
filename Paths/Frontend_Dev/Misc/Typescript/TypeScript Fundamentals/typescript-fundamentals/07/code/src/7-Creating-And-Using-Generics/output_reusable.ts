@@ -81,26 +81,6 @@ async function runTheLearningSamples() {
   // Reusable code with generics
   function whatIsIt_number(arg: number): number {
     return arg;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
   }
 
   console.log(`${prefix} Generics Overview`);
