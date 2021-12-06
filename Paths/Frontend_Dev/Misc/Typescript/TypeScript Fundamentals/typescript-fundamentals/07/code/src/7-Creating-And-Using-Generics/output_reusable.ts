@@ -82,6 +82,7 @@ async function runTheLearningSamples() {
   function whatIsIt_number(arg: number): number {
     return arg;
 
+
     
   }
 
