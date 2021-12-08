@@ -102,6 +102,7 @@ async function runTheLearningSamples() {
 
   function whatIsIt_typed<Type>(arg: Type): Type {
     return arg;
+    
   }
 
   let n: number = whatIsIt_typed<number>(11);
