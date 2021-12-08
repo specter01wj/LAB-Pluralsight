@@ -89,6 +89,7 @@ async function runTheLearningSamples() {
 
   function whatIsIt_string(arg: string): string {
     return arg;
+
     
   }
   console.log(whatIsIt_string('john'));
