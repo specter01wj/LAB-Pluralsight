@@ -108,6 +108,7 @@ async function runTheLearningSamples() {
   let s: string = whatIsIt_typed<string>('john');
   let b: boolean = whatIsIt_typed<boolean>(true);
 
+
   
   console.log(n, s, b);
 
