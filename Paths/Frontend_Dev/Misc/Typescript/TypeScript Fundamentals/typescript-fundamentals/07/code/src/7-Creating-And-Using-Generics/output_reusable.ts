@@ -109,6 +109,7 @@ async function runTheLearningSamples() {
   let b: boolean = whatIsIt_typed<boolean>(true);
 
 
+
   
   console.log(n, s, b);
 
