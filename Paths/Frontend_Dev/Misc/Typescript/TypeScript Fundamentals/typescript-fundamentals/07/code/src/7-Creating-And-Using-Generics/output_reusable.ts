@@ -113,6 +113,7 @@ async function runTheLearningSamples() {
   // generics on functions
   interface Customer {
     id: number;
+    
     name: string;
   }
 
