@@ -142,6 +142,7 @@ async function runTheLearningSamples() {
       this.items = await getList<FoodProduct>(productsURL);
       return this.items;
 
+
       
     }
 
