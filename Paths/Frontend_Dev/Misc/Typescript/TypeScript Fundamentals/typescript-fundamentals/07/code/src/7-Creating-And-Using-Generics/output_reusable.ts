@@ -141,6 +141,7 @@ async function runTheLearningSamples() {
     async getItems(): Promise<FoodProduct[]> {
       this.items = await getList<FoodProduct>(productsURL);
       return this.items;
+      
     }
 
     getItemById(id: number): FoodProduct | undefined {
