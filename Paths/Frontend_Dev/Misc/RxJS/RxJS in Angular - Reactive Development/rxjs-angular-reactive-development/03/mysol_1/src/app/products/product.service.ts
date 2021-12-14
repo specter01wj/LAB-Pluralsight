@@ -23,6 +23,7 @@ export class ProductService {
       .pipe(
         tap(data => console.log('Products: ', JSON.stringify(data))),
 
+
         catchError(this.handleError)
       );
   }
