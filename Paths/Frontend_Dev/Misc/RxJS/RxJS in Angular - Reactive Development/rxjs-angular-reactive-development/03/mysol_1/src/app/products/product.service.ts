@@ -22,28 +22,6 @@ export class ProductService {
     return this.http.get<Product[]>(this.productsUrl)
       .pipe(
         tap(data => console.log('Products: ', JSON.stringify(data))),
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         catchError(this.handleError)
       );
   }
