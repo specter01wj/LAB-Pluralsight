@@ -14,28 +14,6 @@ export class AppComponent implements OnInit {
 
     from([20,15,10,5]).subscribe(
       item => console.log(`resulting item .. ${item}`),
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       err => console.error(`error occurred ${err}`),
       () => console.log('complete')
     );
