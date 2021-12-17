@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 
 import { EMPTY, Observable, of, Subscription } from 'rxjs';
 import { catchError } from 'rxjs/operators';
@@ -8,7 +8,8 @@ import { ProductService } from './product.service';
 
 @Component({
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  styleUrls: ['./product-list.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductListComponent implements OnInit, OnDestroy {
   pageTitle = 'Product List';
@@ -16,7 +17,15 @@ export class ProductListComponent implements OnInit, OnDestroy {
   categories;
 
   // products: Product[] = [];
-  products$: Observable<Product[]>;
+  // products$: Observable<Product[]>;
+  products$ = this.productService.products$
+                .pipe(
+                  catchError(err => {
+                    this.errorMessage = err;
+                    // return of([]);
+                    return EMPTY;
+                  })
+                );;
   sub: Subscription;
 
   constructor(private productService: ProductService) { }
@@ -27,18 +36,18 @@ export class ProductListComponent implements OnInit, OnDestroy {
         products => this.products = products,
         error => this.errorMessage = error
       ); */
-    this.products$ = this.productService.getProducts()
+    /* this.products$ = this.productService.getProducts()
       .pipe(
         catchError(err => {
           this.errorMessage = err;
           // return of([]);
           return EMPTY;
         })
-      );
+      ); */
   }
 
   ngOnDestroy(): void {
-    this.sub.unsubscribe();
+    // this.sub.unsubscribe();
   }
 
   onAdd(): void {
