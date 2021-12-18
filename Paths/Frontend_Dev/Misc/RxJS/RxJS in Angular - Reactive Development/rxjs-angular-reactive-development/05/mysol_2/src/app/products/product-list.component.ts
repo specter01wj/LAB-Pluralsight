@@ -15,6 +15,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
   pageTitle = 'Product List';
   errorMessage = '';
 
+
   
   categories;
 
