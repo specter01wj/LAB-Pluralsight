@@ -41,6 +41,7 @@ export class ProductService {
       description: 'Our new product',
 
 
+
       
       price: 8.9,
       categoryId: 3,
