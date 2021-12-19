@@ -40,6 +40,7 @@ export class ProductService {
       productCode: 'TBX-0042',
       description: 'Our new product',
 
+
       
       price: 8.9,
       categoryId: 3,
