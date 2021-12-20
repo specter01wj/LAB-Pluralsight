@@ -54,6 +54,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
     console.log('Not yet implemented');
 
 
+
   }
 
   onSelected(categoryId: string): void {
