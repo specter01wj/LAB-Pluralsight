@@ -10,6 +10,7 @@ export class ProductDetailComponent {
   pageTitle = 'Product Detail';
   errorMessage = '';
 
+
   product;
 
   constructor(private productService: ProductService) { }
