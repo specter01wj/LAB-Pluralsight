@@ -8,25 +8,6 @@ import { ProductService } from '../product.service';
 })
 export class ProductDetailComponent {
   pageTitle = 'Product Detail';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   errorMessage = '';
   product;
 
