@@ -11,6 +11,7 @@ export class ProductDetailComponent {
   errorMessage = '';
 
 
+
   product;
 
   constructor(private productService: ProductService) { }
