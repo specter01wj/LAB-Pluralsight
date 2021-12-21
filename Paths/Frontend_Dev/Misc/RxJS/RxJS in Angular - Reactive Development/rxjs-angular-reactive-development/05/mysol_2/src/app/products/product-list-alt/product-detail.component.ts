@@ -12,6 +12,7 @@ export class ProductDetailComponent {
 
 
 
+
   product;
 
   constructor(private productService: ProductService) { }
