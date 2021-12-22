@@ -41,28 +41,5 @@ export class ProductListAltComponent implements OnInit, OnDestroy {
 
   onSelected(productId: number): void {
     console.log('Not yet implemented');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   }
 }
