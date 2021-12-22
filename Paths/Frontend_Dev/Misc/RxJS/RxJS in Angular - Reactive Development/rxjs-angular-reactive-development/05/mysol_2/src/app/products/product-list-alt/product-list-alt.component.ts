@@ -43,5 +43,6 @@ export class ProductListAltComponent implements OnInit, OnDestroy {
     console.log('Not yet implemented');
 
 
+
   }
 }
