@@ -62,5 +62,6 @@ export class ProductListAltComponent implements OnInit, OnDestroy {
 
 
 
+
   }
 }
