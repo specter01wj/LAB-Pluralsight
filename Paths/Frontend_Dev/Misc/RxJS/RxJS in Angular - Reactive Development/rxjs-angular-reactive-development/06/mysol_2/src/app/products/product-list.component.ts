@@ -35,6 +35,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
 
 
 
+
   categories;
 
   // products: Product[] = [];
