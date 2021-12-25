@@ -32,6 +32,7 @@ export class ProductService {
 
 
 
+
                     searchKey: [product.productName]
                   }) as Product)),
                   tap(data => console.log('Products: ', JSON.stringify(data))),
