@@ -42,6 +42,7 @@ export class ProductService {
 
 
 
+
                   }) as Product)),
                   tap(data => console.log('Products: ', JSON.stringify(data))),
                   catchError(this.handleError)
