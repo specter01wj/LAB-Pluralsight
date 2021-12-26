@@ -25,6 +25,7 @@ export class ProductService {
                     price: product.price * 12.5,
                     searchKey: [product.productName]
 
+
                   }) as Product)),
                   tap(data => console.log('Products: ', JSON.stringify(data))),
                   catchError(this.handleError)
