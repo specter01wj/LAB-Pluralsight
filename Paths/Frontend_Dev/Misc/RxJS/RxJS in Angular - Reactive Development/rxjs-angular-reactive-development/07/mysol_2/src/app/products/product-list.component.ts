@@ -18,7 +18,8 @@ export class ProductListComponent implements OnInit, OnDestroy {
 
   // products: Product[] = [];
   // products$: Observable<Product[]>;
-  products$ = this.productService.products$
+  // products$ = this.productService.products$
+  products$ = this.productService.productsWithCategory$
                 .pipe(
                   catchError(err => {
                     this.errorMessage = err;
