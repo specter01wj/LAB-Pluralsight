@@ -45,6 +45,7 @@ export class ProductService {
 
 
 
+
         category: categories.find(c => product.categoryId === c.id).name,
         searchKey: [product.productName]
       }) as Product)
