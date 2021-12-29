@@ -38,20 +38,6 @@ export class ProductService {
       products.map(product => ({
         ...product,
         price: product.price * 1.5,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         category: categories.find(c => product.categoryId === c.id).name,
         searchKey: [product.productName]
       }) as Product)
