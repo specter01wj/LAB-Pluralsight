@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 
-import { combineLatest, EMPTY, Observable, of, Subject, Subscription } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
+import { BehaviorSubject, combineLatest, EMPTY, Observable, of, Subject, Subscription } from 'rxjs';
+import { catchError, map, startWith } from 'rxjs/operators';
 
 import { Product } from './product';
 import { ProductService } from './product.service';
@@ -18,11 +18,13 @@ export class ProductListComponent implements OnInit, OnDestroy {
   categories;
   selectedCategoryId = 1;
 
-  private categorySelectedSubject = new Subject<number>();
+  // private categorySelectedSubject = new Subject<number>();
+  private categorySelectedSubject = new BehaviorSubject<number>(0);
   categorySelectedAction$ = this.categorySelectedSubject.asObservable();
 
   products$ = combineLatest([
     this.productService.productsWithCategory$,
+    // this.categorySelectedAction$.pipe(startWith(0))
     this.categorySelectedAction$
   ])
     .pipe(
