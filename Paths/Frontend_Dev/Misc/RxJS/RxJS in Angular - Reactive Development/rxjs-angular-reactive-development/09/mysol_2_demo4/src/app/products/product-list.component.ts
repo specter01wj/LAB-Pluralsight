@@ -23,7 +23,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
   categorySelectedAction$ = this.categorySelectedSubject.asObservable();
 
   products$ = combineLatest([
-    this.productService.productsWithCategory$,
+    this.productService.productsWithAdd$,
     // this.categorySelectedAction$.pipe(startWith(0))
     this.categorySelectedAction$
   ])
@@ -69,7 +69,8 @@ export class ProductListComponent implements OnInit, OnDestroy {
   }
 
   onAdd(): void {
-    console.log('Not yet implemented');
+    // console.log('Not yet implemented');
+    this.productService.addProduct();
   }
 
   onSelected(categoryId: string): void {
