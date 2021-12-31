@@ -23,6 +23,7 @@ export class ProductListAltComponent implements OnInit, OnDestroy {
                     // return of([]);
                     return EMPTY;
 
+
                   })
                 );;
   sub: Subscription;
