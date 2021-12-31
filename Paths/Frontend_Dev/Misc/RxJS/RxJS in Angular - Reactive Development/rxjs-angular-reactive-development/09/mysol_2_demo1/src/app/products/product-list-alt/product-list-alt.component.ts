@@ -31,6 +31,7 @@ export class ProductListAltComponent implements OnInit, OnDestroy {
 
 
 
+
                   })
                 );;
   sub: Subscription;
