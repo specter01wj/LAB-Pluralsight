@@ -22,6 +22,7 @@ export class ProductListAltComponent implements OnInit, OnDestroy {
                     this.errorMessage = err;
                     // return of([]);
                     return EMPTY;
+
                   })
                 );;
   sub: Subscription;
