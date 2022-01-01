@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Observable, throwError, combineLatest, BehaviorSubject, merge, Subject } from 'rxjs';
-import { catchError, map, scan, shareReplay, tap } from 'rxjs/operators';
+import { Observable, throwError, combineLatest, BehaviorSubject, merge, Subject, from } from 'rxjs';
+import { catchError, filter, map, mergeMap, scan, shareReplay, switchMap, tap, toArray } from 'rxjs/operators';
 
 import { Product } from './product';
 import { Supplier } from '../suppliers/supplier';
@@ -70,6 +70,15 @@ export class ProductService {
     .pipe(
       scan((acc: Product[], value: Product) => [...acc, value])
     );
+
+  selectedProductSuppliers$ = combineLatest([
+    this.selectedProduct$,
+    this.supplierService.suppliers$
+  ]).pipe(
+    map(([selectedProduct, suppliers]) =>
+      suppliers.filter(supplier => selectedProduct.supplierIds.includes(supplier.id))
+    )
+  );
 
   constructor(private http: HttpClient,
               private productCategoryService: ProductCategoryService,
