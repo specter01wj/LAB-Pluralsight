@@ -43,24 +43,6 @@ export class ProductService {
       }) as Product)
     ),
     shareReplay(1)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
   );
 
   private productSelectedSubject = new BehaviorSubject<number>(0);
