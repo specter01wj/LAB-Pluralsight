@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit {
 
   constructor(private dataService: DataService,
               private title: Title) { }
-  
+
   ngOnInit() {
     this.allBooks = this.dataService.getAllBooks();
     this.allReaders = this.dataService.getAllReaders();
