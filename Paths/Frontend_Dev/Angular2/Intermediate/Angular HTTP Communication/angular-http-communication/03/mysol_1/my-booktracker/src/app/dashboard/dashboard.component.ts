@@ -27,6 +27,7 @@ export class DashboardComponent implements OnInit {
 
 
 
+
     this.title.setTitle(`Book Tracker`);
   }
 
