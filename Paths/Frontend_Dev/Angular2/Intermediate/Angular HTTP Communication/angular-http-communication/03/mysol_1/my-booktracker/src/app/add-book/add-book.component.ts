@@ -4,29 +4,6 @@ import { Book } from "app/models/book";
 
 @Component({
   selector: 'app-add-book',
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
   templateUrl: './add-book.component.html',
   styles: []
 })
