@@ -16,6 +16,7 @@ export class AddBookComponent implements OnInit {
   saveBook(formValues: any): void {
     let newBook: Book = <Book>formValues;
 
+
     
     newBook.bookID = 0;
     console.log(newBook);
