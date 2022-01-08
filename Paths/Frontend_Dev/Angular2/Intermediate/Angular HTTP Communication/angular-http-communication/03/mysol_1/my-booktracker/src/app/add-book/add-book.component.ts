@@ -30,6 +30,7 @@ export class AddBookComponent implements OnInit {
 
 
 
+
     
     newBook.bookID = 0;
     console.log(newBook);
