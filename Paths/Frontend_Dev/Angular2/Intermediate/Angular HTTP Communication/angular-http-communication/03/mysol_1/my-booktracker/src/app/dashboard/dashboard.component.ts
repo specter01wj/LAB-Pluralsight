@@ -42,6 +42,7 @@ export class DashboardComponent implements OnInit {
 
 
 
+
     this.mostPopularBook = this.dataService.mostPopularBook;
     this.title.setTitle(`Book Tracker`);
   }
