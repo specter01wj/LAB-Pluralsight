@@ -38,6 +38,8 @@ export class DataService {
       'Authorization': 'my-token'
     });
 
-    return this.http.get<Book>(`/api/books/${id}`);
+    return this.http.get<Book>(`/api/books/${id}`, {
+      headers: getHeaders
+    });
   }
 }

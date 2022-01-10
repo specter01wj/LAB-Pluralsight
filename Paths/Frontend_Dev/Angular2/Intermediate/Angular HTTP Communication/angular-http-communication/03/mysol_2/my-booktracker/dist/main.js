@@ -367,7 +367,9 @@ let DataService = class DataService {
             'Accept': 'application/json',
             'Authorization': 'my-token'
         });
-        return this.http.get(`/api/books/${id}`);
+        return this.http.get(`/api/books/${id}`, {
+            headers: getHeaders
+        });
     }
 };
 DataService.ctorParameters = () => [
