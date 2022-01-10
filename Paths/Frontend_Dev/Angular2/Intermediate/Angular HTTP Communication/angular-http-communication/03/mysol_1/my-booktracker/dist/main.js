@@ -360,7 +360,7 @@ let DataService = class DataService {
         return app_data__WEBPACK_IMPORTED_MODULE_0__.allReaders.find(reader => reader.readerID === id);
     }
     getAllBooks() {
-        return app_data__WEBPACK_IMPORTED_MODULE_0__.allBooks;
+        return this.http.get('/api/books');
     }
     getBookById(id) {
         return app_data__WEBPACK_IMPORTED_MODULE_0__.allBooks.find(book => book.bookID === id);
@@ -406,7 +406,14 @@ let DashboardComponent = class DashboardComponent {
         this.title = title;
     }
     ngOnInit() {
-        this.allBooks = this.dataService.getAllBooks();
+        this.dataService.getAllBooks()
+            .subscribe({
+            next: (res) => {
+                this.allBooks = res;
+            },
+            error: (err) => { console.log(err); },
+            complete: () => { console.log('All done.'); }
+        });
         this.allReaders = this.dataService.getAllReaders();
         this.mostPopularBook = this.dataService.mostPopularBook;
         this.title.setTitle(`Book Tracker`);
