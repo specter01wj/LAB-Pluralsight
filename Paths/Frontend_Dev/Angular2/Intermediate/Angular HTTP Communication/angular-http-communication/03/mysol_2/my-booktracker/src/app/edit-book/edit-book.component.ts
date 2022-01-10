@@ -24,11 +24,6 @@ export class EditBookComponent implements OnInit {
           this.selectedBook = res;
         },
         error: (err: any) => { console.log(err) },
-
-
-
-
-
         complete: () => { console.log('All done.') }
       });
   }
