@@ -33,7 +33,11 @@ export class DataService {
   }
 
   getBookById(id: number): Observable<Book> {
-    let getHeaders: HttpHeaders = new HttpHeaders();
+    let getHeaders: HttpHeaders = new HttpHeaders({
+      'Accept': 'application/json',
+      'Authorization': 'my-token'
+    });
+
     return this.http.get<Book>(`/api/books/${id}`);
   }
 }

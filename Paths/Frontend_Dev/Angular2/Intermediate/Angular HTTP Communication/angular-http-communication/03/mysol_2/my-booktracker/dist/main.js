@@ -363,7 +363,10 @@ let DataService = class DataService {
         return this.http.get('/api/books');
     }
     getBookById(id) {
-        let getHeaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpHeaders();
+        let getHeaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpHeaders({
+            'Accept': 'application/json',
+            'Authorization': 'my-token'
+        });
         return this.http.get(`/api/books/${id}`);
     }
 };
