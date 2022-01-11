@@ -30,6 +30,7 @@ export class DataService {
 
   getAllBooks(): Observable<Book[]> {
     return this.http.get<Book[]>('/api/books');
+
   }
 
   getBookById(id: number): Observable<Book> {
