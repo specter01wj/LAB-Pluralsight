@@ -25,6 +25,7 @@ export class DataService {
   getAllReaders(): Reader[] {
     return allReaders;
 
+
   }
 
   getReaderById(id: number): Reader {
