@@ -69,26 +69,6 @@ export class DataService {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     });
   }
 
