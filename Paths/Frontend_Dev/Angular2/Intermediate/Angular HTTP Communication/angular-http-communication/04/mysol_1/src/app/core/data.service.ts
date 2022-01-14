@@ -59,6 +59,9 @@ export class DataService {
     return this.http.post<Book>('/api/books', newBook, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
+
+
+
       })
     });
   }
