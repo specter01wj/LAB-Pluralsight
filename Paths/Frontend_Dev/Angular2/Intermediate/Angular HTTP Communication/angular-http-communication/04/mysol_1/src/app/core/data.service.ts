@@ -39,6 +39,7 @@ export class DataService {
     return this.http.get<Book>(`/api/books/${id}`, {
       headers: new HttpHeaders({
 
+
         'Accept': 'application/json',
         'Authorization': 'my-token'
       })
