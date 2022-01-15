@@ -40,6 +40,7 @@ export class DataService {
       headers: new HttpHeaders({
 
 
+
         'Accept': 'application/json',
         'Authorization': 'my-token'
       })
