@@ -22,12 +22,21 @@ export class DashboardComponent implements OnInit {
               private title: Title) { }
 
   ngOnInit() {
-    this.dataService.getAllBooks()
+    /* this.dataService.getAllBooks()
       .subscribe(
         (data: Book[] | BookTrackerError) => this.allBooks = <Book[]>data,
         (err: BookTrackerError) => console.log(err.friendlyMessage),
         () => console.log('All done getting books.')
-      );
+      ); */
+
+    let resolvedData: Book[] | BookTrackerError = this.route.snapshot.data['resolvedBooks'];
+
+    if (resolvedData instanceof BookTrackerError) {
+      console.log(`Dashboard component error: ${resolvedData.friendlyMessage}`);
+    } else {
+      this.allBooks = resolvedData;
+    }
+
     this.allReaders = this.dataService.getAllReaders();
     this.mostPopularBook = this.dataService.mostPopularBook;
 
