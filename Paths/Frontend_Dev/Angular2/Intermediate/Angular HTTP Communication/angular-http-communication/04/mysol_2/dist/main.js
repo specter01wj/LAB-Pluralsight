@@ -376,8 +376,8 @@ let DataService = class DataService {
     }
     getAllBooks() {
         console.log('Getting all books from the server.');
-        // return this.http.get<Book[]>('/api/books');
-        return this.http.get('/api/errors/500')
+        return this.http.get('/api/books')
+            // return this.http.get<Book[]>('/api/errors/500')
             .pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.catchError)(err => this.handleHttpError(err)));
     }
     handleHttpError(error) {
