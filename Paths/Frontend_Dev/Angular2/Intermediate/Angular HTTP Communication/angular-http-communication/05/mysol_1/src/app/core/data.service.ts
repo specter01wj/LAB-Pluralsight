@@ -20,7 +20,8 @@ export class DataService {
 
   setMostPopularBook(popularBook: Book): void {
     this.mostPopularBook = popularBook;
-    
+
+
   }
 
   getAllReaders(): Reader[] {
@@ -44,7 +45,7 @@ export class DataService {
     dataError.errorNumber = 100;
     dataError.message = error.statusText;
     dataError.friendlyMessage = 'An error occurred retrieving data.';
-    return throwError(dataError);    
+    return throwError(dataError);
   }
 
   getBookById(id: number): Observable<Book> {
