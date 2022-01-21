@@ -15,6 +15,7 @@ export class LogResponseInterceptor implements HttpInterceptor {
           if (event.type === HttpEventType.Response) {
             console.log(event.body);
 
+
           }
         })
       )
