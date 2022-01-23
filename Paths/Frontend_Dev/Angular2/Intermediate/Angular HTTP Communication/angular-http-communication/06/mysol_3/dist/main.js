@@ -512,7 +512,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs/operators */ 8307);
 /* harmony import */ var app_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/data */ 8387);
 /* harmony import */ var app_models_bookTrackerError__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/models/bookTrackerError */ 5582);
-/* harmony import */ var _add_header_interceptor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./add-header.interceptor */ 1483);
+/* harmony import */ var _cache_interceptor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./cache.interceptor */ 7354);
 
 
 
@@ -538,7 +538,8 @@ let DataService = class DataService {
     getAllBooks() {
         console.log('Getting all books from the server.');
         return this.http.get('/api/books', {
-            context: new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpContext().set(_add_header_interceptor__WEBPACK_IMPORTED_MODULE_2__.CONTENT_TYPE, 'application/xml')
+            // context: new HttpContext().set(CONTENT_TYPE, 'application/xml')
+            context: new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpContext().set(_cache_interceptor__WEBPACK_IMPORTED_MODULE_2__.CACHEABLE, false)
         })
             .pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_4__.catchError)(err => this.handleHttpError(err)));
     }
