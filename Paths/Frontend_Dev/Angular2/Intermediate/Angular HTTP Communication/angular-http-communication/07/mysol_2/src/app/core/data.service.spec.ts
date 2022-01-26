@@ -59,6 +59,7 @@ describe('DataService Tests', () => {
 
     booksRequest.flush('error', {
       status: 500,
+
       statusText: 'Server Error'
     });
 
