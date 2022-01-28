@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { ProductData } from './api/product-data';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +23,8 @@ import { MessageModule } from './messages/message.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    InMemoryWebApiModule.forRoot(ProductData, { delay: 1000 }),
     ProductModule,
     UserModule,
     MessageModule,

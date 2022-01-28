@@ -12,6 +12,9 @@ import { StarComponent } from './star/star.component';
   imports: [
     CommonModule,
     FormsModule
+  ],
+  exports: [
+    StarComponent
   ]
 })
 export class SharedModule { }
