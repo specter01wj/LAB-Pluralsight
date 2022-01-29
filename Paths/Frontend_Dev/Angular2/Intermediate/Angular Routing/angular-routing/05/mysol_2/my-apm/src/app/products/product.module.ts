@@ -4,17 +4,12 @@ import { FormsModule } from '@angular/forms';
 
 import { ProductRoutingModule } from './product-routing.module';
 
-
-import { ProductListComponent } from './product-list/product-list.component';
-
-import { SharedModule } from '../shared/shared.module';
-
 @NgModule({
-  declarations: [ProductListComponent],
+  declarations: [
+  ],
   imports: [
     CommonModule,
     FormsModule,
-    SharedModule,
     ProductRoutingModule
   ]
 })
