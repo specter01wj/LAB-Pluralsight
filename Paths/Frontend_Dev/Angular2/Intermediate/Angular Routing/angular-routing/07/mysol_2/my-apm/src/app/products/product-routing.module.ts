@@ -28,18 +28,6 @@ const routes: Routes = [
   declarations: [
     ProductListComponent,
     ProductDetailComponent,
-
-
-
-
-
-
-
-
-
-
-
-
     ProductEditComponent
   ],
   imports: [
