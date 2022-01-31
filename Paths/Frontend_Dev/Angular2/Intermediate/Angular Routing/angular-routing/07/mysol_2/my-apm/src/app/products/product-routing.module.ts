@@ -23,7 +23,22 @@ const routes: Routes = [
   {
     path: 'products/:id/edit',
     component: ProductEditComponent,
-    resolve: { resolvedData: ProductResolver }
+    resolve: { resolvedData: ProductResolver },
+    children: [
+      {
+        path: '',
+        redirectTo: 'info',
+        pathMatch: 'full'
+      },
+      {
+        path: 'info',
+        component: ProductEditInfoComponent
+      },
+      {
+        path: 'tags',
+        component: ProductEditTagsComponent
+      }
+    ]
   }
 ];
 
@@ -31,7 +46,9 @@ const routes: Routes = [
   declarations: [
     ProductListComponent,
     ProductDetailComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    ProductEditInfoComponent,
+    ProductEditTagsComponent
   ],
   imports: [
     CommonModule,
