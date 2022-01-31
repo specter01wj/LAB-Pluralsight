@@ -22,6 +22,7 @@ const routes: Routes = [
 
 
 
+
     resolve: { resolvedData: ProductResolver }
   },
   {
