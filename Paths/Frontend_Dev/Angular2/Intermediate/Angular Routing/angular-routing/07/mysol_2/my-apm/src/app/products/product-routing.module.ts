@@ -20,6 +20,7 @@ const routes: Routes = [
     component: ProductDetailComponent,
 
 
+
     resolve: { resolvedData: ProductResolver }
   },
   {
