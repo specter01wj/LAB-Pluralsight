@@ -18,6 +18,7 @@ const routes: Routes = [
   {
     path: 'products/:id',
     component: ProductDetailComponent,
+
     resolve: { resolvedData: ProductResolver }
   },
   {
@@ -29,7 +30,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    ProductListComponent, 
+    ProductListComponent,
     ProductDetailComponent,
     ProductEditComponent
   ],
