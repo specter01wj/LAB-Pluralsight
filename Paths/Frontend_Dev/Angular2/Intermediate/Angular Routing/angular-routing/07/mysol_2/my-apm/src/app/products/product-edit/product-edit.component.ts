@@ -68,7 +68,7 @@ export class ProductEditComponent implements OnInit {
   }
 
   saveProduct(): void {
-    if (true === true) {
+    if (this.isValid()) {
       if (this.product!.id === 0) {
         this.productService.createProduct(this.product!).subscribe({
           next: () => this.onSaveComplete(`The new ${this.product!.productName} was saved`),
