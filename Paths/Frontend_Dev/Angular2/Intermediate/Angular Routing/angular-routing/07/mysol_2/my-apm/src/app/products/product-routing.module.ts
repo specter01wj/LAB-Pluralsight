@@ -9,6 +9,8 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductResolver } from '../service/product-resolver.service';
+import { ProductEditInfoComponent } from './product-edit/product-edit-info/product-edit-info.component';
+import { ProductEditTagsComponent } from './product-edit/product-edit-tags/product-edit-tags.component';
 
 const routes: Routes = [
   {
