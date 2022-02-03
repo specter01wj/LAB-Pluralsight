@@ -19,6 +19,7 @@ export class ProductEditTagsComponent implements OnInit {
     this.route.parent.data.subscribe(data => {
       this.product = data['resolvedData'].product;
 
+
     });
   }
 
