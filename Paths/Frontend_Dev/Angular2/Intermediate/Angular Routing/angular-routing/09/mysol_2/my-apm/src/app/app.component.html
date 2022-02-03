@@ -6,11 +6,11 @@
          [routerLink]="['/welcome']" routerLinkActive="active">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" 
-          [routerLink]="['/products']" routerLinkActive="active">Product List</a>
+      <a class="nav-link"
+          [routerLink]="['/products']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact : true}">Product List</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/products', 0, 'edit']">Add Product</a>
+      <a class="nav-link" [routerLink]="['/products', 0, 'edit']" routerLinkActive="active">Add Product</a>
     </li>
   </ul>
   <ul class="navbar-nav ml-auto">
@@ -30,7 +30,7 @@
         *ngIf="isLoggedIn">
       <a class="nav-link btn"
          (click)="logOut()">Log Out</a>
-    </li> 
+    </li>
   </ul>
 </nav>
 <div class="container">
