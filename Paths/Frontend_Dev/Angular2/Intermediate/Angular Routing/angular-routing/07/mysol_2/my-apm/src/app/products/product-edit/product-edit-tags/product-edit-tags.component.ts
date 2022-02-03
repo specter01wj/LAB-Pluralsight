@@ -20,6 +20,7 @@ export class ProductEditTagsComponent implements OnInit {
       this.product = data['resolvedData'].product;
 
 
+
     });
   }
 
