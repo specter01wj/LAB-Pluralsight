@@ -3,6 +3,7 @@ import { Router, Event, NavigationStart, NavigationEnd, NavigationError, Navigat
 import { slideInAnimation } from './api/app.animation';
 
 import { AuthService } from './service/auth.service';
+import { MessageService } from './service/message.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ export class AppComponent {
   loading = true;
 
   constructor(private authService: AuthService,
-              private router: Router) {
+              private router: Router,
+              private messageService: MessageService) {
     router.events.subscribe((routerEvent: Event) => {
       this.checkRouterEvent(routerEvent);
     });
@@ -43,6 +45,15 @@ export class AppComponent {
         routerEvent instanceof NavigationError) {
       this.loading = false;
     }
+  }
+
+  displayMessages(): void {
+    this.router.navigate([{ outlets: { popup: ['messages'] } }]);
+    this.messageService.isDisplayed = true;
+  }
+
+  hideMessages(): void {
+    this.messageService.isDisplayed = false;
   }
 
   logOut(): void {
