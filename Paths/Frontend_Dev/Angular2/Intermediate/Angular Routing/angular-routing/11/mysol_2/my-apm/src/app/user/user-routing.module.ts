@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
+import { SharedModule } from '../shared/shared.module';
+
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
@@ -15,10 +17,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [LoginComponent],
   imports: [
     CommonModule,
     FormsModule,
+    SharedModule,
     RouterModule.forChild(routes)
   ]
 })
