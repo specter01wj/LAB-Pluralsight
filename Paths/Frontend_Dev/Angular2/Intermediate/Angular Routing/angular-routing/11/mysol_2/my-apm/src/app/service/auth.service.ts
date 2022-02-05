@@ -8,6 +8,7 @@ import { MessageService } from './message.service';
 })
 export class AuthService {
 	currentUser: User | undefined | null;
+  redirectUrl: string;
 
   constructor(private messageService: MessageService) { }
 
