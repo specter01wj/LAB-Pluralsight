@@ -10,6 +10,7 @@ import { ProductRoutingModule } from './product-routing.module';
     CommonModule,
     FormsModule,
     ProductRoutingModule
+
   ]
 })
 export class ProductModule { }
