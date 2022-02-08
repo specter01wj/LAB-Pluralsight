@@ -24,6 +24,7 @@ export class AuthService {
             userName: userName,
 
 
+
             isAdmin: false
         };
     }
