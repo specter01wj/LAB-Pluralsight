@@ -23,6 +23,7 @@ export class AuthService {
             id: 2,
             userName: userName,
 
+
             isAdmin: false
         };
     }
