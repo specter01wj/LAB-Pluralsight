@@ -92,29 +92,6 @@ export class ProductService {
           description: '',
           starRating: 0,
           imageUrl: ''
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       };
   }
 
