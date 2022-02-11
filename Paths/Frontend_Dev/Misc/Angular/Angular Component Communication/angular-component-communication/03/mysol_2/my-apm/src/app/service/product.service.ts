@@ -49,6 +49,7 @@ export class ProductService {
       }
       console.error(err);
 
+
       return throwError(errorMessage);
   }
 
