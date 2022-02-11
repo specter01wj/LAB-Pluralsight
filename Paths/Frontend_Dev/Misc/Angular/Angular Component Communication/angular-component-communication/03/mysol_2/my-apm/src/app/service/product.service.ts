@@ -48,6 +48,7 @@ export class ProductService {
           errorMessage = `Backend returned code ${err.status}, body was: ${err.error}`;
       }
       console.error(err);
+
       return throwError(errorMessage);
   }
 
