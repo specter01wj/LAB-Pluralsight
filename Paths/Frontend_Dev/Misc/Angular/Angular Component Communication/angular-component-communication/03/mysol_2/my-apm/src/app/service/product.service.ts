@@ -28,6 +28,7 @@ export class ProductService {
           return of(this.initializeProduct());
 
 
+
       }
       const url = `${this.productsUrl}/${id}`;
       return this.http.get<IProduct>(url)
