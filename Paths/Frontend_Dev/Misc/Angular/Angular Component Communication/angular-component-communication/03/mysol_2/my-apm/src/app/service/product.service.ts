@@ -102,6 +102,7 @@ export class ProductService {
                           tap(data => console.log('updateProduct: ' + product.id)),
                           catchError(this.handleError)
 
+
                       );
   }
 
