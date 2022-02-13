@@ -101,20 +101,6 @@ export class ProductService {
                       .pipe(
                           tap(data => console.log('updateProduct: ' + product.id)),
                           catchError(this.handleError)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                       );
   }
 
