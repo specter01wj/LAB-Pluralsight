@@ -69,6 +69,7 @@ export class ProductService {
       }
       return this.updateProduct(product, headers);
 
+
   }
 
   private createProduct(product: IProduct, headers: HttpHeaders): Observable<IProduct> {
