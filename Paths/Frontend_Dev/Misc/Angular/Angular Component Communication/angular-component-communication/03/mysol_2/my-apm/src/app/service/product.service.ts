@@ -68,24 +68,6 @@ export class ProductService {
           return this.createProduct(product, headers);
       }
       return this.updateProduct(product, headers);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   }
 
   private createProduct(product: IProduct, headers: HttpHeaders): Observable<IProduct> {
