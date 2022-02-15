@@ -15,6 +15,7 @@ export class AuthService {
         return !!this.currentUser;
 
 
+
     }
 
     login(userName: string, password: string): void {
