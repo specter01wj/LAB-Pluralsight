@@ -13,26 +13,6 @@ export class AuthService {
 
     isLoggedIn(): boolean {
         return !!this.currentUser;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
     login(userName: string, password: string): void {
