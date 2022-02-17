@@ -17,6 +17,7 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     LoginComponent
 
+
   ],
   providers: [
     AuthService,
