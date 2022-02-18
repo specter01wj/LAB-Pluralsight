@@ -16,6 +16,7 @@ import { SelectiveStrategy } from './service/selective-strategy.service';
       canActivate: [AuthGuard],
 
 
+
       data: { preload: true },
       loadChildren: () =>
         import('./products/product.module').then(m => m.ProductModule)
