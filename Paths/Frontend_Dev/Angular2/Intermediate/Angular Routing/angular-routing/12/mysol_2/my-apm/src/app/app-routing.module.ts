@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'welcome', component: WelcomeComponent },
   {
     path: 'products',
-    canActivate: [AuthGuard],
+    canLoad: [AuthGuard],
     loadChildren: () =>
       import('./products/product.module').then(m => m.ProductModule)
   },
