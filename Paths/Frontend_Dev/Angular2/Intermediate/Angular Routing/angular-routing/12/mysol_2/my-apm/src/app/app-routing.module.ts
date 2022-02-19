@@ -11,6 +11,7 @@ import { SelectiveStrategy } from './service/selective-strategy.service';
 @NgModule({
   imports: [RouterModule.forRoot([
     { path: 'welcome', component: WelcomeComponent },
+
     {
       path: 'products',
       canActivate: [AuthGuard],
