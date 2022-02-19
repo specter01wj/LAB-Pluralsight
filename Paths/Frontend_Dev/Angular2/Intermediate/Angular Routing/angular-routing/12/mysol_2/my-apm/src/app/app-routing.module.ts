@@ -12,6 +12,7 @@ import { SelectiveStrategy } from './service/selective-strategy.service';
   imports: [RouterModule.forRoot([
     { path: 'welcome', component: WelcomeComponent },
 
+
     {
       path: 'products',
       canActivate: [AuthGuard],
