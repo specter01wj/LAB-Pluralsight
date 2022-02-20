@@ -22,6 +22,7 @@ import { SelectiveStrategy } from './service/selective-strategy.service';
     { path: '**', component: PageNotFoundComponent }
 
 
+
   ], { preloadingStrategy: SelectiveStrategy })],
   exports: [RouterModule]
 })
