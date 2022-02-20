@@ -20,6 +20,7 @@ import { SelectiveStrategy } from './service/selective-strategy.service';
     },
     { path: '', redirectTo: 'welcome', pathMatch: 'full' },
     { path: '**', component: PageNotFoundComponent }
+
   ], { preloadingStrategy: SelectiveStrategy })],
   exports: [RouterModule]
 })
