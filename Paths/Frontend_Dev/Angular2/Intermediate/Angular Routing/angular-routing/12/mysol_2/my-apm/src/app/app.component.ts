@@ -21,6 +21,7 @@ export class AppComponent {
     router.events.subscribe((routerEvent: Event) => {
       this.checkRouterEvent(routerEvent);
 
+
     });
   }
 
