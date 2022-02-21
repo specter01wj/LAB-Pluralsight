@@ -20,6 +20,7 @@ export class AppComponent {
               private messageService: MessageService) {
     router.events.subscribe((routerEvent: Event) => {
       this.checkRouterEvent(routerEvent);
+
     });
   }
 
