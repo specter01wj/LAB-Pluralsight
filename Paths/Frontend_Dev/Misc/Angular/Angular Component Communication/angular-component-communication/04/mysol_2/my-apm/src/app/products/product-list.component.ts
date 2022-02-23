@@ -40,6 +40,7 @@ export class ProductListComponent implements OnInit {
 
 
 
+
             this.performFilter(this.listFilter);
         },
         (error: any) => this.errorMessage = <any>error
