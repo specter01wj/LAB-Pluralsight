@@ -52,6 +52,7 @@ export class ProductListComponent implements OnInit {
       this.showImage = !this.showImage;
 
 
+
   }
 
   performFilter(filterBy?: string): void {
