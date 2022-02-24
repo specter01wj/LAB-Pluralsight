@@ -3,6 +3,7 @@ import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, Vie
 import { ProductService } from '../service/product.service';
 
 import { IProduct } from '../interface/product';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-product-list',
@@ -12,6 +13,7 @@ import { IProduct } from '../interface/product';
 export class ProductListComponent implements OnInit, AfterViewInit {
 	pageTitle: string = 'Product List';
   // listFilter: string;
+  filterName: string;
   showImage: boolean;
 
   imageWidth: number = 50;
@@ -19,7 +21,8 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   errorMessage: string;
 
   @ViewChild('filterElement') filterElementRef: ElementRef;
-  @ViewChildren('filterElement, nameElement') inputElementRefs: QueryList<ElementRef>;
+  // @ViewChildren('filterElement, nameElement') inputElementRefs: QueryList<ElementRef>;
+  @ViewChildren(NgModel) inputElementRefs: QueryList<ElementRef>;
 
   private _listFilter: string;
   get listFilter(): string {
@@ -38,6 +41,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.filterElementRef.nativeElement.focus();
+    console.log(this.inputElementRefs);
   }
 
   ngOnInit(): void {
