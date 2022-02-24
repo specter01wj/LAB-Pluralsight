@@ -4,6 +4,7 @@ import { ProductService } from '../service/product.service';
 
 import { IProduct } from '../interface/product';
 import { NgModel } from '@angular/forms';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-product-list',
@@ -20,7 +21,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   errorMessage: string;
 
   @ViewChild('filterElement') filterElementRef: ElementRef;
-
+  private _sub: Subscription;
   private _filterInput: NgModel;
 
   get filterInput(): NgModel {
