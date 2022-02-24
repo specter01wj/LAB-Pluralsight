@@ -12,8 +12,7 @@ import { NgModel } from '@angular/forms';
 })
 export class ProductListComponent implements OnInit, AfterViewInit {
 	pageTitle: string = 'Product List';
-  // listFilter: string;
-  filterName: string;
+  listFilter: string;
   showImage: boolean;
 
   imageWidth: number = 50;
@@ -21,8 +20,9 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   errorMessage: string;
 
   @ViewChild('filterElement') filterElementRef: ElementRef;
+  @ViewChild(NgModel) filterInput: NgModel;
 
-  private _listFilter: string;
+  /* private _listFilter: string;
   get listFilter(): string {
       return this._listFilter;
   }
@@ -30,7 +30,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   set listFilter(value: string) {
       this._listFilter = value;
       this.performFilter(this.listFilter);
-  }
+  } */
 
   filteredProducts: IProduct[];
   products: IProduct[];
