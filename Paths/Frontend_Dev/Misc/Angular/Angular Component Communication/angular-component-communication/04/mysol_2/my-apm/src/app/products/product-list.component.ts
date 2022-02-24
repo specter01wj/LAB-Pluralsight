@@ -21,8 +21,6 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   errorMessage: string;
 
   @ViewChild('filterElement') filterElementRef: ElementRef;
-  // @ViewChildren('filterElement, nameElement') inputElementRefs: QueryList<ElementRef>;
-  @ViewChildren(NgModel) inputElementRefs: QueryList<ElementRef>;
 
   private _listFilter: string;
   get listFilter(): string {
@@ -41,7 +39,6 @@ export class ProductListComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.filterElementRef.nativeElement.focus();
-    console.log(this.inputElementRefs);
   }
 
   ngOnInit(): void {
