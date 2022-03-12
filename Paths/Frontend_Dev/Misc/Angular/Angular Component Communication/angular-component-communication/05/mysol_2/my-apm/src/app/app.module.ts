@@ -20,7 +20,8 @@ import { UserModule } from './user/user.module';
   declarations: [
     AppComponent,
     ShellComponent,
-    
+
+
     MenuComponent,
     WelcomeComponent,
     PageNotFoundComponent
