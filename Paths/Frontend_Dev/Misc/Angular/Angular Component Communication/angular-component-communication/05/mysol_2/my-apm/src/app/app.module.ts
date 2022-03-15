@@ -32,11 +32,6 @@ import { UserModule } from './user/user.module';
     UserModule,
   ],
   providers: [],
-
-
-
-
-
   bootstrap: [AppComponent]
 })
 export class AppModule { }
