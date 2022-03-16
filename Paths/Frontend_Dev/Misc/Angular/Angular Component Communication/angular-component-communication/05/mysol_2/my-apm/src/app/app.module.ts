@@ -19,11 +19,6 @@ import { UserModule } from './user/user.module';
 @NgModule({
   declarations: [
     AppComponent,
-
-
-
-
-
     ShellComponent,
     MenuComponent,
     WelcomeComponent,
