@@ -21,6 +21,7 @@ import { UserModule } from './user/user.module';
     AppComponent,
     ShellComponent,
 
+
     MenuComponent,
     WelcomeComponent,
     PageNotFoundComponent
