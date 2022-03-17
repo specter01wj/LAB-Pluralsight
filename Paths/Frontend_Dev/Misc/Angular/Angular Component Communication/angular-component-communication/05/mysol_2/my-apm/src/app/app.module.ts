@@ -30,6 +30,7 @@ import { UserModule } from './user/user.module';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(ProductData),
 
+
     UserModule,
   ],
   providers: [],
