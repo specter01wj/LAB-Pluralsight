@@ -29,11 +29,6 @@ export class ProductListComponent implements OnInit, AfterViewInit {
 
   constructor(private productService: ProductService) { }
 
-  ngAfterViewInit(): void {
-    if(this.filterElementRef) {
-      this.filterElementRef.nativeElement.focus();
-    }
-  }
 
   ngOnInit(): void {
   	this.productService.getProducts().subscribe(
