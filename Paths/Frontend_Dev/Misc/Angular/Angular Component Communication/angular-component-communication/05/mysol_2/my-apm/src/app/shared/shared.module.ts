@@ -6,7 +6,10 @@ import { StarComponent } from './star.component';
 import { CriteriaComponent } from './criteria/criteria.component';
 
 @NgModule({
-  declarations: [StarComponent, CriteriaComponent],
+  declarations: [
+    StarComponent,
+    CriteriaComponent
+  ],
   imports: [
     CommonModule,
     FormsModule
