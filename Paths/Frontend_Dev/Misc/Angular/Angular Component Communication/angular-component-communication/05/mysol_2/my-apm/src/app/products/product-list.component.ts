@@ -19,7 +19,6 @@ export class ProductListComponent implements OnInit {
   imageMargin: number = 2;
   errorMessage: string;
 
-
   filteredProducts: IProduct[];
   products: IProduct[];
 
@@ -30,15 +29,10 @@ export class ProductListComponent implements OnInit {
   	this.productService.getProducts().subscribe(
         (products: IProduct[]) => {
             this.products = products;
-            this.performFilter(this.listFilter);
+            this.performFilter();
         },
         (error: any) => this.errorMessage = <any>error
     );
-  }
-
-  onFilterChange(filter: string): void {
-    this.listFilter = filter;
-    this.performFilter(this.listFilter);
   }
 
   toggleImage(): void {
