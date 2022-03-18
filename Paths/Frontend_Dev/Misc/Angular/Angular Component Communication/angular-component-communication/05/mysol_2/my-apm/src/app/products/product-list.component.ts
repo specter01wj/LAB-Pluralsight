@@ -20,26 +20,9 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   imageMargin: number = 2;
   errorMessage: string;
 
-  @ViewChild('filterElement') filterElementRef: ElementRef;
+  // @ViewChild('filterElement') filterElementRef: ElementRef;
   private _sub: Subscription;
-  private _filterInput: NgModel;
-
-  get filterInput(): NgModel {
-      return this._filterInput;
-  }
-
-  @ViewChild(NgModel)
-  set filterInput(value: NgModel) {
-      this._filterInput = value;
-      if(this.filterElementRef) {
-        this.filterElementRef.nativeElement.focus();
-      }
-      if(this.filterInput && !this._sub) {
-        this._sub = this.filterInput.valueChanges.subscribe(
-          () => this.performFilter(this.listFilter)
-        );
-      }
-  }
+  @ViewChild(NgModel) filterInput: NgModel;
 
   filteredProducts: IProduct[];
   products: IProduct[];
@@ -47,10 +30,9 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   constructor(private productService: ProductService) { }
 
   ngAfterViewInit(): void {
-    // this.filterElementRef.nativeElement.focus();
-    // this.filterInput.valueChanges.subscribe(
-    //   () => this.performFilter(this.listFilter)
-    // );
+    if(this.filterElementRef) {
+      this.filterElementRef.nativeElement.focus();
+    }
   }
 
   ngOnInit(): void {
