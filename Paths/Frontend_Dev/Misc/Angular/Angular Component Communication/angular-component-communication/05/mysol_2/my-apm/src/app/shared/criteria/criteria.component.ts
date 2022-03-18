@@ -15,4 +15,10 @@ export class CriteriaComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
   }
 
+  ngAfterViewInit(): void {
+    if(this.filterElementRef) {
+      this.filterElementRef.nativeElement.focus();
+    }
+  }
+
 }
