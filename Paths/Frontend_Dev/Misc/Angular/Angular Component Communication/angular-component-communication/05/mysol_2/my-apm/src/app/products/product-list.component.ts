@@ -11,9 +11,8 @@ import { Subscription } from 'rxjs';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.less']
 })
-export class ProductListComponent implements OnInit, AfterViewInit {
+export class ProductListComponent implements OnInit {
 	pageTitle: string = 'Product List';
-  listFilter: string;
   showImage: boolean;
 
   imageWidth: number = 50;
