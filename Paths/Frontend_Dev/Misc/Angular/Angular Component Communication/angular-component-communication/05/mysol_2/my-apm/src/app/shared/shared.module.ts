@@ -16,6 +16,7 @@ import { CriteriaComponent } from './criteria/criteria.component';
   ],
   exports: [
     StarComponent,
+    CriteriaComponent,
     CommonModule,
     FormsModule
   ]
