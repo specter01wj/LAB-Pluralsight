@@ -24,6 +24,7 @@ export class CriteriaComponent implements OnInit, AfterViewInit {
 
 
 
+
     }
   }
 
