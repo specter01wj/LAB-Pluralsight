@@ -17,6 +17,7 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 
 
 
+
   styleUrls: ['./criteria.component.less']
 })
 export class CriteriaComponent implements OnInit, AfterViewInit {
