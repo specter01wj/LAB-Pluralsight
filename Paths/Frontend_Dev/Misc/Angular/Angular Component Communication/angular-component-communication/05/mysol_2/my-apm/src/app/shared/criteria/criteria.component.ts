@@ -4,6 +4,7 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
   selector: 'app-criteria',
   templateUrl: './criteria.component.html',
 
+
   styleUrls: ['./criteria.component.less']
 })
 export class CriteriaComponent implements OnInit, AfterViewInit {
