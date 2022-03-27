@@ -14,6 +14,7 @@ export class CriteriaComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
 
+
   }
 
   ngAfterViewInit(): void {
