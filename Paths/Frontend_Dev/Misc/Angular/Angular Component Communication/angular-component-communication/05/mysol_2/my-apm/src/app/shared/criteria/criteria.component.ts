@@ -13,11 +13,6 @@ export class CriteriaComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   ngOnInit(): void {
-
-
-
-
-
   }
 
   ngAfterViewInit(): void {
