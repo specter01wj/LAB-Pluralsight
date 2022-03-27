@@ -19,6 +19,7 @@ export class CriteriaComponent implements OnInit, AfterViewInit {
     if(this.filterElementRef) {
 
 
+
       this.filterElementRef.nativeElement.focus();
     }
   }
