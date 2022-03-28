@@ -47,6 +47,7 @@ export class ProductListComponent implements OnInit {
 
 
 
+
   }
 
   performFilter(filterBy?: string): void {
