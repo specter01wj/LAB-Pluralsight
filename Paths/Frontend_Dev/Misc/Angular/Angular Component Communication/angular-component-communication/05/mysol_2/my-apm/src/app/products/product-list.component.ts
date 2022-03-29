@@ -30,6 +30,7 @@ export class ProductListComponent implements OnInit {
         (products: IProduct[]) => {
             this.products = products;
 
+
             this.performFilter();
         },
         (error: any) => this.errorMessage = <any>error
