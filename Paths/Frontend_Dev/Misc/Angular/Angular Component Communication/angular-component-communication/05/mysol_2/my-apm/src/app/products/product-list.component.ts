@@ -29,10 +29,6 @@ export class ProductListComponent implements OnInit {
   	this.productService.getProducts().subscribe(
         (products: IProduct[]) => {
             this.products = products;
-
-
-
-
             this.performFilter();
         },
         (error: any) => this.errorMessage = <any>error
