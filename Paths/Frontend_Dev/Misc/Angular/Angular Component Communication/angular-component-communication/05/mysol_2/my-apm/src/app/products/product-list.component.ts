@@ -46,6 +46,7 @@ export class ProductListComponent implements OnInit {
       } else {
           this.filteredProducts = this.products;
 
+
       }
   }
 
