@@ -45,12 +45,6 @@ export class ProductListComponent implements OnInit {
               product.productName.toLocaleLowerCase().indexOf(filterBy.toLocaleLowerCase()) !== -1);
       } else {
           this.filteredProducts = this.products;
-
-
-
-
-
-
       }
   }
 
