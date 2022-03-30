@@ -7,9 +7,11 @@
         <!-- Filter by the Title   -->
         <div class='row'>
           <app-criteria class='col-md-10'
+            #filterCriteria
             [displayDetail]="includeDetail"
             [hitCount]="filteredProducts?.length">
           </app-criteria>
+          {{filterCriteria.listFilter}}
         </div>
 
         <div class='table-responsive'>
