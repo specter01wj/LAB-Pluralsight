@@ -24,6 +24,7 @@ export class CriteriaComponent implements OnInit, OnChanges, AfterViewInit {
     } else {
       this.hitMessage = 'Hits:' + this.hitCount;
 
+
     }
   }
 
