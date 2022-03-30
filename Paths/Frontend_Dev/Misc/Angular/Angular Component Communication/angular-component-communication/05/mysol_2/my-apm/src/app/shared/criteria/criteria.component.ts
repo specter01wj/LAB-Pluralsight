@@ -23,19 +23,6 @@ export class CriteriaComponent implements OnInit, OnChanges, AfterViewInit {
       this.hitMessage = 'No matches found';
     } else {
       this.hitMessage = 'Hits:' + this.hitCount;
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
   }
 
