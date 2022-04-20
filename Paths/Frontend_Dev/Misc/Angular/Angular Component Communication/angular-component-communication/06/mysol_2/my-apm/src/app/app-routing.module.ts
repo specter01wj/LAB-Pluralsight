@@ -4,20 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './user/auth-guard.service';
 
 import { ShellComponent } from './home/shell.component';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import { WelcomeComponent } from './home/welcome.component';
 import { PageNotFoundComponent } from './home/page-not-found.component';
 
