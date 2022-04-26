@@ -9,7 +9,8 @@
           <app-criteria class='col-md-10'
             #filterCriteria
             [displayDetail]="includeDetail"
-            [hitCount]="filteredProducts?.length">
+            [hitCount]="filteredProducts?.length"
+            (valueChange)='onValueChange($event)'>
           </app-criteria>
           <!-- {{filterCriteria.listFilter}} -->
         </div>
