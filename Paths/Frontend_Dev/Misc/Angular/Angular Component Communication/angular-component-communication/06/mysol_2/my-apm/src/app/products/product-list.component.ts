@@ -51,6 +51,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
       this.showImage = !this.showImage;
 
 
+
   }
 
   performFilter(filterBy?: string): void {
