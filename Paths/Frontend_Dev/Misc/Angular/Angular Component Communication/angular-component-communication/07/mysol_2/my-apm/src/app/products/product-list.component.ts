@@ -18,6 +18,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   includeDetail: boolean = true;
 
 
+
   @ViewChild('filterCriteria') filterComponent: CriteriaComponent;
   parentListFilter: string;
 
