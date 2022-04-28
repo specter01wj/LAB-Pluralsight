@@ -27,6 +27,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
 
 
 
+
   @ViewChild('filterCriteria') filterComponent: CriteriaComponent;
   parentListFilter: string;
 
