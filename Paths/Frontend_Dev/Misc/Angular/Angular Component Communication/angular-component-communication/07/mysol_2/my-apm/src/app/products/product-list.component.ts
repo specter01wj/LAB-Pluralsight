@@ -17,6 +17,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   showImage: boolean;
   includeDetail: boolean = true;
 
+
   @ViewChild('filterCriteria') filterComponent: CriteriaComponent;
   parentListFilter: string;
 
