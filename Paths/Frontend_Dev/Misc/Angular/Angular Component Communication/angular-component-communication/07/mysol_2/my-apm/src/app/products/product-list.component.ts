@@ -33,14 +33,6 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   	this.productService.getProducts().subscribe(
         (products: IProduct[]) => {
             this.products = products;
-
-
-
-
-
-
-
-
             this.performFilter(this.parentListFilter);
         },
         (error: any) => this.errorMessage = <any>error
