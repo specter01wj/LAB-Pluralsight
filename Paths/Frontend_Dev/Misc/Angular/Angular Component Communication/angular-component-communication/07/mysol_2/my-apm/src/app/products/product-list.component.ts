@@ -14,6 +14,7 @@ import { CriteriaComponent } from '../shared/criteria/criteria.component';
 
 
 
+
   styleUrls: ['./product-list.component.less']
 })
 export class ProductListComponent implements OnInit, AfterViewInit {
