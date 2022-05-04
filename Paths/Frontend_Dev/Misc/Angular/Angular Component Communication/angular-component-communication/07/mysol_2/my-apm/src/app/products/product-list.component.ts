@@ -56,6 +56,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
 
 
 
+
   }
 
   ngAfterViewInit(): void {
