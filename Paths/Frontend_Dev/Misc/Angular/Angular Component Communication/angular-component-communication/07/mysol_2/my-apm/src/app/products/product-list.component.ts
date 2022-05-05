@@ -59,6 +59,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
           this.filteredProducts = this.products;
 
 
+
       }
   }
 
