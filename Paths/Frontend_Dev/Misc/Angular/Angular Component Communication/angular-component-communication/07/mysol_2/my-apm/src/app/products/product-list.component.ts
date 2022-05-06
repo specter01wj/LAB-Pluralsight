@@ -51,6 +51,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
 
 
 
+
   }
 
   toggleImage(): void {
