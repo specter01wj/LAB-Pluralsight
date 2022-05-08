@@ -49,20 +49,6 @@ export class ProductListComponent implements OnInit, AfterViewInit {
 
   toggleImage(): void {
       this.showImage = !this.showImage;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   }
 
   performFilter(filterBy?: string): void {
