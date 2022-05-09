@@ -17,7 +17,8 @@ export class ProductListComponent implements OnInit, AfterViewInit {
 	pageTitle: string = 'Product List';
   // showImage: boolean;
   includeDetail: boolean = true;
-  @ViewChild('filterCriteria') filterComponent: CriteriaComponent;
+  // @ViewChild('filterCriteria') filterComponent: CriteriaComponent;
+  @ViewChild(CriteriaComponent) filterComponent: CriteriaComponent;
   parentListFilter: string;
 
   imageWidth: number = 50;
@@ -42,13 +43,15 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   	this.productService.getProducts().subscribe(
         (products: IProduct[]) => {
             this.products = products;
-            this.performFilter(this.parentListFilter);
+            // this.performFilter(this.parentListFilter);
+            this.filterComponent.listFilter = this.productParameterService.filterBy;
         },
         (error: any) => this.errorMessage = <any>error
     );
   }
 
   onValueChange(value: string): void {
+    this.productParameterService.filterBy = value;
     this.performFilter(value);
   }
 
