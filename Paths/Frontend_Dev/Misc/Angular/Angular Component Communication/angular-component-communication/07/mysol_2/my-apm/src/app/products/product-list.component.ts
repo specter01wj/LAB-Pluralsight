@@ -24,6 +24,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   imageWidth: number = 50;
   imageMargin: number = 2;
 
+
   errorMessage: string;
 
   filteredProducts: IProduct[];
