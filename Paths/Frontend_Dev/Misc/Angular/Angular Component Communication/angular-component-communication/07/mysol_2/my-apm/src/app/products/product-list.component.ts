@@ -29,6 +29,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
 
 
 
+
   errorMessage: string;
 
   filteredProducts: IProduct[];
