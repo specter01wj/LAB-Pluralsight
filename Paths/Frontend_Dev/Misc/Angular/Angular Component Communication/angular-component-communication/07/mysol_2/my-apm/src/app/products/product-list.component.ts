@@ -47,10 +47,6 @@ export class ProductListComponent implements OnInit, AfterViewInit {
             this.filterComponent.listFilter = this.productParameterService.filterBy;
         },
         (error: any) => this.errorMessage = <any>error
-
-
-
-
     );
   }
 
