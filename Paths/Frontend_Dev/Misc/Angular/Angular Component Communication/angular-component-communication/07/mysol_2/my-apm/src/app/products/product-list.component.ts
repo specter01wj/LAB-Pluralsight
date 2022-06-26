@@ -59,6 +59,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
     this.parentListFilter = this.filterComponent.listFilter;
 
 
+
   }
 
   toggleImage(): void {
