@@ -81,6 +81,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
 
 
 
+
   }
 
   performFilter(filterBy?: string): void {
