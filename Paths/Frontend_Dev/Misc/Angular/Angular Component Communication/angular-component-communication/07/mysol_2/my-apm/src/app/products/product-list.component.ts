@@ -58,6 +58,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.parentListFilter = this.filterComponent.listFilter;
 
+
   }
 
   toggleImage(): void {
