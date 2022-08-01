@@ -45,6 +45,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
 
 
 
+
   }
   set showImage(value: boolean) {
     this.productParameterService.showImage = value;
