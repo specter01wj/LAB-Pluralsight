@@ -43,6 +43,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   	this.productService.getProducts().subscribe(
         (products: IProduct[]) => {
             this.products = products;
+
             // this.performFilter(this.parentListFilter);
             this.filterComponent.listFilter = this.productParameterService.filterBy;
         },
