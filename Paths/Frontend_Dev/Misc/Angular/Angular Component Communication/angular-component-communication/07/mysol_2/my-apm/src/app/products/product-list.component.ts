@@ -41,6 +41,8 @@ export class ProductListComponent implements OnInit, AfterViewInit {
 
 
 
+
+
   }
 
   constructor(private productService: ProductService,
