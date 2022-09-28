@@ -53,7 +53,8 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   onValueChange(value: string): void {
     this.productParameterService.filterBy = value;
     this.performFilter(value);
-    
+
+
   }
 
   ngAfterViewInit(): void {
