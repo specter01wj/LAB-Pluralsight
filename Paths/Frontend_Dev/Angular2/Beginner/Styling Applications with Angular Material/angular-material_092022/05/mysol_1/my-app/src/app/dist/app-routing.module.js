@@ -12,7 +12,7 @@ var router_1 = require("@angular/router");
 var routes = [
     // { path: 'contactmanager', loadChildren: () => import('./contactmanager/contactmanager.module').then(m => m.ContactmanagerModule) },
     { path: 'demo', loadChildren: function () { return Promise.resolve().then(function () { return require('./demo/demo.module'); }).then(function (m) { return m.DemoModule; }); } },
-    { path: '**', redirectTo: 'contactmanager' }
+    { path: '**', redirectTo: 'demo' }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
