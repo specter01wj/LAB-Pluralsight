@@ -6,29 +6,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.AppModule = void 0;
+exports.DemoModule = void 0;
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var app_routing_module_1 = require("./app-routing.module");
-var app_component_1 = require("./app.component");
-var animations_1 = require("@angular/platform-browser/animations");
-var AppModule = /** @class */ (function () {
-    function AppModule() {
+var common_1 = require("@angular/common");
+var material_module_1 = require("../shared/material.module");
+var forms_1 = require("@angular/forms");
+var demo_routing_module_1 = require("./demo-routing.module");
+var buttons_component_1 = require("./buttons/buttons.component");
+var DemoModule = /** @class */ (function () {
+    function DemoModule() {
     }
-    AppModule = __decorate([
+    DemoModule = __decorate([
         core_1.NgModule({
             declarations: [
-                app_component_1.AppComponent
+                buttons_component_1.ButtonsComponent
             ],
             imports: [
-                platform_browser_1.BrowserModule,
-                app_routing_module_1.AppRoutingModule,
-                animations_1.BrowserAnimationsModule,
-            ],
-            providers: [],
-            bootstrap: [app_component_1.AppComponent]
+                common_1.CommonModule,
+                material_module_1.MaterialModule,
+                forms_1.FormsModule,
+                demo_routing_module_1.DemoRoutingModule
+            ]
         })
-    ], AppModule);
-    return AppModule;
+    ], DemoModule);
+    return DemoModule;
 }());
-exports.AppModule = AppModule;
+exports.DemoModule = DemoModule;
