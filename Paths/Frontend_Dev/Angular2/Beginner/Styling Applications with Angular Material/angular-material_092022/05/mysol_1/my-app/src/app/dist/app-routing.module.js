@@ -10,9 +10,9 @@ exports.AppRoutingModule = void 0;
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var routes = [
-    // { path: 'contactmanager', loadChildren: () => import('./contactmanager/contactmanager.module').then(m => m.ContactmanagerModule) },
+    { path: 'contactmanager', loadChildren: function () { return Promise.resolve().then(function () { return require('./contactmanager/contactmanager.module'); }).then(function (m) { return m.ContactmanagerModule; }); } },
     { path: 'demo', loadChildren: function () { return Promise.resolve().then(function () { return require('./demo/demo.module'); }).then(function (m) { return m.DemoModule; }); } },
-    { path: '**', redirectTo: 'demo' }
+    { path: '**', redirectTo: 'contactmanager' }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
