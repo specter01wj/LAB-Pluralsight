@@ -10,9 +10,10 @@ exports.DemoRoutingModule = void 0;
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var buttons_component_1 = require("./buttons/buttons.component");
+var flexbox_component_1 = require("./flexbox/flexbox.component");
 var routes = [
     { path: 'buttons', component: buttons_component_1.ButtonsComponent },
-    // { path: 'flexbox', component: FlexboxComponent },
+    { path: 'flexbox', component: flexbox_component_1.FlexboxComponent },
     { path: '**', redirectTo: 'buttons' }
 ];
 var DemoRoutingModule = /** @class */ (function () {

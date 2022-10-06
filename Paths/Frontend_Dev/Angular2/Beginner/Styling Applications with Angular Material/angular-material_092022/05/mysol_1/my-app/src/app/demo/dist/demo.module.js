@@ -10,20 +10,24 @@ exports.DemoModule = void 0;
 var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
 var material_module_1 = require("../shared/material.module");
+var flex_layout_1 = require("@angular/flex-layout");
 var forms_1 = require("@angular/forms");
 var demo_routing_module_1 = require("./demo-routing.module");
 var buttons_component_1 = require("./buttons/buttons.component");
+var flexbox_component_1 = require("./flexbox/flexbox.component");
 var DemoModule = /** @class */ (function () {
     function DemoModule() {
     }
     DemoModule = __decorate([
         core_1.NgModule({
             declarations: [
-                buttons_component_1.ButtonsComponent
+                buttons_component_1.ButtonsComponent,
+                flexbox_component_1.FlexboxComponent
             ],
             imports: [
                 common_1.CommonModule,
                 material_module_1.MaterialModule,
+                flex_layout_1.FlexLayoutModule,
                 forms_1.FormsModule,
                 demo_routing_module_1.DemoRoutingModule
             ]
