@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'flexbox', component: FlexboxComponent },
 
 
+
   { path: '**', redirectTo: 'buttons' }
 ];
 
