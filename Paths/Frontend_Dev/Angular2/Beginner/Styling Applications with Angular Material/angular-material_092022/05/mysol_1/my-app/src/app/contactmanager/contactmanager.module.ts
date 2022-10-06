@@ -5,13 +5,15 @@ import { ContactmanagerRoutingModule } from './contactmanager-routing.module';
 import { ContactmanagerComponent } from './contactmanager.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 
 @NgModule({
   declarations: [
     ContactmanagerComponent,
     ToolbarComponent,
-    MainContentComponent
+    MainContentComponent,
+    SidenavComponent
   ],
   imports: [
     CommonModule,
