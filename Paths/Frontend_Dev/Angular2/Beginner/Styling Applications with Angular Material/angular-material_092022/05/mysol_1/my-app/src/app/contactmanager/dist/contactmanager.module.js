@@ -12,13 +12,22 @@ var common_1 = require("@angular/common");
 var material_module_1 = require("../shared/material.module");
 var flex_layout_1 = require("@angular/flex-layout");
 var forms_1 = require("@angular/forms");
+var contactmanager_component_1 = require("./contactmanager/contactmanager.component");
+var toolbar_component_1 = require("./components/toolbar/toolbar.component");
+var main_content_component_1 = require("./components/main-content/main-content.component");
+var sidenav_component_1 = require("./components/sidenav/sidenav.component");
 var contactmanager_routing_module_1 = require("./contactmanager-routing.module");
 var ContactmanagerModule = /** @class */ (function () {
     function ContactmanagerModule() {
     }
     ContactmanagerModule = __decorate([
         core_1.NgModule({
-            declarations: [],
+            declarations: [
+                contactmanager_component_1.ContactmanagerComponent,
+                toolbar_component_1.ToolbarComponent,
+                main_content_component_1.MainContentComponent,
+                sidenav_component_1.SidenavComponent
+            ],
             imports: [
                 common_1.CommonModule,
                 material_module_1.MaterialModule,

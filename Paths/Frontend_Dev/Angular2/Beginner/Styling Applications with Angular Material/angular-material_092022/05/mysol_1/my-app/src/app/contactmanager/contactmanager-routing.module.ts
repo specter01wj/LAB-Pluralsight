@@ -17,12 +17,6 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
-    ContactmanagerComponent,
-    ToolbarComponent,
-    MainContentComponent,
-    SidenavComponent
-  ],
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })

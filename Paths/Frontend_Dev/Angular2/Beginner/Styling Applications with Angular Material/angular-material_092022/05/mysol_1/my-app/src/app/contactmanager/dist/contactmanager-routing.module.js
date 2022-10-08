@@ -10,9 +10,7 @@ exports.ContactmanagerRoutingModule = void 0;
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var contactmanager_component_1 = require("./contactmanager/contactmanager.component");
-var toolbar_component_1 = require("./components/toolbar/toolbar.component");
 var main_content_component_1 = require("./components/main-content/main-content.component");
-var sidenav_component_1 = require("./components/sidenav/sidenav.component");
 var routes = [
     {
         path: '', component: contactmanager_component_1.ContactmanagerComponent,
@@ -27,12 +25,6 @@ var ContactmanagerRoutingModule = /** @class */ (function () {
     }
     ContactmanagerRoutingModule = __decorate([
         core_1.NgModule({
-            declarations: [
-                contactmanager_component_1.ContactmanagerComponent,
-                toolbar_component_1.ToolbarComponent,
-                main_content_component_1.MainContentComponent,
-                sidenav_component_1.SidenavComponent
-            ],
             imports: [router_1.RouterModule.forChild(routes)],
             exports: [router_1.RouterModule]
         })
