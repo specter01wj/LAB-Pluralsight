@@ -19,19 +19,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     ContactmanagerComponent,
-
-
-
-
-
-
-
-
-
-
-
-
-
     ToolbarComponent,
     MainContentComponent,
     SidenavComponent
