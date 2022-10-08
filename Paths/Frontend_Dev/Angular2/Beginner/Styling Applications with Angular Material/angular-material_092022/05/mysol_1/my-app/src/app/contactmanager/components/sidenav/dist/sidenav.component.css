@@ -9,7 +9,6 @@
 .app-sidenav-content {
   display: flex;
   height: 100%;
-
   flex-direction: column;
 }
 
@@ -18,5 +17,5 @@
 }
 
 .wrapper {
-    margin: 50px;
+  margin: 50px;
 }
