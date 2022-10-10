@@ -12,7 +12,7 @@ var SMALL_WIDTH_BREAKPOINT = 720;
 var SidenavComponent = /** @class */ (function () {
     function SidenavComponent(breakpointObserver) {
         this.breakpointObserver = breakpointObserver;
-        this.isScreenSmall = false;
+        this.isScreenSmall = true;
     }
     SidenavComponent.prototype.ngOnInit = function () {
         var _this = this;

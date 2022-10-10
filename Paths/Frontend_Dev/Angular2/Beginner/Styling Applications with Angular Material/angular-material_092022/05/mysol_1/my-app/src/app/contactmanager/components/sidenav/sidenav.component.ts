@@ -9,7 +9,7 @@ const SMALL_WIDTH_BREAKPOINT = 720;
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
-  public isScreenSmall: boolean = false;
+  public isScreenSmall: boolean = true;
 
   constructor(private breakpointObserver: BreakpointObserver) { }
 
