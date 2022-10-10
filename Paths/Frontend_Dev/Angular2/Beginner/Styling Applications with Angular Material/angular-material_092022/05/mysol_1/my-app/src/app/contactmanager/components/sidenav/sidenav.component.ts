@@ -20,6 +20,7 @@ export class SidenavComponent implements OnInit {
         this.isScreenSmall = state.matches;
 
 
+
       });
   }
 
