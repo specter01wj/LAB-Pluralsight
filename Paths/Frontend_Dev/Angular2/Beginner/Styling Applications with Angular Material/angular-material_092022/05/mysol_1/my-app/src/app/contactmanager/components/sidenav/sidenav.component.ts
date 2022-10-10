@@ -19,6 +19,7 @@ export class SidenavComponent implements OnInit {
       .subscribe((state: BreakpointState) => {
         this.isScreenSmall = state.matches;
 
+
       });
   }
 
