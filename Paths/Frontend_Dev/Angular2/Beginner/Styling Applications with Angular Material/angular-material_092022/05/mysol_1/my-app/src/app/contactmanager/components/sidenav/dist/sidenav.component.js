@@ -8,11 +8,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.SidenavComponent = void 0;
 var core_1 = require("@angular/core");
+var SMALL_WIDTH_BREAKPOINT = 720;
 var SidenavComponent = /** @class */ (function () {
     function SidenavComponent(breakpointObserver) {
         this.breakpointObserver = breakpointObserver;
+        this.isScreenSmall = false;
     }
     SidenavComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.breakpointObserver
+            .observe(["(max-width: " + SMALL_WIDTH_BREAKPOINT + "px)"])
+            .subscribe(function (state) {
+            _this.isScreenSmall = state.matches;
+        });
     };
     SidenavComponent = __decorate([
         core_1.Component({
