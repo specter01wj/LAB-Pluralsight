@@ -18,10 +18,6 @@ export class SidenavComponent implements OnInit {
       .observe([ `(max-width: ${SMALL_WIDTH_BREAKPOINT}px)` ])
       .subscribe((state: BreakpointState) => {
         this.isScreenSmall = state.matches;
-
-
-
-
       });
   }
 
