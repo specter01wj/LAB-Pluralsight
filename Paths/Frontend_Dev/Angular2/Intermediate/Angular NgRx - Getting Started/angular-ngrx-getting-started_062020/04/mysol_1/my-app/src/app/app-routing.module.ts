@@ -1,7 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { AuthGuard } from './user/auth-guard.service';
+
+import { ShellComponent } from './home/shell.component';
+import { WelcomeComponent } from './home/welcome.component';
+import { PageNotFoundComponent } from './home/page-not-found.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: ShellComponent,
+    children: [
+      { path: 'welcome', component: WelcomeComponent },
+      {
+        path: 'products',
+        // canActivate: [AuthGuard],
+        loadChildren: () =>
+          import('./products/product.module').then(m => m.ProductModule)
+      },
+      { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+    ]
+  },
+  { path: '**', component: PageNotFoundComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
