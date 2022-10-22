@@ -12,6 +12,7 @@ const routes: Routes = [
     path: '',
     component: ShellComponent,
 
+
     children: [
       { path: 'welcome', component: WelcomeComponent },
       {
