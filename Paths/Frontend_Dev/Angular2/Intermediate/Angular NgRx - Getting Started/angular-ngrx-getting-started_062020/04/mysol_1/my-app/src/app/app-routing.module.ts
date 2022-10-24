@@ -20,16 +20,6 @@ const routes: Routes = [
           import('./products/product.module').then(m => m.ProductModule)
       },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-
-
-
-
-
-
-
-
-
-
     ]
   },
   { path: '**', component: PageNotFoundComponent }
