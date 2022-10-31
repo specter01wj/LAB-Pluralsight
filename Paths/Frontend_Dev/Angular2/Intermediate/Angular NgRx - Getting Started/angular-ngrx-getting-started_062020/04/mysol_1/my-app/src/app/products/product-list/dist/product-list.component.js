@@ -21,6 +21,11 @@ var ProductListComponent = /** @class */ (function () {
             next: function (products) { return _this.products = products; },
             error: function (err) { return _this.errorMessage = err; }
         });
+        this.store.select('products').subscribe(function (products) {
+            if (products) {
+                _this.displayCode = products.showProductCode;
+            }
+        });
     };
     ProductListComponent.prototype.ngOnDestroy = function () {
         this.sub.unsubscribe();

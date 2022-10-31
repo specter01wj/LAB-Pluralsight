@@ -14,6 +14,6 @@ exports.__esModule = true;
 exports.productReducer = void 0;
 var store_1 = require("@ngrx/store");
 exports.productReducer = store_1.createReducer({ showProductCode: true }, store_1.on(store_1.createAction('[Product] Toggle Product Code'), function (state) {
-    console.log('original state: ' + JSON.stringify(state));
+    // console.log('original state: ' + JSON.stringify(state));
     return __assign(__assign({}, state), { showProductCode: !state.showProductCode });
 }));
