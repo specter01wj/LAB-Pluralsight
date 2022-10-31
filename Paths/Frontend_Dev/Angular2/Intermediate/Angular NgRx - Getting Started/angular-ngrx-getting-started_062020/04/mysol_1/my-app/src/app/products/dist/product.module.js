@@ -14,6 +14,7 @@ var product_shell_component_1 = require("./product-shell/product-shell.component
 var product_list_component_1 = require("./product-list/product-list.component");
 var product_edit_component_1 = require("./product-edit/product-edit.component");
 var store_1 = require("@ngrx/store");
+var product_reducer_1 = require("./state/product.reducer");
 var productRoutes = [
     { path: '', component: product_shell_component_1.ProductShellComponent }
 ];
@@ -25,7 +26,7 @@ var ProductModule = /** @class */ (function () {
             imports: [
                 shared_module_1.SharedModule,
                 router_1.RouterModule.forChild(productRoutes),
-                store_1.StoreModule.forFeature('products', {})
+                store_1.StoreModule.forFeature('products', product_reducer_1.productReducer)
             ],
             declarations: [
                 product_shell_component_1.ProductShellComponent,

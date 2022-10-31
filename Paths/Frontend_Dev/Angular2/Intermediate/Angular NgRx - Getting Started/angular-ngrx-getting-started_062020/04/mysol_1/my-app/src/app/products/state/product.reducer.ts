@@ -1,4 +1,3 @@
-/* NgRx */
 import { createReducer, on, createAction } from '@ngrx/store';
 
 export const productReducer = createReducer(
