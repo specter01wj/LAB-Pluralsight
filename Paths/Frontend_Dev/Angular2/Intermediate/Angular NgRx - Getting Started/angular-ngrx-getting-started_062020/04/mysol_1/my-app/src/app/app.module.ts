@@ -29,6 +29,7 @@ import { StoreModule } from '@ngrx/store';
     HttpClientInMemoryWebApiModule.forRoot(ProductData),
     UserModule,
     AppRoutingModule,
+
     StoreModule.forRoot({}, {}),
   ],
   providers: [],

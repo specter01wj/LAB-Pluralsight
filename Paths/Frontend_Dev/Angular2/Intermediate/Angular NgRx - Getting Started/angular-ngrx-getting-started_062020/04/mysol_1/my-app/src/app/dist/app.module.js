@@ -19,6 +19,7 @@ var menu_component_1 = require("./home/menu.component");
 var welcome_component_1 = require("./home/welcome.component");
 var page_not_found_component_1 = require("./home/page-not-found.component");
 var user_module_1 = require("./user/user.module");
+var store_1 = require("@ngrx/store");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -37,6 +38,7 @@ var AppModule = /** @class */ (function () {
                 angular_in_memory_web_api_1.HttpClientInMemoryWebApiModule.forRoot(product_data_1.ProductData),
                 user_module_1.UserModule,
                 app_routing_module_1.AppRoutingModule,
+                store_1.StoreModule.forRoot({}, {}),
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]
