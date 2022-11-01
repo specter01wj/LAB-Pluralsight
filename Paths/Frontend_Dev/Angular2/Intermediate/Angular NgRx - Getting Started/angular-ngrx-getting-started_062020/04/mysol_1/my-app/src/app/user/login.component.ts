@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
       const userName = loginForm.form.value.userName;
 
 
+
       const password = loginForm.form.value.password;
       this.authService.login(userName, password);
 
