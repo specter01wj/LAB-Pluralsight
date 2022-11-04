@@ -16,6 +16,7 @@ const userRoutes: Routes = [
   imports: [
     SharedModule,
     RouterModule.forChild(userRoutes),
+
     StoreModule.forFeature('users', userReducer)
   ],
   declarations: [
