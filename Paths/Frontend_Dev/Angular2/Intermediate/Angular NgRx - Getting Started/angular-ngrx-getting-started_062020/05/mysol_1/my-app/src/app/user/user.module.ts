@@ -18,6 +18,7 @@ const userRoutes: Routes = [
     RouterModule.forChild(userRoutes),
     StoreModule.forFeature('users', userReducer)
 
+
   ],
   declarations: [
     LoginComponent
