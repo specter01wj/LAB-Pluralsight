@@ -23,6 +23,7 @@ export interface ProductState {
 
 
 
+
   currentProduct: Product;
   products: Product[];
 }
