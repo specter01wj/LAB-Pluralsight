@@ -12,6 +12,7 @@ export interface ProductState {
   currentProduct: Product;
   products: Product[];
 
+
 }
 
 export const productReducer = createReducer(
