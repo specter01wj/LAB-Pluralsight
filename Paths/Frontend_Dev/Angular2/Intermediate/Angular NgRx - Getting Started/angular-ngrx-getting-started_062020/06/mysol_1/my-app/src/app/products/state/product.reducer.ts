@@ -11,7 +11,8 @@ export interface ProductState {
   showProductCode: boolean;
   currentProduct: Product;
   products: Product[];
-  
+
+
 }
 
 export const productReducer = createReducer(
