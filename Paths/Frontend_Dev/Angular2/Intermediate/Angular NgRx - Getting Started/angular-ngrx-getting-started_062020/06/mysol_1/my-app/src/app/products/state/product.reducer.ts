@@ -11,6 +11,8 @@ export interface ProductState {
   showProductCode: boolean;
   currentProduct: Product;
 
+
+
   products: Product[];
 }
 
