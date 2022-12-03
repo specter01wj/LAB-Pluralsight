@@ -5,6 +5,7 @@ import { Product } from '../product';
 
 export interface State extends AppState.State {
   products: ProductState;
+
 }
 
 export interface ProductState {
