@@ -21,6 +21,7 @@ export const productReducer = createReducer(
       ...state,
 
 
+
       showProductCode: !state.showProductCode
       // showProductCode: state.showProductCode = false,
     };
