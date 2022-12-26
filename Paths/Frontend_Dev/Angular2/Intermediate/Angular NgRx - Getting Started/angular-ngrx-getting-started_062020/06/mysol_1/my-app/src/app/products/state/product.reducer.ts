@@ -10,7 +10,8 @@ export interface State extends AppState.State {
 export interface ProductState {
   showProductCode: boolean;
   currentProduct: Product;
-  
+
+
   products: Product[];
 }
 
