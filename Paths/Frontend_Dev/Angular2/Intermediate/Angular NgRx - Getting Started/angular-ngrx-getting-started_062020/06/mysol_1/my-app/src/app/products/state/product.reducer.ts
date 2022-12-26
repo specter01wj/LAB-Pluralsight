@@ -19,12 +19,6 @@ export const productReducer = createReducer(
     // console.log('original state: ' + JSON.stringify(state));
     return {
       ...state,
-
-
-
-
-
-
       showProductCode: !state.showProductCode
       // showProductCode: state.showProductCode = false,
     };
