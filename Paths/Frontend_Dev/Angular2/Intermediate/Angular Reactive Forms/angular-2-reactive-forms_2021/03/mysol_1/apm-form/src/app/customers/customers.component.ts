@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
+import { Customer } from './customer';
+
 @Component({
   selector: 'app-customers',
   templateUrl: './customers.component.html',

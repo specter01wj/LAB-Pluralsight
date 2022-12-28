@@ -8,9 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.CustomersComponent = void 0;
 var core_1 = require("@angular/core");
+var customer_1 = require("./customer");
 var CustomersComponent = /** @class */ (function () {
     function CustomersComponent() {
-        this.customer = new Customer();
+        this.customer = new customer_1.Customer();
     }
     CustomersComponent.prototype.ngOnInit = function () {
     };
