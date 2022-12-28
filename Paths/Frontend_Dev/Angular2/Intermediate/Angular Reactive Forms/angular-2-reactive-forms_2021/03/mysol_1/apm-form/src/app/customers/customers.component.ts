@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./customers.component.scss']
 })
 export class CustomersComponent {
+  customer = new Customer();
 
 }
