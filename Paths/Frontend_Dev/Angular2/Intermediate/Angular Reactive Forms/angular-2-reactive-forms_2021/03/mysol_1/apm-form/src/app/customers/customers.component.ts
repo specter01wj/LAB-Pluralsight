@@ -8,4 +8,14 @@ import { Component } from '@angular/core';
 export class CustomersComponent {
   customer = new Customer();
 
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  save(customerForm: NgForm): void {
+    console.log(customerForm.form);
+    console.log('Saved: ' + JSON.stringify(customerForm.value));
+  }
+
 }

@@ -12,6 +12,12 @@ var CustomersComponent = /** @class */ (function () {
     function CustomersComponent() {
         this.customer = new Customer();
     }
+    CustomersComponent.prototype.ngOnInit = function () {
+    };
+    CustomersComponent.prototype.save = function (customerForm) {
+        console.log(customerForm.form);
+        console.log('Saved: ' + JSON.stringify(customerForm.value));
+    };
     CustomersComponent = __decorate([
         core_1.Component({
             selector: 'app-customers',
