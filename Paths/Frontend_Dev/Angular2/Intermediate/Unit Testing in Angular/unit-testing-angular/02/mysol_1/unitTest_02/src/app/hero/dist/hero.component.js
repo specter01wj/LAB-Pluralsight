@@ -14,7 +14,7 @@ var HeroComponent = /** @class */ (function () {
     }
     HeroComponent.prototype.onDeleteClick = function ($event) {
         $event.stopPropagation();
-        this["delete"].next(1);
+        this["delete"].next(0);
     };
     __decorate([
         core_1.Input()
