@@ -14,6 +14,7 @@ export class HeroComponent {
     $event.stopPropagation();
 
 
+
     this.delete.next(0);
   }
 }
