@@ -1,7 +1,7 @@
 import { HeroesComponent } from "./heroes.component";
 import { of } from "rxjs";
 
-describe('HeroesComponent', () => {
+fdescribe('HeroesComponent', () => {
   let component: HeroesComponent;
   let HEROES;
   let mockHeroService;
@@ -38,4 +38,28 @@ describe('HeroesComponent', () => {
       expect(mockHeroService.deleteHero).toHaveBeenCalledWith(HEROES[2]);
     })
   })
+
+  describe('getHeroes', () => {
+
+    xit('should getHeroes', () => {
+      mockHeroService.getHeroes.and.returnValue(of(true))
+      component.heroes = HEROES;
+
+      component.getHeroes();
+
+      expect(component.heroes.length).toBe(3);
+    })
+
+    it('should call getHeroes', () => {
+      mockHeroService.getHeroes.and.returnValue(of(true));
+      component.heroes = HEROES;
+
+      component.getHeroes();
+
+      expect(mockHeroService.getHeroes).toHaveBeenCalled();
+    })
+
+  })
+
+
 })
