@@ -6,7 +6,7 @@ import { of } from "rxjs";
 import { Hero } from "../hero";
 import { By } from "@angular/platform-browser";
 
-describe('HeroesComponent (shallow tests)', () => {
+fdescribe('HeroesComponent (shallow tests)', () => {
   let fixture: ComponentFixture<HeroesComponent>;
   let mockHeroService;
   let HEROES;
@@ -18,7 +18,7 @@ describe('HeroesComponent (shallow tests)', () => {
   class FakeHeroComponent {
     @Input() hero: Hero;
     // @Output() delete = new EventEmitter();
-  }  
+  }
 
   beforeEach(() => {
     HEROES = [
