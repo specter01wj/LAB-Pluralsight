@@ -3,7 +3,7 @@ import { HeroComponent } from "./hero.component";
 import { NO_ERRORS_SCHEMA } from "@angular/core";
 import { By } from "@angular/platform-browser";
 
-fdescribe('HeroComponent (shallow tests)', () => {
+describe('HeroComponent (shallow tests)', () => {
   let fixture: ComponentFixture<HeroComponent>;
 
   beforeEach(() => {

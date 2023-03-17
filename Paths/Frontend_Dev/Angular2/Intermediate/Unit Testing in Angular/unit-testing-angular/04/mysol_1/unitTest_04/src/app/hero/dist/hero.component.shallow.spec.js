@@ -4,7 +4,7 @@ var testing_1 = require("@angular/core/testing");
 var hero_component_1 = require("./hero.component");
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
-fdescribe('HeroComponent (shallow tests)', function () {
+describe('HeroComponent (shallow tests)', function () {
     var fixture;
     beforeEach(function () {
         testing_1.TestBed.configureTestingModule({

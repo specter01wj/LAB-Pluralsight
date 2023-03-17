@@ -12,7 +12,7 @@ var core_1 = require("@angular/core");
 var hero_service_1 = require("../hero.service");
 var rxjs_1 = require("rxjs");
 var platform_browser_1 = require("@angular/platform-browser");
-describe('HeroesComponent (shallow tests)', function () {
+fdescribe('HeroesComponent (shallow tests)', function () {
     var fixture;
     var mockHeroService;
     var HEROES;
