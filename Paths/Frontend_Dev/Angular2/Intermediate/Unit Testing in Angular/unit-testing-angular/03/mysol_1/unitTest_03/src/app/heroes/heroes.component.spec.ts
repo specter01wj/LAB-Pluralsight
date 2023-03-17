@@ -42,7 +42,7 @@ fdescribe('HeroesComponent', () => {
   describe('getHeroes', () => {
 
     xit('should getHeroes', () => {
-      mockHeroService.getHeroes.and.returnValue(of(true))
+      mockHeroService.getHeroes.and.returnValue(of(true));
       component.heroes = HEROES;
 
       component.getHeroes();
