@@ -21,7 +21,7 @@ fdescribe('HeroesComponent', () => {
   describe('delete', () => {
 
     it('should remove the indicated hero from the heroes list', () => {
-      mockHeroService.deleteHero.and.returnValue(of(true))
+      mockHeroService.deleteHero.and.returnValue(of(true));
       component.heroes = HEROES;
 
       component.delete(HEROES[2]);
@@ -30,7 +30,7 @@ fdescribe('HeroesComponent', () => {
     })
 
     it('should call deleteHero', () => {
-      mockHeroService.deleteHero.and.returnValue(of(true))
+      mockHeroService.deleteHero.and.returnValue(of(true));
       component.heroes = HEROES;
 
       component.delete(HEROES[2]);
