@@ -22,7 +22,10 @@ fdescribe('HeroService', function () {
     });
     describe('getHero', function () {
         it('should call get with the correct URL', function () {
-            service.getHero(4).subscribe();
+            // service.getHero(4).subscribe();
+            service.getHero(4).subscribe(function (hero) {
+                expect(hero.id).toBe(4);
+            });
             var req = httpTestingController.expectOne('api/heroes/4');
             req.flush({ id: 4, name: 'SuperDude', strength: 100 });
             httpTestingController.verify();

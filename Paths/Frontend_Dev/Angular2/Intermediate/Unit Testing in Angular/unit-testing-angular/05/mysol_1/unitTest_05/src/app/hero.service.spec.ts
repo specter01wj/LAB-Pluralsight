@@ -25,7 +25,10 @@ fdescribe('HeroService', () => {
 
     describe('getHero', () => {
         it('should call get with the correct URL', () => {
-            service.getHero(4).subscribe();
+            // service.getHero(4).subscribe();
+            service.getHero(4).subscribe(hero => {
+              expect(hero.id).toBe(4);
+            });
 
             const req = httpTestingController.expectOne('api/heroes/4');
 
