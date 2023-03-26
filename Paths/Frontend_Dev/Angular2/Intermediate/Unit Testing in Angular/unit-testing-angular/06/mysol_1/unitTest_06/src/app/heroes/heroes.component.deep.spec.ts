@@ -19,7 +19,7 @@ export class RouterLinkDirectiveStub {
   }
 }
 
-describe('HeroesComponent (deep tests)', () => {
+fdescribe('HeroesComponent (deep tests)', () => {
   let fixture: ComponentFixture<HeroesComponent>;
   let mockHeroService;
   let HEROES;
@@ -60,7 +60,7 @@ describe('HeroesComponent (deep tests)', () => {
     }
   })
 
-  it(`should call heroService.deleteHero when the Hero Component's 
+  it(`should call heroService.deleteHero when the Hero Component's
     delete button is clicked`, () => {
     spyOn(fixture.componentInstance, 'delete');
     mockHeroService.getHeroes.and.returnValue(of(HEROES));
@@ -87,7 +87,7 @@ describe('HeroesComponent (deep tests)', () => {
     addButton.triggerEventHandler('click', null);
     fixture.detectChanges();
 
-    const heroText = fixture.debugElement.query(By.css('ul')).nativeElement.textContent; 
+    const heroText = fixture.debugElement.query(By.css('ul')).nativeElement.textContent;
     expect(heroText).toContain(name);
   })
 
