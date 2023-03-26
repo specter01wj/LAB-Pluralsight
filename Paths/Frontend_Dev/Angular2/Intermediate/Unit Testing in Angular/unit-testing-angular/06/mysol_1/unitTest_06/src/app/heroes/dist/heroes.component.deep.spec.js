@@ -72,7 +72,9 @@ fdescribe('HeroesComponent (deep tests)', function () {
         fixture.detectChanges();
         var heroComponents = fixture.debugElement.queryAll(platform_browser_1.By.directive(hero_component_1.HeroComponent));
         // (<HeroComponent>heroComponents[0].componentInstance).delete.emit(undefined);
-        heroComponents[0].triggerEventHandler('delete', null);
+        heroComponents[0].query(platform_browser_1.By.css('button'))
+            .triggerEventHandler('click', { stopPropagation: function () { } });
+        // heroComponents[0].triggerEventHandler('delete', null);
         expect(fixture.componentInstance["delete"]).toHaveBeenCalledWith(HEROES[0]);
     });
     it('should add a new hero to the hero list when the add button is clicked', function () {
