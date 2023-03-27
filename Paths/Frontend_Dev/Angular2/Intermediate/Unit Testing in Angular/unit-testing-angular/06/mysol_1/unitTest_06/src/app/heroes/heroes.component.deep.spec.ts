@@ -68,9 +68,9 @@ fdescribe('HeroesComponent (deep tests)', () => {
     fixture.detectChanges();
 
     const heroComponents = fixture.debugElement.queryAll(By.directive(HeroComponent));
-    // (<HeroComponent>heroComponents[0].componentInstance).delete.emit(undefined);
-    heroComponents[0].query(By.css('button'))
-      .triggerEventHandler('click', {stopPropagation: () => {}});
+    (<HeroComponent>heroComponents[0].componentInstance).delete.emit(undefined);
+    /* heroComponents[0].query(By.css('button'))
+      .triggerEventHandler('click', {stopPropagation: () => {}}); */
     // heroComponents[0].triggerEventHandler('delete', null);
 
 

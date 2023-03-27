@@ -71,9 +71,9 @@ fdescribe('HeroesComponent (deep tests)', function () {
         mockHeroService.getHeroes.and.returnValue(rxjs_1.of(HEROES));
         fixture.detectChanges();
         var heroComponents = fixture.debugElement.queryAll(platform_browser_1.By.directive(hero_component_1.HeroComponent));
-        // (<HeroComponent>heroComponents[0].componentInstance).delete.emit(undefined);
-        heroComponents[0].query(platform_browser_1.By.css('button'))
-            .triggerEventHandler('click', { stopPropagation: function () { } });
+        heroComponents[0].componentInstance["delete"].emit(undefined);
+        /* heroComponents[0].query(By.css('button'))
+          .triggerEventHandler('click', {stopPropagation: () => {}}); */
         // heroComponents[0].triggerEventHandler('delete', null);
         expect(fixture.componentInstance["delete"]).toHaveBeenCalledWith(HEROES[0]);
     });
