@@ -19,7 +19,7 @@ export class RouterLinkDirectiveStub {
   }
 }
 
-fdescribe('HeroesComponent (deep tests)', () => {
+describe('HeroesComponent (deep tests)', () => {
   let fixture: ComponentFixture<HeroesComponent>;
   let mockHeroService;
   let HEROES;

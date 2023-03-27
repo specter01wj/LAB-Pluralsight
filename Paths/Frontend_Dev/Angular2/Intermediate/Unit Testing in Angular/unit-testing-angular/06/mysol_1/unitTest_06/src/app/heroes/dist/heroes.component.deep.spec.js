@@ -33,7 +33,7 @@ var RouterLinkDirectiveStub = /** @class */ (function () {
     return RouterLinkDirectiveStub;
 }());
 exports.RouterLinkDirectiveStub = RouterLinkDirectiveStub;
-fdescribe('HeroesComponent (deep tests)', function () {
+describe('HeroesComponent (deep tests)', function () {
     var fixture;
     var mockHeroService;
     var HEROES;
