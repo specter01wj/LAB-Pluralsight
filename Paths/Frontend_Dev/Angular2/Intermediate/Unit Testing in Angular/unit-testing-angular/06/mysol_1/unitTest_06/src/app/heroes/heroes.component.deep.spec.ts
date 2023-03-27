@@ -19,7 +19,7 @@ export class RouterLinkDirectiveStub {
   }
 }
 
-describe('HeroesComponent (deep tests)', () => {
+fdescribe('HeroesComponent (deep tests)', () => {
   let fixture: ComponentFixture<HeroesComponent>;
   let mockHeroService;
   let HEROES;
@@ -105,6 +105,6 @@ describe('HeroesComponent (deep tests)', () => {
     heroComponents[0].query(By.css('a')).triggerEventHandler('click', null);
 
     expect(routerLink.navigatedTo).toBe('/detail/1');
-})
+  })
 
 })

@@ -7,7 +7,7 @@ var hero_service_1 = require("../hero.service");
 var common_1 = require("@angular/common");
 var rxjs_1 = require("rxjs");
 var forms_1 = require("@angular/forms");
-fdescribe('HeroDetailComponent', function () {
+describe('HeroDetailComponent', function () {
     var fixture;
     var mockActivatedRoute, mockHeroService, mockLocation;
     beforeEach(function () {
