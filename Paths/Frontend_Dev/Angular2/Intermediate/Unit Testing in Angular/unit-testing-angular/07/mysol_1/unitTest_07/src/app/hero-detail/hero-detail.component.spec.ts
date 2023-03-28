@@ -6,7 +6,7 @@ import { Location } from "@angular/common";
 import { of } from "rxjs";
 import { FormsModule } from "@angular/forms";
 
-describe('HeroDetailComponent', () => {
+fdescribe('HeroDetailComponent', () => {
     let fixture: ComponentFixture<HeroDetailComponent>
     let mockActivatedRoute, mockHeroService, mockLocation;
 
