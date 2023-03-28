@@ -32,14 +32,14 @@ fdescribe('HeroDetailComponent', function () {
         fixture.detectChanges();
         expect(fixture.nativeElement.querySelector('h2').textContent).toContain('SUPERDUDE');
     });
-    it('should call updateHero when save is called', testing_1.fakeAsync(function () {
+    it('should call updateHero when save is called_fakeAsync', testing_1.fakeAsync(function () {
         mockHeroService.updateHero.and.returnValue(rxjs_1.of({}));
         fixture.detectChanges();
         fixture.componentInstance.save();
         testing_1.flush();
         expect(mockHeroService.updateHero).toHaveBeenCalled();
     }));
-    it('should call updateHero when save is called', testing_1.waitForAsync(function () {
+    it('should call updateHero when save is called_waitForAsync', testing_1.waitForAsync(function () {
         mockHeroService.updateHero.and.returnValue(rxjs_1.of({}));
         fixture.detectChanges();
         fixture.componentInstance.save();
