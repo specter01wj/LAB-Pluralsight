@@ -55,7 +55,7 @@ fdescribe('HeroDetailComponent', () => {
 
         fixture.whenStable().then(() => {
             expect(mockHeroService.updateHero).toHaveBeenCalled();
-        })
+        });
     }))
 
 })
