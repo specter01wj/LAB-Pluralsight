@@ -39,12 +39,12 @@ fdescribe('HeroDetailComponent', function () {
         testing_1.flush();
         expect(mockHeroService.updateHero).toHaveBeenCalled();
     }));
-    // it('should call updateHero when save is called', waitForAsync(() => {
-    //     mockHeroService.updateHero.and.returnValue(of({}));
-    //     fixture.detectChanges();
-    //     fixture.componentInstance.save();
-    //     fixture.whenStable().then(() => {
-    //         expect(mockHeroService.updateHero).toHaveBeenCalled();
-    //     })
-    // }))
+    it('should call updateHero when save is called', testing_1.waitForAsync(function () {
+        mockHeroService.updateHero.and.returnValue(rxjs_1.of({}));
+        fixture.detectChanges();
+        fixture.componentInstance.save();
+        fixture.whenStable().then(function () {
+            expect(mockHeroService.updateHero).toHaveBeenCalled();
+        });
+    }));
 });

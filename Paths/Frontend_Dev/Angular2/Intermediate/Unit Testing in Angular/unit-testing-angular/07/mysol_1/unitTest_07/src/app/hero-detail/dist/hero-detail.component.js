@@ -26,12 +26,18 @@ var HeroDetailComponent = /** @class */ (function () {
     HeroDetailComponent.prototype.goBack = function () {
         this.location.back();
     };
+    /* save(): void {
+      debounce(() => {
+        this.heroService.updateHero(this.hero)
+        .subscribe(() => this.goBack());
+      }, 250, false)();
+    } */
     HeroDetailComponent.prototype.save = function () {
         var _this = this;
-        debounce(function () {
+        someThirdPartyPromise().then(function () {
             _this.heroService.updateHero(_this.hero)
                 .subscribe(function () { return _this.goBack(); });
-        }, 250, false)();
+        });
     };
     __decorate([
         core_1.Input()

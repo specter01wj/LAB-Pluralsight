@@ -47,15 +47,15 @@ fdescribe('HeroDetailComponent', () => {
         expect(mockHeroService.updateHero).toHaveBeenCalled();
     }))
 
-    // it('should call updateHero when save is called', waitForAsync(() => {
-    //     mockHeroService.updateHero.and.returnValue(of({}));
-    //     fixture.detectChanges();
+    it('should call updateHero when save is called', waitForAsync(() => {
+        mockHeroService.updateHero.and.returnValue(of({}));
+        fixture.detectChanges();
 
-    //     fixture.componentInstance.save();
+        fixture.componentInstance.save();
 
-    //     fixture.whenStable().then(() => {
-    //         expect(mockHeroService.updateHero).toHaveBeenCalled();
-    //     })
-    // }))
+        fixture.whenStable().then(() => {
+            expect(mockHeroService.updateHero).toHaveBeenCalled();
+        })
+    }))
 
 })
