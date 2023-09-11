@@ -36,6 +36,8 @@
         });
 
         function refresh() {
+            chart.data.datasets[0].data[2] = 150000;
+            chart.data.datasets[1].data[2] = 250000;
             chart.data.datasets[2].data[2] = 50000;
             chart.update();
         }
