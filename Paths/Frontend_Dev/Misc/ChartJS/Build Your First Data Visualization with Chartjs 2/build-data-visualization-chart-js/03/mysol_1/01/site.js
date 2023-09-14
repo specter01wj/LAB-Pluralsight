@@ -28,9 +28,6 @@
         {
           backgroundColor: pattern.draw("diamond", "blue"),
           label: "Revenues per branch",
-
-
-          
           data: revenues2020,
         },
       ],
