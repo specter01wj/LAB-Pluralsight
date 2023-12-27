@@ -9,7 +9,7 @@ exports.__esModule = true;
 exports.DemoModule = void 0;
 var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
-var material_module_1 = require("../shared/material.module");
+var angular_material_module_1 = require("../shared/angular-material.module");
 var flex_layout_1 = require("@angular/flex-layout");
 var forms_1 = require("@angular/forms");
 var demo_routing_module_1 = require("./demo-routing.module");
@@ -26,7 +26,7 @@ var DemoModule = /** @class */ (function () {
             ],
             imports: [
                 common_1.CommonModule,
-                material_module_1.MaterialModule,
+                angular_material_module_1.SharedAngularMaterialModule,
                 flex_layout_1.FlexLayoutModule,
                 forms_1.FormsModule,
                 demo_routing_module_1.DemoRoutingModule

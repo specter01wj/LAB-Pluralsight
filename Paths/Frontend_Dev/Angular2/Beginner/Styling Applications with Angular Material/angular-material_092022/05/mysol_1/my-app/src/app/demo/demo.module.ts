@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MaterialModule } from '../shared/material.module';
+import { SharedAngularMaterialModule } from '../shared/angular-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 
@@ -17,7 +17,7 @@ import { FlexboxComponent } from './flexbox/flexbox.component';
   ],
   imports: [
     CommonModule,
-    MaterialModule,
+    SharedAngularMaterialModule,
     FlexLayoutModule,
     FormsModule,
     DemoRoutingModule
