@@ -15,12 +15,20 @@ var UserService = /** @class */ (function () {
         this.dataStore = { users: [] };
         this._users = new rxjs_1.BehaviorSubject([]);
     }
+    Object.defineProperty(UserService.prototype, "users", {
+        get: function () {
+            return this._users.asObservable();
+        },
+        enumerable: false,
+        configurable: true
+    });
     UserService.prototype.loadAll = function () {
         var _this = this;
         var usersUrl = 'https://angular-material-api.azurewebsites.net/users';
         return this.http.get(usersUrl)
             .subscribe(function (data) {
             _this.dataStore.users = data;
+            _this._users.next(Object.assign({}, _this.dataStore).users);
         }, function (error) {
             console.log("Failed to fetch users");
         });

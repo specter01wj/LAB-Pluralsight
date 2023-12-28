@@ -10,8 +10,9 @@ exports.SidenavComponent = void 0;
 var core_1 = require("@angular/core");
 var SMALL_WIDTH_BREAKPOINT = 720;
 var SidenavComponent = /** @class */ (function () {
-    function SidenavComponent(breakpointObserver) {
+    function SidenavComponent(breakpointObserver, userService) {
         this.breakpointObserver = breakpointObserver;
+        this.userService = userService;
         this.isScreenSmall = true;
     }
     SidenavComponent.prototype.ngOnInit = function () {
@@ -20,6 +21,11 @@ var SidenavComponent = /** @class */ (function () {
             .observe(["(max-width: " + SMALL_WIDTH_BREAKPOINT + "px)"])
             .subscribe(function (state) {
             _this.isScreenSmall = state.matches;
+        });
+        this.users = this.userService.users;
+        this.userService.loadAll();
+        this.users.subscribe(function (data) {
+            console.log(data);
         });
     };
     SidenavComponent = __decorate([
