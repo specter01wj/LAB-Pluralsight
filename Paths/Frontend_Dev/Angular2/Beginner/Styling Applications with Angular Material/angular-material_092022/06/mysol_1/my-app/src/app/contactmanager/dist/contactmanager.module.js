@@ -12,6 +12,7 @@ var common_1 = require("@angular/common");
 var angular_material_module_1 = require("../shared/angular-material.module");
 var flex_layout_1 = require("@angular/flex-layout");
 var forms_1 = require("@angular/forms");
+var http_1 = require("@angular/common/http");
 var contactmanager_component_1 = require("./contactmanager/contactmanager.component");
 var toolbar_component_1 = require("./components/toolbar/toolbar.component");
 var main_content_component_1 = require("./components/main-content/main-content.component");
@@ -30,6 +31,7 @@ var ContactmanagerModule = /** @class */ (function () {
             ],
             imports: [
                 common_1.CommonModule,
+                http_1.HttpClientModule,
                 angular_material_module_1.SharedAngularMaterialModule,
                 flex_layout_1.FlexLayoutModule,
                 forms_1.FormsModule,
