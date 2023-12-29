@@ -17,6 +17,7 @@ var routes = [
     {
         path: '', component: contactmanager_component_1.ContactmanagerComponent,
         children: [
+            { path: ':id', component: main_content_component_1.MainContentComponent },
             { path: '', component: main_content_component_1.MainContentComponent }
         ]
     },

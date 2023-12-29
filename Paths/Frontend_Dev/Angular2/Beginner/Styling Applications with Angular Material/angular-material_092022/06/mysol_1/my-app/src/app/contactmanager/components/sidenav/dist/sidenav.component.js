@@ -8,11 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.SidenavComponent = void 0;
 var core_1 = require("@angular/core");
+var sidenav_1 = require("@angular/material/sidenav");
 var SMALL_WIDTH_BREAKPOINT = 720;
 var SidenavComponent = /** @class */ (function () {
-    function SidenavComponent(breakpointObserver, userService) {
+    function SidenavComponent(breakpointObserver, userService, router) {
         this.breakpointObserver = breakpointObserver;
         this.userService = userService;
+        this.router = router;
         this.isScreenSmall = true;
     }
     SidenavComponent.prototype.ngOnInit = function () {
@@ -24,10 +26,20 @@ var SidenavComponent = /** @class */ (function () {
         });
         this.users = this.userService.users;
         this.userService.loadAll();
-        this.users.subscribe(function (data) {
-            console.log(data);
+        /* this.users.subscribe(data => {
+          if (data.length > 0) {
+            this.router.navigate(['/contactmanager', data[0].id]);
+          }
+        }); */
+        this.router.events.subscribe(function () {
+            if (_this.isScreenSmall) {
+                _this.sidenav.close();
+            }
         });
     };
+    __decorate([
+        core_1.ViewChild(sidenav_1.MatSidenav)
+    ], SidenavComponent.prototype, "sidenav");
     SidenavComponent = __decorate([
         core_1.Component({
             selector: 'app-sidenav',

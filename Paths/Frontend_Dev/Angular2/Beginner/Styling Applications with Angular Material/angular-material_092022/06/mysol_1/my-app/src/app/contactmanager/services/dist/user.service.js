@@ -22,6 +22,9 @@ var UserService = /** @class */ (function () {
         enumerable: false,
         configurable: true
     });
+    UserService.prototype.userById = function (id) {
+        return this.dataStore.users.find(function (x) { return x.id == id; });
+    };
     UserService.prototype.loadAll = function () {
         var _this = this;
         var usersUrl = 'https://angular-material-api.azurewebsites.net/users';
