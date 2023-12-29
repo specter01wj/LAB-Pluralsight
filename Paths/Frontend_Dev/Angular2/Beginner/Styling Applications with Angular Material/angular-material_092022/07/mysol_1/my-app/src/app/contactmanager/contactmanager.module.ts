@@ -12,13 +12,15 @@ import { MainContentComponent } from './components/main-content/main-content.com
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 import { ContactmanagerRoutingModule } from './contactmanager-routing.module';
+import { NotesComponent } from './components/notes/notes.component';
 
 @NgModule({
   declarations: [
     ContactmanagerComponent,
     ToolbarComponent,
     MainContentComponent,
-    SidenavComponent
+    SidenavComponent,
+    NotesComponent
   ],
   imports: [
     CommonModule,
