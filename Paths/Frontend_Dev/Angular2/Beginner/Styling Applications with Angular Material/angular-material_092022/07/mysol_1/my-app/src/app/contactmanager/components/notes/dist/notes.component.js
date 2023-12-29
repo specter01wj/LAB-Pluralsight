@@ -20,6 +20,10 @@ var NotesComponent = /** @class */ (function () {
     NotesComponent.prototype.ngAfterViewInit = function () {
         this.dataSource.paginator = this.paginator;
     };
+    NotesComponent.prototype.applyFilter = function (event) {
+        var filterValue = event.target.value;
+        this.dataSource.filter = filterValue.trim().toLowerCase();
+    };
     __decorate([
         core_1.Input()
     ], NotesComponent.prototype, "notes");
