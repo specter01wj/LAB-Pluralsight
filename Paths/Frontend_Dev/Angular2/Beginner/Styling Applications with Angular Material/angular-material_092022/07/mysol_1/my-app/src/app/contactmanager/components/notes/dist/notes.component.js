@@ -10,6 +10,7 @@ exports.NotesComponent = void 0;
 var core_1 = require("@angular/core");
 var table_1 = require("@angular/material/table");
 var paginator_1 = require("@angular/material/paginator");
+var sort_1 = require("@angular/material/sort");
 var NotesComponent = /** @class */ (function () {
     function NotesComponent() {
         this.displayedColumns = ['position', 'title', 'date'];
@@ -19,6 +20,7 @@ var NotesComponent = /** @class */ (function () {
     };
     NotesComponent.prototype.ngAfterViewInit = function () {
         this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
     };
     NotesComponent.prototype.applyFilter = function (event) {
         var filterValue = event.target.value;
@@ -30,6 +32,9 @@ var NotesComponent = /** @class */ (function () {
     __decorate([
         core_1.ViewChild(paginator_1.MatPaginator)
     ], NotesComponent.prototype, "paginator");
+    __decorate([
+        core_1.ViewChild(sort_1.MatSort)
+    ], NotesComponent.prototype, "sort");
     NotesComponent = __decorate([
         core_1.Component({
             selector: 'app-notes',
