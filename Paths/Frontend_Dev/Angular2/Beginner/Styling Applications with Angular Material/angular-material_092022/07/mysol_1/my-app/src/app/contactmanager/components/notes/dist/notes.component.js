@@ -9,6 +9,7 @@ exports.__esModule = true;
 exports.NotesComponent = void 0;
 var core_1 = require("@angular/core");
 var table_1 = require("@angular/material/table");
+var paginator_1 = require("@angular/material/paginator");
 var NotesComponent = /** @class */ (function () {
     function NotesComponent() {
         this.displayedColumns = ['position', 'title', 'date'];
@@ -17,10 +18,14 @@ var NotesComponent = /** @class */ (function () {
         this.dataSource = new table_1.MatTableDataSource(this.notes);
     };
     NotesComponent.prototype.ngAfterViewInit = function () {
+        this.dataSource.paginator = this.paginator;
     };
     __decorate([
         core_1.Input()
     ], NotesComponent.prototype, "notes");
+    __decorate([
+        core_1.ViewChild(paginator_1.MatPaginator)
+    ], NotesComponent.prototype, "paginator");
     NotesComponent = __decorate([
         core_1.Component({
             selector: 'app-notes',
