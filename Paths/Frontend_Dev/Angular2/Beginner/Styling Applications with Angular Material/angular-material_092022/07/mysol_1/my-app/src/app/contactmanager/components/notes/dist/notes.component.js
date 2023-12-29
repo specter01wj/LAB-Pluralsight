@@ -8,10 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.NotesComponent = void 0;
 var core_1 = require("@angular/core");
+var table_1 = require("@angular/material/table");
 var NotesComponent = /** @class */ (function () {
     function NotesComponent() {
+        this.displayedColumns = ['position', 'title', 'date'];
     }
     NotesComponent.prototype.ngOnInit = function () {
+        this.dataSource = new table_1.MatTableDataSource(this.notes);
     };
     NotesComponent.prototype.ngAfterViewInit = function () {
     };
