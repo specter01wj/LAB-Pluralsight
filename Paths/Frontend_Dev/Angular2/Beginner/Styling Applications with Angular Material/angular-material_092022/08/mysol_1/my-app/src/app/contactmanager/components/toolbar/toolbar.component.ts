@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { NewContactDialogComponent } from '../new-contact-dialog/new-contact-dialog.component';
 
 @Component({
   selector: 'app-toolbar',
@@ -17,7 +18,9 @@ export class ToolbarComponent implements OnInit {
   }
 
   openAddContactDialog(): void {
-
+    this.dialog.open(NewContactDialogComponent, {
+      width: '450px'
+    });
   }
 
 }

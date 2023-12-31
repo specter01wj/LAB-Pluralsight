@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.ToolbarComponent = void 0;
 var core_1 = require("@angular/core");
+var new_contact_dialog_component_1 = require("../new-contact-dialog/new-contact-dialog.component");
 var ToolbarComponent = /** @class */ (function () {
     function ToolbarComponent(dialog) {
         this.dialog = dialog;
@@ -16,6 +17,9 @@ var ToolbarComponent = /** @class */ (function () {
     ToolbarComponent.prototype.ngOnInit = function () {
     };
     ToolbarComponent.prototype.openAddContactDialog = function () {
+        this.dialog.open(new_contact_dialog_component_1.NewContactDialogComponent, {
+            width: '450px'
+        });
     };
     __decorate([
         core_1.Output()
