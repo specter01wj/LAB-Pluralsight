@@ -9,10 +9,13 @@ exports.__esModule = true;
 exports.ToolbarComponent = void 0;
 var core_1 = require("@angular/core");
 var ToolbarComponent = /** @class */ (function () {
-    function ToolbarComponent() {
+    function ToolbarComponent(dialog) {
+        this.dialog = dialog;
         this.toggleSidenav = new core_1.EventEmitter();
     }
     ToolbarComponent.prototype.ngOnInit = function () {
+    };
+    ToolbarComponent.prototype.openAddContactDialog = function () {
     };
     __decorate([
         core_1.Output()

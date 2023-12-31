@@ -13,6 +13,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 import { ContactmanagerRoutingModule } from './contactmanager-routing.module';
 import { NotesComponent } from './components/notes/notes.component';
+import { NewContactDialogComponent } from './components/new-contact-dialog/new-contact-dialog.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NotesComponent } from './components/notes/notes.component';
     ToolbarComponent,
     MainContentComponent,
     SidenavComponent,
-    NotesComponent
+    NotesComponent,
+    NewContactDialogComponent
   ],
   imports: [
     CommonModule,
