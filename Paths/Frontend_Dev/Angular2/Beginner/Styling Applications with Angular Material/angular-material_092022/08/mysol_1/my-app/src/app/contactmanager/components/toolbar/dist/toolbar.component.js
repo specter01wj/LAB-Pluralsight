@@ -17,8 +17,11 @@ var ToolbarComponent = /** @class */ (function () {
     ToolbarComponent.prototype.ngOnInit = function () {
     };
     ToolbarComponent.prototype.openAddContactDialog = function () {
-        this.dialog.open(new_contact_dialog_component_1.NewContactDialogComponent, {
+        var dialogRef = this.dialog.open(new_contact_dialog_component_1.NewContactDialogComponent, {
             width: '450px'
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            console.log('The dialog was closed', result);
         });
     };
     __decorate([
