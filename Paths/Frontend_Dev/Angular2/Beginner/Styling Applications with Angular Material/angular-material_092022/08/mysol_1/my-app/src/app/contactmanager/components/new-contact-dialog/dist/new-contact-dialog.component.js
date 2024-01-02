@@ -11,8 +11,9 @@ var core_1 = require("@angular/core");
 var user_1 = require("../../models/user");
 var forms_1 = require("@angular/forms");
 var NewContactDialogComponent = /** @class */ (function () {
-    function NewContactDialogComponent(dialogRef) {
+    function NewContactDialogComponent(dialogRef, userService) {
         this.dialogRef = dialogRef;
+        this.userService = userService;
         this.avatars = [
             'svg-1', 'svg-2', 'svg-3', 'svg-4'
         ];
@@ -25,6 +26,8 @@ var NewContactDialogComponent = /** @class */ (function () {
         return this.name.hasError('required') ? 'You must enter a name' : '';
     };
     NewContactDialogComponent.prototype.save = function () {
+        this.user.name = this.name.value;
+        this.dialogRef.close(this.user);
     };
     NewContactDialogComponent.prototype.dismiss = function () {
         this.dialogRef.close(null);
