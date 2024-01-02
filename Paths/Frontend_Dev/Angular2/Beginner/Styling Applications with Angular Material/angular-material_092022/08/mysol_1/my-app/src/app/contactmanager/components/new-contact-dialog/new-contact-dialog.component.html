@@ -6,8 +6,8 @@
       <input matInput [(ngModel)]="user.name" required>
     </mat-form-field>
     <mat-form-field>
-      <mat-label>Select</mat-label>
-      <mat-select>
+      <mat-label>Avatar</mat-label>
+      <mat-select [(ngModel)]="user.avatar">
         <mat-select-trigger>
           <mat-icon svgIcon="{{user.avatar}}"></mat-icon> {{user.avatar}}
         </mat-select-trigger>
