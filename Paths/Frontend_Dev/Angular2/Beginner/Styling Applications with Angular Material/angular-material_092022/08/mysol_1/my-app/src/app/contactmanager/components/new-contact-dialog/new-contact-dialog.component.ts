@@ -8,6 +8,10 @@ import { User } from '../../models/user';
   styleUrl: './new-contact-dialog.component.scss'
 })
 export class NewContactDialogComponent implements OnInit {
+  avatars = [
+    'svg-1', 'svg-2', 'svg-3', 'svg-4'
+  ];
+
   user: User;
 
   constructor(

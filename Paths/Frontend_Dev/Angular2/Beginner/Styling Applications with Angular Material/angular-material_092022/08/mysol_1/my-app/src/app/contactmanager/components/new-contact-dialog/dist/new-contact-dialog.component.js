@@ -12,6 +12,9 @@ var user_1 = require("../../models/user");
 var NewContactDialogComponent = /** @class */ (function () {
     function NewContactDialogComponent(dialogRef) {
         this.dialogRef = dialogRef;
+        this.avatars = [
+            'svg-1', 'svg-2', 'svg-3', 'svg-4'
+        ];
     }
     NewContactDialogComponent.prototype.ngOnInit = function () {
         this.user = new user_1.User();
