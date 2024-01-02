@@ -22,6 +22,15 @@ var UserService = /** @class */ (function () {
         enumerable: false,
         configurable: true
     });
+    UserService.prototype.addUser = function (user) {
+        var _this = this;
+        return new Promise(function (resolver, reject) {
+            user.id = _this.dataStore.users.length + 1;
+            _this.dataStore.users.push(user);
+            _this._users.next(Object.assign({}, _this.dataStore).users);
+            resolver(user);
+        });
+    };
     UserService.prototype.userById = function (id) {
         return this.dataStore.users.find(function (x) { return x.id == id; });
     };

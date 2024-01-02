@@ -26,8 +26,11 @@ var NewContactDialogComponent = /** @class */ (function () {
         return this.name.hasError('required') ? 'You must enter a name' : '';
     };
     NewContactDialogComponent.prototype.save = function () {
+        var _this = this;
         this.user.name = this.name.value;
-        this.dialogRef.close(this.user);
+        this.userService.addUser(this.user).then(function (user) {
+            _this.dialogRef.close(user);
+        });
     };
     NewContactDialogComponent.prototype.dismiss = function () {
         this.dialogRef.close(null);
