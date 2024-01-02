@@ -17,6 +17,8 @@ export class SidenavComponent implements OnInit {
   public isScreenSmall: boolean = true;
 
   users: Observable<User[]>;
+  isDarkTheme: boolean = false;
+  dir: string = 'ltr';
 
   @ViewChild(MatSidenav) sidenav: MatSidenav;
 
@@ -47,6 +49,14 @@ export class SidenavComponent implements OnInit {
         this.sidenav.close();
       }
     });
+  }
+
+  toggleTheme() {
+    this.isDarkTheme = !this.isDarkTheme;
+  }
+
+  toggleDir() {
+    this.dir = this.dir == 'ltr' ? 'rtl' : 'ltr';
   }
 
 }

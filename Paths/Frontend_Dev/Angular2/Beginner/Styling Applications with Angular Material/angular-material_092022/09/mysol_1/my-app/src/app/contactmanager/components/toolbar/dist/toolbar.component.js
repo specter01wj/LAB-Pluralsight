@@ -15,6 +15,8 @@ var ToolbarComponent = /** @class */ (function () {
         this.snackBar = snackBar;
         this.router = router;
         this.toggleSidenav = new core_1.EventEmitter();
+        this.toggleTheme = new core_1.EventEmitter();
+        this.toggleDir = new core_1.EventEmitter();
     }
     ToolbarComponent.prototype.ngOnInit = function () {
     };
@@ -41,6 +43,12 @@ var ToolbarComponent = /** @class */ (function () {
     __decorate([
         core_1.Output()
     ], ToolbarComponent.prototype, "toggleSidenav");
+    __decorate([
+        core_1.Output()
+    ], ToolbarComponent.prototype, "toggleTheme");
+    __decorate([
+        core_1.Output()
+    ], ToolbarComponent.prototype, "toggleDir");
     ToolbarComponent = __decorate([
         core_1.Component({
             selector: 'app-toolbar',

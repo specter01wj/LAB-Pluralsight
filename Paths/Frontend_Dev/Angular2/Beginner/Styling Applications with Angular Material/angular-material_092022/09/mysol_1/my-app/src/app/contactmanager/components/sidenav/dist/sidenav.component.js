@@ -16,6 +16,8 @@ var SidenavComponent = /** @class */ (function () {
         this.userService = userService;
         this.router = router;
         this.isScreenSmall = true;
+        this.isDarkTheme = false;
+        this.dir = 'ltr';
     }
     SidenavComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -36,6 +38,12 @@ var SidenavComponent = /** @class */ (function () {
                 _this.sidenav.close();
             }
         });
+    };
+    SidenavComponent.prototype.toggleTheme = function () {
+        this.isDarkTheme = !this.isDarkTheme;
+    };
+    SidenavComponent.prototype.toggleDir = function () {
+        this.dir = this.dir == 'ltr' ? 'rtl' : 'ltr';
     };
     __decorate([
         core_1.ViewChild(sidenav_1.MatSidenav)

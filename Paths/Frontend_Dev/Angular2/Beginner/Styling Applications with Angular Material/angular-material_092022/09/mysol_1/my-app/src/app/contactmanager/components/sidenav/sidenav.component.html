@@ -13,7 +13,10 @@
   </mat-sidenav>
 
   <div class="app-sidenav-content">
-    <app-toolbar (toggleSidenav)="sidenav.toggle()"></app-toolbar>
+    <app-toolbar (toggleSidenav)="sidenav.toggle()"
+                 (toggleSidenav)="sidenav.toggle()"
+                 (toggleDir)="toggleDir()">
+    </app-toolbar>
     <div class="wrapper">
       <router-outlet></router-outlet>
     </div>
