@@ -9,7 +9,8 @@ exports.__esModule = true;
 exports.NewContactDialogComponent = void 0;
 var core_1 = require("@angular/core");
 var NewContactDialogComponent = /** @class */ (function () {
-    function NewContactDialogComponent() {
+    function NewContactDialogComponent(dialogRef) {
+        this.dialogRef = dialogRef;
     }
     NewContactDialogComponent.prototype.save = function () {
     };

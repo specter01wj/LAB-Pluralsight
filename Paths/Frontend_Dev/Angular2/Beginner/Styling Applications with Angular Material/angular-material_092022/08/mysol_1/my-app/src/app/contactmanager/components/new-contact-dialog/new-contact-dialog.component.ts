@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-new-contact-dialog',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
 })
 export class NewContactDialogComponent {
 
+
+  constructor(
+    private dialogRef: MatDialogRef<NewContactDialogComponent>,
+  ) {}
 
   save() {
 
