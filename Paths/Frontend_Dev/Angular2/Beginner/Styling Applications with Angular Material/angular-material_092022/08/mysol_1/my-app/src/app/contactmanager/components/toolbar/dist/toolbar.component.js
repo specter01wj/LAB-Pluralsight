@@ -10,18 +10,32 @@ exports.ToolbarComponent = void 0;
 var core_1 = require("@angular/core");
 var new_contact_dialog_component_1 = require("../new-contact-dialog/new-contact-dialog.component");
 var ToolbarComponent = /** @class */ (function () {
-    function ToolbarComponent(dialog) {
+    function ToolbarComponent(dialog, snackBar, router) {
         this.dialog = dialog;
+        this.snackBar = snackBar;
+        this.router = router;
         this.toggleSidenav = new core_1.EventEmitter();
     }
     ToolbarComponent.prototype.ngOnInit = function () {
     };
     ToolbarComponent.prototype.openAddContactDialog = function () {
+        var _this = this;
         var dialogRef = this.dialog.open(new_contact_dialog_component_1.NewContactDialogComponent, {
             width: '450px'
         });
         dialogRef.afterClosed().subscribe(function (result) {
             console.log('The dialog was closed', result);
+            if (result) {
+                _this.openSnackBar("Contact added", "Navigate")
+                    .onAction().subscribe(function () {
+                    _this.router.navigate(['/contactmanager', result.id]);
+                });
+            }
+        });
+    };
+    ToolbarComponent.prototype.openSnackBar = function (message, action) {
+        return this.snackBar.open(message, action, {
+            duration: 5000
         });
     };
     __decorate([
