@@ -9,15 +9,20 @@ exports.__esModule = true;
 exports.NewContactDialogComponent = void 0;
 var core_1 = require("@angular/core");
 var user_1 = require("../../models/user");
+var forms_1 = require("@angular/forms");
 var NewContactDialogComponent = /** @class */ (function () {
     function NewContactDialogComponent(dialogRef) {
         this.dialogRef = dialogRef;
         this.avatars = [
             'svg-1', 'svg-2', 'svg-3', 'svg-4'
         ];
+        this.name = new forms_1.FormControl('', [forms_1.Validators.required]);
     }
     NewContactDialogComponent.prototype.ngOnInit = function () {
         this.user = new user_1.User();
+    };
+    NewContactDialogComponent.prototype.getErrorMessage = function () {
+        return this.name.hasError('required') ? 'You must enter a name' : '';
     };
     NewContactDialogComponent.prototype.save = function () {
     };

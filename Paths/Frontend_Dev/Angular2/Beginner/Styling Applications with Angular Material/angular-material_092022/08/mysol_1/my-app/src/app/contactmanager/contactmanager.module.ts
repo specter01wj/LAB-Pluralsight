@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { SharedAngularMaterialModule } from '../shared/angular-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ContactmanagerComponent } from './contactmanager/contactmanager.component';
@@ -30,6 +30,7 @@ import { NewContactDialogComponent } from './components/new-contact-dialog/new-c
     SharedAngularMaterialModule,
     FlexLayoutModule,
     FormsModule,
+    ReactiveFormsModule,
     ContactmanagerRoutingModule
   ]
 })

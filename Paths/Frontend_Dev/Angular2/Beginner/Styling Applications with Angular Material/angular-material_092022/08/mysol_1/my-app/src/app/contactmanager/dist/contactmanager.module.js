@@ -18,6 +18,8 @@ var toolbar_component_1 = require("./components/toolbar/toolbar.component");
 var main_content_component_1 = require("./components/main-content/main-content.component");
 var sidenav_component_1 = require("./components/sidenav/sidenav.component");
 var contactmanager_routing_module_1 = require("./contactmanager-routing.module");
+var notes_component_1 = require("./components/notes/notes.component");
+var new_contact_dialog_component_1 = require("./components/new-contact-dialog/new-contact-dialog.component");
 var ContactmanagerModule = /** @class */ (function () {
     function ContactmanagerModule() {
     }
@@ -27,7 +29,9 @@ var ContactmanagerModule = /** @class */ (function () {
                 contactmanager_component_1.ContactmanagerComponent,
                 toolbar_component_1.ToolbarComponent,
                 main_content_component_1.MainContentComponent,
-                sidenav_component_1.SidenavComponent
+                sidenav_component_1.SidenavComponent,
+                notes_component_1.NotesComponent,
+                new_contact_dialog_component_1.NewContactDialogComponent
             ],
             imports: [
                 common_1.CommonModule,
@@ -35,6 +39,7 @@ var ContactmanagerModule = /** @class */ (function () {
                 angular_material_module_1.SharedAngularMaterialModule,
                 flex_layout_1.FlexLayoutModule,
                 forms_1.FormsModule,
+                forms_1.ReactiveFormsModule,
                 contactmanager_routing_module_1.ContactmanagerRoutingModule
             ]
         })
