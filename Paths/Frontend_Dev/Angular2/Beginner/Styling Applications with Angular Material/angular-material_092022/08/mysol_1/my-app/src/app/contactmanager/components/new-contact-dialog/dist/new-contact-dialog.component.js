@@ -8,13 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.NewContactDialogComponent = void 0;
 var core_1 = require("@angular/core");
+var user_1 = require("../../models/user");
 var NewContactDialogComponent = /** @class */ (function () {
     function NewContactDialogComponent(dialogRef) {
         this.dialogRef = dialogRef;
     }
+    NewContactDialogComponent.prototype.ngOnInit = function () {
+        this.user = new user_1.User();
+    };
     NewContactDialogComponent.prototype.save = function () {
     };
     NewContactDialogComponent.prototype.dismiss = function () {
+        this.dialogRef.close(null);
     };
     NewContactDialogComponent = __decorate([
         core_1.Component({
