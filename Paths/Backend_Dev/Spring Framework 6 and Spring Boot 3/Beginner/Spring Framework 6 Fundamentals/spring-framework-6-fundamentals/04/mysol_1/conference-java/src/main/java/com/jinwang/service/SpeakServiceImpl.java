@@ -9,6 +9,10 @@ public class SpeakServiceImpl implements SpeakService {
 
     private SpeakerRepository repository;
 
+    public SpeakServiceImpl(SpeakerRepository repository) {
+        this.repository = repository;
+    }
+
     @Override
     public List<Speaker> findAll() {
         return repository.findAll();
