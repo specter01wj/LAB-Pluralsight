@@ -1,3 +1,5 @@
+import com.jinwang.repository.SpeakerRepository;
+import com.jinwang.repository.StubSpeakerRepositoryImpl;
 import com.jinwang.service.SpeakService;
 import com.jinwang.service.SpeakServiceImpl;
 import org.springframework.context.annotation.Bean;
@@ -10,6 +12,12 @@ public class AppConfig {
     @Bean(name="speakerService")
     public SpeakService getSpeakerService() {
         return new SpeakServiceImpl();
+    }
+
+
+    @Bean(name="speakerRepository")
+    public SpeakerRepository getSpeakerRepository() {
+        return new StubSpeakerRepositoryImpl();
     }
 
 

@@ -8,10 +8,14 @@ import java.util.List;
 
 public class SpeakServiceImpl implements SpeakService {
 
-    private SpeakerRepository repository = new StubSpeakerRepositoryImpl();
+    private SpeakerRepository repository;
 
     @Override
     public List<Speaker> findAll() {
         return repository.findAll();
+    }
+
+    public void setRepository(SpeakerRepository repository) {
+        this.repository = repository;
     }
 }
