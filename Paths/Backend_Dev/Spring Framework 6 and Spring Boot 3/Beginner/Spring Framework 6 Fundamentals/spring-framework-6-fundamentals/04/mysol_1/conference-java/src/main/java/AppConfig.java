@@ -11,8 +11,8 @@ public class AppConfig {
 
     @Bean(name="speakerService")
     public SpeakService getSpeakerService() {
-        SpeakServiceImpl service = new SpeakServiceImpl();
-        service.setRepository(getSpeakerRepository());
+        SpeakServiceImpl service = new SpeakServiceImpl(getSpeakerRepository());
+//        service.setRepository(getSpeakerRepository());
         return service;
     }
 
