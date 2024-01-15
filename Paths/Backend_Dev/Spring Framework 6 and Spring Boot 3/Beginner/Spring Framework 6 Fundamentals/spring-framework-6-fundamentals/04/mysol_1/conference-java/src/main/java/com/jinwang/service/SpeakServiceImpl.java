@@ -2,7 +2,6 @@ package com.jinwang.service;
 
 import com.jinwang.model.Speaker;
 import com.jinwang.repository.SpeakerRepository;
-import com.jinwang.repository.StubSpeakerRepositoryImpl;
 
 import java.util.List;
 
