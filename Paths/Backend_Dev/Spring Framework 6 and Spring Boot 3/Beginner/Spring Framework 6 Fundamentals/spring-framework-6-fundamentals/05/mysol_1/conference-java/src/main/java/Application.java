@@ -10,6 +10,12 @@ public class Application {
 
         SpeakService service = appContext.getBean("speakerService", SpeakService.class);
 
+        System.out.println(service);
+
         System.out.println(service.findAll().get(0).getFirstName());
+
+        SpeakService service2 = appContext.getBean("speakerService", SpeakService.class);
+
+        System.out.println(service2);
     }
 }
