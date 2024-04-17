@@ -1,120 +1,102 @@
 @font-face {
-  font-family: 'Hochstadt Serif';
+  font-family: "Hochstadt Serif";
   font-style: normal;
   font-weight: normal;
   src: url(./assets/fonts/Hochstadt-Serif.otf);
 }
-
 @font-face {
-  font-family: 'Hochstadt Serif Oblique';
+  font-family: "Hochstadt Serif Oblique";
   font-style: italic;
   font-weight: normal;
   src: url(./assets/fonts/Hochstadt-SerifOblique.otf);
 }
-
 @font-face {
-  font-family: 'Hochstadt Rounded';
+  font-family: "Hochstadt Rounded";
   font-style: normal;
   font-weight: normal;
   src: url(./assets/fonts/Hochstadt-Rounded.otf);
 }
-
 @font-face {
-  font-family: 'Hochstadt Rounded Oblique';
+  font-family: "Hochstadt Rounded Oblique";
   font-style: italic;
   font-weight: normal;
   src: url(./assets/fonts/Hochstadt-RoundedOblique.otf);
 }
-
 @font-face {
-  font-family: 'The Great Outdoors';
+  font-family: "The Great Outdoors";
   font-style: normal;
   font-weight: normal;
   src: url(./assets/fonts/TheGreatOutdoors-Regular.otf);
 }
-
 @font-face {
-  font-family: 'The Great Outdoors Rough';
+  font-family: "The Great Outdoors Rough";
   font-style: normal;
   font-weight: normal;
   src: url(./assets/fonts/TheGreatOutdoors-Rough-Regular.otf);
 }
-
 @font-face {
-  font-family: 'Work Sans';
+  font-family: "Work Sans";
   font-style: normal;
   font-weight: 100;
   src: url(./assets/fonts/WorkSans-Thin.ttf);
 }
-
 @font-face {
-  font-family: 'Work Sans';
+  font-family: "Work Sans";
   font-style: normal;
   font-weight: 200;
   src: url(./assets/fonts/WorkSans-ExtraLight.ttf);
 }
-
 @font-face {
-  font-family: 'Work Sans';
+  font-family: "Work Sans";
   font-style: normal;
   font-weight: 300;
   src: url(./assets/fonts/WorkSans-Light.ttf);
 }
-
 @font-face {
-  font-family: 'Work Sans';
+  font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
   src: url(./assets/fonts/WorkSans-Regular.ttf);
 }
-
 @font-face {
-  font-family: 'Work Sans';
+  font-family: "Work Sans";
   font-style: normal;
   font-weight: 500;
   src: url(./assets/fonts/WorkSans-Medium.ttf);
 }
-
 @font-face {
-  font-family: 'Work Sans';
+  font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
   src: url(./assets/fonts/WorkSans-SemiBold.ttf);
 }
-
 @font-face {
-  font-family: 'Work Sans';
+  font-family: "Work Sans";
   font-style: normal;
   font-weight: 700;
   src: url(./assets/fonts/WorkSans-Bold.ttf);
 }
-
 @font-face {
-  font-family: 'Work Sans';
+  font-family: "Work Sans";
   font-style: normal;
   font-weight: 800;
   src: url(./assets/fonts/WorkSans-ExtraBold.ttf);
 }
-
 @font-face {
-  font-family: 'Work Sans';
+  font-family: "Work Sans";
   font-style: normal;
   font-weight: 900;
   src: url(./assets/fonts/WorkSans-Black.ttf);
 }
-
 body {
-  background-color: rgba(253, 246, 246, 1);
-  font-family: 'Work Sans', sans-serif;
+  background-color: #fdf6f6;
+  font-family: "Work Sans", sans-serif;
   font-size: 16px;
   margin: 0 auto;
   max-width: 1486px;
 }
 
-
-
 /* *************** .main-content styles */
-
 .main-content h2 {
   font-size: 20px;
   font-weight: 600;
@@ -132,7 +114,7 @@ body {
   border: 0;
   position: relative;
   top: -5px;
-  border-bottom: 2px solid rgba(54, 48, 44, 1);
+  border-bottom: 2px solid #36302c;
 }
 
 .carousel {
@@ -186,7 +168,7 @@ body {
 }
 
 .carousel button {
-  background: url('./assets/img/svg/carousel-button-hollow.svg') 50% 50% no-repeat;
+  background: url("./assets/img/svg/carousel-button-hollow.svg") 50% 50% no-repeat;
   border: none;
   color: black;
   cursor: pointer;
@@ -198,12 +180,12 @@ body {
 }
 
 .carousel .active-carousel-item {
-  background: url('./assets/img/svg/carousel-button-filled.svg') 50% 50% no-repeat;
+  background: url("./assets/img/svg/carousel-button-filled.svg") 50% 50% no-repeat;
 }
 
 .focused-message .logo {
   align-items: center;
-  background-image: url('./assets/img/svg/badge.svg');
+  background-image: url("./assets/img/svg/badge.svg");
   display: flex;
   height: 168px;
   justify-content: center;
@@ -212,8 +194,8 @@ body {
 }
 
 .focused-message .logo p {
-  color: rgba(200, 125, 82, 1);
-  font-family: 'The Great Outdoors', serif;
+  color: #c87d52;
+  font-family: "The Great Outdoors", serif;
   font-size: 100px;
   position: relative;
   top: -15px;
@@ -221,7 +203,7 @@ body {
 }
 
 .focused-message h2 {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 36px;
   font-weight: 800;
   margin: 0 0 18px 0;
@@ -230,7 +212,7 @@ body {
 }
 
 .focused-message p {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 24px;
   font-weight: 500;
   margin: 0;
@@ -242,12 +224,10 @@ body {
   padding: 0 50px;
 }
 
-
 /* *************** .contact-wrapper and .form-wrapper styles */
-
 .contact-wrapper {
   align-items: left;
-  background-color: rgba(253, 246, 246, 1);
+  background-color: #fdf6f6;
   display: flex;
   justify-content: space-between;
   padding: 0 51px 51px 51px;
@@ -271,14 +251,14 @@ body {
 }
 
 .form-wrapper h3 {
-  color: rgba(54, 48, 44, 1);
+  color: #36302c;
   font-size: 36px;
   font-weight: 800;
   margin: 0 0 18px 0;
 }
 
 .form-wrapper p {
-  color: rgba(54, 48, 44, 1);
+  color: #36302c;
   font-size: 24px;
   font-weight: 500;
   margin: 0 0 58px 0;
@@ -290,7 +270,7 @@ fieldset {
 }
 
 .form-wrapper label {
-  color: rgba(54, 48, 44, 1);
+  color: #36302c;
   display: block;
   font-weight: 600;
   margin-bottom: 11px;
@@ -322,10 +302,10 @@ fieldset {
 }
 
 .form-wrapper input[type=submit] {
-  background-color: rgba(255, 208, 201, 1);
+  background-color: #ffd0c9;
   border: 0;
   border-radius: 0;
-  color: rgba(54, 48, 44, 1);
+  color: #36302c;
   font-size: 16px;
   font-weight: 600;
   height: 51px;
@@ -342,7 +322,6 @@ fieldset {
 }
 
 /* *************** .gallery-wrapper styles */
-
 .gallery-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -355,7 +334,6 @@ fieldset {
 }
 
 /* *************** .cart-wrapper and .subtotal-wrapper styles */
-
 .cart-wrapper {
   display: flex;
   justify-content: space-between;
@@ -391,7 +369,7 @@ fieldset {
 }
 
 .cart-item-number {
-  color: rgba(200, 125, 82, 1);
+  color: #c87d52;
   font-weight: 600;
   margin: 15px 0 22px 0;
   padding: 0;
@@ -399,14 +377,14 @@ fieldset {
 }
 
 .cart-item-name {
-  color: rgba(54, 48, 44, 1);
+  color: #36302c;
   font-size: 24px;
   font-weight: 500;
   margin: 0 0 7px 0;
 }
 
 .cart-item-description {
-  color: rgba(54, 48, 44, 1);
+  color: #36302c;
   margin: 0 0 22px 0;
 }
 
@@ -416,12 +394,12 @@ fieldset {
 }
 
 .quantity-selector-wrapper a {
-  color: rgba(54, 48, 44, 0.5)
+  color: rgba(54, 48, 44, 0.5);
 }
 
 .quantity-selector {
   align-items: center;
-  background-color: rgba(253, 246, 246, 1);
+  background-color: #fdf6f6;
   border: 2px solid rgba(54, 48, 44, 0.3);
   border-radius: 10px;
   box-sizing: border-box;
@@ -434,13 +412,13 @@ fieldset {
 }
 
 .quantity-selector button {
-  color: rgba(200, 125, 82, 1);
+  color: #c87d52;
   border: 0;
-  background-color: rgba(253, 246, 246, 1);
+  background-color: #fdf6f6;
 }
 
 .quantity-selector span {
-  color: rgba(54, 48, 44, 1);
+  color: #36302c;
   font-size: 18px;
 }
 
@@ -471,13 +449,13 @@ fieldset {
 }
 
 .subtotal-wrapper p:nth-child(1) {
-  color: rgba(200, 125, 82, 1);
+  color: #c87d52;
   font-weight: 600;
   text-transform: uppercase;
 }
 
 .subtotal-wrapper p:nth-child(2) {
-  color: rgba(54, 48, 44, 1);
+  color: #36302c;
   font-weight: 600;
 }
 
@@ -500,10 +478,10 @@ fieldset {
 }
 
 .subtotal-wrapper button {
-  background-color: rgba(255, 208, 201, 1);
+  background-color: #ffd0c9;
   border: 0;
   border-radius: 0;
-  color: rgba(54, 48, 44, 1);
+  color: #36302c;
   font-size: 16px;
   font-weight: 600;
   height: 51px;
@@ -513,10 +491,10 @@ fieldset {
 }
 
 .subtotal-wrapper input[type=submit] {
-  background-color: rgba(255, 208, 201, 1);
+  background-color: #ffd0c9;
   border: 0;
   border-radius: 0;
-  color: rgba(54, 48, 44, 1);
+  color: #36302c;
   font-size: 16px;
   font-weight: 600;
   height: 51px;
