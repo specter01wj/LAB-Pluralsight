@@ -11,6 +11,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 
 
 
+
     imports: [RouterOutlet, TopBarComponent]
 })
 export class AppComponent {
