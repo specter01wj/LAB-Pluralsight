@@ -8,6 +8,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     styleUrls: ['./app.component.css'],
     standalone: true,
 
+
     imports: [RouterOutlet, TopBarComponent]
 })
 export class AppComponent {
