@@ -9,6 +9,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     standalone: true,
 
 
+
     imports: [RouterOutlet, TopBarComponent]
 })
 export class AppComponent {
