@@ -176,6 +176,12 @@ var CatalogComponent = /** @class */ (function () {
             },
         ];
     }
+    CatalogComponent.prototype.getDiscountedClasses = function (product) {
+        if (product.discount > 0)
+            return ['strikethrough'];
+        else
+            return [];
+    };
     CatalogComponent.prototype.getImageUrl = function (product) {
         if (!product)
             return '';
