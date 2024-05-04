@@ -9,6 +9,7 @@ import { Product } from '../model/product';
 export class CatalogComponent {
   products: Product[];
   filter: string = '';
+  cart: Product[] = [];
 
   constructor() {
     this.products = [
@@ -186,6 +187,11 @@ export class CatalogComponent {
         discount: 0,
       },
     ];
+  }
+
+  addToCart(product: Product) {
+    this.cart.push(product);
+
   }
 
   getDiscountedClasses(product: Product) {

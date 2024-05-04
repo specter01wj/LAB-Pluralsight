@@ -11,6 +11,7 @@ var core_1 = require("@angular/core");
 var CatalogComponent = /** @class */ (function () {
     function CatalogComponent() {
         this.filter = '';
+        this.cart = [];
         this.products = [
             {
                 id: 1,
@@ -176,6 +177,9 @@ var CatalogComponent = /** @class */ (function () {
             },
         ];
     }
+    CatalogComponent.prototype.addToCart = function (product) {
+        this.cart.push(product);
+    };
     CatalogComponent.prototype.getDiscountedClasses = function (product) {
         if (product.discount > 0)
             return ['strikethrough'];
