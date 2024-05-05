@@ -179,6 +179,7 @@ var CatalogComponent = /** @class */ (function () {
     }
     CatalogComponent.prototype.addToCart = function (product) {
         this.cart.push(product);
+        console.log("product " + product.name + " added to cart");
     };
     CatalogComponent.prototype.getDiscountedClasses = function (product) {
         if (product.discount > 0)
