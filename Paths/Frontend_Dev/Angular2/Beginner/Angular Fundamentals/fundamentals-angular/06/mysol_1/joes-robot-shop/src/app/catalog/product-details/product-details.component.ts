@@ -12,6 +12,7 @@ export class ProductDetailsComponent {
 
   getImageUrl(product: Product) {
     if (!product) return '';
+
     return '/assets/images/robot-parts/' + product.imageName;
   }
 
