@@ -10,17 +10,22 @@ exports.ProductDetailsComponent = void 0;
 var core_1 = require("@angular/core");
 var ProductDetailsComponent = /** @class */ (function () {
     function ProductDetailsComponent() {
+        this.buy = new core_1.EventEmitter();
     }
     ProductDetailsComponent.prototype.getImageUrl = function (product) {
         if (!product)
             return '';
         return '/assets/images/robot-parts/' + product.imageName;
     };
-    ProductDetailsComponent.prototype.addToCart = function () {
+    ProductDetailsComponent.prototype.buyButtonClicked = function (product) {
+        this.buy.emit();
     };
     __decorate([
         core_1.Input()
     ], ProductDetailsComponent.prototype, "product");
+    __decorate([
+        core_1.Output()
+    ], ProductDetailsComponent.prototype, "buy");
     ProductDetailsComponent = __decorate([
         core_1.Component({
             selector: 'app-product-details',
