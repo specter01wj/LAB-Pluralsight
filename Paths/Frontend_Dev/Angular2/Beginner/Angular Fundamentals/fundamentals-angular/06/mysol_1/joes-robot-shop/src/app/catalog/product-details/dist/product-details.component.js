@@ -16,6 +16,8 @@ var ProductDetailsComponent = /** @class */ (function () {
             return '';
         return '/assets/images/robot-parts/' + product.imageName;
     };
+    ProductDetailsComponent.prototype.addToCart = function () {
+    };
     __decorate([
         core_1.Input()
     ], ProductDetailsComponent.prototype, "product");
