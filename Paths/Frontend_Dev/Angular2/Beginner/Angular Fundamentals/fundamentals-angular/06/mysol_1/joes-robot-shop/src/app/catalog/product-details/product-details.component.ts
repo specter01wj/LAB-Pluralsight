@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Product } from '../../model/product';
 
 @Component({
   selector: 'app-product-details',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './product-details.component.scss'
 })
 export class ProductDetailsComponent {
+  @Input() product!: Product;
+
+
+  getImageUrl(product: Product) {
+    if (!product) return '';
+    return '/assets/images/robot-parts/' + product.imageName;
+  }
+
+
 
 }
