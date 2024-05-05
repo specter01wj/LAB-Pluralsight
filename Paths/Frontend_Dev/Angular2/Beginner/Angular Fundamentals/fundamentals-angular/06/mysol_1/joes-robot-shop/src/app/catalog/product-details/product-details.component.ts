@@ -19,6 +19,7 @@ export class ProductDetailsComponent {
 
 
 
+
     return '/assets/images/robot-parts/' + product.imageName;
   }
 
