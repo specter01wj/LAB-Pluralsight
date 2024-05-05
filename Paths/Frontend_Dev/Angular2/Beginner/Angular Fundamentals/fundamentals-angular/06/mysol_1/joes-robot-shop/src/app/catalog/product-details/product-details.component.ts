@@ -14,6 +14,7 @@ export class ProductDetailsComponent {
     if (!product) return '';
 
 
+
     return '/assets/images/robot-parts/' + product.imageName;
   }
 
