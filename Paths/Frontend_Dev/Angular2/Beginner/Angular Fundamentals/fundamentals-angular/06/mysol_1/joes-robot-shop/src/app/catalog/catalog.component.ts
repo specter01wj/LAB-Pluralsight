@@ -194,16 +194,6 @@ export class CatalogComponent {
     console.log(`product ${product.name} added to cart`);
   }
 
-  getDiscountedClasses(product: Product) {
-    if (product.discount > 0) return ['strikethrough'];
-    else return [];
-  }
-
-  getImageUrl(product: Product) {
-    if (!product) return '';
-    return '/assets/images/robot-parts/' + product.imageName;
-  }
-
   getFilteredProducts() {
     return this.filter === ''
       ? this.products

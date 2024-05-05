@@ -181,17 +181,6 @@ var CatalogComponent = /** @class */ (function () {
         this.cart.push(product);
         console.log("product " + product.name + " added to cart");
     };
-    CatalogComponent.prototype.getDiscountedClasses = function (product) {
-        if (product.discount > 0)
-            return ['strikethrough'];
-        else
-            return [];
-    };
-    CatalogComponent.prototype.getImageUrl = function (product) {
-        if (!product)
-            return '';
-        return '/assets/images/robot-parts/' + product.imageName;
-    };
     CatalogComponent.prototype.getFilteredProducts = function () {
         var _this = this;
         return this.filter === ''
