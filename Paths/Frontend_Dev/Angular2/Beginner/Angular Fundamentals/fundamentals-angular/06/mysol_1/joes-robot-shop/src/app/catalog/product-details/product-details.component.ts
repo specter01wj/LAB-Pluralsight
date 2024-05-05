@@ -16,7 +16,7 @@ export class ProductDetailsComponent {
   }
 
   buyButtonClicked(product: Product) {
-    this.buy.emit();
+    this.buy.emit(product);
   }
 
 }
