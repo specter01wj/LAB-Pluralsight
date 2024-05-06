@@ -179,8 +179,7 @@ var CatalogComponent = /** @class */ (function () {
         ];
     }
     CatalogComponent.prototype.addToCart = function (product) {
-        // this.cart.push(product);
-        // console.log(`product ${product.name} added to cart`);
+        this.cartService.add(product);
     };
     CatalogComponent.prototype.getFilteredProducts = function () {
         var _this = this;
