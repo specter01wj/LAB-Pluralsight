@@ -12,9 +12,25 @@ var CartService = /** @class */ (function () {
     function CartService() {
         this.cart = [];
     }
+    CartService.prototype.getTotalPrice = function () {
+        return (Math.round(this.cart.reduce(function (prev, cur) {
+            return (prev + cur.qty * (cur.product.price * (1 - cur.product.discount)));
+        }, 0) * 100) / 100);
+    };
+    CartService.prototype.findLineItem = function (product) {
+        return this.cart.find(function (li) { return li.product.id === product.id; });
+    };
     CartService.prototype.add = function (product) {
-        this.cart.push(product);
-        console.log("product " + product.name + " added to cart");
+        var lineItem = this.findLineItem(product);
+        if (lineItem !== undefined) {
+            lineItem.qty++;
+        }
+        else {
+            lineItem = { product: product, qty: 1 };
+            this.cart.push(lineItem);
+        }
+        console.log('added ' + product.name + ' to cart!');
+        console.log('Total Price: $' + this.getTotalPrice());
     };
     CartService = __decorate([
         core_1.Injectable({
