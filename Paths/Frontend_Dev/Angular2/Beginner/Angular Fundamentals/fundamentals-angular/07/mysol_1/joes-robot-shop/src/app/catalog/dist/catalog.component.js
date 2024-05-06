@@ -10,7 +10,8 @@ exports.CatalogComponent = void 0;
 var core_1 = require("@angular/core");
 var CatalogComponent = /** @class */ (function () {
     // cart: Product[] = [];
-    function CatalogComponent() {
+    function CatalogComponent(cartService) {
+        this.cartService = cartService;
         this.filter = '';
         this.products = [
             {
