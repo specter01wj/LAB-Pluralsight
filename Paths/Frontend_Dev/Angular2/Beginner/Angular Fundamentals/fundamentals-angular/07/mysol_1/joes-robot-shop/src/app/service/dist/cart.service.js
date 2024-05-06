@@ -12,6 +12,10 @@ var CartService = /** @class */ (function () {
     function CartService() {
         this.cart = [];
     }
+    CartService.prototype.addToCart = function (product) {
+        this.cart.push(product);
+        console.log("product " + product.name + " added to cart");
+    };
     CartService = __decorate([
         core_1.Injectable({
             providedIn: 'root'
