@@ -26,7 +26,7 @@ export class CartService {
     return this.cart.find((li) => li.product.id === product.id);
   }
 
-  add(product: IProduct) {
+  add(product: Product) {
     let lineItem = this.findLineItem(product);
     if (lineItem !== undefined) {
       lineItem.qty++;
