@@ -9,9 +9,9 @@ exports.__esModule = true;
 exports.CatalogComponent = void 0;
 var core_1 = require("@angular/core");
 var CatalogComponent = /** @class */ (function () {
+    // cart: Product[] = [];
     function CatalogComponent() {
         this.filter = '';
-        this.cart = [];
         this.products = [
             {
                 id: 1,
@@ -178,8 +178,8 @@ var CatalogComponent = /** @class */ (function () {
         ];
     }
     CatalogComponent.prototype.addToCart = function (product) {
-        this.cart.push(product);
-        console.log("product " + product.name + " added to cart");
+        // this.cart.push(product);
+        // console.log(`product ${product.name} added to cart`);
     };
     CatalogComponent.prototype.getFilteredProducts = function () {
         var _this = this;

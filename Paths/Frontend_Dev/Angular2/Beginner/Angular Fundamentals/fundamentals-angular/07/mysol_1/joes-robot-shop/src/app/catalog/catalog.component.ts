@@ -9,7 +9,7 @@ import { Product } from '../model/product';
 export class CatalogComponent {
   products: Product[];
   filter: string = '';
-  cart: Product[] = [];
+  // cart: Product[] = [];
 
   constructor() {
     this.products = [
@@ -190,8 +190,8 @@ export class CatalogComponent {
   }
 
   addToCart(product: Product) {
-    this.cart.push(product);
-    console.log(`product ${product.name} added to cart`);
+    // this.cart.push(product);
+    // console.log(`product ${product.name} added to cart`);
   }
 
   getFilteredProducts() {
