@@ -14,6 +14,8 @@ var app_component_1 = require("./app.component");
 var home_component_1 = require("./home/home.component");
 var catalog_component_1 = require("./catalog/catalog.component");
 var site_header_component_1 = require("./site-header/site-header.component");
+var product_details_component_1 = require("./catalog/product-details/product-details.component");
+var http_1 = require("@angular/common/http");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -23,10 +25,12 @@ var AppModule = /** @class */ (function () {
                 app_component_1.AppComponent,
                 home_component_1.HomeComponent,
                 catalog_component_1.CatalogComponent,
-                site_header_component_1.SiteHeaderComponent
+                site_header_component_1.SiteHeaderComponent,
+                product_details_component_1.ProductDetailsComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,
+                http_1.HttpClientModule,
                 app_routing_module_1.AppRoutingModule
             ],
             providers: [],
