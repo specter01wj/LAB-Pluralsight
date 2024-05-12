@@ -9,28 +9,15 @@ exports.__esModule = true;
 exports.CartService = void 0;
 var core_1 = require("@angular/core");
 var CartService = /** @class */ (function () {
-    function CartService() {
+    function CartService(http) {
+        this.http = http;
         this.cart = [];
     }
-    CartService.prototype.getTotalPrice = function () {
-        return (Math.round(this.cart.reduce(function (prev, cur) {
-            return (prev + cur.qty * (cur.product.price * (1 - cur.product.discount)));
-        }, 0) * 100) / 100);
-    };
-    CartService.prototype.findLineItem = function (product) {
-        return this.cart.find(function (li) { return li.product.id === product.id; });
-    };
     CartService.prototype.add = function (product) {
-        var lineItem = this.findLineItem(product);
-        if (lineItem !== undefined) {
-            lineItem.qty++;
-        }
-        else {
-            lineItem = { product: product, qty: 1 };
-            this.cart.push(lineItem);
-        }
-        console.log('added ' + product.name + ' to cart!');
-        console.log('Total Price: $' + this.getTotalPrice());
+        this.cart.push(product);
+        this.http.post('/api/cart', this.cart).subscribe(function () {
+            console.log('added ' + product.name + ' to cart!');
+        });
     };
     CartService = __decorate([
         core_1.Injectable({
