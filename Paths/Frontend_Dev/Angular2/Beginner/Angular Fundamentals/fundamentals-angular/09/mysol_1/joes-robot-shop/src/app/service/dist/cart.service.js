@@ -8,11 +8,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.CartService = void 0;
 var core_1 = require("@angular/core");
+var rxjs_1 = require("rxjs");
 var CartService = /** @class */ (function () {
     function CartService(http) {
         this.http = http;
-        this.cart = [];
+        // private cart: Product[] = [];
+        this.cart = new rxjs_1.BehaviorSubject([]);
     }
+    CartService.prototype.getCart = function () {
+        return this.cart.asObservable();
+    };
     CartService.prototype.add = function (product) {
         this.cart.push(product);
         this.http.post('/api/cart', this.cart).subscribe(function () {
