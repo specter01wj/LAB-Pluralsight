@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../model/product';
 import { CartService } from '../service/cart.service';
 import { ProductService } from '../service/product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'bot-catalog',
@@ -15,7 +16,8 @@ export class CatalogComponent implements OnInit {
 
   constructor(
     private cartService: CartService,
-    private productSvc: ProductService
+    private productSvc: ProductService,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -26,6 +28,7 @@ export class CatalogComponent implements OnInit {
 
   addToCart(product: Product) {
     this.cartService.add(product);
+    this.router.navigate(['/cart']);
   }
 
   getFilteredProducts() {

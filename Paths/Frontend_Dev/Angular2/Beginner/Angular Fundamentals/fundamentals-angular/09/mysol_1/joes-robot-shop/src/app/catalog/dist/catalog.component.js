@@ -10,9 +10,10 @@ exports.CatalogComponent = void 0;
 var core_1 = require("@angular/core");
 var CatalogComponent = /** @class */ (function () {
     // cart: Product[] = [];
-    function CatalogComponent(cartService, productSvc) {
+    function CatalogComponent(cartService, productSvc, router) {
         this.cartService = cartService;
         this.productSvc = productSvc;
+        this.router = router;
         this.products = [];
         this.filter = '';
     }
@@ -24,6 +25,7 @@ var CatalogComponent = /** @class */ (function () {
     };
     CatalogComponent.prototype.addToCart = function (product) {
         this.cartService.add(product);
+        this.router.navigate(['/cart']);
     };
     CatalogComponent.prototype.getFilteredProducts = function () {
         var _this = this;
