@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../model/product';
 import { CartService } from '../service/cart.service';
 import { ProductService } from '../service/product.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'bot-catalog',
@@ -18,12 +18,16 @@ export class CatalogComponent implements OnInit {
     private cartService: CartService,
     private productSvc: ProductService,
     private router: Router,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
     this.productSvc.getProducts().subscribe((products) => {
       this.products = products;
     });
+    this.route.queryParams.subscribe((params) => {
+      this.filter = params['filter'] ?? '';
+    })
   }
 
   addToCart(product: Product) {

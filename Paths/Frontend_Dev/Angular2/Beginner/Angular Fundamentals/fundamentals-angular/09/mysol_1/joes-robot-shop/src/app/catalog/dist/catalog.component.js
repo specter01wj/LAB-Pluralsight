@@ -10,10 +10,11 @@ exports.CatalogComponent = void 0;
 var core_1 = require("@angular/core");
 var CatalogComponent = /** @class */ (function () {
     // cart: Product[] = [];
-    function CatalogComponent(cartService, productSvc, router) {
+    function CatalogComponent(cartService, productSvc, router, route) {
         this.cartService = cartService;
         this.productSvc = productSvc;
         this.router = router;
+        this.route = route;
         this.products = [];
         this.filter = '';
     }
@@ -21,6 +22,10 @@ var CatalogComponent = /** @class */ (function () {
         var _this = this;
         this.productSvc.getProducts().subscribe(function (products) {
             _this.products = products;
+        });
+        this.route.queryParams.subscribe(function (params) {
+            var _a;
+            _this.filter = (_a = params['filter']) !== null && _a !== void 0 ? _a : '';
         });
     };
     CatalogComponent.prototype.addToCart = function (product) {
