@@ -24,6 +24,7 @@ import { CartComponent } from './cart/cart.component';
 
 
 
+
     HomeComponent,
     CatalogComponent,
     SiteHeaderComponent,
