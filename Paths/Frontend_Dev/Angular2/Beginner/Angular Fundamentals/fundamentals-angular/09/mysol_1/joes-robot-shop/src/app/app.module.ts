@@ -14,6 +14,7 @@ import { CartComponent } from './cart/cart.component';
   declarations: [
     AppComponent,
 
+
     HomeComponent,
     CatalogComponent,
     SiteHeaderComponent,
