@@ -13,6 +13,7 @@ import { CartComponent } from './cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
+
     HomeComponent,
     CatalogComponent,
     SiteHeaderComponent,
