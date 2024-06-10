@@ -8,7 +8,7 @@ import { Product } from '../../model/product';
 })
 export class ProductDetailsComponent {
   @Input() product!: Product;
-  @Output() buy = new EventEmitter();
+  @Output() buy = new EventEmitter<Product>();
 
   getImageUrl(product: Product) {
     if (!product) return '';

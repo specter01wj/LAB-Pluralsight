@@ -7,7 +7,6 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CartService {
-  // private cart: Product[] = [];
   private cart: BehaviorSubject<Product[]> = new BehaviorSubject<Product[]>([]);
 
   constructor(private http: HttpClient) {
@@ -21,10 +20,13 @@ export class CartService {
   }
 
   add(product: Product) {
-    // this.cart.push(product);
-    const newCart = [...this.cart.getValue(), product];
+    let currentCart = this.cart.value;
+    if (!Array.isArray(currentCart)) {
+      currentCart = [];
+    }
+    const newCart = [...currentCart, product];
     this.cart.next(newCart);
-    this.http.post('/api/cart', this.cart).subscribe(() => {
+    this.http.post('/api/cart', newCart).subscribe(() => {
       console.log('added ' + product.name + ' to cart!');
     });
   }

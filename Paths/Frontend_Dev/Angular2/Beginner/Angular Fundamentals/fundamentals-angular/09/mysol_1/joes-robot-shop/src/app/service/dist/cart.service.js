@@ -20,7 +20,6 @@ var CartService = /** @class */ (function () {
     function CartService(http) {
         var _this = this;
         this.http = http;
-        // private cart: Product[] = [];
         this.cart = new rxjs_1.BehaviorSubject([]);
         this.http.get('/api/cart').subscribe({
             next: function (cart) { return _this.cart.next(cart); }
@@ -30,10 +29,13 @@ var CartService = /** @class */ (function () {
         return this.cart.asObservable();
     };
     CartService.prototype.add = function (product) {
-        // this.cart.push(product);
-        var newCart = __spreadArrays(this.cart.getValue(), [product]);
+        var currentCart = this.cart.value;
+        if (!Array.isArray(currentCart)) {
+            currentCart = [];
+        }
+        var newCart = __spreadArrays(currentCart, [product]);
         this.cart.next(newCart);
-        this.http.post('/api/cart', this.cart).subscribe(function () {
+        this.http.post('/api/cart', newCart).subscribe(function () {
             console.log('added ' + product.name + ' to cart!');
         });
     };
