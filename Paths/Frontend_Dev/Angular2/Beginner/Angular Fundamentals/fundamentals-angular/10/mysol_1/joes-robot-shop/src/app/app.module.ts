@@ -9,6 +9,7 @@ import { SiteHeaderComponent } from './site-header/site-header.component';
 import { ProductDetailsComponent } from './catalog/product-details/product-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
+import { SignInComponent } from './user/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CartComponent } from './cart/cart.component';
     CatalogComponent,
     SiteHeaderComponent,
     ProductDetailsComponent,
-    CartComponent
+    CartComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
