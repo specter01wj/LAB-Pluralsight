@@ -12,10 +12,12 @@ var router_1 = require("@angular/router");
 var home_component_1 = require("./home/home.component");
 var catalog_component_1 = require("./catalog/catalog.component");
 var cart_component_1 = require("./cart/cart.component");
+var sign_in_component_1 = require("./user/sign-in/sign-in.component");
 var routes = [
     { path: 'home', component: home_component_1.HomeComponent, title: "Home - Joe's Robot Shop" },
     { path: 'catalog', component: catalog_component_1.CatalogComponent, title: "Catalog - Joe's Robot Shop" },
     { path: 'cart', component: cart_component_1.CartComponent, title: "Cart - Joe's Robot Shop" },
+    { path: 'sign-in', component: sign_in_component_1.SignInComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 var AppRoutingModule = /** @class */ (function () {
