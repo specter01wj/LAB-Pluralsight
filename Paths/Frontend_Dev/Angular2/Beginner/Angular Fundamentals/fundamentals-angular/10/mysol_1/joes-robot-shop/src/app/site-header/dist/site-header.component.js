@@ -9,8 +9,24 @@ exports.__esModule = true;
 exports.SiteHeaderComponent = void 0;
 var core_1 = require("@angular/core");
 var SiteHeaderComponent = /** @class */ (function () {
-    function SiteHeaderComponent() {
+    function SiteHeaderComponent(userService) {
+        this.userService = userService;
+        this.user = null;
+        this.showSignOutMenu = false;
     }
+    SiteHeaderComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.userService.getUser().subscribe({
+            next: function (user) { _this.user = user; }
+        });
+    };
+    SiteHeaderComponent.prototype.toggleSignOutMenu = function () {
+        this.showSignOutMenu = !this.showSignOutMenu;
+    };
+    SiteHeaderComponent.prototype.signOut = function () {
+        this.userService.signOut();
+        this.showSignOutMenu = false;
+    };
     SiteHeaderComponent = __decorate([
         core_1.Component({
             selector: 'bot-site-header',
