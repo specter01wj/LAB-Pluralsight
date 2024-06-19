@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 app.use(bodyParser.json());
-/* 
+/*
   IMPORTANT:
     ***NEVER*** store credentials unencrypted like this.
     This is for demo purposes only in order to simulate a functioning API serverr.
@@ -20,6 +20,12 @@ const users = {
     lastName: "Eames",
     email: "joe@joesrobotshop.com",
     password: "super-secret",
+  },
+  "jwang8212@gmail.com": {
+    firstName: "Jin",
+    lastName: "Wang",
+    email: "jwang8212@gmail.com",
+    password: "123456",
   },
 };
 let cart = [];
@@ -233,8 +239,8 @@ app.post("/api/register", (req, res) =>
 
 /* IMPORTANT:
     The code below is for demo purposes only and does not represent good security
-    practices. In a production application user credentials would be cryptographically 
-    stored in a database server and the password should NEVER be stored as plain text. 
+    practices. In a production application user credentials would be cryptographically
+    stored in a database server and the password should NEVER be stored as plain text.
 */
 app.post("/api/sign-in", (req, res) => {
   const user = users[req.body.email];
