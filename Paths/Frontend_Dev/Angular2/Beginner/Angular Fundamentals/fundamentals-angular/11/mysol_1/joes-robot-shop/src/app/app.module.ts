@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
 import { SignInComponent } from './user/sign-in/sign-in.component';
 import { TemplateFormControlsComponent } from './user/template-form-controls/template-form-controls.component';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TemplateFormControlsComponent } from './user/template-form-controls/tem
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
