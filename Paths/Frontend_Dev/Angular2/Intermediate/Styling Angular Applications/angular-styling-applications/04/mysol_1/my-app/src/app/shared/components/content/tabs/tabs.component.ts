@@ -17,7 +17,7 @@ export class TabsComponent implements AfterContentInit {
         }
     }
 
-    private selectTab(tab: TabsPaneComponent): void {
+    selectTab(tab: TabsPaneComponent): void {
         this.tabs.forEach(tab => tab.active = false);
         tab.active = true;
     }
