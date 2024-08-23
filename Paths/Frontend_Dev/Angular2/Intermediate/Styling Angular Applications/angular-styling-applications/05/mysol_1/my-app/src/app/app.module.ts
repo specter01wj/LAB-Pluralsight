@@ -3,12 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PromoComponent }           from './promo/promo.component';
 
 // Content Components
 import { AccordionComponent }       from './shared/components/content/accordion/accordion.component';
 import { AccordionPaneComponent }   from './shared/components/content/accordion/accordion-pane/accordion-pane.component';
 import { TabsComponent }            from './shared/components/content/tabs/tabs.component';
 import { TabsPaneComponent }        from './shared/components/content/tabs/tabs-pane/tabs-pane.component';
+import { ThumbnailListComponent }   from './shared/components/content/thumbnail-list/thumbnail-list.component';
+import {
+  MessageComponent,
+  MessageTitleDirective,
+  MessageContentDirective }         from './shared/components/content/message/message.component';
 
 // Navigation Components
 import { NavBarPrimaryComponent }   from './shared/components/navigation/navbar-primary/navbar-primary.component';
@@ -18,7 +24,8 @@ import { PillsComponent }           from './shared/components/navigation/pills/p
 // PopUp Components
 import {
   ModalComponent,
-  ModalContentDirective }           from './shared/components/popups/modal/modal.component';
+  ModalContentDirective,
+  ModalHighlightDirective }           from './shared/components/popups/modal/modal.component';
 import {
   ToolTipComponent,
   TooltipMessageDirective }         from './shared/components/popups/tooltip/tooltip.component';
@@ -27,15 +34,21 @@ import {
 @NgModule({
   declarations: [
     AppComponent,
+    PromoComponent,
     AccordionComponent,
     AccordionPaneComponent,
     TabsComponent,
     TabsPaneComponent,
+    MessageComponent,
+    MessageTitleDirective,
+    MessageContentDirective,
+    ThumbnailListComponent,
     NavBarPrimaryComponent,
     NavBarSecondaryComponent,
     PillsComponent,
     ModalComponent,
     ModalContentDirective,
+    ModalHighlightDirective,
     ToolTipComponent,
     TooltipMessageDirective
   ],
