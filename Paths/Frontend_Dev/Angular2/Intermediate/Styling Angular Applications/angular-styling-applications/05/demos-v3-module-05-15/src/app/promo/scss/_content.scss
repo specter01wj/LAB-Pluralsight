@@ -1,0 +1,22 @@
+@use 'headers';
+@use 'paragraphs';
+
+
+
+
+.content {
+    border: solid 0.0625em #ccc;
+    margin-right: 1em;
+    max-width: 35%;
+    padding: 1em;
+
+    &__title {
+        @include headers.g-root__h3;
+        margin-top: 0.5em;
+    }
+
+    &__description {
+        @include paragraphs.g-root__paragraph;
+    }
+
+}
