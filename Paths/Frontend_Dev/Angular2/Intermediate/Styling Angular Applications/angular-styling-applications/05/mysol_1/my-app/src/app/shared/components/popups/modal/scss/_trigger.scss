@@ -1,0 +1,8 @@
+@use 'links';
+
+
+
+
+.trigger {
+    @include links.g-root__link;
+}
