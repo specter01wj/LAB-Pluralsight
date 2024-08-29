@@ -9,21 +9,27 @@ exports.__esModule = true;
 exports.AppModule = void 0;
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
+var http_1 = require("@angular/common/http");
 var angular_in_memory_web_api_1 = require("angular-in-memory-web-api");
 var app_routing_module_1 = require("./app-routing.module");
 var in_memory_contacts_service_1 = require("./contacts/in-memory-contacts.service");
 var app_component_1 = require("./app.component");
+var edit_contact_component_1 = require("./edit-contact/edit-contact.component");
+var contact_list_component_1 = require("./contact-list/contact-list.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             declarations: [
-                app_component_1.AppComponent
+                app_component_1.AppComponent,
+                edit_contact_component_1.EditContactComponent,
+                contact_list_component_1.ContactListComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,
                 app_routing_module_1.AppRoutingModule,
+                http_1.HttpClientModule,
                 angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(in_memory_contacts_service_1.InMemoryContactsApi, { delay: 0 })
             ],
             providers: [],

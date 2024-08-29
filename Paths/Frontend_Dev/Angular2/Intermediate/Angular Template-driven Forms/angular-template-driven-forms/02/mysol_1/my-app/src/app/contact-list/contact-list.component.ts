@@ -5,8 +5,7 @@ import { ContactsService } from '../contacts/contacts.service';
 import { Contact } from '../contacts/contact.model';
 
 @Component({
-  standalone: true,
-  imports: [CommonModule, RouterModule],
+  selector: 'app-contact-list',
   templateUrl: './contact-list.component.html',
   styleUrls: ['./contact-list.component.css']
 })

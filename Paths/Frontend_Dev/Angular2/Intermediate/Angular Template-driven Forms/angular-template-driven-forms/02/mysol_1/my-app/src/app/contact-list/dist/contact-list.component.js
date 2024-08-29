@@ -8,8 +8,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.ContactListComponent = void 0;
 var core_1 = require("@angular/core");
-var common_1 = require("@angular/common");
-var router_1 = require("@angular/router");
 var ContactListComponent = /** @class */ (function () {
     function ContactListComponent(contactsService) {
         this.contactsService = contactsService;
@@ -43,8 +41,7 @@ var ContactListComponent = /** @class */ (function () {
     };
     ContactListComponent = __decorate([
         core_1.Component({
-            standalone: true,
-            imports: [common_1.CommonModule, router_1.RouterModule],
+            selector: 'app-contact-list',
             templateUrl: './contact-list.component.html',
             styleUrls: ['./contact-list.component.css']
         })
