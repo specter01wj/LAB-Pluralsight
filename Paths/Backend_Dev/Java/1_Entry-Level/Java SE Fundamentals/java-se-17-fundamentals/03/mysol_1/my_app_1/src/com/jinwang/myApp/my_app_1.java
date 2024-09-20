@@ -11,6 +11,11 @@ public class my_app_1 {
     public void testMyApp() {
         int someVal = 5;
         System.out.println(++someVal);
+        System.out.println(someVal);
+
+        int someVal_2 = 5;
+        System.out.println(someVal_2++);
+        System.out.println(someVal_2);
     }
 
 }
