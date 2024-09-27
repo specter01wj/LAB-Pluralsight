@@ -35,6 +35,8 @@ public class my_app_1 {
             }
         }
 
+        System.out.println(Arrays.toString(results));
+
         for(double currentResult : results) {
             System.out.println(currentResult);
         }
