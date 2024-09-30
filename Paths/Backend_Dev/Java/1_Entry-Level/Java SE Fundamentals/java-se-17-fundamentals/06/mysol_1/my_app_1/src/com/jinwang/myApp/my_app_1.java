@@ -13,8 +13,9 @@ public class my_app_1 {
             for (int i = 0; i < opCodes.length; i++) {
                 results[i] = sol.execute(opCodes[i], leftVals[i], rightVals[i]);
             }
-            for (double currentResult : results)
+            for (double currentResult : results) {
                 System.out.println(currentResult);
+            }
         } else if(args.length == 3) {
             sol.handleCommandLine(args);
         } else {
