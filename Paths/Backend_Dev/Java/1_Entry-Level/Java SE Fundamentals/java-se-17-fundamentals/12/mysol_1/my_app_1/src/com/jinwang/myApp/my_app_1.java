@@ -18,23 +18,27 @@ public class my_app_1 {
 
     static void performCalculations() {
         MathEquation[] equations = new MathEquation[4];
-        equations[0] = new MathEquation('d', 100.0d, 50.0d);
-        equations[1] = new MathEquation('a', 25.0d, 92.0d);
-        equations[2] = new MathEquation('s', 225.0d, 17.0d);
-        equations[3] = new MathEquation('m', 11.0d, 3.0d);
+        equations[0] = new MathEquation(MathOperation.DIVIDE, 100.0d, 50.0d);
+        equations[1] = new MathEquation(MathOperation.ADD, 25.0d, 92.0d);
+        equations[2] = new MathEquation(MathOperation.SUBTRACT, 225.0d, 17.0d);
+        equations[3] = new MathEquation(MathOperation.MULTIPLY, 11.0d, 3.0d);
 
         for(MathEquation equation : equations) {
             equation.execute();
-            System.out.println("result = " + equation.getResult());
+            System.out.println(equation); // println will call toString()
         }
 
         System.out.println("Average result = " + MathEquation.getAverageResult());
 
+        //useOverloads();
+    }
+
+    static void useOverloads() {
         System.out.println();
         System.out.println("Using execute overloads");
         System.out.println();
 
-        MathEquation equationOverload = new MathEquation('d');
+        MathEquation equationOverload = new MathEquation(MathOperation.DIVIDE);
         double leftDouble = 9.0d;
         double rightDouble = 4.0d;
         equationOverload.execute(leftDouble, rightDouble);
@@ -46,7 +50,6 @@ public class my_app_1 {
         System.out.println("Overload result with ints: " + equationOverload.getResult());
     }
 
-
     static void executeInteractively() {
         System.out.println("Enter an operation and two numbers");
         Scanner scanner = new Scanner(System.in);
@@ -56,11 +59,12 @@ public class my_app_1 {
     }
 
     private static void performOperation(String[] parts) {
-        char opCode = opCodeFromString(parts[0]);
+        MathOperation opCode = MathOperation.valueOf(parts[0].toUpperCase());
         double leftVal = valueFromWord(parts[1]);
         double rightVal = valueFromWord(parts[2]);
-        double result = execute(opCode, leftVal, rightVal);
-        displayResult(opCode, leftVal, rightVal, result);
+        MathEquation equation = new MathEquation(opCode, leftVal, rightVal);
+        equation.execute();
+        System.out.println(equation);
     }
 
     private static void displayResult(char opCode, double leftVal, double rightVal, double result) {
@@ -132,12 +136,17 @@ public class my_app_1 {
                 "zero", "one", "two", "three", "four",
                 "five", "six", "seven", "eight", "nine"
         };
+        boolean isValueSet = false;
         double value = 0d;
         for(int index = 0; index < numberWords.length; index++) {
             if(word.equals(numberWords[index])) {
                 value = index;
+                isValueSet = true;
                 break;
             }
+        }
+        if(!isValueSet) {
+            value = Double.parseDouble(word);
         }
         return value;
     }
