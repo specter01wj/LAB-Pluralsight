@@ -10,7 +10,7 @@ public class my_app_1 {
         } else if(args.length == 1 && args[0].equals("interactive")) {
             executeInteractively();
         } else if(args.length == 3) {
-            handleCommandLine(args);
+            performOperation(args);
         } else {
             System.out.println("Please provide an operation code and 2 numeric values");
         }
