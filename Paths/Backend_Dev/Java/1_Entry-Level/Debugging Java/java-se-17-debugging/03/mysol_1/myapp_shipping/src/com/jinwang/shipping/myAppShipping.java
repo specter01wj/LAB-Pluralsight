@@ -4,7 +4,7 @@ public class myAppShipping {
 
     public static void main(String[] args) {
         myAppShipping testOutboundProcess = new myAppShipping();
-        boolean freeShipping = false;
+        boolean freeShipping = true;
         out("free Shipping: " + freeShipping);
         testOutboundProcess.assignCarrier(freeShipping);
     }
