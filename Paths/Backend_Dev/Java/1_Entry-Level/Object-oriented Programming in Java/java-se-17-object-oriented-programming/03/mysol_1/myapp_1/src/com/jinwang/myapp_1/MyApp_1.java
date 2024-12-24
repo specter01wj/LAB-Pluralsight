@@ -11,7 +11,7 @@ public class MyApp_1 {
         System.out.println(alarm.getReport());
         alarm.turnOn();
         System.out.println(alarm.active);
-        System.out.println(alarm.getReport());
+        System.out.println(alarm.getPrivateReport(true));
     }
 
 }

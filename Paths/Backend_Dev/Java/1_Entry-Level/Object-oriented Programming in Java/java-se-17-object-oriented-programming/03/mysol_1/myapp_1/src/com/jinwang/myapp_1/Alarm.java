@@ -21,6 +21,10 @@ public class Alarm {
         return getReport(false);
     }
 
+    String getPrivateReport(boolean uppercase) {
+        return this.getReport(uppercase);
+    }
+
     private String getReport(boolean uppercase) {
         if (active) {
             if (uppercase)
