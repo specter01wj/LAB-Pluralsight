@@ -14,6 +14,14 @@ public class MyApp_1 {
         System.out.println(alarm.active);
         System.out.println(alarm.getPrivateReport(true));
 
+        // Aliasing
+        Alarm alarm1 = new Alarm("");
+        System.out.println(alarm1.active);
+        Alarm alarm2 = alarm1;
+        alarm2.turnOn();
+        System.out.println(alarm2.active);
+        System.out.println(alarm1.active);
+
         // NoAliasingForPrimitives
         int integer1 = 41;
         int integer2 = integer1;
@@ -22,10 +30,10 @@ public class MyApp_1 {
         System.out.println(integer2);
 
         // FinalDoesNotMeanImmutable
-        final Alarm alarm2 = new Alarm("");
-        System.out.println(alarm2.active);
-        alarm2.turnOn();
-        System.out.println(alarm2.active);
+        final Alarm alarm3 = new Alarm("");
+        System.out.println(alarm3.active);
+        alarm3.turnOn();
+        System.out.println(alarm3.active);
 
         // EqualityAndIdentity
         String s1 = "test string";
@@ -43,9 +51,7 @@ public class MyApp_1 {
 
         int anotherPrimitive = anObject;
         System.out.println(anotherPrimitive);
-
-
-
+        
     }
 
 }
