@@ -26,6 +26,11 @@ public class MyApp_1 {
         alarm2.turnOn();
         System.out.println(alarm2.active);
 
+        // EqualityAndIdentity
+        String s1 = "test string";
+        String s2 = "test string";
+        System.out.println(s1.equals(s2));  // true
+        System.out.println(s1 == s2);
 
     }
 
