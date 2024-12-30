@@ -12,6 +12,17 @@ public class MyApp_1 {
         alarm.turnOn();
         System.out.println(alarm.active);
         System.out.println(alarm.getPrivateReport(true));
+
+        // NoAliasingForPrimitives
+        int integer1 = 41;
+        int integer2 = integer1;
+        integer1++;
+        System.out.println(integer1);
+        System.out.println(integer2);
+
+
+
+
     }
 
 }
