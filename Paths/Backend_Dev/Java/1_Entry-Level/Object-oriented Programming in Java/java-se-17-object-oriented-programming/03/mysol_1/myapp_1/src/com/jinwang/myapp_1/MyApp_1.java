@@ -1,4 +1,5 @@
 package com.jinwang.myapp_1;
+import java.util.*;
 
 public class MyApp_1 {
 
@@ -31,6 +32,19 @@ public class MyApp_1 {
         String s2 = "test string";
         System.out.println(s1.equals(s2));  // true
         System.out.println(s1 == s2);
+
+        // AutoboxingAndUnboxing
+        int aPrimitive = 42;
+
+        List<Object> myList = new ArrayList<>();
+        myList.add(aPrimitive);
+
+        Integer anObject = aPrimitive;
+
+        int anotherPrimitive = anObject;
+        System.out.println(anotherPrimitive);
+
+
 
     }
 
