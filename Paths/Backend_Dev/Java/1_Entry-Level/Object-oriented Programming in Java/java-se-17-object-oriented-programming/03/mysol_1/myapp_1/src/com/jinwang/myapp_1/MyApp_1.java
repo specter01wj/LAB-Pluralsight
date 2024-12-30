@@ -20,7 +20,11 @@ public class MyApp_1 {
         System.out.println(integer1);
         System.out.println(integer2);
 
-
+        // FinalDoesNotMeanImmutable
+        final Alarm alarm2 = new Alarm("");
+        System.out.println(alarm2.active);
+        alarm2.turnOn();
+        System.out.println(alarm2.active);
 
 
     }
