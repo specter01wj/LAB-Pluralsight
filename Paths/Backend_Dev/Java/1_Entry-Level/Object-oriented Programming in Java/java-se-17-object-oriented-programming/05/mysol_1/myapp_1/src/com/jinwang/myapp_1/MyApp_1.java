@@ -7,7 +7,7 @@ public class MyApp_1 {
         Alarm alarm = new Alarm("Temperature too high");
         alarm.turnOn();
         alarm.snooze();
-        Thread.sleep(60000 * 6);
+        Thread.sleep(600 * 6);
         alarm.sendReport();
     }
 
