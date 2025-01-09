@@ -17,8 +17,10 @@ public class Alarm {
     }
 
     public void snooze() {
-        if (active)
-            snoozeUntil = LocalDateTime.now().plusMinutes(5);
+        if (active) {
+            // snoozeUntil = LocalDateTime.now().plusMinutes(5);
+            snoozeUntil = LocalDateTime.now().plusSeconds(3);
+        }
     }
 
     public boolean isSnoozing() {
