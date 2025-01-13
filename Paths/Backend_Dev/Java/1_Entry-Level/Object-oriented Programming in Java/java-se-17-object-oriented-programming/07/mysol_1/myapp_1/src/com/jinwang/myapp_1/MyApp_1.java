@@ -10,5 +10,5 @@ public class MyApp_1 {
         Thread.sleep(600 * 6);
         alarm.sendReport();
     }
-    
+
 }
