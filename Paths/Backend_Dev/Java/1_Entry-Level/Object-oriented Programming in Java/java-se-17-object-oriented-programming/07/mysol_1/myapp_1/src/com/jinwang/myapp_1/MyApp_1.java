@@ -4,7 +4,7 @@ import java.util.*;
 public class MyApp_1 extends Alarm {
 
     // PrioritizedAlarm
-    /*private final int priority;
+    private final int priority;
 
     MyApp_1(String message, int priority) {
         super(message);
@@ -18,10 +18,10 @@ public class MyApp_1 extends Alarm {
     @Override
     public String toString() {
         return "MyApp_1 [Message=" + getMessage() + ", Active=" + active + ", Priority=" + getPriority() + "]";
-    }*/
+    }
 
     // HighVisibilityAlarm
-    public MyApp_1(String message) {
+    /*public MyApp_1(String message) {
         super(message);
     }
 
@@ -33,16 +33,16 @@ public class MyApp_1 extends Alarm {
         } else {
             return report + "!";
         }
-    }
+    }*/
 
     public static void main(String[] args) throws InterruptedException {
         // PrioritizedAlarm
-        // System.out.println(new MyApp_1("Temperature too high", 1));
+         System.out.println(new MyApp_1("Temperature too high", 1));
 
         // HighVisibilityAlarm
-        MyApp_1 alarm = new MyApp_1("Test message");
-        alarm.turnOn();
-        alarm.sendReport();
+//        MyApp_1 alarm = new MyApp_1("Test message");
+//        alarm.turnOn();
+//        alarm.sendReport();
     }
 
 }
