@@ -21,10 +21,19 @@ public class MyApp_1 {
     public static void main(String[] args) {
 
         // HighVisibilityAlarm
-        HighVisibilityAlarm alarm = new HighVisibilityAlarm("Pressure low");
+        /*HighVisibilityAlarm alarm = new HighVisibilityAlarm("Pressure low");
+        alarm.turnOn();
+        String report = alarm.getReport();
+        System.out.println("HighVisibilityAlarm report: " + report);*/
+
+        Alarm alarm = new HighVisibilityAlarm("Pressure low");
         alarm.turnOn();
         String report = alarm.getReport();
         System.out.println("HighVisibilityAlarm report: " + report);
+
+        // PrioritizedAlarm
+//        PrioritizedAlarm alarm = new PrioritizedAlarm("Pressure low", 1);
+
 
         /*MyApp_1 dashboard = new MyApp_1();
 
