@@ -26,22 +26,22 @@ public class MyApp_1 {
         String report = alarm.getReport();
         System.out.println("HighVisibilityAlarm report: " + report);*/
 
-        Alarm alarm = new HighVisibilityAlarm("Pressure low");
+        /*Alarm alarm = new HighVisibilityAlarm("Pressure low");
         alarm.turnOn();
         String report = alarm.getReport();
-        System.out.println("HighVisibilityAlarm report: " + report);
+        System.out.println("HighVisibilityAlarm report: " + report);*/
 
         // PrioritizedAlarm
 //        PrioritizedAlarm alarm = new PrioritizedAlarm("Pressure low", 1);
 
 
-        /*MyApp_1 dashboard = new MyApp_1();
+        MyApp_1 dashboard = new MyApp_1();
 
         dashboard.add(new PrioritizedAlarm("Temperature too high", 42));
         dashboard.add(new HighVisibilityAlarm("Pressure too low"));
         dashboard.add(new TimeSensitiveAlarm("Never mind the other alarms, you're late for dinner"));
 
-        dashboard.printBigReport();*/
+        dashboard.printBigReport();
 
     }
 
