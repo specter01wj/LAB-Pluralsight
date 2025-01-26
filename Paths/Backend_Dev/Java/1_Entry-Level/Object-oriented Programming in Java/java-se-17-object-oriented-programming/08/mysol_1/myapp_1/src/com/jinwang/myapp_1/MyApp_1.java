@@ -33,8 +33,11 @@ public class MyApp_1 {
         System.out.println("HighVisibilityAlarm report: " + report);*/
 
         // PrioritizedAlarm
-//        PrioritizedAlarm alarm = new PrioritizedAlarm("Pressure low", 1);
-
+        /*PrioritizedAlarm alarm = new PrioritizedAlarm("Pressure low", 1);
+        alarm.turnOn();
+        String report = alarm.getReport();
+        int priority = alarm.getPriority();
+        System.out.println("PrioritizedAlarm report: " + report + ", priority: " + priority);*/
 
         MyApp_1 dashboard = new MyApp_1();
 
