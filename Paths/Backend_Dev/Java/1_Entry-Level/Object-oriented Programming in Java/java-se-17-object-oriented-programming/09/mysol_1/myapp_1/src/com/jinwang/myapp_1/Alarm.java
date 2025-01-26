@@ -59,12 +59,14 @@ public abstract class Alarm implements Widget, PersistentObject {
 
     public String getReport(boolean uppercase) {
         if (active && !isSnoozing()) {
-            if (uppercase)
+            if (uppercase) {
                 return message.toUpperCase();
-            else
+            } else {
                 return message;
-        } else
+            }
+        } else {
             return "";
+        }
     }
 
     public void sendReport() {
