@@ -11,10 +11,11 @@ public class TimeSensitiveAlarm extends Alarm  {
     @Override
     public String getReport(boolean uppercase) {
         String report = super.getReport(uppercase);
-        if (report.isEmpty())
+        if (report.isEmpty()) {
             return report;
-        else
+        } else {
             return LocalTime.now() + ": " + report;
+        }
     }
 
 }

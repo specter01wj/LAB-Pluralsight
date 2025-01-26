@@ -14,8 +14,9 @@ public class MyApp_1 {
     }
 
     public void printBigReport() {
-        for (Alarm alarm: allAlarms)
+        for (Alarm alarm: allAlarms) {
             System.out.println(alarm.getReport(true));
+        }
     }
 
     public static void main(String[] args) {
