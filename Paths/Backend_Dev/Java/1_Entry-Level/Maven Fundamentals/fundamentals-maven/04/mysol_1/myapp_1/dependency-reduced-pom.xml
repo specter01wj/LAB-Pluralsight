@@ -22,7 +22,7 @@
         <configuration>
           <transformers>
             <transformer>
-              <mainClass>com.jinwang.App</mainClass>
+              <mainClass>com.jinwang.Main</mainClass>
             </transformer>
           </transformers>
         </configuration>
