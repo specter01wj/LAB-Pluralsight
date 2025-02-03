@@ -3,9 +3,14 @@ package com.jinwang;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 public class Main {
     public static void main(String[] args) {
-      System.out.println("Starting Hibernate example...");
+
+      // Mysql example
+      /* System.out.println("Starting Hibernate example...");
 
       // Open Hibernate session
       Session session = HibernateUtil.getSessionFactory().openSession();
@@ -19,6 +24,12 @@ public class Main {
       transaction.commit();
       session.close();
 
-      System.out.println("User saved successfully!");
+      System.out.println("User saved successfully!"); */
+
+
+      // Spring framework example
+      ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+      MessageService service = context.getBean(MessageService.class);
+      System.out.println(service.getMessage());
     }
 }
