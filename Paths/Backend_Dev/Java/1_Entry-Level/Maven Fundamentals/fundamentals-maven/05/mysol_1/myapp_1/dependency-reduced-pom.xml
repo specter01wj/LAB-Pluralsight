@@ -29,6 +29,16 @@
       </plugin>
     </plugins>
   </build>
+  <repositories>
+    <repository>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots />
+      <id>spring-snapshot</id>
+      <url>https://repo.spring.io/snapshot</url>
+    </repository>
+  </repositories>
   <dependencies>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
