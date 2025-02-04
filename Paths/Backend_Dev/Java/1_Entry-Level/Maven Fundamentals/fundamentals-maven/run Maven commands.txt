@@ -1,0 +1,25 @@
+brew services list
+
+Start MySQL:
+brew services start mysql
+
+check:
+mysqladmin ping -u root -p
+
+log in to MySQL:
+mysql -u root -p
+
+USE mydatabase;
+SELECT * FROM users;
+
+Stop:
+brew services stop mysql
+
+
+Maven:
+mvn clean package
+
+mvn clean install
+
+java -jar target/myapp_1-1.0-SNAPSHOT.jar
+
