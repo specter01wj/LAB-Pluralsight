@@ -11,6 +11,7 @@
     <modules>
         <module>WebServiceModel</module>
         <module>WebServiceClient</module>
+        <module>WebServiceServer</module>
     </modules>
 
     <properties>
