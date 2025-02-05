@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.jinwang</groupId>
-            <artifactId>WebServiceProject</artifactId>
+            <artifactId>WebServiceModel</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
