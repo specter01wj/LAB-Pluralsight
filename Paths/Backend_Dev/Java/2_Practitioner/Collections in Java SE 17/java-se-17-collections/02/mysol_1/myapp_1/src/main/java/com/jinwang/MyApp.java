@@ -18,6 +18,10 @@ public class MyApp {
         System.out.println(Arrays.toString(products));
 
         // Add
+        var roof = new Product("Flat Roof", 1000);
+        products = add(roof, products);
+        System.out.println(Arrays.toString(products));
+
         // Duplicate
     }
 
