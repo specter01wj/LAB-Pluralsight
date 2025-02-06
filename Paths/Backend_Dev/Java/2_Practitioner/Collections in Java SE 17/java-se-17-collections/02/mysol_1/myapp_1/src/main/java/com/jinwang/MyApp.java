@@ -23,6 +23,8 @@ public class MyApp {
         System.out.println(Arrays.toString(products));
 
         // Duplicate
+        products = add(roof, products);
+        System.out.println(Arrays.toString(products));
     }
 
     private static Product[] add(Product product, Product[] array) {
