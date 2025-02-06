@@ -12,7 +12,11 @@ public class MyApp {
         var window = new Product("Glass Window", 10);
 
         // Create
+        Product[] products = {door, floorPanel, window};
+
         // Print
+        System.out.println(Arrays.toString(products));
+
         // Add
         // Duplicate
     }
