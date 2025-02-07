@@ -50,6 +50,12 @@ public class MyApp {
             System.out.println(product);
         }
 
+        Iterator<Product> it = products.iterator();
+        while (it.hasNext()) {
+            var product = it.next();
+            System.out.println(product);
+        }
+
         /*
         var toRemove = new ArrayList<Product>();
         toRemove.add(door);
