@@ -53,9 +53,12 @@ public class MyApp {
         Iterator<Product> it = products.iterator();
         while (it.hasNext()) {
             var product = it.next();
-            System.out.println(product);
+            if (product.weight() > 20) {
+                it.remove();
+            }
         }
 
+        System.out.println(products);
         /*
         var toRemove = new ArrayList<Product>();
         toRemove.add(door);
