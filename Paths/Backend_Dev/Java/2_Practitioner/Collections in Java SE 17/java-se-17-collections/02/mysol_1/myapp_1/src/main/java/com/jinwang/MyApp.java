@@ -60,20 +60,19 @@ public class MyApp {
 
         System.out.println(products);*/
 
-        System.out.println(products.size());
+        /*System.out.println(products.size());
         System.out.println(products.isEmpty());
         System.out.println(products.contains(floorPanel));
         products.remove(floorPanel);
-        System.out.println(products.contains(floorPanel));
+        System.out.println(products.contains(floorPanel));*/
 
 
-        /*
         var toRemove = new ArrayList<Product>();
         toRemove.add(door);
         toRemove.add(floorPanel);
 
         products.removeAll(toRemove);
-        System.out.println(products);*/
+        System.out.println(products);
     }
 
     private static Product[] add(Product product, Product[] array) {
