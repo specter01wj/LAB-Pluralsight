@@ -44,6 +44,8 @@ public class MyApp {
         products.add(floorPanel);
         products.add(window);
 
+        System.out.println(products);
+
         var toRemove = new ArrayList<Product>();
         toRemove.add(door);
         toRemove.add(floorPanel);
