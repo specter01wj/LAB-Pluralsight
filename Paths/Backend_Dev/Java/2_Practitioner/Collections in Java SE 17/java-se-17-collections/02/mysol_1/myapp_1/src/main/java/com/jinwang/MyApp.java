@@ -46,12 +46,17 @@ public class MyApp {
 
         System.out.println(products);
 
+        for (var product : products) {
+            System.out.println(product);
+        }
+
+        /*
         var toRemove = new ArrayList<Product>();
         toRemove.add(door);
         toRemove.add(floorPanel);
 
         products.removeAll(toRemove);
-        System.out.println(products);
+        System.out.println(products);*/
     }
 
     private static Product[] add(Product product, Product[] array) {
