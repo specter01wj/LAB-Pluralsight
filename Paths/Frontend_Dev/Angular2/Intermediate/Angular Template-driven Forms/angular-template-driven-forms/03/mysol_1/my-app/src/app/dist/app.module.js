@@ -9,6 +9,7 @@ exports.__esModule = true;
 exports.AppModule = void 0;
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
+var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/common/http");
 var angular_in_memory_web_api_1 = require("angular-in-memory-web-api");
 var app_routing_module_1 = require("./app-routing.module");
@@ -28,6 +29,7 @@ var AppModule = /** @class */ (function () {
             ],
             imports: [
                 platform_browser_1.BrowserModule,
+                forms_1.FormsModule,
                 app_routing_module_1.AppRoutingModule,
                 http_1.HttpClientModule,
                 angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(in_memory_contacts_service_1.InMemoryContactsApi, { delay: 0 })
