@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Contact } from '../contacts/contact.model';
 
 @Component({
   selector: 'app-edit-contact',
@@ -8,6 +9,25 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./edit-contact.component.css']
 })
 export class EditContactComponent implements OnInit {
+  contact: Contact = {
+    id: '',
+    firstName: '',
+    lastName: '',
+    dateOfBirth: null,
+    favoritesRanking: 0,
+    phone: {
+      phoneNumber: '',
+      phoneType: '',
+    },
+    address: {
+      streetAddress: '',
+      city: '',
+      state: '',
+      postalCode: '',
+      addressType: '',
+    },
+  };
+
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {

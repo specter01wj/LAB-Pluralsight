@@ -11,6 +11,24 @@ var core_1 = require("@angular/core");
 var EditContactComponent = /** @class */ (function () {
     function EditContactComponent(route) {
         this.route = route;
+        this.contact = {
+            id: '',
+            firstName: '',
+            lastName: '',
+            dateOfBirth: null,
+            favoritesRanking: 0,
+            phone: {
+                phoneNumber: '',
+                phoneType: ''
+            },
+            address: {
+                streetAddress: '',
+                city: '',
+                state: '',
+                postalCode: '',
+                addressType: ''
+            }
+        };
     }
     EditContactComponent.prototype.ngOnInit = function () {
         var contactId = this.route.snapshot.params['id'];
