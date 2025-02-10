@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Contact } from '../contacts/contact.model';
+import { ContactsService } from '../contacts/contacts.service';
 
 @Component({
   selector: 'app-edit-contact',
@@ -28,7 +29,11 @@ export class EditContactComponent implements OnInit {
     },
   };
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(
+    private route: ActivatedRoute,
+    private contactsService: ContactsService,
+    private router: Router,
+  ) { }
 
   ngOnInit() {
     const contactId = this.route.snapshot.params['id'];

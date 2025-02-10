@@ -9,8 +9,10 @@ exports.__esModule = true;
 exports.EditContactComponent = void 0;
 var core_1 = require("@angular/core");
 var EditContactComponent = /** @class */ (function () {
-    function EditContactComponent(route) {
+    function EditContactComponent(route, contactsService, router) {
         this.route = route;
+        this.contactsService = contactsService;
+        this.router = router;
         this.contact = {
             id: '',
             firstName: '',
