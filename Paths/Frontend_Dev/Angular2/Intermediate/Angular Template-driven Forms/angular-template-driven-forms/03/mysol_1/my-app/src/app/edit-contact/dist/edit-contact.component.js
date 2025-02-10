@@ -33,9 +33,15 @@ var EditContactComponent = /** @class */ (function () {
         };
     }
     EditContactComponent.prototype.ngOnInit = function () {
+        var _this = this;
         var contactId = this.route.snapshot.params['id'];
         if (!contactId)
             return;
+        this.contactsService.getContact(contactId).subscribe(function (contact) {
+            if (contact) {
+                _this.contact = contact;
+            }
+        });
     };
     EditContactComponent.prototype.saveContact = function () {
         console.log(this.contact);
