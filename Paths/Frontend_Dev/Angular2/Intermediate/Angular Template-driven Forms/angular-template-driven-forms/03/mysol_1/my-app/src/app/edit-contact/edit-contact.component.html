@@ -7,9 +7,9 @@
       <nav>Name/Info</nav>
       <div>
         <input placeholder="First Name" [(ngModel)]="contact.firstName" name="firstName" />
-        <input placeholder="Last Name" />
-        <input placeholder="Date of Birth" />
-        <input placeholder="Favorites Ranking" />
+        <input placeholder="Last Name" [(ngModel)]="contact.lastName" name="lastName" />
+        <input placeholder="Date of Birth" [(ngModel)]="contact.dateOfBirth" name="dateOfBirth" />
+        <input placeholder="Favorites Ranking" [(ngModel)]="contact.favoritesRanking" name="favoritesRanking" />
       </div>
     </section>
     <section>
