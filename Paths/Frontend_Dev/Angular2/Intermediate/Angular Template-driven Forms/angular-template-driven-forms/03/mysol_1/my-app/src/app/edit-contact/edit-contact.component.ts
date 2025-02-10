@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Contact } from '../contacts/contact.model';
 import { ContactsService } from '../contacts/contacts.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-contact',
@@ -45,9 +46,9 @@ export class EditContactComponent implements OnInit {
     });
   }
 
-  saveContact() {
-    console.log(this.contact);
-    this.contactsService.saveContact(this.contact).subscribe({
+  saveContact(form: NgForm) {
+    console.log(form.value);
+    this.contactsService.saveContact(form.value).subscribe({
       next: () => this.router.navigate(['/contacts'])
     });
   }
