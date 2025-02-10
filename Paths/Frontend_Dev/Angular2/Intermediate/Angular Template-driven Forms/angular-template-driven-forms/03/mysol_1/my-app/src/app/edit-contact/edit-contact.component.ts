@@ -32,7 +32,7 @@ export class EditContactComponent implements OnInit {
 
   ngOnInit() {
     const contactId = this.route.snapshot.params['id'];
-    if (!contactId) return
+    if (!contactId) return;
   }
 
   saveContact() {
