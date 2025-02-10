@@ -44,7 +44,11 @@ var EditContactComponent = /** @class */ (function () {
         });
     };
     EditContactComponent.prototype.saveContact = function () {
+        var _this = this;
         console.log(this.contact);
+        this.contactsService.saveContact(this.contact).subscribe({
+            next: function () { return _this.router.navigate(['/contacts']); }
+        });
     };
     EditContactComponent = __decorate([
         core_1.Component({
