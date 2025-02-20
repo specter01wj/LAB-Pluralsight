@@ -51,7 +51,7 @@ export class EditContactComponent implements OnInit {
   }
 
   saveContact(form: NgForm) {
-    console.log(form.value);
+    console.log(this.contact.personal, typeof this.contact.personal);
     this.contactsService.saveContact(form.value).subscribe({
       next: () => this.router.navigate(['/contacts'])
     });

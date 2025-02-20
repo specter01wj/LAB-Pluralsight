@@ -49,7 +49,7 @@ var EditContactComponent = /** @class */ (function () {
     };
     EditContactComponent.prototype.saveContact = function (form) {
         var _this = this;
-        console.log(form.value);
+        console.log(this.contact.personal, typeof this.contact.personal);
         this.contactsService.saveContact(form.value).subscribe({
             next: function () { return _this.router.navigate(['/contacts']); }
         });
