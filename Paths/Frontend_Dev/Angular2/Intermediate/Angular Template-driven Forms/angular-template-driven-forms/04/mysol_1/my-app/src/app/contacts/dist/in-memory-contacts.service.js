@@ -20,7 +20,8 @@ var InMemoryContactsApi = /** @class */ (function () {
                     state: 'Colohoma',
                     postalCode: 'A4321',
                     addressType: 'home'
-                }
+                },
+                notes: ''
             },
             {
                 id: 'A6rwe',
@@ -36,7 +37,8 @@ var InMemoryContactsApi = /** @class */ (function () {
                     state: 'Ulaska',
                     postalCode: 'F2231',
                     addressType: 'other'
-                }
+                },
+                notes: ''
             },
             {
                 id: '3bNGA',
@@ -52,7 +54,8 @@ var InMemoryContactsApi = /** @class */ (function () {
                     state: 'Mezona',
                     postalCode: 'Z2345',
                     addressType: 'work'
-                }
+                },
+                notes: ''
             },
         ];
         return { contacts: contacts };
