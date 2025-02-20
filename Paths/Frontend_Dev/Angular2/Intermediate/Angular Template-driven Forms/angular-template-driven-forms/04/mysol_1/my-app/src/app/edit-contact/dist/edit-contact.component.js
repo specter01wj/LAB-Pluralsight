@@ -21,7 +21,7 @@ var EditContactComponent = /** @class */ (function () {
             personal: false,
             firstName: '',
             lastName: '',
-            dateOfBirth: null,
+            dateOfBirth: '',
             favoritesRanking: 0,
             phone: {
                 phoneNumber: '',
@@ -50,7 +50,7 @@ var EditContactComponent = /** @class */ (function () {
     };
     EditContactComponent.prototype.saveContact = function (form) {
         var _this = this;
-        console.log(this.contact.personal, typeof this.contact.personal);
+        console.log(this.contact.dateOfBirth, typeof this.contact.dateOfBirth);
         this.contactsService.saveContact(form.value).subscribe({
             next: function () { return _this.router.navigate(['/contacts']); }
         });

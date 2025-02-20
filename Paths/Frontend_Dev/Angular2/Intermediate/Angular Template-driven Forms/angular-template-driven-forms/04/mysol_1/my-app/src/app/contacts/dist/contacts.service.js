@@ -26,11 +26,7 @@ var ContactsService = /** @class */ (function () {
         this.http = http;
     }
     ContactsService.prototype.getContact = function (id) {
-        return this.http.get("api/contacts/" + id)
-            .pipe(rxjs_1.map(function (c) {
-            var dob = c.dateOfBirth ? new Date(c.dateOfBirth) : null;
-            return __assign(__assign({}, c), { dateOfBirth: dob });
-        }));
+        return this.http.get("api/contacts/" + id);
     };
     ContactsService.prototype.getAllContacts = function () {
         return this.http.get('api/contacts');
