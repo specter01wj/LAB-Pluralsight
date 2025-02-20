@@ -18,6 +18,7 @@ var EditContactComponent = /** @class */ (function () {
         this.addressTypes = contact_model_1.addressTypeValues;
         this.contact = {
             id: '',
+            personal: false,
             firstName: '',
             lastName: '',
             dateOfBirth: null,
