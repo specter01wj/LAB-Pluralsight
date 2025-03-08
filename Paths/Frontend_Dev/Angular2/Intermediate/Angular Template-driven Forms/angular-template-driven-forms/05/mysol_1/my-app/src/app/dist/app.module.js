@@ -13,6 +13,7 @@ var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/common/http");
 var angular_in_memory_web_api_1 = require("angular-in-memory-web-api");
 var app_routing_module_1 = require("./app-routing.module");
+var restricted_words_validator_directive_1 = require("./validators/restricted-words-validator.directive");
 var in_memory_contacts_service_1 = require("./contacts/in-memory-contacts.service");
 var app_component_1 = require("./app.component");
 var edit_contact_component_1 = require("./edit-contact/edit-contact.component");
@@ -31,6 +32,7 @@ var AppModule = /** @class */ (function () {
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
                 app_routing_module_1.AppRoutingModule,
+                restricted_words_validator_directive_1.RestrictedWordsValidator,
                 http_1.HttpClientModule,
                 angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(in_memory_contacts_service_1.InMemoryContactsApi, { delay: 0 })
             ],
