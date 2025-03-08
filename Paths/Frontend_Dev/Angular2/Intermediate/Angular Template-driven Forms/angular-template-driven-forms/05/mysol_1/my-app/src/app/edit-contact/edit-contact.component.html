@@ -43,12 +43,12 @@
       <div>
         <div class="address" ngModelGroup="address" #addressGroup="ngModelGroup">
           <div class="flex-group">
-            <input placeholder="Address" [(ngModel)]="contact.address.streetAddress" name="streetAddress" />
+            <input placeholder="Address" [(ngModel)]="contact.address.streetAddress" name="streetAddress" required />
             <img src="/assets/plus-grey-blue.png" class="add" />
           </div>
-          <input placeholder="City" [(ngModel)]="contact.address.city" name="city" />
-          <input placeholder="State/Region" [(ngModel)]="contact.address.state" name="state" />
-          <input placeholder="Zip/Postal Code" [(ngModel)]="contact.address.postalCode" name="postalCode" />
+          <input placeholder="City" [(ngModel)]="contact.address.city" name="city" required />
+          <input placeholder="State/Region" [(ngModel)]="contact.address.state" name="state" required />
+          <input placeholder="Zip/Postal Code" [(ngModel)]="contact.address.postalCode" name="postalCode" required />
           <select [(ngModel)]="contact.address.addressType" name="addressType">
             <option *ngFor="let addressType of addressTypes" [value]="addressType.value">{{addressType.title}}</option>
           </select>
