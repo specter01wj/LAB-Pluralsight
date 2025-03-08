@@ -41,7 +41,7 @@
     <section>
       <nav>Address</nav>
       <div>
-        <div class="address" ngModelGroup="address" #addressGroup="ngModelGroup">
+        <div class="address" ngModelGroup="address" #addressGroup="ngModelGroup" [class.error]="addressGroup.invalid && addressGroup.dirty">
           <div class="flex-group">
             <input placeholder="Address" [(ngModel)]="contact.address.streetAddress" name="streetAddress" required />
             <img src="/assets/plus-grey-blue.png" class="add" />
