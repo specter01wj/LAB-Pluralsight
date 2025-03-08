@@ -54,6 +54,7 @@
           </select>
         </div>
       </div>
+      <em *ngIf="addressGroup.invalid && addressGroup.dirty">Incomplete Address</em>
     </section>
     <section>
       <nav>Notes</nav>
