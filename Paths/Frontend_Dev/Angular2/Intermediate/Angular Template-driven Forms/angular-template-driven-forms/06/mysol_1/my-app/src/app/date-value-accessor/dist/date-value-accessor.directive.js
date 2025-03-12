@@ -22,8 +22,9 @@ var DateValueAccessorDirective = /** @class */ (function () {
         this.onChange = function (valueAsDate) { fn(valueAsDate); };
     };
     DateValueAccessorDirective.prototype.writeValue = function (newValue) {
-        if (newValue instanceof Date)
+        if (newValue instanceof Date) {
             this.element.nativeElement.value = newValue.toISOString().split('T')[0];
+        }
     };
     DateValueAccessorDirective.prototype.registerOnTouched = function (fn) {
         this.onTouched = fn;

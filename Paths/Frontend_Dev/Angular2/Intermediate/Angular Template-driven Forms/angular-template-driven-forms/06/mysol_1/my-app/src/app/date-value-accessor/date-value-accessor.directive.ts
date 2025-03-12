@@ -23,8 +23,9 @@ export class DateValueAccessorDirective implements ControlValueAccessor {
   }
 
   writeValue(newValue: any) {
-    if (newValue instanceof Date)
+    if (newValue instanceof Date) {
       this.element.nativeElement.value = newValue.toISOString().split('T')[0];
+    }
   }
 
   registerOnTouched(fn: Function) {
