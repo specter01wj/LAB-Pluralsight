@@ -16,10 +16,11 @@ export class EditContactComponent implements OnInit {
 
   contact: Contact = {
     id: '',
+    icon: '',
     personal: false,
     firstName: '',
     lastName: '',
-    dateOfBirth: '',
+    dateOfBirth: null,
     favoritesRanking: 0,
     phone: {
       phoneNumber: '',
