@@ -15,11 +15,29 @@ var DATE_VALUE_PROVIDER = {
     multi: true
 };
 var DateValueAccessorDirective = /** @class */ (function () {
-    function DateValueAccessorDirective() {
+    function DateValueAccessorDirective(element) {
+        this.element = element;
     }
+    DateValueAccessorDirective.prototype.registerOnChange = function (fn) {
+        this.onChange = function (valueAsDate) { fn(valueAsDate); };
+    };
+    DateValueAccessorDirective.prototype.writeValue = function (newValue) {
+        if (newValue instanceof Date)
+            this.element.nativeElement.value = newValue.toISOString().split('T')[0];
+    };
+    DateValueAccessorDirective.prototype.registerOnTouched = function (fn) {
+        this.onTouched = fn;
+    };
+    __decorate([
+        core_1.HostListener('input', ['$event.target.valueAsDate'])
+    ], DateValueAccessorDirective.prototype, "onChange");
+    __decorate([
+        core_1.HostListener('blur', [])
+    ], DateValueAccessorDirective.prototype, "onTouched");
     DateValueAccessorDirective = __decorate([
         core_1.Directive({
-            selector: 'input([type=date])[ngModel],input([type=date])[formControl],input([type=date])[formControlName]'
+            selector: 'input([type=date])[ngModel],input([type=date])[formControl],input([type=date])[formControlName]',
+            providers: [DATE_VALUE_PROVIDER]
         })
     ], DateValueAccessorDirective);
     return DateValueAccessorDirective;
