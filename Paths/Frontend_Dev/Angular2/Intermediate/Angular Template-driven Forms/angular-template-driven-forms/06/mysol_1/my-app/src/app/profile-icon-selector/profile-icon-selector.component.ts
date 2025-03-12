@@ -1,6 +1,6 @@
 import { Component, forwardRef, Provider } from '@angular/core';
 import { profileIconNames } from './profile-icon-names';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 const PROFILE_ICON_VALUE_ACCESSOR: Provider = {
   provide: NG_VALUE_ACCESSOR,
@@ -14,7 +14,7 @@ const PROFILE_ICON_VALUE_ACCESSOR: Provider = {
   styleUrl: './profile-icon-selector.component.scss',
   providers: [PROFILE_ICON_VALUE_ACCESSOR]
 })
-export class ProfileIconSelectorComponent {
+export class ProfileIconSelectorComponent implements ControlValueAccessor  {
   profileIcons = profileIconNames;
   showAllIcons: boolean = true;
   selectedIcon!: string | null;
