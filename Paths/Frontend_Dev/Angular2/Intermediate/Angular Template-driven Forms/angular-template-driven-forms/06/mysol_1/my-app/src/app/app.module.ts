@@ -10,13 +10,15 @@ import { AppComponent } from './app.component';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { DateValueAccessorDirective } from './date-value-accessor/date-value-accessor.directive';
+import { ProfileIconSelectorComponent } from './profile-icon-selector/profile-icon-selector.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EditContactComponent,
     ContactListComponent,
-    DateValueAccessorDirective
+    DateValueAccessorDirective,
+    ProfileIconSelectorComponent
   ],
   imports: [
     BrowserModule,
