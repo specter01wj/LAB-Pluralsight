@@ -22,10 +22,10 @@ export class EditContactComponent implements OnInit {
     lastName: '',
     dateOfBirth: null,
     favoritesRanking: 0,
-    phone: {
+    phones: [{
       phoneNumber: '',
       phoneType: '',
-    },
+    }],
     address: {
       streetAddress: '',
       city: '',
