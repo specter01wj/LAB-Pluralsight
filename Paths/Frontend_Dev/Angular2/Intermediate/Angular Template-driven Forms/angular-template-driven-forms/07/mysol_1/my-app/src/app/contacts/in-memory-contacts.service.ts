@@ -42,7 +42,7 @@ export class InMemoryContactsApi implements InMemoryDbService {
       },
       {
         id: '3bNGA',
-        icon: '',
+        icon: 'person-04.png',
         personal: false,
         firstName: 'Wanda',
         lastName: 'Giggleworth',
