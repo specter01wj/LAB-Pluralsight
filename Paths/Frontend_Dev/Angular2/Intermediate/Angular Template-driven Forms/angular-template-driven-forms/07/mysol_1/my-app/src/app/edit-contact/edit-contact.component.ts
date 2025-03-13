@@ -52,6 +52,13 @@ export class EditContactComponent implements OnInit {
     });
   }
 
+  addPhone() {
+    this.contact.phones.push({
+      phoneNumber: '',
+      phoneType: '',
+    });
+  }
+
   saveContact(form: NgForm) {
     this.contactsService.saveContact(this.contact).subscribe({
       next: () => this.router.navigate(['/contacts'])

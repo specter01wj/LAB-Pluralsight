@@ -49,6 +49,12 @@ var EditContactComponent = /** @class */ (function () {
             }
         });
     };
+    EditContactComponent.prototype.addPhone = function () {
+        this.contact.phones.push({
+            phoneNumber: '',
+            phoneType: ''
+        });
+    };
     EditContactComponent.prototype.saveContact = function (form) {
         var _this = this;
         this.contactsService.saveContact(this.contact).subscribe({
