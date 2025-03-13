@@ -18,15 +18,16 @@ var EditContactComponent = /** @class */ (function () {
         this.addressTypes = contact_model_1.addressTypeValues;
         this.contact = {
             id: '',
+            icon: '',
             personal: false,
             firstName: '',
             lastName: '',
-            dateOfBirth: '',
+            dateOfBirth: null,
             favoritesRanking: 0,
-            phone: {
-                phoneNumber: '',
-                phoneType: ''
-            },
+            phones: [{
+                    phoneNumber: '',
+                    phoneType: ''
+                }],
             address: {
                 streetAddress: '',
                 city: '',
@@ -50,8 +51,7 @@ var EditContactComponent = /** @class */ (function () {
     };
     EditContactComponent.prototype.saveContact = function (form) {
         var _this = this;
-        console.log(this.contact.dateOfBirth, typeof this.contact.dateOfBirth);
-        this.contactsService.saveContact(form.value).subscribe({
+        this.contactsService.saveContact(this.contact).subscribe({
             next: function () { return _this.router.navigate(['/contacts']); }
         });
     };
