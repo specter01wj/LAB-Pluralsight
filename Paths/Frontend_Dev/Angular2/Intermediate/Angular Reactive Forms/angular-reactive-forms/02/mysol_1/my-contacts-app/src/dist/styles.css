@@ -28,7 +28,6 @@ select {
   padding: 5px 10px;
   border: 1px solid #ddd;
   color: #555;
-
 }
 
 ::placeholder {
@@ -113,14 +112,13 @@ button:not([disabled]).primary:active::after {
 
 button:not([disabled]).secondary::after {
   box-shadow: 0 0 10px 20px var(--color-secondary-light);
-
 }
 
 button:not([disabled]).secondary:active::after {
   box-shadow: 0 0 0 0 var(--color-secondary-light);
 }
 
-input[type="checkbox"] {
+input[type=checkbox] {
   width: 18px;
   height: 18px;
   margin-right: 10px;
