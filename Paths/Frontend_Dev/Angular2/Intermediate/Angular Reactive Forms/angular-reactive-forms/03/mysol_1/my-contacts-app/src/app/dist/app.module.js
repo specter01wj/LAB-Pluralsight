@@ -16,6 +16,7 @@ var app_component_1 = require("./app.component");
 var contact_list_component_1 = require("./contact-list/contact-list.component");
 var edit_contact_component_1 = require("./edit-contact/edit-contact.component");
 var in_memory_contacts_service_1 = require("./contacts/in-memory-contacts.service");
+var forms_1 = require("@angular/forms");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -30,6 +31,7 @@ var AppModule = /** @class */ (function () {
                 platform_browser_1.BrowserModule,
                 app_routing_module_1.AppRoutingModule,
                 http_1.HttpClientModule,
+                forms_1.ReactiveFormsModule,
                 angular_in_memory_web_api_1.HttpClientInMemoryWebApiModule.forRoot(in_memory_contacts_service_1.InMemoryContactsApi, { delay: 200 })
             ],
             providers: [],
