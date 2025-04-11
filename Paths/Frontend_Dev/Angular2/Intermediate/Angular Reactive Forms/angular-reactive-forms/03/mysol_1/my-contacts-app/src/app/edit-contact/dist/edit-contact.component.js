@@ -8,9 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.EditContactComponent = void 0;
 var core_1 = require("@angular/core");
+var forms_1 = require("@angular/forms");
 var EditContactComponent = /** @class */ (function () {
     function EditContactComponent(route) {
         this.route = route;
+        this.firstName = new forms_1.FormControl();
     }
     EditContactComponent.prototype.ngOnInit = function () {
         var contactId = this.route.snapshot.params['id'];
