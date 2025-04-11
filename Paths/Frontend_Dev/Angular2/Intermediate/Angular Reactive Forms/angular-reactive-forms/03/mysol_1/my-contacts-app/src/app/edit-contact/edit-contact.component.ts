@@ -11,6 +11,9 @@ import { ActivatedRoute } from '@angular/router';
 export class EditContactComponent implements OnInit {
 
   firstName = new FormControl();
+  lastName = new FormControl();
+  dateOfBirth = new FormControl();
+  favoritesRanking = new FormControl();
 
 
   constructor(private route: ActivatedRoute) { }

@@ -13,6 +13,9 @@ var EditContactComponent = /** @class */ (function () {
     function EditContactComponent(route) {
         this.route = route;
         this.firstName = new forms_1.FormControl();
+        this.lastName = new forms_1.FormControl();
+        this.dateOfBirth = new forms_1.FormControl();
+        this.favoritesRanking = new forms_1.FormControl();
     }
     EditContactComponent.prototype.ngOnInit = function () {
         var contactId = this.route.snapshot.params['id'];
