@@ -23,6 +23,7 @@ var EditContactComponent = /** @class */ (function () {
             return;
     };
     EditContactComponent.prototype.saveContact = function () {
+        console.log(this.firstName);
     };
     EditContactComponent = __decorate([
         core_1.Component({
