@@ -10,9 +10,10 @@ exports.EditContactComponent = void 0;
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var EditContactComponent = /** @class */ (function () {
-    function EditContactComponent(route, contactsService) {
+    function EditContactComponent(route, contactsService, router) {
         this.route = route;
         this.contactsService = contactsService;
+        this.router = router;
         this.contactForm = new forms_1.FormGroup({
             firstName: new forms_1.FormControl(),
             lastName: new forms_1.FormControl(),
@@ -35,7 +36,10 @@ var EditContactComponent = /** @class */ (function () {
         });
     };
     EditContactComponent.prototype.saveContact = function () {
-        console.log(this.contactForm.controls.firstName);
+        var _this = this;
+        this.contactsService.saveContact(this.contactForm.getRawValue()).subscribe({
+            next: function () { return _this.router.navigate(['/contacts']); }
+        });
     };
     EditContactComponent = __decorate([
         core_1.Component({
