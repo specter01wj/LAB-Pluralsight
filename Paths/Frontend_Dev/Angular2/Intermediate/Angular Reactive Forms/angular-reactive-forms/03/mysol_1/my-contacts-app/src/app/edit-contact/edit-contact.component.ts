@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EditContactComponent implements OnInit {
 
-  firstName = new FormControl();
+  firstName = new FormControl('Jim');
   lastName = new FormControl();
   dateOfBirth = new FormControl();
   favoritesRanking = new FormControl();

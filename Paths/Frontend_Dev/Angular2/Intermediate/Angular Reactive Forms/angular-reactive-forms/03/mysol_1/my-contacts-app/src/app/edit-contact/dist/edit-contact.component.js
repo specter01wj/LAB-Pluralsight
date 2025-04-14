@@ -12,7 +12,7 @@ var forms_1 = require("@angular/forms");
 var EditContactComponent = /** @class */ (function () {
     function EditContactComponent(route) {
         this.route = route;
-        this.firstName = new forms_1.FormControl();
+        this.firstName = new forms_1.FormControl('Jim');
         this.lastName = new forms_1.FormControl();
         this.dateOfBirth = new forms_1.FormControl();
         this.favoritesRanking = new forms_1.FormControl();
