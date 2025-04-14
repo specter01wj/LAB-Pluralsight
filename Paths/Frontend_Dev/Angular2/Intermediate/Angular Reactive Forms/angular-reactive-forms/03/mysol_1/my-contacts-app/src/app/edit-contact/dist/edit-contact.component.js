@@ -10,17 +10,27 @@ exports.EditContactComponent = void 0;
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var EditContactComponent = /** @class */ (function () {
-    function EditContactComponent(route) {
+    function EditContactComponent(route, contactsService) {
         this.route = route;
-        this.firstName = new forms_1.FormControl('Jim');
+        this.contactsService = contactsService;
+        this.firstName = new forms_1.FormControl();
         this.lastName = new forms_1.FormControl();
         this.dateOfBirth = new forms_1.FormControl();
         this.favoritesRanking = new forms_1.FormControl();
     }
     EditContactComponent.prototype.ngOnInit = function () {
+        var _this = this;
         var contactId = this.route.snapshot.params['id'];
         if (!contactId)
             return;
+        this.contactsService.getContact(contactId).subscribe(function (contact) {
+            if (!contact)
+                return;
+            _this.firstName.setValue(contact.firstName);
+            _this.lastName.setValue(contact.lastName);
+            _this.dateOfBirth.setValue(contact.dateOfBirth);
+            _this.favoritesRanking.setValue(contact.favoritesRanking);
+        });
     };
     EditContactComponent.prototype.saveContact = function () {
         console.log(this.firstName);
