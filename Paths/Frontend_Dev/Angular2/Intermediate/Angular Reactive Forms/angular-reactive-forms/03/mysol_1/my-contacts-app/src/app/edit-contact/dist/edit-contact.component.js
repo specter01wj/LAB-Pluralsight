@@ -13,10 +13,12 @@ var EditContactComponent = /** @class */ (function () {
     function EditContactComponent(route, contactsService) {
         this.route = route;
         this.contactsService = contactsService;
-        this.firstName = new forms_1.FormControl();
-        this.lastName = new forms_1.FormControl();
-        this.dateOfBirth = new forms_1.FormControl();
-        this.favoritesRanking = new forms_1.FormControl();
+        this.contactForm = new forms_1.FormGroup({
+            firstName: new forms_1.FormControl(),
+            lastName: new forms_1.FormControl(),
+            dateOfBirth: new forms_1.FormControl(),
+            favoritesRanking: new forms_1.FormControl()
+        });
     }
     EditContactComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -26,14 +28,14 @@ var EditContactComponent = /** @class */ (function () {
         this.contactsService.getContact(contactId).subscribe(function (contact) {
             if (!contact)
                 return;
-            _this.firstName.setValue(contact.firstName);
-            _this.lastName.setValue(contact.lastName);
-            _this.dateOfBirth.setValue(contact.dateOfBirth);
-            _this.favoritesRanking.setValue(contact.favoritesRanking);
+            _this.contactForm.controls.firstName.setValue(contact.firstName);
+            _this.contactForm.controls.lastName.setValue(contact.lastName);
+            _this.contactForm.controls.dateOfBirth.setValue(contact.dateOfBirth);
+            _this.contactForm.controls.favoritesRanking.setValue(contact.favoritesRanking);
         });
     };
     EditContactComponent.prototype.saveContact = function () {
-        console.log(this.firstName);
+        console.log(this.contactForm.controls.firstName);
     };
     EditContactComponent = __decorate([
         core_1.Component({
