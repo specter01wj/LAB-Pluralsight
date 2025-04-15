@@ -41,8 +41,9 @@ var ContactsService = /** @class */ (function () {
             var newContact = __assign(__assign({}, contact), { id: nanoid_1.nanoid(5) });
             return this.http.post('api/contacts/', newContact, headers);
         }
-        else
+        else {
             return this.http.put('api/contacts/', contact, headers);
+        }
     };
     ContactsService = __decorate([
         core_1.Injectable({

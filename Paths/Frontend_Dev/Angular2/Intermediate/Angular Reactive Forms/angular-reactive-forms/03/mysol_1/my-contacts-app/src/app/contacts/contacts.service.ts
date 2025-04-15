@@ -30,8 +30,9 @@ export class ContactsService {
       let newContact: Partial<Contact> = { ...contact, id: nanoid(5) };
       return this.http.post<Contact>('api/contacts/', newContact, headers)
     }
-    else
+    else {
       return this.http.put<Contact>('api/contacts/', contact, headers)
+    }
   }
 
 }
