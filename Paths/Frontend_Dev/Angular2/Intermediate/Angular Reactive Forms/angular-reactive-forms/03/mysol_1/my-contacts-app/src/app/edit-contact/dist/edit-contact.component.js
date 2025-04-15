@@ -15,6 +15,7 @@ var EditContactComponent = /** @class */ (function () {
         this.contactsService = contactsService;
         this.router = router;
         this.contactForm = new forms_1.FormGroup({
+            id: new forms_1.FormControl(),
             firstName: new forms_1.FormControl(),
             lastName: new forms_1.FormControl(),
             dateOfBirth: new forms_1.FormControl(),

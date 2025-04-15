@@ -12,6 +12,7 @@ import { ContactsService } from '../contacts/contacts.service';
 export class EditContactComponent implements OnInit {
 
   contactForm = new FormGroup({
+    id: new FormControl(),
     firstName: new FormControl(),
     lastName: new FormControl(),
     dateOfBirth: new FormControl(),
