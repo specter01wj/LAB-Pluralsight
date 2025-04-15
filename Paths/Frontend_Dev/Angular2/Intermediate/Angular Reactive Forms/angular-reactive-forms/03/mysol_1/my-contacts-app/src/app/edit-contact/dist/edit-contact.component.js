@@ -19,7 +19,18 @@ var EditContactComponent = /** @class */ (function () {
             firstName: new forms_1.FormControl(),
             lastName: new forms_1.FormControl(),
             dateOfBirth: new forms_1.FormControl(),
-            favoritesRanking: new forms_1.FormControl()
+            favoritesRanking: new forms_1.FormControl(),
+            phone: new forms_1.FormGroup({
+                phoneNumber: new forms_1.FormControl(),
+                phoneType: new forms_1.FormControl()
+            }),
+            address: new forms_1.FormGroup({
+                streetAddress: new forms_1.FormControl(),
+                city: new forms_1.FormControl(),
+                state: new forms_1.FormControl(),
+                postalCode: new forms_1.FormControl(),
+                addressType: new forms_1.FormControl()
+            })
         });
     }
     EditContactComponent.prototype.ngOnInit = function () {
