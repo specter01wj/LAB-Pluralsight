@@ -30,6 +30,7 @@ var EditContactComponent = /** @class */ (function () {
         this.contactsService.getContact(contactId).subscribe(function (contact) {
             if (!contact)
                 return;
+            _this.contactForm.controls.id.setValue(contact.id);
             _this.contactForm.controls.firstName.setValue(contact.firstName);
             _this.contactForm.controls.lastName.setValue(contact.lastName);
             _this.contactForm.controls.dateOfBirth.setValue(contact.dateOfBirth);
