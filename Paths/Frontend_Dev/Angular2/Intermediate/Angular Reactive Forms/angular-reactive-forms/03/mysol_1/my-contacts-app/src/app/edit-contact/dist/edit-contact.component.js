@@ -46,6 +46,13 @@ var EditContactComponent = /** @class */ (function () {
             _this.contactForm.controls.lastName.setValue(contact.lastName);
             _this.contactForm.controls.dateOfBirth.setValue(contact.dateOfBirth);
             _this.contactForm.controls.favoritesRanking.setValue(contact.favoritesRanking);
+            _this.contactForm.controls.phone.controls.phoneNumber.setValue(contact.phone.phoneNumber);
+            _this.contactForm.controls.phone.controls.phoneType.setValue(contact.phone.phoneType);
+            _this.contactForm.controls.address.controls.streetAddress.setValue(contact.address.streetAddress);
+            _this.contactForm.controls.address.controls.city.setValue(contact.address.city);
+            _this.contactForm.controls.address.controls.state.setValue(contact.address.state);
+            _this.contactForm.controls.address.controls.postalCode.setValue(contact.address.postalCode);
+            _this.contactForm.controls.address.controls.addressType.setValue(contact.address.addressType);
         });
     };
     EditContactComponent.prototype.saveContact = function () {
