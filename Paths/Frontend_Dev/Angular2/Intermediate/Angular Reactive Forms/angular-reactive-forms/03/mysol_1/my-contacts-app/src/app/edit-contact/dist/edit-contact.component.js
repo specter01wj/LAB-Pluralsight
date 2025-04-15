@@ -8,28 +8,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.EditContactComponent = void 0;
 var core_1 = require("@angular/core");
-var forms_1 = require("@angular/forms");
 var EditContactComponent = /** @class */ (function () {
-    function EditContactComponent(route, contactsService, router) {
+    function EditContactComponent(route, contactsService, router, fb) {
         this.route = route;
         this.contactsService = contactsService;
         this.router = router;
-        this.contactForm = new forms_1.FormGroup({
-            id: new forms_1.FormControl(),
-            firstName: new forms_1.FormControl(),
-            lastName: new forms_1.FormControl(),
-            dateOfBirth: new forms_1.FormControl(),
-            favoritesRanking: new forms_1.FormControl(),
-            phone: new forms_1.FormGroup({
-                phoneNumber: new forms_1.FormControl(),
-                phoneType: new forms_1.FormControl()
+        this.fb = fb;
+        this.contactForm = null;
+        this.contactForm = this.fb.nonNullable.group({
+            id: '',
+            firstName: '',
+            lastName: '',
+            dateOfBirth: null,
+            favoritesRanking: null,
+            phone: this.fb.nonNullable.group({
+                phoneNumber: '',
+                phoneType: ''
             }),
-            address: new forms_1.FormGroup({
-                streetAddress: new forms_1.FormControl(),
-                city: new forms_1.FormControl(),
-                state: new forms_1.FormControl(),
-                postalCode: new forms_1.FormControl(),
-                addressType: new forms_1.FormControl()
+            address: this.fb.nonNullable.group({
+                streetAddress: '',
+                city: '',
+                state: '',
+                postalCode: '',
+                addressType: ''
             })
         });
     }
@@ -41,18 +42,7 @@ var EditContactComponent = /** @class */ (function () {
         this.contactsService.getContact(contactId).subscribe(function (contact) {
             if (!contact)
                 return;
-            _this.contactForm.controls.id.setValue(contact.id);
-            _this.contactForm.controls.firstName.setValue(contact.firstName);
-            _this.contactForm.controls.lastName.setValue(contact.lastName);
-            _this.contactForm.controls.dateOfBirth.setValue(contact.dateOfBirth);
-            _this.contactForm.controls.favoritesRanking.setValue(contact.favoritesRanking);
-            _this.contactForm.controls.phone.controls.phoneNumber.setValue(contact.phone.phoneNumber);
-            _this.contactForm.controls.phone.controls.phoneType.setValue(contact.phone.phoneType);
-            _this.contactForm.controls.address.controls.streetAddress.setValue(contact.address.streetAddress);
-            _this.contactForm.controls.address.controls.city.setValue(contact.address.city);
-            _this.contactForm.controls.address.controls.state.setValue(contact.address.state);
-            _this.contactForm.controls.address.controls.postalCode.setValue(contact.address.postalCode);
-            _this.contactForm.controls.address.controls.addressType.setValue(contact.address.addressType);
+            _this.contactForm.setValue(contact);
         });
     };
     EditContactComponent.prototype.saveContact = function () {
