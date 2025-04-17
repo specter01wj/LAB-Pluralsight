@@ -34,7 +34,8 @@ var EditContactComponent = /** @class */ (function () {
                 state: '',
                 postalCode: '',
                 addressType: ''
-            })
+            }),
+            notes: ''
         });
     }
     EditContactComponent.prototype.ngOnInit = function () {
