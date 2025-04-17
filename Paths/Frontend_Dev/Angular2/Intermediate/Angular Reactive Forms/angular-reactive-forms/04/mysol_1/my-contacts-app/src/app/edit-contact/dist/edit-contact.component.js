@@ -14,7 +14,6 @@ var EditContactComponent = /** @class */ (function () {
         this.contactsService = contactsService;
         this.router = router;
         this.fb = fb;
-        this.contactForm = null;
         this.contactForm = this.fb.nonNullable.group({
             id: '',
             firstName: '',

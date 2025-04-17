@@ -10,7 +10,7 @@ import { ContactsService } from '../contacts/contacts.service';
   styleUrl: './edit-contact.component.scss'
 })
 export class EditContactComponent implements OnInit {
-  contactForm: FormGroup | null = null;
+  contactForm: FormGroup;
 
   constructor(
     private route: ActivatedRoute,
