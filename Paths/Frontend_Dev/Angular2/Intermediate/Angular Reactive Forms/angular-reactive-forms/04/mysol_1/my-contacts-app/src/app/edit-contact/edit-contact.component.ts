@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ContactsService } from '../contacts/contacts.service';
+import { phoneTypeValues } from '../contacts/contact.model';
 
 @Component({
   selector: 'app-edit-contact',
@@ -10,6 +11,7 @@ import { ContactsService } from '../contacts/contacts.service';
   styleUrl: './edit-contact.component.scss'
 })
 export class EditContactComponent implements OnInit {
+  phoneTypes = phoneTypeValues;
   contactForm: FormGroup;
 
   constructor(

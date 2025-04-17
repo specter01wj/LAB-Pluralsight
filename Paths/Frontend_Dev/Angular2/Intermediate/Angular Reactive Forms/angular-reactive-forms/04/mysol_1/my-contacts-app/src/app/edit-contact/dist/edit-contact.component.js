@@ -8,12 +8,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.EditContactComponent = void 0;
 var core_1 = require("@angular/core");
+var contact_model_1 = require("../contacts/contact.model");
 var EditContactComponent = /** @class */ (function () {
     function EditContactComponent(route, contactsService, router, fb) {
         this.route = route;
         this.contactsService = contactsService;
         this.router = router;
         this.fb = fb;
+        this.phoneTypes = contact_model_1.phoneTypeValues;
         this.contactForm = this.fb.nonNullable.group({
             id: '',
             firstName: '',
