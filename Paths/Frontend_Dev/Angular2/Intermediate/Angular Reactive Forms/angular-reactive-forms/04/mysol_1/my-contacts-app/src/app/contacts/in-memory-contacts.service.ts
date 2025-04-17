@@ -22,7 +22,8 @@ export class InMemoryContactsApi implements InMemoryDbService {
           state: 'Colohoma',
           postalCode: 'A4321',
           addressType: 'home'
-        }
+        },
+        notes: '',
       },
       {
         id: 'A6rwe',
@@ -39,6 +40,7 @@ export class InMemoryContactsApi implements InMemoryDbService {
           postalCode: 'F2231',
           addressType: 'other'
         },
+        notes: '',
       },
       {
         id: '3bNGA',
@@ -55,6 +57,7 @@ export class InMemoryContactsApi implements InMemoryDbService {
           postalCode: 'Z2345',
           addressType: 'work'
         },
+        notes: '',
       },
     ]
 
