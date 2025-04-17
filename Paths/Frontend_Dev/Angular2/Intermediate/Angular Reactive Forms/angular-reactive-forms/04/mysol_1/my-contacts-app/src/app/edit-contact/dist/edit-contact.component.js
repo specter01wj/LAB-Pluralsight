@@ -19,6 +19,7 @@ var EditContactComponent = /** @class */ (function () {
         this.addressTypes = contact_model_1.addressTypeValues;
         this.contactForm = this.fb.nonNullable.group({
             id: '',
+            personal: false,
             firstName: '',
             lastName: '',
             dateOfBirth: null,
