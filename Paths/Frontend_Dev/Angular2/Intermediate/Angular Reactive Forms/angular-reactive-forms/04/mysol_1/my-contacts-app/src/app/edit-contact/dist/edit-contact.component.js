@@ -16,6 +16,7 @@ var EditContactComponent = /** @class */ (function () {
         this.router = router;
         this.fb = fb;
         this.phoneTypes = contact_model_1.phoneTypeValues;
+        this.addressTypes = contact_model_1.addressTypeValues;
         this.contactForm = this.fb.nonNullable.group({
             id: '',
             firstName: '',
