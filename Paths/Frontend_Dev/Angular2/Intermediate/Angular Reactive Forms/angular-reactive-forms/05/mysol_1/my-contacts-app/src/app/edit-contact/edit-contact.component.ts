@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ContactsService } from '../contacts/contacts.service';
 import { phoneTypeValues, addressTypeValues } from '../contacts/contact.model';
@@ -24,7 +24,7 @@ export class EditContactComponent implements OnInit {
     this.contactForm = this.fb.nonNullable.group({
       id: '',
       personal: false,
-      firstName: '',
+      firstName: new FormControl('', Validators.required),
       lastName: '',
       dateOfBirth: <Date | null>null,
       favoritesRanking: <number | null>null,
