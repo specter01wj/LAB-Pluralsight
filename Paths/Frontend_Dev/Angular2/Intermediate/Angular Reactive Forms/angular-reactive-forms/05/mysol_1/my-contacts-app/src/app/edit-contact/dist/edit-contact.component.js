@@ -50,6 +50,13 @@ var EditContactComponent = /** @class */ (function () {
             _this.contactForm.setValue(contact);
         });
     };
+    Object.defineProperty(EditContactComponent.prototype, "firstName", {
+        get: function () {
+            return this.contactForm.controls['firstName'];
+        },
+        enumerable: false,
+        configurable: true
+    });
     EditContactComponent.prototype.saveContact = function () {
         var _this = this;
         this.contactsService.saveContact(this.contactForm.getRawValue()).subscribe({

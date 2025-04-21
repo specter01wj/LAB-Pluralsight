@@ -54,6 +54,10 @@ export class EditContactComponent implements OnInit {
     });
   }
 
+  get firstName() {
+    return this.contactForm.controls['firstName'];
+  }
+
   saveContact() {
     this.contactsService.saveContact(this.contactForm!.getRawValue()).subscribe({
       next: () => this.router.navigate(['/contacts'])
