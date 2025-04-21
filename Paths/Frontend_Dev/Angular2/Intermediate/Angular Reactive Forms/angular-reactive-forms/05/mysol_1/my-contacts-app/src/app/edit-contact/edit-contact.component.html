@@ -6,7 +6,7 @@
     <section>
       <nav>Name/Info</nav>
       <div>
-        <input formControlName="firstName" placeholder="First Name" />
+        <input formControlName="firstName" required placeholder="First Name" />
         <input formControlName="lastName" placeholder="Last Name" />
         <input formControlName="dateOfBirth" type="date" [value]="contactForm.controls['dateOfBirth'].value | date:'yyyy-MM-dd'" placeholder="Date of Birth" />
         <div>
