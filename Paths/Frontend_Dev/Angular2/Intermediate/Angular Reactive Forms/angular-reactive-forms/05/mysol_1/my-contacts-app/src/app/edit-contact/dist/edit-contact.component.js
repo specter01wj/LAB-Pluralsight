@@ -10,6 +10,7 @@ exports.EditContactComponent = void 0;
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var contact_model_1 = require("../contacts/contact.model");
+var restricted_words_validator_1 = require("../validators/restricted-words.validator");
 var EditContactComponent = /** @class */ (function () {
     function EditContactComponent(route, contactsService, router, fb) {
         this.route = route;
@@ -30,13 +31,13 @@ var EditContactComponent = /** @class */ (function () {
                 phoneType: ''
             }),
             address: this.fb.nonNullable.group({
-                streetAddress: '',
-                city: '',
-                state: '',
-                postalCode: '',
+                streetAddress: ['', forms_1.Validators.required],
+                city: ['', forms_1.Validators.required],
+                state: ['', forms_1.Validators.required],
+                postalCode: ['', forms_1.Validators.required],
                 addressType: ''
             }),
-            notes: ''
+            notes: ['', restricted_words_validator_1.restrictedWords(['foo', 'bar'])]
         });
     }
     EditContactComponent.prototype.ngOnInit = function () {
@@ -53,6 +54,13 @@ var EditContactComponent = /** @class */ (function () {
     Object.defineProperty(EditContactComponent.prototype, "firstName", {
         get: function () {
             return this.contactForm.controls['firstName'];
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(EditContactComponent.prototype, "notes", {
+        get: function () {
+            return this.contactForm.controls['notes'];
         },
         enumerable: false,
         configurable: true
