@@ -21,7 +21,7 @@ var EditContactComponent = /** @class */ (function () {
         this.contactForm = this.fb.nonNullable.group({
             id: '',
             personal: false,
-            firstName: new forms_1.FormControl('', forms_1.Validators.required),
+            firstName: ['', forms_1.Validators.required],
             lastName: '',
             dateOfBirth: null,
             favoritesRanking: null,
