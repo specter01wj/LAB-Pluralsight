@@ -27,11 +27,6 @@ var EditContactComponent = /** @class */ (function () {
             lastName: '',
             dateOfBirth: null,
             favoritesRanking: null,
-            /* phone: this.fb.nonNullable.group({
-              phoneNumber: '',
-              phoneType: '',
-            }), */
-            // phone: this.createPhoneGroup(),
             phones: this.fb.array([this.createPhoneGroup()]),
             address: this.fb.nonNullable.group({
                 streetAddress: ['', forms_1.Validators.required],
@@ -70,6 +65,13 @@ var EditContactComponent = /** @class */ (function () {
     Object.defineProperty(EditContactComponent.prototype, "notes", {
         get: function () {
             return this.contactForm.controls['notes'];
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(EditContactComponent.prototype, "phones", {
+        get: function () {
+            return this.contactForm.get('phones');
         },
         enumerable: false,
         configurable: true

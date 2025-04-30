@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ContactsService } from '../contacts/contacts.service';
 import { phoneTypeValues, addressTypeValues } from '../contacts/contact.model';
@@ -30,11 +30,6 @@ export class EditContactComponent implements OnInit {
       lastName: '',
       dateOfBirth: <Date | null>null,
       favoritesRanking: <number | null>null,
-      /* phone: this.fb.nonNullable.group({
-        phoneNumber: '',
-        phoneType: '',
-      }), */
-      // phone: this.createPhoneGroup(),
       phones: this.fb.array([this.createPhoneGroup()]),
       address: this.fb.nonNullable.group({
         streetAddress: ['', Validators.required],
@@ -71,6 +66,10 @@ export class EditContactComponent implements OnInit {
 
   get notes() {
     return this.contactForm.controls['notes'];
+  }
+
+  get phones(): FormArray {
+    return this.contactForm.get('phones') as FormArray;
   }
 
   saveContact() {
