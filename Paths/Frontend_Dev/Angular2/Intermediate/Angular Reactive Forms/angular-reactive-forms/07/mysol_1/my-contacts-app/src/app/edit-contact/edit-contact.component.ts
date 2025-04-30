@@ -34,7 +34,8 @@ export class EditContactComponent implements OnInit {
         phoneNumber: '',
         phoneType: '',
       }), */
-      phone: this.createPhoneGroup(),
+      // phone: this.createPhoneGroup(),
+      phones: this.fb.array([this.createPhoneGroup()]),
       address: this.fb.nonNullable.group({
         streetAddress: ['', Validators.required],
         city: ['', Validators.required],

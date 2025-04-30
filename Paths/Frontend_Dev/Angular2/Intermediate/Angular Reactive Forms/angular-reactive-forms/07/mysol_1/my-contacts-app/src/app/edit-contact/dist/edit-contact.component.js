@@ -31,7 +31,8 @@ var EditContactComponent = /** @class */ (function () {
               phoneNumber: '',
               phoneType: '',
             }), */
-            phone: this.createPhoneGroup(),
+            // phone: this.createPhoneGroup(),
+            phones: this.fb.array([this.createPhoneGroup()]),
             address: this.fb.nonNullable.group({
                 streetAddress: ['', forms_1.Validators.required],
                 city: ['', forms_1.Validators.required],
