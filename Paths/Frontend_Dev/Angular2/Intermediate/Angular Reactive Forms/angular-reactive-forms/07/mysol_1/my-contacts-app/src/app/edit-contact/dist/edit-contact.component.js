@@ -46,6 +46,9 @@ var EditContactComponent = /** @class */ (function () {
         this.contactsService.getContact(contactId).subscribe(function (contact) {
             if (!contact)
                 return;
+            for (var i = 1; i < contact.phones.length; i++) {
+                _this.addPhone();
+            }
             _this.contactForm.setValue(contact);
         });
     };
@@ -54,6 +57,9 @@ var EditContactComponent = /** @class */ (function () {
             phoneNumber: '',
             phoneType: ''
         });
+    };
+    EditContactComponent.prototype.addPhone = function () {
+        this.phones.push(this.createPhoneGroup());
     };
     Object.defineProperty(EditContactComponent.prototype, "firstName", {
         get: function () {
