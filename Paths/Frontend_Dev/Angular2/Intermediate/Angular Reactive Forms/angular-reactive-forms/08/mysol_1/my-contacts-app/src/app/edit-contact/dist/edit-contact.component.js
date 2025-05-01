@@ -53,10 +53,22 @@ var EditContactComponent = /** @class */ (function () {
         });
     };
     EditContactComponent.prototype.createPhoneGroup = function () {
-        return this.fb.nonNullable.group({
+        var phoneGroup = this.fb.nonNullable.group({
             phoneNumber: '',
-            phoneType: ''
+            phoneType: '',
+            preferred: false
         });
+        phoneGroup.controls.preferred.valueChanges
+            .subscribe(function (value) {
+            if (value) {
+                phoneGroup.controls.phoneNumber.addValidators([forms_1.Validators.required]);
+            }
+            else {
+                phoneGroup.controls.phoneNumber.removeValidators([forms_1.Validators.required]);
+            }
+            phoneGroup.controls.phoneNumber.updateValueAndValidity();
+        });
+        return phoneGroup;
     };
     EditContactComponent.prototype.addPhone = function () {
         this.phones.push(this.createPhoneGroup());

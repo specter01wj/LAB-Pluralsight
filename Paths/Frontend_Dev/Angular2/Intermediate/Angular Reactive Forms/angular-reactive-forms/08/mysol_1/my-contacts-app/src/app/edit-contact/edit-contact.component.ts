@@ -57,11 +57,23 @@ export class EditContactComponent implements OnInit {
   }
 
   createPhoneGroup() {
-    return this.fb.nonNullable.group({
+    const phoneGroup = this.fb.nonNullable.group({
       phoneNumber: '',
       phoneType: '',
       preferred: false,
     });
+
+    phoneGroup.controls.preferred.valueChanges
+      .subscribe(value => {
+        if (value) {
+          phoneGroup.controls.phoneNumber.addValidators([Validators.required]);
+        } else {
+          phoneGroup.controls.phoneNumber.removeValidators([Validators.required]);
+        }
+        phoneGroup.controls.phoneNumber.updateValueAndValidity();
+      });
+
+    return phoneGroup;
   }
 
   addPhone() {
