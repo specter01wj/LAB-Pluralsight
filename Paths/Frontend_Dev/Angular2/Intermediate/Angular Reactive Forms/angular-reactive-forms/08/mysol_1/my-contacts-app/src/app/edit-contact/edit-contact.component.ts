@@ -45,7 +45,10 @@ export class EditContactComponent implements OnInit {
 
   ngOnInit() {
     const contactId = this.route.snapshot.params['id'];
-    if (!contactId) return
+    if (!contactId) {
+      this.subscribeToAddressChanges();
+      return;
+    }
 
     this.contactsService.getContact(contactId).subscribe((contact) => {
       if (!contact) return;
