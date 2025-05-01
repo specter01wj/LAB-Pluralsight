@@ -60,6 +60,7 @@ export class EditContactComponent implements OnInit {
     return this.fb.nonNullable.group({
       phoneNumber: '',
       phoneType: '',
+      preferred: false,
     });
   }
 
