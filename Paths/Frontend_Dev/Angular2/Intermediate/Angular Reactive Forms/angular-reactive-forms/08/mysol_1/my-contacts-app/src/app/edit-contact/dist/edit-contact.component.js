@@ -51,6 +51,28 @@ var EditContactComponent = /** @class */ (function () {
                 _this.addPhone();
             }
             _this.contactForm.setValue(contact);
+            _this.subscribeToAddressChanges();
+        });
+    };
+    EditContactComponent.prototype.subscribeToAddressChanges = function () {
+        var addressGroup = this.contactForm.get('address');
+        addressGroup.valueChanges
+            .pipe(rxjs_1.distinctUntilChanged(this.stringifyCompare))
+            .subscribe(function () {
+            var _a, _b;
+            for (var controlName in addressGroup.controls) {
+                (_a = addressGroup.get(controlName)) === null || _a === void 0 ? void 0 : _a.removeValidators([forms_1.Validators.required]);
+                (_b = addressGroup.get(controlName)) === null || _b === void 0 ? void 0 : _b.updateValueAndValidity();
+            }
+        });
+        addressGroup.valueChanges
+            .pipe(rxjs_1.debounceTime(2000), rxjs_1.distinctUntilChanged(this.stringifyCompare))
+            .subscribe(function () {
+            var _a, _b;
+            for (var controlName in addressGroup.controls) {
+                (_a = addressGroup.get(controlName)) === null || _a === void 0 ? void 0 : _a.addValidators([forms_1.Validators.required]);
+                (_b = addressGroup.get(controlName)) === null || _b === void 0 ? void 0 : _b.updateValueAndValidity();
+            }
         });
     };
     EditContactComponent.prototype.stringifyCompare = function (a, b) {
