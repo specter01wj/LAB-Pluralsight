@@ -11,6 +11,7 @@ var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var contact_model_1 = require("../contacts/contact.model");
 var restricted_words_validator_1 = require("../validators/restricted-words.validator");
+var rxjs_1 = require("rxjs");
 var EditContactComponent = /** @class */ (function () {
     function EditContactComponent(route, contactsService, router, fb) {
         this.route = route;
@@ -52,6 +53,9 @@ var EditContactComponent = /** @class */ (function () {
             _this.contactForm.setValue(contact);
         });
     };
+    EditContactComponent.prototype.stringifyCompare = function (a, b) {
+        return JSON.stringify(a) === JSON.stringify(b);
+    };
     EditContactComponent.prototype.createPhoneGroup = function () {
         var phoneGroup = this.fb.nonNullable.group({
             phoneNumber: '',
@@ -59,6 +63,7 @@ var EditContactComponent = /** @class */ (function () {
             preferred: false
         });
         phoneGroup.controls.preferred.valueChanges
+            .pipe(rxjs_1.distinctUntilChanged(this.stringifyCompare))
             .subscribe(function (value) {
             if (value) {
                 phoneGroup.controls.phoneNumber.addValidators([forms_1.Validators.required]);
@@ -94,6 +99,9 @@ var EditContactComponent = /** @class */ (function () {
         enumerable: false,
         configurable: true
     });
+    EditContactComponent.prototype.getPhoneControl = function (index, controlName) {
+        return this.phones.at(index).get(controlName);
+    };
     EditContactComponent.prototype.saveContact = function () {
         var _this = this;
         this.contactsService.saveContact(this.contactForm.getRawValue()).subscribe({
