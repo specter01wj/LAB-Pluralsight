@@ -1,0 +1,7 @@
+"use strict";
+exports.__esModule = true;
+var rxjs_1 = require("rxjs");
+var a1 = rxjs_1.of(2, 4, 6, 8);
+a1.subscribe(function (val) {
+    console.log('Value from of:', val);
+});
