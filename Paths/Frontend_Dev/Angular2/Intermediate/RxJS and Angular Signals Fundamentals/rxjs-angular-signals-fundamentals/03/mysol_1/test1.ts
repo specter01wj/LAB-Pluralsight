@@ -1,15 +1,12 @@
-import { of, from } from 'rxjs';
+import { of, from, fromEvent } from 'rxjs';
 
-let a1 = of(2, 4, 6, 8);
-let b1 = from([3, 5, 7, 9]);
+let a1 = fromEvent(document, 'click');
 
 a1.subscribe(val => {
-  console.log('Value from of:', val);
+  console.log('Click Event:', val.target);
 });
 
-b1.subscribe(val => {
-  console.log('Value from from:', val);
-});
+
 
 
 
