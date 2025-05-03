@@ -8,12 +8,19 @@
 <body>
   <h1>Click anywhere!</h1>
   <script>
-    const { fromEvent } = rxjs;
-    console.log("✅ Script loaded");
+    const { of, from, fromEvent } = rxjs;
 
-    const clicks = fromEvent(document, "click");
-    clicks.subscribe((event) => {
-      console.log("✅ Click Event:", event.target);
+    console.log('✅ Script loaded');
+
+    const a1 = fromEvent(document, 'click');
+    const b1 = fromEvent(document, 'keydown');
+
+    a1.subscribe(val => {
+      console.log('Click Event:', val.target);
+    });
+
+    b1.subscribe(val => {
+      console.log('Key Event:', val.key);
     });
   </script>
 </body>
