@@ -1,8 +1,9 @@
-import { of, from, Subscription, map, tap, filter } from 'rxjs';
+import { of, from, Subscription, map, tap, filter, timer, take } from 'rxjs';
 
 let subApples!: Subscription;
 let subNumbers!: Subscription;
 let subFilter!: Subscription;
+let subTimer!: Subscription;
 
 const apples$ = from([
   {id: 1, type: 'macintosh'},
@@ -31,3 +32,15 @@ subFilter = numbers_2$.pipe(
   filter(x => x % 2 === 0),
   tap(item => console.log('Even#:', item))
 ).subscribe();
+
+
+subTimer = timer(0, 1000).pipe(
+  take(5)
+).subscribe({
+  next: (item) => console.log('Timer: ', item),
+  error: (error) => console.log('Timer Error: ', error),
+  complete: () => console.log('No more ticks!'),
+});
+
+
+
