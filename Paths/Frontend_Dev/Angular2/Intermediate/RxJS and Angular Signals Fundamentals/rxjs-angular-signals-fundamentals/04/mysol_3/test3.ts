@@ -1,7 +1,8 @@
-import { of, from, Subscription, map, tap } from 'rxjs';
+import { of, from, Subscription, map, tap, filter } from 'rxjs';
 
 let subApples!: Subscription;
 let subNumbers!: Subscription;
+let subFilter!: Subscription;
 
 const apples$ = from([
   {id: 1, type: 'macintosh'},
@@ -10,6 +11,8 @@ const apples$ = from([
 ]);
 
 const numbers$ = of(2, 4, 6);
+
+const numbers_2$ = of(2, 3, 4, 5, 6);
 
 subApples = apples$.pipe(
   map(a => ({
@@ -21,4 +24,10 @@ subApples = apples$.pipe(
 subNumbers = numbers$.pipe(
   map(item => item * 2),
   tap(item => console.log('Map x2:', item))
-).subscribe(val => {});
+).subscribe();
+
+
+subFilter = numbers_2$.pipe(
+  filter(x => x % 2 === 0),
+  tap(item => console.log('Even#:', item))
+).subscribe();
