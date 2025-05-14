@@ -1,4 +1,4 @@
-import { of, from, Subscription, map } from 'rxjs';
+import { of, from, Subscription, map, tap } from 'rxjs';
 
 let subApples!: Subscription;
 let subNumbers!: Subscription;
@@ -14,10 +14,9 @@ const numbers$ = of(2, 4, 6);
 subApples = apples$.pipe(
   map(a => ({
     ...a, color: 'red'
-  }))
-).subscribe(val => {
-  console.log('Apple:', val);
-});
+  })),
+  tap(a => console.log('Apple:', a))
+).subscribe();
 
 subNumbers = numbers$.pipe(
   map(item => item * 2)
