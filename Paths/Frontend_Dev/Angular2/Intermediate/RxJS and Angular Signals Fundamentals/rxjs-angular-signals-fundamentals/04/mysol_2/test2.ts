@@ -19,7 +19,6 @@ subApples = apples$.pipe(
 ).subscribe();
 
 subNumbers = numbers$.pipe(
-  map(item => item * 2)
-).subscribe(val => {
-  return console.log('Map x2:', val)
-});
+  map(item => item * 2),
+  tap(item => console.log('Map x2:', item))
+).subscribe(val => {});
