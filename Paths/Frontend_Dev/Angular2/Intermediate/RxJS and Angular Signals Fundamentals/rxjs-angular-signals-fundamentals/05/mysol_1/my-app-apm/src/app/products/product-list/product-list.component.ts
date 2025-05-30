@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 import { NgIf, NgFor, NgClass } from '@angular/common';
 import { Product } from '../product';
 import { ProductDetailComponent } from '../product-detail/product-detail.component';
+import { ProductService } from '../product.service';
 
 @Component({
     selector: 'pm-product-list',
@@ -11,9 +12,10 @@ import { ProductDetailComponent } from '../product-detail/product-detail.compone
   imports: [NgIf, NgFor, NgClass, ProductDetailComponent]
 })
 export class ProductListComponent {
-  // Just enough here for the template to compile
   pageTitle = 'Products';
   errorMessage = '';
+
+  private productService = inject(ProductService);
 
   // Products
   products: Product[] = [];
