@@ -19,6 +19,11 @@ var ProductService = /** @class */ (function () {
         return this.http.get(this.productsUrl)
             .pipe(rxjs_1.tap(function () { return console.log('In http.get pipeline'); }));
     };
+    ProductService.prototype.getProduct = function (id) {
+        var productUrl = this.productsUrl + '/' + id;
+        return this.http.get(productUrl)
+            .pipe(rxjs_1.tap(function () { return console.log('In http.get by id pipeline'); }));
+    };
     ProductService = __decorate([
         core_1.Injectable({
             providedIn: 'root'
