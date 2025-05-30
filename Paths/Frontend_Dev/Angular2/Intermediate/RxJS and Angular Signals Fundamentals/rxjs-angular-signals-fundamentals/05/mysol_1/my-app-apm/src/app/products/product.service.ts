@@ -1,10 +1,12 @@
-import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { inject, Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  // Just enough here for the code to compile
   private productsUrl = 'api/products';
+
+  private http = inject(HttpClient);
 
 }

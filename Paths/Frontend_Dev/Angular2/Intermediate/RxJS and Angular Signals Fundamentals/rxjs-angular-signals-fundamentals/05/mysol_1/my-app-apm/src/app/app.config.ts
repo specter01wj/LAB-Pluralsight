@@ -11,7 +11,6 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideHttpClient(),
-
     importProvidersFrom(
       FormsModule,
       InMemoryWebApiModule.forRoot(AppData, { delay: 1000 })
