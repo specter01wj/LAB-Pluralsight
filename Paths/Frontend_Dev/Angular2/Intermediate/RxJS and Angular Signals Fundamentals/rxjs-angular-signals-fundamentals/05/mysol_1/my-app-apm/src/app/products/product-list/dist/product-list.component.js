@@ -11,6 +11,7 @@ var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
 var product_detail_component_1 = require("../product-detail/product-detail.component");
 var product_service_1 = require("../product.service");
+var rxjs_1 = require("rxjs");
 var ProductListComponent = /** @class */ (function () {
     function ProductListComponent() {
         this.pageTitle = 'Products';
@@ -21,6 +22,17 @@ var ProductListComponent = /** @class */ (function () {
         // Selected product id to highlight the entry
         this.selectedProductId = 0;
     }
+    ProductListComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.sub = this.productService.getProducts()
+            .pipe(rxjs_1.tap(function () { return console.log('In component pipeline'); })).subscribe(function (products) {
+            _this.products = products;
+            console.log(_this.products);
+        });
+    };
+    ProductListComponent.prototype.ngOnDestroy = function () {
+        this.sub.unsubscribe();
+    };
     ProductListComponent.prototype.onSelected = function (productId) {
         this.selectedProductId = productId;
     };
