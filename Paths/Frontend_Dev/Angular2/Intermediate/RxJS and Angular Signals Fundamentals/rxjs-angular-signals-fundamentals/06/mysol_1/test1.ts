@@ -1,26 +1,21 @@
 import { of, from, Subscription, map } from 'rxjs';
 
-let subApples!: Subscription;
-let subNumbers!: Subscription;
+let subData!: Subscription;
 
-const apples$ = from([
-  {id: 1, type: 'macintosh'},
-  {id: 2, type: 'gala'},
-  {id: 3, type: 'fuji'},
-]);
+const data$ = of(2, 4, 6);
 
-const numbers$ = of(2, 4, 6);
+subData = data$.pipe(
+  map(i => {
+    if (i === 4) {
+      throw 'Error!';
+    }
 
-subApples = apples$.pipe(
-  map(a => ({
-    ...a, color: 'red'
-  }))
-).subscribe(val => {
-  console.log('Apple:', val);
+    return i;
+  })
+).subscribe({
+  next: x => console.log(x),
+  error: err => console.error(err),
+  complete: () => console.log('complete')
 });
 
-subNumbers = numbers$.pipe(
-  map(item => item * 2)
-).subscribe(val => {
-  return console.log('Map x2:', val)
-});
+
