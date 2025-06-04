@@ -9,6 +9,7 @@ exports.__esModule = true;
 exports.ProductDetailComponent = void 0;
 var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
+var rxjs_1 = require("rxjs");
 var product_service_1 = require("../product.service");
 var ProductDetailComponent = /** @class */ (function () {
     function ProductDetailComponent() {
@@ -25,7 +26,11 @@ var ProductDetailComponent = /** @class */ (function () {
         var _this = this;
         var id = changes['productId'].currentValue;
         if (id) {
-            this.sub = this.productService.getProduct(id).subscribe(function (product) { return _this.product = product; });
+            this.sub = this.productService.getProduct(id)
+                .pipe(rxjs_1.catchError(function (err) {
+                _this.errorMessage = err;
+                return rxjs_1.EMPTY;
+            })).subscribe(function (product) { return _this.product = product; });
         }
     };
     ProductDetailComponent.prototype.ngOnDestroy = function () {
