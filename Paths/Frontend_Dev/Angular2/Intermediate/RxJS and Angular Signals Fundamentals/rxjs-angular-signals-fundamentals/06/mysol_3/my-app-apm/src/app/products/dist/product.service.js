@@ -13,7 +13,7 @@ var rxjs_1 = require("rxjs");
 var http_error_service_1 = require("../utilities/http-error.service");
 var ProductService = /** @class */ (function () {
     function ProductService() {
-        this.productsUrl = 'api/products2';
+        this.productsUrl = 'api/products';
         this.http = core_1.inject(http_1.HttpClient);
         this.errorService = core_1.inject(http_error_service_1.HttpErrorService);
     }
@@ -23,9 +23,10 @@ var ProductService = /** @class */ (function () {
             .pipe(rxjs_1.tap(function () { return console.log('In http.get pipeline'); }), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
     };
     ProductService.prototype.getProduct = function (id) {
-        var productUrl = this.productsUrl + '/' + id;
+        var _this = this;
+        var productUrl = this.productsUrl + 's/' + id;
         return this.http.get(productUrl)
-            .pipe(rxjs_1.tap(function () { return console.log('In http.get by id pipeline'); }));
+            .pipe(rxjs_1.tap(function () { return console.log('In http.get by id pipeline'); }), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
     };
     ProductService.prototype.handleError = function (err) {
         var formattedMessage = this.errorService.formatError(err);

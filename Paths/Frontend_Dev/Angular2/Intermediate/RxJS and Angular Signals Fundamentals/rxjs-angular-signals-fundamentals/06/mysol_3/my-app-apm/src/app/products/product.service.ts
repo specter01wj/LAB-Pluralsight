@@ -8,7 +8,7 @@ import { HttpErrorService } from '../utilities/http-error.service';
   providedIn: 'root'
 })
 export class ProductService {
-  private productsUrl = 'api/products2';
+  private productsUrl = 'api/products';
 
   private http = inject(HttpClient);
   private errorService = inject(HttpErrorService);
@@ -22,10 +22,11 @@ export class ProductService {
   }
 
   getProduct(id: number): Observable<Product> {
-    const productUrl = this.productsUrl + '/' + id;
+    const productUrl = this.productsUrl + 's/' + id;
     return this.http.get<Product>(productUrl)
       .pipe(
-        tap(() => console.log('In http.get by id pipeline'))
+        tap(() => console.log('In http.get by id pipeline')),
+        catchError(err => this.handleError(err))
       );
   }
 
