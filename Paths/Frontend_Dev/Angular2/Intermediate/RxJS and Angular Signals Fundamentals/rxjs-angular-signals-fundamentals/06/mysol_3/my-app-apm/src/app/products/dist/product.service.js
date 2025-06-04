@@ -10,19 +10,27 @@ exports.ProductService = void 0;
 var http_1 = require("@angular/common/http");
 var core_1 = require("@angular/core");
 var rxjs_1 = require("rxjs");
+var http_error_service_1 = require("../utilities/http-error.service");
 var ProductService = /** @class */ (function () {
     function ProductService() {
-        this.productsUrl = 'api/products';
+        this.productsUrl = 'api/products2';
         this.http = core_1.inject(http_1.HttpClient);
+        this.errorService = core_1.inject(http_error_service_1.HttpErrorService);
     }
     ProductService.prototype.getProducts = function () {
+        var _this = this;
         return this.http.get(this.productsUrl)
-            .pipe(rxjs_1.tap(function () { return console.log('In http.get pipeline'); }));
+            .pipe(rxjs_1.tap(function () { return console.log('In http.get pipeline'); }), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
     };
     ProductService.prototype.getProduct = function (id) {
         var productUrl = this.productsUrl + '/' + id;
         return this.http.get(productUrl)
             .pipe(rxjs_1.tap(function () { return console.log('In http.get by id pipeline'); }));
+    };
+    ProductService.prototype.handleError = function (err) {
+        var formattedMessage = this.errorService.formatError(err);
+        return rxjs_1.throwError(function () { return formattedMessage; });
+        // throw formattedMessage;
     };
     ProductService = __decorate([
         core_1.Injectable({

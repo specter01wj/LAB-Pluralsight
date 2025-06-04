@@ -1,20 +1,23 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Observable, tap } from 'rxjs';
+import { catchError, Observable, tap, throwError } from 'rxjs';
 import { Product } from './product';
+import { HttpErrorService } from '../utilities/http-error.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  private productsUrl = 'api/products';
+  private productsUrl = 'api/products2';
 
   private http = inject(HttpClient);
+  private errorService = inject(HttpErrorService);
 
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.productsUrl)
       .pipe(
-        tap(() => console.log('In http.get pipeline'))
+        tap(() => console.log('In http.get pipeline')),
+        catchError(err => this.handleError(err))
       );
   }
 
@@ -24,6 +27,12 @@ export class ProductService {
       .pipe(
         tap(() => console.log('In http.get by id pipeline'))
       );
+  }
+
+  private handleError(err: HttpErrorResponse): Observable<never> {
+    const formattedMessage = this.errorService.formatError(err);
+    return throwError(() => formattedMessage);
+    // throw formattedMessage;
   }
 
 }
