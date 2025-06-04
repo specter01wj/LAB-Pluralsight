@@ -24,7 +24,7 @@ var ProductService = /** @class */ (function () {
     };
     ProductService.prototype.getProduct = function (id) {
         var _this = this;
-        var productUrl = this.productsUrl + 's/' + id;
+        var productUrl = this.productsUrl + '/' + id;
         return this.http.get(productUrl)
             .pipe(rxjs_1.tap(function () { return console.log('In http.get by id pipeline'); }), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
     };
