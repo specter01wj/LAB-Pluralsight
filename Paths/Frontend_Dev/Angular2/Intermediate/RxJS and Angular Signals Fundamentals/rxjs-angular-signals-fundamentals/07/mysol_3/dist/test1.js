@@ -1,8 +1,8 @@
-import { of, concatMap, range, delay } from 'rxjs';
-range(1, 5)
-    .pipe(concatMap(i => of(i)
+import { of, range, delay, mergeMap } from 'rxjs';
+range(11, 5)
+    .pipe(mergeMap(i => of(i)
     .pipe(delay(randomDelay())))).subscribe({
-    next: x => console.log('concatMap: ', x),
+    next: x => console.log('mergeMap: ', x),
 });
 function randomDelay() {
     return Math.floor(Math.random() * 1000) + 500;

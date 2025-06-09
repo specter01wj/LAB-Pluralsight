@@ -1,15 +1,15 @@
-import { of, from, Subscription, map, catchError, concatMap, range, delay } from 'rxjs';
+import { of, from, Subscription, map, catchError, concatMap, range, delay, mergeMap } from 'rxjs';
 
 
-range(1, 5)
+range(11, 5)
   .pipe(
-    concatMap(i => of(i)
+    mergeMap(i => of(i)
       .pipe(
         delay(randomDelay())
       )
     )
   ).subscribe({
-    next: x => console.log('concatMap: ', x),
+    next: x => console.log('mergeMap: ', x),
 });
 
 
