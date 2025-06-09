@@ -1,22 +1,19 @@
-import { of, from, Subscription, map, catchError } from 'rxjs';
+import { of, from, Subscription, map, catchError, concatMap, range, delay } from 'rxjs';
 
-let subData!: Subscription;
 
-const data$ = of(2, 4, 6);
-
-subData = data$.pipe(
-  map(i => {
-    if (i === 4) {
-      throw 'Error!';
-    }
-
-    return i;
-  }),
-  catchError(err => of('four'))
-).subscribe({
-  next: x => console.log(x),
-  error: err => console.error(err),
-  complete: () => console.log('complete')
+range(1, 5)
+  .pipe(
+    concatMap(i => of(i)
+      .pipe(
+        delay(randomDelay())
+      )
+    )
+  ).subscribe({
+    next: x => console.log('concatMap: ', x),
 });
 
+
+function randomDelay(): number {
+  return Math.floor(Math.random() * 1000) + 500;
+}
 
