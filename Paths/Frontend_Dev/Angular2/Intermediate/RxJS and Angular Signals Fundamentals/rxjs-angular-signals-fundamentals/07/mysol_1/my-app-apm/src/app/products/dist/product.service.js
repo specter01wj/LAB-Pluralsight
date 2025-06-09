@@ -1,4 +1,15 @@
 "use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -11,11 +22,13 @@ var http_1 = require("@angular/common/http");
 var core_1 = require("@angular/core");
 var rxjs_1 = require("rxjs");
 var http_error_service_1 = require("../utilities/http-error.service");
+var review_service_1 = require("../reviews/review.service");
 var ProductService = /** @class */ (function () {
     function ProductService() {
         this.productsUrl = 'api/products';
         this.http = core_1.inject(http_1.HttpClient);
         this.errorService = core_1.inject(http_error_service_1.HttpErrorService);
+        this.reviewService = core_1.inject(review_service_1.ReviewService);
     }
     ProductService.prototype.getProducts = function () {
         var _this = this;
@@ -27,6 +40,15 @@ var ProductService = /** @class */ (function () {
         var productUrl = this.productsUrl + '/' + id;
         return this.http.get(productUrl)
             .pipe(rxjs_1.tap(function () { return console.log('In http.get by id pipeline'); }), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
+    };
+    ProductService.prototype.getProductWithReviews = function (product) {
+        if (product.hasReviews) {
+            return this.http.get(this.reviewService.getReviewUrl(product.id))
+                .pipe(rxjs_1.map(function (reviews) { return (__assign(__assign({}, product), { reviews: reviews })); }));
+        }
+        else {
+            return rxjs_1.of(product);
+        }
     };
     ProductService.prototype.handleError = function (err) {
         var formattedMessage = this.errorService.formatError(err);
