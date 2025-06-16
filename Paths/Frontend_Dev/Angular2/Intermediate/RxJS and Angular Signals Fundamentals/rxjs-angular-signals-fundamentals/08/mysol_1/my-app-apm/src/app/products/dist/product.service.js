@@ -25,16 +25,14 @@ var http_error_service_1 = require("../utilities/http-error.service");
 var review_service_1 = require("../reviews/review.service");
 var ProductService = /** @class */ (function () {
     function ProductService() {
+        var _this = this;
         this.productsUrl = 'api/products';
         this.http = core_1.inject(http_1.HttpClient);
         this.errorService = core_1.inject(http_error_service_1.HttpErrorService);
         this.reviewService = core_1.inject(review_service_1.ReviewService);
-    }
-    ProductService.prototype.getProducts = function () {
-        var _this = this;
-        return this.http.get(this.productsUrl)
+        this.products$ = this.http.get(this.productsUrl)
             .pipe(rxjs_1.tap(function () { return console.log('In http.get pipeline'); }), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
-    };
+    }
     ProductService.prototype.getProduct = function (id) {
         var _this = this;
         var productUrl = this.productsUrl + '/' + id;
