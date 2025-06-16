@@ -21,7 +21,7 @@ var ProductListComponent = /** @class */ (function () {
         this.productService = core_1.inject(product_service_1.ProductService);
         // Products
         this.products$ = this.productService.products$
-            .pipe(rxjs_1.tap(function () { return console.log('In component pipeline'); }), rxjs_1.catchError(function (err) {
+            .pipe(rxjs_1.catchError(function (err) {
             _this.errorMessage = err;
             return rxjs_1.EMPTY;
         }));

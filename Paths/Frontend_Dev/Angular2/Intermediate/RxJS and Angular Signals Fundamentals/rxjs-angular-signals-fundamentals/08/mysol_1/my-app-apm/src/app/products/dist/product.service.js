@@ -31,7 +31,7 @@ var ProductService = /** @class */ (function () {
         this.errorService = core_1.inject(http_error_service_1.HttpErrorService);
         this.reviewService = core_1.inject(review_service_1.ReviewService);
         this.products$ = this.http.get(this.productsUrl)
-            .pipe(rxjs_1.tap(function () { return console.log('In http.get pipeline'); }), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
+            .pipe(rxjs_1.tap(function (p) { return console.log(JSON.stringify(p)); }), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
     }
     ProductService.prototype.getProduct = function (id) {
         var _this = this;
