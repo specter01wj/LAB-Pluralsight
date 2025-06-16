@@ -26,7 +26,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
   selectedProductId: number = 0;
 
   ngOnInit(): void {
-    this.sub = this.productService.getProducts()
+    this.sub = this.productService.products$
       .pipe(
         tap(() => console.log('In component pipeline')),
         catchError(err => {

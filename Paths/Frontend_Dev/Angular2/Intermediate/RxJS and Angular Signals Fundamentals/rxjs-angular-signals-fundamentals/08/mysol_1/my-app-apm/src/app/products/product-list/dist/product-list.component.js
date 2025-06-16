@@ -24,7 +24,7 @@ var ProductListComponent = /** @class */ (function () {
     }
     ProductListComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.sub = this.productService.getProducts()
+        this.sub = this.productService.products$
             .pipe(rxjs_1.tap(function () { return console.log('In component pipeline'); }), rxjs_1.catchError(function (err) {
             _this.errorMessage = err;
             return rxjs_1.EMPTY;
