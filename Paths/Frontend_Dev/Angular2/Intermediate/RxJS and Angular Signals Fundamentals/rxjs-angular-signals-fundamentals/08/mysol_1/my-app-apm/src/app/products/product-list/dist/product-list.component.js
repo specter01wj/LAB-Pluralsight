@@ -14,27 +14,25 @@ var product_service_1 = require("../product.service");
 var rxjs_1 = require("rxjs");
 var ProductListComponent = /** @class */ (function () {
     function ProductListComponent() {
+        var _this = this;
         this.pageTitle = 'Products';
         this.errorMessage = '';
+        // sub!: Subscription;
         this.productService = core_1.inject(product_service_1.ProductService);
         // Products
-        this.products = [];
+        this.products$ = this.productService.products$
+            .pipe(rxjs_1.tap(function () { return console.log('In component pipeline'); }), rxjs_1.catchError(function (err) {
+            _this.errorMessage = err;
+            return rxjs_1.EMPTY;
+        }));
+        // products: Product[] = [];
         // Selected product id to highlight the entry
         this.selectedProductId = 0;
     }
     ProductListComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.sub = this.productService.products$
-            .pipe(rxjs_1.tap(function () { return console.log('In component pipeline'); }), rxjs_1.catchError(function (err) {
-            _this.errorMessage = err;
-            return rxjs_1.EMPTY;
-        })).subscribe(function (products) {
-            _this.products = products;
-            console.log(_this.products);
-        });
     };
     ProductListComponent.prototype.ngOnDestroy = function () {
-        this.sub.unsubscribe();
+        // this.sub.unsubscribe();
     };
     ProductListComponent.prototype.onSelected = function (productId) {
         this.selectedProductId = productId;
@@ -44,7 +42,7 @@ var ProductListComponent = /** @class */ (function () {
             selector: 'pm-product-list',
             templateUrl: './product-list.component.html',
             standalone: true,
-            imports: [common_1.NgIf, common_1.NgFor, common_1.NgClass, product_detail_component_1.ProductDetailComponent]
+            imports: [common_1.AsyncPipe, common_1.NgIf, common_1.NgFor, common_1.NgClass, product_detail_component_1.ProductDetailComponent]
         })
     ], ProductListComponent);
     return ProductListComponent;
