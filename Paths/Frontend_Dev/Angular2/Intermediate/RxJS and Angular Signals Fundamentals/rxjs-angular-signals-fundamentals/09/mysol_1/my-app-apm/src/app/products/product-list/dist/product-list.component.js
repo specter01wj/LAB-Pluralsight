@@ -28,14 +28,11 @@ var ProductListComponent = /** @class */ (function () {
         // products: Product[] = [];
         // Selected product id to highlight the entry
         this.selectedProductId = 0;
+        this.selectedProductId$ = this.productService.productSelected$;
     }
-    ProductListComponent.prototype.ngOnInit = function () {
-    };
-    ProductListComponent.prototype.ngOnDestroy = function () {
-        // this.sub.unsubscribe();
-    };
     ProductListComponent.prototype.onSelected = function (productId) {
-        this.selectedProductId = productId;
+        // this.selectedProductId = productId;
+        this.productService.productSelected(productId);
     };
     ProductListComponent = __decorate([
         core_1.Component({

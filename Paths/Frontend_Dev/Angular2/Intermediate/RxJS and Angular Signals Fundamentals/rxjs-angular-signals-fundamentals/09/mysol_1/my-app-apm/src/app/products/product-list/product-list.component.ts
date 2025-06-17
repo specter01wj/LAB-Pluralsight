@@ -12,7 +12,7 @@ import { catchError, EMPTY, Subscription, tap } from 'rxjs';
     standalone: true,
   imports: [AsyncPipe, NgIf, NgFor, NgClass, ProductDetailComponent]
 })
-export class ProductListComponent implements OnInit, OnDestroy {
+export class ProductListComponent {
   pageTitle = 'Products';
   errorMessage = '';
   // sub!: Subscription;
@@ -32,16 +32,10 @@ export class ProductListComponent implements OnInit, OnDestroy {
 
   // Selected product id to highlight the entry
   selectedProductId: number = 0;
-
-  ngOnInit(): void {
-
-  }
-
-  ngOnDestroy(): void {
-    // this.sub.unsubscribe();
-  }
+  readonly selectedProductId$ = this.productService.productSelected$;
 
   onSelected(productId: number): void {
-    this.selectedProductId = productId;
+    // this.selectedProductId = productId;
+    this.productService.productSelected(productId);
   }
 }
