@@ -30,6 +30,8 @@ var ProductService = /** @class */ (function () {
         this.http = core_1.inject(http_1.HttpClient);
         this.errorService = core_1.inject(http_error_service_1.HttpErrorService);
         this.reviewService = core_1.inject(review_service_1.ReviewService);
+        this.productSelectedSubject = new rxjs_1.BehaviorSubject(undefined);
+        this.productSelected$ = this.productSelectedSubject.asObservable();
         this.products$ = this.http.get(this.productsUrl)
             .pipe(rxjs_1.tap(function (p) { return console.log(JSON.stringify(p)); }), rxjs_1.shareReplay(1), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
     }
@@ -47,6 +49,9 @@ var ProductService = /** @class */ (function () {
         else {
             return rxjs_1.of(product);
         }
+    };
+    ProductService.prototype.productSelected = function (selectedProductId) {
+        this.productSelectedSubject.next(selectedProductId);
     };
     ProductService.prototype.handleError = function (err) {
         var formattedMessage = this.errorService.formatError(err);
