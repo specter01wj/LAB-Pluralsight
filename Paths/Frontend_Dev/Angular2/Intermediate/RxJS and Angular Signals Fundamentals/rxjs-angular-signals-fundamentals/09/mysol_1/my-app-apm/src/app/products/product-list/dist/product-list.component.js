@@ -27,7 +27,7 @@ var ProductListComponent = /** @class */ (function () {
         }));
         // products: Product[] = [];
         // Selected product id to highlight the entry
-        this.selectedProductId = 0;
+        // selectedProductId: number = 0;
         this.selectedProductId$ = this.productService.productSelected$;
     }
     ProductListComponent.prototype.onSelected = function (productId) {
