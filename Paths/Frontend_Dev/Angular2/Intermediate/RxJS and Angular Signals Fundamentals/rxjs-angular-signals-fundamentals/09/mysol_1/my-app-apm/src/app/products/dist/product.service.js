@@ -35,18 +35,12 @@ var ProductService = /** @class */ (function () {
         this.products$ = this.http.get(this.productsUrl)
             .pipe(rxjs_1.tap(function (p) { return console.log(JSON.stringify(p)); }), rxjs_1.shareReplay(1), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
         this.product$ = this.productSelected$
-            .pipe(rxjs_1.switchMap(function (id) {
+            .pipe(rxjs_1.filter(Boolean), rxjs_1.switchMap(function (id) {
             var productUrl = _this.productsUrl + '/' + id;
             return _this.http.get(productUrl)
                 .pipe(rxjs_1.switchMap(function (product) { return _this.getProductWithReviews(product); }), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
         }));
     }
-    ProductService.prototype.getProduct = function (id) {
-        var _this = this;
-        var productUrl = this.productsUrl + '/' + id;
-        return this.http.get(productUrl)
-            .pipe(rxjs_1.tap(function () { return console.log('In http.get by id pipeline'); }), rxjs_1.switchMap(function (product) { return _this.getProductWithReviews(product); }), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
-    };
     ProductService.prototype.getProductWithReviews = function (product) {
         if (product.hasReviews) {
             return this.http.get(this.reviewService.getReviewUrl(product.id))
