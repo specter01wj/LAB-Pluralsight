@@ -23,7 +23,8 @@ var ProductDetailComponent = /** @class */ (function () {
             return rxjs_1.EMPTY;
         }));
         // Set the page title
-        this.pageTitle = this.product ? "Product Detail for: " + this.product.productName : 'Product Detail';
+        // pageTitle = this.product ? `Product Detail for: ${this.product.productName}` : 'Product Detail';
+        this.pageTitle = 'ProductDetail';
     }
     ProductDetailComponent.prototype.addToCart = function (product) {
     };

@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 
 import { NgIf, NgFor, CurrencyPipe } from '@angular/common';
 import { Product } from '../product';
-import { catchError, EMPTY, Subscription } from 'rxjs';
+import { catchError, EMPTY } from 'rxjs';
 import { ProductService } from '../product.service';
 
 @Component({
@@ -27,7 +27,8 @@ export class ProductDetailComponent {
     );
 
   // Set the page title
-  pageTitle = this.product ? `Product Detail for: ${this.product.productName}` : 'Product Detail';
+  // pageTitle = this.product ? `Product Detail for: ${this.product.productName}` : 'Product Detail';
+  pageTitle = 'ProductDetail';
 
   addToCart(product: Product) {
   }
