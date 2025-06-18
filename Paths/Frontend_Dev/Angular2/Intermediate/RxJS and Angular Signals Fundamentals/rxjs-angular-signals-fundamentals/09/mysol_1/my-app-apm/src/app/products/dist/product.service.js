@@ -40,6 +40,13 @@ var ProductService = /** @class */ (function () {
             return _this.http.get(productUrl)
                 .pipe(rxjs_1.switchMap(function (product) { return _this.getProductWithReviews(product); }), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
         }));
+        this.product2$ = rxjs_1.combineLatest([
+            this.productSelected$,
+            this.products$
+        ]).pipe(rxjs_1.map(function (_a) {
+            var selectedProductId = _a[0], products = _a[1];
+            return products.find(function (product) { return product.id === selectedProductId; });
+        }), rxjs_1.filter(Boolean), rxjs_1.switchMap(function (product) { return _this.getProductWithReviews(product); }), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
     }
     ProductService.prototype.getProductWithReviews = function (product) {
         if (product.hasReviews) {
