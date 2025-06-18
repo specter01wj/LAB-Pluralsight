@@ -13,36 +13,20 @@ var rxjs_1 = require("rxjs");
 var product_service_1 = require("../product.service");
 var ProductDetailComponent = /** @class */ (function () {
     function ProductDetailComponent() {
-        // Just enough here for the template to compile
-        this.productId = 0;
+        var _this = this;
         this.errorMessage = '';
         this.productService = core_1.inject(product_service_1.ProductService);
         // Product to display
-        this.product = null;
+        this.product$ = this.productService.product$
+            .pipe(rxjs_1.catchError(function (err) {
+            _this.errorMessage = err;
+            return rxjs_1.EMPTY;
+        }));
         // Set the page title
         this.pageTitle = this.product ? "Product Detail for: " + this.product.productName : 'Product Detail';
     }
-    ProductDetailComponent.prototype.ngOnChanges = function (changes) {
-        var _this = this;
-        var id = changes['productId'].currentValue;
-        if (id) {
-            this.sub = this.productService.getProduct(id)
-                .pipe(rxjs_1.catchError(function (err) {
-                _this.errorMessage = err;
-                return rxjs_1.EMPTY;
-            })).subscribe(function (product) { return _this.product = product; });
-        }
-    };
-    ProductDetailComponent.prototype.ngOnDestroy = function () {
-        if (this.sub) {
-            this.sub.unsubscribe();
-        }
-    };
     ProductDetailComponent.prototype.addToCart = function (product) {
     };
-    __decorate([
-        core_1.Input()
-    ], ProductDetailComponent.prototype, "productId");
     ProductDetailComponent = __decorate([
         core_1.Component({
             selector: 'pm-product-detail',
