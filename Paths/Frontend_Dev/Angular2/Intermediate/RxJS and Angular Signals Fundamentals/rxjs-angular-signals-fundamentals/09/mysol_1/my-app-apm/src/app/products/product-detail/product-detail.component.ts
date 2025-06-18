@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 
-import { NgIf, NgFor, CurrencyPipe } from '@angular/common';
+import { NgIf, NgFor, CurrencyPipe, AsyncPipe } from '@angular/common';
 import { Product } from '../product';
 import { catchError, EMPTY } from 'rxjs';
 import { ProductService } from '../product.service';
@@ -9,7 +9,7 @@ import { ProductService } from '../product.service';
     selector: 'pm-product-detail',
     templateUrl: './product-detail.component.html',
     standalone: true,
-    imports: [NgIf, NgFor, CurrencyPipe]
+    imports: [AsyncPipe, NgIf, NgFor, CurrencyPipe]
 })
 export class ProductDetailComponent {
 

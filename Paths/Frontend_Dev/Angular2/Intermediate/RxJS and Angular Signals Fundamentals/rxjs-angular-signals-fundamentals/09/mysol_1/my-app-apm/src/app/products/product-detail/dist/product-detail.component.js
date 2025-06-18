@@ -33,7 +33,7 @@ var ProductDetailComponent = /** @class */ (function () {
             selector: 'pm-product-detail',
             templateUrl: './product-detail.component.html',
             standalone: true,
-            imports: [common_1.NgIf, common_1.NgFor, common_1.CurrencyPipe]
+            imports: [common_1.AsyncPipe, common_1.NgIf, common_1.NgFor, common_1.CurrencyPipe]
         })
     ], ProductDetailComponent);
     return ProductDetailComponent;
