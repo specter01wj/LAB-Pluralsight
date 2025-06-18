@@ -26,6 +26,18 @@ export class ProductService {
         catchError(err => this.handleError(err))
       );
 
+  readonly product$ = this.productSelected$
+      .pipe(
+        switchMap( id => {
+          const productUrl = this.productsUrl + '/' + id;
+          return this.http.get<Product>(productUrl)
+            .pipe(
+              switchMap(product => this.getProductWithReviews(product)),
+              catchError(err => this.handleError(err))
+            );
+        })
+      );
+
   getProduct(id: number): Observable<Product> {
     const productUrl = this.productsUrl + '/' + id;
     return this.http.get<Product>(productUrl)
