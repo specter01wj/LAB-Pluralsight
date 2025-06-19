@@ -8,18 +8,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.AppComponent = void 0;
 var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
 var router_1 = require("@angular/router");
+var forms_1 = require("@angular/forms");
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'signal_app';
         this.quantity = core_1.signal(1);
+        this.qtyAvail = core_1.signal([1, 2, 3, 4, 5, 6]);
         console.log('In constructor: ' + this.quantity());
     }
+    AppComponent.prototype.onQuantitySelected = function (qty) {
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'app-root',
             standalone: true,
-            imports: [router_1.RouterOutlet],
+            imports: [common_1.CommonModule, forms_1.FormsModule, router_1.RouterOutlet],
             templateUrl: './app.component.html',
             styleUrl: './app.component.scss'
         })

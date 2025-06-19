@@ -1,2 +1,7 @@
 <h2>Signal test!</h2>
 <div>{{ quantity() }}</div>
+
+<select [ngModel]="quantity()" (ngModelChange)="onQuantitySelected($event)">
+  <option disabled value="">--Select a quantity--</option>
+  <option *ngFor="let q of qtyAvail()">{{q}}</option>
+</select>
