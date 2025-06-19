@@ -34,13 +34,13 @@ var ProductService = /** @class */ (function () {
         this.productSelected$ = this.productSelectedSubject.asObservable();
         this.products$ = this.http.get(this.productsUrl)
             .pipe(rxjs_1.tap(function (p) { return console.log(JSON.stringify(p)); }), rxjs_1.shareReplay(1), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
-        this.product$ = this.productSelected$
+        this.product1$ = this.productSelected$
             .pipe(rxjs_1.filter(Boolean), rxjs_1.switchMap(function (id) {
             var productUrl = _this.productsUrl + '/' + id;
             return _this.http.get(productUrl)
                 .pipe(rxjs_1.switchMap(function (product) { return _this.getProductWithReviews(product); }), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
         }));
-        this.product2$ = rxjs_1.combineLatest([
+        this.product$ = rxjs_1.combineLatest([
             this.productSelected$,
             this.products$
         ]).pipe(rxjs_1.map(function (_a) {

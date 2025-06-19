@@ -26,7 +26,7 @@ export class ProductService {
         catchError(err => this.handleError(err))
       );
 
-  readonly product$ = this.productSelected$
+  readonly product1$ = this.productSelected$
       .pipe(
         filter(Boolean),
         switchMap( id => {
@@ -39,7 +39,7 @@ export class ProductService {
         })
       );
 
-  product2$ = combineLatest([
+  product$ = combineLatest([
     this.productSelected$,
     this.products$
   ]).pipe(
