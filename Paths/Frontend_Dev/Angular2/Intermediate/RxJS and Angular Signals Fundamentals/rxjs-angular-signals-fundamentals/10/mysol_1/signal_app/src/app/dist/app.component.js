@@ -13,11 +13,12 @@ var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'signal_app';
         this.quantity = core_1.signal(1);
-        console.log('In constructor: ' + this.quantity);
+        console.log('In constructor: ' + this.quantity());
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'app-root',
+            standalone: true,
             imports: [router_1.RouterOutlet],
             templateUrl: './app.component.html',
             styleUrl: './app.component.scss'

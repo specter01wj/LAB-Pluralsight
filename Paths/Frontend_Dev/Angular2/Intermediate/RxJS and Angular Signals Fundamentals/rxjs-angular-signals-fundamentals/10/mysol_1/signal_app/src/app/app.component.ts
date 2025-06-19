@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -13,7 +14,7 @@ export class AppComponent {
   quantity = signal<number>(1);
 
   constructor() {
-    console.log('In constructor: ' + this.quantity);
+    console.log('In constructor: ' + this.quantity());
   }
 
 }
