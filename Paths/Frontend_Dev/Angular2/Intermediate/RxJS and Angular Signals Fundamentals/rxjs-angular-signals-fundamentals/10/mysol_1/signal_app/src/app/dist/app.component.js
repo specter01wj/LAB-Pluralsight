@@ -16,6 +16,11 @@ var AppComponent = /** @class */ (function () {
         this.title = 'signal_app';
         this.quantity = core_1.signal(1);
         this.qtyAvail = core_1.signal([1, 2, 3, 4, 5, 6]);
+        this.selectedProduct = core_1.signal({
+            id: 5,
+            name: "Hammer",
+            price: 25
+        });
         console.log('In constructor: ' + this.quantity());
     }
     AppComponent.prototype.onQuantitySelected = function (qty) {
