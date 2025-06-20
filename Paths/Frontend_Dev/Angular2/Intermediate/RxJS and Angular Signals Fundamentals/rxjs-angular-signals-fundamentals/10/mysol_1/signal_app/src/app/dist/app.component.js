@@ -22,6 +22,7 @@ var AppComponent = /** @class */ (function () {
             name: "Hammer",
             price: 25
         });
+        this.exPrice = this.selectedProduct().price * this.quantity();
         console.log('In constructor: ' + this.quantity());
         core_1.effect(function () { return console.log('In effect: ', _this.quantity()); });
         this.quantity.update(function (q) { return q * 2; });

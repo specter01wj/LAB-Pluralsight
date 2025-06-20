@@ -29,6 +29,8 @@ export class AppComponent {
     price: 25
   });
 
+  exPrice = this.selectedProduct().price * this.quantity();
+
   constructor() {
     console.log('In constructor: ' + this.quantity());
 
