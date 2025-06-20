@@ -33,6 +33,8 @@ export class AppComponent {
 
   color = computed(() => this.exPrice() > 100 ? 'green' : 'blue');
 
+  e = effect(() => console.log('In effect, price: ', this.exPrice()));
+
   constructor() {
     console.log('In constructor: ' + this.quantity());
 

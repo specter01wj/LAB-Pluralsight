@@ -24,6 +24,7 @@ var AppComponent = /** @class */ (function () {
         });
         this.exPrice = core_1.computed(function () { return _this.selectedProduct().price * _this.quantity(); });
         this.color = core_1.computed(function () { return _this.exPrice() > 100 ? 'green' : 'blue'; });
+        this.e = core_1.effect(function () { return console.log('In effect, price: ', _this.exPrice()); });
         console.log('In constructor: ' + this.quantity());
         core_1.effect(function () { return console.log('In effect: ', _this.quantity()); });
         this.quantity.update(function (q) { return q * 2; });
