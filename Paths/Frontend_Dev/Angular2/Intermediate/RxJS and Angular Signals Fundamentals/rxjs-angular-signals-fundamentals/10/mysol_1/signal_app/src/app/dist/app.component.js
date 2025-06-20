@@ -13,6 +13,7 @@ var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
+        var _this = this;
         this.title = 'signal_app';
         this.quantity = core_1.signal(1);
         this.qtyAvail = core_1.signal([1, 2, 3, 4, 5, 6]);
@@ -22,9 +23,13 @@ var AppComponent = /** @class */ (function () {
             price: 25
         });
         console.log('In constructor: ' + this.quantity());
+        core_1.effect(function () { return console.log('In effect: ', _this.quantity()); });
+        this.quantity.update(function (q) { return q * 2; });
     }
     AppComponent.prototype.onQuantitySelected = function (qty) {
         this.quantity.set(qty);
+        this.quantity.set(67);
+        this.quantity.set(42);
     };
     AppComponent = __decorate([
         core_1.Component({

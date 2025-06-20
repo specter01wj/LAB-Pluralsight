@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, effect, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -31,10 +31,16 @@ export class AppComponent {
 
   constructor() {
     console.log('In constructor: ' + this.quantity());
+
+    effect(() => console.log('In effect: ', this.quantity()));
+
+    this.quantity.update(q => q * 2);
   }
 
   onQuantitySelected(qty: number) {
     this.quantity.set(qty);
+    this.quantity.set(67);
+    this.quantity.set(42);
   }
 
 }
