@@ -4,6 +4,7 @@
 
 <div>Product: {{ selectedProduct().name }}</div>
 <div>Price: {{ selectedProduct().price }}</div>
+<div>Extended Price: {{ exPrice | currency }}</div>
 
 <select [ngModel]="quantity()" (ngModelChange)="onQuantitySelected($event)">
   <option disabled value="">--Select a quantity--</option>
