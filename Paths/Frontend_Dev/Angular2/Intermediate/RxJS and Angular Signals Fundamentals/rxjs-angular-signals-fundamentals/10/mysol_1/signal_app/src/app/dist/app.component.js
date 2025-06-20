@@ -24,6 +24,7 @@ var AppComponent = /** @class */ (function () {
         console.log('In constructor: ' + this.quantity());
     }
     AppComponent.prototype.onQuantitySelected = function (qty) {
+        this.quantity.set(qty);
     };
     AppComponent = __decorate([
         core_1.Component({
