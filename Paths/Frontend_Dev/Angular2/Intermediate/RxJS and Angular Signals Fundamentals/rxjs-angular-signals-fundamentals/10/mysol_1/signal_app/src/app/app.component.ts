@@ -1,4 +1,4 @@
-import { Component, effect, signal } from '@angular/core';
+import { Component, computed, effect, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -29,7 +29,7 @@ export class AppComponent {
     price: 25
   });
 
-  exPrice = this.selectedProduct().price * this.quantity();
+  exPrice = computed(() => this.selectedProduct().price * this.quantity());
 
   constructor() {
     console.log('In constructor: ' + this.quantity());
