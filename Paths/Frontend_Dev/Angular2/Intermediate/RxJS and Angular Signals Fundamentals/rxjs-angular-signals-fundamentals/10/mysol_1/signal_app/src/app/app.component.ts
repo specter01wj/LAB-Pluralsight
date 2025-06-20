@@ -31,6 +31,8 @@ export class AppComponent {
 
   exPrice = computed(() => this.selectedProduct().price * this.quantity());
 
+  color = computed(() => this.exPrice() > 100 ? 'green' : 'blue');
+
   constructor() {
     console.log('In constructor: ' + this.quantity());
 
@@ -41,8 +43,8 @@ export class AppComponent {
 
   onQuantitySelected(qty: number) {
     this.quantity.set(qty);
-    this.quantity.set(67);
-    this.quantity.set(42);
+    // this.quantity.set(67);
+    // this.quantity.set(42);
   }
 
 }
