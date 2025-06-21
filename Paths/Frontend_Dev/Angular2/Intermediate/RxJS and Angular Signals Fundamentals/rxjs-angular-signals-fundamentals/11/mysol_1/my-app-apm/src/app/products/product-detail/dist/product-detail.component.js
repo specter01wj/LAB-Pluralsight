@@ -11,11 +11,13 @@ var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
 var rxjs_1 = require("rxjs");
 var product_service_1 = require("../product.service");
+var cart_service_1 = require("../../cart/cart.service");
 var ProductDetailComponent = /** @class */ (function () {
     function ProductDetailComponent() {
         var _this = this;
         this.errorMessage = '';
         this.productService = core_1.inject(product_service_1.ProductService);
+        this.cartService = core_1.inject(cart_service_1.CartService);
         // Product to display
         this.product$ = this.productService.product$
             .pipe(rxjs_1.catchError(function (err) {
@@ -27,6 +29,7 @@ var ProductDetailComponent = /** @class */ (function () {
         this.pageTitle = 'ProductDetail';
     }
     ProductDetailComponent.prototype.addToCart = function (product) {
+        this.cartService.addToCart(product);
     };
     ProductDetailComponent = __decorate([
         core_1.Component({
