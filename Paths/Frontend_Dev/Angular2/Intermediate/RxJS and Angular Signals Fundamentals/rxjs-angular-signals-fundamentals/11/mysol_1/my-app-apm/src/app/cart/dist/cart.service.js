@@ -19,6 +19,8 @@ var CartService = /** @class */ (function () {
     function CartService() {
         var _this = this;
         this.cartItems = core_1.signal([]);
+        this.cartCount = core_1.computed(function () { return _this.cartItems()
+            .reduce(function (accQty, item) { return accQty + item.quantity; }, 0); });
         this.eLength = core_1.effect(function () { return console.log('Car array length: ', _this.cartItems().length); });
     }
     CartService.prototype.addToCart = function (product) {
