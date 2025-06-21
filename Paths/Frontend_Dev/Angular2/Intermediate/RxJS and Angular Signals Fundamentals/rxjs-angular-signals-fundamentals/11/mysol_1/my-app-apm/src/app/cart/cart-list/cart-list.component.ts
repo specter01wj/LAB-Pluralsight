@@ -10,7 +10,6 @@ import { CartItemComponent } from '../cart-item/cart-item.component';
   templateUrl: 'cart-list.component.html'
 })
 export class CartListComponent {
-  // Just enough here for the template to compile
   pageTitle = 'Cart';
 
   cartItems: CartItem[] = [];
