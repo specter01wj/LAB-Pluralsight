@@ -10,8 +10,13 @@ exports.CartService = void 0;
 var core_1 = require("@angular/core");
 var CartService = /** @class */ (function () {
     function CartService() {
+        var _this = this;
         this.cartItems = core_1.signal([]);
+        this.eLength = core_1.effect(function () { return console.log('Car array length: ', _this.cartItems().length); });
     }
+    CartService.prototype.addToCart = function (product) {
+        this.cartItems().push({ product: product, quantity: 1 });
+    };
     CartService = __decorate([
         core_1.Injectable({
             providedIn: 'root'
