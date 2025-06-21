@@ -12,6 +12,7 @@ export class CartService {
 
   addToCart(product: Product): void {
     this.cartItems().push({ product, quantity: 1});
+    this.cartItems.update(item => [...item, { product, quantity: 1}]);
   }
 
 }
