@@ -11,7 +11,7 @@ export class CartService {
   eLength = effect(() => console.log('Car array length: ', this.cartItems().length));
 
   addToCart(product: Product): void {
-    this.cartItems().push({ product, quantity: 1});
+    // this.cartItems().push({ product, quantity: 1});
     this.cartItems.update(item => [...item, { product, quantity: 1}]);
   }
 

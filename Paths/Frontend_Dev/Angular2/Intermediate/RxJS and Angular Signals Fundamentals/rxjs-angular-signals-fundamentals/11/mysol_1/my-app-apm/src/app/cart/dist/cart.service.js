@@ -22,7 +22,7 @@ var CartService = /** @class */ (function () {
         this.eLength = core_1.effect(function () { return console.log('Car array length: ', _this.cartItems().length); });
     }
     CartService.prototype.addToCart = function (product) {
-        this.cartItems().push({ product: product, quantity: 1 });
+        // this.cartItems().push({ product, quantity: 1});
         this.cartItems.update(function (item) { return __spreadArrays(item, [{ product: product, quantity: 1 }]); });
     };
     CartService = __decorate([
