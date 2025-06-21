@@ -9,10 +9,12 @@ exports.__esModule = true;
 exports.AppComponent = void 0;
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
+var cart_service_1 = require("./cart/cart.service");
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.pageTitle = 'Acme Product Management';
-        this.cartCount = 0;
+        this.cartService = core_1.inject(cart_service_1.CartService);
+        this.cartCount = this.cartService.cartCount;
     }
     AppComponent = __decorate([
         core_1.Component({
