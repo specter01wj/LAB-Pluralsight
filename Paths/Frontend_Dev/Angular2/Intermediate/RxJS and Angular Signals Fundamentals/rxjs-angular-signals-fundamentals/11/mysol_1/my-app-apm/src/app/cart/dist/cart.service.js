@@ -21,6 +21,12 @@ var CartService = /** @class */ (function () {
         this.cartItems = core_1.signal([]);
         this.cartCount = core_1.computed(function () { return _this.cartItems()
             .reduce(function (accQty, item) { return accQty + item.quantity; }, 0); });
+        this.subTotal = core_1.computed(function () { return _this.cartItems().reduce(function (accTotal, item) {
+            return accTotal + (item.quantity * item.product.price);
+        }, 0); });
+        this.deliveryFee = core_1.computed(function () { return _this.subTotal() < 50 ? 5.99 : 0; });
+        this.tax = core_1.computed(function () { return Math.round(_this.subTotal() * 10.75) / 100; });
+        this.totalPrice = core_1.computed(function () { return _this.subTotal() + _this.deliveryFee() + _this.tax(); });
         this.eLength = core_1.effect(function () { return console.log('Car array length: ', _this.cartItems().length); });
     }
     CartService.prototype.addToCart = function (product) {
