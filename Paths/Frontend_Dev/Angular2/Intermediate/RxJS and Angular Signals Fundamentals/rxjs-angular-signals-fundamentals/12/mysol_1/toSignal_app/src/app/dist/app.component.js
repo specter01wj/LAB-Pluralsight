@@ -16,11 +16,19 @@ var AppComponent = /** @class */ (function () {
         var _this = this;
         this.title = 'toSignal_app';
         this.o$ = rxjs_1.of(1, 2, 3, 4);
+        this.o1$ = rxjs_1.of(1, 2, 3, 4).pipe(rxjs_1.delay(this.randomDelay()));
         this.s = rxjs_interop_1.toSignal(this.o$, { initialValue: 0 });
+        this.s1 = rxjs_interop_1.toSignal(this.o1$, { initialValue: 0 });
         core_1.effect(function () {
             console.log('Signal value:', _this.s());
         });
+        core_1.effect(function () {
+            console.log('Signal value:', _this.s1());
+        });
     }
+    AppComponent.prototype.randomDelay = function () {
+        return Math.floor(Math.random() * 1000) + 500;
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'app-root',
