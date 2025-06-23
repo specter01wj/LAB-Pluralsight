@@ -44,6 +44,11 @@ var CartService = /** @class */ (function () {
         // this.cartItems().push({ product, quantity: 1});
         this.cartItems.update(function (item) { return __spreadArrays(item, [{ product: product, quantity: 1 }]); });
     };
+    CartService.prototype.removeFromCart = function (cartItem) {
+        this.cartItems.update(function (items) {
+            return items.filter(function (item) { return item.product.id !== cartItem.product.id; });
+        });
+    };
     CartService.prototype.updateQuantity = function (cartItem, quantity) {
         this.cartItems.update(function (items) {
             return items.map(function (item) { return item.product.id === cartItem.product.id ? __assign(__assign({}, item), { quantity: quantity }) : item; });

@@ -32,6 +32,7 @@ var CartItemComponent = /** @class */ (function () {
         this.cartService.updateQuantity(this.cartItem, Number(quantity));
     };
     CartItemComponent.prototype.removeFromCart = function () {
+        this.cartService.removeFromCart(this.cartItem);
     };
     __decorate([
         core_1.Input({ required: true })
