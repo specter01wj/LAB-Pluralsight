@@ -13,11 +13,11 @@ var cart_service_1 = require("../cart.service");
 var CartTotalComponent = /** @class */ (function () {
     function CartTotalComponent() {
         this.cartService = core_1.inject(cart_service_1.CartService);
-        this.cartItems = [];
-        this.subTotal = 100;
-        this.deliveryFee = 20;
-        this.tax = 10;
-        this.totalPrice = this.subTotal + this.deliveryFee + this.tax;
+        this.cartItems = this.cartService.cartItems;
+        this.subTotal = this.cartService.subTotal;
+        this.deliveryFee = this.cartService.deliveryFee;
+        this.tax = this.cartService.tax;
+        this.totalPrice = this.cartService.totalPrice;
     }
     CartTotalComponent = __decorate([
         core_1.Component({
