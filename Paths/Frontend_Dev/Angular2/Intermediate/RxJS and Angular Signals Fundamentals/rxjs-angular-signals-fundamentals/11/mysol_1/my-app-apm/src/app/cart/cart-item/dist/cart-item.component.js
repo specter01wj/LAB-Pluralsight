@@ -20,19 +20,28 @@ var forms_1 = require("@angular/forms");
 var cart_service_1 = require("../cart.service");
 var CartItemComponent = /** @class */ (function () {
     function CartItemComponent() {
-        var _a, _b;
+        var _this = this;
         this.cartService = core_1.inject(cart_service_1.CartService);
+        this.item = core_1.signal(undefined);
         // Quantity available (hard-coded to 8)
         // Mapped to an array from 1-8
         this.qtyArr = __spreadArrays(Array(8).keys()).map(function (x) { return x + 1; });
         // Calculate the extended price
-        this.exPrice = ((_a = this.cartItem) === null || _a === void 0 ? void 0 : _a.quantity) * ((_b = this.cartItem) === null || _b === void 0 ? void 0 : _b.product.price);
+        // exPrice = this.cartItem?.quantity * this.cartItem?.product.price;
+        this.exPrice = core_1.computed(function () { return _this.item().quantity * _this.item().product.price; });
     }
+    Object.defineProperty(CartItemComponent.prototype, "cartItem", {
+        set: function (ci) {
+            this.item.set(ci);
+        },
+        enumerable: false,
+        configurable: true
+    });
     CartItemComponent.prototype.onQuantitySelected = function (quantity) {
-        this.cartService.updateQuantity(this.cartItem, Number(quantity));
+        this.cartService.updateQuantity(this.item(), Number(quantity));
     };
     CartItemComponent.prototype.removeFromCart = function () {
-        this.cartService.removeFromCart(this.cartItem);
+        this.cartService.removeFromCart(this.item());
     };
     __decorate([
         core_1.Input({ required: true })
