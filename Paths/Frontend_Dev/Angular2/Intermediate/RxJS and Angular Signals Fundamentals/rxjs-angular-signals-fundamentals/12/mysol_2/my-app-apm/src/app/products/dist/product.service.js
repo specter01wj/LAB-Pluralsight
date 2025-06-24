@@ -35,7 +35,7 @@ var ProductService = /** @class */ (function () {
         this.productSelected$ = this.productSelectedSubject.asObservable();
         this.products$ = this.http.get(this.productsUrl)
             .pipe(rxjs_1.tap(function (p) { return console.log(JSON.stringify(p)); }), rxjs_1.shareReplay(1), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
-        this.products = rxjs_interop_1.toSignal(this.products$);
+        this.products = rxjs_interop_1.toSignal(this.products$, { initialValue: [] });
         this.product1$ = this.productSelected$
             .pipe(rxjs_1.filter(Boolean), rxjs_1.switchMap(function (id) {
             var productUrl = _this.productsUrl + '/' + id;

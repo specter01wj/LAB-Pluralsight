@@ -27,7 +27,7 @@ export class ProductService {
         catchError(err => this.handleError(err))
       );
 
-  products = toSignal(this.products$);
+  products = toSignal(this.products$, { initialValue: [] as Product[] });
 
   readonly product1$ = this.productSelected$
       .pipe(
