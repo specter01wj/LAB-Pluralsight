@@ -27,7 +27,7 @@ var rxjs_interop_1 = require("@angular/core/rxjs-interop");
 var ProductService = /** @class */ (function () {
     function ProductService() {
         var _this = this;
-        this.productsUrl = 'api/products';
+        this.productsUrl = 'api/productse';
         this.http = core_1.inject(http_1.HttpClient);
         this.errorService = core_1.inject(http_error_service_1.HttpErrorService);
         this.reviewService = core_1.inject(review_service_1.ReviewService);
@@ -36,20 +36,24 @@ var ProductService = /** @class */ (function () {
         this.products$ = this.http.get(this.productsUrl)
             .pipe(rxjs_1.tap(function (p) { return console.log(JSON.stringify(p)); }), rxjs_1.shareReplay(1), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
         this.products = rxjs_interop_1.toSignal(this.products$, { initialValue: [] });
-        this.product1$ = this.productSelected$
+        this.product$ = this.productSelected$
             .pipe(rxjs_1.filter(Boolean), rxjs_1.switchMap(function (id) {
             var productUrl = _this.productsUrl + '/' + id;
             return _this.http.get(productUrl)
                 .pipe(rxjs_1.switchMap(function (product) { return _this.getProductWithReviews(product); }), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
         }));
-        this.product$ = rxjs_1.combineLatest([
-            this.productSelected$,
-            this.products$
-        ]).pipe(rxjs_1.map(function (_a) {
-            var selectedProductId = _a[0], products = _a[1];
-            return products.find(function (product) { return product.id === selectedProductId; });
-        }), rxjs_1.filter(Boolean), rxjs_1.switchMap(function (product) { return _this.getProductWithReviews(product); }), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
     }
+    /* product$ = combineLatest([
+      this.productSelected$,
+      this.products$
+    ]).pipe(
+      map(([selectedProductId, products]) =>
+        products.find(product => product.id === selectedProductId)
+      ),
+      filter(Boolean),
+      switchMap(product => this.getProductWithReviews(product)),
+      catchError(err => this.handleError(err))
+    ); */
     ProductService.prototype.getProductWithReviews = function (product) {
         if (product.hasReviews) {
             return this.http.get(this.reviewService.getReviewUrl(product.id))

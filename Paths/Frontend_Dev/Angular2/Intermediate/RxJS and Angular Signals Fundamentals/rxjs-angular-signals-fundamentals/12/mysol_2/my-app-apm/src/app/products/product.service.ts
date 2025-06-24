@@ -11,7 +11,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
   providedIn: 'root'
 })
 export class ProductService {
-  private productsUrl = 'api/products';
+  private productsUrl = 'api/productse';
 
   private http = inject(HttpClient);
   private errorService = inject(HttpErrorService);
@@ -29,7 +29,7 @@ export class ProductService {
 
   products = toSignal(this.products$, { initialValue: [] as Product[] });
 
-  readonly product1$ = this.productSelected$
+  readonly product$ = this.productSelected$
       .pipe(
         filter(Boolean),
         switchMap( id => {
@@ -42,7 +42,7 @@ export class ProductService {
         })
       );
 
-  product$ = combineLatest([
+  /* product$ = combineLatest([
     this.productSelected$,
     this.products$
   ]).pipe(
@@ -52,7 +52,7 @@ export class ProductService {
     filter(Boolean),
     switchMap(product => this.getProductWithReviews(product)),
     catchError(err => this.handleError(err))
-  );
+  ); */
 
   private getProductWithReviews(product: Product): Observable<Product> {
     if (product.hasReviews) {
