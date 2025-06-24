@@ -1,5 +1,5 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { computed, inject, Injectable } from '@angular/core';
 import { BehaviorSubject, catchError, combineLatest, filter, map, Observable, of, shareReplay, switchMap, tap, throwError } from 'rxjs';
 import { Product } from './product';
 import { HttpErrorService } from '../utilities/http-error.service';
@@ -11,7 +11,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
   providedIn: 'root'
 })
 export class ProductService {
-  private productsUrl = 'api/productse';
+  private productsUrl = 'api/products';
 
   private http = inject(HttpClient);
   private errorService = inject(HttpErrorService);
@@ -27,7 +27,14 @@ export class ProductService {
         catchError(err => this.handleError(err))
       );
 
-  products = toSignal(this.products$, { initialValue: [] as Product[] });
+  // products = toSignal(this.products$, { initialValue: [] as Product[] });
+  products = computed(() => {
+    try {
+      return toSignal(this.products$, { initialValue: [] as Product[] })();
+    } catch (error) {
+      return [] as Product[];
+    }
+  });
 
   readonly product$ = this.productSelected$
       .pipe(
