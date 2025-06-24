@@ -11,20 +11,21 @@ var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
 var product_detail_component_1 = require("../product-detail/product-detail.component");
 var product_service_1 = require("../product.service");
-var rxjs_1 = require("rxjs");
 var ProductListComponent = /** @class */ (function () {
     function ProductListComponent() {
-        var _this = this;
         this.pageTitle = 'Products';
         this.errorMessage = '';
         // sub!: Subscription;
         this.productService = core_1.inject(product_service_1.ProductService);
         // Products
-        this.products$ = this.productService.products$
-            .pipe(rxjs_1.catchError(function (err) {
-            _this.errorMessage = err;
-            return rxjs_1.EMPTY;
-        }));
+        /* readonly products$ = this.productService.products$
+            .pipe(
+              catchError(err => {
+                this.errorMessage = err;
+                return EMPTY;
+              })
+            ); */
+        this.products = this.productService.products;
         // products: Product[] = [];
         // Selected product id to highlight the entry
         // selectedProductId: number = 0;

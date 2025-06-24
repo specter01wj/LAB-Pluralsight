@@ -20,13 +20,15 @@ export class ProductListComponent {
   private productService = inject(ProductService);
 
   // Products
-  readonly products$ = this.productService.products$
+  /* readonly products$ = this.productService.products$
       .pipe(
         catchError(err => {
           this.errorMessage = err;
           return EMPTY;
         })
-      );
+      ); */
+
+  products = this.productService.products;
 
   // products: Product[] = [];
 

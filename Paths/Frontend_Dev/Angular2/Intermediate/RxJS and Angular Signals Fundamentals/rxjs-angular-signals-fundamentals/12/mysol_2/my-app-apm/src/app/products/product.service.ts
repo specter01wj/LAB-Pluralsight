@@ -20,7 +20,7 @@ export class ProductService {
   private productSelectedSubject = new BehaviorSubject<number | undefined>(undefined);
   readonly productSelected$ = this.productSelectedSubject.asObservable();
 
-  readonly products$ = this.http.get<Product[]>(this.productsUrl)
+  private products$ = this.http.get<Product[]>(this.productsUrl)
       .pipe(
         tap(p => console.log(JSON.stringify(p))),
         shareReplay(1),
