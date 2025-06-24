@@ -23,6 +23,7 @@ var core_1 = require("@angular/core");
 var rxjs_1 = require("rxjs");
 var http_error_service_1 = require("../utilities/http-error.service");
 var review_service_1 = require("../reviews/review.service");
+var rxjs_interop_1 = require("@angular/core/rxjs-interop");
 var ProductService = /** @class */ (function () {
     function ProductService() {
         var _this = this;
@@ -34,6 +35,7 @@ var ProductService = /** @class */ (function () {
         this.productSelected$ = this.productSelectedSubject.asObservable();
         this.products$ = this.http.get(this.productsUrl)
             .pipe(rxjs_1.tap(function (p) { return console.log(JSON.stringify(p)); }), rxjs_1.shareReplay(1), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
+        this.products = rxjs_interop_1.toSignal(this.products$);
         this.product1$ = this.productSelected$
             .pipe(rxjs_1.filter(Boolean), rxjs_1.switchMap(function (id) {
             var productUrl = _this.productsUrl + '/' + id;

@@ -5,6 +5,7 @@ import { Product } from './product';
 import { HttpErrorService } from '../utilities/http-error.service';
 import { ReviewService } from '../reviews/review.service';
 import { Review } from '../reviews/review';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +26,8 @@ export class ProductService {
         shareReplay(1),
         catchError(err => this.handleError(err))
       );
+
+  products = toSignal(this.products$);
 
   readonly product1$ = this.productSelected$
       .pipe(
