@@ -14,7 +14,7 @@ var product_service_1 = require("../product.service");
 var ProductListComponent = /** @class */ (function () {
     function ProductListComponent() {
         this.pageTitle = 'Products';
-        this.errorMessage = '';
+        // errorMessage = '';
         // sub!: Subscription;
         this.productService = core_1.inject(product_service_1.ProductService);
         // Products
@@ -26,6 +26,7 @@ var ProductListComponent = /** @class */ (function () {
               })
             ); */
         this.products = this.productService.products;
+        this.errorMessage = this.productService.productsError;
         // products: Product[] = [];
         // Selected product id to highlight the entry
         // selectedProductId: number = 0;

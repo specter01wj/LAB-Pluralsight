@@ -14,7 +14,7 @@ import { catchError, EMPTY, Subscription, tap } from 'rxjs';
 })
 export class ProductListComponent {
   pageTitle = 'Products';
-  errorMessage = '';
+  // errorMessage = '';
   // sub!: Subscription;
 
   private productService = inject(ProductService);
@@ -29,6 +29,7 @@ export class ProductListComponent {
       ); */
 
   products = this.productService.products;
+  errorMessage = this.productService.productsError;
 
   // products: Product[] = [];
 
