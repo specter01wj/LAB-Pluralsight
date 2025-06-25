@@ -27,14 +27,14 @@ export class ProductService {
         catchError(err => this.handleError(err))
       );
 
-  // products = toSignal(this.products$, { initialValue: [] as Product[] });
-  products = computed(() => {
+  products = toSignal(this.products$, { initialValue: [] as Product[] });
+  /* products = computed(() => {
     try {
       return toSignal(this.products$, { initialValue: [] as Product[] })();
     } catch (error) {
       return [] as Product[];
     }
-  });
+  }); */
 
   readonly product$ = this.productSelected$
       .pipe(

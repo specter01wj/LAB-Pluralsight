@@ -35,15 +35,14 @@ var ProductService = /** @class */ (function () {
         this.productSelected$ = this.productSelectedSubject.asObservable();
         this.products$ = this.http.get(this.productsUrl)
             .pipe(rxjs_1.tap(function (p) { return console.log(JSON.stringify(p)); }), rxjs_1.shareReplay(1), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
-        // products = toSignal(this.products$, { initialValue: [] as Product[] });
-        this.products = core_1.computed(function () {
-            try {
-                return rxjs_interop_1.toSignal(_this.products$, { initialValue: [] })();
-            }
-            catch (error) {
-                return [];
-            }
-        });
+        this.products = rxjs_interop_1.toSignal(this.products$, { initialValue: [] });
+        /* products = computed(() => {
+          try {
+            return toSignal(this.products$, { initialValue: [] as Product[] })();
+          } catch (error) {
+            return [] as Product[];
+          }
+        }); */
         this.product$ = this.productSelected$
             .pipe(rxjs_1.filter(Boolean), rxjs_1.switchMap(function (id) {
             var productUrl = _this.productsUrl + '/' + id;
