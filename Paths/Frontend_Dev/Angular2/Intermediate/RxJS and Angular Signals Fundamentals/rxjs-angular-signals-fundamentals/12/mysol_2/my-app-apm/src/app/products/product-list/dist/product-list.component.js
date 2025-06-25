@@ -30,7 +30,8 @@ var ProductListComponent = /** @class */ (function () {
         // products: Product[] = [];
         // Selected product id to highlight the entry
         // selectedProductId: number = 0;
-        this.selectedProductId$ = this.productService.productSelected$;
+        // readonly selectedProductId$ = this.productService.productSelected$;
+        this.selectedProductId = this.productService.selectedProductId;
     }
     ProductListComponent.prototype.onSelected = function (productId) {
         // this.selectedProductId = productId;

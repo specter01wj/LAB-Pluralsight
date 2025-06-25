@@ -78,6 +78,7 @@ var ProductService = /** @class */ (function () {
     };
     ProductService.prototype.productSelected = function (selectedProductId) {
         this.productSelectedSubject.next(selectedProductId);
+        this.selectedProductId.set(selectedProductId);
     };
     ProductService.prototype.handleError = function (err) {
         var formattedMessage = this.errorService.formatError(err);

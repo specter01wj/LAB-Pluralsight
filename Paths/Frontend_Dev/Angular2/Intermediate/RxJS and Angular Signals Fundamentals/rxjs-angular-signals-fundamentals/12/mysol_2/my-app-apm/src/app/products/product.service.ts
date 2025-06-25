@@ -84,6 +84,7 @@ export class ProductService {
 
   productSelected(selectedProductId: number): void {
     this.productSelectedSubject.next(selectedProductId);
+    this.selectedProductId.set(selectedProductId);
   }
 
   private handleError(err: HttpErrorResponse): Observable<never> {
