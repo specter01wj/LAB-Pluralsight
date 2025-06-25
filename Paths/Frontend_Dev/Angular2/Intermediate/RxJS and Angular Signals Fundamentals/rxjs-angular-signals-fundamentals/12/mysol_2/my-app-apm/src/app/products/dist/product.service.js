@@ -31,8 +31,8 @@ var ProductService = /** @class */ (function () {
         this.http = core_1.inject(http_1.HttpClient);
         this.errorService = core_1.inject(http_error_service_1.HttpErrorService);
         this.reviewService = core_1.inject(review_service_1.ReviewService);
-        this.productSelectedSubject = new rxjs_1.BehaviorSubject(undefined);
-        this.productSelected$ = this.productSelectedSubject.asObservable();
+        // private productSelectedSubject = new BehaviorSubject<number | undefined>(undefined);
+        // readonly productSelected$ = this.productSelectedSubject.asObservable();
         this.selectedProductId = core_1.signal(undefined);
         this.productsResult$ = this.http.get(this.productsUrl)
             .pipe(rxjs_1.map(function (p) { return ({ data: p }); }), rxjs_1.tap(function (p) { return console.log(JSON.stringify(p)); }), rxjs_1.shareReplay(1), rxjs_1.catchError(function (err) { return rxjs_1.of({
@@ -49,7 +49,7 @@ var ProductService = /** @class */ (function () {
             return [] as Product[];
           }
         }); */
-        this.product$ = this.productSelected$
+        this.product$ = rxjs_interop_1.toObservable(this.selectedProductId)
             .pipe(rxjs_1.filter(Boolean), rxjs_1.switchMap(function (id) {
             var productUrl = _this.productsUrl + '/' + id;
             return _this.http.get(productUrl)
@@ -77,7 +77,7 @@ var ProductService = /** @class */ (function () {
         }
     };
     ProductService.prototype.productSelected = function (selectedProductId) {
-        this.productSelectedSubject.next(selectedProductId);
+        // this.productSelectedSubject.next(selectedProductId);
         this.selectedProductId.set(selectedProductId);
     };
     ProductService.prototype.handleError = function (err) {
