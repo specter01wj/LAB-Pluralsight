@@ -33,9 +33,12 @@ var ProductService = /** @class */ (function () {
         this.reviewService = core_1.inject(review_service_1.ReviewService);
         this.productSelectedSubject = new rxjs_1.BehaviorSubject(undefined);
         this.productSelected$ = this.productSelectedSubject.asObservable();
-        this.products$ = this.http.get(this.productsUrl)
-            .pipe(rxjs_1.tap(function (p) { return console.log(JSON.stringify(p)); }), rxjs_1.shareReplay(1), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
-        this.products = rxjs_interop_1.toSignal(this.products$, { initialValue: [] });
+        this.productsResult$ = this.http.get(this.productsUrl)
+            .pipe(rxjs_1.map(function (p) { return ({ data: p }); }), rxjs_1.tap(function (p) { return console.log(JSON.stringify(p)); }), rxjs_1.shareReplay(1), rxjs_1.catchError(function (err) { return rxjs_1.of({
+            data: [],
+            error: _this.errorService.formatError(err)
+        }); }));
+        this.products = rxjs_interop_1.toSignal(this.productsResult$, { initialValue: { data: [] } });
         /* products = computed(() => {
           try {
             return toSignal(this.products$, { initialValue: [] as Product[] })();
