@@ -33,6 +33,7 @@ var ProductService = /** @class */ (function () {
         this.reviewService = core_1.inject(review_service_1.ReviewService);
         this.productSelectedSubject = new rxjs_1.BehaviorSubject(undefined);
         this.productSelected$ = this.productSelectedSubject.asObservable();
+        this.selectedProductId = core_1.signal(undefined);
         this.productsResult$ = this.http.get(this.productsUrl)
             .pipe(rxjs_1.map(function (p) { return ({ data: p }); }), rxjs_1.tap(function (p) { return console.log(JSON.stringify(p)); }), rxjs_1.shareReplay(1), rxjs_1.catchError(function (err) { return rxjs_1.of({
             data: [],
