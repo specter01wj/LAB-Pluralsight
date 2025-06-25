@@ -38,7 +38,9 @@ var ProductService = /** @class */ (function () {
             data: [],
             error: _this.errorService.formatError(err)
         }); }));
-        this.products = rxjs_interop_1.toSignal(this.productsResult$, { initialValue: { data: [] } });
+        this.productsResult = rxjs_interop_1.toSignal(this.productsResult$, { initialValue: { data: [] } });
+        this.products = core_1.computed(function () { return _this.productsResult().data; });
+        this.productsError = core_1.computed(function () { return _this.productsResult().error; });
         /* products = computed(() => {
           try {
             return toSignal(this.products$, { initialValue: [] as Product[] })();

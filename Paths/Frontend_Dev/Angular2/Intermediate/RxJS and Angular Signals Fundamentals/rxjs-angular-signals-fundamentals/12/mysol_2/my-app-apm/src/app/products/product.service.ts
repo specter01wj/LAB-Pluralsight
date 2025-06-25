@@ -31,7 +31,11 @@ export class ProductService {
         } as Result<Product[]>))
       );
 
-  products = toSignal(this.productsResult$, { initialValue: ({ data: [] } as Result<Product[]>) });
+  private productsResult = toSignal(this.productsResult$, { initialValue: ({ data: [] } as Result<Product[]>) });
+
+  products = computed(() => this.productsResult().data);
+  productsError = computed(() => this.productsResult().error);
+
   /* products = computed(() => {
     try {
       return toSignal(this.products$, { initialValue: [] as Product[] })();
