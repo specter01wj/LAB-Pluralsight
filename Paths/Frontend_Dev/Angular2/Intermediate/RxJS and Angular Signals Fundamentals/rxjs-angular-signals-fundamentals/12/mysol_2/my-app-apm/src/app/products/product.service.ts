@@ -46,7 +46,7 @@ export class ProductService {
     }
   }); */
 
-  readonly product$ = toObservable(this.selectedProductId)
+  private product$ = toObservable(this.selectedProductId)
       .pipe(
         filter(Boolean),
         switchMap( id => {
