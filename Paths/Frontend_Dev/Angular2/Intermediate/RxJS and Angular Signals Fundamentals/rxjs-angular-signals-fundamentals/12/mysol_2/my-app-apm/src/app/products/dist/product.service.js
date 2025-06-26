@@ -59,6 +59,8 @@ var ProductService = /** @class */ (function () {
             }); }));
         }), rxjs_1.map(function (p) { return ({ data: p }); }));
         this.productResult = rxjs_interop_1.toSignal(this.productResult$);
+        this.product = core_1.computed(function () { var _a; return (_a = _this.productResult()) === null || _a === void 0 ? void 0 : _a.data; });
+        this.productError = core_1.computed(function () { var _a; return (_a = _this.productResult()) === null || _a === void 0 ? void 0 : _a.error; });
     }
     /* product$ = combineLatest([
       this.productSelected$,

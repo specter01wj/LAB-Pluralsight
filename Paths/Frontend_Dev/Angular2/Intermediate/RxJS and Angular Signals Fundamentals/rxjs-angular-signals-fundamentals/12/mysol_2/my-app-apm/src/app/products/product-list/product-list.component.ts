@@ -14,33 +14,15 @@ import { catchError, EMPTY, Subscription, tap } from 'rxjs';
 })
 export class ProductListComponent {
   pageTitle = 'Products';
-  // errorMessage = '';
-  // sub!: Subscription;
 
   private productService = inject(ProductService);
-
-  // Products
-  /* readonly products$ = this.productService.products$
-      .pipe(
-        catchError(err => {
-          this.errorMessage = err;
-          return EMPTY;
-        })
-      ); */
 
   products = this.productService.products;
   errorMessage = this.productService.productsError;
 
-  // products: Product[] = [];
-
-  // Selected product id to highlight the entry
-  // selectedProductId: number = 0;
-
-  // readonly selectedProductId$ = this.productService.productSelected$;
   selectedProductId = this.productService.selectedProductId;
 
   onSelected(productId: number): void {
-    // this.selectedProductId = productId;
     this.productService.productSelected(productId);
   }
 }

@@ -14,27 +14,12 @@ var product_service_1 = require("../product.service");
 var ProductListComponent = /** @class */ (function () {
     function ProductListComponent() {
         this.pageTitle = 'Products';
-        // errorMessage = '';
-        // sub!: Subscription;
         this.productService = core_1.inject(product_service_1.ProductService);
-        // Products
-        /* readonly products$ = this.productService.products$
-            .pipe(
-              catchError(err => {
-                this.errorMessage = err;
-                return EMPTY;
-              })
-            ); */
         this.products = this.productService.products;
         this.errorMessage = this.productService.productsError;
-        // products: Product[] = [];
-        // Selected product id to highlight the entry
-        // selectedProductId: number = 0;
-        // readonly selectedProductId$ = this.productService.productSelected$;
         this.selectedProductId = this.productService.selectedProductId;
     }
     ProductListComponent.prototype.onSelected = function (productId) {
-        // this.selectedProductId = productId;
         this.productService.productSelected(productId);
     };
     ProductListComponent = __decorate([

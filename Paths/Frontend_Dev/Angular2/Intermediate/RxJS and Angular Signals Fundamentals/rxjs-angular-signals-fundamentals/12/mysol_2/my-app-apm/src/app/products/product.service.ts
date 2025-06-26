@@ -64,6 +64,8 @@ export class ProductService {
       );
 
   private productResult = toSignal(this.productResult$);
+  product = computed(() => this.productResult()?.data);
+  productError = computed(() => this.productResult()?.error);
 
   /* product$ = combineLatest([
     this.productSelected$,
