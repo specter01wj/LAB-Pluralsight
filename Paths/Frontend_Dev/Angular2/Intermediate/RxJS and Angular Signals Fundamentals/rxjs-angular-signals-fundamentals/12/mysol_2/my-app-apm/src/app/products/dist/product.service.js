@@ -49,12 +49,16 @@ var ProductService = /** @class */ (function () {
             return [] as Product[];
           }
         }); */
-        this.product$ = rxjs_interop_1.toObservable(this.selectedProductId)
+        this.productResult$ = rxjs_interop_1.toObservable(this.selectedProductId)
             .pipe(rxjs_1.filter(Boolean), rxjs_1.switchMap(function (id) {
             var productUrl = _this.productsUrl + '/' + id;
             return _this.http.get(productUrl)
-                .pipe(rxjs_1.switchMap(function (product) { return _this.getProductWithReviews(product); }), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
+                .pipe(rxjs_1.switchMap(function (product) { return _this.getProductWithReviews(product); }), rxjs_1.catchError(function (err) { return rxjs_1.of({
+                data: undefined,
+                error: _this.errorService.formatError(err)
+            }); }));
         }), rxjs_1.map(function (p) { return ({ data: p }); }));
+        this.productResult = rxjs_interop_1.toSignal(this.productResult$);
     }
     /* product$ = combineLatest([
       this.productSelected$,
