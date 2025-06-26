@@ -56,7 +56,8 @@ export class ProductService {
               switchMap(product => this.getProductWithReviews(product)),
               catchError(err => this.handleError(err))
             );
-        })
+        }),
+        map(p => ({ data: p } as Result<Product>))
       );
 
   /* product$ = combineLatest([

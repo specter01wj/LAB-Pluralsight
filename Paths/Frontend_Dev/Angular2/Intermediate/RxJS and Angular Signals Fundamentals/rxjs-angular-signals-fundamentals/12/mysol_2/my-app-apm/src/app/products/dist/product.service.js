@@ -54,7 +54,7 @@ var ProductService = /** @class */ (function () {
             var productUrl = _this.productsUrl + '/' + id;
             return _this.http.get(productUrl)
                 .pipe(rxjs_1.switchMap(function (product) { return _this.getProductWithReviews(product); }), rxjs_1.catchError(function (err) { return _this.handleError(err); }));
-        }));
+        }), rxjs_1.map(function (p) { return ({ data: p }); }));
     }
     /* product$ = combineLatest([
       this.productSelected$,
