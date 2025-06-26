@@ -56,13 +56,13 @@
 </div>
 
 <div class="card"
-     *ngIf="errorMessage">
+     *ngIf="errorMessage()">
   <div class="card-header">
     Product Detail
   </div>
 </div>
   <div class="alert alert-danger"
-     *ngIf="errorMessage">
+     *ngIf="errorMessage()">
     {{errorMessage()}}
 
 </div>
