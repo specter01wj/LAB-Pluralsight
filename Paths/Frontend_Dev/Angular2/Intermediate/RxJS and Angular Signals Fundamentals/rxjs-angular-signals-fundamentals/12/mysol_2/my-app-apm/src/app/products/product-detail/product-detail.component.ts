@@ -14,25 +14,14 @@ import { CartService } from '../../cart/cart.service';
 })
 export class ProductDetailComponent {
 
-  // errorMessage = '';
-
   private productService = inject(ProductService);
   private cartService = inject(CartService);
 
   // Product to display
   product = this.productService.product;
   errorMessage = this.productService.productError;
-  /* product$ = this.productService.product$
-    .pipe(
-      catchError(err => {
-        this.errorMessage = err;
-        return EMPTY;
-      })
-    ); */
 
   // Set the page title
-  // pageTitle = this.product ? `Product Detail for: ${this.product.productName}` : 'Product Detail';
-  // pageTitle = 'ProductDetail';
   pageTitle = computed(() =>
     this.product()
       ? `Product Detail for: ${this.product()?.productName}`

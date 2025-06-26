@@ -17,9 +17,6 @@ export class ProductService {
   private errorService = inject(HttpErrorService);
   private reviewService = inject(ReviewService);
 
-  // private productSelectedSubject = new BehaviorSubject<number | undefined>(undefined);
-  // readonly productSelected$ = this.productSelectedSubject.asObservable();
-
   selectedProductId = signal<number | undefined>(undefined);
 
   private productsResult$ = this.http.get<Product[]>(this.productsUrl)
@@ -37,14 +34,6 @@ export class ProductService {
 
   products = computed(() => this.productsResult().data);
   productsError = computed(() => this.productsResult().error);
-
-  /* products = computed(() => {
-    try {
-      return toSignal(this.products$, { initialValue: [] as Product[] })();
-    } catch (error) {
-      return [] as Product[];
-    }
-  }); */
 
   private productResult$ = toObservable(this.selectedProductId)
       .pipe(
@@ -67,18 +56,6 @@ export class ProductService {
   product = computed(() => this.productResult()?.data);
   productError = computed(() => this.productResult()?.error);
 
-  /* product$ = combineLatest([
-    this.productSelected$,
-    this.products$
-  ]).pipe(
-    map(([selectedProductId, products]) =>
-      products.find(product => product.id === selectedProductId)
-    ),
-    filter(Boolean),
-    switchMap(product => this.getProductWithReviews(product)),
-    catchError(err => this.handleError(err))
-  ); */
-
   private getProductWithReviews(product: Product): Observable<Product> {
     if (product.hasReviews) {
       return this.http.get<Review[]>(this.reviewService.getReviewUrl(product.id))
@@ -91,14 +68,12 @@ export class ProductService {
   }
 
   productSelected(selectedProductId: number): void {
-    // this.productSelectedSubject.next(selectedProductId);
     this.selectedProductId.set(selectedProductId);
   }
 
   private handleError(err: HttpErrorResponse): Observable<never> {
     const formattedMessage = this.errorService.formatError(err);
     return throwError(() => formattedMessage);
-    // throw formattedMessage;
   }
 
 }

@@ -13,23 +13,13 @@ var product_service_1 = require("../product.service");
 var cart_service_1 = require("../../cart/cart.service");
 var ProductDetailComponent = /** @class */ (function () {
     function ProductDetailComponent() {
-        // errorMessage = '';
         var _this = this;
         this.productService = core_1.inject(product_service_1.ProductService);
         this.cartService = core_1.inject(cart_service_1.CartService);
         // Product to display
         this.product = this.productService.product;
         this.errorMessage = this.productService.productError;
-        /* product$ = this.productService.product$
-          .pipe(
-            catchError(err => {
-              this.errorMessage = err;
-              return EMPTY;
-            })
-          ); */
         // Set the page title
-        // pageTitle = this.product ? `Product Detail for: ${this.product.productName}` : 'Product Detail';
-        // pageTitle = 'ProductDetail';
         this.pageTitle = core_1.computed(function () {
             var _a;
             return _this.product()

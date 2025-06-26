@@ -31,8 +31,6 @@ var ProductService = /** @class */ (function () {
         this.http = core_1.inject(http_1.HttpClient);
         this.errorService = core_1.inject(http_error_service_1.HttpErrorService);
         this.reviewService = core_1.inject(review_service_1.ReviewService);
-        // private productSelectedSubject = new BehaviorSubject<number | undefined>(undefined);
-        // readonly productSelected$ = this.productSelectedSubject.asObservable();
         this.selectedProductId = core_1.signal(undefined);
         this.productsResult$ = this.http.get(this.productsUrl)
             .pipe(rxjs_1.map(function (p) { return ({ data: p }); }), rxjs_1.tap(function (p) { return console.log(JSON.stringify(p)); }), rxjs_1.shareReplay(1), rxjs_1.catchError(function (err) { return rxjs_1.of({
@@ -42,13 +40,6 @@ var ProductService = /** @class */ (function () {
         this.productsResult = rxjs_interop_1.toSignal(this.productsResult$, { initialValue: { data: [] } });
         this.products = core_1.computed(function () { return _this.productsResult().data; });
         this.productsError = core_1.computed(function () { return _this.productsResult().error; });
-        /* products = computed(() => {
-          try {
-            return toSignal(this.products$, { initialValue: [] as Product[] })();
-          } catch (error) {
-            return [] as Product[];
-          }
-        }); */
         this.productResult$ = rxjs_interop_1.toObservable(this.selectedProductId)
             .pipe(rxjs_1.filter(Boolean), rxjs_1.switchMap(function (id) {
             var productUrl = _this.productsUrl + '/' + id;
@@ -62,17 +53,6 @@ var ProductService = /** @class */ (function () {
         this.product = core_1.computed(function () { var _a; return (_a = _this.productResult()) === null || _a === void 0 ? void 0 : _a.data; });
         this.productError = core_1.computed(function () { var _a; return (_a = _this.productResult()) === null || _a === void 0 ? void 0 : _a.error; });
     }
-    /* product$ = combineLatest([
-      this.productSelected$,
-      this.products$
-    ]).pipe(
-      map(([selectedProductId, products]) =>
-        products.find(product => product.id === selectedProductId)
-      ),
-      filter(Boolean),
-      switchMap(product => this.getProductWithReviews(product)),
-      catchError(err => this.handleError(err))
-    ); */
     ProductService.prototype.getProductWithReviews = function (product) {
         if (product.hasReviews) {
             return this.http.get(this.reviewService.getReviewUrl(product.id))
@@ -83,13 +63,11 @@ var ProductService = /** @class */ (function () {
         }
     };
     ProductService.prototype.productSelected = function (selectedProductId) {
-        // this.productSelectedSubject.next(selectedProductId);
         this.selectedProductId.set(selectedProductId);
     };
     ProductService.prototype.handleError = function (err) {
         var formattedMessage = this.errorService.formatError(err);
         return rxjs_1.throwError(function () { return formattedMessage; });
-        // throw formattedMessage;
     };
     ProductService = __decorate([
         core_1.Injectable({
