@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 
 import { NgIf, NgFor, CurrencyPipe, AsyncPipe } from '@angular/common';
 import { Product } from '../product';
@@ -32,7 +32,11 @@ export class ProductDetailComponent {
 
   // Set the page title
   // pageTitle = this.product ? `Product Detail for: ${this.product.productName}` : 'Product Detail';
-  pageTitle = 'ProductDetail';
+  // pageTitle = 'ProductDetail';
+  pageTitle = computed(() =>
+    this.product()
+      ? `Product Detail for: ${this.product()?.productName}`
+      : 'Product Detail')
 
   addToCart(product: Product) {
     this.cartService.addToCart(product);

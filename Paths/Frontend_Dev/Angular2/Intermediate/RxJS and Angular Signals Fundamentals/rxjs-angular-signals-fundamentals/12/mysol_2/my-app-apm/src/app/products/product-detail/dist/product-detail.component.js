@@ -14,6 +14,7 @@ var cart_service_1 = require("../../cart/cart.service");
 var ProductDetailComponent = /** @class */ (function () {
     function ProductDetailComponent() {
         // errorMessage = '';
+        var _this = this;
         this.productService = core_1.inject(product_service_1.ProductService);
         this.cartService = core_1.inject(cart_service_1.CartService);
         // Product to display
@@ -28,7 +29,13 @@ var ProductDetailComponent = /** @class */ (function () {
           ); */
         // Set the page title
         // pageTitle = this.product ? `Product Detail for: ${this.product.productName}` : 'Product Detail';
-        this.pageTitle = 'ProductDetail';
+        // pageTitle = 'ProductDetail';
+        this.pageTitle = core_1.computed(function () {
+            var _a;
+            return _this.product()
+                ? "Product Detail for: " + ((_a = _this.product()) === null || _a === void 0 ? void 0 : _a.productName)
+                : 'Product Detail';
+        });
     }
     ProductDetailComponent.prototype.addToCart = function (product) {
         this.cartService.addToCart(product);
