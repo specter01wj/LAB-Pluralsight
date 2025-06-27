@@ -3,9 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  standalone: false,
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  title = 'my-robot-shop';
-}
+export class AppComponent {}

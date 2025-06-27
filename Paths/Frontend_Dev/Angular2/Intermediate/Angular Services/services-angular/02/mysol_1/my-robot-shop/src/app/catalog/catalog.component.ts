@@ -1,23 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Product } from './product.model';
-import { ProductsService } from './products.service';
-import { CartService } from '@core/cart.service';
+import { productsArray } from './products-data';
 
 @Component({
   selector: 'bot-catalog',
   templateUrl: './catalog.component.html',
   styleUrls: ['./catalog.component.css'],
 })
-export class CatalogComponent implements OnInit {
-  products: Product[] = [];
+export class CatalogComponent {
+  products: Product[] = productsArray;
+  private cart: Product[] = [];
 
-  constructor(private productsService: ProductsService, private cartService: CartService) { }
-
-  ngOnInit() {
-    this.products = this.productsService.getProducts();
-  }
+  constructor() { }
 
   addToCart(product: Product) {
-    this.cartService.add(product);
+    this.cart.push(product);
   }
 }
