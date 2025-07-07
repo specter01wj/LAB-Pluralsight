@@ -16,7 +16,7 @@ var CatalogComponent = /** @class */ (function () {
     }
     CatalogComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.products = this.productsService.getProducts();
+        this.productsService.getProducts().subscribe(function (products) { return _this.products = products; });
         setTimeout(function () {
             return _this.productsService.refreshProducts();
         }, 3000);
