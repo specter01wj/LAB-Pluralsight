@@ -8,12 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.ProductsService = void 0;
 var core_1 = require("@angular/core");
-var products_data_1 = require("./products-data");
 var ProductsService = /** @class */ (function () {
     function ProductsService() {
+        this.products = [];
     }
     ProductsService.prototype.getProducts = function () {
-        return products_data_1.productsArray;
+        return this.products;
     };
     ProductsService = __decorate([
         core_1.Injectable({

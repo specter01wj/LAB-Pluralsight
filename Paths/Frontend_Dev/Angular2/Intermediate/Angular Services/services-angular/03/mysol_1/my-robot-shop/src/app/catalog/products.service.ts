@@ -6,11 +6,12 @@ import { productsArray } from './products-data';
   providedIn: 'root'
 })
 export class ProductsService {
+  private products: Product[] = [];
 
   constructor() { }
 
   getProducts(): Product[] {
-    return productsArray;
+    return this.products;
   }
 
 }
