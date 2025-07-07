@@ -15,7 +15,11 @@ var CatalogComponent = /** @class */ (function () {
         this.products = [];
     }
     CatalogComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.products = this.productsService.getProducts();
+        setTimeout(function () {
+            return _this.productsService.refreshProducts();
+        }, 3000);
     };
     CatalogComponent.prototype.addToCart = function (product) {
         this.cartService.add(product);
