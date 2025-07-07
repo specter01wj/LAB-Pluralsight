@@ -14,4 +14,8 @@ export class ProductsService {
     return this.products;
   }
 
+  refreshProducts() {
+    this.products = productsArray;
+  }
+
 }
