@@ -19,7 +19,7 @@ var CatalogComponent = /** @class */ (function () {
         this.productsService.getProducts().subscribe(function (products) { return _this.products = products; });
         setTimeout(function () {
             return _this.productsService.refreshProducts();
-        }, 3000);
+        }, 1000);
     };
     CatalogComponent.prototype.addToCart = function (product) {
         this.cartService.add(product);

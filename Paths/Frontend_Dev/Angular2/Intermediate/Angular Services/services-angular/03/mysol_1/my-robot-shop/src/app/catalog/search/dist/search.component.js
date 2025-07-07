@@ -16,7 +16,11 @@ var SearchComponent = /** @class */ (function () {
         this.searchTerm = '';
     }
     SearchComponent.prototype.ngOnInit = function () {
-        this.products = this.productsService.getProducts();
+        var _this = this;
+        this.productsService.getProducts().subscribe(function (products) { return _this.products = products; });
+        setTimeout(function () {
+            return _this.productsService.refreshProducts();
+        }, 1000);
     };
     SearchComponent.prototype.addToCart = function (product) {
         this.cartService.add(product);

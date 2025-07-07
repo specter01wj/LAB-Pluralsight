@@ -21,7 +21,7 @@ export class CatalogComponent implements OnInit {
       (products) => this.products = products
     );
     setTimeout(() =>
-      this.productsService.refreshProducts(), 3000
+      this.productsService.refreshProducts(), 1000
     );
   }
 
