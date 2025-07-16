@@ -18,15 +18,22 @@ var core_1 = require("@angular/core");
 var CartService = /** @class */ (function () {
     function CartService() {
         // cart: Product[] = [];
-        this.cart = core_1.signal([]);
+        this.cartItems = core_1.signal([]);
     }
+    Object.defineProperty(CartService.prototype, "cart", {
+        get: function () {
+            return this.cartItems.asReadonly();
+        },
+        enumerable: false,
+        configurable: true
+    });
     CartService.prototype.add = function (product) {
         // this.cart.push(product);
-        this.cart.update(function (oldCart) { return __spreadArrays(oldCart, [product]); });
+        this.cartItems.update(function (oldCart) { return __spreadArrays(oldCart, [product]); });
     };
     CartService.prototype.remove = function (product) {
         // this.cart = this.cart.filter(p => p !== product);
-        this.cart.update(function (oldCart) { return oldCart.filter(function (p) { return p !== product; }); });
+        this.cartItems.update(function (oldCart) { return oldCart.filter(function (p) { return p !== product; }); });
     };
     Object.defineProperty(CartService.prototype, "cartTotal", {
         get: function () {
@@ -35,7 +42,7 @@ var CartService = /** @class */ (function () {
               let discount = next.discount && next.discount > 0 ? 1 - next.discount : 1;
               return prev + next.price * discount;
             }, 0); */
-            return core_1.computed(function () { return _this.cart().reduce(function (prev, next) {
+            return core_1.computed(function () { return _this.cartItems().reduce(function (prev, next) {
                 var discount = next.discount && next.discount > 0 ? 1 - next.discount : 1;
                 return prev + next.price * discount;
             }, 0); });
