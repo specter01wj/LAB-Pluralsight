@@ -15,14 +15,14 @@ var CartComponent = /** @class */ (function () {
     CartComponent.prototype.ngOnInit = function () { };
     Object.defineProperty(CartComponent.prototype, "cartItems", {
         get: function () {
-            return this.cartService.cart;
+            return this.cartService.cart();
         },
         enumerable: false,
         configurable: true
     });
     Object.defineProperty(CartComponent.prototype, "cartTotal", {
         get: function () {
-            return this.cartService.cartTotal;
+            return this.cartService.cartTotal();
         },
         enumerable: false,
         configurable: true
