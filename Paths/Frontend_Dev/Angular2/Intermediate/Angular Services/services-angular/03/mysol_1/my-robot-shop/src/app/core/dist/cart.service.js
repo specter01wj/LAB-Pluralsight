@@ -10,7 +10,8 @@ exports.CartService = void 0;
 var core_1 = require("@angular/core");
 var CartService = /** @class */ (function () {
     function CartService() {
-        this.cart = [];
+        // cart: Product[] = [];
+        this.cart = core_1.signal([]);
     }
     CartService.prototype.add = function (product) {
         this.cart.push(product);
