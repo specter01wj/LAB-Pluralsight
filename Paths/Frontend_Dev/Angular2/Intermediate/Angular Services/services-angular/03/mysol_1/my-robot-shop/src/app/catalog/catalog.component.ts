@@ -20,9 +20,9 @@ export class CatalogComponent implements OnInit {
     this.productsService.getProducts().subscribe(
       (products) => this.products = products
     );
-    setTimeout(() =>
+    /* setTimeout(() =>
       this.productsService.refreshProducts(), 1000
-    );
+    ); */
   }
 
   addToCart(product: Product) {

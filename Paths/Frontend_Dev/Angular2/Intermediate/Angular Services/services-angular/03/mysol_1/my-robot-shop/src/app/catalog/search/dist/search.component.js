@@ -18,9 +18,9 @@ var SearchComponent = /** @class */ (function () {
     SearchComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.productsService.getProducts().subscribe(function (products) { return _this.products = products; });
-        setTimeout(function () {
-            return _this.productsService.refreshProducts();
-        }, 1000);
+        /* setTimeout(() =>
+          this.productsService.refreshProducts(), 1000
+        ); */
     };
     SearchComponent.prototype.addToCart = function (product) {
         this.cartService.add(product);

@@ -15,8 +15,8 @@ export class ProductsService {
     return this.products;
   }
 
-  refreshProducts() {
+  /* refreshProducts() {
     this.products.next(productsArray);
-  }
+  } */
 
 }
