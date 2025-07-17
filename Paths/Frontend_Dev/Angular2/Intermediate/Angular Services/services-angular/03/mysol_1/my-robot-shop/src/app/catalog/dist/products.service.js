@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.ProductsService = void 0;
 var core_1 = require("@angular/core");
+// import { productsArray } from './products-data';
 var rxjs_1 = require("rxjs");
 var ProductsService = /** @class */ (function () {
     function ProductsService() {
