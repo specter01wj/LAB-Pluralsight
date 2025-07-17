@@ -8,14 +8,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.ProductsService = void 0;
 var core_1 = require("@angular/core");
-// import { productsArray } from './products-data';
-var rxjs_1 = require("rxjs");
 var ProductsService = /** @class */ (function () {
-    function ProductsService() {
-        this.products = new rxjs_1.Subject();
+    // private products: Subject<Product[]> = new Subject();
+    function ProductsService(httpClient) {
+        this.httpClient = httpClient;
     }
     ProductsService.prototype.getProducts = function () {
-        return this.products;
+        // return this.products;
+        return this.httpClient.get('/api/products');
     };
     ProductsService = __decorate([
         core_1.Injectable({
