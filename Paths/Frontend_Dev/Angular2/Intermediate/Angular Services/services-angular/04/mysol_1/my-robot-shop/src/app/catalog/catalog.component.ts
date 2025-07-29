@@ -10,7 +10,6 @@ import { Observable } from 'rxjs';
   styleUrls: ['./catalog.component.css'],
 })
 export class CatalogComponent implements OnInit {
-  // products: Product[] = [];
   products: Observable<Product[]> = this.productsService.getProducts();
 
   constructor(
@@ -19,12 +18,6 @@ export class CatalogComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    /* this.productsService.getProducts().subscribe(
-      (products) => this.products = products
-    ); */
-    /* setTimeout(() =>
-      this.productsService.refreshProducts(), 1000
-    ); */
   }
 
   addToCart(product: Product) {
