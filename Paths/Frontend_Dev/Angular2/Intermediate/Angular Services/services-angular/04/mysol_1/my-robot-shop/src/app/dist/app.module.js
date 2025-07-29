@@ -15,6 +15,7 @@ var site_header_component_1 = require("@core/site-header/site-header.component")
 var app_routing_module_1 = require("./app-routing.module");
 var catalog_module_1 = require("@catalog/catalog.module");
 var http_1 = require("@angular/common/http");
+var cart_service_1 = require("@core/cart.service");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -31,7 +32,12 @@ var AppModule = /** @class */ (function () {
                 catalog_module_1.CatalogModule,
                 http_1.HttpClientModule
             ],
-            providers: [],
+            providers: [
+                {
+                    provide: cart_service_1.CART_SERVICE_TOKEN,
+                    useClass: cart_service_1.CartService
+                }
+            ],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);
