@@ -17,7 +17,6 @@ exports.CartService = void 0;
 var core_1 = require("@angular/core");
 var CartService = /** @class */ (function () {
     function CartService() {
-        // cart: Product[] = [];
         this.cartItems = core_1.signal([]);
     }
     Object.defineProperty(CartService.prototype, "cart", {
@@ -28,20 +27,14 @@ var CartService = /** @class */ (function () {
         configurable: true
     });
     CartService.prototype.add = function (product) {
-        // this.cart.push(product);
         this.cartItems.update(function (oldCart) { return __spreadArrays(oldCart, [product]); });
     };
     CartService.prototype.remove = function (product) {
-        // this.cart = this.cart.filter(p => p !== product);
         this.cartItems.update(function (oldCart) { return oldCart.filter(function (p) { return p !== product; }); });
     };
     Object.defineProperty(CartService.prototype, "cartTotal", {
         get: function () {
             var _this = this;
-            /* return this.cart.reduce((prev, next) => {
-              let discount = next.discount && next.discount > 0 ? 1 - next.discount : 1;
-              return prev + next.price * discount;
-            }, 0); */
             return core_1.computed(function () { return _this.cartItems().reduce(function (prev, next) {
                 var discount = next.discount && next.discount > 0 ? 1 - next.discount : 1;
                 return prev + next.price * discount;
