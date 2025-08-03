@@ -36,7 +36,10 @@ var AppModule = /** @class */ (function () {
                 // CartService
                 {
                     provide: cart_service_1.CartService,
-                    useClass: cart_service_1.CartService
+                    // useClass: CartService,
+                    useFactory: function () {
+                        return new cart_service_1.CartService();
+                    }
                 }
             ],
             bootstrap: [app_component_1.AppComponent]
