@@ -13,9 +13,8 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
     return r;
 };
 exports.__esModule = true;
-exports.CartService = exports.CART_SERVICE_TOKEN = void 0;
+exports.CartService = void 0;
 var core_1 = require("@angular/core");
-exports.CART_SERVICE_TOKEN = new core_1.InjectionToken("CartService");
 var CartService = /** @class */ (function () {
     function CartService() {
         this.cartItems = core_1.signal([]);
