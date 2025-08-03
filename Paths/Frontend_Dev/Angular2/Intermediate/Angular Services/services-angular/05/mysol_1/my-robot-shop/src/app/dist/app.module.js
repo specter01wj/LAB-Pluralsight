@@ -33,6 +33,7 @@ var AppModule = /** @class */ (function () {
                 http_1.HttpClientModule
             ],
             providers: [
+                // CartService
                 {
                     provide: cart_service_1.CartService,
                     useClass: cart_service_1.CartService

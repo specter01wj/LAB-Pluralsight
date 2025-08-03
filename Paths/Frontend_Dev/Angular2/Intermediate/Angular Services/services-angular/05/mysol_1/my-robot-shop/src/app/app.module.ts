@@ -22,6 +22,7 @@ import { CartService } from '@core/cart.service';
     HttpClientModule
   ],
   providers: [
+    // CartService
     {
       provide: CartService,
       useClass: CartService,
