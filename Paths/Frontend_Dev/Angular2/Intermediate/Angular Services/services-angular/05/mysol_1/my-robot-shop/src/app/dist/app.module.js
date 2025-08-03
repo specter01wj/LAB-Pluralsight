@@ -34,7 +34,7 @@ var AppModule = /** @class */ (function () {
             ],
             providers: [
                 {
-                    provide: cart_service_1.CART_SERVICE_TOKEN,
+                    provide: cart_service_1.CartService,
                     useClass: cart_service_1.CartService
                 }
             ],
