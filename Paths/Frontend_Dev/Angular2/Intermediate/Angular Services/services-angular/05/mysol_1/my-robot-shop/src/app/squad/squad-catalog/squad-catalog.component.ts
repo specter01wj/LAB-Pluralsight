@@ -3,6 +3,7 @@ import { Product } from '@shared/product.model';
 import { engineers } from './engineers';
 import { CartService } from '@core/cart.service';
 import { IProductsService, IProductsServiceToken } from '@shared/products-service.interface';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'bot-catalog',
@@ -11,7 +12,7 @@ import { IProductsService, IProductsServiceToken } from '@shared/products-servic
   providers: []
 })
 export class SquadCatalogComponent {
-  squad: Product[] = engineers;
+  squad: Observable<Product[]> = this.engineersService.getProducts();
   // private cart: Product[] = [];
 
   constructor(

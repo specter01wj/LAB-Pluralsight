@@ -11,14 +11,13 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 exports.__esModule = true;
 exports.SquadCatalogComponent = void 0;
 var core_1 = require("@angular/core");
-var engineers_1 = require("./engineers");
 var products_service_interface_1 = require("@shared/products-service.interface");
 var SquadCatalogComponent = /** @class */ (function () {
     // private cart: Product[] = [];
     function SquadCatalogComponent(cartService, engineersService) {
         this.cartService = cartService;
         this.engineersService = engineersService;
-        this.squad = engineers_1.engineers;
+        this.squad = this.engineersService.getProducts();
     }
     SquadCatalogComponent.prototype.addToCart = function (engineer) {
         this.cartService.add(engineer);
