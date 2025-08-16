@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Product } from '@shared/product.model';
 import { engineers } from './engineers';
 import { CartService } from '@core/cart.service';
+import { IProductsService, IProductsServiceToken } from '@shared/products-service.interface';
 
 @Component({
   selector: 'bot-catalog',
@@ -13,7 +14,10 @@ export class SquadCatalogComponent {
   squad: Product[] = engineers;
   // private cart: Product[] = [];
 
-  constructor(private cartService: CartService) { }
+  constructor(
+    private cartService: CartService,
+    @Inject(IProductsServiceToken) private engineersService: IProductsService
+  ) { }
 
   addToCart(engineer: Product) {
     this.cartService.add(engineer);
