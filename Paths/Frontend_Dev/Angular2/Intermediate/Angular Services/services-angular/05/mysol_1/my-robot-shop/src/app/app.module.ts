@@ -23,13 +23,13 @@ import { CartService } from '@core/cart.service';
   ],
   providers: [
     // CartService
-    {
-      provide: CartService,
-      // useClass: CartService,
-      useFactory: () => {
-        return new CartService();
-      },
-    }
+    // {
+    //   provide: CartService,
+    //   // useClass: CartService,
+    //   useFactory: () => {
+    //     return new CartService();
+    //   },
+    // }
   ],
   bootstrap: [AppComponent],
 })
