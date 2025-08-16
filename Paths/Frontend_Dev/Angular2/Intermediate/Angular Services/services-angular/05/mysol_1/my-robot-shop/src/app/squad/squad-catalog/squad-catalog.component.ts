@@ -11,7 +11,7 @@ import { CartService } from '@core/cart.service';
 })
 export class SquadCatalogComponent {
   squad: Product[] = engineers;
-  private cart: Product[] = [];
+  // private cart: Product[] = [];
 
   constructor(private cartService: CartService) { }
 

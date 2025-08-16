@@ -10,10 +10,10 @@ exports.SquadCatalogComponent = void 0;
 var core_1 = require("@angular/core");
 var engineers_1 = require("./engineers");
 var SquadCatalogComponent = /** @class */ (function () {
+    // private cart: Product[] = [];
     function SquadCatalogComponent(cartService) {
         this.cartService = cartService;
         this.squad = engineers_1.engineers;
-        this.cart = [];
     }
     SquadCatalogComponent.prototype.addToCart = function (engineer) {
         this.cartService.add(engineer);
