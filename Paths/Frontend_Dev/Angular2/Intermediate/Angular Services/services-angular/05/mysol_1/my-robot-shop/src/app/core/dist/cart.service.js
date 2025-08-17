@@ -5,6 +5,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 var __spreadArrays = (this && this.__spreadArrays) || function () {
     for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
     for (var r = Array(s), k = 0, i = 0; i < il; i++)
@@ -13,15 +16,17 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
     return r;
 };
 exports.__esModule = true;
-exports.CartService = void 0;
+exports.CartService = exports.CART_OPTIONS_TOKEN = void 0;
 var core_1 = require("@angular/core");
+exports.CART_OPTIONS_TOKEN = new core_1.InjectionToken("CART_OPTIONS");
 var CartService = /** @class */ (function () {
-    function CartService() {
+    // private cartOptions: CartOptions = {
+    //   persistenceType: 'local',
+    //   persistenceKey: 'cart',
+    // };
+    function CartService(cartOptions) {
+        this.cartOptions = cartOptions;
         this.cartItems = core_1.signal([]);
-        this.cartOptions = {
-            persistenceType: 'local',
-            persistenceKey: 'cart'
-        };
         if (this.cartOptions && this.cartOptions.persistenceType === 'local') {
             var cartString = localStorage.getItem(this.cartOptions.persistenceKey);
             var cart = cartString ? JSON.parse(cartString) : [];
@@ -62,7 +67,8 @@ var CartService = /** @class */ (function () {
     CartService = __decorate([
         core_1.Injectable({
             providedIn: 'root'
-        })
+        }),
+        __param(0, core_1.Inject(exports.CART_OPTIONS_TOKEN))
     ], CartService);
     return CartService;
 }());
