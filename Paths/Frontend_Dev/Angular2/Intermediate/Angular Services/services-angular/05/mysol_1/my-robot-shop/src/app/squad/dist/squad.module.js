@@ -27,6 +27,11 @@ var SquadModule = /** @class */ (function () {
                     useValue: { persistenceType: 'local', persistenceKey: 'squad-cart' },
                     multi: true
                 },
+                {
+                    provide: cart_service_1.CART_OPTIONS_TOKEN,
+                    useValue: { persistenceType: 'none', persistenceKey: 'squad-cart' },
+                    multi: true
+                },
                 // CartService,
                 {
                     provide: cart_service_1.CartService,
