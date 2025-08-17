@@ -1,6 +1,11 @@
 import { computed, Injectable, InjectionToken, signal } from '@angular/core';
 import { Product } from "@shared/product.model";
 
+export type CartOptions = {
+  persistenceType: string,
+  persistenceKey: string,
+};
+
 @Injectable({
   providedIn: 'root'
 })
