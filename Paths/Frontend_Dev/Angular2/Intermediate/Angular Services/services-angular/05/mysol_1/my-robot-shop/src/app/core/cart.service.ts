@@ -16,6 +16,14 @@ export class CartService {
     persistenceKey: 'cart',
   };
 
+  constructor() {
+    if (this.cartOptions && this.cartOptions.persistenceType === 'local') {
+      const cartString = localStorage.getItem(this.cartOptions.persistenceKey);
+      const cart: Product[] = cartString ? JSON.parse(cartString) as Product[] : [];
+      this.cartItems.set(cart);
+    }
+  }
+
   get cart() {
     return this.cartItems.asReadonly();
   }
@@ -26,6 +34,12 @@ export class CartService {
 
   remove(product: Product) {
     this.cartItems.update((oldCart) => oldCart.filter(p => p !== product));
+  }
+
+  private storeCart() {
+    if (this.cartOptions && this.cartOptions.persistenceType === 'local') {
+      localStorage.setItem(this.cartOptions.persistenceKey, JSON.stringify(this.cartItems()));
+    }
   }
 
   get cartTotal() {

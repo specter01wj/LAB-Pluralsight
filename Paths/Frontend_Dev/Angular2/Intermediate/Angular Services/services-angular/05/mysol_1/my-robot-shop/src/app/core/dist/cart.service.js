@@ -22,6 +22,11 @@ var CartService = /** @class */ (function () {
             persistenceType: 'local',
             persistenceKey: 'cart'
         };
+        if (this.cartOptions && this.cartOptions.persistenceType === 'local') {
+            var cartString = localStorage.getItem(this.cartOptions.persistenceKey);
+            var cart = cartString ? JSON.parse(cartString) : [];
+            this.cartItems.set(cart);
+        }
     }
     Object.defineProperty(CartService.prototype, "cart", {
         get: function () {
@@ -35,6 +40,11 @@ var CartService = /** @class */ (function () {
     };
     CartService.prototype.remove = function (product) {
         this.cartItems.update(function (oldCart) { return oldCart.filter(function (p) { return p !== product; }); });
+    };
+    CartService.prototype.storeCart = function () {
+        if (this.cartOptions && this.cartOptions.persistenceType === 'local') {
+            localStorage.setItem(this.cartOptions.persistenceKey, JSON.stringify(this.cartItems()));
+        }
     };
     Object.defineProperty(CartService.prototype, "cartTotal", {
         get: function () {
