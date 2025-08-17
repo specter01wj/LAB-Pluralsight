@@ -22,6 +22,16 @@ var SquadModule = /** @class */ (function () {
             declarations: [squad_catalog_component_1.SquadCatalogComponent],
             imports: [shared_module_1.SharedModule, squad_routing_module_1.SquadRoutingModule],
             providers: [
+                {
+                    provide: cart_service_1.CART_OPTIONS_TOKEN,
+                    useValue: { persistenceType: 'local', persistenceKey: 'squad-cart' },
+                    multi: true
+                },
+                {
+                    provide: cart_service_1.CART_OPTIONS_TOKEN,
+                    useValue: { persistenceType: 'none', persistenceKey: 'squad-cart' },
+                    multi: true
+                },
                 cart_service_1.CartService,
                 {
                     provide: products_service_interface_1.IProductsServiceToken,
