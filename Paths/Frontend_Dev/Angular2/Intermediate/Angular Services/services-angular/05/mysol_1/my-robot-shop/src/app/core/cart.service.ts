@@ -11,6 +11,10 @@ export type CartOptions = {
 })
 export class CartService {
   private cartItems = signal<Product[]>([]);
+  private cartOptions: CartOptions = {
+    persistenceType: 'local',
+    persistenceKey: 'cart',
+  };
 
   get cart() {
     return this.cartItems.asReadonly();

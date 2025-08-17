@@ -18,6 +18,10 @@ var core_1 = require("@angular/core");
 var CartService = /** @class */ (function () {
     function CartService() {
         this.cartItems = core_1.signal([]);
+        this.cartOptions = {
+            persistenceType: 'local',
+            persistenceKey: 'cart'
+        };
     }
     Object.defineProperty(CartService.prototype, "cart", {
         get: function () {
