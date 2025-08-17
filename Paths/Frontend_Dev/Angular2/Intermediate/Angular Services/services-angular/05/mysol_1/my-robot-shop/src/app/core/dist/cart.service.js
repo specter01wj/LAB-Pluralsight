@@ -37,9 +37,11 @@ var CartService = /** @class */ (function () {
     });
     CartService.prototype.add = function (product) {
         this.cartItems.update(function (oldCart) { return __spreadArrays(oldCart, [product]); });
+        this.storeCart();
     };
     CartService.prototype.remove = function (product) {
         this.cartItems.update(function (oldCart) { return oldCart.filter(function (p) { return p !== product; }); });
+        this.storeCart();
     };
     CartService.prototype.storeCart = function () {
         if (this.cartOptions && this.cartOptions.persistenceType === 'local') {

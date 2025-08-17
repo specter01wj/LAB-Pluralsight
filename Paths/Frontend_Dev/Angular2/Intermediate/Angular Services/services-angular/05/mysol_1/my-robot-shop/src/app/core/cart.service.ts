@@ -30,10 +30,12 @@ export class CartService {
 
   add(product: Product) {
     this.cartItems.update((oldCart) => [...oldCart, product]);
+    this.storeCart();
   }
 
   remove(product: Product) {
     this.cartItems.update((oldCart) => oldCart.filter(p => p !== product));
+    this.storeCart();
   }
 
   private storeCart() {
