@@ -12,8 +12,6 @@ var shared_module_1 = require("@shared/shared.module");
 var squad_routing_module_1 = require("./squad-routing.module");
 var squad_catalog_component_1 = require("./squad-catalog/squad-catalog.component");
 var cart_service_1 = require("@core/cart.service");
-var products_service_interface_1 = require("@shared/products-service.interface");
-var engineers_service_1 = require("./engineers.service");
 var SquadModule = /** @class */ (function () {
     function SquadModule() {
     }
@@ -39,10 +37,6 @@ var SquadModule = /** @class */ (function () {
                     deps: [cart_service_1.CART_OPTIONS_TOKEN],
                     multi: false
                 },
-                {
-                    provide: products_service_interface_1.IProductsServiceToken,
-                    useClass: engineers_service_1.EngineersService
-                }
             ]
         })
     ], SquadModule);
