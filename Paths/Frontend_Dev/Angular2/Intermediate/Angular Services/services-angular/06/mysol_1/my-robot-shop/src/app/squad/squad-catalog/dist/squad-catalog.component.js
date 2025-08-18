@@ -35,7 +35,7 @@ var SquadCatalogComponent = /** @class */ (function () {
                 },
             ]
         }),
-        __param(1, core_1.Inject(products_service_interface_1.IProductsServiceToken))
+        __param(1, core_1.Self()), __param(1, core_1.Inject(products_service_interface_1.IProductsServiceToken))
     ], SquadCatalogComponent);
     return SquadCatalogComponent;
 }());
