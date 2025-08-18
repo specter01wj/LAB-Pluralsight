@@ -12,6 +12,7 @@ exports.__esModule = true;
 exports.SquadCatalogComponent = void 0;
 var core_1 = require("@angular/core");
 var products_service_interface_1 = require("@shared/products-service.interface");
+var engineers_service_1 = require("../engineers.service");
 var SquadCatalogComponent = /** @class */ (function () {
     // private cart: Product[] = [];
     function SquadCatalogComponent(cartService, engineersService) {
@@ -27,7 +28,12 @@ var SquadCatalogComponent = /** @class */ (function () {
             selector: 'bot-catalog',
             templateUrl: './squad-catalog.component.html',
             styleUrls: ['./squad-catalog.component.css'],
-            providers: []
+            providers: [
+                {
+                    provide: products_service_interface_1.IProductsServiceToken,
+                    useClass: engineers_service_1.EngineersService
+                },
+            ]
         }),
         __param(1, core_1.Inject(products_service_interface_1.IProductsServiceToken))
     ], SquadCatalogComponent);
