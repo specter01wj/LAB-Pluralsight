@@ -36,7 +36,7 @@ export class CoffeeApiService {
   getCoffee(id: number): Observable<Coffee> {
     return this.http
       .get<Coffee>(this.apiURL + '/' + id)
-      .pipe(retry(1), catchError(this.handleError));
+      .pipe(catchError(this.handleError));
   }
 
   // POST

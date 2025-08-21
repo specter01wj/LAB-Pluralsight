@@ -37,7 +37,7 @@ var CoffeeApiService = /** @class */ (function () {
     CoffeeApiService.prototype.getCoffee = function (id) {
         return this.http
             .get(this.apiURL + '/' + id)
-            .pipe(operators_1.retry(1), operators_1.catchError(this.handleError));
+            .pipe(operators_1.catchError(this.handleError));
     };
     // POST
     CoffeeApiService.prototype.createCoffee = function (coffee) {
