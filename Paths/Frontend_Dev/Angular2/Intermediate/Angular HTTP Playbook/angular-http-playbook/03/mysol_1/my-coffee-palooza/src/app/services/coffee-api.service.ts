@@ -62,8 +62,8 @@ export class CoffeeApiService {
   // DELETE
   deleteCoffee(id: number) {
     return this.http
-      .delete<Coffee>(this.apiURL + '/' + id)
-      .pipe(retry(1), catchError(this.handleError));
+      .delete<Coffee>(this.apiURL + '/' + id, this.httpOptions)
+      .pipe(catchError(this.handleError));
   }
 
   // Shared error handling
