@@ -56,7 +56,7 @@ export class CoffeeApiService {
         this.apiURL + '/' + coffee.id,
         JSON.stringify(coffee)
       )
-      .pipe(map(res => res.update), retry(1), catchError(this.handleError));
+      .pipe(map(res => res.update), catchError(this.handleError));
   }
 
   // DELETE
