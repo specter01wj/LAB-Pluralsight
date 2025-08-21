@@ -66,18 +66,33 @@ export class CoffeeApiService {
       .pipe(retry(1), catchError(this.handleError));
   }
 
-  // Error handling
+  // Shared error handling
   private handleError(error: HttpErrorResponse) {
     let errorMessage = '';
-    if (error.error instanceof ErrorEvent) {
+    if (error.status === 0) {
       // Get client-side error
-      errorMessage = error.error.message;
+      errorMessage = error.error;
+      console.error('[CoffeeApiService] => Client-side HTTP error occurred: ', errorMessage, error);
     } else {
       // Get server-side error
-      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.error}`;
+      console.error('[CoffeeApiService] => Server-side HTTP error occurred: ', errorMessage, error);
     }
     return throwError(() => {
       return errorMessage;
     });
   }
+
+  private handleErrorWithTimeout(error: HttpErrorResponse | TimeoutError) {
+    let errorMessage = '';
+    if (error instanceof TimeoutError) {
+      console.error('[CoffeeApiService] => Request timed out!', error);
+      return throwError(() => {
+        return errorMessage;
+      });
+    } else {
+      return this.handleError(error);
+    }
+  }
+
 }
