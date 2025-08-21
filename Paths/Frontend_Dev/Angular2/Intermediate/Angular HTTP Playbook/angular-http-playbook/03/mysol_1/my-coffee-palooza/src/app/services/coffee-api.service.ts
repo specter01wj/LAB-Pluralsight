@@ -46,7 +46,7 @@ export class CoffeeApiService {
         this.apiURL,
         JSON.stringify(coffee)
       )
-      .pipe(map(res => res.added), retry(1), catchError(this.handleError));
+      .pipe(map(res => res.added), catchError(this.handleError));
   }
 
   // PUT

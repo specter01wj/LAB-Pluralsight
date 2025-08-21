@@ -43,7 +43,7 @@ var CoffeeApiService = /** @class */ (function () {
     CoffeeApiService.prototype.createCoffee = function (coffee) {
         return this.http
             .post(this.apiURL, JSON.stringify(coffee))
-            .pipe(operators_1.map(function (res) { return res.added; }), operators_1.retry(1), operators_1.catchError(this.handleError));
+            .pipe(operators_1.map(function (res) { return res.added; }), operators_1.catchError(this.handleError));
     };
     // PUT
     CoffeeApiService.prototype.updateCoffee = function (coffee) {
