@@ -11,6 +11,7 @@ var core_1 = require("@angular/core");
 var http_1 = require("@angular/common/http");
 var rxjs_1 = require("rxjs");
 var operators_1 = require("rxjs/operators");
+var environment_1 = require("../../environments/environment");
 var CoffeeApiService = /** @class */ (function () {
     function CoffeeApiService(http) {
         this.http = http;
@@ -28,10 +29,15 @@ var CoffeeApiService = /** @class */ (function () {
     }
     // GET
     CoffeeApiService.prototype.getCoffees = function () {
-        console.log('getting coffees');
-        return this.http.get(this.apiURL, {
-            params: new http_1.HttpParams().set('sort', 'desc')
-        });
+        return this.http
+            .get(this.apiURL)
+            .pipe(operators_1.timeout(2), operators_1.retry({
+            count: environment_1.environment.coffeeServiceRetryCount,
+            delay: function (err, attemptNum) {
+                console.error("[CoffeeApiService] => Encountered an error while retrying request on attempt " + attemptNum + ": ", err);
+                return rxjs_1.timer(1000 * attemptNum);
+            }
+        }), operators_1.catchError(this.handleErrorWithTimeout));
     };
     // GET by ID
     CoffeeApiService.prototype.getCoffee = function (id) {
@@ -75,7 +81,7 @@ var CoffeeApiService = /** @class */ (function () {
     };
     CoffeeApiService.prototype.handleErrorWithTimeout = function (error) {
         var errorMessage = '';
-        if (error instanceof TimeoutError) {
+        if (error instanceof rxjs_1.TimeoutError) {
             console.error('[CoffeeApiService] => Request timed out!', error);
             return rxjs_1.throwError(function () {
                 return errorMessage;

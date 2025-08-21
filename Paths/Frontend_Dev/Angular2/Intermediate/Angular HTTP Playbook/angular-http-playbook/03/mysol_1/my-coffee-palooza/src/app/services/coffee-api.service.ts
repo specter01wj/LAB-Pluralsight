@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Coffee } from '../types/coffee';
-import { Observable, throwError } from 'rxjs';
-import { retry, catchError, tap, map } from 'rxjs/operators';
+import { Observable, TimeoutError, of, throwError, timer  } from 'rxjs';
+import { retry, catchError, tap, map, timeout } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -26,10 +27,19 @@ export class CoffeeApiService {
 
   // GET
   getCoffees(): Observable<Coffee[]> {
-    console.log('getting coffees')
-    return this.http.get<Coffee[]>(this.apiURL, {
-      params: new HttpParams().set('sort', 'desc')
-    } )
+    return this.http
+      .get<Coffee[]>(this.apiURL)
+      .pipe(
+        timeout(2),
+        retry({
+          count: environment.coffeeServiceRetryCount,
+          delay: (err, attemptNum) => {
+            console.error(`[CoffeeApiService] => Encountered an error while retrying request on attempt ${attemptNum}: `, err)
+            return timer(1000 * attemptNum);
+          }
+        }),
+        catchError(this.handleErrorWithTimeout)
+      );
   }
 
   // GET by ID
