@@ -49,6 +49,27 @@ export class CoffeeApiService {
       .pipe(catchError(this.handleError));
   }
 
+  // Get Coffee image buffer by URL
+  getCoffeeImageBuffer(url: string): Observable<ArrayBuffer> {
+    return this.http
+      .get(url, { responseType: 'arraybuffer' })
+      .pipe(catchError(this.handleError));
+  }
+
+  // Get Coffee image blob (file object) by URL
+  getCoffeeImageBlob(url: string): Observable<Blob> {
+    return this.http
+      .get(url, { responseType: 'blob' })
+      .pipe(catchError(this.handleError));
+  }
+
+  // Request a Coffee object in its raw, string representation
+  getCoffeeAsText(id: number): Observable<string> {
+    return this.http
+      .get(this.apiURL + '/' + id, { responseType: 'text' })
+      .pipe(catchError(this.handleError));
+  }
+
   // POST
   createCoffee(coffee: Partial<Coffee>): Observable<Coffee> {
     return this.http

@@ -45,6 +45,24 @@ var CoffeeApiService = /** @class */ (function () {
             .get(this.apiURL + '/' + id)
             .pipe(operators_1.catchError(this.handleError));
     };
+    // Get Coffee image buffer by URL
+    CoffeeApiService.prototype.getCoffeeImageBuffer = function (url) {
+        return this.http
+            .get(url, { responseType: 'arraybuffer' })
+            .pipe(operators_1.catchError(this.handleError));
+    };
+    // Get Coffee image blob (file object) by URL
+    CoffeeApiService.prototype.getCoffeeImageBlob = function (url) {
+        return this.http
+            .get(url, { responseType: 'blob' })
+            .pipe(operators_1.catchError(this.handleError));
+    };
+    // Request a Coffee object in its raw, string representation
+    CoffeeApiService.prototype.getCoffeeAsText = function (id) {
+        return this.http
+            .get(this.apiURL + '/' + id, { responseType: 'text' })
+            .pipe(operators_1.catchError(this.handleError));
+    };
     // POST
     CoffeeApiService.prototype.createCoffee = function (coffee) {
         return this.http
