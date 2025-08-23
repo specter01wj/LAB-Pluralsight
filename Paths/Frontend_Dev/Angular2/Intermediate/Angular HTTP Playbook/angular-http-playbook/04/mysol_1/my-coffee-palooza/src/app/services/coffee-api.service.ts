@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Coffee } from '../types/coffee';
-import { Observable, TimeoutError, of, throwError, timer  } from 'rxjs';
-import { retry, catchError, tap, map, timeout } from 'rxjs/operators';
+import { Observable, Subject, TimeoutError, forkJoin, throwError, timer } from 'rxjs';
+import { retry, catchError, tap, map, timeout, takeUntil, delay, concatMap } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -12,6 +12,8 @@ export class CoffeeApiService {
   private apiURL = 'https://fake-coffee-api.vercel.app/api';
 
   constructor(private http: HttpClient) {}
+
+  private cancelCoffeeFetch$ = new Subject<void>();
 
   /*
     CRUD Methods for consuming RESTful API
@@ -25,12 +27,17 @@ export class CoffeeApiService {
     }),
   };
 
+  cancel() {
+    console.log('Canceling request')
+    this.cancelCoffeeFetch$.next();
+  }
+
   // GET
   getCoffees(): Observable<Coffee[]> {
     return this.http
       .get<Coffee[]>(this.apiURL)
       .pipe(
-        timeout(2),
+        takeUntil(this.cancelCoffeeFetch$),
         retry({
           count: environment.coffeeServiceRetryCount,
           delay: (err, attemptNum) => {
