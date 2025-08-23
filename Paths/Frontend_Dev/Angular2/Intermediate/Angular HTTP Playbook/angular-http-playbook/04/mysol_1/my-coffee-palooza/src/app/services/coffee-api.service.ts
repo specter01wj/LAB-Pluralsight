@@ -97,6 +97,36 @@ export class CoffeeApiService {
       .pipe(catchError(this.handleError));
   }
 
+  // JSONP
+  getCoffeeHostIPAddress() {
+    return this.http.jsonp<{ip: string}>('https://jsonip.com', 'callback').subscribe(ipResponse => console.log('Coffee Host IP: ', ipResponse.ip));
+  }
+
+  // Multiple Requests in parallel
+  getCoffeeChunks(): Observable<Coffee[]> {
+    return forkJoin([
+      this.http.get<Coffee[]>(this.apiURL + '?limit=5'),
+      this.http.get<Coffee[]>(this.apiURL + '?limit=10'),
+      this.http.get<Coffee[]>(this.apiURL + '?limit=15'),
+    ]).pipe(
+      map(coffeeChunks => coffeeChunks.flat()),
+      catchError(this.handleError)
+    )
+  }
+
+  // Syncronous Requests
+  getCoffeeChunksSync(): Observable<Coffee[]> {
+    return this.http.get<Coffee[]>(this.apiURL + '?limit=5').pipe(
+      concatMap(coffeeChunk =>
+          this.http.get<Coffee[]>(this.apiURL + '?limit=10').pipe(
+            concatMap((coffeeChunk2 => this.http.get<Coffee[]>(this.apiURL + '?limit=15'))
+          ),
+          catchError(this.handleError)
+        )
+      )
+    )
+  }
+
   // Shared error handling
   private handleError(error: HttpErrorResponse) {
     let errorMessage = '';
