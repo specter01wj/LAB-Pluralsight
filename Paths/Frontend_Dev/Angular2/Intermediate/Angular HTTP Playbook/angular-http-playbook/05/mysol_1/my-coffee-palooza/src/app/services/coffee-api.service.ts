@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpContext, HttpContextToken, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Coffee } from '../types/coffee';
 import { Observable, Subject, TimeoutError, forkJoin, throwError, timer } from 'rxjs';
 import { retry, catchError, tap, map, timeout, takeUntil, delay, concatMap } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
+
+export const COFFEE_API_RETRY_COUNT = new HttpContextToken(() => environment.coffeeServiceRetryCount);
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +15,7 @@ export class CoffeeApiService {
 
   constructor(private http: HttpClient) {}
 
-  private cancelCoffeeFetch$ = new Subject<void>();
+  private cancelCoffeeFetch$ = new Subject<boolean>();
 
   /*
     CRUD Methods for consuming RESTful API
@@ -29,23 +31,18 @@ export class CoffeeApiService {
 
   cancel() {
     console.log('Canceling request')
-    this.cancelCoffeeFetch$.next();
+    this.cancelCoffeeFetch$.next(true);
   }
 
   // GET
   getCoffees(): Observable<Coffee[]> {
     return this.http
-      .get<Coffee[]>(this.apiURL)
+      .get<Coffee[]>(this.apiURL, {
+        context: new HttpContext().set(COFFEE_API_RETRY_COUNT, environment.coffeeServiceRetryCount)
+      })
       .pipe(
         takeUntil(this.cancelCoffeeFetch$),
-        retry({
-          count: environment.coffeeServiceRetryCount,
-          delay: (err, attemptNum) => {
-            console.error(`[CoffeeApiService] => Encountered an error while retrying request on attempt ${attemptNum}: `, err)
-            return timer(1000 * attemptNum);
-          }
-        }),
-        catchError(this.handleErrorWithTimeout)
+        catchError(this.handleError)
       );
   }
 
@@ -53,6 +50,13 @@ export class CoffeeApiService {
   getCoffee(id: number): Observable<Coffee> {
     return this.http
       .get<Coffee>(this.apiURL + '/' + id)
+      .pipe(catchError(this.handleError));
+  }
+
+  // Request a Coffee object in its raw, string representation
+  getCoffeeAsText(id: number): Observable<string> {
+    return this.http
+      .get(this.apiURL + '/' + id, { responseType: 'text' })
       .pipe(catchError(this.handleError));
   }
 
@@ -67,13 +71,6 @@ export class CoffeeApiService {
   getCoffeeImageBlob(url: string): Observable<Blob> {
     return this.http
       .get(url, { responseType: 'blob' })
-      .pipe(catchError(this.handleError));
-  }
-
-  // Request a Coffee object in its raw, string representation
-  getCoffeeAsText(id: number): Observable<string> {
-    return this.http
-      .get(this.apiURL + '/' + id, { responseType: 'text' })
       .pipe(catchError(this.handleError));
   }
 

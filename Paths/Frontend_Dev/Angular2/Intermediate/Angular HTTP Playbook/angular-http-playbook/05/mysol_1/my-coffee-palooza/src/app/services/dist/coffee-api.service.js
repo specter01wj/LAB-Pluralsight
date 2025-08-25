@@ -6,16 +6,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.CoffeeApiService = void 0;
+exports.CoffeeApiService = exports.COFFEE_API_RETRY_COUNT = void 0;
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/common/http");
 var rxjs_1 = require("rxjs");
 var operators_1 = require("rxjs/operators");
 var environment_1 = require("../../environments/environment");
+exports.COFFEE_API_RETRY_COUNT = new http_1.HttpContextToken(function () { return environment_1.environment.coffeeServiceRetryCount; });
 var CoffeeApiService = /** @class */ (function () {
     function CoffeeApiService(http) {
         this.http = http;
         this.apiURL = 'https://fake-coffee-api.vercel.app/api';
+        this.cancelCoffeeFetch$ = new rxjs_1.Subject();
         /*
           CRUD Methods for consuming RESTful API
         */
@@ -27,22 +29,28 @@ var CoffeeApiService = /** @class */ (function () {
             })
         };
     }
+    CoffeeApiService.prototype.cancel = function () {
+        console.log('Canceling request');
+        this.cancelCoffeeFetch$.next(true);
+    };
     // GET
     CoffeeApiService.prototype.getCoffees = function () {
         return this.http
-            .get(this.apiURL)
-            .pipe(operators_1.timeout(2), operators_1.retry({
-            count: environment_1.environment.coffeeServiceRetryCount,
-            delay: function (err, attemptNum) {
-                console.error("[CoffeeApiService] => Encountered an error while retrying request on attempt " + attemptNum + ": ", err);
-                return rxjs_1.timer(1000 * attemptNum);
-            }
-        }), operators_1.catchError(this.handleErrorWithTimeout));
+            .get(this.apiURL, {
+            context: new http_1.HttpContext().set(exports.COFFEE_API_RETRY_COUNT, environment_1.environment.coffeeServiceRetryCount)
+        })
+            .pipe(operators_1.takeUntil(this.cancelCoffeeFetch$), operators_1.catchError(this.handleError));
     };
     // GET by ID
     CoffeeApiService.prototype.getCoffee = function (id) {
         return this.http
             .get(this.apiURL + '/' + id)
+            .pipe(operators_1.catchError(this.handleError));
+    };
+    // Request a Coffee object in its raw, string representation
+    CoffeeApiService.prototype.getCoffeeAsText = function (id) {
+        return this.http
+            .get(this.apiURL + '/' + id, { responseType: 'text' })
             .pipe(operators_1.catchError(this.handleError));
     };
     // Get Coffee image buffer by URL
@@ -55,12 +63,6 @@ var CoffeeApiService = /** @class */ (function () {
     CoffeeApiService.prototype.getCoffeeImageBlob = function (url) {
         return this.http
             .get(url, { responseType: 'blob' })
-            .pipe(operators_1.catchError(this.handleError));
-    };
-    // Request a Coffee object in its raw, string representation
-    CoffeeApiService.prototype.getCoffeeAsText = function (id) {
-        return this.http
-            .get(this.apiURL + '/' + id, { responseType: 'text' })
             .pipe(operators_1.catchError(this.handleError));
     };
     // POST
@@ -79,6 +81,25 @@ var CoffeeApiService = /** @class */ (function () {
     CoffeeApiService.prototype.deleteCoffee = function (id) {
         return this.http["delete"](this.apiURL + '/' + id, this.httpOptions)
             .pipe(operators_1.catchError(this.handleError));
+    };
+    // JSONP
+    CoffeeApiService.prototype.getCoffeeHostIPAddress = function () {
+        return this.http.jsonp('https://jsonip.com', 'callback').subscribe(function (ipResponse) { return console.log('Coffee Host IP: ', ipResponse.ip); });
+    };
+    // Multiple Requests in parallel
+    CoffeeApiService.prototype.getCoffeeChunks = function () {
+        return rxjs_1.forkJoin([
+            this.http.get(this.apiURL + '?limit=5'),
+            this.http.get(this.apiURL + '?limit=10'),
+            this.http.get(this.apiURL + '?limit=15'),
+        ]).pipe(operators_1.map(function (coffeeChunks) { return coffeeChunks.flat(); }), operators_1.catchError(this.handleError));
+    };
+    // Syncronous Requests
+    CoffeeApiService.prototype.getCoffeeChunksSync = function () {
+        var _this = this;
+        return this.http.get(this.apiURL + '?limit=5').pipe(operators_1.concatMap(function (coffeeChunk) {
+            return _this.http.get(_this.apiURL + '?limit=10').pipe(operators_1.concatMap((function (coffeeChunk2) { return _this.http.get(_this.apiURL + '?limit=15'); })), operators_1.catchError(_this.handleError));
+        }));
     };
     // Shared error handling
     CoffeeApiService.prototype.handleError = function (error) {
