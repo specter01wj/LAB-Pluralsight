@@ -24,6 +24,7 @@ export class CoffeeListComponent implements OnInit {
     this.coffees$ = this.restApi.getCoffees();
 
 
+
   }
 
   deleteCoffee(id: number) {
