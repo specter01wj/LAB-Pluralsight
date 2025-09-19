@@ -22,6 +22,7 @@ export class CoffeeListComponent implements OnInit {
 
   ngOnInit() {
     this.coffees$ = this.restApi.getCoffees();
+
   }
 
   deleteCoffee(id: number) {
@@ -38,7 +39,7 @@ export class CoffeeListComponent implements OnInit {
       this.coffees$ = this.coffees$.pipe(
         map(coffees => coffees.concat(newCoffee)),
         tap(() => this.coffeeToAdd = {})
-      ) 
+      )
     });
   }
 
@@ -46,7 +47,7 @@ export class CoffeeListComponent implements OnInit {
     this.restApi.updateCoffee(toUpdate).subscribe((updatedCoffee) => {
       this.coffees$ = this.coffees$.pipe(
         map(coffees => coffees.filter(coffee => coffee.id !== toUpdate.id).concat({ ...toUpdate, ...updatedCoffee }))
-      ) 
+      )
     });
   }
 }
