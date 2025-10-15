@@ -46,4 +46,4 @@ vpcendpointid STRING
 ROW FORMAT SERDE 'com.amazon.emr.hive.serde.CloudTrailSerde'
 STORED AS INPUTFORMAT 'com.amazon.emr.cloudtrail.CloudTrailInputFormat'
 OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
-LOCATION 's3://my-athena-results-20124742/AWSLogs/748326562907/';
+LOCATION 's3://aws-cloudtrail-logs-748326562907-a7057344/AWSLogs/748326562907/';
