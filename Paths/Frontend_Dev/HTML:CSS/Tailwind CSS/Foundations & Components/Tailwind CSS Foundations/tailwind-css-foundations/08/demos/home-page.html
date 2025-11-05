@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body class="bg-pink-100 dark:bg-pink-900">
+    <nav class="flex flex-row items-center bg-yellow-700 p-4 dark:bg-yellow-900">
+      <div class="grow sm:grow-0">
+        <img class="max-w-[100px]" src="./images/bethanys-pie-shop-logo_horiz-white.png" />
+        <h1 class="hidden">Bethany's Pie Shop</h1>
+      </div>
+      <ul class="ml-4 hidden items-center sm:flex sm:grow sm:flex-row sm:flex-wrap">
+        <li class="ml-6 text-xs font-bold uppercase text-white">Shop</li>
+        <li class="ml-6 text-xs font-bold uppercase text-white">Contact</li>
+        <li class="ml-6 text-xs font-bold uppercase text-white">Register</li>
+      </ul>
+      <div class="text-white sm:hidden">menu</div>
+    </nav>
+    <main>
+      <div class="relative w-full">
+        <!-- Hero Image Container -->
+        <div class="relative w-full">
+          <img class="block w-full" src="./images/hero-01.jpg" alt="Hero Image" />
+
+          <!-- Logomark Positioned Relative to Hero Image -->
+          <img class="absolute left-1/2 max-h-[150px] w-[20vw] max-w-[129px] -translate-x-1/2 -translate-y-1/2 transform" src="./images/bethanys-pie-shop-logo_logomark.png" alt="Bethany's Pie Shop Logomark" />
+        </div>
+
+        <!-- Title and Description -->
+        <h2 class="mb-4 mt-20 text-center text-3xl font-extrabold dark:text-white">Pies of the Week</h2>
+        <p class="text-center text-lg font-normal dark:text-white">Enjoy a selection of our favorite pies</p>
+      </div>
+
+      <section class="flex flex-row flex-wrap justify-center gap-4">
+        <div class="box-border w-[300px] p-4">
+          <img class="box-border h-[300px] w-[300px] object-cover" src="./images/pie-01-apple.jpg" />
+          <button class="w-full bg-pink-300 py-3 text-xs font-bold uppercase before:content-['+_'] dark:bg-pink-600 dark:text-white">Add to cart</button>
+          <div class="flex flex-row py-2">
+            <p class="text-1xl flex-grow font-extrabold dark:text-white">Classic Apple Pie</p>
+            <p class="dark:text-white">$12.95</p>
+          </div>
+        </div>
+
+        <div class="box-border w-[300px] p-4">
+          <img class="box-border h-[300px] w-[300px] object-cover" src="./images/pie-02-pumpkin.jpg" />
+          <button class="w-full bg-pink-300 py-3 text-xs font-bold uppercase before:content-['+_'] dark:bg-pink-600 dark:text-white">Add to cart</button>
+          <div class="flex flex-row py-2">
+            <p class="text-1xl flex-grow font-extrabold dark:text-white">Pumpkin Pie</p>
+            <p class="dark:text-white">$12.95</p>
+          </div>
+        </div>
+
+        <div class="box-border w-[300px] p-4">
+          <img class="box-border h-[300px] w-[300px] object-cover" src="./images/pie-03-pecan.jpg" />
+          <button class="w-full bg-pink-300 py-3 text-xs font-bold uppercase before:content-['+_'] dark:bg-pink-600 dark:text-white">Add to cart</button>
+          <div class="flex flex-row py-2">
+            <p class="text-1xl flex-grow font-extrabold dark:text-white">Chocolate Pecan Pie</p>
+            <p class="dark:text-white">$12.95</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
