@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./output.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body class="bg-pink-100">
+    <header class="h-[60px] w-full bg-yellow-600 flex flex-row items-center px-5 space-x-6">
+      <a class="block" href="index.html"><img class="h-[40px]" src="./images/bethanys-pie-shop-logo_horiz-white.png" /></a>
+      <nav class="flex-grow">
+        <ul class="flex flex-row space-x-6">
+          <li><a class="font-bold text-xs text-white uppercase" href="cheesecakes.html" >Shop</a></li>
+          <li><a class="font-bold text-xs text-white uppercase" href="contact.html" >Contact</a></li>
+          <li><a class="font-bold text-xs text-white uppercase" href="cart.html" >Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="flex flex-col lg:flex-row space-y-4 lg:space-x-4 lg:space-y-0 max-w-[1024px] items-start p-8 align-items">
+      <div class="flex flex-col space-y-4">
+        <section class="flex flex-row basis-2/3 rounded-lg border border-2 bg-white items-center p-4">
+          <img class="hidden sm:inline sm:h-[200px] sm:w-[200px]" src="./images/pie-01-apple.jpg" />
+          <div class="pl-8">
+            <p class="hidden sm:block mb-4 text-sm font-bold text-yellow-600">Item # 00000001</p>
+            <p class="text-lg mb-1 sm:text-xl">Classic Apple Pie</p>
+            <p class="hidden sm:block mb-4 text-xs">Our famous homemade apple pie</p>
+            <div class="hidden sm:flex flex-row">
+              <div class="rounded-lg border border-gray-400 bg-gray-100 px-2 py-1 hover:border-gray-200">
+                <button class="pr-3 text-yellow-700">-</button>
+                <span>1</span>
+                <button class="pl-3 text-yellow-700">+</button>
+              </div>
+              <button class="pl-3 text-gray-400 underline">Delete</button>
+            </div>
+          </div>
+          <p class="flex-grow text-right text-2xl font-extrabold">$12.95</p>
+        </section>
+        <section class="flex flex-row basis-2/3 rounded-lg border border-2 bg-white items-center p-4">
+          <img class="hidden sm:inline sm:h-[200px] sm:w-[200px]" src="./images/pie-01-apple.jpg" />
+          <div class="pl-8">
+            <p class="hidden sm:block mb-4 text-sm font-bold text-yellow-600">Item # 00000001</p>
+            <p class="text-lg mb-1 sm:text-xl">Classic Apple Pie</p>
+            <p class="hidden sm:block mb-4 text-xs">Our famous homemade apple pie</p>
+            <div class="hidden sm:flex flex-row">
+              <div class="rounded-lg border border-gray-400 bg-gray-100 px-2 py-1">
+                <button class="pr-3 text-yellow-700">-</button>
+                <span>1</span>
+                <button class="pl-3 text-yellow-700">+</button>
+              </div>
+              <button class="pl-3 text-gray-400 underline">Delete</button>
+            </div>
+          </div>
+          <p class="flex-grow text-right text-2xl font-extrabold">$12.95</p>
+        </section>
+      </div>
+
+      <section class="flex flex-col max-w-[320px] rounded-lg border-2 bg-white p-4">
+        <dl class="flex flex-row bg-white py-2">
+          <dt class="flex-grow font-bold text-gray-600">Subtotal</dt><dd class="text-right font-bold text-gray-800">$44.85</dd>
+        </dl>
+        <dl class="flex flex-row bg-white py-2">
+          <dt class="flex-grow font-bold text-gray-600">Shipping</dt><dd class="text-right font-bold text-gray-800">$15.00</dd>
+        </dl>
+        <dl class="flex flex-row bg-white py-2">
+          <dt class="flex-grow font-bold text-gray-600">Sales Tax</dt><dd class="text-right font-bold text-gray-800">--</dd>
+        </dl>
+        <hr class="border border-gray-300" />
+        <dl class="flex flex-row bg-white py-2">
+          <dt class="flex-grow font-bold text-gray-600">Estimated Total</dt><dd class="text-right font-bold text-gray-800">$59.85</dd>
+        </dl>
+        <hr class="border border-gray-300" />
+        <form class="py-3">
+          <input class="w-[67%] rounded-md border-2 border-gray-300 p-2 text-sm" type="text" name="discount_code" placeholder="Discount code or gift card" />
+          <input class="w-[31%] bg-pink-200 px-2 py-2 text-sm font-bold uppercase" type="button" name="apply_discount_code" value="Apply" />
+        </form>
+        <hr class="border border-gray-300" />
+        <form class="py-3">
+          <input class="w-full bg-pink-200 p-2 text-sm font-bold uppercase" type="submit" name="checkout" value="Checkout" />
+        </form>
+      </section>
+    </div>
+  </body>
+</html>

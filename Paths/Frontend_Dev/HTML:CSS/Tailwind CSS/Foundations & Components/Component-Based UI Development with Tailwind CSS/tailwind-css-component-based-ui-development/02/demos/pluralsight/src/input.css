@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'PS Commons';
+  src: url(fonts/ps-tt-commons-variable-roman.woff2) format('woff2');
+}
+
+@layer components {
+  .topic-bubble {
+    @apply text-ps-purple-light border border-ps-bubble rounded-md text-sm px-3 py-1;
+  }
+
+  .container {
+    @apply border-4 shadow-md p-12 bg-red-900;
+  }
+}

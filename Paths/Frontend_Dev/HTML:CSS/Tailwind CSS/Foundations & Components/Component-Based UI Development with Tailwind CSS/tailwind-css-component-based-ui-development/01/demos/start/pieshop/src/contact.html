@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="bg-pink-100">
+    <header class="h-[60px] w-full bg-yellow-600 dark:bg-yellow-900 flex flex-row items-center px-5 space-x-6">
+      <a class="block" href="index.html"><img class="h-[40px]" src="./images/bethanys-pie-shop-logo_horiz-white.png" /></a>
+      <nav class="flex-grow">
+        <ul class="flex flex-row space-x-6">
+          <li><a class="font-bold text-xs text-white uppercase" href="cheesecakes.html" >Shop</a></li>
+          <li><a class="font-bold text-xs text-white uppercase" href="contact.html" >Contact</a></li>
+          <li><a class="font-bold text-xs text-white uppercase" href="cart.html" >Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h2 class="font-bold uppercase tracking-wider p-8">Contact Us<span class="ml-4 inline-block w-[120px] border border-black align-middle"></span></h2>
+    <div class="flex flex-row justify-center space-x-8 px-8 max-w-[1024px]">
+      <section>
+        <img class="mt-8" src="./images/contact-form.jpg" />
+      </section>
+      <section>
+        <h2 class="text-2xl font-extrabold">We'd Love to Hear From You</h2>
+        <p class="text-lg font-normal">
+          Please fill out the form below to let us know how we can help.
+        </p>
+        <form class="py-6">
+          <label class="text-sm font-bold uppercase" for="full_name">Full name</label>
+          <input class="my-2 w-full rounded-md border border-gray-400" name="full_name" id="full_name" placeholder="" />
+          <label class="text-sm font-bold uppercase" for="email">Email</label>
+          <input class="my-2 w-full rounded-md border border-gray-400" name="email" id="email" placeholder="" />
+          <label class="text-sm font-bold uppercase" for="phone">Phone</label>
+          <input class="my-2 w-full rounded-md border border-gray-400" name="phone" id="phone" placeholder="" />
+          <label class="text-sm font-bold uppercase" for="comment">Comment</label>
+          <textarea class="my-2 h-[150px] w-full rounded-md border border-gray-400" name="comment" id="comment"></textarea>
+          <input class="bg-pink-300 px-12 py-2 text-sm font-bold uppercase" type="submit" id="submit" value="Submit" />
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
