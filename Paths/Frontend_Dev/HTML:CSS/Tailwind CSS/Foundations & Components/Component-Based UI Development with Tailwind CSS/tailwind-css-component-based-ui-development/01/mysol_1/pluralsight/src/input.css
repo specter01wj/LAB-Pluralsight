@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'PS Commons';
+  src: url(fonts/ps-tt-commons-variable-roman.woff2) format('woff2');
+}
