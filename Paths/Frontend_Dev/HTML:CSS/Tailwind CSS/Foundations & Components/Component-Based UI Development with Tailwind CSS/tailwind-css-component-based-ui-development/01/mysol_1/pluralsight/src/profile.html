@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./output.css" />
+</head>
+<body class="bg-[#130F25] p-4 flex flex-col space-y-4">
+  <section class="p-4 rounded-md">
+    <h2 class="border-b border-b-white mb-3 font-semibold text-lg">Personal info</h2>
+    <form>
+      <div class="flex flex-row space-x-2 mb-2">
+        <div class="flex flex-col w-1/2">
+          <label class="text-xs font-bold mb-1">Job title</label>
+          <input class="px-4 py-2 text-xs rounded-md border" type="text" name="job-title" placeholder="Enter Job Title" />
+        </div>
+        <div class="flex flex-col w-1/2">
+          <label class="text-xs font-bold mb-1">Location</label>
+          <input class="px-4 py-2 text-xs rounded-md border" type="text" name="location" placeholder="Enter Location" value="Orlando, FL" />
+        </div>
+      </div>
+      <div class="flex flex-row space-x-2 mb-2">
+        <div class="flex flex-col w-1/2">
+          <label class="text-xs font-bold mb-1">Company Name</label>
+          <input class="px-4 py-2 text-xs rounded-md border" type="text" name="company-name" placeholder="Enter Company Name" />
+        </div>
+        <div class="flex flex-col w-1/2">
+          <label class="text-xs font-bold mb-1">Personal Website</label>
+          <input class="px-4 py-2 text-xs rounded-md border" type="text" name="personal-website" placeholder="https://website.com" />
+        </div>
+      </div>
+      <div class="flex flex-col w-full">
+        <label class="text-xs font-bold mb-1">Short Bio</label>
+        <textarea class="px-4 py-2 text-xs min-h-20 rounded-md border" name="short-bio">.</textarea>
+      </div>
+    </form>
+  </section>
+
+  <section class="p-4 rounded-md">
+    <h2 class="font-semibold text-xl">Demographic info</h2>
+    <p class="text-xs border-b border-b-white mb-3 pb-1">None of this information will be shown on your profile. This information will be used to help customize your learning experience on Pluralsight.</p>
+    <form>
+      <p class="text-xs">I am a...</p>
+      <p class="text-xs">?</p>
+      <div class="flex flex-row space-x-4 mb-4 items-center">
+        <input type="checkbox" class="" value="Developer" /><span class="block text-xs font-bold">Developer</span>
+      </div>
+      <div class="flex flex-row space-x-2 mb-2">
+        <div class="flex flex-col w-1/2">
+          <label class="text-xs font-bold mb-1">Years of Experience</label>
+          <input class="px-4 py-2 text-xs rounded-md" type="text" name="years-of-experience" placeholder="Enter Number" />
+        </div>
+        <div class="flex flex-col w-1/2">
+          <label class="text-xs font-bold mb-1">Level within Organization</label>
+          <input class="px-4 py-2 text-xs rounded-md border" type="text" name="personal-website" placeholder="Enter level" value="Individual Contributor" />
+        </div>
+      </div>
+    </form>
+  </section>
+</body>
+</html>
