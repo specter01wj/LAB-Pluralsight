@@ -9,6 +9,13 @@ module.exports = {
         'delete-button': '#9A9794',
         'action-button': '#FECFC9'
       },
+      spacing: {
+        'container': '20px'
+      },
+      fontFamily: {
+        'sans': ['Arial', 'sans-serif'],
+        'serif': ['Garamond', 'serif']
+      }
     },
   },
   plugins: [],
