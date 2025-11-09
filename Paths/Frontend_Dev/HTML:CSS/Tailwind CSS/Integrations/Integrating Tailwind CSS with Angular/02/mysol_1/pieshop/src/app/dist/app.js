@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.App = void 0;
 var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
 var router_1 = require("@angular/router");
 var cake_1 = require("./cake/cake");
 var header_1 = require("./header/header");
@@ -26,7 +27,7 @@ var App = /** @class */ (function () {
     App = __decorate([
         core_1.Component({
             selector: 'app-root',
-            imports: [router_1.RouterOutlet, header_1.Header, cake_1.Cake],
+            imports: [router_1.RouterOutlet, common_1.CommonModule, header_1.Header, cake_1.Cake],
             templateUrl: './app.html',
             styleUrl: './app.scss'
         })

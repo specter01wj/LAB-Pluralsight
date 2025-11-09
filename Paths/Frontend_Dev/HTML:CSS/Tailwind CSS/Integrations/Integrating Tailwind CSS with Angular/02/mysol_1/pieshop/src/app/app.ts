@@ -1,11 +1,12 @@
 import { Component, signal } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { Cake } from './cake/cake';
 import { Header } from './header/header';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Cake],
+  imports: [RouterOutlet, CommonModule, Header, Cake],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
