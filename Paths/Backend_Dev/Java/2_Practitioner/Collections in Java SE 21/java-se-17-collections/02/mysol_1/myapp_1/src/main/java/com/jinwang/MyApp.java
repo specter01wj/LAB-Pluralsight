@@ -20,15 +20,23 @@ public class MyApp {
         System.out.println(Arrays.toString(products));
 
         // Add
-//        var roof = new Product("Flat Roof", 1000);
-//        products = add(roof, products);
-//        System.out.println(Arrays.toString(products));
+        var roof = new Product("Flat Roof", 1000);
+        products = add(roof, products);
+        System.out.println(Arrays.toString(products));
 
         // Duplicate
 //        products = add(roof, products);
 //        System.out.println(Arrays.toString(products));
 
 
+    }
+
+    private static Product[] add(Product product, Product[] array)
+    {
+        int length = array.length;
+        var newArray = Arrays.copyOf(array, length + 1);
+        newArray[length] = product;
+        return newArray;
     }
 
 }
