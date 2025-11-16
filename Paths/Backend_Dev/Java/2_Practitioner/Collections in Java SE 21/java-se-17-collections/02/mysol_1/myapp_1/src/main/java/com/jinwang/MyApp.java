@@ -25,8 +25,8 @@ public class MyApp {
         System.out.println(Arrays.toString(products));
 
         // Duplicate
-//        products = add(roof, products);
-//        System.out.println(Arrays.toString(products));
+        products = add(roof, products);
+        System.out.println(Arrays.toString(products));
 
 
     }
