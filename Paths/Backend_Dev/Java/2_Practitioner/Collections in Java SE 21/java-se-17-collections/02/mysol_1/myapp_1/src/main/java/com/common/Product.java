@@ -1,4 +1,4 @@
-package com.jinwang;
+package com.common;
 
 import java.util.Comparator;
 
