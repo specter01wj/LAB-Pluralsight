@@ -38,7 +38,7 @@ public class MyApp {
         products.add(floorPanel);
         products.add(window);
 
-        /*System.out.println(products);
+        System.out.println(products);
 
         for (var product : products) {
             System.out.println(product);
@@ -52,7 +52,7 @@ public class MyApp {
             }
         }
 
-        System.out.println(products);*/
+        System.out.println(products);
 
         /*System.out.println(products.size());
         System.out.println(products.isEmpty());
@@ -61,12 +61,12 @@ public class MyApp {
         System.out.println(products.contains(floorPanel));*/
 
 
-        var toRemove = new ArrayList<Product>();
+        /*var toRemove = new ArrayList<Product>();
         toRemove.add(door);
         toRemove.add(floorPanel);
 
         products.removeAll(toRemove);
-        System.out.println(products);
+        System.out.println(products);*/
     }
 
     private static Product[] add(Product product, Product[] array)
