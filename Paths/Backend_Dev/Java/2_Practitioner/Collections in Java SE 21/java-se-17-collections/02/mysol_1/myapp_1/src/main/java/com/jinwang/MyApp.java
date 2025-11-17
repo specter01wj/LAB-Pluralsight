@@ -44,7 +44,7 @@ public class MyApp {
             System.out.println(product);
         }
 
-        Iterator<Product> it = products.iterator();
+        /*Iterator<Product> it = products.iterator();
         while (it.hasNext()) {
             var product = it.next();
             if (product.weight() > 20) {
@@ -52,7 +52,7 @@ public class MyApp {
             }
         }
 
-        System.out.println(products);
+        System.out.println(products);*/
 
         /*System.out.println(products.size());
         System.out.println(products.isEmpty());
