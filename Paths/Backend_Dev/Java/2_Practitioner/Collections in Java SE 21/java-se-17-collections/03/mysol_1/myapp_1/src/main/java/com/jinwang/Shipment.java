@@ -4,8 +4,8 @@ import com.common.Product;
 
 import java.util.*;
 
-public class Shipment implements Iterable<Product>
-{
+public class Shipment implements Iterable<Product> {
+
     private static final int LIGHT_VAN_MAX_WEIGHT = 20;
     private static final int MISSING_PRODUCT = -1;
 
@@ -14,69 +14,54 @@ public class Shipment implements Iterable<Product>
     private List<Product> lightVanProducts;
     private List<Product> heavyVanProducts;
 
-    public void add(Product product)
-    {
+    public void add(Product product) {
         products.add(product);
     }
 
-    public boolean replace(Product oldProduct, Product newProduct)
-    {
+    public boolean replace(Product oldProduct, Product newProduct) {
         int position = products.indexOf(oldProduct);
-        if (position == MISSING_PRODUCT)
-        {
+        if (position == MISSING_PRODUCT) {
             return false;
         }
-        else
-        {
-            products.set(position, newProduct);
-            return true;
-        }
+        products.set(position, newProduct);
+        return true;
     }
 
-    public void prepare()
-    {
-        // Sort the product list
+    public void prepare() {
+        // Sort products by weight
         products.sort(Product.BY_WEIGHT);
 
-        // find the split point
+        // Find the split point
         int splitPoint = findSplitPoint();
 
-        // create two subviews of the list
+        // Create two subviews
         lightVanProducts = products.subList(0, splitPoint);
         heavyVanProducts = products.subList(splitPoint, products.size());
     }
 
-    private int findSplitPoint()
-    {
-        int size = products.size();
-        for (int i = 0; i < size; i++)
-        {
-            var product = products.get(i);
-            if (product.weight() > LIGHT_VAN_MAX_WEIGHT)
-            {
+    private int findSplitPoint() {
+        for (int i = 0; i < products.size(); i++) {
+            if (products.get(i).weight() > LIGHT_VAN_MAX_WEIGHT) {
                 return i;
             }
         }
         return 0;
     }
 
-    public List<Product> getHeavyVanProducts()
-    {
-        return heavyVanProducts;
-    }
-
-    public List<Product> getLightVanProducts()
-    {
+    public List<Product> getLightVanProducts() {
         return lightVanProducts;
     }
 
-    public Iterator<Product> iterator()
-    {
+    public List<Product> getHeavyVanProducts() {
+        return heavyVanProducts;
+    }
+
+    @Override
+    public Iterator<Product> iterator() {
         return products.iterator();
     }
 
-    public boolean stripHeavyProducts()
-    {
+    public boolean stripHeavyProducts() {
         return products.removeIf(product -> product.weight() > LIGHT_VAN_MAX_WEIGHT);
     }
 }
