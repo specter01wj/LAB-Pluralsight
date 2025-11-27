@@ -28,11 +28,6 @@ public class MyApp {
         System.out.println("\nLight Van Products:");
         for (Product product : shipment.getLightVanProducts()) {
             System.out.println(product);
-
-
-
-
-            
         }
 
         System.out.println("\nHeavy Van Products:");
