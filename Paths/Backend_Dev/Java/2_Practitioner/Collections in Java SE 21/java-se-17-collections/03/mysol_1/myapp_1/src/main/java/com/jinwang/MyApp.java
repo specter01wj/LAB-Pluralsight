@@ -29,6 +29,7 @@ public class MyApp {
         for (Product product : shipment.getLightVanProducts()) {
             System.out.println(product);
 
+
             
         }
 
