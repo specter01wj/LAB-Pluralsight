@@ -15,6 +15,7 @@ public class MyApp {
         shipment.add(new Product("Desktop", 30));
         shipment.add(new Product("Monitor", 18));
         shipment.add(new Product("Printer", 25));
+
         
         shipment.add(new Product("Mouse", 2));
 
