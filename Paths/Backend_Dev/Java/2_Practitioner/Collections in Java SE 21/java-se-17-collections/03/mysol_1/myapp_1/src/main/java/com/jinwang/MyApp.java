@@ -19,7 +19,6 @@ public class MyApp {
         System.out.println("Before prepare:");
         for (Product product : shipment) {
             System.out.println(product);
-            
         }
 
         // Prepare shipment (sort and split)
