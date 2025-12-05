@@ -19,6 +19,7 @@ public class MyApp {
 
 
 
+
         
         System.out.println("Before prepare:");
         for (Product product : shipment) {
