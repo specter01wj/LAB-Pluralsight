@@ -17,6 +17,7 @@ public class MyApp {
         shipment.add(new Product("Printer", 25));
         shipment.add(new Product("Mouse", 2));
 
+
         
         System.out.println("Before prepare:");
         for (Product product : shipment) {
