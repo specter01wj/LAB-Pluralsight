@@ -13,6 +13,7 @@ public class MyApp {
         // Add products
         shipment.add(new Product("Laptop", 15));
         shipment.add(new Product("Desktop", 30));
+
         
         shipment.add(new Product("Monitor", 18));
         shipment.add(new Product("Printer", 25));
