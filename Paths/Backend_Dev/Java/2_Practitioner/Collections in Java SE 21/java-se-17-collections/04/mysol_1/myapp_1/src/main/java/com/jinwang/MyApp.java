@@ -40,6 +40,7 @@ public class MyApp {
                 lookupTable.addProduct(product);
 
 
+
                 
             }
 
