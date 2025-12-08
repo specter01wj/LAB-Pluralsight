@@ -12,14 +12,19 @@ public class MyApp {
 
     public static void main(String[] args) {
         // LookupTableComparison
-        runLookups(new MapProductLookupTable());
-        runLookups(new NaiveProductLookupTable());
+        /*runLookups(new MapProductLookupTable());
+        runLookups(new NaiveProductLookupTable());*/
 
         // ViewsOverMaps
         var idToProduct = new HashMap<Integer, Product>();
         idToProduct.put(1, ProductFixtures.door);
         idToProduct.put(2, ProductFixtures.floorPanel);
         idToProduct.put(3, ProductFixtures.window);
+
+        var ids = idToProduct.keySet();
+        System.out.println(ids);
+        System.out.println(idToProduct);
+        System.out.println();
     }
 
     private static List<Product> generateProducts() {
