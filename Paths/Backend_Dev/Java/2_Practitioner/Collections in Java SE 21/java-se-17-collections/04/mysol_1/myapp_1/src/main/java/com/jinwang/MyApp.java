@@ -38,11 +38,6 @@ public class MyApp {
 
             for (Product product : products) {
                 lookupTable.addProduct(product);
-
-
-
-
-                
             }
 
             for (Product product : products) {
