@@ -25,6 +25,11 @@ public class MyApp {
         System.out.println(ids);
         System.out.println(idToProduct);
         System.out.println();
+
+        ids.remove(1);
+        idToProduct.remove(2);
+        System.out.println(ids);
+        System.out.println(idToProduct);
     }
 
     private static List<Product> generateProducts() {
