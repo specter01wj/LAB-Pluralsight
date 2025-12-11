@@ -16,6 +16,50 @@ public class MyApp {
         runLookups(new NaiveProductLookupTable());*/
 
         // ViewsOverMaps
+        ViewsOverMaps();
+
+        // AdvancedOperations
+    }
+
+    private static List<Product> generateProducts() {
+        final List<Product> products = new ArrayList<>();
+        final Random weightGenerator = new Random();
+
+        for (int i = 0; i < NUMBER_OF_PRODUCTS; i++) {
+            products.add(new Product(i, "Product" + i, 10 + weightGenerator.nextInt(10)));
+        }
+
+        Collections.shuffle(products);
+        Collections.shuffle(products);
+        Collections.shuffle(products);
+
+        return products;
+    }
+
+    private static void runLookups(final ProductLookupTable lookupTable) {
+        System.out.println("Running lookups with " + lookupTable.getClass().getSimpleName());
+
+        for (int i = 0; i < ITERATIONS; i++) {
+            long startTime = System.currentTimeMillis();
+
+            for (Product product : products) {
+                lookupTable.addProduct(product);
+            }
+
+            for (Product product : products) {
+                Product result = lookupTable.lookupById(product.getId());
+                if (result != product) {
+                    throw new IllegalStateException("Lookup Table returned wrong result for " + product);
+                }
+            }
+
+            lookupTable.clear();
+
+            System.out.println((System.currentTimeMillis() - startTime) + "ms");
+        }
+    }
+
+    private static void ViewsOverMaps() {
         // Step 1: Initialize map with some ProductFixtures
         var idToProduct = new HashMap<Integer, Product>();
         idToProduct.put(1, ProductFixtures.door);
@@ -66,45 +110,10 @@ public class MyApp {
         idToProduct.put(4, ProductFixtures.window);
         System.out.println("\nMap after adding new entry via put():");
         System.out.println(idToProduct);
-
     }
 
-    private static List<Product> generateProducts() {
-        final List<Product> products = new ArrayList<>();
-        final Random weightGenerator = new Random();
+    private static void AdvancedOperations() {
 
-        for (int i = 0; i < NUMBER_OF_PRODUCTS; i++) {
-            products.add(new Product(i, "Product" + i, 10 + weightGenerator.nextInt(10)));
-        }
-
-        Collections.shuffle(products);
-        Collections.shuffle(products);
-        Collections.shuffle(products);
-
-        return products;
-    }
-
-    private static void runLookups(final ProductLookupTable lookupTable) {
-        System.out.println("Running lookups with " + lookupTable.getClass().getSimpleName());
-
-        for (int i = 0; i < ITERATIONS; i++) {
-            long startTime = System.currentTimeMillis();
-
-            for (Product product : products) {
-                lookupTable.addProduct(product);
-            }
-
-            for (Product product : products) {
-                Product result = lookupTable.lookupById(product.getId());
-                if (result != product) {
-                    throw new IllegalStateException("Lookup Table returned wrong result for " + product);
-                }
-            }
-
-            lookupTable.clear();
-
-            System.out.println((System.currentTimeMillis() - startTime) + "ms");
-        }
     }
 
 }
