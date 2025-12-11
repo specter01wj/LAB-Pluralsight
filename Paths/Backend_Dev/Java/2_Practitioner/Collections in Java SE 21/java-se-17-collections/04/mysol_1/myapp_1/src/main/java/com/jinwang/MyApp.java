@@ -30,6 +30,14 @@ public class MyApp {
         idToProduct.remove(2);
         System.out.println(ids);
         System.out.println(idToProduct);
+
+        var products = idToProduct.values();
+        System.out.println(products);
+        System.out.println(idToProduct);
+
+        products.remove(ProductFixtures.window);
+        System.out.println(products);
+        System.out.println(idToProduct);
     }
 
     private static List<Product> generateProducts() {
