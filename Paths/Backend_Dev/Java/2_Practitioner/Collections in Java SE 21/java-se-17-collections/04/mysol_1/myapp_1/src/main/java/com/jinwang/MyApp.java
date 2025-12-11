@@ -58,6 +58,15 @@ public class MyApp {
             // entry.setValue(ProductFixtures.window);
         }
 
+
+        // var entry = Map.entry(3, ProductFixtures.window);
+        // entries.add(entry);
+        // ❌ You can't do this: entries.add(Map.entry(...))
+        // If you want to add a new entry:
+        idToProduct.put(4, ProductFixtures.window);
+        System.out.println("\nMap after adding new entry via put():");
+        System.out.println(idToProduct);
+
     }
 
     private static List<Product> generateProducts() {
