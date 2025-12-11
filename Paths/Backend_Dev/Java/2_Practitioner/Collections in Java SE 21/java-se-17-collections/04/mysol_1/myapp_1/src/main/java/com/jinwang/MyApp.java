@@ -47,8 +47,17 @@ public class MyApp {
         System.out.println("Map after product removal: " + idToProduct);
         System.out.println();
 
+        // Step 4: entrySet() view — allows access to key-value pairs
+        var entries = idToProduct.entrySet();
+        System.out.println("Entries in map:");
+        for (var entry : entries) {
+            System.out.println("- Entry: " + entry);
+            System.out.println("  Key: " + entry.getKey());
+            System.out.println("  Value: " + entry.getValue());
+            // Optionally modify the value (uncomment below)
+            // entry.setValue(ProductFixtures.window);
+        }
 
-        
     }
 
     private static List<Product> generateProducts() {
