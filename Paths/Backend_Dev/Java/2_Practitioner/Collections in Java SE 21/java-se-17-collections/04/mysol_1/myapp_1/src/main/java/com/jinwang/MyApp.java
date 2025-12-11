@@ -16,9 +16,10 @@ public class MyApp {
         runLookups(new NaiveProductLookupTable());*/
 
         // ViewsOverMaps
-        ViewsOverMaps();
+        // ViewsOverMaps();
 
         // AdvancedOperations
+        AdvancedOperations();
     }
 
     private static List<Product> generateProducts() {
@@ -113,7 +114,32 @@ public class MyApp {
     }
 
     private static void AdvancedOperations() {
+        // Step 1: Set up default product
+        Product defaultProduct = new Product(-1, "Whatever the customer wants", 100);
 
+        // Step 2: Initialize map with some sample products
+        Map<Integer, Product> idToProduct = new HashMap<>();
+        idToProduct.put(1, ProductFixtures.door);
+        idToProduct.put(2, ProductFixtures.floorPanel);
+        idToProduct.put(3, ProductFixtures.window);
+
+        // Step 3: Use getOrDefault - returns default if key not found
+        Product result = idToProduct.getOrDefault(10, defaultProduct);
+        System.out.println("getOrDefault (key 10): " + result);       // Should print defaultProduct
+        System.out.println("After get(10): " + idToProduct.get(10));   // Should be null
+        System.out.println();
+
+        // Step 4: Use computeIfAbsent - adds entry if key missing
+        result = idToProduct.computeIfAbsent(10, id -> new Product(id, "Custom Product", 10));
+        System.out.println("computeIfAbsent (key 10): " + result);     // Should print the newly created product
+        System.out.println("After computeIfAbsent, get(10): " + idToProduct.get(10));  // Should now exist
+        System.out.println();
+
+        // Step 5: Use replaceAll - increase all product weights by 10
+        idToProduct.replaceAll((key, oldProduct) ->
+                new Product(oldProduct.getId(), oldProduct.getName(), oldProduct.getWeight() + 10));
+        System.out.println("After replaceAll (weight +10):");
+        idToProduct.forEach((id, product) -> System.out.println(id + " -> " + product));
     }
 
 }
