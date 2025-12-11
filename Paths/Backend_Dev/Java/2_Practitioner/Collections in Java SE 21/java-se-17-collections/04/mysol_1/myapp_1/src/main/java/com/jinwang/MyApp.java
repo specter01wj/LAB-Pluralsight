@@ -19,7 +19,10 @@ public class MyApp {
         // ViewsOverMaps();
 
         // AdvancedOperations
-        AdvancedOperations();
+        // AdvancedOperations();
+
+        // MutableHashMapKeys
+        MutableHashMapKeys();
     }
 
     private static List<Product> generateProducts() {
@@ -140,6 +143,59 @@ public class MyApp {
                 new Product(oldProduct.getId(), oldProduct.getName(), oldProduct.getWeight() + 10));
         System.out.println("After replaceAll (weight +10):");
         idToProduct.forEach((id, product) -> System.out.println(id + " -> " + product));
+    }
+
+    private static void MutableHashMapKeys() {
+        Map<MutableString, String> brokenMap = new HashMap<>();
+
+        String value = "abc";
+        MutableString key = new MutableString(value);
+        brokenMap.put(key, value);
+
+        System.out.println("Initial get: " + brokenMap.get(key));
+        System.out.println("Map before mutation: " + brokenMap);
+
+        // Mutate the key *after* inserting into the map
+        key.set("def");
+
+        // Now get() fails — because hashCode & equals changed
+        System.out.println("\nAfter mutating the key...");
+        System.out.println("Get with mutated key: " + brokenMap.get(key));
+        System.out.println("Map after mutation: " + brokenMap);
+    }
+
+    private static class MutableString {
+        private String value;
+
+        public MutableString(String value) {
+            set(value);
+        }
+
+        public String get() {
+            return value;
+        }
+
+        public void set(String value) {
+            this.value = Objects.requireNonNull(value);
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (!(o instanceof MutableString)) return false;
+            MutableString that = (MutableString) o;
+            return value.equals(that.value);
+        }
+
+        @Override
+        public int hashCode() {
+            return value.hashCode();
+        }
+
+        @Override
+        public String toString() {
+            return value;
+        }
     }
 
 }
