@@ -16,28 +16,39 @@ public class MyApp {
         runLookups(new NaiveProductLookupTable());*/
 
         // ViewsOverMaps
+        // Step 1: Initialize map with some ProductFixtures
         var idToProduct = new HashMap<Integer, Product>();
         idToProduct.put(1, ProductFixtures.door);
         idToProduct.put(2, ProductFixtures.floorPanel);
         idToProduct.put(3, ProductFixtures.window);
 
+        // Step 2: keySet view (modifiable)
         var ids = idToProduct.keySet();
-        System.out.println(ids);
-        System.out.println(idToProduct);
+        System.out.println("Initial IDs: " + ids);
+        System.out.println("Initial Map: " + idToProduct);
         System.out.println();
 
+        // Remove an ID — reflects in the map
         ids.remove(1);
-        idToProduct.remove(2);
-        System.out.println(ids);
-        System.out.println(idToProduct);
+        // idToProduct.remove(2);
+        System.out.println("IDs after removal: " + ids);
+        System.out.println("Map after ID removal: " + idToProduct);
+        System.out.println();
 
+        // Step 3: values() view (modifiable)
         var products = idToProduct.values();
-        System.out.println(products);
-        System.out.println(idToProduct);
+        System.out.println("Current products: " + products);
+        System.out.println("Map before product removal: " + idToProduct);
+        System.out.println();
 
+        // Remove a product — reflects in the map
         products.remove(ProductFixtures.window);
-        System.out.println(products);
-        System.out.println(idToProduct);
+        System.out.println("Products after removal: " + products);
+        System.out.println("Map after product removal: " + idToProduct);
+        System.out.println();
+
+
+        
     }
 
     private static List<Product> generateProducts() {
