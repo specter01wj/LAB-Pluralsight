@@ -36,6 +36,7 @@ public class MyApp {
         Collections.shuffle(products);
         Collections.shuffle(products);
 
+
         
         Collections.shuffle(products);
 
