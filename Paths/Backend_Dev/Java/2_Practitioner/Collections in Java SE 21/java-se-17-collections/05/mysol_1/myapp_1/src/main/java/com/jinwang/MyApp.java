@@ -1,6 +1,9 @@
 package com.jinwang;
 
+import com.common.Product;
+
 import java.util.*;
+import static java.util.Comparator.comparingInt;
 
 public class MyApp {
 
