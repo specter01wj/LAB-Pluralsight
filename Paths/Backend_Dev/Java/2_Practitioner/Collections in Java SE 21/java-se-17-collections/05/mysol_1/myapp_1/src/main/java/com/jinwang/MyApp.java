@@ -9,7 +9,17 @@ public class MyApp {
 
     public static void main(String[] args) {
         // StreamProducts
+        Product door = new Product(1, "Wooden Door", 35);
+        Product floorPanel = new Product(2, "Floor Panel", 25);
+        Product window = new Product(3, "Glass Window", 10);
 
+        List<Product> products = List.of(door, floorPanel, window, floorPanel, window);
+
+        System.out.println("Using Streams:");
+        System.out.println(namesOfLightProductsSorted(products));
+
+        System.out.println("\nUsing Classic Loop:");
+        System.out.println(namesOfLightProductsSortedLoop(products));
     }
 
     // ✅ Stream version: concise and expressive
