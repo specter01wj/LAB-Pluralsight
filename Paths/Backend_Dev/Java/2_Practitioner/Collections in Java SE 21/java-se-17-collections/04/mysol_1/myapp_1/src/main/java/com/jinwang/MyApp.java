@@ -27,10 +27,6 @@ public class MyApp {
 
     private static List<Product> generateProducts() {
         final List<Product> products = new ArrayList<>();
-
-
-
-        
         final Random weightGenerator = new Random();
 
         for (int i = 0; i < NUMBER_OF_PRODUCTS; i++) {
