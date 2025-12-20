@@ -4,12 +4,13 @@ import com.common.Product;
 
 import java.util.*;
 import static java.util.Comparator.comparingInt;
+import static java.util.stream.Collectors.*;
 
 public class MyApp {
 
     public static void main(String[] args) {
         // StreamProducts
-        Product door = new Product(1, "Wooden Door", 35);
+        /*Product door = new Product(1, "Wooden Door", 35);
         Product floorPanel = new Product(2, "Floor Panel", 25);
         Product window = new Product(3, "Glass Window", 10);
 
@@ -19,7 +20,28 @@ public class MyApp {
         System.out.println(namesOfLightProductsSorted(products));
 
         System.out.println("\nUsing Classic Loop:");
-        System.out.println(namesOfLightProductsSortedLoop(products));
+        System.out.println(namesOfLightProductsSortedLoop(products));*/
+
+        // EnterTheCollector
+        // Step 1: Sample data setup
+        Product door = new Product(1, "Wooden Door", 35);
+        Product floorPanel = new Product(2, "Floor Panel", 25);
+        Product window = new Product(3, "Glass Window", 10);
+
+        List<Product> products = List.of(
+                door, floorPanel, window, floorPanel, window, floorPanel
+        );
+
+        // Step 2: Stream pipeline
+        Map<String, Long> lightProductCounts = products.stream()
+                .filter(product -> product.getWeight() < 30)                 // Filter light products (<30kg)
+                .sorted(comparingInt(Product::getWeight))                    // Sort by weight (ascending)
+                .collect(groupingBy(Product::getName, counting()));          // Group by name and count occurrences
+
+        // Step 3: Output result
+        System.out.println("Grouped and counted light products:");
+        lightProductCounts.forEach((name, count) ->
+                System.out.println("- " + name + ": " + count));
     }
 
     // ✅ Stream version: concise and expressive
