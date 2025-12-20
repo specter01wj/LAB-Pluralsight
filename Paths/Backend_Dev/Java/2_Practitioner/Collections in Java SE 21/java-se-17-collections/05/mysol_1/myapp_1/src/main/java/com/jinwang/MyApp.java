@@ -16,6 +16,7 @@ public class MyApp {
         List<Product> products = List.of(door, floorPanel, window, floorPanel, window);
 
         System.out.println("Using Streams:");
+        
         System.out.println(namesOfLightProductsSorted(products));
 
         System.out.println("\nUsing Classic Loop:");
