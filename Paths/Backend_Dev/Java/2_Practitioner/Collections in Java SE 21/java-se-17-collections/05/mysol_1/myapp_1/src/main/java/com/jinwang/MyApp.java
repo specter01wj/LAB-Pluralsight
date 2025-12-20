@@ -18,6 +18,7 @@ public class MyApp {
         System.out.println("Using Streams:");
 
 
+
         
         System.out.println(namesOfLightProductsSorted(products));
 
