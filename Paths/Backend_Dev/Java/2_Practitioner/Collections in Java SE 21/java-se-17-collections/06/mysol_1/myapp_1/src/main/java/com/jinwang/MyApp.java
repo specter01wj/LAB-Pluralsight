@@ -4,6 +4,7 @@ import com.common.Product;
 import com.common.Shipment;
 
 import java.util.*;
+import java.util.stream.IntStream;
 
 public class MyApp {
 
@@ -37,6 +38,8 @@ public class MyApp {
 
         System.out.println("Full Shipment Contents:");
         shipment.forEach(System.out::println);*/
+
+
 
         // UnmodifiableVsImmutable
         // Step 1: Create a mutable map
@@ -73,6 +76,18 @@ public class MyApp {
         // Step 7: Creating an immutable map using Map.of (Java 9+)
         Map<String, Integer> countryToPopulation = Map.of("UK", 67, "USA", 328);
         // countryToPopulation.put("Germany", 83); // 🚫 UnsupportedOperationException
+
+
+
+        // CollectionOperations
+
+    }
+
+    // Generates a list of characters from A to Z
+    private static List<Character> makeAlphabet() {
+        return IntStream.rangeClosed('A', 'Z')
+                .mapToObj(c -> (char) c)
+                .toList(); // Java 16+, otherwise collect(Collectors.toList())
     }
 
 }
