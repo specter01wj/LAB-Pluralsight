@@ -13,7 +13,7 @@ public class MyApp {
 
     public static void main(String[] args) {
         // ShipmentsBreaker
-        Shipment shipment = new Shipment();
+        /*Shipment shipment = new Shipment();
 
         shipment.add(door);
         shipment.add(window);
@@ -36,8 +36,43 @@ public class MyApp {
         System.out.println("Light Van Products (after attempted removal): " + shipment.getLightVanProducts());
 
         System.out.println("Full Shipment Contents:");
-        shipment.forEach(System.out::println);
+        shipment.forEach(System.out::println);*/
 
+        // UnmodifiableVsImmutable
+        // Step 1: Create a mutable map
+        Map<String, Integer> mutableCountryToPopulation = new HashMap<>();
+        mutableCountryToPopulation.put("UK", 67);
+        mutableCountryToPopulation.put("USA", 328);
+        // Map.copyOf() does not allow null values:
+        // mutableCountryToPopulation.put("Wessex", null);  // 🚫 would throw NullPointerException
+
+        // Step 2: Create unmodifiable and immutable views
+        Map<String, Integer> unmodifiableCountryToPopulation =
+                Collections.unmodifiableMap(mutableCountryToPopulation);
+
+        Map<String, Integer> copiedCountryToPopulation =
+                Map.copyOf(mutableCountryToPopulation);  // Immutable snapshot
+
+        // Step 3: Attempting mutation directly (commented out to prevent crash)
+        // unmodifiableCountryToPopulation.put("Germany", 83); // 🚫 UnsupportedOperationException
+        // copiedCountryToPopulation.put("Germany", 83);       // 🚫 UnsupportedOperationException
+
+        // Step 4: Print before mutating original map
+        System.out.println("Before original map mutation:");
+        System.out.println("copiedCountryToPopulation = " + copiedCountryToPopulation);
+        System.out.println("unmodifiableCountryToPopulation = " + unmodifiableCountryToPopulation);
+
+        // Step 5: Mutate the original (mutable) map
+        mutableCountryToPopulation.put("Germany", 83); // ✅ allowed on original
+
+        // Step 6: Print again after mutation
+        System.out.println("\nAfter original map mutation:");
+        System.out.println("copiedCountryToPopulation = " + copiedCountryToPopulation);            // ❌ does NOT include Germany
+        System.out.println("unmodifiableCountryToPopulation = " + unmodifiableCountryToPopulation); // ✅ includes Germany
+
+        // Step 7: Creating an immutable map using Map.of (Java 9+)
+        Map<String, Integer> countryToPopulation = Map.of("UK", 67, "USA", 328);
+        // countryToPopulation.put("Germany", 83); // 🚫 UnsupportedOperationException
     }
 
 }
