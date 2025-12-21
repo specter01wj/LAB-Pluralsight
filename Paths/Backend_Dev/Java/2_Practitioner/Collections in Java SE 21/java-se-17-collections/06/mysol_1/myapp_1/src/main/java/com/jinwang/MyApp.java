@@ -107,7 +107,34 @@ public class MyApp {
 
 
         // SequencedCollections
+        List<Integer> list = List.of(1, 2, 3);                           // Immutable sequenced List
+        SortedSet<Integer> sortedSet = new TreeSet<>(list);             // Naturally ordered Set
+        Deque<Integer> queue = new ArrayDeque<>(list);                  // Double-ended queue
+        LinkedHashSet<Integer> orderedSet = new LinkedHashSet<>(list);  // Insertion-ordered Set
 
+        System.out.println("=== (0) Iteration (sequenced by design) ===");
+        System.out.println("List:");
+        list.forEach(System.out::println);
+
+        System.out.println("SortedSet (TreeSet):");
+        sortedSet.forEach(System.out::println);
+
+        System.out.println("\n=== (1) First Element ===");
+        System.out.println("List.getFirst():         " + list.getFirst());
+        System.out.println("SortedSet.getFirst():    " + sortedSet.getFirst());
+        System.out.println("Queue.getFirst():        " + queue.getFirst());
+        System.out.println("LinkedHashSet.getFirst(): " + orderedSet.getFirst());
+
+        System.out.println("\n=== (2) Last Element ===");
+        System.out.println("List.getLast():          " + list.getLast());
+        System.out.println("SortedSet.getLast():     " + sortedSet.getLast());
+        System.out.println("Queue.getLast():         " + queue.getLast());
+        System.out.println("LinkedHashSet.getLast(): " + orderedSet.getLast());
+
+        System.out.println("\n=== (3) Reversed Iteration ===");
+        for (var x : list.reversed()) {
+            System.out.println(x);
+        }
     }
 
     // Generates a list of characters from A to Z
