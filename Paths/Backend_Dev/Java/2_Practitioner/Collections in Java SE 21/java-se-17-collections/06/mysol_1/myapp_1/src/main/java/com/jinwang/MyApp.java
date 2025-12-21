@@ -15,7 +15,8 @@ public class MyApp {
 
     public static void main(String[] args) {
         // ShipmentsBreaker
-        /*Shipment shipment = new Shipment();
+        /*
+        Shipment shipment = new Shipment();
 
         shipment.add(door);
         shipment.add(window);
@@ -38,7 +39,8 @@ public class MyApp {
         System.out.println("Light Van Products (after attempted removal): " + shipment.getLightVanProducts());
 
         System.out.println("Full Shipment Contents:");
-        shipment.forEach(System.out::println);*/
+        shipment.forEach(System.out::println);
+        */
 
 
 
@@ -83,6 +85,7 @@ public class MyApp {
 
 
         // CollectionOperations
+        /*
         List<Product> products = new ArrayList<>(List.of(window, floorPanel, door));
         System.out.println("Original product list:       " + products);
 
@@ -100,6 +103,11 @@ public class MyApp {
 
         int index = Collections.binarySearch(alphabet, 'M');
         System.out.println("Index of 'M':                " + index);
+        */
+
+
+        // SequencedCollections
+
     }
 
     // Generates a list of characters from A to Z
