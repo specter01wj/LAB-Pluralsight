@@ -4,6 +4,7 @@ import com.common.Product;
 import com.common.Shipment;
 
 import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.IntStream;
 
 public class MyApp {
@@ -80,7 +81,23 @@ public class MyApp {
 
 
         // CollectionOperations
+        List<Product> products = new ArrayList<>(List.of(window, floorPanel, door));
+        System.out.println("Original product list:       " + products);
 
+        // Rotate: elements move 2 places to the right
+        Collections.rotate(products, 2);
+        System.out.println("After rotate(+2):            " + products);
+
+        // Shuffle: random order using thread-safe RNG
+        Collections.shuffle(products, ThreadLocalRandom.current());
+        System.out.println("After shuffle(random order): " + products);
+
+        // Alphabet generation and binary search
+        List<Character> alphabet = makeAlphabet();
+        System.out.println("Alphabet:                    " + alphabet);
+
+        int index = Collections.binarySearch(alphabet, 'M');
+        System.out.println("Index of 'M':                " + index);
     }
 
     // Generates a list of characters from A to Z
