@@ -8,6 +8,7 @@ import java.util.*;
 public class MyApp {
 
     public static void main(String[] args) {
+        // ProductCatalogue
         // Create products
         Product door = new Product("Wooden Door", 35);
         Product window = new Product("Glass Window", 10);
