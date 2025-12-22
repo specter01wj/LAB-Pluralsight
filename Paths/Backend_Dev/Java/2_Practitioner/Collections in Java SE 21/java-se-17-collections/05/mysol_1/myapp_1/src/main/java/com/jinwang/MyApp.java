@@ -28,6 +28,7 @@ public class MyApp {
         Product floorPanel = new Product(2, "Floor Panel", 25);
 
 
+
         
         Product window = new Product(3, "Glass Window", 10);
 
