@@ -26,11 +26,6 @@ public class MyApp {
         // Step 1: Sample data setup
         Product door = new Product(1, "Wooden Door", 35);
         Product floorPanel = new Product(2, "Floor Panel", 25);
-
-
-
-
-        
         Product window = new Product(3, "Glass Window", 10);
 
         List<Product> products = List.of(
