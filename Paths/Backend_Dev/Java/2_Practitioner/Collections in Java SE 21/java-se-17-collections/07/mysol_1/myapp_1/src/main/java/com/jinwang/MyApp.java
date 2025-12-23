@@ -10,7 +10,7 @@ public class MyApp {
     public static void main(String[] args) {
         // ProductCatalogue
         // Create products
-        Product door = new Product("Wooden Door", 35);
+        /*Product door = new Product("Wooden Door", 35);
         Product window = new Product("Glass Window", 10);
         Product floorPanel = new Product("Floor Panel", 25);
 
@@ -33,6 +33,30 @@ public class MyApp {
         for (Product product : catalogue) {
             System.out.println(product);
         }
+        */
+
+
+
+        // WeightAwareProductCatalogue
+        Product door = new Product("Wooden Door", 35);
+        Product window = new Product("Glass Window", 10);
+        Product floorPanel = new Product("Floor Panel", 25);
+
+        Supplier supplier = new Supplier("Supplier One");
+        supplier.getProducts().add(door);
+        supplier.getProducts().add(window);
+        supplier.getProducts().add(floorPanel);
+
+        WeightAwareProductCatalogue catalogue = new WeightAwareProductCatalogue();
+        catalogue.addSupplier(supplier);
+
+        System.out.println("All products (sorted by weight):");
+        for (Product product : catalogue) {
+            System.out.println(product);
+        }
+
+        System.out.println("\nProducts lighter than: " + door);
+        catalogue.findLighterProducts(door).forEach(System.out::println);
     }
 
 }
