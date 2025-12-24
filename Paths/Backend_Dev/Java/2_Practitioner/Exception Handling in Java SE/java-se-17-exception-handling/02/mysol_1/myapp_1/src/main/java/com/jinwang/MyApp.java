@@ -7,7 +7,18 @@ import java.io.IOException;
 public class MyApp {
 
     public static void main(String[] args) {
-        if (args.length == 0) {
+        // Working with try/catch
+        int i = 12, j = 2;
+        try {
+            int result = i / (j - 2);
+            System.out.println(result);
+        } catch (Exception ex) {
+            System.out.println("Error: " + ex.getMessage());
+            ex.printStackTrace();
+        }
+
+
+        /*if (args.length == 0) {
             System.err.println("Please provide the input file as the first argument.");
             return;
         }
@@ -26,7 +37,7 @@ public class MyApp {
         } catch (IOException e) {
             System.err.println("Failed to read file: " + fileName);
             System.err.println("Error: " + e.getMessage());
-        }
+        }*/
     }
 
     private static void performOperation(String inputLine) {
