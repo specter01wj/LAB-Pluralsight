@@ -16,6 +16,7 @@ public class MyApp {
             System.out.println("Error: " + ex.getMessage());
             ex.printStackTrace();
         }
+        System.out.println("Continue work!");
 
 
         /*if (args.length == 0) {
