@@ -9,7 +9,7 @@ public class MyApp {
 
     public static void main(String[] args) {
         // Exception Can be handled by Type
-        int i = 12, j = 2;
+        /*int i = 12, j = 2;
         try {
             int result = i / (j - 2);
             System.out.println(result);
@@ -19,9 +19,9 @@ public class MyApp {
             System.out.println("Error: " + ex.getMessage());
             ex.printStackTrace();
         }
-        System.out.println("Continue work!");
+        System.out.println("Continue work!");*/
 
-        /*if (args.length == 0) {
+        if (args.length == 0) {
             System.out.println("Please provide the input file name.");
             return;
         }
@@ -40,7 +40,7 @@ public class MyApp {
         } catch (Exception ex) {
             // Catch-all for unexpected runtime issues
             System.out.println("Error processing file: " + ex.getMessage());
-        }*/
+        }
     }
 
     private static void processFile(BufferedReader reader) throws IOException {
