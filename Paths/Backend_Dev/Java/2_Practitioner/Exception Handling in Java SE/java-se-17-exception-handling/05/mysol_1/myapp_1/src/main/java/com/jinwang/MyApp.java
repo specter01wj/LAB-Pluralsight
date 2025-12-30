@@ -18,7 +18,6 @@ public class MyApp {
 
         } catch (IOException ex) {
             System.out.println("I/O error: " + ex.getMessage());
-
         } catch (Exception ex) {
             System.out.println("Unexpected error: " + ex.getMessage());
         }
