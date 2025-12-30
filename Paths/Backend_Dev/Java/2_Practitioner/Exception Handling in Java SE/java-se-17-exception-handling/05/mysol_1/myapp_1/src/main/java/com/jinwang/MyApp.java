@@ -58,7 +58,6 @@ public class MyApp {
 
         } catch (InvalidStatementException ex) {
             throw ex; // already meaningful
-
         } catch (Exception ex) {
             throw new InvalidStatementException(
                     "Error processing statement", ex);
