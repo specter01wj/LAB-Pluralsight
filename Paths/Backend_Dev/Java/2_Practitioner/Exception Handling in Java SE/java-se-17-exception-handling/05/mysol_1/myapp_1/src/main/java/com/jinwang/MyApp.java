@@ -15,7 +15,6 @@ public class MyApp {
 
         try (BufferedReader reader = new BufferedReader(new FileReader(args[0]))) {
             processFile(reader);
-
         } catch (IOException ex) {
             System.out.println("I/O error: " + ex.getMessage());
         } catch (Exception ex) {
