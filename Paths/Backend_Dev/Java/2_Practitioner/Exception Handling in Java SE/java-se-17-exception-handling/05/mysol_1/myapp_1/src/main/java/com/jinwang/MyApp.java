@@ -55,6 +55,7 @@ public class MyApp {
 
             int result = execute(operation, leftVal, rightVal);
 
+
             
             System.out.println(inputLine + " = " + result);
 
