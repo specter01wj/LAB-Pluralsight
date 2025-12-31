@@ -54,6 +54,7 @@ public class MyApp {
             int rightVal = valueFromWord(parts[2]);
 
             int result = execute(operation, leftVal, rightVal);
+            
             System.out.println(inputLine + " = " + result);
 
         } catch (InvalidStatementException ex) {
