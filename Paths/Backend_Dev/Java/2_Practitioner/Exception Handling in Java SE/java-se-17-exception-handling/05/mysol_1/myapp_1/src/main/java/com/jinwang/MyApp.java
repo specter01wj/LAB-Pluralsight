@@ -54,6 +54,7 @@ public class MyApp {
 
 
 
+
             
             int rightVal = valueFromWord(parts[2]);
 
