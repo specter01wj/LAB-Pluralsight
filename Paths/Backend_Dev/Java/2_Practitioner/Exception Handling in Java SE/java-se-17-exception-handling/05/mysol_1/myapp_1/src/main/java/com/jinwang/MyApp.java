@@ -53,6 +53,7 @@ public class MyApp {
             int leftVal = valueFromWord(parts[1]);
 
 
+
             
             int rightVal = valueFromWord(parts[2]);
 
