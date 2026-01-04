@@ -51,6 +51,7 @@ public class MyApp {
                     MathOperation.valueOf(parts[0].toUpperCase());
 
             int leftVal = valueFromWord(parts[1]);
+
             
             int rightVal = valueFromWord(parts[2]);
 
