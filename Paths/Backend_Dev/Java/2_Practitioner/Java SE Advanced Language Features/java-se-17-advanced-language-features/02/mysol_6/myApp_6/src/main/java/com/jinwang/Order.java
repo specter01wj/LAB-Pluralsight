@@ -7,14 +7,13 @@ import static com.jinwang.Validation.checkThat;
 
 public record Order(long id, Customer customer, LocalDateTime dateTime, List<OrderLine> lines) {
 
-    public Order(long id, Customer customer, LocalDateTime dateTime, List<OrderLine> lines) {
-        checkThat(customer != null, "Customer must not be null");
-        checkThat(dateTime != null, "Date/time must not be null");
-        checkThat(lines != null && !lines.isEmpty(), "Order lines must not be null or empty");
+    // Compact constructor: validates inputs and defensively copies the mutable list
+    public Order {
+        checkThat(customer != null, "customer must not be null");
+        checkThat(dateTime != null, "dateTime must not be null");
+        checkThat(lines != null && !lines.isEmpty(), "lines must not be null or empty");
 
-        this.id = id;
-        this.customer = customer;
-        this.dateTime = dateTime;
-        this.lines = List.copyOf(lines);
+        // ⚠️ Create a defensive unmodifiable copy
+        lines = List.copyOf(lines); // Valid syntax: reassignment to parameter before implicit assignment
     }
 }
