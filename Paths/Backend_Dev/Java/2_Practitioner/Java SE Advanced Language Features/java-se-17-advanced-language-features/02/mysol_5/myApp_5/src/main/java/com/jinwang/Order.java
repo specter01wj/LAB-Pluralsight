@@ -3,6 +3,8 @@ package com.jinwang;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import static com.jinwang.Validation.checkThat;
+
 public record Order(long id, Customer customer, LocalDateTime dateTime, List<OrderLine> lines) {
 
     // Canonical constructor for validation and defensive copy
