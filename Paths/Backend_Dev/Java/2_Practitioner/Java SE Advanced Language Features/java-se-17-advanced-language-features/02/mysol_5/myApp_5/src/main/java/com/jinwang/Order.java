@@ -7,12 +7,14 @@ import static com.jinwang.Validation.checkThat;
 
 public record Order(long id, Customer customer, LocalDateTime dateTime, List<OrderLine> lines) {
 
-    // Canonical constructor for validation and defensive copy
-    public Order {
+    public Order(long id, Customer customer, LocalDateTime dateTime, List<OrderLine> lines) {
         checkThat(customer != null, "Customer must not be null");
         checkThat(dateTime != null, "Date/time must not be null");
         checkThat(lines != null && !lines.isEmpty(), "Order lines must not be null or empty");
 
-        this.lines = List.copyOf(lines); // defensive unmodifiable copy
+        this.id = id;
+        this.customer = customer;
+        this.dateTime = dateTime;
+        this.lines = List.copyOf(lines);
     }
 }
