@@ -23,6 +23,7 @@ public class MyApp {
                 .withLine(new OrderLine(product1, 6, new BigDecimal("5.94")))
 
 
+
                 
                 .withLine(new OrderLine(product2, 2, new BigDecimal("2.50")));
 
