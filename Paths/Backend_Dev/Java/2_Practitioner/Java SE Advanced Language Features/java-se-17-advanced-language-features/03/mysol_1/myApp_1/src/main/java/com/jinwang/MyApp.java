@@ -8,11 +8,6 @@ public class MyApp {
 
     public static void main(String[] args) {
         var customer = new Customer(500567L, "Joe Smith", "joe.smith@example.com");
-
-
-
-
-        
         var product = new Product(100123L, "Apples", "Tasty red apples");
 
         var order = new Order(200201L, customer, LocalDateTime.now(), List.of(
