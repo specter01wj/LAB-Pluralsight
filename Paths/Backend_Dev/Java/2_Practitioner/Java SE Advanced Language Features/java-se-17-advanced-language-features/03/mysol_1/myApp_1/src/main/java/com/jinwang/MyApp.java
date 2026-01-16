@@ -10,6 +10,7 @@ public class MyApp {
         var customer = new Customer(500567L, "Joe Smith", "joe.smith@example.com");
 
 
+
         
         var product = new Product(100123L, "Apples", "Tasty red apples");
 
