@@ -1,6 +1,6 @@
 package com.model;
 
-import static com.jinwang.Validation.checkThat;
+import static com.Validation.checkThat;
 
 public record Address(String street, String houseNumber, String city, String country) {
 

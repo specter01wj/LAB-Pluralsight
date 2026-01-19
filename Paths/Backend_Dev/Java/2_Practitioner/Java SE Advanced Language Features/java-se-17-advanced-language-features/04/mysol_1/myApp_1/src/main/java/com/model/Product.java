@@ -1,6 +1,6 @@
 package com.model;
 
-import static com.jinwang.Validation.checkThat;
+import static com.Validation.checkThat;
 
 public record Product(long id, String name, String description) {
 

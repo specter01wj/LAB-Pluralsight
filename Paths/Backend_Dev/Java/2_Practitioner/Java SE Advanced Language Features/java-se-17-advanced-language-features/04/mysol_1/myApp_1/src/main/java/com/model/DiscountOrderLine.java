@@ -2,7 +2,7 @@ package com.model;
 
 import java.math.BigDecimal;
 
-import static com.jinwang.Validation.checkThat;
+import static com.Validation.checkThat;
 
 // An order line that represents a discount, identified by a code and amount.
 public record DiscountOrderLine(String discountCode, BigDecimal amount) implements OrderLine {

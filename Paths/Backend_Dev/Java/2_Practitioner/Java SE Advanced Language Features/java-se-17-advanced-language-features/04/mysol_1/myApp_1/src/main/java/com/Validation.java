@@ -1,4 +1,4 @@
-package com.jinwang;
+package com;
 
 public final class Validation {
 

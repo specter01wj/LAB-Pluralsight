@@ -3,7 +3,7 @@ package com.model;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import static com.jinwang.Validation.checkThat;
+import static com.Validation.checkThat;
 
 public record Order(long id, Customer customer, LocalDateTime dateTime, List<OrderLine> lines) {
 

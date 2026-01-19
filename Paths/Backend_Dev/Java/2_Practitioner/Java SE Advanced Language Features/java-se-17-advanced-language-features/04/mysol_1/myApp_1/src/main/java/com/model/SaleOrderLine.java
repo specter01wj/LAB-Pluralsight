@@ -2,7 +2,7 @@ package com.model;
 
 import java.math.BigDecimal;
 
-import static com.jinwang.Validation.checkThat;
+import static com.Validation.checkThat;
 
 // An order line that represents the sale of a product in a given quantity and amount.
 public record SaleOrderLine(Product product, int quantity, BigDecimal amount) implements OrderLine {
