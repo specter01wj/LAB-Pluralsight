@@ -12,7 +12,8 @@ public class MyApp {
         var product1 = new Product(100123L, "Apples", "Tasty red apples");
         var product2 = new Product(100346L, "Bread", "Whole-wheat loaf");
 
-        var customer = new Customer(500567L, "Joe Smith", "joe.smith@example.com");
+        var address = new Address("Main Street", "123A", "Springfield", "USA");
+        var customer = new Customer(500567L, "Joe Smith", "joe.smith@example.com", address);
 
         var order = new Order(200201L, customer, LocalDateTime.now(), List.of(
                 new SaleOrderLine(product1, 6, new BigDecimal("5.94")),
