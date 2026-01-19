@@ -1,10 +1,10 @@
 package com.jinwang;
 
 
-import com.pluralsight.advancedjava.examples.model.DiscountOrderLine;
-import com.pluralsight.advancedjava.examples.model.Order;
-import com.pluralsight.advancedjava.examples.model.OrderLine;
-import com.pluralsight.advancedjava.examples.model.SaleOrderLine;
+import com.model.DiscountOrderLine;
+import com.model.Order;
+import com.model.OrderLine;
+import com.model.SaleOrderLine;
 
 import java.math.BigDecimal;
 
