@@ -11,7 +11,7 @@ public class MyApp {
         var tx2 = new Refund(1001L, new BigDecimal("5.00"), LocalDateTime.now());
         var tx3 = new Purchase(1002L, new BigDecimal("15.00"), LocalDateTime.now());
 
-        var transactions = List.of(tx1, tx2, tx3);
+        List<Transaction> transactions = List.of(tx1, tx2, tx3);
 
         var service = new TransactionService();
         var result = service.calculateNetAmount(transactions);
