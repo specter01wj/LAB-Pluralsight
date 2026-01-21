@@ -21,6 +21,7 @@ public class MyApp {
         ));
 
         var service = new OrderService();
+        
         var total = service.calculateTotalAmount(order);
 
         System.out.println("Total amount: " + total);
