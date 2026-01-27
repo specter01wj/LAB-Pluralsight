@@ -5,7 +5,7 @@ import java.util.List;
 
 public class MyApp {
 
-    public static main(String[] args) {
+    public static void main(String[] args) {
         System.out.println(">>> Advanced Generics: Invariance of Generics <<<\n");
 
         System.out.println("Step 1: Create List<Dog>");
@@ -16,13 +16,17 @@ public class MyApp {
 
         System.out.println("\nStep 2: Try assigning List<Dog> to List<Animal>");
         System.out.println("⛔ Not allowed! Generics are invariant.");
-        System.out.println("// List<Animal> animals = dogs; // ❌ Compile Error");
+        System.out.println("// List<Animal> animals = dogs; // ❌ Compile-time error");
 
-        System.out.println("\nStep 3: Why is it unsafe?");
-        System.out.println("If allowed, you could add a Cat to List<Dog>, which breaks type safety.");
-        System.out.println("// animals.add(new Cat(\"Luna\")); // ❌ Logic Error\n");
+        System.out.println("\nStep 3: Why is this unsafe?");
+        System.out.println("If this were allowed, we could do:");
+        System.out.println("// animals.add(new Cat(\"Luna\"));");
+        System.out.println("This would put a Cat into a List<Dog> — type safety is broken.");
 
-        System.out.println("✅ Study complete.\n");
+        System.out.println("\n✅ Key takeaway:");
+        System.out.println("Even though Dog extends Animal, List<Dog> does NOT extend List<Animal>.");
+
+        System.out.println("\n✅ Study complete.");
     }
 
 }
