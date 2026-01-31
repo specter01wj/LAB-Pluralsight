@@ -11,9 +11,19 @@ public class MyApp {
 
         var names = new ArrayList<>(List.of("Joe", "Susan", "John", "Louise"));
 
+        // Sorting the list of names by length using an anonymous class.
+        // We need six lines of code, but most of it is "plumbing" code.
+        names.sort(new Comparator<String>() {
+            @Override
+            public int compare(String first, String second) {
+                return Integer.compare(first.length(), second.length());
+            }
+        });
+
+        // Using a lambda expression instead of an anonymous class.
         names.sort((first, second) -> Integer.compare(first.length(), second.length()));
 
-        names.forEach(name -> System.out.println("• " + name));
+        System.out.println(names);
 
         System.out.println("\n✅ Example 1 complete.");
     }
