@@ -22,10 +22,11 @@ public class MyApp {
         System.out.println("Dogs list:");
         dogs.forEach(d -> System.out.println("• Dog: " + d.name()));
 
-        List<Cat> cats = (List<Cat>) list;
-        System.out.println("Cats list:");
-        cats.forEach(c -> System.out.println("• Cat: " + c.name())); // Unsafe cast; will not fail at runtime unless mutation occurs
+//        List<Cat> cats = (List<Cat>) list;
+//        System.out.println("Cats list:");
+//        cats.forEach(c -> System.out.println("• Cat: " + c.name())); // Unsafe cast; will not fail at runtime unless mutation occurs
 
         System.out.println("\n✅ Exercise 5 complete.");
     }
+
 }
