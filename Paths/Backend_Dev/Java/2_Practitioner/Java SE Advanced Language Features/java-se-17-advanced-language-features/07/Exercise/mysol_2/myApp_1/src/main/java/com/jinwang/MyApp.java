@@ -9,9 +9,9 @@ public class MyApp {
         System.out.println(">>> Chapter 7 – Exercise 2: Standard Functional Interfaces <<<");
 
         var customers = List.of(
-                new Customer("Joe Smith", "joe.smith@example.com"),
-                new Customer("Susan Miller", "susan.miller@example.com"),
-                new Customer("Will Johnson", "will.johnson@example.com")
+                new Customer(1L, "Joe Smith", "joe.smith@example.com"),
+                new Customer(2L, "Susan Miller", "susan.miller@example.com"),
+                new Customer(3L, "Will Johnson", "will.johnson@example.com")
         );
 
         String title = "Exclusive Deal";
