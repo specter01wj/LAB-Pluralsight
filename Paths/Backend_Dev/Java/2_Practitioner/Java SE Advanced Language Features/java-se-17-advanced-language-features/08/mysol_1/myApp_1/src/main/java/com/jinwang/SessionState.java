@@ -1,7 +1,7 @@
 package com.jinwang;
 
-import com.pluralsight.advancedjava.examples.example01.model.Customer;
-import com.pluralsight.advancedjava.examples.example01.model.Order;
+import com.jinwang.model.Customer;
+import com.jinwang.model.Order;
 
 public class SessionState {
 

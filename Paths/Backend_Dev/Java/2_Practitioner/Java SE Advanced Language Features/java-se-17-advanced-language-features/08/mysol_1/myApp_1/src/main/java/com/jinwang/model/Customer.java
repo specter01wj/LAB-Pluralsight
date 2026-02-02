@@ -2,7 +2,7 @@ package com.jinwang.model;
 
 import java.util.Map;
 
-import static com.jinwang.Validation.checkThat;
+import static com.jinwang.common.Validation.checkThat;
 
 public record Customer(long id, String name, String emailAddress) {
 

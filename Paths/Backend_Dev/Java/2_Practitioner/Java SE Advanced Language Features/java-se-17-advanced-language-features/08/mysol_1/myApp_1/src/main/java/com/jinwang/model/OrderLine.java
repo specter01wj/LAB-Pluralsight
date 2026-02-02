@@ -2,7 +2,7 @@ package com.jinwang.model;
 
 import java.math.BigDecimal;
 
-import static com.jinwang.Validation.checkThat;
+import static com.jinwang.common.Validation.checkThat;
 
 public record OrderLine(Product product, int quantity, BigDecimal amount) {
 

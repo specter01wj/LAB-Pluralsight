@@ -1,6 +1,6 @@
 package com.jinwang;
 
-import ClassUtils;
+import com.jinwang.common.ClassUtils;
 import com.jinwang.commands.CommandExecutor;
 
 import java.io.IOException;

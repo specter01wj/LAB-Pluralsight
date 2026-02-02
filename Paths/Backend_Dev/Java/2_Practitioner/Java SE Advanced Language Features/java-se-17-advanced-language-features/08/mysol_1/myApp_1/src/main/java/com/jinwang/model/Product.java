@@ -3,7 +3,7 @@ package com.jinwang.model;
 import java.math.BigDecimal;
 import java.util.Map;
 
-import static com.jinwang.Validation.checkThat;
+import static com.jinwang.common.Validation.checkThat;
 
 public record Product(long id, String name, String description, BigDecimal price) {
 

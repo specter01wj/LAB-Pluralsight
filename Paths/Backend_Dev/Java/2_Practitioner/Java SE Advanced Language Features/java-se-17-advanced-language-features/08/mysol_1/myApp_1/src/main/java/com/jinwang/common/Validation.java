@@ -1,3 +1,5 @@
+package com.jinwang.common;
+
 /**
  * Utility method for validation, used in the examples.
  */
