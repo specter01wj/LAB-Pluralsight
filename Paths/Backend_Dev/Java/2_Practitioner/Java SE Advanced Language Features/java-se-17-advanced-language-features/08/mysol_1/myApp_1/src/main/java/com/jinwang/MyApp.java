@@ -9,7 +9,7 @@ import java.util.*;
 public class MyApp {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        Set<String> classNames = ClassUtils.findClassNames("com.pluralsight.advancedjava.examples.example01.commands");
+        Set<String> classNames = ClassUtils.findClassNames("com.jinwang.commands");
 
         List<Class<?>> commandClasses = new ArrayList<>();
         for (String className : classNames) {
