@@ -2,7 +2,6 @@ package com.jinwang;
 
 import java.time.LocalDate;
 
-@Loggable // ✅ You can annotate the whole class too if desired, but not required
 public class Customer {
 
     @Loggable // ✅ Field annotation without any parameters
