@@ -18,6 +18,7 @@ public class MyApp {
         String content = "Hi %s, don't miss out on this limited-time offer!";
 
         Exercise02 exercise2 = new Exercise02();
+        
         exercise2.formatAndSendMail(title, content, customers, (Consumer<Email>) email ->
                 System.out.printf("To: %s\nSubject: %s\nBody: %s\n\n",
                         email.recipient(), email.title(), email.content())
