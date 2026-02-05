@@ -21,6 +21,7 @@ public class MyApp {
 
 
 
+
         
         exercise2.formatAndSendMail(title, content, customers, (Consumer<Email>) email ->
                 System.out.printf("To: %s\nSubject: %s\nBody: %s\n\n",
