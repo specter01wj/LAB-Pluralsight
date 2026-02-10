@@ -10,7 +10,12 @@ public class CourseRetriever {
             return;
         }
 
-        retrieveCourses(args[0]);
+        try {
+            retrieveCourses(args[0]);
+        } catch (Exception e) {
+            System.out.println("Unexpected error");
+            e.printStackTrace();
+        }
     }
 
     private static void retrieveCourses(String authorId) {
